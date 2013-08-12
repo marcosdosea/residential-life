@@ -1,0 +1,13 @@
+C:\Users\Thiago\Desktop\es2\BibliotecaWeb\bin\BibliotecaWeb.dll
+C:\Users\Thiago\Desktop\es2\BibliotecaWeb\bin\BibliotecaWeb.pdb
+C:\Users\Thiago\Desktop\es2\BibliotecaWeb\bin\EntityFramework.dll
+C:\Users\Thiago\Desktop\es2\BibliotecaWeb\bin\Model.dll
+C:\Users\Thiago\Desktop\es2\BibliotecaWeb\bin\Services.dll
+C:\Users\Thiago\Desktop\es2\BibliotecaWeb\bin\Persistence.dll
+C:\Users\Thiago\Desktop\es2\BibliotecaWeb\bin\Model.pdb
+C:\Users\Thiago\Desktop\es2\BibliotecaWeb\bin\Services.pdb
+C:\Users\Thiago\Desktop\es2\BibliotecaWeb\bin\EntityFramework.xml
+C:\Users\Thiago\Desktop\es2\BibliotecaWeb\bin\Persistence.pdb
+C:\Users\Thiago\Desktop\es2\BibliotecaWeb\obj\Debug\ResidentialWeb.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Desktop\es2\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
+C:\Users\Thiago\Desktop\es2\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb

@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="residentialbdModelStoreContainer" CdmEntityContainer="residentialbdEntities">
+    <EntitySetMapping Name="tb_administradora">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_administradora">
+        <MappingFragment StoreEntitySet="tb_administradora">
+          <ScalarProperty Name="AdmId" ColumnName="AdmId" />
+          <ScalarProperty Name="ConId" ColumnName="ConId" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_atendimento">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_atendimento">
+        <MappingFragment StoreEntitySet="tb_atendimento">
+          <ScalarProperty Name="AteID" ColumnName="AteID" />
+          <ScalarProperty Name="PesId" ColumnName="PesId" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_bloco">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_bloco">
+        <MappingFragment StoreEntitySet="tb_bloco">
+          <ScalarProperty Name="BloID" ColumnName="BloID" />
+          <ScalarProperty Name="ConId" ColumnName="ConId" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="QuantidadeAndares" ColumnName="QuantidadeAndares" />
+          <ScalarProperty Name="QuantidadeMoradias" ColumnName="QuantidadeMoradias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_comentario">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_comentario">
+        <MappingFragment StoreEntitySet="tb_comentario">
+          <ScalarProperty Name="ComId" ColumnName="ComId" />
+          <ScalarProperty Name="PosId" ColumnName="PosId" />
+          <ScalarProperty Name="PesId" ColumnName="PesId" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_condominio">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_condominio">
+        <MappingFragment StoreEntitySet="tb_condominio">
+          <ScalarProperty Name="ConId" ColumnName="ConId" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Rua" ColumnName="Rua" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_enquete">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_enquete">
+        <MappingFragment StoreEntitySet="tb_enquete">
+          <ScalarProperty Name="EnqId" ColumnName="EnqId" />
+          <ScalarProperty Name="PesId" ColumnName="PesId" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
+          <ScalarProperty Name="DataFim" ColumnName="DataFim" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_espaco">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_espaco">
+        <MappingFragment StoreEntitySet="tb_espaco">
+          <ScalarProperty Name="EspId" ColumnName="EspId" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Local" ColumnName="Local" />
+          <ScalarProperty Name="Tamanho" ColumnName="Tamanho" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_funcionario">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_funcionario">
+        <MappingFragment StoreEntitySet="tb_funcionario">
+          <ScalarProperty Name="FunID" ColumnName="FunID" />
+          <ScalarProperty Name="SetId" ColumnName="SetId" />
+          <ScalarProperty Name="PesId" ColumnName="PesId" />
+          <ScalarProperty Name="Ocupacao" ColumnName="Ocupacao" />
+          <ScalarProperty Name="Frequencia" ColumnName="Frequencia" />
+          <ScalarProperty Name="HorarioPermitido" ColumnName="HorarioPermitido" />
+          <ScalarProperty Name="Pontuacao" ColumnName="Pontuacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_moradia">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_moradia">
+        <MappingFragment StoreEntitySet="tb_moradia">
+          <ScalarProperty Name="MorId" ColumnName="MorId" />
+          <ScalarProperty Name="BloID" ColumnName="BloID" />
+          <ScalarProperty Name="PesId" ColumnName="PesId" />
+          <ScalarProperty Name="CPFResponsavel" ColumnName="CPFResponsavel" />
+          <ScalarProperty Name="Predio" ColumnName="Predio" />
+          <ScalarProperty Name="Andar" ColumnName="Andar" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_movimentacaofinanceira">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_movimentacaofinanceira">
+        <MappingFragment StoreEntitySet="tb_movimentacaofinanceira">
+          <ScalarProperty Name="MovID" ColumnName="MovID" />
+          <ScalarProperty Name="AdmId" ColumnName="AdmId" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Competencia" ColumnName="Competencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_ocorrencia">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_ocorrencia">
+        <MappingFragment StoreEntitySet="tb_ocorrencia">
+          <ScalarProperty Name="OcoId" ColumnName="OcoId" />
+          <ScalarProperty Name="PesId" ColumnName="PesId" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="DataCriacao" ColumnName="DataCriacao" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_opcoesenquete">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_opcoesenquete">
+        <MappingFragment StoreEntitySet="tb_opcoesenquete">
+          <ScalarProperty Name="OpcId" ColumnName="OpcId" />
+          <ScalarProperty Name="EnqId" ColumnName="EnqId" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_pessoa">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_pessoa">
+        <MappingFragment StoreEntitySet="tb_pessoa">
+          <ScalarProperty Name="PesId" ColumnName="PesId" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="TelefoneFixo" ColumnName="TelefoneFixo" />
+          <ScalarProperty Name="TelefoneCelular" ColumnName="TelefoneCelular" />
+          <ScalarProperty Name="Rua" ColumnName="Rua" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_planodeconta">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_planodeconta">
+        <MappingFragment StoreEntitySet="tb_planodeconta">
+          <ScalarProperty Name="MovID" ColumnName="MovID" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_postagem">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_postagem">
+        <MappingFragment StoreEntitySet="tb_postagem">
+          <ScalarProperty Name="PosId" ColumnName="PosId" />
+          <ScalarProperty Name="PesId" ColumnName="PesId" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="DataCriacao" ColumnName="DataCriacao" />
+          <ScalarProperty Name="DataEncerramento" ColumnName="DataEncerramento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_publicacaomural">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_publicacaomural">
+        <MappingFragment StoreEntitySet="tb_publicacaomural">
+          <ScalarProperty Name="PubId" ColumnName="PubId" />
+          <ScalarProperty Name="PesId" ColumnName="PesId" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="DataCriacao" ColumnName="DataCriacao" />
+          <ScalarProperty Name="DataExclusao" ColumnName="DataExclusao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_reservaambiente">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_reservaambiente">
+        <MappingFragment StoreEntitySet="tb_reservaambiente">
+          <ScalarProperty Name="ResID" ColumnName="ResID" />
+          <ScalarProperty Name="EspId" ColumnName="EspId" />
+          <ScalarProperty Name="PesId" ColumnName="PesId" />
+          <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
+          <ScalarProperty Name="DataFim" ColumnName="DataFim" />
+          <ScalarProperty Name="StatusPagamento" ColumnName="StatusPagamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_setor">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_setor">
+        <MappingFragment StoreEntitySet="tb_setor">
+          <ScalarProperty Name="SetId" ColumnName="SetId" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_veiculo">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_veiculo">
+        <MappingFragment StoreEntitySet="tb_veiculo">
+          <ScalarProperty Name="VeiId" ColumnName="VeiId" />
+          <ScalarProperty Name="PesId" ColumnName="PesId" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Cor" ColumnName="Cor" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tb_pessoacondominio" TypeName="residentialbdModel.tb_pessoacondominio" StoreEntitySet="tb_pessoacondominio">
+      <EndProperty Name="tb_condominio">
+        <ScalarProperty Name="ConId" ColumnName="ConId" />
+      </EndProperty>
+      <EndProperty Name="tb_pessoa">
+        <ScalarProperty Name="PesId" ColumnName="PesId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tb_votoenquete" TypeName="residentialbdModel.tb_votoenquete" StoreEntitySet="tb_votoenquete">
+      <EndProperty Name="tb_opcoesenquete">
+        <ScalarProperty Name="OpcId" ColumnName="OpcId" />
+      </EndProperty>
+      <EndProperty Name="tb_pessoa">
+        <ScalarProperty Name="PesId" ColumnName="PesId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
