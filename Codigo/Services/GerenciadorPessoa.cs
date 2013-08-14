@@ -49,7 +49,7 @@ namespace Services
             Atribuir(pessoaModel, pessoaE);
             unitOfWork.RepositorioPessoa.Inserir(pessoaE);
             unitOfWork.Commit(shared);
-            return pessoaE.PesId;
+            return pessoaE.IdPes;
         }
 
         /// <summary>
@@ -68,9 +68,9 @@ namespace Services
         /// Remove da base de dados
         /// </summary>
         /// <param name="pessoaModel"></param>
-        public void Remover(int pesId)
+        public void Remover(int idPes)
         {
-            unitOfWork.RepositorioPessoa.Remover(pessoa => pessoa.PesId.Equals(pesId));
+            unitOfWork.RepositorioPessoa.Remover(pessoa => pessoa.IdPes.Equals(idPes));
             unitOfWork.Commit(shared);
         }
 
@@ -85,7 +85,7 @@ namespace Services
             var query = from pessoa in tb_pessoa 
                         select new Pessoa
                         {
-                            PesId = pessoa.PesId
+                            PesId = pessoa.IdPes
                             
                         };
             return query;
@@ -118,7 +118,7 @@ namespace Services
         /// <param name="pessoaE">Entity mapeada da base de dados</param>
         private void Atribuir(Pessoa pessoaModel, tb_pessoa pessoaE)
         {
-            pessoaE.PesId = pessoaModel.PesId;
+            pessoaE.IdPes = pessoaModel.PesId;
             //pessoaE.nome = pessoaModel.Nome;
             //pessoaE.anoNascimento = pessoaModel.AnoNascimento;
         }

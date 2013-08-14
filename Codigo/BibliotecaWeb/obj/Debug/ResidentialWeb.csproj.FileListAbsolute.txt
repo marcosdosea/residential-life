@@ -11,3 +11,16 @@ C:\Users\Thiago\Desktop\es2\BibliotecaWeb\bin\Persistence.pdb
 C:\Users\Thiago\Desktop\es2\BibliotecaWeb\obj\Debug\ResidentialWeb.csprojResolveAssemblyReference.cache
 C:\Users\Thiago\Desktop\es2\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
 C:\Users\Thiago\Desktop\es2\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\obj\Debug\ResidentialWeb.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\bin\BibliotecaWeb.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\bin\BibliotecaWeb.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\bin\EntityFramework.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\bin\Model.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\bin\Services.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\bin\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\bin\Model.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\bin\Services.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\bin\EntityFramework.xml
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\bin\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
