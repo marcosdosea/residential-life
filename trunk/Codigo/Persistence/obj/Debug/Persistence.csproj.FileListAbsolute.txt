@@ -14,3 +14,11 @@ C:\Users\Thiago\Desktop\es2\Persistence\bin\Debug\Model.pdb
 C:\Users\Thiago\Desktop\es2\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
 C:\Users\Thiago\Desktop\es2\Persistence\obj\Debug\Persistence.dll
 C:\Users\Thiago\Desktop\es2\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\obj\Debug\Persistence.pdb

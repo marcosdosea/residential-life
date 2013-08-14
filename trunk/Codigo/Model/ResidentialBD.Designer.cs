@@ -19,6 +19,7 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
+[assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Acesso_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_acesso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_acesso), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Administradora_TB_Condominio1", "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_condominio), "tb_administradora", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_administradora), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_MovimentacaoFinanceira_TB_Administradora1", "tb_administradora", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_administradora), "tb_movimentacaofinanceira", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_movimentacaofinanceira), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Atendimento_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_atendimento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_atendimento), true)]
@@ -26,12 +27,14 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Moradia_TB_Bloco1", "tb_bloco", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_bloco), "tb_moradia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_moradia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Comentario_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_comentario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_comentario), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Comentario_TB_Postagem1", "tb_postagem", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_postagem), "tb_comentario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_comentario), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Condominio_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_condominio), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Enquete_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_enquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_enquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_OpcoesEnquete_TB_Enquete1", "tb_enquete", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_enquete), "tb_opcoesenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_opcoesenquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Reserva_TB_Espaco1", "tb_espaco", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_espaco), "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_reservaambiente), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Funcionario_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_funcionario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_funcionario), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Funcionario_TB_Setor1", "tb_setor", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_setor), "tb_funcionario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_funcionario), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Moradia_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_moradia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_moradia), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Moradia_TB_Pessoa2", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_moradia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_moradia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_PlanoDeConta_TB_MovimentacaoFinanceira1", "tb_movimentacaofinanceira", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_movimentacaofinanceira), "tb_planodeconta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_planodeconta), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Ocorrencia_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_ocorrencia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_MuralEletronico_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_publicacaomural", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_publicacaomural), true)]
@@ -90,6 +93,22 @@ namespace Models
         #endregion
     
         #region ObjectSet Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_acesso> tb_acesso
+        {
+            get
+            {
+                if ((_tb_acesso == null))
+                {
+                    _tb_acesso = base.CreateObjectSet<tb_acesso>("tb_acesso");
+                }
+                return _tb_acesso;
+            }
+        }
+        private ObjectSet<tb_acesso> _tb_acesso;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -400,6 +419,14 @@ namespace Models
         #region AddTo Methods
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the tb_acesso EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_acesso(tb_acesso tb_acesso)
+        {
+            base.AddObject("tb_acesso", tb_acesso);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the tb_administradora EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddTotb_administradora(tb_administradora tb_administradora)
@@ -562,6 +589,181 @@ namespace Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="residentialbdModel", Name="tb_acesso")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class tb_acesso : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new tb_acesso object.
+        /// </summary>
+        /// <param name="idAce">Initial value of the IdAce property.</param>
+        /// <param name="idPes">Initial value of the IdPes property.</param>
+        /// <param name="dataEntrada">Initial value of the DataEntrada property.</param>
+        public static tb_acesso Createtb_acesso(global::System.Int32 idAce, global::System.Int32 idPes, global::System.String dataEntrada)
+        {
+            tb_acesso tb_acesso = new tb_acesso();
+            tb_acesso.IdAce = idAce;
+            tb_acesso.IdPes = idPes;
+            tb_acesso.DataEntrada = dataEntrada;
+            return tb_acesso;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdAce
+        {
+            get
+            {
+                return _IdAce;
+            }
+            set
+            {
+                if (_IdAce != value)
+                {
+                    OnIdAceChanging(value);
+                    ReportPropertyChanging("IdAce");
+                    _IdAce = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdAce");
+                    OnIdAceChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdAce;
+        partial void OnIdAceChanging(global::System.Int32 value);
+        partial void OnIdAceChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdPes
+        {
+            get
+            {
+                return _IdPes;
+            }
+            set
+            {
+                OnIdPesChanging(value);
+                ReportPropertyChanging("IdPes");
+                _IdPes = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPes");
+                OnIdPesChanged();
+            }
+        }
+        private global::System.Int32 _IdPes;
+        partial void OnIdPesChanging(global::System.Int32 value);
+        partial void OnIdPesChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String DataEntrada
+        {
+            get
+            {
+                return _DataEntrada;
+            }
+            set
+            {
+                OnDataEntradaChanging(value);
+                ReportPropertyChanging("DataEntrada");
+                _DataEntrada = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("DataEntrada");
+                OnDataEntradaChanged();
+            }
+        }
+        private global::System.String _DataEntrada;
+        partial void OnDataEntradaChanging(global::System.String value);
+        partial void OnDataEntradaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String DataSaida
+        {
+            get
+            {
+                return _DataSaida;
+            }
+            set
+            {
+                OnDataSaidaChanging(value);
+                ReportPropertyChanging("DataSaida");
+                _DataSaida = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("DataSaida");
+                OnDataSaidaChanged();
+            }
+        }
+        private global::System.String _DataSaida;
+        partial void OnDataSaidaChanging(global::System.String value);
+        partial void OnDataSaidaChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Acesso_TB_Pessoa1", "tb_pessoa")]
+        public tb_pessoa tb_pessoa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.TB_Acesso_TB_Pessoa1", "tb_pessoa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.TB_Acesso_TB_Pessoa1", "tb_pessoa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_pessoa> tb_pessoaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.TB_Acesso_TB_Pessoa1", "tb_pessoa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pessoa>("residentialbdModel.TB_Acesso_TB_Pessoa1", "tb_pessoa", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="residentialbdModel", Name="tb_administradora")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -572,14 +774,14 @@ namespace Models
         /// <summary>
         /// Create a new tb_administradora object.
         /// </summary>
-        /// <param name="admId">Initial value of the AdmId property.</param>
-        /// <param name="conId">Initial value of the ConId property.</param>
+        /// <param name="idAdm">Initial value of the IdAdm property.</param>
+        /// <param name="idCon">Initial value of the IdCon property.</param>
         /// <param name="nome">Initial value of the Nome property.</param>
-        public static tb_administradora Createtb_administradora(global::System.Int32 admId, global::System.Int32 conId, global::System.String nome)
+        public static tb_administradora Createtb_administradora(global::System.Int32 idAdm, global::System.Int32 idCon, global::System.String nome)
         {
             tb_administradora tb_administradora = new tb_administradora();
-            tb_administradora.AdmId = admId;
-            tb_administradora.ConId = conId;
+            tb_administradora.IdAdm = idAdm;
+            tb_administradora.IdCon = idCon;
             tb_administradora.Nome = nome;
             return tb_administradora;
         }
@@ -593,51 +795,51 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 AdmId
+        public global::System.Int32 IdAdm
         {
             get
             {
-                return _AdmId;
+                return _IdAdm;
             }
             set
             {
-                if (_AdmId != value)
+                if (_IdAdm != value)
                 {
-                    OnAdmIdChanging(value);
-                    ReportPropertyChanging("AdmId");
-                    _AdmId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("AdmId");
-                    OnAdmIdChanged();
+                    OnIdAdmChanging(value);
+                    ReportPropertyChanging("IdAdm");
+                    _IdAdm = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdAdm");
+                    OnIdAdmChanged();
                 }
             }
         }
-        private global::System.Int32 _AdmId;
-        partial void OnAdmIdChanging(global::System.Int32 value);
-        partial void OnAdmIdChanged();
+        private global::System.Int32 _IdAdm;
+        partial void OnIdAdmChanging(global::System.Int32 value);
+        partial void OnIdAdmChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 ConId
+        public global::System.Int32 IdCon
         {
             get
             {
-                return _ConId;
+                return _IdCon;
             }
             set
             {
-                OnConIdChanging(value);
-                ReportPropertyChanging("ConId");
-                _ConId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ConId");
-                OnConIdChanged();
+                OnIdConChanging(value);
+                ReportPropertyChanging("IdCon");
+                _IdCon = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdCon");
+                OnIdConChanged();
             }
         }
-        private global::System.Int32 _ConId;
-        partial void OnConIdChanging(global::System.Int32 value);
-        partial void OnConIdChanged();
+        private global::System.Int32 _IdCon;
+        partial void OnIdConChanging(global::System.Int32 value);
+        partial void OnIdConChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -745,16 +947,16 @@ namespace Models
         /// <summary>
         /// Create a new tb_atendimento object.
         /// </summary>
-        /// <param name="ateID">Initial value of the AteID property.</param>
-        /// <param name="pesId">Initial value of the PesId property.</param>
+        /// <param name="idAte">Initial value of the IdAte property.</param>
+        /// <param name="idPes">Initial value of the IdPes property.</param>
         /// <param name="titulo">Initial value of the Titulo property.</param>
         /// <param name="descricao">Initial value of the Descricao property.</param>
         /// <param name="status">Initial value of the Status property.</param>
-        public static tb_atendimento Createtb_atendimento(global::System.Int32 ateID, global::System.Int32 pesId, global::System.String titulo, global::System.String descricao, global::System.String status)
+        public static tb_atendimento Createtb_atendimento(global::System.Int32 idAte, global::System.Int32 idPes, global::System.String titulo, global::System.String descricao, global::System.String status)
         {
             tb_atendimento tb_atendimento = new tb_atendimento();
-            tb_atendimento.AteID = ateID;
-            tb_atendimento.PesId = pesId;
+            tb_atendimento.IdAte = idAte;
+            tb_atendimento.IdPes = idPes;
             tb_atendimento.Titulo = titulo;
             tb_atendimento.Descricao = descricao;
             tb_atendimento.Status = status;
@@ -770,51 +972,51 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 AteID
+        public global::System.Int32 IdAte
         {
             get
             {
-                return _AteID;
+                return _IdAte;
             }
             set
             {
-                if (_AteID != value)
+                if (_IdAte != value)
                 {
-                    OnAteIDChanging(value);
-                    ReportPropertyChanging("AteID");
-                    _AteID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("AteID");
-                    OnAteIDChanged();
+                    OnIdAteChanging(value);
+                    ReportPropertyChanging("IdAte");
+                    _IdAte = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdAte");
+                    OnIdAteChanged();
                 }
             }
         }
-        private global::System.Int32 _AteID;
-        partial void OnAteIDChanging(global::System.Int32 value);
-        partial void OnAteIDChanged();
+        private global::System.Int32 _IdAte;
+        partial void OnIdAteChanging(global::System.Int32 value);
+        partial void OnIdAteChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PesId
+        public global::System.Int32 IdPes
         {
             get
             {
-                return _PesId;
+                return _IdPes;
             }
             set
             {
-                OnPesIdChanging(value);
-                ReportPropertyChanging("PesId");
-                _PesId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PesId");
-                OnPesIdChanged();
+                OnIdPesChanging(value);
+                ReportPropertyChanging("IdPes");
+                _IdPes = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPes");
+                OnIdPesChanged();
             }
         }
-        private global::System.Int32 _PesId;
-        partial void OnPesIdChanging(global::System.Int32 value);
-        partial void OnPesIdChanged();
+        private global::System.Int32 _IdPes;
+        partial void OnIdPesChanging(global::System.Int32 value);
+        partial void OnIdPesChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -948,16 +1150,16 @@ namespace Models
         /// <summary>
         /// Create a new tb_bloco object.
         /// </summary>
-        /// <param name="bloID">Initial value of the BloID property.</param>
-        /// <param name="conId">Initial value of the ConId property.</param>
+        /// <param name="idBlo">Initial value of the IdBlo property.</param>
+        /// <param name="idCon">Initial value of the IdCon property.</param>
         /// <param name="nome">Initial value of the Nome property.</param>
         /// <param name="quantidadeAndares">Initial value of the QuantidadeAndares property.</param>
         /// <param name="quantidadeMoradias">Initial value of the QuantidadeMoradias property.</param>
-        public static tb_bloco Createtb_bloco(global::System.Int32 bloID, global::System.Int32 conId, global::System.String nome, global::System.Int32 quantidadeAndares, global::System.Int32 quantidadeMoradias)
+        public static tb_bloco Createtb_bloco(global::System.Int32 idBlo, global::System.Int32 idCon, global::System.String nome, global::System.Int32 quantidadeAndares, global::System.Int32 quantidadeMoradias)
         {
             tb_bloco tb_bloco = new tb_bloco();
-            tb_bloco.BloID = bloID;
-            tb_bloco.ConId = conId;
+            tb_bloco.IdBlo = idBlo;
+            tb_bloco.IdCon = idCon;
             tb_bloco.Nome = nome;
             tb_bloco.QuantidadeAndares = quantidadeAndares;
             tb_bloco.QuantidadeMoradias = quantidadeMoradias;
@@ -973,51 +1175,51 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 BloID
+        public global::System.Int32 IdBlo
         {
             get
             {
-                return _BloID;
+                return _IdBlo;
             }
             set
             {
-                if (_BloID != value)
+                if (_IdBlo != value)
                 {
-                    OnBloIDChanging(value);
-                    ReportPropertyChanging("BloID");
-                    _BloID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("BloID");
-                    OnBloIDChanged();
+                    OnIdBloChanging(value);
+                    ReportPropertyChanging("IdBlo");
+                    _IdBlo = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdBlo");
+                    OnIdBloChanged();
                 }
             }
         }
-        private global::System.Int32 _BloID;
-        partial void OnBloIDChanging(global::System.Int32 value);
-        partial void OnBloIDChanged();
+        private global::System.Int32 _IdBlo;
+        partial void OnIdBloChanging(global::System.Int32 value);
+        partial void OnIdBloChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 ConId
+        public global::System.Int32 IdCon
         {
             get
             {
-                return _ConId;
+                return _IdCon;
             }
             set
             {
-                OnConIdChanging(value);
-                ReportPropertyChanging("ConId");
-                _ConId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ConId");
-                OnConIdChanged();
+                OnIdConChanging(value);
+                ReportPropertyChanging("IdCon");
+                _IdCon = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdCon");
+                OnIdConChanged();
             }
         }
-        private global::System.Int32 _ConId;
-        partial void OnConIdChanging(global::System.Int32 value);
-        partial void OnConIdChanged();
+        private global::System.Int32 _IdCon;
+        partial void OnIdConChanging(global::System.Int32 value);
+        partial void OnIdConChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1173,19 +1375,21 @@ namespace Models
         /// <summary>
         /// Create a new tb_comentario object.
         /// </summary>
-        /// <param name="comId">Initial value of the ComId property.</param>
-        /// <param name="posId">Initial value of the PosId property.</param>
-        /// <param name="pesId">Initial value of the PesId property.</param>
+        /// <param name="idCom">Initial value of the IdCom property.</param>
+        /// <param name="idPos">Initial value of the IdPos property.</param>
+        /// <param name="idPes">Initial value of the IdPes property.</param>
         /// <param name="comentario">Initial value of the Comentario property.</param>
         /// <param name="data">Initial value of the Data property.</param>
-        public static tb_comentario Createtb_comentario(global::System.Int32 comId, global::System.Int32 posId, global::System.Int32 pesId, global::System.String comentario, global::System.DateTime data)
+        /// <param name="status">Initial value of the Status property.</param>
+        public static tb_comentario Createtb_comentario(global::System.Int32 idCom, global::System.Int32 idPos, global::System.Int32 idPes, global::System.String comentario, global::System.DateTime data, global::System.String status)
         {
             tb_comentario tb_comentario = new tb_comentario();
-            tb_comentario.ComId = comId;
-            tb_comentario.PosId = posId;
-            tb_comentario.PesId = pesId;
+            tb_comentario.IdCom = idCom;
+            tb_comentario.IdPos = idPos;
+            tb_comentario.IdPes = idPes;
             tb_comentario.Comentario = comentario;
             tb_comentario.Data = data;
+            tb_comentario.Status = status;
             return tb_comentario;
         }
 
@@ -1198,75 +1402,75 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 ComId
+        public global::System.Int32 IdCom
         {
             get
             {
-                return _ComId;
+                return _IdCom;
             }
             set
             {
-                if (_ComId != value)
+                if (_IdCom != value)
                 {
-                    OnComIdChanging(value);
-                    ReportPropertyChanging("ComId");
-                    _ComId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ComId");
-                    OnComIdChanged();
+                    OnIdComChanging(value);
+                    ReportPropertyChanging("IdCom");
+                    _IdCom = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdCom");
+                    OnIdComChanged();
                 }
             }
         }
-        private global::System.Int32 _ComId;
-        partial void OnComIdChanging(global::System.Int32 value);
-        partial void OnComIdChanged();
+        private global::System.Int32 _IdCom;
+        partial void OnIdComChanging(global::System.Int32 value);
+        partial void OnIdComChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PosId
+        public global::System.Int32 IdPos
         {
             get
             {
-                return _PosId;
+                return _IdPos;
             }
             set
             {
-                OnPosIdChanging(value);
-                ReportPropertyChanging("PosId");
-                _PosId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PosId");
-                OnPosIdChanged();
+                OnIdPosChanging(value);
+                ReportPropertyChanging("IdPos");
+                _IdPos = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPos");
+                OnIdPosChanged();
             }
         }
-        private global::System.Int32 _PosId;
-        partial void OnPosIdChanging(global::System.Int32 value);
-        partial void OnPosIdChanged();
+        private global::System.Int32 _IdPos;
+        partial void OnIdPosChanging(global::System.Int32 value);
+        partial void OnIdPosChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PesId
+        public global::System.Int32 IdPes
         {
             get
             {
-                return _PesId;
+                return _IdPes;
             }
             set
             {
-                OnPesIdChanging(value);
-                ReportPropertyChanging("PesId");
-                _PesId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PesId");
-                OnPesIdChanged();
+                OnIdPesChanging(value);
+                ReportPropertyChanging("IdPes");
+                _IdPes = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPes");
+                OnIdPesChanged();
             }
         }
-        private global::System.Int32 _PesId;
-        partial void OnPesIdChanging(global::System.Int32 value);
-        partial void OnPesIdChanged();
+        private global::System.Int32 _IdPes;
+        partial void OnIdPesChanging(global::System.Int32 value);
+        partial void OnIdPesChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1315,6 +1519,30 @@ namespace Models
         private global::System.DateTime _Data;
         partial void OnDataChanging(global::System.DateTime value);
         partial void OnDataChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Status
+        {
+            get
+            {
+                return _Status;
+            }
+            set
+            {
+                OnStatusChanging(value);
+                ReportPropertyChanging("Status");
+                _Status = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Status");
+                OnStatusChanged();
+            }
+        }
+        private global::System.String _Status;
+        partial void OnStatusChanging(global::System.String value);
+        partial void OnStatusChanged();
 
         #endregion
 
@@ -1414,7 +1642,8 @@ namespace Models
         /// <summary>
         /// Create a new tb_condominio object.
         /// </summary>
-        /// <param name="conId">Initial value of the ConId property.</param>
+        /// <param name="idCon">Initial value of the IdCon property.</param>
+        /// <param name="idSin">Initial value of the IdSin property.</param>
         /// <param name="nome">Initial value of the Nome property.</param>
         /// <param name="rua">Initial value of the Rua property.</param>
         /// <param name="numero">Initial value of the Numero property.</param>
@@ -1422,10 +1651,11 @@ namespace Models
         /// <param name="cEP">Initial value of the CEP property.</param>
         /// <param name="cidade">Initial value of the Cidade property.</param>
         /// <param name="estado">Initial value of the Estado property.</param>
-        public static tb_condominio Createtb_condominio(global::System.Int32 conId, global::System.String nome, global::System.String rua, global::System.String numero, global::System.String bairro, global::System.String cEP, global::System.String cidade, global::System.String estado)
+        public static tb_condominio Createtb_condominio(global::System.Int32 idCon, global::System.Int32 idSin, global::System.String nome, global::System.String rua, global::System.String numero, global::System.String bairro, global::System.String cEP, global::System.String cidade, global::System.String estado)
         {
             tb_condominio tb_condominio = new tb_condominio();
-            tb_condominio.ConId = conId;
+            tb_condominio.IdCon = idCon;
+            tb_condominio.IdSin = idSin;
             tb_condominio.Nome = nome;
             tb_condominio.Rua = rua;
             tb_condominio.Numero = numero;
@@ -1445,27 +1675,51 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 ConId
+        public global::System.Int32 IdCon
         {
             get
             {
-                return _ConId;
+                return _IdCon;
             }
             set
             {
-                if (_ConId != value)
+                if (_IdCon != value)
                 {
-                    OnConIdChanging(value);
-                    ReportPropertyChanging("ConId");
-                    _ConId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ConId");
-                    OnConIdChanged();
+                    OnIdConChanging(value);
+                    ReportPropertyChanging("IdCon");
+                    _IdCon = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdCon");
+                    OnIdConChanged();
                 }
             }
         }
-        private global::System.Int32 _ConId;
-        partial void OnConIdChanging(global::System.Int32 value);
-        partial void OnConIdChanged();
+        private global::System.Int32 _IdCon;
+        partial void OnIdConChanging(global::System.Int32 value);
+        partial void OnIdConChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdSin
+        {
+            get
+            {
+                return _IdSin;
+            }
+            set
+            {
+                OnIdSinChanging(value);
+                ReportPropertyChanging("IdSin");
+                _IdSin = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdSin");
+                OnIdSinChanged();
+            }
+        }
+        private global::System.Int32 _IdSin;
+        partial void OnIdSinChanging(global::System.Int32 value);
+        partial void OnIdSinChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1714,8 +1968,46 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Condominio_TB_Pessoa1", "tb_pessoa")]
+        public tb_pessoa tb_pessoa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.TB_Condominio_TB_Pessoa1", "tb_pessoa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.TB_Condominio_TB_Pessoa1", "tb_pessoa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_pessoa> tb_pessoaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.TB_Condominio_TB_Pessoa1", "tb_pessoa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pessoa>("residentialbdModel.TB_Condominio_TB_Pessoa1", "tb_pessoa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_pessoacondominio", "tb_pessoa")]
-        public EntityCollection<tb_pessoa> tb_pessoa
+        public EntityCollection<tb_pessoa> tb_pessoa1
         {
             get
             {
@@ -1747,18 +2039,18 @@ namespace Models
         /// <summary>
         /// Create a new tb_enquete object.
         /// </summary>
-        /// <param name="enqId">Initial value of the EnqId property.</param>
-        /// <param name="pesId">Initial value of the PesId property.</param>
+        /// <param name="idEnq">Initial value of the IdEnq property.</param>
+        /// <param name="idPes">Initial value of the IdPes property.</param>
         /// <param name="titulo">Initial value of the Titulo property.</param>
         /// <param name="descricao">Initial value of the Descricao property.</param>
         /// <param name="dataInicio">Initial value of the DataInicio property.</param>
         /// <param name="dataFim">Initial value of the DataFim property.</param>
         /// <param name="status">Initial value of the Status property.</param>
-        public static tb_enquete Createtb_enquete(global::System.Int32 enqId, global::System.Int32 pesId, global::System.String titulo, global::System.String descricao, global::System.DateTime dataInicio, global::System.DateTime dataFim, global::System.String status)
+        public static tb_enquete Createtb_enquete(global::System.Int32 idEnq, global::System.Int32 idPes, global::System.String titulo, global::System.String descricao, global::System.DateTime dataInicio, global::System.DateTime dataFim, global::System.String status)
         {
             tb_enquete tb_enquete = new tb_enquete();
-            tb_enquete.EnqId = enqId;
-            tb_enquete.PesId = pesId;
+            tb_enquete.IdEnq = idEnq;
+            tb_enquete.IdPes = idPes;
             tb_enquete.Titulo = titulo;
             tb_enquete.Descricao = descricao;
             tb_enquete.DataInicio = dataInicio;
@@ -1776,51 +2068,51 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 EnqId
+        public global::System.Int32 IdEnq
         {
             get
             {
-                return _EnqId;
+                return _IdEnq;
             }
             set
             {
-                if (_EnqId != value)
+                if (_IdEnq != value)
                 {
-                    OnEnqIdChanging(value);
-                    ReportPropertyChanging("EnqId");
-                    _EnqId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("EnqId");
-                    OnEnqIdChanged();
+                    OnIdEnqChanging(value);
+                    ReportPropertyChanging("IdEnq");
+                    _IdEnq = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdEnq");
+                    OnIdEnqChanged();
                 }
             }
         }
-        private global::System.Int32 _EnqId;
-        partial void OnEnqIdChanging(global::System.Int32 value);
-        partial void OnEnqIdChanged();
+        private global::System.Int32 _IdEnq;
+        partial void OnIdEnqChanging(global::System.Int32 value);
+        partial void OnIdEnqChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PesId
+        public global::System.Int32 IdPes
         {
             get
             {
-                return _PesId;
+                return _IdPes;
             }
             set
             {
-                OnPesIdChanging(value);
-                ReportPropertyChanging("PesId");
-                _PesId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PesId");
-                OnPesIdChanged();
+                OnIdPesChanging(value);
+                ReportPropertyChanging("IdPes");
+                _IdPes = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPes");
+                OnIdPesChanged();
             }
         }
-        private global::System.Int32 _PesId;
-        partial void OnPesIdChanging(global::System.Int32 value);
-        partial void OnPesIdChanged();
+        private global::System.Int32 _IdPes;
+        partial void OnIdPesChanging(global::System.Int32 value);
+        partial void OnIdPesChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2024,16 +2316,16 @@ namespace Models
         /// <summary>
         /// Create a new tb_espaco object.
         /// </summary>
-        /// <param name="espId">Initial value of the EspId property.</param>
+        /// <param name="idEsp">Initial value of the IdEsp property.</param>
         /// <param name="nome">Initial value of the Nome property.</param>
         /// <param name="local">Initial value of the Local property.</param>
         /// <param name="tamanho">Initial value of the Tamanho property.</param>
         /// <param name="valor">Initial value of the Valor property.</param>
         /// <param name="estado">Initial value of the Estado property.</param>
-        public static tb_espaco Createtb_espaco(global::System.Int32 espId, global::System.String nome, global::System.String local, global::System.String tamanho, global::System.Decimal valor, global::System.String estado)
+        public static tb_espaco Createtb_espaco(global::System.Int32 idEsp, global::System.String nome, global::System.String local, global::System.String tamanho, global::System.Decimal valor, global::System.String estado)
         {
             tb_espaco tb_espaco = new tb_espaco();
-            tb_espaco.EspId = espId;
+            tb_espaco.IdEsp = idEsp;
             tb_espaco.Nome = nome;
             tb_espaco.Local = local;
             tb_espaco.Tamanho = tamanho;
@@ -2051,27 +2343,27 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 EspId
+        public global::System.Int32 IdEsp
         {
             get
             {
-                return _EspId;
+                return _IdEsp;
             }
             set
             {
-                if (_EspId != value)
+                if (_IdEsp != value)
                 {
-                    OnEspIdChanging(value);
-                    ReportPropertyChanging("EspId");
-                    _EspId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("EspId");
-                    OnEspIdChanged();
+                    OnIdEspChanging(value);
+                    ReportPropertyChanging("IdEsp");
+                    _IdEsp = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdEsp");
+                    OnIdEspChanged();
                 }
             }
         }
-        private global::System.Int32 _EspId;
-        partial void OnEspIdChanging(global::System.Int32 value);
-        partial void OnEspIdChanged();
+        private global::System.Int32 _IdEsp;
+        partial void OnIdEspChanging(global::System.Int32 value);
+        partial void OnIdEspChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2237,19 +2529,19 @@ namespace Models
         /// <summary>
         /// Create a new tb_funcionario object.
         /// </summary>
-        /// <param name="funID">Initial value of the FunID property.</param>
-        /// <param name="setId">Initial value of the SetId property.</param>
-        /// <param name="pesId">Initial value of the PesId property.</param>
+        /// <param name="idFun">Initial value of the IdFun property.</param>
+        /// <param name="idSet">Initial value of the IdSet property.</param>
+        /// <param name="idPes">Initial value of the IdPes property.</param>
         /// <param name="ocupacao">Initial value of the Ocupacao property.</param>
         /// <param name="frequencia">Initial value of the Frequencia property.</param>
         /// <param name="horarioPermitido">Initial value of the HorarioPermitido property.</param>
         /// <param name="pontuacao">Initial value of the Pontuacao property.</param>
-        public static tb_funcionario Createtb_funcionario(global::System.Int32 funID, global::System.Int32 setId, global::System.Int32 pesId, global::System.String ocupacao, global::System.String frequencia, global::System.String horarioPermitido, global::System.Int32 pontuacao)
+        public static tb_funcionario Createtb_funcionario(global::System.Int32 idFun, global::System.Int32 idSet, global::System.Int32 idPes, global::System.String ocupacao, global::System.String frequencia, global::System.String horarioPermitido, global::System.Decimal pontuacao)
         {
             tb_funcionario tb_funcionario = new tb_funcionario();
-            tb_funcionario.FunID = funID;
-            tb_funcionario.SetId = setId;
-            tb_funcionario.PesId = pesId;
+            tb_funcionario.IdFun = idFun;
+            tb_funcionario.IdSet = idSet;
+            tb_funcionario.IdPes = idPes;
             tb_funcionario.Ocupacao = ocupacao;
             tb_funcionario.Frequencia = frequencia;
             tb_funcionario.HorarioPermitido = horarioPermitido;
@@ -2266,75 +2558,75 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 FunID
+        public global::System.Int32 IdFun
         {
             get
             {
-                return _FunID;
+                return _IdFun;
             }
             set
             {
-                if (_FunID != value)
+                if (_IdFun != value)
                 {
-                    OnFunIDChanging(value);
-                    ReportPropertyChanging("FunID");
-                    _FunID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("FunID");
-                    OnFunIDChanged();
+                    OnIdFunChanging(value);
+                    ReportPropertyChanging("IdFun");
+                    _IdFun = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdFun");
+                    OnIdFunChanged();
                 }
             }
         }
-        private global::System.Int32 _FunID;
-        partial void OnFunIDChanging(global::System.Int32 value);
-        partial void OnFunIDChanged();
+        private global::System.Int32 _IdFun;
+        partial void OnIdFunChanging(global::System.Int32 value);
+        partial void OnIdFunChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 SetId
+        public global::System.Int32 IdSet
         {
             get
             {
-                return _SetId;
+                return _IdSet;
             }
             set
             {
-                OnSetIdChanging(value);
-                ReportPropertyChanging("SetId");
-                _SetId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("SetId");
-                OnSetIdChanged();
+                OnIdSetChanging(value);
+                ReportPropertyChanging("IdSet");
+                _IdSet = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdSet");
+                OnIdSetChanged();
             }
         }
-        private global::System.Int32 _SetId;
-        partial void OnSetIdChanging(global::System.Int32 value);
-        partial void OnSetIdChanged();
+        private global::System.Int32 _IdSet;
+        partial void OnIdSetChanging(global::System.Int32 value);
+        partial void OnIdSetChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PesId
+        public global::System.Int32 IdPes
         {
             get
             {
-                return _PesId;
+                return _IdPes;
             }
             set
             {
-                OnPesIdChanging(value);
-                ReportPropertyChanging("PesId");
-                _PesId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PesId");
-                OnPesIdChanged();
+                OnIdPesChanging(value);
+                ReportPropertyChanging("IdPes");
+                _IdPes = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPes");
+                OnIdPesChanged();
             }
         }
-        private global::System.Int32 _PesId;
-        partial void OnPesIdChanging(global::System.Int32 value);
-        partial void OnPesIdChanged();
+        private global::System.Int32 _IdPes;
+        partial void OnIdPesChanging(global::System.Int32 value);
+        partial void OnIdPesChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2413,7 +2705,7 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 Pontuacao
+        public global::System.Decimal Pontuacao
         {
             get
             {
@@ -2428,8 +2720,8 @@ namespace Models
                 OnPontuacaoChanged();
             }
         }
-        private global::System.Int32 _Pontuacao;
-        partial void OnPontuacaoChanging(global::System.Int32 value);
+        private global::System.Decimal _Pontuacao;
+        partial void OnPontuacaoChanging(global::System.Decimal value);
         partial void OnPontuacaoChanged();
 
         #endregion
@@ -2530,21 +2822,21 @@ namespace Models
         /// <summary>
         /// Create a new tb_moradia object.
         /// </summary>
-        /// <param name="morId">Initial value of the MorId property.</param>
-        /// <param name="bloID">Initial value of the BloID property.</param>
-        /// <param name="pesId">Initial value of the PesId property.</param>
-        /// <param name="cPFResponsavel">Initial value of the CPFResponsavel property.</param>
+        /// <param name="idMor">Initial value of the IdMor property.</param>
+        /// <param name="idBlo">Initial value of the IdBlo property.</param>
+        /// <param name="idPes">Initial value of the IdPes property.</param>
+        /// <param name="idRes">Initial value of the IdRes property.</param>
         /// <param name="predio">Initial value of the Predio property.</param>
         /// <param name="andar">Initial value of the Andar property.</param>
         /// <param name="numero">Initial value of the Numero property.</param>
         /// <param name="tipo">Initial value of the Tipo property.</param>
-        public static tb_moradia Createtb_moradia(global::System.Int32 morId, global::System.Int32 bloID, global::System.Int32 pesId, global::System.String cPFResponsavel, global::System.String predio, global::System.String andar, global::System.String numero, global::System.String tipo)
+        public static tb_moradia Createtb_moradia(global::System.Int32 idMor, global::System.Int32 idBlo, global::System.Int32 idPes, global::System.Int32 idRes, global::System.String predio, global::System.String andar, global::System.String numero, global::System.String tipo)
         {
             tb_moradia tb_moradia = new tb_moradia();
-            tb_moradia.MorId = morId;
-            tb_moradia.BloID = bloID;
-            tb_moradia.PesId = pesId;
-            tb_moradia.CPFResponsavel = cPFResponsavel;
+            tb_moradia.IdMor = idMor;
+            tb_moradia.IdBlo = idBlo;
+            tb_moradia.IdPes = idPes;
+            tb_moradia.IdRes = idRes;
             tb_moradia.Predio = predio;
             tb_moradia.Andar = andar;
             tb_moradia.Numero = numero;
@@ -2561,99 +2853,99 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 MorId
+        public global::System.Int32 IdMor
         {
             get
             {
-                return _MorId;
+                return _IdMor;
             }
             set
             {
-                if (_MorId != value)
+                if (_IdMor != value)
                 {
-                    OnMorIdChanging(value);
-                    ReportPropertyChanging("MorId");
-                    _MorId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("MorId");
-                    OnMorIdChanged();
+                    OnIdMorChanging(value);
+                    ReportPropertyChanging("IdMor");
+                    _IdMor = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdMor");
+                    OnIdMorChanged();
                 }
             }
         }
-        private global::System.Int32 _MorId;
-        partial void OnMorIdChanging(global::System.Int32 value);
-        partial void OnMorIdChanged();
+        private global::System.Int32 _IdMor;
+        partial void OnIdMorChanging(global::System.Int32 value);
+        partial void OnIdMorChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 BloID
+        public global::System.Int32 IdBlo
         {
             get
             {
-                return _BloID;
+                return _IdBlo;
             }
             set
             {
-                OnBloIDChanging(value);
-                ReportPropertyChanging("BloID");
-                _BloID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("BloID");
-                OnBloIDChanged();
+                OnIdBloChanging(value);
+                ReportPropertyChanging("IdBlo");
+                _IdBlo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdBlo");
+                OnIdBloChanged();
             }
         }
-        private global::System.Int32 _BloID;
-        partial void OnBloIDChanging(global::System.Int32 value);
-        partial void OnBloIDChanged();
+        private global::System.Int32 _IdBlo;
+        partial void OnIdBloChanging(global::System.Int32 value);
+        partial void OnIdBloChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PesId
+        public global::System.Int32 IdPes
         {
             get
             {
-                return _PesId;
+                return _IdPes;
             }
             set
             {
-                OnPesIdChanging(value);
-                ReportPropertyChanging("PesId");
-                _PesId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PesId");
-                OnPesIdChanged();
+                OnIdPesChanging(value);
+                ReportPropertyChanging("IdPes");
+                _IdPes = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPes");
+                OnIdPesChanged();
             }
         }
-        private global::System.Int32 _PesId;
-        partial void OnPesIdChanging(global::System.Int32 value);
-        partial void OnPesIdChanged();
+        private global::System.Int32 _IdPes;
+        partial void OnIdPesChanging(global::System.Int32 value);
+        partial void OnIdPesChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String CPFResponsavel
+        public global::System.Int32 IdRes
         {
             get
             {
-                return _CPFResponsavel;
+                return _IdRes;
             }
             set
             {
-                OnCPFResponsavelChanging(value);
-                ReportPropertyChanging("CPFResponsavel");
-                _CPFResponsavel = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("CPFResponsavel");
-                OnCPFResponsavelChanged();
+                OnIdResChanging(value);
+                ReportPropertyChanging("IdRes");
+                _IdRes = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdRes");
+                OnIdResChanged();
             }
         }
-        private global::System.String _CPFResponsavel;
-        partial void OnCPFResponsavelChanging(global::System.String value);
-        partial void OnCPFResponsavelChanged();
+        private global::System.Int32 _IdRes;
+        partial void OnIdResChanging(global::System.Int32 value);
+        partial void OnIdResChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2831,6 +3123,44 @@ namespace Models
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Moradia_TB_Pessoa2", "tb_pessoa")]
+        public tb_pessoa tb_pessoa1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.TB_Moradia_TB_Pessoa2", "tb_pessoa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.TB_Moradia_TB_Pessoa2", "tb_pessoa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_pessoa> tb_pessoa1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.TB_Moradia_TB_Pessoa2", "tb_pessoa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pessoa>("residentialbdModel.TB_Moradia_TB_Pessoa2", "tb_pessoa", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -2849,20 +3179,22 @@ namespace Models
         /// <summary>
         /// Create a new tb_movimentacaofinanceira object.
         /// </summary>
-        /// <param name="movID">Initial value of the MovID property.</param>
-        /// <param name="admId">Initial value of the AdmId property.</param>
+        /// <param name="idMov">Initial value of the IdMov property.</param>
+        /// <param name="idAdm">Initial value of the IdAdm property.</param>
         /// <param name="valor">Initial value of the Valor property.</param>
         /// <param name="data">Initial value of the Data property.</param>
         /// <param name="status">Initial value of the Status property.</param>
+        /// <param name="tipo">Initial value of the Tipo property.</param>
         /// <param name="competencia">Initial value of the Competencia property.</param>
-        public static tb_movimentacaofinanceira Createtb_movimentacaofinanceira(global::System.Int32 movID, global::System.Int32 admId, global::System.Single valor, global::System.DateTime data, global::System.String status, global::System.String competencia)
+        public static tb_movimentacaofinanceira Createtb_movimentacaofinanceira(global::System.Int32 idMov, global::System.Int32 idAdm, global::System.Single valor, global::System.DateTime data, global::System.String status, global::System.String tipo, global::System.String competencia)
         {
             tb_movimentacaofinanceira tb_movimentacaofinanceira = new tb_movimentacaofinanceira();
-            tb_movimentacaofinanceira.MovID = movID;
-            tb_movimentacaofinanceira.AdmId = admId;
+            tb_movimentacaofinanceira.IdMov = idMov;
+            tb_movimentacaofinanceira.IdAdm = idAdm;
             tb_movimentacaofinanceira.Valor = valor;
             tb_movimentacaofinanceira.Data = data;
             tb_movimentacaofinanceira.Status = status;
+            tb_movimentacaofinanceira.Tipo = tipo;
             tb_movimentacaofinanceira.Competencia = competencia;
             return tb_movimentacaofinanceira;
         }
@@ -2876,51 +3208,51 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 MovID
+        public global::System.Int32 IdMov
         {
             get
             {
-                return _MovID;
+                return _IdMov;
             }
             set
             {
-                if (_MovID != value)
+                if (_IdMov != value)
                 {
-                    OnMovIDChanging(value);
-                    ReportPropertyChanging("MovID");
-                    _MovID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("MovID");
-                    OnMovIDChanged();
+                    OnIdMovChanging(value);
+                    ReportPropertyChanging("IdMov");
+                    _IdMov = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdMov");
+                    OnIdMovChanged();
                 }
             }
         }
-        private global::System.Int32 _MovID;
-        partial void OnMovIDChanging(global::System.Int32 value);
-        partial void OnMovIDChanged();
+        private global::System.Int32 _IdMov;
+        partial void OnIdMovChanging(global::System.Int32 value);
+        partial void OnIdMovChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 AdmId
+        public global::System.Int32 IdAdm
         {
             get
             {
-                return _AdmId;
+                return _IdAdm;
             }
             set
             {
-                OnAdmIdChanging(value);
-                ReportPropertyChanging("AdmId");
-                _AdmId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("AdmId");
-                OnAdmIdChanged();
+                OnIdAdmChanging(value);
+                ReportPropertyChanging("IdAdm");
+                _IdAdm = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdAdm");
+                OnIdAdmChanged();
             }
         }
-        private global::System.Int32 _AdmId;
-        partial void OnAdmIdChanging(global::System.Int32 value);
-        partial void OnAdmIdChanged();
+        private global::System.Int32 _IdAdm;
+        partial void OnIdAdmChanging(global::System.Int32 value);
+        partial void OnIdAdmChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2999,6 +3331,30 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.String Tipo
+        {
+            get
+            {
+                return _Tipo;
+            }
+            set
+            {
+                OnTipoChanging(value);
+                ReportPropertyChanging("Tipo");
+                _Tipo = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Tipo");
+                OnTipoChanged();
+            }
+        }
+        private global::System.String _Tipo;
+        partial void OnTipoChanging(global::System.String value);
+        partial void OnTipoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.String Competencia
         {
             get
@@ -3017,6 +3373,30 @@ namespace Models
         private global::System.String _Competencia;
         partial void OnCompetenciaChanging(global::System.String value);
         partial void OnCompetenciaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Descricao
+        {
+            get
+            {
+                return _Descricao;
+            }
+            set
+            {
+                OnDescricaoChanging(value);
+                ReportPropertyChanging("Descricao");
+                _Descricao = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Descricao");
+                OnDescricaoChanged();
+            }
+        }
+        private global::System.String _Descricao;
+        partial void OnDescricaoChanging(global::System.String value);
+        partial void OnDescricaoChanged();
 
         #endregion
 
@@ -3100,18 +3480,18 @@ namespace Models
         /// <summary>
         /// Create a new tb_ocorrencia object.
         /// </summary>
-        /// <param name="ocoId">Initial value of the OcoId property.</param>
-        /// <param name="pesId">Initial value of the PesId property.</param>
+        /// <param name="idOco">Initial value of the IdOco property.</param>
+        /// <param name="idPes">Initial value of the IdPes property.</param>
         /// <param name="titulo">Initial value of the Titulo property.</param>
         /// <param name="descricao">Initial value of the Descricao property.</param>
         /// <param name="dataCriacao">Initial value of the DataCriacao property.</param>
         /// <param name="tipo">Initial value of the Tipo property.</param>
         /// <param name="status">Initial value of the Status property.</param>
-        public static tb_ocorrencia Createtb_ocorrencia(global::System.Int32 ocoId, global::System.Int32 pesId, global::System.String titulo, global::System.String descricao, global::System.DateTime dataCriacao, global::System.String tipo, global::System.String status)
+        public static tb_ocorrencia Createtb_ocorrencia(global::System.Int32 idOco, global::System.Int32 idPes, global::System.String titulo, global::System.String descricao, global::System.DateTime dataCriacao, global::System.String tipo, global::System.String status)
         {
             tb_ocorrencia tb_ocorrencia = new tb_ocorrencia();
-            tb_ocorrencia.OcoId = ocoId;
-            tb_ocorrencia.PesId = pesId;
+            tb_ocorrencia.IdOco = idOco;
+            tb_ocorrencia.IdPes = idPes;
             tb_ocorrencia.Titulo = titulo;
             tb_ocorrencia.Descricao = descricao;
             tb_ocorrencia.DataCriacao = dataCriacao;
@@ -3129,51 +3509,51 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 OcoId
+        public global::System.Int32 IdOco
         {
             get
             {
-                return _OcoId;
+                return _IdOco;
             }
             set
             {
-                if (_OcoId != value)
+                if (_IdOco != value)
                 {
-                    OnOcoIdChanging(value);
-                    ReportPropertyChanging("OcoId");
-                    _OcoId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("OcoId");
-                    OnOcoIdChanged();
+                    OnIdOcoChanging(value);
+                    ReportPropertyChanging("IdOco");
+                    _IdOco = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdOco");
+                    OnIdOcoChanged();
                 }
             }
         }
-        private global::System.Int32 _OcoId;
-        partial void OnOcoIdChanging(global::System.Int32 value);
-        partial void OnOcoIdChanged();
+        private global::System.Int32 _IdOco;
+        partial void OnIdOcoChanging(global::System.Int32 value);
+        partial void OnIdOcoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PesId
+        public global::System.Int32 IdPes
         {
             get
             {
-                return _PesId;
+                return _IdPes;
             }
             set
             {
-                OnPesIdChanging(value);
-                ReportPropertyChanging("PesId");
-                _PesId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PesId");
-                OnPesIdChanged();
+                OnIdPesChanging(value);
+                ReportPropertyChanging("IdPes");
+                _IdPes = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPes");
+                OnIdPesChanged();
             }
         }
-        private global::System.Int32 _PesId;
-        partial void OnPesIdChanging(global::System.Int32 value);
-        partial void OnPesIdChanged();
+        private global::System.Int32 _IdPes;
+        partial void OnIdPesChanging(global::System.Int32 value);
+        partial void OnIdPesChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3355,14 +3735,14 @@ namespace Models
         /// <summary>
         /// Create a new tb_opcoesenquete object.
         /// </summary>
-        /// <param name="opcId">Initial value of the OpcId property.</param>
-        /// <param name="enqId">Initial value of the EnqId property.</param>
+        /// <param name="idOpc">Initial value of the IdOpc property.</param>
+        /// <param name="idEnq">Initial value of the IdEnq property.</param>
         /// <param name="descricao">Initial value of the Descricao property.</param>
-        public static tb_opcoesenquete Createtb_opcoesenquete(global::System.Int32 opcId, global::System.Int32 enqId, global::System.String descricao)
+        public static tb_opcoesenquete Createtb_opcoesenquete(global::System.Int32 idOpc, global::System.Int32 idEnq, global::System.String descricao)
         {
             tb_opcoesenquete tb_opcoesenquete = new tb_opcoesenquete();
-            tb_opcoesenquete.OpcId = opcId;
-            tb_opcoesenquete.EnqId = enqId;
+            tb_opcoesenquete.IdOpc = idOpc;
+            tb_opcoesenquete.IdEnq = idEnq;
             tb_opcoesenquete.Descricao = descricao;
             return tb_opcoesenquete;
         }
@@ -3376,51 +3756,51 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 OpcId
+        public global::System.Int32 IdOpc
         {
             get
             {
-                return _OpcId;
+                return _IdOpc;
             }
             set
             {
-                if (_OpcId != value)
+                if (_IdOpc != value)
                 {
-                    OnOpcIdChanging(value);
-                    ReportPropertyChanging("OpcId");
-                    _OpcId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("OpcId");
-                    OnOpcIdChanged();
+                    OnIdOpcChanging(value);
+                    ReportPropertyChanging("IdOpc");
+                    _IdOpc = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdOpc");
+                    OnIdOpcChanged();
                 }
             }
         }
-        private global::System.Int32 _OpcId;
-        partial void OnOpcIdChanging(global::System.Int32 value);
-        partial void OnOpcIdChanged();
+        private global::System.Int32 _IdOpc;
+        partial void OnIdOpcChanging(global::System.Int32 value);
+        partial void OnIdOpcChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 EnqId
+        public global::System.Int32 IdEnq
         {
             get
             {
-                return _EnqId;
+                return _IdEnq;
             }
             set
             {
-                OnEnqIdChanging(value);
-                ReportPropertyChanging("EnqId");
-                _EnqId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("EnqId");
-                OnEnqIdChanged();
+                OnIdEnqChanging(value);
+                ReportPropertyChanging("IdEnq");
+                _IdEnq = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdEnq");
+                OnIdEnqChanged();
             }
         }
-        private global::System.Int32 _EnqId;
-        partial void OnEnqIdChanging(global::System.Int32 value);
-        partial void OnEnqIdChanged();
+        private global::System.Int32 _IdEnq;
+        partial void OnIdEnqChanging(global::System.Int32 value);
+        partial void OnIdEnqChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3528,7 +3908,7 @@ namespace Models
         /// <summary>
         /// Create a new tb_pessoa object.
         /// </summary>
-        /// <param name="pesId">Initial value of the PesId property.</param>
+        /// <param name="idPes">Initial value of the IdPes property.</param>
         /// <param name="cPF">Initial value of the CPF property.</param>
         /// <param name="nome">Initial value of the Nome property.</param>
         /// <param name="rG">Initial value of the RG property.</param>
@@ -3543,10 +3923,10 @@ namespace Models
         /// <param name="cidade">Initial value of the Cidade property.</param>
         /// <param name="estado">Initial value of the Estado property.</param>
         /// <param name="tipo">Initial value of the Tipo property.</param>
-        public static tb_pessoa Createtb_pessoa(global::System.Int32 pesId, global::System.String cPF, global::System.String nome, global::System.String rG, global::System.String sexo, global::System.String email, global::System.String login, global::System.String senha, global::System.String rua, global::System.String numero, global::System.String bairro, global::System.String cEP, global::System.String cidade, global::System.String estado, global::System.String tipo)
+        public static tb_pessoa Createtb_pessoa(global::System.Int32 idPes, global::System.String cPF, global::System.String nome, global::System.String rG, global::System.String sexo, global::System.String email, global::System.String login, global::System.String senha, global::System.String rua, global::System.String numero, global::System.String bairro, global::System.String cEP, global::System.String cidade, global::System.String estado, global::System.String tipo)
         {
             tb_pessoa tb_pessoa = new tb_pessoa();
-            tb_pessoa.PesId = pesId;
+            tb_pessoa.IdPes = idPes;
             tb_pessoa.CPF = cPF;
             tb_pessoa.Nome = nome;
             tb_pessoa.RG = rG;
@@ -3573,27 +3953,27 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PesId
+        public global::System.Int32 IdPes
         {
             get
             {
-                return _PesId;
+                return _IdPes;
             }
             set
             {
-                if (_PesId != value)
+                if (_IdPes != value)
                 {
-                    OnPesIdChanging(value);
-                    ReportPropertyChanging("PesId");
-                    _PesId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("PesId");
-                    OnPesIdChanged();
+                    OnIdPesChanging(value);
+                    ReportPropertyChanging("IdPes");
+                    _IdPes = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdPes");
+                    OnIdPesChanged();
                 }
             }
         }
-        private global::System.Int32 _PesId;
-        partial void OnPesIdChanging(global::System.Int32 value);
-        partial void OnPesIdChanged();
+        private global::System.Int32 _IdPes;
+        partial void OnIdPesChanging(global::System.Int32 value);
+        partial void OnIdPesChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4014,6 +4394,28 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Acesso_TB_Pessoa1", "tb_acesso")]
+        public EntityCollection<tb_acesso> tb_acesso
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_acesso>("residentialbdModel.TB_Acesso_TB_Pessoa1", "tb_acesso");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_acesso>("residentialbdModel.TB_Acesso_TB_Pessoa1", "tb_acesso", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Atendimento_TB_Pessoa1", "tb_atendimento")]
         public EntityCollection<tb_atendimento> tb_atendimento
         {
@@ -4048,6 +4450,28 @@ namespace Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_comentario>("residentialbdModel.TB_Comentario_TB_Pessoa1", "tb_comentario", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Condominio_TB_Pessoa1", "tb_condominio")]
+        public EntityCollection<tb_condominio> tb_condominio
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_condominio>("residentialbdModel.TB_Condominio_TB_Pessoa1", "tb_condominio");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_condominio>("residentialbdModel.TB_Condominio_TB_Pessoa1", "tb_condominio", value);
                 }
             }
         }
@@ -4114,6 +4538,28 @@ namespace Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_moradia>("residentialbdModel.TB_Moradia_TB_Pessoa1", "tb_moradia", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Moradia_TB_Pessoa2", "tb_moradia")]
+        public EntityCollection<tb_moradia> tb_moradia1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_moradia>("residentialbdModel.TB_Moradia_TB_Pessoa2", "tb_moradia");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_moradia>("residentialbdModel.TB_Moradia_TB_Pessoa2", "tb_moradia", value);
                 }
             }
         }
@@ -4235,7 +4681,7 @@ namespace Models
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_pessoacondominio", "tb_condominio")]
-        public EntityCollection<tb_condominio> tb_condominio
+        public EntityCollection<tb_condominio> tb_condominio1
         {
             get
             {
@@ -4289,13 +4735,13 @@ namespace Models
         /// <summary>
         /// Create a new tb_planodeconta object.
         /// </summary>
-        /// <param name="movID">Initial value of the MovID property.</param>
+        /// <param name="idMov">Initial value of the IdMov property.</param>
         /// <param name="descricao">Initial value of the Descricao property.</param>
         /// <param name="tipo">Initial value of the Tipo property.</param>
-        public static tb_planodeconta Createtb_planodeconta(global::System.Int32 movID, global::System.String descricao, global::System.String tipo)
+        public static tb_planodeconta Createtb_planodeconta(global::System.Int32 idMov, global::System.String descricao, global::System.String tipo)
         {
             tb_planodeconta tb_planodeconta = new tb_planodeconta();
-            tb_planodeconta.MovID = movID;
+            tb_planodeconta.IdMov = idMov;
             tb_planodeconta.Descricao = descricao;
             tb_planodeconta.Tipo = tipo;
             return tb_planodeconta;
@@ -4310,27 +4756,27 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 MovID
+        public global::System.Int32 IdMov
         {
             get
             {
-                return _MovID;
+                return _IdMov;
             }
             set
             {
-                if (_MovID != value)
+                if (_IdMov != value)
                 {
-                    OnMovIDChanging(value);
-                    ReportPropertyChanging("MovID");
-                    _MovID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("MovID");
-                    OnMovIDChanged();
+                    OnIdMovChanging(value);
+                    ReportPropertyChanging("IdMov");
+                    _IdMov = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdMov");
+                    OnIdMovChanged();
                 }
             }
         }
-        private global::System.Int32 _MovID;
-        partial void OnMovIDChanging(global::System.Int32 value);
-        partial void OnMovIDChanged();
+        private global::System.Int32 _IdMov;
+        partial void OnIdMovChanging(global::System.Int32 value);
+        partial void OnIdMovChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4446,16 +4892,16 @@ namespace Models
         /// <summary>
         /// Create a new tb_postagem object.
         /// </summary>
-        /// <param name="posId">Initial value of the PosId property.</param>
-        /// <param name="pesId">Initial value of the PesId property.</param>
+        /// <param name="idPos">Initial value of the IdPos property.</param>
+        /// <param name="idPes">Initial value of the IdPes property.</param>
         /// <param name="titulo">Initial value of the Titulo property.</param>
         /// <param name="descricao">Initial value of the Descricao property.</param>
         /// <param name="dataCriacao">Initial value of the DataCriacao property.</param>
-        public static tb_postagem Createtb_postagem(global::System.Int32 posId, global::System.Int32 pesId, global::System.String titulo, global::System.String descricao, global::System.DateTime dataCriacao)
+        public static tb_postagem Createtb_postagem(global::System.Int32 idPos, global::System.Int32 idPes, global::System.String titulo, global::System.String descricao, global::System.DateTime dataCriacao)
         {
             tb_postagem tb_postagem = new tb_postagem();
-            tb_postagem.PosId = posId;
-            tb_postagem.PesId = pesId;
+            tb_postagem.IdPos = idPos;
+            tb_postagem.IdPes = idPes;
             tb_postagem.Titulo = titulo;
             tb_postagem.Descricao = descricao;
             tb_postagem.DataCriacao = dataCriacao;
@@ -4471,51 +4917,51 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PosId
+        public global::System.Int32 IdPos
         {
             get
             {
-                return _PosId;
+                return _IdPos;
             }
             set
             {
-                if (_PosId != value)
+                if (_IdPos != value)
                 {
-                    OnPosIdChanging(value);
-                    ReportPropertyChanging("PosId");
-                    _PosId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("PosId");
-                    OnPosIdChanged();
+                    OnIdPosChanging(value);
+                    ReportPropertyChanging("IdPos");
+                    _IdPos = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdPos");
+                    OnIdPosChanged();
                 }
             }
         }
-        private global::System.Int32 _PosId;
-        partial void OnPosIdChanging(global::System.Int32 value);
-        partial void OnPosIdChanged();
+        private global::System.Int32 _IdPos;
+        partial void OnIdPosChanging(global::System.Int32 value);
+        partial void OnIdPosChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PesId
+        public global::System.Int32 IdPes
         {
             get
             {
-                return _PesId;
+                return _IdPes;
             }
             set
             {
-                OnPesIdChanging(value);
-                ReportPropertyChanging("PesId");
-                _PesId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PesId");
-                OnPesIdChanged();
+                OnIdPesChanging(value);
+                ReportPropertyChanging("IdPes");
+                _IdPes = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPes");
+                OnIdPesChanged();
             }
         }
-        private global::System.Int32 _PesId;
-        partial void OnPesIdChanging(global::System.Int32 value);
-        partial void OnPesIdChanged();
+        private global::System.Int32 _IdPes;
+        partial void OnIdPesChanging(global::System.Int32 value);
+        partial void OnIdPesChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4695,17 +5141,17 @@ namespace Models
         /// <summary>
         /// Create a new tb_publicacaomural object.
         /// </summary>
-        /// <param name="pubId">Initial value of the PubId property.</param>
-        /// <param name="pesId">Initial value of the PesId property.</param>
+        /// <param name="idPub">Initial value of the IdPub property.</param>
+        /// <param name="idPes">Initial value of the IdPes property.</param>
         /// <param name="titulo">Initial value of the Titulo property.</param>
         /// <param name="descricao">Initial value of the Descricao property.</param>
         /// <param name="dataCriacao">Initial value of the DataCriacao property.</param>
         /// <param name="dataExclusao">Initial value of the DataExclusao property.</param>
-        public static tb_publicacaomural Createtb_publicacaomural(global::System.Int32 pubId, global::System.Int32 pesId, global::System.String titulo, global::System.String descricao, global::System.DateTime dataCriacao, global::System.DateTime dataExclusao)
+        public static tb_publicacaomural Createtb_publicacaomural(global::System.Int32 idPub, global::System.Int32 idPes, global::System.String titulo, global::System.String descricao, global::System.DateTime dataCriacao, global::System.DateTime dataExclusao)
         {
             tb_publicacaomural tb_publicacaomural = new tb_publicacaomural();
-            tb_publicacaomural.PubId = pubId;
-            tb_publicacaomural.PesId = pesId;
+            tb_publicacaomural.IdPub = idPub;
+            tb_publicacaomural.IdPes = idPes;
             tb_publicacaomural.Titulo = titulo;
             tb_publicacaomural.Descricao = descricao;
             tb_publicacaomural.DataCriacao = dataCriacao;
@@ -4722,51 +5168,51 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PubId
+        public global::System.Int32 IdPub
         {
             get
             {
-                return _PubId;
+                return _IdPub;
             }
             set
             {
-                if (_PubId != value)
+                if (_IdPub != value)
                 {
-                    OnPubIdChanging(value);
-                    ReportPropertyChanging("PubId");
-                    _PubId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("PubId");
-                    OnPubIdChanged();
+                    OnIdPubChanging(value);
+                    ReportPropertyChanging("IdPub");
+                    _IdPub = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdPub");
+                    OnIdPubChanged();
                 }
             }
         }
-        private global::System.Int32 _PubId;
-        partial void OnPubIdChanging(global::System.Int32 value);
-        partial void OnPubIdChanged();
+        private global::System.Int32 _IdPub;
+        partial void OnIdPubChanging(global::System.Int32 value);
+        partial void OnIdPubChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PesId
+        public global::System.Int32 IdPes
         {
             get
             {
-                return _PesId;
+                return _IdPes;
             }
             set
             {
-                OnPesIdChanging(value);
-                ReportPropertyChanging("PesId");
-                _PesId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PesId");
-                OnPesIdChanged();
+                OnIdPesChanging(value);
+                ReportPropertyChanging("IdPes");
+                _IdPes = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPes");
+                OnIdPesChanged();
             }
         }
-        private global::System.Int32 _PesId;
-        partial void OnPesIdChanging(global::System.Int32 value);
-        partial void OnPesIdChanged();
+        private global::System.Int32 _IdPes;
+        partial void OnIdPesChanging(global::System.Int32 value);
+        partial void OnIdPesChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4924,18 +5370,18 @@ namespace Models
         /// <summary>
         /// Create a new tb_reservaambiente object.
         /// </summary>
-        /// <param name="resID">Initial value of the ResID property.</param>
-        /// <param name="espId">Initial value of the EspId property.</param>
-        /// <param name="pesId">Initial value of the PesId property.</param>
+        /// <param name="idRes">Initial value of the IdRes property.</param>
+        /// <param name="idEsp">Initial value of the IdEsp property.</param>
+        /// <param name="idPes">Initial value of the IdPes property.</param>
         /// <param name="dataInicio">Initial value of the DataInicio property.</param>
         /// <param name="dataFim">Initial value of the DataFim property.</param>
         /// <param name="statusPagamento">Initial value of the StatusPagamento property.</param>
-        public static tb_reservaambiente Createtb_reservaambiente(global::System.Int32 resID, global::System.Int32 espId, global::System.Int32 pesId, global::System.DateTime dataInicio, global::System.DateTime dataFim, global::System.String statusPagamento)
+        public static tb_reservaambiente Createtb_reservaambiente(global::System.Int32 idRes, global::System.Int32 idEsp, global::System.Int32 idPes, global::System.DateTime dataInicio, global::System.DateTime dataFim, global::System.String statusPagamento)
         {
             tb_reservaambiente tb_reservaambiente = new tb_reservaambiente();
-            tb_reservaambiente.ResID = resID;
-            tb_reservaambiente.EspId = espId;
-            tb_reservaambiente.PesId = pesId;
+            tb_reservaambiente.IdRes = idRes;
+            tb_reservaambiente.IdEsp = idEsp;
+            tb_reservaambiente.IdPes = idPes;
             tb_reservaambiente.DataInicio = dataInicio;
             tb_reservaambiente.DataFim = dataFim;
             tb_reservaambiente.StatusPagamento = statusPagamento;
@@ -4951,75 +5397,75 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 ResID
+        public global::System.Int32 IdRes
         {
             get
             {
-                return _ResID;
+                return _IdRes;
             }
             set
             {
-                if (_ResID != value)
+                if (_IdRes != value)
                 {
-                    OnResIDChanging(value);
-                    ReportPropertyChanging("ResID");
-                    _ResID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ResID");
-                    OnResIDChanged();
+                    OnIdResChanging(value);
+                    ReportPropertyChanging("IdRes");
+                    _IdRes = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdRes");
+                    OnIdResChanged();
                 }
             }
         }
-        private global::System.Int32 _ResID;
-        partial void OnResIDChanging(global::System.Int32 value);
-        partial void OnResIDChanged();
+        private global::System.Int32 _IdRes;
+        partial void OnIdResChanging(global::System.Int32 value);
+        partial void OnIdResChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 EspId
+        public global::System.Int32 IdEsp
         {
             get
             {
-                return _EspId;
+                return _IdEsp;
             }
             set
             {
-                OnEspIdChanging(value);
-                ReportPropertyChanging("EspId");
-                _EspId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("EspId");
-                OnEspIdChanged();
+                OnIdEspChanging(value);
+                ReportPropertyChanging("IdEsp");
+                _IdEsp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdEsp");
+                OnIdEspChanged();
             }
         }
-        private global::System.Int32 _EspId;
-        partial void OnEspIdChanging(global::System.Int32 value);
-        partial void OnEspIdChanged();
+        private global::System.Int32 _IdEsp;
+        partial void OnIdEspChanging(global::System.Int32 value);
+        partial void OnIdEspChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PesId
+        public global::System.Int32 IdPes
         {
             get
             {
-                return _PesId;
+                return _IdPes;
             }
             set
             {
-                OnPesIdChanging(value);
-                ReportPropertyChanging("PesId");
-                _PesId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PesId");
-                OnPesIdChanged();
+                OnIdPesChanging(value);
+                ReportPropertyChanging("IdPes");
+                _IdPes = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPes");
+                OnIdPesChanged();
             }
         }
-        private global::System.Int32 _PesId;
-        partial void OnPesIdChanging(global::System.Int32 value);
-        partial void OnPesIdChanged();
+        private global::System.Int32 _IdPes;
+        partial void OnIdPesChanging(global::System.Int32 value);
+        partial void OnIdPesChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5191,13 +5637,13 @@ namespace Models
         /// <summary>
         /// Create a new tb_setor object.
         /// </summary>
-        /// <param name="setId">Initial value of the SetId property.</param>
+        /// <param name="idSet">Initial value of the IdSet property.</param>
         /// <param name="nome">Initial value of the Nome property.</param>
         /// <param name="descricao">Initial value of the Descricao property.</param>
-        public static tb_setor Createtb_setor(global::System.Int32 setId, global::System.String nome, global::System.String descricao)
+        public static tb_setor Createtb_setor(global::System.Int32 idSet, global::System.String nome, global::System.String descricao)
         {
             tb_setor tb_setor = new tb_setor();
-            tb_setor.SetId = setId;
+            tb_setor.IdSet = idSet;
             tb_setor.Nome = nome;
             tb_setor.Descricao = descricao;
             return tb_setor;
@@ -5212,27 +5658,27 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 SetId
+        public global::System.Int32 IdSet
         {
             get
             {
-                return _SetId;
+                return _IdSet;
             }
             set
             {
-                if (_SetId != value)
+                if (_IdSet != value)
                 {
-                    OnSetIdChanging(value);
-                    ReportPropertyChanging("SetId");
-                    _SetId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("SetId");
-                    OnSetIdChanged();
+                    OnIdSetChanging(value);
+                    ReportPropertyChanging("IdSet");
+                    _IdSet = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdSet");
+                    OnIdSetChanged();
                 }
             }
         }
-        private global::System.Int32 _SetId;
-        partial void OnSetIdChanging(global::System.Int32 value);
-        partial void OnSetIdChanged();
+        private global::System.Int32 _IdSet;
+        partial void OnIdSetChanging(global::System.Int32 value);
+        partial void OnIdSetChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5326,16 +5772,16 @@ namespace Models
         /// <summary>
         /// Create a new tb_veiculo object.
         /// </summary>
-        /// <param name="veiId">Initial value of the VeiId property.</param>
-        /// <param name="pesId">Initial value of the PesId property.</param>
+        /// <param name="idVei">Initial value of the IdVei property.</param>
+        /// <param name="idPes">Initial value of the IdPes property.</param>
         /// <param name="placa">Initial value of the Placa property.</param>
         /// <param name="modelo">Initial value of the Modelo property.</param>
         /// <param name="cor">Initial value of the Cor property.</param>
-        public static tb_veiculo Createtb_veiculo(global::System.Int32 veiId, global::System.Int32 pesId, global::System.String placa, global::System.String modelo, global::System.String cor)
+        public static tb_veiculo Createtb_veiculo(global::System.Int32 idVei, global::System.Int32 idPes, global::System.String placa, global::System.String modelo, global::System.String cor)
         {
             tb_veiculo tb_veiculo = new tb_veiculo();
-            tb_veiculo.VeiId = veiId;
-            tb_veiculo.PesId = pesId;
+            tb_veiculo.IdVei = idVei;
+            tb_veiculo.IdPes = idPes;
             tb_veiculo.Placa = placa;
             tb_veiculo.Modelo = modelo;
             tb_veiculo.Cor = cor;
@@ -5351,51 +5797,51 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 VeiId
+        public global::System.Int32 IdVei
         {
             get
             {
-                return _VeiId;
+                return _IdVei;
             }
             set
             {
-                if (_VeiId != value)
+                if (_IdVei != value)
                 {
-                    OnVeiIdChanging(value);
-                    ReportPropertyChanging("VeiId");
-                    _VeiId = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("VeiId");
-                    OnVeiIdChanged();
+                    OnIdVeiChanging(value);
+                    ReportPropertyChanging("IdVei");
+                    _IdVei = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdVei");
+                    OnIdVeiChanged();
                 }
             }
         }
-        private global::System.Int32 _VeiId;
-        partial void OnVeiIdChanging(global::System.Int32 value);
-        partial void OnVeiIdChanged();
+        private global::System.Int32 _IdVei;
+        partial void OnIdVeiChanging(global::System.Int32 value);
+        partial void OnIdVeiChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 PesId
+        public global::System.Int32 IdPes
         {
             get
             {
-                return _PesId;
+                return _IdPes;
             }
             set
             {
-                OnPesIdChanging(value);
-                ReportPropertyChanging("PesId");
-                _PesId = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("PesId");
-                OnPesIdChanged();
+                OnIdPesChanging(value);
+                ReportPropertyChanging("IdPes");
+                _IdPes = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPes");
+                OnIdPesChanged();
             }
         }
-        private global::System.Int32 _PesId;
-        partial void OnPesIdChanging(global::System.Int32 value);
-        partial void OnPesIdChanged();
+        private global::System.Int32 _IdPes;
+        partial void OnIdPesChanging(global::System.Int32 value);
+        partial void OnIdPesChanged();
     
         /// <summary>
         /// No Metadata Documentation available.

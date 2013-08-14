@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="residentialbdModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
   <EntityContainer Name="residentialbdEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_acesso" EntityType="residentialbdModel.tb_acesso" />
     <EntitySet Name="tb_administradora" EntityType="residentialbdModel.tb_administradora" />
     <EntitySet Name="tb_atendimento" EntityType="residentialbdModel.tb_atendimento" />
     <EntitySet Name="tb_bloco" EntityType="residentialbdModel.tb_bloco" />
@@ -20,6 +21,10 @@
     <EntitySet Name="tb_reservaambiente" EntityType="residentialbdModel.tb_reservaambiente" />
     <EntitySet Name="tb_setor" EntityType="residentialbdModel.tb_setor" />
     <EntitySet Name="tb_veiculo" EntityType="residentialbdModel.tb_veiculo" />
+    <AssociationSet Name="TB_Acesso_TB_Pessoa1" Association="residentialbdModel.TB_Acesso_TB_Pessoa1">
+      <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+      <End Role="tb_acesso" EntitySet="tb_acesso" />
+    </AssociationSet>
     <AssociationSet Name="TB_Administradora_TB_Condominio1" Association="residentialbdModel.TB_Administradora_TB_Condominio1">
       <End Role="tb_condominio" EntitySet="tb_condominio" />
       <End Role="tb_administradora" EntitySet="tb_administradora" />
@@ -48,6 +53,10 @@
       <End Role="tb_postagem" EntitySet="tb_postagem" />
       <End Role="tb_comentario" EntitySet="tb_comentario" />
     </AssociationSet>
+    <AssociationSet Name="TB_Condominio_TB_Pessoa1" Association="residentialbdModel.TB_Condominio_TB_Pessoa1">
+      <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+      <End Role="tb_condominio" EntitySet="tb_condominio" />
+    </AssociationSet>
     <AssociationSet Name="TB_Enquete_TB_Pessoa1" Association="residentialbdModel.TB_Enquete_TB_Pessoa1">
       <End Role="tb_pessoa" EntitySet="tb_pessoa" />
       <End Role="tb_enquete" EntitySet="tb_enquete" />
@@ -69,6 +78,10 @@
       <End Role="tb_funcionario" EntitySet="tb_funcionario" />
     </AssociationSet>
     <AssociationSet Name="TB_Moradia_TB_Pessoa1" Association="residentialbdModel.TB_Moradia_TB_Pessoa1">
+      <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+      <End Role="tb_moradia" EntitySet="tb_moradia" />
+    </AssociationSet>
+    <AssociationSet Name="TB_Moradia_TB_Pessoa2" Association="residentialbdModel.TB_Moradia_TB_Pessoa2">
       <End Role="tb_pessoa" EntitySet="tb_pessoa" />
       <End Role="tb_moradia" EntitySet="tb_moradia" />
     </AssociationSet>
@@ -105,22 +118,32 @@
       <End Role="tb_pessoa" EntitySet="tb_pessoa" />
     </AssociationSet>
   </EntityContainer>
+  <EntityType Name="tb_acesso">
+    <Key>
+      <PropertyRef Name="IdAce" />
+    </Key>
+    <Property Name="IdAce" Type="Int32" Nullable="false" />
+    <Property Name="IdPes" Type="Int32" Nullable="false" />
+    <Property Name="DataEntrada" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="DataSaida" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_Acesso_TB_Pessoa1" FromRole="tb_acesso" ToRole="tb_pessoa" />
+  </EntityType>
   <EntityType Name="tb_administradora">
     <Key>
-      <PropertyRef Name="AdmId" />
+      <PropertyRef Name="IdAdm" />
     </Key>
-    <Property Name="AdmId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ConId" Type="Int32" Nullable="false" />
+    <Property Name="IdAdm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCon" Type="Int32" Nullable="false" />
     <Property Name="Nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="tb_condominio" Relationship="residentialbdModel.TB_Administradora_TB_Condominio1" FromRole="tb_administradora" ToRole="tb_condominio" />
     <NavigationProperty Name="tb_movimentacaofinanceira" Relationship="residentialbdModel.TB_MovimentacaoFinanceira_TB_Administradora1" FromRole="tb_administradora" ToRole="tb_movimentacaofinanceira" />
   </EntityType>
   <EntityType Name="tb_atendimento">
     <Key>
-      <PropertyRef Name="AteID" />
+      <PropertyRef Name="IdAte" />
     </Key>
-    <Property Name="AteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="PesId" Type="Int32" Nullable="false" />
+    <Property Name="IdAte" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPes" Type="Int32" Nullable="false" />
     <Property Name="Titulo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="Descricao" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
     <Property Name="Status" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
@@ -128,10 +151,10 @@
   </EntityType>
   <EntityType Name="tb_bloco">
     <Key>
-      <PropertyRef Name="BloID" />
+      <PropertyRef Name="IdBlo" />
     </Key>
-    <Property Name="BloID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ConId" Type="Int32" Nullable="false" />
+    <Property Name="IdBlo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCon" Type="Int32" Nullable="false" />
     <Property Name="Nome" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="QuantidadeAndares" Type="Int32" Nullable="false" />
     <Property Name="QuantidadeMoradias" Type="Int32" Nullable="false" />
@@ -140,21 +163,23 @@
   </EntityType>
   <EntityType Name="tb_comentario">
     <Key>
-      <PropertyRef Name="ComId" />
+      <PropertyRef Name="IdCom" />
     </Key>
-    <Property Name="ComId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="PosId" Type="Int32" Nullable="false" />
-    <Property Name="PesId" Type="Int32" Nullable="false" />
+    <Property Name="IdCom" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPos" Type="Int32" Nullable="false" />
+    <Property Name="IdPes" Type="Int32" Nullable="false" />
     <Property Name="Comentario" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
     <Property Name="Data" Type="DateTime" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_Comentario_TB_Pessoa1" FromRole="tb_comentario" ToRole="tb_pessoa" />
     <NavigationProperty Name="tb_postagem" Relationship="residentialbdModel.TB_Comentario_TB_Postagem1" FromRole="tb_comentario" ToRole="tb_postagem" />
   </EntityType>
   <EntityType Name="tb_condominio">
     <Key>
-      <PropertyRef Name="ConId" />
+      <PropertyRef Name="IdCon" />
     </Key>
-    <Property Name="ConId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdSin" Type="Int32" Nullable="false" />
     <Property Name="Nome" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="Rua" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="Numero" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
@@ -165,14 +190,15 @@
     <Property Name="Estado" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="tb_administradora" Relationship="residentialbdModel.TB_Administradora_TB_Condominio1" FromRole="tb_condominio" ToRole="tb_administradora" />
     <NavigationProperty Name="tb_bloco" Relationship="residentialbdModel.TB_Bloco_TB_Condominio1" FromRole="tb_condominio" ToRole="tb_bloco" />
-    <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.tb_pessoacondominio" FromRole="tb_condominio" ToRole="tb_pessoa" />
+    <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_Condominio_TB_Pessoa1" FromRole="tb_condominio" ToRole="tb_pessoa" />
+    <NavigationProperty Name="tb_pessoa1" Relationship="residentialbdModel.tb_pessoacondominio" FromRole="tb_condominio" ToRole="tb_pessoa" />
   </EntityType>
   <EntityType Name="tb_enquete">
     <Key>
-      <PropertyRef Name="EnqId" />
+      <PropertyRef Name="IdEnq" />
     </Key>
-    <Property Name="EnqId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="PesId" Type="Int32" Nullable="false" />
+    <Property Name="IdEnq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPes" Type="Int32" Nullable="false" />
     <Property Name="Titulo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="Descricao" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
     <Property Name="DataInicio" Type="DateTime" Nullable="false" />
@@ -183,9 +209,9 @@
   </EntityType>
   <EntityType Name="tb_espaco">
     <Key>
-      <PropertyRef Name="EspId" />
+      <PropertyRef Name="IdEsp" />
     </Key>
-    <Property Name="EspId" Type="Int32" Nullable="false" />
+    <Property Name="IdEsp" Type="Int32" Nullable="false" />
     <Property Name="Nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
     <Property Name="Local" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
     <Property Name="Tamanho" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
@@ -195,52 +221,55 @@
   </EntityType>
   <EntityType Name="tb_funcionario">
     <Key>
-      <PropertyRef Name="FunID" />
+      <PropertyRef Name="IdFun" />
     </Key>
-    <Property Name="FunID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="SetId" Type="Int32" Nullable="false" />
-    <Property Name="PesId" Type="Int32" Nullable="false" />
+    <Property Name="IdFun" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdSet" Type="Int32" Nullable="false" />
+    <Property Name="IdPes" Type="Int32" Nullable="false" />
     <Property Name="Ocupacao" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
     <Property Name="Frequencia" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
     <Property Name="HorarioPermitido" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
-    <Property Name="Pontuacao" Type="Int32" Nullable="false" />
+    <Property Name="Pontuacao" Type="Decimal" Nullable="false" />
     <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_Funcionario_TB_Pessoa1" FromRole="tb_funcionario" ToRole="tb_pessoa" />
     <NavigationProperty Name="tb_setor" Relationship="residentialbdModel.TB_Funcionario_TB_Setor1" FromRole="tb_funcionario" ToRole="tb_setor" />
   </EntityType>
   <EntityType Name="tb_moradia">
     <Key>
-      <PropertyRef Name="MorId" />
+      <PropertyRef Name="IdMor" />
     </Key>
-    <Property Name="MorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="BloID" Type="Int32" Nullable="false" />
-    <Property Name="PesId" Type="Int32" Nullable="false" />
-    <Property Name="CPFResponsavel" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="IdMor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdBlo" Type="Int32" Nullable="false" />
+    <Property Name="IdPes" Type="Int32" Nullable="false" />
+    <Property Name="IdRes" Type="Int32" Nullable="false" />
     <Property Name="Predio" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
     <Property Name="Andar" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
     <Property Name="Numero" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
     <Property Name="Tipo" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="tb_bloco" Relationship="residentialbdModel.TB_Moradia_TB_Bloco1" FromRole="tb_moradia" ToRole="tb_bloco" />
     <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_Moradia_TB_Pessoa1" FromRole="tb_moradia" ToRole="tb_pessoa" />
+    <NavigationProperty Name="tb_pessoa1" Relationship="residentialbdModel.TB_Moradia_TB_Pessoa2" FromRole="tb_moradia" ToRole="tb_pessoa" />
   </EntityType>
   <EntityType Name="tb_movimentacaofinanceira">
     <Key>
-      <PropertyRef Name="MovID" />
+      <PropertyRef Name="IdMov" />
     </Key>
-    <Property Name="MovID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="AdmId" Type="Int32" Nullable="false" />
+    <Property Name="IdMov" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdAdm" Type="Int32" Nullable="false" />
     <Property Name="Valor" Type="Single" Nullable="false" />
     <Property Name="Data" Type="DateTime" Nullable="false" />
     <Property Name="Status" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Tipo" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
     <Property Name="Competencia" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Descricao" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="tb_administradora" Relationship="residentialbdModel.TB_MovimentacaoFinanceira_TB_Administradora1" FromRole="tb_movimentacaofinanceira" ToRole="tb_administradora" />
     <NavigationProperty Name="tb_planodeconta" Relationship="residentialbdModel.TB_PlanoDeConta_TB_MovimentacaoFinanceira1" FromRole="tb_movimentacaofinanceira" ToRole="tb_planodeconta" />
   </EntityType>
   <EntityType Name="tb_ocorrencia">
     <Key>
-      <PropertyRef Name="OcoId" />
+      <PropertyRef Name="IdOco" />
     </Key>
-    <Property Name="OcoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="PesId" Type="Int32" Nullable="false" />
+    <Property Name="IdOco" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPes" Type="Int32" Nullable="false" />
     <Property Name="Titulo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="Descricao" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
     <Property Name="DataCriacao" Type="DateTime" Nullable="false" />
@@ -250,19 +279,19 @@
   </EntityType>
   <EntityType Name="tb_opcoesenquete">
     <Key>
-      <PropertyRef Name="OpcId" />
+      <PropertyRef Name="IdOpc" />
     </Key>
-    <Property Name="OpcId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="EnqId" Type="Int32" Nullable="false" />
+    <Property Name="IdOpc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdEnq" Type="Int32" Nullable="false" />
     <Property Name="Descricao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="tb_enquete" Relationship="residentialbdModel.TB_OpcoesEnquete_TB_Enquete1" FromRole="tb_opcoesenquete" ToRole="tb_enquete" />
     <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.tb_votoenquete" FromRole="tb_opcoesenquete" ToRole="tb_pessoa" />
   </EntityType>
   <EntityType Name="tb_pessoa">
     <Key>
-      <PropertyRef Name="PesId" />
+      <PropertyRef Name="IdPes" />
     </Key>
-    <Property Name="PesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CPF" Type="String" Nullable="false" MaxLength="11" Unicode="false" FixedLength="false" />
     <Property Name="Nome" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="RG" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
@@ -280,36 +309,39 @@
     <Property Name="Cidade" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="Estado" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="Tipo" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tb_acesso" Relationship="residentialbdModel.TB_Acesso_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_acesso" />
     <NavigationProperty Name="tb_atendimento" Relationship="residentialbdModel.TB_Atendimento_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_atendimento" />
     <NavigationProperty Name="tb_comentario" Relationship="residentialbdModel.TB_Comentario_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_comentario" />
+    <NavigationProperty Name="tb_condominio" Relationship="residentialbdModel.TB_Condominio_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_condominio" />
     <NavigationProperty Name="tb_enquete" Relationship="residentialbdModel.TB_Enquete_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_enquete" />
     <NavigationProperty Name="tb_funcionario" Relationship="residentialbdModel.TB_Funcionario_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_funcionario" />
     <NavigationProperty Name="tb_moradia" Relationship="residentialbdModel.TB_Moradia_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_moradia" />
+    <NavigationProperty Name="tb_moradia1" Relationship="residentialbdModel.TB_Moradia_TB_Pessoa2" FromRole="tb_pessoa" ToRole="tb_moradia" />
     <NavigationProperty Name="tb_ocorrencia" Relationship="residentialbdModel.TB_Ocorrencia_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_ocorrencia" />
     <NavigationProperty Name="tb_publicacaomural" Relationship="residentialbdModel.TB_MuralEletronico_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_publicacaomural" />
     <NavigationProperty Name="tb_postagem" Relationship="residentialbdModel.TB_Postagem_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_postagem" />
     <NavigationProperty Name="tb_reservaambiente" Relationship="residentialbdModel.TB_ReservaAmbiente_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_reservaambiente" />
     <NavigationProperty Name="tb_veiculo" Relationship="residentialbdModel.TB_Veiculo_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_veiculo" />
-    <NavigationProperty Name="tb_condominio" Relationship="residentialbdModel.tb_pessoacondominio" FromRole="tb_pessoa" ToRole="tb_condominio" />
+    <NavigationProperty Name="tb_condominio1" Relationship="residentialbdModel.tb_pessoacondominio" FromRole="tb_pessoa" ToRole="tb_condominio" />
     <NavigationProperty Name="tb_opcoesenquete" Relationship="residentialbdModel.tb_votoenquete" FromRole="tb_pessoa" ToRole="tb_opcoesenquete" />
   </EntityType>
   <EntityType Name="tb_planodeconta">
     <Key>
-      <PropertyRef Name="MovID" />
+      <PropertyRef Name="IdMov" />
       <PropertyRef Name="Descricao" />
       <PropertyRef Name="Tipo" />
     </Key>
-    <Property Name="MovID" Type="Int32" Nullable="false" />
+    <Property Name="IdMov" Type="Int32" Nullable="false" />
     <Property Name="Descricao" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
     <Property Name="Tipo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="tb_movimentacaofinanceira" Relationship="residentialbdModel.TB_PlanoDeConta_TB_MovimentacaoFinanceira1" FromRole="tb_planodeconta" ToRole="tb_movimentacaofinanceira" />
   </EntityType>
   <EntityType Name="tb_postagem">
     <Key>
-      <PropertyRef Name="PosId" />
+      <PropertyRef Name="IdPos" />
     </Key>
-    <Property Name="PosId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="PesId" Type="Int32" Nullable="false" />
+    <Property Name="IdPos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPes" Type="Int32" Nullable="false" />
     <Property Name="Titulo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="Descricao" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
     <Property Name="DataCriacao" Type="DateTime" Nullable="false" />
@@ -319,10 +351,10 @@
   </EntityType>
   <EntityType Name="tb_publicacaomural">
     <Key>
-      <PropertyRef Name="PubId" />
+      <PropertyRef Name="IdPub" />
     </Key>
-    <Property Name="PubId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="PesId" Type="Int32" Nullable="false" />
+    <Property Name="IdPub" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPes" Type="Int32" Nullable="false" />
     <Property Name="Titulo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="Descricao" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
     <Property Name="DataCriacao" Type="DateTime" Nullable="false" />
@@ -331,11 +363,11 @@
   </EntityType>
   <EntityType Name="tb_reservaambiente">
     <Key>
-      <PropertyRef Name="ResID" />
+      <PropertyRef Name="IdRes" />
     </Key>
-    <Property Name="ResID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="EspId" Type="Int32" Nullable="false" />
-    <Property Name="PesId" Type="Int32" Nullable="false" />
+    <Property Name="IdRes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdEsp" Type="Int32" Nullable="false" />
+    <Property Name="IdPes" Type="Int32" Nullable="false" />
     <Property Name="DataInicio" Type="DateTime" Nullable="false" />
     <Property Name="DataFim" Type="DateTime" Nullable="false" />
     <Property Name="StatusPagamento" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
@@ -344,34 +376,46 @@
   </EntityType>
   <EntityType Name="tb_setor">
     <Key>
-      <PropertyRef Name="SetId" />
+      <PropertyRef Name="IdSet" />
     </Key>
-    <Property Name="SetId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdSet" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nome" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
     <Property Name="Descricao" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="tb_funcionario" Relationship="residentialbdModel.TB_Funcionario_TB_Setor1" FromRole="tb_setor" ToRole="tb_funcionario" />
   </EntityType>
   <EntityType Name="tb_veiculo">
     <Key>
-      <PropertyRef Name="VeiId" />
+      <PropertyRef Name="IdVei" />
     </Key>
-    <Property Name="VeiId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="PesId" Type="Int32" Nullable="false" />
+    <Property Name="IdVei" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPes" Type="Int32" Nullable="false" />
     <Property Name="Placa" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
     <Property Name="Modelo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="Cor" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
     <Property Name="Tipo" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_Veiculo_TB_Pessoa1" FromRole="tb_veiculo" ToRole="tb_pessoa" />
   </EntityType>
+  <Association Name="TB_Acesso_TB_Pessoa1">
+    <End Role="tb_pessoa" Type="residentialbdModel.tb_pessoa" Multiplicity="1" />
+    <End Role="tb_acesso" Type="residentialbdModel.tb_acesso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pessoa">
+        <PropertyRef Name="IdPes" />
+      </Principal>
+      <Dependent Role="tb_acesso">
+        <PropertyRef Name="IdPes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="TB_Administradora_TB_Condominio1">
     <End Role="tb_condominio" Type="residentialbdModel.tb_condominio" Multiplicity="1" />
     <End Role="tb_administradora" Type="residentialbdModel.tb_administradora" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_condominio">
-        <PropertyRef Name="ConId" />
+        <PropertyRef Name="IdCon" />
       </Principal>
       <Dependent Role="tb_administradora">
-        <PropertyRef Name="ConId" />
+        <PropertyRef Name="IdCon" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -380,10 +424,10 @@
     <End Role="tb_movimentacaofinanceira" Type="residentialbdModel.tb_movimentacaofinanceira" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_administradora">
-        <PropertyRef Name="AdmId" />
+        <PropertyRef Name="IdAdm" />
       </Principal>
       <Dependent Role="tb_movimentacaofinanceira">
-        <PropertyRef Name="AdmId" />
+        <PropertyRef Name="IdAdm" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -392,10 +436,10 @@
     <End Role="tb_atendimento" Type="residentialbdModel.tb_atendimento" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_pessoa">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Principal>
       <Dependent Role="tb_atendimento">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -404,10 +448,10 @@
     <End Role="tb_bloco" Type="residentialbdModel.tb_bloco" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_condominio">
-        <PropertyRef Name="ConId" />
+        <PropertyRef Name="IdCon" />
       </Principal>
       <Dependent Role="tb_bloco">
-        <PropertyRef Name="ConId" />
+        <PropertyRef Name="IdCon" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -416,10 +460,10 @@
     <End Role="tb_moradia" Type="residentialbdModel.tb_moradia" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_bloco">
-        <PropertyRef Name="BloID" />
+        <PropertyRef Name="IdBlo" />
       </Principal>
       <Dependent Role="tb_moradia">
-        <PropertyRef Name="BloID" />
+        <PropertyRef Name="IdBlo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -428,10 +472,10 @@
     <End Role="tb_comentario" Type="residentialbdModel.tb_comentario" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_pessoa">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Principal>
       <Dependent Role="tb_comentario">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -440,10 +484,22 @@
     <End Role="tb_comentario" Type="residentialbdModel.tb_comentario" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_postagem">
-        <PropertyRef Name="PosId" />
+        <PropertyRef Name="IdPos" />
       </Principal>
       <Dependent Role="tb_comentario">
-        <PropertyRef Name="PosId" />
+        <PropertyRef Name="IdPos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TB_Condominio_TB_Pessoa1">
+    <End Role="tb_pessoa" Type="residentialbdModel.tb_pessoa" Multiplicity="1" />
+    <End Role="tb_condominio" Type="residentialbdModel.tb_condominio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pessoa">
+        <PropertyRef Name="IdPes" />
+      </Principal>
+      <Dependent Role="tb_condominio">
+        <PropertyRef Name="IdSin" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -452,10 +508,10 @@
     <End Role="tb_enquete" Type="residentialbdModel.tb_enquete" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_pessoa">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Principal>
       <Dependent Role="tb_enquete">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -464,10 +520,10 @@
     <End Role="tb_opcoesenquete" Type="residentialbdModel.tb_opcoesenquete" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_enquete">
-        <PropertyRef Name="EnqId" />
+        <PropertyRef Name="IdEnq" />
       </Principal>
       <Dependent Role="tb_opcoesenquete">
-        <PropertyRef Name="EnqId" />
+        <PropertyRef Name="IdEnq" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -476,10 +532,10 @@
     <End Role="tb_reservaambiente" Type="residentialbdModel.tb_reservaambiente" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_espaco">
-        <PropertyRef Name="EspId" />
+        <PropertyRef Name="IdEsp" />
       </Principal>
       <Dependent Role="tb_reservaambiente">
-        <PropertyRef Name="EspId" />
+        <PropertyRef Name="IdEsp" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -488,10 +544,10 @@
     <End Role="tb_funcionario" Type="residentialbdModel.tb_funcionario" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_pessoa">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Principal>
       <Dependent Role="tb_funcionario">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -500,10 +556,10 @@
     <End Role="tb_funcionario" Type="residentialbdModel.tb_funcionario" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_setor">
-        <PropertyRef Name="SetId" />
+        <PropertyRef Name="IdSet" />
       </Principal>
       <Dependent Role="tb_funcionario">
-        <PropertyRef Name="SetId" />
+        <PropertyRef Name="IdSet" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -512,10 +568,22 @@
     <End Role="tb_moradia" Type="residentialbdModel.tb_moradia" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_pessoa">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Principal>
       <Dependent Role="tb_moradia">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TB_Moradia_TB_Pessoa2">
+    <End Role="tb_pessoa" Type="residentialbdModel.tb_pessoa" Multiplicity="1" />
+    <End Role="tb_moradia" Type="residentialbdModel.tb_moradia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_pessoa">
+        <PropertyRef Name="IdPes" />
+      </Principal>
+      <Dependent Role="tb_moradia">
+        <PropertyRef Name="IdRes" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -524,10 +592,10 @@
     <End Role="tb_planodeconta" Type="residentialbdModel.tb_planodeconta" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_movimentacaofinanceira">
-        <PropertyRef Name="MovID" />
+        <PropertyRef Name="IdMov" />
       </Principal>
       <Dependent Role="tb_planodeconta">
-        <PropertyRef Name="MovID" />
+        <PropertyRef Name="IdMov" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -536,10 +604,10 @@
     <End Role="tb_ocorrencia" Type="residentialbdModel.tb_ocorrencia" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_pessoa">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Principal>
       <Dependent Role="tb_ocorrencia">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -548,10 +616,10 @@
     <End Role="tb_publicacaomural" Type="residentialbdModel.tb_publicacaomural" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_pessoa">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Principal>
       <Dependent Role="tb_publicacaomural">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -560,10 +628,10 @@
     <End Role="tb_postagem" Type="residentialbdModel.tb_postagem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_pessoa">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Principal>
       <Dependent Role="tb_postagem">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -572,10 +640,10 @@
     <End Role="tb_reservaambiente" Type="residentialbdModel.tb_reservaambiente" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_pessoa">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Principal>
       <Dependent Role="tb_reservaambiente">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -584,10 +652,10 @@
     <End Role="tb_veiculo" Type="residentialbdModel.tb_veiculo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_pessoa">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Principal>
       <Dependent Role="tb_veiculo">
-        <PropertyRef Name="PesId" />
+        <PropertyRef Name="IdPes" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
