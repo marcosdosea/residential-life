@@ -24,3 +24,16 @@ C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\bin\Entity
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\bin\Persistence.pdb
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\bin\BibliotecaWeb.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\bin\BibliotecaWeb.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\bin\EntityFramework.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\bin\Model.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\bin\Services.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\bin\Persistence.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\bin\Model.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\bin\Services.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\bin\EntityFramework.xml
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\bin\Persistence.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\obj\Debug\ResidentialWeb.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb

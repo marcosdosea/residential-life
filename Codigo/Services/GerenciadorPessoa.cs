@@ -43,7 +43,7 @@ namespace Services
         /// </summary>
         /// <param name="pessoaModel">Dados do modelo</param>
         /// <returns>Chave identificante na base</returns>
-        public int Inserir(Pessoa pessoaModel)
+        public int Inserir(PessoaModel pessoaModel)
         {
             tb_pessoa pessoaE = new tb_pessoa();
             Atribuir(pessoaModel, pessoaE);
@@ -56,7 +56,7 @@ namespace Services
         /// Altera dados na base de dados
         /// </summary>
         /// <param name="pessoaModel"></param>
-        public void Editar(Pessoa pessoaModel)
+        public void Editar(PessoaModel pessoaModel)
         {
             tb_pessoa pessoaE = new tb_pessoa(); 
             Atribuir(pessoaModel, pessoaE);
@@ -79,11 +79,11 @@ namespace Services
         /// Consulta padrão para retornar dados do autor como model
         /// </summary>
         /// <returns></returns>
-        private IQueryable<Pessoa> GetQuery()
+        private IQueryable<PessoaModel> GetQuery()
         {
             IQueryable<tb_pessoa> tb_pessoa = unitOfWork.RepositorioPessoa.GetQueryable();
             var query = from pessoa in tb_pessoa 
-                        select new Pessoa
+                        select new PessoaModel
                         {
                             PesId = pessoa.IdPes
                             
@@ -95,7 +95,7 @@ namespace Services
         /// Obter todos as entidades cadastradas
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<Pessoa> ObterTodos()
+        public IEnumerable<PessoaModel> ObterTodos()
         {
             return GetQuery();
         }
@@ -105,9 +105,9 @@ namespace Services
         /// </summary>
         /// <param name="idAutor">Identificador do autor na base de dados</param>
         /// <returns>Autor model</returns>
-        public Pessoa Obter(int idAutor)
+        public PessoaModel Obter(int idAutor)
         {
-            IEnumerable<Pessoa> pessoaEs = GetQuery().Where(pessoaModel => pessoaModel.PesId.Equals(idAutor));
+            IEnumerable<PessoaModel> pessoaEs = GetQuery().Where(pessoaModel => pessoaModel.PesId.Equals(idAutor));
             return pessoaEs.ElementAtOrDefault(0);
         }
 
@@ -116,7 +116,7 @@ namespace Services
         /// </summary>
         /// <param name="pessoaModel">Objeto do modelo</param>
         /// <param name="pessoaE">Entity mapeada da base de dados</param>
-        private void Atribuir(Pessoa pessoaModel, tb_pessoa pessoaE)
+        private void Atribuir(PessoaModel pessoaModel, tb_pessoa pessoaE)
         {
             pessoaE.IdPes = pessoaModel.PesId;
             //pessoaE.nome = pessoaModel.Nome;

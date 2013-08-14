@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Models
 {
-    public class Pessoa
+    public class PessoaModel
     {
         [Required]
         public int PesId { get; set; }

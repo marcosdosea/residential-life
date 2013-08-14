@@ -12,7 +12,7 @@
     <div class="page">
         <header>
             <div id="title">
-                <h1>Biblioteca DSI</h1>
+                <h1>Residential Life</h1>
             </div>
             <div id="logindisplay">
                 <% Html.RenderPartial("LogOnUserControl"); %>
@@ -20,7 +20,7 @@
             <nav>
                 <ul id="menu">
                     <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
-                    <li><%: Html.ActionLink("Autor", "Index", "Autor")%></li>
+                    <li><%: Html.ActionLink("Condominio", "Index", "Condominio")%></li>
                     <li><%: Html.ActionLink("Editora", "Index", "Editora")%></li>
                     <li><%: Html.ActionLink("About", "About", "Home")%></li>
                 </ul>

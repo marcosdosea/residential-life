@@ -13,3 +13,9 @@ C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Model\bin\Debug\Model.dl
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Model\bin\Debug\Model.pdb
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Model\obj\Debug\Model.dll
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Model\obj\Debug\Model.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Model\bin\Debug\Model.dll.config
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Model\bin\Debug\Model.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Model\bin\Debug\Model.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Model\obj\Debug\Model.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Model\obj\Debug\Model.pdb

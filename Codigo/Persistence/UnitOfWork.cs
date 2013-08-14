@@ -16,6 +16,7 @@ namespace Persistence
     {
         private residentialbdEntities _context;
         private IRepositorioGenerico<tb_pessoa> _repPessoa;
+        private IRepositorioGenerico<tb_condominio> _repCondominio;
   
 
         /// <summary>
@@ -39,6 +40,22 @@ namespace Persistence
                     _repPessoa = new RepositorioGenerico<tb_pessoa>(_context);
                 }
                 return _repPessoa;
+            }
+        }
+
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de pessoas
+        /// </summary>
+        public IRepositorioGenerico<tb_condominio> RepositorioCondominio
+        {
+            get
+            {
+                if (_repCondominio == null)
+                {
+                    _repCondominio = new RepositorioGenerico<tb_condominio>(_context);
+                }
+                return _repCondominio;
             }
         }
 
