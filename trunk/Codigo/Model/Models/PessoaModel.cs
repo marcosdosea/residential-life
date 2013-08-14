@@ -8,8 +8,8 @@ namespace Models
 {
     public class PessoaModel
     {
-        [Required]
-        public int PesId { get; set; }
+        //[Required]
+        public int IdPes { get; set; }
 
         [Required]
         [Display(Name = "Nome")]
@@ -18,42 +18,42 @@ namespace Models
 
         [Required]
         [Display(Name = "CPF")]
-        [StringLength(100)]
+        [StringLength(11)]
         public string CPF { get; set; }
 
         [Required]
         [Display(Name = "RG")]
-        [StringLength(100)]
+        [StringLength(15)]
         public string RG { get; set; }
 
         [Required]
         [Display(Name = "Sexo")]
-        [StringLength(100)]
+        [StringLength(1)]
         public string Sexo { get; set; }
 
         [Required]
         [Display(Name = "Email")]
-        [StringLength(100)]
+        [StringLength(50)]
         public string Email { get; set; }
 
         [Required]
         [Display(Name = "Login")]
-        [StringLength(100)]
+        [StringLength(16)]
         public string Login { get; set; }
 
         [Required]
         [Display(Name = "Senha")]
-        [StringLength(100)]
+        [StringLength(16)]
         public string Senha { get; set; }
 
         [Required]
         [Display(Name = "Telefone Fixo")]
-        [StringLength(100)]
+        [StringLength(12)]
         public string TelefoneFixo { get; set; }
 
         [Required]
         [Display(Name = "Telefone Celular")]
-        [StringLength(100)]
+        [StringLength(12)]
         public string TelefoneCelular { get; set; }
 
         [Required]
@@ -63,7 +63,7 @@ namespace Models
 
         [Required]
         [Display(Name = "Número")]
-        [StringLength(100)]
+        [StringLength(10)]
         public string Numero { get; set; }
 
         [Required]
@@ -73,27 +73,27 @@ namespace Models
 
         [Required]
         [Display(Name = "Bairro")]
-        [StringLength(100)]
+        [StringLength(50)]
         public string Bairro { get; set; }
 
         [Required]
         [Display(Name = "CEP")]
-        [StringLength(100)]
+        [StringLength(8)]
         public string CEP { get; set; }
 
         [Required]
         [Display(Name = "Cidade")]
-        [StringLength(100)]
+        [StringLength(50)]
         public string Cidade { get; set; }
 
         [Required]
         [Display(Name = "Estado")]
-        [StringLength(100)]
+        [StringLength(50)]
         public string Estado { get; set; }
 
         [Required]
         [Display(Name = "Tipo")]
-        [StringLength(100)]
+        [StringLength(45)]
         public string Tipo { get; set; }
 
     }

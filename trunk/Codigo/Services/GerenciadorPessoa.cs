@@ -76,7 +76,7 @@ namespace Services
 
 
         /// <summary>
-        /// Consulta padrão para retornar dados do autor como model
+        /// Consulta padrão para retornar dados da entidade como model
         /// </summary>
         /// <returns></returns>
         private IQueryable<PessoaModel> GetQuery()
@@ -85,7 +85,7 @@ namespace Services
             var query = from pessoa in tb_pessoa 
                         select new PessoaModel
                         {
-                            PesId = pessoa.IdPes
+                            IdPes = pessoa.IdPes
                             
                         };
             return query;
@@ -103,24 +103,40 @@ namespace Services
         /// <summary>
         /// Obtém um autor
         /// </summary>
-        /// <param name="idAutor">Identificador do autor na base de dados</param>
+        /// <param name="idPessoa">Identificador da entidade na base de dados</param>
         /// <returns>Autor model</returns>
-        public PessoaModel Obter(int idAutor)
+        public PessoaModel Obter(int idPessoa)
         {
-            IEnumerable<PessoaModel> pessoaEs = GetQuery().Where(pessoaModel => pessoaModel.PesId.Equals(idAutor));
+            IEnumerable<PessoaModel> pessoaEs = GetQuery().Where(pessoaModel => pessoaModel.IdPes.Equals(idPessoa));
             return pessoaEs.ElementAtOrDefault(0);
         }
 
         /// <summary>
-        /// Atribui dados do Autor Model para o Autor Entity
+        /// Atribui dados da Entidade Model para a Entidade Entity
         /// </summary>
         /// <param name="pessoaModel">Objeto do modelo</param>
         /// <param name="pessoaE">Entity mapeada da base de dados</param>
         private void Atribuir(PessoaModel pessoaModel, tb_pessoa pessoaE)
         {
-            pessoaE.IdPes = pessoaModel.PesId;
-            //pessoaE.nome = pessoaModel.Nome;
-            //pessoaE.anoNascimento = pessoaModel.AnoNascimento;
+            pessoaE.IdPes = pessoaModel.IdPes;
+            pessoaE.Bairro = pessoaModel.Bairro;
+            pessoaE.CEP = pessoaModel.CEP;
+            pessoaE.Cidade = pessoaModel.Cidade;
+            pessoaE.Complemento = pessoaModel.Complemento;
+            pessoaE.CPF = pessoaModel.CPF;
+            pessoaE.Email = pessoaModel.Email;
+            pessoaE.Estado = pessoaModel.Estado;
+            pessoaE.Login = pessoaModel.Login;
+            pessoaE.Nome = pessoaModel.Nome;
+            pessoaE.Numero = pessoaModel.Numero;
+            pessoaE.RG = pessoaModel.RG;
+            pessoaE.Rua = pessoaModel.Rua;
+            pessoaE.Senha = pessoaModel.Senha;
+            pessoaE.Sexo = pessoaModel.Sexo;
+            pessoaE.TelefoneCelular = pessoaModel.TelefoneCelular;
+            pessoaE.TelefoneFixo = pessoaModel.TelefoneFixo;
+            pessoaE.Tipo = pessoaModel.Tipo;
+            
         }
     }
 }
