@@ -7,7 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using Models;
 
-namespace BibliotecaWeb.Controllers
+namespace ResidentialWeb.Controllers
 {
     public class AccountController : Controller
     {

@@ -31,7 +31,7 @@ namespace BibliotecaWeb.Controllers
 
         public ViewResult Details(int id)
         {
-            Pessoa pessoa = gPessoa.Obter(id);
+            PessoaModel pessoa = gPessoa.Obter(id);
             return View(pessoa);
         }
 
@@ -47,7 +47,7 @@ namespace BibliotecaWeb.Controllers
         // POST: /pessoa/Create
 
         [HttpPost]
-        public ActionResult Create(Pessoa pessoaModel)
+        public ActionResult Create(PessoaModel pessoaModel)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +64,7 @@ namespace BibliotecaWeb.Controllers
         public ActionResult Edit(int id)
         {
 
-            Pessoa pessoa = gPessoa.Obter(id);
+            PessoaModel pessoa = gPessoa.Obter(id);
             return View(pessoa);
         }
 
@@ -72,7 +72,7 @@ namespace BibliotecaWeb.Controllers
         // POST: /pessoa/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(Pessoa pessoaModel)
+        public ActionResult Edit(PessoaModel pessoaModel)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace BibliotecaWeb.Controllers
  
         public ActionResult Delete(int id)
         {
-            Pessoa pessoaModel = gPessoa.Obter(id);
+            PessoaModel pessoaModel = gPessoa.Obter(id);
             return View(pessoaModel);
         }
 

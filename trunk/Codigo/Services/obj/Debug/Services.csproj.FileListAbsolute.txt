@@ -25,3 +25,12 @@ C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Services\bin\Debug\Model
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Services\bin\Debug\Persistence.pdb
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Services\obj\Debug\Services.dll
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\bin\Debug\Services.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\bin\Debug\Services.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\bin\Debug\Model.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\bin\Debug\Persistence.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\bin\Debug\Model.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\bin\Debug\Persistence.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\obj\Debug\Services.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\obj\Debug\Services.pdb
