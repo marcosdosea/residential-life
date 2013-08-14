@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Pessoa>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.PessoaModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Edit
@@ -14,7 +14,15 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>Pessoa</legend>
+        <legend>PessoaModel</legend>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.IdPes) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.IdPes) %>
+            <%: Html.ValidationMessageFor(model => model.IdPes) %>
+        </div>
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Nome) %>
@@ -22,6 +30,134 @@
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Nome) %>
             <%: Html.ValidationMessageFor(model => model.Nome) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.CPF) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.CPF) %>
+            <%: Html.ValidationMessageFor(model => model.CPF) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.RG) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.RG) %>
+            <%: Html.ValidationMessageFor(model => model.RG) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Sexo) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.Sexo) %>
+            <%: Html.ValidationMessageFor(model => model.Sexo) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Email) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.Email) %>
+            <%: Html.ValidationMessageFor(model => model.Email) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Login) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.Login) %>
+            <%: Html.ValidationMessageFor(model => model.Login) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Senha) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.Senha) %>
+            <%: Html.ValidationMessageFor(model => model.Senha) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.TelefoneFixo) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.TelefoneFixo) %>
+            <%: Html.ValidationMessageFor(model => model.TelefoneFixo) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.TelefoneCelular) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.TelefoneCelular) %>
+            <%: Html.ValidationMessageFor(model => model.TelefoneCelular) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Rua) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.Rua) %>
+            <%: Html.ValidationMessageFor(model => model.Rua) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Numero) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.Numero) %>
+            <%: Html.ValidationMessageFor(model => model.Numero) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Complemento) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.Complemento) %>
+            <%: Html.ValidationMessageFor(model => model.Complemento) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Bairro) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.Bairro) %>
+            <%: Html.ValidationMessageFor(model => model.Bairro) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.CEP) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.CEP) %>
+            <%: Html.ValidationMessageFor(model => model.CEP) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Cidade) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.Cidade) %>
+            <%: Html.ValidationMessageFor(model => model.Cidade) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Estado) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.Estado) %>
+            <%: Html.ValidationMessageFor(model => model.Estado) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Tipo) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.Tipo) %>
+            <%: Html.ValidationMessageFor(model => model.Tipo) %>
         </div>
 
         <p>
