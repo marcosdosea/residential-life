@@ -10,7 +10,7 @@ namespace Models.Models
     {
         public int idAreaPublica { get; set; }
         public int idCondominio { get; set; }
-        public string Estado { get; set; }
+        public string estado { get; set; }
 
         [Required]
         [Display(Name = "Nome")]
