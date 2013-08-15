@@ -85,7 +85,24 @@ namespace Services
             var query = from pessoa in tb_pessoa 
                         select new PessoaModel
                         {
-                            IdPes = pessoa.IdPes
+                            IdPes = pessoa.IdPes,
+                            Bairro = pessoa.Bairro,
+                            CEP = pessoa.CEP,
+                            Cidade = pessoa.Cidade,
+                            Complemento = pessoa.Complemento,
+                            CPF = pessoa.CPF,
+                            Email = pessoa.Email,
+                            Estado = pessoa.Estado,
+                            Login = pessoa.Login,
+                            Nome = pessoa.Nome,
+                            Numero = pessoa.Numero,
+                            RG = pessoa.RG,
+                            Rua = pessoa.Rua,
+                            Senha = pessoa.Senha,
+                            Sexo = pessoa.Sexo,
+                            TelefoneCelular = pessoa.TelefoneCelular,
+                            TelefoneFixo = pessoa.TelefoneFixo,
+                            Tipo = pessoa.Tipo
                             
                         };
             return query;
@@ -107,8 +124,8 @@ namespace Services
         /// <returns>Autor model</returns>
         public PessoaModel Obter(int idPessoa)
         {
-            IEnumerable<PessoaModel> pessoaEs = GetQuery().Where(pessoaModel => pessoaModel.IdPes.Equals(idPessoa));
-            return pessoaEs.ElementAtOrDefault(0);
+            IEnumerable<PessoaModel> pessoaE = GetQuery().Where(pessoaModel => pessoaModel.IdPes.Equals(idPessoa));
+            return pessoaE.ElementAtOrDefault(0);
         }
 
         /// <summary>

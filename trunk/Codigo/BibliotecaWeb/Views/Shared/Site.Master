@@ -21,7 +21,7 @@
                 <ul id="menu">
                     <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%: Html.ActionLink("Condominio", "Index", "Condominio")%></li>
-                    <li><%: Html.ActionLink("Editora", "Index", "Editora")%></li>
+                    <li><%: Html.ActionLink("Pessoa", "Index", "Pessoa")%></li>
                     <li><%: Html.ActionLink("About", "About", "Home")%></li>
                 </ul>
             </nav>
