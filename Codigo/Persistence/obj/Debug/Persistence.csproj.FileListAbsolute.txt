@@ -30,3 +30,11 @@ C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Persistence\bin\Debug\Mo
 C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
 C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Persistence\obj\Debug\Persistence.dll
 C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\obj\Debug\Persistence.pdb

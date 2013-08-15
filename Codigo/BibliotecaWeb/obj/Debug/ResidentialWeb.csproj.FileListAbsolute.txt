@@ -37,3 +37,16 @@ C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\bin\Persis
 C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\obj\Debug\ResidentialWeb.csprojResolveAssemblyReference.cache
 C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
 C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\bin\BibliotecaWeb.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\bin\BibliotecaWeb.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\bin\EntityFramework.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\bin\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\bin\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\bin\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\bin\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\bin\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\bin\EntityFramework.xml
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\bin\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
