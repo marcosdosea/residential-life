@@ -125,6 +125,10 @@
     <Content Include="Views\Bloco\Edit.aspx" />
     <Content Include="Views\Bloco\Index.aspx" />
     <Content Include="Views\Condominio\Create.aspx" />
+    <Content Include="Views\Condominio\Delete.aspx" />
+    <Content Include="Views\Condominio\Details.aspx" />
+    <Content Include="Views\Condominio\Edit.aspx" />
+    <Content Include="Views\Condominio\Index.aspx" />
     <Content Include="Views\Pessoa\Create.aspx" />
     <Content Include="Views\Pessoa\Delete.aspx" />
     <Content Include="Views\Pessoa\Details.aspx" />
