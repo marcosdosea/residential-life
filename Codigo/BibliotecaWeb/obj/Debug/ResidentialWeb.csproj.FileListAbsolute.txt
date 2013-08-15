@@ -50,3 +50,16 @@ C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\bin\Persistence.pdb
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
+D:\Tauany\residential-life\trunk\Codigo\BibliotecaWeb\obj\Debug\ResolveAssemblyReference.cache
+D:\Tauany\residential-life\trunk\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
+D:\Tauany\residential-life\trunk\Codigo\BibliotecaWeb\bin\BibliotecaWeb.dll
+D:\Tauany\residential-life\trunk\Codigo\BibliotecaWeb\bin\BibliotecaWeb.pdb
+D:\Tauany\residential-life\trunk\Codigo\BibliotecaWeb\bin\EntityFramework.dll
+D:\Tauany\residential-life\trunk\Codigo\BibliotecaWeb\bin\Model.dll
+D:\Tauany\residential-life\trunk\Codigo\BibliotecaWeb\bin\Services.dll
+D:\Tauany\residential-life\trunk\Codigo\BibliotecaWeb\bin\Persistence.dll
+D:\Tauany\residential-life\trunk\Codigo\BibliotecaWeb\bin\Model.pdb
+D:\Tauany\residential-life\trunk\Codigo\BibliotecaWeb\bin\Services.pdb
+D:\Tauany\residential-life\trunk\Codigo\BibliotecaWeb\bin\EntityFramework.xml
+D:\Tauany\residential-life\trunk\Codigo\BibliotecaWeb\bin\Persistence.pdb
+D:\Tauany\residential-life\trunk\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
