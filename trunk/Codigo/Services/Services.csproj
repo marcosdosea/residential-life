@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GerenciadorAreaPublica.cs" />
     <Compile Include="GerenciadorBloco.cs" />
     <Compile Include="GerenciadorCondominio.cs" />
     <Compile Include="GerenciadorPessoa.cs" />
