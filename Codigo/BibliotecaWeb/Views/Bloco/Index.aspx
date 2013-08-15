@@ -34,24 +34,24 @@
 <% foreach (var item in Model) { %>
     <tr>
         <td>
-            <%: Html.DisplayFor(modelItem => item.idBloco) %>
+            <%: Html.DisplayFor(modelItem => item.IdBloco) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.idCondominio) %>
+            <%: Html.DisplayFor(modelItem => item.IdCondominio) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.nome) %>
+            <%: Html.DisplayFor(modelItem => item.Nome) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.quantAndares) %>
+            <%: Html.DisplayFor(modelItem => item.QuantidadeAndares) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.quantMoradias) %>
+            <%: Html.DisplayFor(modelItem => item.QuantidadeMoradias) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new { id=item.idBloco }) %> |
-            <%: Html.ActionLink("Details", "Details", new { id=item.idBloco  }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { id=item.idBloco  }) %>
+            <%: Html.ActionLink("Edit", "Edit", new { id=item.IdBloco }) %> |
+            <%: Html.ActionLink("Details", "Details", new { id=item.IdBloco  }) %> |
+            <%: Html.ActionLink("Delete", "Delete", new { id=item.IdBloco  }) %>
         </td>
     </tr>
 <% } %>

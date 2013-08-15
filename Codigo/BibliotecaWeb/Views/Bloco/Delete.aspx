@@ -12,29 +12,29 @@
 <fieldset>
     <legend>BlocoModel</legend>
 
-    <div class="display-label">idBloco</div>
+    <div class="display-label">IdBloco</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.idBloco) %>
+        <%: Html.DisplayFor(model => model.IdBloco) %>
     </div>
 
-    <div class="display-label">idCondominio</div>
+    <div class="display-label">IdCondominio</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.idCondominio) %>
+        <%: Html.DisplayFor(model => model.IdCondominio) %>
     </div>
 
     <div class="display-label">nome</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.nome) %>
+        <%: Html.DisplayFor(model => model.Nome) %>
     </div>
 
     <div class="display-label">quantAndares</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.quantAndares) %>
+        <%: Html.DisplayFor(model => model.QuantidadeAndares) %>
     </div>
 
     <div class="display-label">quantMoradias</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.quantMoradias) %>
+        <%: Html.DisplayFor(model => model.QuantidadeMoradias) %>
     </div>
 </fieldset>
 <% using (Html.BeginForm()) { %>

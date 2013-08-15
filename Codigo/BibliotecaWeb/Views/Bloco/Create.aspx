@@ -18,37 +18,44 @@
 
       
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.idCondominio) %>
+            <%: Html.LabelFor(model => model.IdCondominio) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.idCondominio) %>
-            <%: Html.ValidationMessageFor(model => model.idCondominio) %>
+            <%: Html.EditorFor(model => model.IdCondominio) %>
+            <%: Html.ValidationMessageFor(model => model.IdCondominio) %>
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.nome) %>
+            <%: Html.LabelFor(model => model.Nome) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.nome) %>
-            <%: Html.ValidationMessageFor(model => model.nome) %>
+            <%: Html.EditorFor(model => model.Nome) %>
+            <%: Html.ValidationMessageFor(model => model.Nome) %>
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.quantAndares) %>
+            <%: Html.LabelFor(model => model.QuantidadeAndares) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.quantAndares) %>
-            <%: Html.ValidationMessageFor(model => model.quantAndares) %>
+            <%: Html.EditorFor(model => model.QuantidadeAndares) %>
+            <%: Html.ValidationMessageFor(model => model.QuantidadeAndares) %>
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.quantMoradias) %>
+            <%: Html.LabelFor(model => model.QuantidadeMoradias) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.quantMoradias) %>
-            <%: Html.ValidationMessageFor(model => model.quantMoradias) %>
+            <%: Html.EditorFor(model => model.QuantidadeMoradias) %>
+            <%: Html.ValidationMessageFor(model => model.QuantidadeMoradias) %>
         </div>
 
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.QuantidadeMoradias) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.QuantidadeMoradias) %>
+            <%: Html.ValidationMessageFor(model => model.%>
+        </div>
         <p>
             <input type="submit" value="Create" />
         </p>
