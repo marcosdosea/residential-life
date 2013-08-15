@@ -118,6 +118,9 @@
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
     <Content Include="Views\AreaPublica\Create.aspx" />
+    <Content Include="Views\AreaPublica\Delete.aspx" />
+    <Content Include="Views\AreaPublica\Details.aspx" />
+    <Content Include="Views\AreaPublica\Edit.aspx" />
     <Content Include="Views\AreaPublica\Index.aspx" />
     <Content Include="Views\Bloco\Create.aspx" />
     <Content Include="Views\Bloco\Delete.aspx" />

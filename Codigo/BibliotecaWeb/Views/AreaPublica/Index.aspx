@@ -46,7 +46,7 @@
             <%: Html.DisplayFor(modelItem => item.idCondominio) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.Estado) %>
+            <%: Html.DisplayFor(modelItem => item.estado) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.nome) %>
