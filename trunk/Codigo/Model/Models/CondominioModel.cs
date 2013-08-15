@@ -9,7 +9,7 @@ namespace Models.Models
     public class CondominioModel
     {
         public int idCondominio { get; set;}
-        public int sindico { get; set; } // depois mudar aqui, pois vai referenciar um Id de pessoa
+        public int idSindico { get; set; } // depois mudar aqui, pois vai referenciar um Id de pessoa
 
         [Required]
         [Display(Name = "Nome")]

@@ -116,7 +116,6 @@
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
     <Content Include="Views\Condominio\Create.aspx" />
-    <Content Include="Views\Condominio\Index.aspx" />
     <Content Include="Views\Pessoa\Create.aspx" />
     <Content Include="Views\Pessoa\Delete.aspx" />
     <Content Include="Views\Pessoa\Details.aspx" />

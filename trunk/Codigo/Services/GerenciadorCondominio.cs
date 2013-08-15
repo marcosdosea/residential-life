@@ -85,7 +85,10 @@ namespace Services
             var query = from condominio in tb_condominio
                         select new CondominioModel
                         {
-                            idCondominio = condominio.IdCon
+                            idCondominio = condominio.IdCon,
+                            nome = condominio.Nome,
+                            rua = condominio.Rua
+
 
                         };
             return query;
@@ -119,7 +122,7 @@ namespace Services
         private void Atribuir(CondominioModel condominioModel, tb_condominio condominioE)
         {
             condominioE.IdCon = condominioModel.idCondominio;
-            //condominioE.IdSin = condominioModel.sindico.PesId;
+            condominioE.IdSin = condominioModel.idSindico;
             condominioE.Nome = condominioModel.nome;
             condominioE.Rua = condominioModel.rua;
             condominioE.Numero = condominioModel.numero;
@@ -127,7 +130,7 @@ namespace Services
             condominioE.Complemento = condominioModel.complemento;
             condominioE.CEP = condominioModel.cep;
             condominioE.Cidade = condominioModel.cidade;
-            condominioE.Bairro = condominioModel.bairro;
+            condominioE.Estado = condominioModel.estado;
         }
     }
 }

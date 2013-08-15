@@ -24,6 +24,14 @@
             <%: Html.ValidationMessageFor(model => model.idCondominio) %>
         </div>
 
+           <div class="editor-label">
+            <%: Html.LabelFor(model => model.idSindico) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.idSindico) %>
+            <%: Html.ValidationMessageFor(model => model.idSindico) %>
+        </div>
+
         <div class="editor-label">
             <%: Html.LabelFor(model => model.nome) %>
         </div>
