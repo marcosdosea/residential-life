@@ -23,12 +23,12 @@ namespace Models.Models
 
         [Required]
         [Display(Name = "Número")]
-        [StringLength(6)]
+        [StringLength(10)]
         public string Numero { get; set; }
 
         [Required]
         [Display(Name = "Bairro")]
-        [StringLength(30)]
+        [StringLength(50)]
         public string Bairro { get; set; }
 
         [Display(Name = "Complemento")]
@@ -37,17 +37,17 @@ namespace Models.Models
 
         [Required]
         [Display(Name = "CEP")]
-        [StringLength(10)]
+        [StringLength(8)]
         public string Cep { get; set; }
 
         [Required]
         [Display(Name = "Cidade")]
-        [StringLength(30)]
+        [StringLength(50)]
         public string Cidade { get; set; }
 
         [Required]
         [Display(Name = "Estado")]
-        [StringLength(30)]
+        [StringLength(50)]
         public string Estado { get; set; }
     }
 }
