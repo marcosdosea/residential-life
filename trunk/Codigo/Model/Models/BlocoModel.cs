@@ -8,8 +8,8 @@ namespace Models.Models
 {
     public class BlocoModel
     {
-        public int IDBloco { get; set; }
-        public int IDCondominio { get; set; }
+        public int IdBloco { get; set; }
+        public int IdCondominio { get; set; }
        
         [Required]
         [Display(Name = "Nome")]
@@ -18,11 +18,11 @@ namespace Models.Models
 
         [Required]
         [Display(Name = "Quantidade de Andares")]
-        public int QuantAndares { get; set; }
+        public int QuantidadeAndares { get; set; }
 
         [Required]
         [Display(Name = "Quantidade de Moradias")]
-        public int QuantMoradias { get; set; }
+        public int QuantidadeMoradias { get; set; }
 
 
     }

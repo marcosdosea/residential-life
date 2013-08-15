@@ -84,11 +84,11 @@ namespace Services
             var query = from bloco in tb_bloco
                         select new BlocoModel
                         {
-                            IDBloco = bloco.IdBlo,
-                            IDCondominio = bloco.IdCon,
+                            IdBloco = bloco.IdBlo,
+                            IdCondominio = bloco.IdCon,
                             Nome = bloco.Nome,
-                            QuantAndares = bloco.QuantidadeAndares,
-                            QuantMoradias = bloco.QuantidadeMoradias
+                            QuantidadeAndares = bloco.QuantidadeAndares,
+                            QuantidadeMoradias = bloco.QuantidadeMoradias
 
 
                         };
@@ -111,7 +111,7 @@ namespace Services
         /// <returns>Autor model</returns>
         public BlocoModel Obter(int idBloco)
         {
-            IEnumerable<BlocoModel> blocoEs = GetQuery().Where(blocoModel => blocoModel.IDBloco.Equals(idBloco));
+            IEnumerable<BlocoModel> blocoEs = GetQuery().Where(blocoModel => blocoModel.IdBloco.Equals(idBloco));
             return blocoEs.ElementAtOrDefault(0);
         }
 
@@ -122,11 +122,11 @@ namespace Services
         /// <param name="blocoE">Entity mapeada da base de dados</param>
         private void Atribuir(BlocoModel blocoModel, tb_bloco blocoE)
         {
-            blocoE.IdBlo = blocoModel.IDBloco;
-            blocoE.IdCon = blocoModel.IDCondominio;
+            blocoE.IdBlo = blocoModel.IdBloco;
+            blocoE.IdCon = blocoModel.IdCondominio;
             blocoE.Nome = blocoModel.Nome;
-            blocoE.QuantidadeAndares = blocoModel.QuantAndares;
-            blocoE.QuantidadeMoradias = blocoModel.QuantMoradias;
+            blocoE.QuantidadeAndares = blocoModel.QuantidadeAndares;
+            blocoE.QuantidadeMoradias = blocoModel.QuantidadeMoradias;
         }
     }
 }
