@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\BlocoModel.cs" />
     <Compile Include="Models\CondominioModel.cs" />
     <Compile Include="Models\PessoaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,7 +67,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <EntityDeploy Include="ResidentialBD.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ResidentialBD.Designer.cs</LastGenOutput>
