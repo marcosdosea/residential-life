@@ -97,7 +97,7 @@
     </div>
 </fieldset>
 <p>
-    <%: Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) %> |
+    <%: Html.ActionLink("Edit", "Edit", new { id=Model.IdPes }) %> |
     <%: Html.ActionLink("Back to List", "Index") %>
 </p>
 

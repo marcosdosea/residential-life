@@ -33,10 +33,12 @@ namespace Persistence
         /// <summary>
         /// Repositório para manipular dados persistidos de pessoas
         /// </summary>
-        public IRepositorioGenerico<tb_pessoa> RepositorioPessoa { 
+        public IRepositorioGenerico<tb_pessoa> RepositorioPessoa 
+        { 
             get
             {
-                if (_repPessoa == null) {
+                if (_repPessoa == null) 
+                {
                     _repPessoa = new RepositorioGenerico<tb_pessoa>(_context);
                 }
                 return _repPessoa;

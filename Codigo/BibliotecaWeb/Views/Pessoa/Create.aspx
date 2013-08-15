@@ -16,6 +16,7 @@
     <fieldset>
         <legend>PessoaModel</legend>
 
+        
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Nome) %>
         </div>
@@ -44,7 +45,8 @@
             <%: Html.LabelFor(model => model.Sexo) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Sexo) %>
+            <%: Html.RadioButtonFor(model => model.Sexo, 'M') %> Masculino <br /> 
+            <%: Html.RadioButtonFor(model => model.Sexo, 'F') %> Feminino
             <%: Html.ValidationMessageFor(model => model.Sexo) %>
         </div>
 
@@ -68,7 +70,7 @@
             <%: Html.LabelFor(model => model.Senha) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Senha) %>
+            <%: Html.PasswordFor(model => model.Senha) %>
             <%: Html.ValidationMessageFor(model => model.Senha) %>
         </div>
 
