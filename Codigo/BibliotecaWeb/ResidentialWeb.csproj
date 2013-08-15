@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BlocoController.cs" />
     <Compile Include="Controllers\CondominioController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -115,6 +116,11 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Views\Bloco\Create.aspx" />
+    <Content Include="Views\Bloco\Delete.aspx" />
+    <Content Include="Views\Bloco\Details.aspx" />
+    <Content Include="Views\Bloco\Edit.aspx" />
+    <Content Include="Views\Bloco\Index.aspx" />
     <Content Include="Views\Condominio\Create.aspx" />
     <Content Include="Views\Pessoa\Create.aspx" />
     <Content Include="Views\Pessoa\Delete.aspx" />
