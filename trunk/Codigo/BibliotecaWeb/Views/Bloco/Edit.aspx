@@ -18,37 +18,37 @@
 
       
         <div class="editor-field">
-            <%: Html.HiddenFor(model => model.idBloco) %>
-            <%: Html.ValidationMessageFor(model => model.idBloco) %>
+            <%: Html.HiddenFor(model => model.IdBloco) %>
+            <%: Html.ValidationMessageFor(model => model.IdBloco) %>
         </div>
 
         <div class="editor-field">
-            <%: Html.HiddenFor(model => model.idCondominio)%>
-            <%: Html.ValidationMessageFor(model => model.idCondominio) %>
-        </div>
-
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.nome) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.nome) %>
-            <%: Html.ValidationMessageFor(model => model.nome) %>
+            <%: Html.HiddenFor(model => model.IdCondominio)%>
+            <%: Html.ValidationMessageFor(model => model.IdCondominio) %>
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.quantAndares) %>
+            <%: Html.LabelFor(model => model.Nome) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.quantAndares) %>
-            <%: Html.ValidationMessageFor(model => model.quantAndares) %>
+            <%: Html.EditorFor(model => model.Nome) %>
+            <%: Html.ValidationMessageFor(model => model.Nome) %>
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.quantMoradias) %>
+            <%: Html.LabelFor(model => model.QuantidadeAndares) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.quantMoradias) %>
-            <%: Html.ValidationMessageFor(model => model.quantMoradias) %>
+            <%: Html.EditorFor(model => model.QuantidadeAndares) %>
+            <%: Html.ValidationMessageFor(model => model.QuantidadeAndares) %>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.QuantidadeMoradias) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.QuantidadeMoradias) %>
+            <%: Html.ValidationMessageFor(model => model.QuantidadeMoradias) %>
         </div>
 
         <p>
