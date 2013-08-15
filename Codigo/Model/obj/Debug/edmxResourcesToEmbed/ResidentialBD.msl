@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="residentialbdModelStoreContainer" CdmEntityContainer="residentialbdEntities">
-    <EntitySetMapping Name="tb_acesso">
-      <EntityTypeMapping TypeName="residentialbdModel.tb_acesso">
-        <MappingFragment StoreEntitySet="tb_acesso">
+    <EntitySetMapping Name="tb_acessopredio">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_acessopredio">
+        <MappingFragment StoreEntitySet="tb_acessopredio">
           <ScalarProperty Name="IdAce" ColumnName="IdAce" />
           <ScalarProperty Name="IdPes" ColumnName="IdPes" />
           <ScalarProperty Name="DataEntrada" ColumnName="DataEntrada" />
@@ -17,6 +17,19 @@
           <ScalarProperty Name="IdAdm" ColumnName="IdAdm" />
           <ScalarProperty Name="IdCon" ColumnName="IdCon" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_areapublica">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_areapublica">
+        <MappingFragment StoreEntitySet="tb_areapublica">
+          <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Local" ColumnName="Local" />
+          <ScalarProperty Name="Tamanho" ColumnName="Tamanho" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdCon" ColumnName="IdCon" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -83,18 +96,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tb_espaco">
-      <EntityTypeMapping TypeName="residentialbdModel.tb_espaco">
-        <MappingFragment StoreEntitySet="tb_espaco">
-          <ScalarProperty Name="IdEsp" ColumnName="IdEsp" />
-          <ScalarProperty Name="Nome" ColumnName="Nome" />
-          <ScalarProperty Name="Local" ColumnName="Local" />
-          <ScalarProperty Name="Tamanho" ColumnName="Tamanho" />
-          <ScalarProperty Name="Valor" ColumnName="Valor" />
-          <ScalarProperty Name="Estado" ColumnName="Estado" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tb_funcionario">
       <EntityTypeMapping TypeName="residentialbdModel.tb_funcionario">
         <MappingFragment StoreEntitySet="tb_funcionario">
@@ -113,7 +114,6 @@
         <MappingFragment StoreEntitySet="tb_moradia">
           <ScalarProperty Name="IdMor" ColumnName="IdMor" />
           <ScalarProperty Name="IdBlo" ColumnName="IdBlo" />
-          <ScalarProperty Name="IdPes" ColumnName="IdPes" />
           <ScalarProperty Name="IdRes" ColumnName="IdRes" />
           <ScalarProperty Name="Predio" ColumnName="Predio" />
           <ScalarProperty Name="Andar" ColumnName="Andar" />
@@ -178,6 +178,14 @@
           <ScalarProperty Name="CEP" ColumnName="CEP" />
           <ScalarProperty Name="Cidade" ColumnName="Cidade" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_pessoamoradia">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_pessoamoradia">
+        <MappingFragment StoreEntitySet="tb_pessoamoradia">
+          <ScalarProperty Name="IdPes" ColumnName="IdPes" />
+          <ScalarProperty Name="IdMor" ColumnName="IdMor" />
           <ScalarProperty Name="Tipo" ColumnName="Tipo" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -219,7 +227,7 @@
       <EntityTypeMapping TypeName="residentialbdModel.tb_reservaambiente">
         <MappingFragment StoreEntitySet="tb_reservaambiente">
           <ScalarProperty Name="IdRes" ColumnName="IdRes" />
-          <ScalarProperty Name="IdEsp" ColumnName="IdEsp" />
+          <ScalarProperty Name="IdArea" ColumnName="IdArea" />
           <ScalarProperty Name="IdPes" ColumnName="IdPes" />
           <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
           <ScalarProperty Name="DataFim" ColumnName="DataFim" />
@@ -248,14 +256,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="tb_pessoacondominio" TypeName="residentialbdModel.tb_pessoacondominio" StoreEntitySet="tb_pessoacondominio">
-      <EndProperty Name="tb_condominio">
-        <ScalarProperty Name="IdCon" ColumnName="IdCon" />
-      </EndProperty>
-      <EndProperty Name="tb_pessoa">
-        <ScalarProperty Name="IdPes" ColumnName="IdPes" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="tb_votoenquete" TypeName="residentialbdModel.tb_votoenquete" StoreEntitySet="tb_votoenquete">
       <EndProperty Name="tb_opcoesenquete">
         <ScalarProperty Name="IdOpc" ColumnName="IdOpc" />

@@ -25,9 +25,6 @@
         <th>
             TelefoneCelular
         </th>
-        <th>
-            Tipo
-        </th>
         <th></th>
     </tr>
 
@@ -44,9 +41,6 @@
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.TelefoneCelular) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.Tipo) %>
         </td>
         <td>
             <%: Html.ActionLink("Edit", "Edit", new {  id=item.IdPes  }) %> |
