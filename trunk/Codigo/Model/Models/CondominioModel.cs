@@ -8,46 +8,46 @@ namespace Models.Models
 {
     public class CondominioModel
     {
-        public int idCondominio { get; set;}
-        public int idSindico { get; set; } // depois mudar aqui, pois vai referenciar um Id de pessoa
+        public int IDCondominio { get; set;}
+        public int IDSindico { get; set; } // depois mudar aqui, pois vai referenciar um Id de pessoa
 
         [Required]
         [Display(Name = "Nome")]
         [StringLength(100)]
-        public string nome { get; set; }
+        public string Nome { get; set; }
 
         [Required]
         [Display(Name = "Rua")]
         [StringLength(100)]
-        public string rua { get; set; }
+        public string Rua { get; set; }
 
         [Required]
         [Display(Name = "Número")]
         [StringLength(6)]
-        public string numero { get; set; }
+        public string Numero { get; set; }
 
         [Required]
         [Display(Name = "Bairro")]
         [StringLength(30)]
-        public string bairro { get; set; }
+        public string Bairro { get; set; }
 
         [Display(Name = "Complemento")]
         [StringLength(100)]
-        public string complemento { get; set; }
+        public string Complemento { get; set; }
 
         [Required]
         [Display(Name = "CEP")]
         [StringLength(10)]
-        public string cep { get; set; }
+        public string Cep { get; set; }
 
         [Required]
         [Display(Name = "Cidade")]
         [StringLength(30)]
-        public string cidade { get; set; }
+        public string Cidade { get; set; }
 
         [Required]
         [Display(Name = "Estado")]
         [StringLength(30)]
-        public string estado { get; set; }
+        public string Estado { get; set; }
     }
 }
