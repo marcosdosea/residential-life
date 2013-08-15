@@ -85,9 +85,9 @@ namespace Services
             var query = from condominio in tb_condominio
                         select new CondominioModel
                         {
-                            idCondominio = condominio.IdCon,
-                            nome = condominio.Nome,
-                            rua = condominio.Rua
+                            IDCondominio = condominio.IdCon,
+                            Nome = condominio.Nome,
+                            Rua = condominio.Rua
 
 
                         };
@@ -110,7 +110,7 @@ namespace Services
         /// <returns>Autor model</returns>
         public CondominioModel Obter(int idCondominio)
         {
-            IEnumerable<CondominioModel> condominioEs = GetQuery().Where(condominioModel => condominioModel.idCondominio.Equals(idCondominio));
+            IEnumerable<CondominioModel> condominioEs = GetQuery().Where(condominioModel => condominioModel.IDCondominio.Equals(idCondominio));
             return condominioEs.ElementAtOrDefault(0);
         }
 
@@ -121,16 +121,16 @@ namespace Services
         /// <param name="condominioE">Entity mapeada da base de dados</param>
         private void Atribuir(CondominioModel condominioModel, tb_condominio condominioE)
         {
-            condominioE.IdCon = condominioModel.idCondominio;
-            condominioE.IdSin = condominioModel.idSindico;
-            condominioE.Nome = condominioModel.nome;
-            condominioE.Rua = condominioModel.rua;
-            condominioE.Numero = condominioModel.numero;
-            condominioE.Bairro = condominioModel.bairro;
-            condominioE.Complemento = condominioModel.complemento;
-            condominioE.CEP = condominioModel.cep;
-            condominioE.Cidade = condominioModel.cidade;
-            condominioE.Estado = condominioModel.estado;
+            condominioE.IdCon = condominioModel.IDCondominio;
+            condominioE.IdSin = condominioModel.IDSindico;
+            condominioE.Nome = condominioModel.Nome;
+            condominioE.Rua = condominioModel.Rua;
+            condominioE.Numero = condominioModel.Numero;
+            condominioE.Bairro = condominioModel.Bairro;
+            condominioE.Complemento = condominioModel.Complemento;
+            condominioE.CEP = condominioModel.Cep;
+            condominioE.Cidade = condominioModel.Cidade;
+            condominioE.Estado = condominioModel.Estado;
         }
     }
 }
