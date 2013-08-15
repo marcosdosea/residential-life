@@ -15,6 +15,11 @@
     <%: Html.ValidationSummary(true) %>
     <fieldset>
         <legend>PessoaModel</legend>
+        
+        <div class="editor-field">
+            <%: Html.HiddenFor(model => model.IdPes) %>
+            <%: Html.ValidationMessageFor(model => model.IdPes) %>
+        </div>
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Nome) %>

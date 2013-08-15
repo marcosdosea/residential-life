@@ -12,6 +12,9 @@
 <fieldset>
     <legend>PessoaModel</legend>
 
+    <div class="display-field">
+        <%: Html.HiddenFor(model => model.IdPes) %>
+    </div>
     <div class="display-label">Nome</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Nome) %>
