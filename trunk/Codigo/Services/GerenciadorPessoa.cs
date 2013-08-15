@@ -102,8 +102,6 @@ namespace Services
                             Sexo = pessoa.Sexo,
                             TelefoneCelular = pessoa.TelefoneCelular,
                             TelefoneFixo = pessoa.TelefoneFixo,
-                            Tipo = pessoa.Tipo
-                            
                         };
             return query;
         }
@@ -152,7 +150,6 @@ namespace Services
             pessoaE.Sexo = pessoaModel.Sexo;
             pessoaE.TelefoneCelular = pessoaModel.TelefoneCelular;
             pessoaE.TelefoneFixo = pessoaModel.TelefoneFixo;
-            pessoaE.Tipo = pessoaModel.Tipo;
             
         }
     }

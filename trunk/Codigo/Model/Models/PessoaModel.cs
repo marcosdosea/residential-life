@@ -91,10 +91,6 @@ namespace Models
         [StringLength(50)]
         public string Estado { get; set; }
 
-        [Required]
-        [Display(Name = "Tipo")]
-        [StringLength(45)]
-        public string Tipo { get; set; }
-
+        
     }
 }

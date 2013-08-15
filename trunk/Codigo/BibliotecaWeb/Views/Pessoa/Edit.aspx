@@ -150,13 +150,6 @@
             <%: Html.ValidationMessageFor(model => model.Estado) %>
         </div>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Tipo) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.Tipo) %>
-            <%: Html.ValidationMessageFor(model => model.Tipo) %>
-        </div>
 
         <p>
             <input type="submit" value="Save" />
