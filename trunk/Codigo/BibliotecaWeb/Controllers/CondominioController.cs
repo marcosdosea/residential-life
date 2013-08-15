@@ -10,21 +10,31 @@ namespace BibliotecaWeb.Controllers
 {
     public class CondominioController : Controller
     {
+ private GerenciadorCondominio gCondominio;
 
-        private GerenciadorCondominio gCondominio;
-     
         public CondominioController()
         {
             gCondominio = new GerenciadorCondominio();
         }
         //
-        // GET: /Condominio/
+        // GET: /condominio/
 
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            return View();
+            return View(gCondominio.ObterTodos());
         }
 
+        //
+        // GET: /condominio/Details/5
+
+        public ViewResult Details(int id)
+        {
+            CondominioModel condominio = gCondominio.Obter(id);
+            return View(condominio);
+        }
+
+        //
+        // GET: /condominio/Create
 
         public ActionResult Create()
         {
@@ -32,7 +42,7 @@ namespace BibliotecaWeb.Controllers
         }
 
         //
-        // POST: /pessoa/Create
+        // POST: /condominio/Create
 
         [HttpPost]
         public ActionResult Create(CondominioModel condominioModel)
@@ -46,29 +56,52 @@ namespace BibliotecaWeb.Controllers
             return View(condominioModel);
         }
 
-
         //
-        // GET: /pessoa/Edit/5
+        // GET: /condominio/Edit/5
 
         public ActionResult Edit(int id)
         {
 
-            CondominioModel pessoa = gCondominio.Obter(id);
-            return View(pessoa);
+            CondominioModel condominio = gCondominio.Obter(id);
+            return View(condominio);
         }
 
         //
-        // POST: /pessoa/Edit/5
+        // POST: /condominio/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(CondominioModel pessoaModel)
+        public ActionResult Edit(CondominioModel condominioModel)
         {
             if (ModelState.IsValid)
             {
-                gCondominio.Editar(pessoaModel);
+                gCondominio.Editar(condominioModel);
                 return RedirectToAction("Index");
             }
-            return View(pessoaModel);
+            return View(condominioModel);
+        }
+
+        //
+        // GET: /condominio/Delete/5
+
+        public ActionResult Delete(int id)
+        {
+            CondominioModel condominioModel = gCondominio.Obter(id);
+            return View(condominioModel);
+        }
+
+        //
+        // POST: /condominio/Delete/5
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            gCondominio.Remover(id);
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
         }
 
     }

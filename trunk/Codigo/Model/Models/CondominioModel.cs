@@ -9,7 +9,7 @@ namespace Models.Models
     public class CondominioModel
     {
         public int IDCondominio { get; set;}
-        public int IDSindico { get; set; } // depois mudar aqui, pois vai referenciar um Id de pessoa
+        public int IDSindico { get; set; } 
 
         [Required]
         [Display(Name = "Nome")]

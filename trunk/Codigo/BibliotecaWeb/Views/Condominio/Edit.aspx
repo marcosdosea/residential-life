@@ -1,26 +1,29 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.CondominioModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Create
+    Edit
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Create</h2>
+<h2>Edit</h2>
 
-<script src="<%: Url.Content("~/Scripts/jquery.valIDate.min.js") %>" type="text/javascript"></script>
-<script src="<%: Url.Content("~/Scripts/jquery.valIDate.unobtrusive.min.js") %>" type="text/javascript"></script>
+<script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
+<script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
 
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
         <legend>CondominioModel</legend>
 
-           <div class="editor-label">
-            <%: Html.LabelFor(model => model.IDSindico) %>
-        </div>
+       
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.IDSindico) %>
+            <%: Html.EditorFor(model => model.IDCondominio) %>
+            <%: Html.ValidationMessageFor(model => model.IDCondominio) %>
+        </div>
+
+        <div class="editor-field">
+            <%: Html.HiddenFor(model => model.IDSindico) %>
             <%: Html.ValidationMessageFor(model => model.IDSindico) %>
         </div>
 
@@ -89,7 +92,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Save" />
         </p>
     </fieldset>
 <% } %>

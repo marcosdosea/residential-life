@@ -86,10 +86,15 @@ namespace Services
                         select new CondominioModel
                         {
                             IDCondominio = condominio.IdCon,
+                            IDSindico = condominio.IdSin,
                             Nome = condominio.Nome,
-                            Rua = condominio.Rua
-
-
+                            Rua = condominio.Rua,
+                            Numero = condominio.Numero,
+                            Bairro = condominio.Bairro,
+                            Complemento = condominio.Complemento,
+                            Cep = condominio.CEP,
+                            Cidade = condominio.Cidade,
+                            Estado = condominio.Estado
                         };
             return query;
         }
