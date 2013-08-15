@@ -17,7 +17,7 @@
         <legend>CondominioModel</legend>
 
            <div class="editor-label">
-            <%: Html.(model => model.IDSindico) %>
+            <%: Html.LabelFor(model => model.IDSindico) %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.IDSindico) %>
