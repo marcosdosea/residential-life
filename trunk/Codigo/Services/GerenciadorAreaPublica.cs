@@ -112,8 +112,8 @@ namespace Services
         /// <returns>Autor model</returns>
         public AreaPublicaModel Obter(int idAreaPublica)
         {
-            IEnumerable<AreaPublicaModel> AreaPublicaEs = GetQuery().Where(AreaPublicaModel => AreaPublicaModel.idAreaPublica.Equals(idAreaPublica));
-            return AreaPublicaEs.ElementAtOrDefault(0);
+            IEnumerable<AreaPublicaModel> AreaPublicaE = GetQuery().Where(AreaPublicaModel => AreaPublicaModel.idAreaPublica.Equals(idAreaPublica));
+            return AreaPublicaE.ElementAtOrDefault(0);
         }
 
         /// <summary>
