@@ -32,3 +32,9 @@ D:\Tauany\residential-life\trunk\Codigo\Model\bin\Debug\Model.pdb
 D:\Tauany\residential-life\trunk\Codigo\Model\obj\Debug\ResolveAssemblyReference.cache
 D:\Tauany\residential-life\trunk\Codigo\Model\obj\Debug\Model.dll
 D:\Tauany\residential-life\trunk\Codigo\Model\obj\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Model\bin\Debug\Model.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Model\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Model\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Model\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Model\obj\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Model\obj\Debug\Model.pdb
