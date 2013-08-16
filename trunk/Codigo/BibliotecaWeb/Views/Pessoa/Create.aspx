@@ -141,11 +141,16 @@
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Estado) %>
         </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.Estado) %>
-            <%: Html.ValidationMessageFor(model => model.Estado) %>
-        </div>
+        <p>
+            <%: @Html.DropDownListFor(model => model.Estado, new[]
+            {
+                new SelectListItem {Text = "Sergipe", Value = "SE"},
+                new SelectListItem {Text = "Bahia", Value = "BA"},
+                new SelectListItem {Text = "Alagoas", Value = "AL"},
 
+            }, "Selecione")%> 
+        </p> 
+        
         <p>
             <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.salvar %> />
         </p>
