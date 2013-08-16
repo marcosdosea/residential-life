@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.CondominioModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Editar Condomínio
+   <%: Models.App_GlobalResources.Mensagem.editarCondominio %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Editar Condomínio</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.editarCondominio %></h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -14,7 +14,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>Condominio</legend>
+        <legend><%: Models.App_GlobalResources.Mensagem.condominio %></legend>
 
        
         <div class="editor-field">
@@ -93,16 +93,16 @@
                 new SelectListItem {Text = "Bahia", Value = "BA"},
                 new SelectListItem {Text = "Alagoas", Value = "AL"},
 
-            }, "Selecione")%> 
+            },Models.App_GlobalResources.Mensagem.selecione )%> 
         </p>    
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.editar %>" />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index") %>
 </div>
 
 </asp:Content>

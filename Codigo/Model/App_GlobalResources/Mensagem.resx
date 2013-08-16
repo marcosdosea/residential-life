@@ -225,4 +225,31 @@
   <data name="perguntaConfirmacao" xml:space="preserve">
     <value>Você está seguro que quer fazer isso?</value>
   </data>
+  <data name="numer" xml:space="preserve">
+    <value />
+  </data>
+  <data name="apagarCondominio" xml:space="preserve">
+    <value>Deletar Condomínio</value>
+  </data>
+  <data name="condominios" xml:space="preserve">
+    <value>Condominios</value>
+  </data>
+  <data name="confirmacaoCondominio" xml:space="preserve">
+    <value>Tem certeza que deseja deletar este condominio?</value>
+  </data>
+  <data name="detalhesCondominio" xml:space="preserve">
+    <value>Detalhes do Condomínio</value>
+  </data>
+  <data name="editarCondominio" xml:space="preserve">
+    <value>Editar Condomínio</value>
+  </data>
+  <data name="idCondominio" xml:space="preserve">
+    <value>Código do condomínio</value>
+  </data>
+  <data name="idSindico" xml:space="preserve">
+    <value>Código do síndico</value>
+  </data>
+  <data name="selecione" xml:space="preserve">
+    <value>Selecione</value>
+  </data>
 </root>
