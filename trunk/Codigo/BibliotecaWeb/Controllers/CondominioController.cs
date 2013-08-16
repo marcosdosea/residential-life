@@ -64,6 +64,7 @@ namespace BibliotecaWeb.Controllers
         {
 
             CondominioModel condominio = gCondominio.Obter(id);
+           
             return View(condominio);
         }
 
