@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.BlocoModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Edit
+    Editar Bloco
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Edit</h2>
+<h2>Editar Bloco</h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -14,7 +14,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>BlocoModel</legend>
+        <legend>Bloco</legend>
 
       
         <div class="editor-field">

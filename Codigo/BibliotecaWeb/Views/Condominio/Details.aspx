@@ -1,15 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.CondominioModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Details
+    Detalhes do Condomínio
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Details</h2>
+<h2>Detailhes do condomínio</h2>
 
 <fieldset>
-    <legend>CondominioModel</legend>
+    <legend>Condominio</legend>
 
   
 

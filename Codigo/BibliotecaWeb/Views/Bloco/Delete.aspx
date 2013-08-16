@@ -8,7 +8,7 @@
 
 <h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Você realmente deseja excluir este bloco?</h3>
 <fieldset>
     <legend>Deletar Bloco</legend>
 

@@ -10,7 +10,7 @@ using Models.Models;
 namespace Services
 {
     /// <summary>
-    /// Gerencia todas as regras de negócio da entidade Autor
+    /// Gerencia todas as regras de negócio da entidade Condominio
     /// </summary>
 
     public class GerenciadorCondominio
@@ -31,7 +31,7 @@ namespace Services
         /// Construtor acessado apenas dentro do componentes service e permite compartilhar
         /// contexto com outras classes de negócio
         /// </summary>
-        /// <param name="unitOfWork"></param>
+        /// <param name="unitOfWork">Interface que cria os repositórios</param>
         internal GerenciadorCondominio(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
@@ -55,7 +55,7 @@ namespace Services
         /// <summary>
         /// Altera dados na base de dados
         /// </summary>
-        /// <param name="condominioModel"></param>
+        /// <param name="condominioModel">Dados do modelo</param>
         public void Editar(CondominioModel condominioModel)
         {
             tb_condominio condominioE = new tb_condominio();
@@ -68,7 +68,7 @@ namespace Services
         /// <summary>
         /// Remove da base de dados
         /// </summary>
-        /// <param name="condominioModel"></param>
+        /// <param name="condominioModel">Identificador do condominio na base de dados</param>
         public void Remover(int idCondominio)
         {
             unitOfWork.RepositorioCondominio.Remover(condominio => condominio.IdCon.Equals(idCondominio));
@@ -77,7 +77,7 @@ namespace Services
 
 
         /// <summary>
-        /// Consulta padrão para retornar dados do autor como model
+        /// Consulta padrão para retornar dados do condominio como model
         /// </summary>
         /// <returns></returns>
         private IQueryable<CondominioModel> GetQuery()
@@ -110,10 +110,10 @@ namespace Services
         }
 
         /// <summary>
-        /// Obtém um autor
+        /// Obtém um condominio
         /// </summary>
-        /// <param name="idAutor">Identificador do autor na base de dados</param>
-        /// <returns>Autor model</returns>
+        /// <param name="idCondominio">Identificador do condominio na base de dados</param>
+        /// <returns>Condominio model</returns>
         public CondominioModel Obter(int idCondominio)
         {
             IEnumerable<CondominioModel> condominioEs = GetQuery().Where(condominioModel => condominioModel.IDCondominio.Equals(idCondominio));
@@ -121,7 +121,7 @@ namespace Services
         }
 
         /// <summary>
-        /// Atribui dados do Autor Model para o Autor Entity
+        /// Atribui dados do Condominio Model para o Condominio Entity
         /// </summary>
         /// <param name="condominioModel">Objeto do modelo</param>
         /// <param name="condominioE">Entity mapeada da base de dados</param>

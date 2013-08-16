@@ -18,10 +18,12 @@ namespace Models.Models
 
         [Required]
         [Display(Name = "Quantidade de Andares")]
+        [Range(1, 1000)]
         public int QuantidadeAndares { get; set; }
 
         [Required]
         [Display(Name = "Quantidade de Moradias")]
+        [Range(1, 500)]
         public int QuantidadeMoradias { get; set; }
 
 

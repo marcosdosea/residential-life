@@ -1,16 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.CondominioModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Delete
+    Deletar Condomínio
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Delete</h2>
+<h2>Deletar Condomínio</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Você tem certeza que deseja deletar este condomínio?</h3>
 <fieldset>
-    <legend>CondominioModel</legend>
+    <legend>Condominio</legend>
 
     <div class="display-label">IDCondominio</div>
     <div class="display-field">

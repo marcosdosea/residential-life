@@ -24,7 +24,6 @@ namespace Models.Models
         [Required]
         [Display(Name = "Número")]
         [StringLength(10)]
-       
         public string Numero { get; set; }
 
         [Required]
@@ -48,7 +47,7 @@ namespace Models.Models
 
         [Required]
         [Display(Name = "Estado")]
-        [StringLength(50)]
-        public string Estado { get; set; }
+        [StringLength(2)]
+        public String Estado { get; set; }
     }
 }

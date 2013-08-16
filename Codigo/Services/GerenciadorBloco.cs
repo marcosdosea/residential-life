@@ -9,7 +9,7 @@ using Models;
 namespace Services
 {
     /// <summary>
-    /// Gerencia todas as regras de negócio da entidade Autor
+    /// Gerencia todas as regras de negócio da entidade Bloco
     /// </summary>
 
     public class GerenciadorBloco
@@ -30,7 +30,7 @@ namespace Services
         /// Construtor acessado apenas dentro do componentes service e permite compartilhar
         /// contexto com outras classes de negócio
         /// </summary>
-        /// <param name="unitOfWork"></param>
+        /// <param name="unitOfWork">Interface que cria os repositórios</param>
         internal GerenciadorBloco(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
@@ -54,7 +54,7 @@ namespace Services
         /// <summary>
         /// Altera dados na base de dados
         /// </summary>
-        /// <param name="blocoModel"></param>
+        /// <param name="blocoModel">Dados do modelo</param>
         public void Editar(BlocoModel blocoModel)
         {
             tb_bloco blocoE = new tb_bloco();
@@ -66,7 +66,7 @@ namespace Services
         /// <summary>
         /// Remove da base de dados
         /// </summary>
-        /// <param name="blocoModel"></param>
+        /// <param name="blocoModel">Identificador do bloco na base de dados</param>
         public void Remover(int idBloco)
         {
             unitOfWork.RepositorioBloco.Remover(bloco => bloco.IdBlo.Equals(idBloco));
@@ -75,7 +75,7 @@ namespace Services
 
 
         /// <summary>
-        /// Consulta padrão para retornar dados do autor como model
+        /// Consulta padrão para retornar dados do bloco como model
         /// </summary>
         /// <returns></returns>
         private IQueryable<BlocoModel> GetQuery()
@@ -105,10 +105,10 @@ namespace Services
         }
 
         /// <summary>
-        /// Obtém um autor
+        /// Obtém um bloco
         /// </summary>
-        /// <param name="idAutor">Identificador do autor na base de dados</param>
-        /// <returns>Autor model</returns>
+        /// <param name="idBloco">Identificador do bloco na base de dados</param>
+        /// <returns>Bloco model</returns>
         public BlocoModel Obter(int idBloco)
         {
             IEnumerable<BlocoModel> blocoEs = GetQuery().Where(blocoModel => blocoModel.IdBloco.Equals(idBloco));
@@ -116,7 +116,7 @@ namespace Services
         }
 
         /// <summary>
-        /// Atribui dados do Autor Model para o Autor Entity
+        /// Atribui dados do Bloco Model para o Bloco Entity
         /// </summary>
         /// <param name="blocoModel">Objeto do modelo</param>
         /// <param name="blocoE">Entity mapeada da base de dados</param>

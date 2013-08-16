@@ -1,15 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.BlocoModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Details
+    Detalhes do Bloco
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Details</h2>
+<h2>Detalhes do Bloco</h2>
 
 <fieldset>
-    <legend>BlocoModel</legend>
+    <legend>Bloco</legend>
 
     <div class="display-label">IdBloco</div>
     <div class="display-field">
