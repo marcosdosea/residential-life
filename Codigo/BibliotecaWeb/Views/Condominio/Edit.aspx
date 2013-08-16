@@ -18,7 +18,7 @@
 
        
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.IDCondominio) %>
+            <%: Html.HiddenFor(model => model.IDCondominio) %>
             <%: Html.ValidationMessageFor(model => model.IDCondominio) %>
         </div>
 
