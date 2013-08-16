@@ -76,3 +76,16 @@ C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\BibliotecaWeb\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\bin\BibliotecaWeb.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\bin\BibliotecaWeb.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\bin\EntityFramework.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\bin\Model.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\bin\Services.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\bin\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\bin\Model.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\bin\Services.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\bin\EntityFramework.xml
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\bin\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\obj\Debug\ResidentialWeb.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
