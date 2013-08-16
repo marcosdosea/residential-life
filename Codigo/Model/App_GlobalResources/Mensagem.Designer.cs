@@ -61,6 +61,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apagar.
+        /// </summary>
+        public static string apagar {
+            get {
+                return ResourceManager.GetString("apagar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bairro.
         /// </summary>
         public static string bairro {
@@ -111,6 +120,33 @@ namespace Models.App_GlobalResources {
         public static string cpf {
             get {
                 return ResourceManager.GetString("cpf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhar Pessoa.
+        /// </summary>
+        public static string detalharPessoa {
+            get {
+                return ResourceManager.GetString("detalharPessoa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhes.
+        /// </summary>
+        public static string detalhes {
+            get {
+                return ResourceManager.GetString("detalhes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Editar.
+        /// </summary>
+        public static string editar {
+            get {
+                return ResourceManager.GetString("editar", resourceCulture);
             }
         }
         
@@ -178,6 +214,24 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Quantidade de Andares.
+        /// </summary>
+        public static string qtdeAndares {
+            get {
+                return ResourceManager.GetString("qtdeAndares", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantidade de Moradias.
+        /// </summary>
+        public static string qtdeMoradias {
+            get {
+                return ResourceManager.GetString("qtdeMoradias", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O campo é obrigatório!.
         /// </summary>
         public static string required {
@@ -201,6 +255,15 @@ namespace Models.App_GlobalResources {
         public static string rua {
             get {
                 return ResourceManager.GetString("rua", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Salvar.
+        /// </summary>
+        public static string salvar {
+            get {
+                return ResourceManager.GetString("salvar", resourceCulture);
             }
         }
         
@@ -255,6 +318,15 @@ namespace Models.App_GlobalResources {
         public static string valorPagamento {
             get {
                 return ResourceManager.GetString("valorPagamento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voltar.
+        /// </summary>
+        public static string voltar {
+            get {
+                return ResourceManager.GetString("voltar", resourceCulture);
             }
         }
     }

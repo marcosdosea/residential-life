@@ -180,7 +180,31 @@
   <data name="valorPagamento" xml:space="preserve">
     <value>Valor Pagamento</value>
   </data>
+  <data name="apagar" xml:space="preserve">
+    <value>Apagar</value>
+  </data>
   <data name="cadastrarPessoa" xml:space="preserve">
     <value>Cadastrar Pessoa</value>
+  </data>
+  <data name="detalharPessoa" xml:space="preserve">
+    <value>Detalhar Pessoa</value>
+  </data>
+  <data name="detalhes" xml:space="preserve">
+    <value>Detalhes</value>
+  </data>
+  <data name="editar" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="qtdeAndares" xml:space="preserve">
+    <value>Quantidade de Andares</value>
+  </data>
+  <data name="qtdeMoradias" xml:space="preserve">
+    <value>Quantidade de Moradias</value>
+  </data>
+  <data name="salvar" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="voltar" xml:space="preserve">
+    <value>Voltar</value>
   </data>
 </root>

@@ -46,9 +46,9 @@
             <%: Html.DisplayFor(modelItem => item.TelefoneCelular) %>
         </td>
         <td>
-            <%: Html.ActionLink("Editar", "Edit", new {  id=item.IdPes  }) %> |
-            <%: Html.ActionLink("Detalhes", "Details", new { id = item.IdPes })%> |
-            <%: Html.ActionLink("Apagar", "Delete", new { id = item.IdPes })%>
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.IdPes })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdPes })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdPes })%>
         </td>
     </tr>
 <% } %>
