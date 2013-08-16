@@ -67,7 +67,7 @@ namespace Services
         /// <summary>
         /// Remove da base de dados
         /// </summary>
-        /// <param name="pessoaModel"></param>
+        /// <param name="pessoaModel"> </param>
         public void Remover(int idPes)
         {
             unitOfWork.RepositorioPessoa.Remover(pessoa => pessoa.IdPes.Equals(idPes));

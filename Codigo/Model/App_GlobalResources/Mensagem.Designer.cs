@@ -61,6 +61,24 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Estado.
+        /// </summary>
+        public static string estado {
+            get {
+                return ResourceManager.GetString("estado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Local.
+        /// </summary>
+        public static string local {
+            get {
+                return ResourceManager.GetString("local", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nome.
         /// </summary>
         public static string nome {
@@ -75,6 +93,24 @@ namespace Models.App_GlobalResources {
         public static string required {
             get {
                 return ResourceManager.GetString("required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tamanho.
+        /// </summary>
+        public static string tamanho {
+            get {
+                return ResourceManager.GetString("tamanho", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Valor Pagamento.
+        /// </summary>
+        public static string valorPagamento {
+            get {
+                return ResourceManager.GetString("valorPagamento", resourceCulture);
             }
         }
     }

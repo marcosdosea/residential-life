@@ -9,8 +9,11 @@ namespace Models.Models
 {
     public class AreaPublicaModel
     {
-        public int idAreaPublica { get; set; }
-        public int idCondominio { get; set; }
+        public int IdAreaPublica { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem),
+            ErrorMessageResourceName = "required")]
+        public int IdCondominio { get; set; }
        
         [Required]
         public string Estado { get; set; }
@@ -21,25 +24,21 @@ namespace Models.Models
         [StringLength(100)]
         public string Nome { get; set; }
 
-        [Required]
-        [Display(Name = "Local")]
-        //[Required(ErrorMessageResourceType = typeof(Mensagem),
-        //    ErrorMessageResourceName = "required")]
+        [Display(Name = "local", ResourceType = typeof(Mensagem))]
+        [Required(ErrorMessageResourceType = typeof(Mensagem),
+            ErrorMessageResourceName = "required")]      
         [StringLength(50)]
         public string Local { get; set; }
 
-        [Required]
-        [Display(Name = "Tamanho")]
-        //[Required(ErrorMessageResourceType = typeof(Mensagem),
-        //    ErrorMessageResourceName = "required")]
+        [Display(Name = "tamanho", ResourceType = typeof(Mensagem))]
+        [Required(ErrorMessageResourceType = typeof(Mensagem),
+            ErrorMessageResourceName = "required")]
         [StringLength(10)]
         public string Tamanho { get; set; }
 
-        [Required]
-        [Display(Name = "Valor Pagamento")]
-        //[Required(ErrorMessageResourceType = typeof(Mensagem),
-        //    ErrorMessageResourceName = "required")]
-        //[StringLength(10)]
+        [Display(Name = "valorPagamento", ResourceType = typeof(Mensagem))]
+        [Required(ErrorMessageResourceType = typeof(Mensagem),
+            ErrorMessageResourceName = "required")]
         public decimal ValorPagamento { get; set; }
 
     }

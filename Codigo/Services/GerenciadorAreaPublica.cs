@@ -66,7 +66,7 @@ namespace Services
         /// <summary>
         /// Remove da base de dados
         /// </summary>
-        /// <param name="AreaPublicaModel"></param>
+        /// <param name="AreaPublicaModel"> Dados do modelo</param>
         public void Remover(int idAreaPublica)
         {
             unitOfWork.RepositorioAreaPublica.Remover(AreaPublica => AreaPublica.IdArea.Equals(idAreaPublica));
@@ -78,14 +78,15 @@ namespace Services
         /// Consulta padrão para retornar dados do autor como model
         /// </summary>
         /// <returns></returns>
+        /// 
         private IQueryable<AreaPublicaModel> GetQuery()
         {
             IQueryable<tb_areapublica> tb_AreaPublica = unitOfWork.RepositorioAreaPublica.GetQueryable();
             var query = from AreaPublica in tb_AreaPublica
                         select new AreaPublicaModel
                         {
-                            idAreaPublica = AreaPublica.IdArea,
-                            idCondominio = AreaPublica.IdCon,
+                            IdAreaPublica = AreaPublica.IdArea,
+                            IdCondominio = AreaPublica.IdCon,
                             Estado = AreaPublica.Estado,
                             Nome = AreaPublica.Nome,
                             Local = AreaPublica.Local,
@@ -112,7 +113,7 @@ namespace Services
         /// <returns>Autor model</returns>
         public AreaPublicaModel Obter(int idAreaPublica)
         {
-            IEnumerable<AreaPublicaModel> AreaPublicaE = GetQuery().Where(AreaPublicaModel => AreaPublicaModel.idAreaPublica.Equals(idAreaPublica));
+            IEnumerable<AreaPublicaModel> AreaPublicaE = GetQuery().Where(AreaPublicaModel => AreaPublicaModel.IdAreaPublica.Equals(idAreaPublica));
             return AreaPublicaE.ElementAtOrDefault(0);
         }
 
@@ -123,8 +124,8 @@ namespace Services
         /// <param name="AreaPublicaE">Entity mapeada da base de dados</param>
         private void Atribuir(AreaPublicaModel AreaPublicaModel, tb_areapublica AreaPublicaE)
         {
-            AreaPublicaE.IdArea = AreaPublicaModel.idAreaPublica;
-            AreaPublicaE.IdCon = AreaPublicaModel.idCondominio;
+            AreaPublicaE.IdArea = AreaPublicaModel.IdAreaPublica;
+            AreaPublicaE.IdCon = AreaPublicaModel.IdCondominio;
             AreaPublicaE.Nome = AreaPublicaModel.Nome;
             AreaPublicaE.Local = AreaPublicaModel.Local;
             AreaPublicaE.Tamanho = AreaPublicaModel.Tamanho;

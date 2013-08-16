@@ -12,14 +12,14 @@
 <fieldset>
     <legend>Deletar Área Publica </legend>
 
-    <div class="display-label">idAreaPublica</div>
+    <div class="display-label">IdAreaPublica</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.idAreaPublica) %>
+        <%: Html.DisplayFor(model => model.IdAreaPublica) %>
     </div>
 
-    <div class="display-label">idCondominio</div>
+    <div class="display-label">IdCondominio</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.idCondominio) %>
+        <%: Html.DisplayFor(model => model.IdCondominio) %>
     </div>
 
     <div class="display-label">estado</div>

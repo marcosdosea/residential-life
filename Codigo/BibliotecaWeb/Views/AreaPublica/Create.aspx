@@ -18,11 +18,11 @@
 
         
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.idCondominio) %>
+            <%: Html.LabelFor(model => model.IdCondominio) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.idCondominio) %>
-            <%: Html.ValidationMessageFor(model => model.idCondominio) %>
+            <%: Html.EditorFor(model => model.IdCondominio) %>
+            <%: Html.ValidationMessageFor(model => model.IdCondominio) %>
         </div>
 
         
@@ -46,8 +46,9 @@
             <%: Html.LabelFor(model => model.Estado) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Estado) %>
-            <%: Html.ValidationMessageFor(model => model.Estado) %>
+            Disponivel <%: Html.RadioButtonFor(model => model.Estado, "Disponivel", true)%>
+            Indisponivel <%: Html.RadioButtonFor(model => model.Estado, "Indisponivel", false)%>
+            <%: Html.ValidationMessageFor(model => model.Estado)%>
         </div>
 
 
