@@ -46,3 +46,4 @@ C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Model\obj\Debug\Models.App_Gl
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Model\obj\Debug\Model.csproj.GenerateResource.Cache
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Model\obj\Debug\Model.dll
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Model\obj\Debug\Model.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

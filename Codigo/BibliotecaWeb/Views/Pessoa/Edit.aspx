@@ -152,13 +152,13 @@
 
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.salvar %> />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Voltar para lista", "Index") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index") %>
 </div>
 
 </asp:Content>

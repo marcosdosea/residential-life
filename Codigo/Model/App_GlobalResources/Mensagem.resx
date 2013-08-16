@@ -207,4 +207,7 @@
   <data name="voltar" xml:space="preserve">
     <value>Voltar</value>
   </data>
+  <data name="novaPessoa" xml:space="preserve">
+    <value>Nova Pessoa</value>
+  </data>
 </root>
