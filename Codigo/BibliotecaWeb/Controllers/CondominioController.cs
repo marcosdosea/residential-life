@@ -10,7 +10,8 @@ namespace BibliotecaWeb.Controllers
 {
     public class CondominioController : Controller
     {
- private GerenciadorCondominio gCondominio;
+ 
+        private GerenciadorCondominio gCondominio;
 
         public CondominioController()
         {

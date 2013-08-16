@@ -10,7 +10,7 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <fieldset>
-    <legend>BlocoModel</legend>
+    <legend>Deletar Bloco</legend>
 
     <div class="display-label">IdBloco</div>
     <div class="display-field">

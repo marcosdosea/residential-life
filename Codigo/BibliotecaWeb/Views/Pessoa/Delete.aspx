@@ -6,11 +6,11 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Delete</h2>
+<h2>Deletar</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Tem certeza que deseja deletar esta pessoa?</h3>
 <fieldset>
-    <legend>PessoaModel</legend>
+    <legend>Deletar Pessoa</legend>
 
     <div class="display-field">
         <%: Html.HiddenFor(model => model.IdPes) %>
@@ -99,7 +99,7 @@
 <% using (Html.BeginForm()) { %>
     <p>
         <input type="submit" value="Delete" /> |
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Voltar para lista", "Index") %>
     </p>
 <% } %>
 
