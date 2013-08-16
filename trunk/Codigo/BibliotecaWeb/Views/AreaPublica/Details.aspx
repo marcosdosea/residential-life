@@ -6,49 +6,46 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Details</h2>
+<h2>Detalhes</h2>
 
 <fieldset>
-    <legend>AreaPublicaModel</legend>
-
-    <div class="display-label">idAreaPublica</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.idAreaPublica) %>
-    </div>
+    <legend>Detalhes Área Pública</legend>
 
     <div class="display-label">idCondominio</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.idCondominio) %>
     </div>
 
-    <div class="display-label">estado</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.estado) %>
-    </div>
+    
 
     <div class="display-label">nome</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.nome) %>
+        <%: Html.DisplayFor(model => model.Nome) %>
     </div>
 
     <div class="display-label">local</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.local) %>
+        <%: Html.DisplayFor(model => model.Local) %>
+    </div>
+
+    <div class="display-label">estado</div>
+    <div class="display-field">
+        <%: Html.DisplayFor(model => model.Estado) %>
     </div>
 
     <div class="display-label">tamanho</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.tamanho) %>
+        <%: Html.DisplayFor(model => model.Tamanho) %>
     </div>
 
     <div class="display-label">valorPagamento</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.valorPagamento) %>
+        <%: Html.DisplayFor(model => model.ValorPagamento) %>
     </div>
 </fieldset>
 <p>
-    <%: Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) %> |
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Editar", "Edit", new {  id=Model.idAreaPublica }) %> |
+    <%: Html.ActionLink("Voltar", "Index") %>
 </p>
 
 </asp:Content>

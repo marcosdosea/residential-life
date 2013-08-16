@@ -25,44 +25,46 @@
             <%: Html.ValidationMessageFor(model => model.idCondominio) %>
         </div>
 
+        
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.estado) %>
+            <%: Html.LabelFor(model => model.Nome) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.estado) %>
-            <%: Html.ValidationMessageFor(model => model.estado) %>
+            <%: Html.EditorFor(model => model.Nome) %>
+            <%: Html.ValidationMessageFor(model => model.Nome) %>
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.nome) %>
+            <%: Html.LabelFor(model => model.Local) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.nome) %>
-            <%: Html.ValidationMessageFor(model => model.nome) %>
+            <%: Html.EditorFor(model => model.Local) %>
+            <%: Html.ValidationMessageFor(model => model.Local) %>
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.local) %>
+            <%: Html.LabelFor(model => model.Estado) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.local) %>
-            <%: Html.ValidationMessageFor(model => model.local) %>
+            <%: Html.EditorFor(model => model.Estado) %>
+            <%: Html.ValidationMessageFor(model => model.Estado) %>
+        </div>
+
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Tamanho) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.Tamanho) %>
+            <%: Html.ValidationMessageFor(model => model.Tamanho) %>
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.tamanho) %>
+            <%: Html.LabelFor(model => model.ValorPagamento) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.tamanho) %>
-            <%: Html.ValidationMessageFor(model => model.tamanho) %>
-        </div>
-
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.valorPagamento) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.valorPagamento) %>
-            <%: Html.ValidationMessageFor(model => model.valorPagamento) %>
+            <%: Html.EditorFor(model => model.ValorPagamento) %>
+            <%: Html.ValidationMessageFor(model => model.ValorPagamento) %>
         </div>
 
         <p>

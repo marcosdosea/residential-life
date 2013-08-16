@@ -6,11 +6,11 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Delete</h2>
+<h2>Deletar</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Você está seguro que quer fazer isso?</h3>
 <fieldset>
-    <legend>AreaPublicaModel</legend>
+    <legend>Deletar Área Publica </legend>
 
     <div class="display-label">idAreaPublica</div>
     <div class="display-field">
@@ -24,33 +24,33 @@
 
     <div class="display-label">estado</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.estado) %>
+        <%: Html.DisplayFor(model => model.Estado) %>
     </div>
 
     <div class="display-label">nome</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.nome) %>
+        <%: Html.DisplayFor(model => model.Nome) %>
     </div>
 
     <div class="display-label">local</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.local) %>
+        <%: Html.DisplayFor(model => model.Local) %>
     </div>
 
     <div class="display-label">tamanho</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.tamanho) %>
+        <%: Html.DisplayFor(model => model.Tamanho) %>
     </div>
 
     <div class="display-label">valorPagamento</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.valorPagamento) %>
+        <%: Html.DisplayFor(model => model.ValorPagamento) %>
     </div>
 </fieldset>
 <% using (Html.BeginForm()) { %>
     <p>
         <input type="submit" value="Delete" /> |
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Voltar ", "Index") %>
     </p>
 <% } %>
 

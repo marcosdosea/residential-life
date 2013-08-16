@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
+using Models.App_GlobalResources;
 
 namespace Models.Models
 {
@@ -10,24 +11,36 @@ namespace Models.Models
     {
         public int idAreaPublica { get; set; }
         public int idCondominio { get; set; }
-        public string estado { get; set; }
-
+       
         [Required]
-        [Display(Name = "Nome")]
+        public string Estado { get; set; }
+       
+        [Display(Name = "nome", ResourceType= typeof(Mensagem))]
+        [Required(ErrorMessageResourceType = typeof(Mensagem),
+            ErrorMessageResourceName = "required")]
         [StringLength(100)]
-        public string nome { get; set; }
+        public string Nome { get; set; }
 
         [Required]
         [Display(Name = "Local")]
-        public string local { get; set; }
+        //[Required(ErrorMessageResourceType = typeof(Mensagem),
+        //    ErrorMessageResourceName = "required")]
+        [StringLength(50)]
+        public string Local { get; set; }
 
         [Required]
         [Display(Name = "Tamanho")]
-        public string tamanho { get; set; }
+        //[Required(ErrorMessageResourceType = typeof(Mensagem),
+        //    ErrorMessageResourceName = "required")]
+        [StringLength(10)]
+        public string Tamanho { get; set; }
 
         [Required]
         [Display(Name = "Valor Pagamento")]
-        public decimal valorPagamento { get; set; }
+        //[Required(ErrorMessageResourceType = typeof(Mensagem),
+        //    ErrorMessageResourceName = "required")]
+        //[StringLength(10)]
+        public decimal ValorPagamento { get; set; }
 
     }
 }
