@@ -11,10 +11,7 @@
 <fieldset>
     <legend>CondominioModel</legend>
 
-    <div class="display-label">IDCondominio</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.IDCondominio) %>
-    </div>
+  
 
     <div class="display-label">IDSindico</div>
     <div class="display-field">

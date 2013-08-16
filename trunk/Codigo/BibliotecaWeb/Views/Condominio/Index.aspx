@@ -13,9 +13,7 @@
 </p>
 <table>
     <tr>
-        <th>
-            IDCondominio
-        </th>
+     
         <th>
             IDSindico
         </th>
@@ -48,9 +46,7 @@
 
 <% foreach (var item in Model) { %>
     <tr>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.IDCondominio) %>
-        </td>
+     
         <td>
             <%: Html.DisplayFor(modelItem => item.IDSindico) %>
         </td>

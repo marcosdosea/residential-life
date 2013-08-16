@@ -24,6 +24,7 @@ namespace Models.Models
         [Required]
         [Display(Name = "Número")]
         [StringLength(10)]
+       
         public string Numero { get; set; }
 
         [Required]
