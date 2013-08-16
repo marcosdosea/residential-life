@@ -86,11 +86,11 @@ namespace Services
                         {
                             idAreaPublica = AreaPublica.IdArea,
                             idCondominio = AreaPublica.IdCon,
-                            estado = AreaPublica.Estado,
-                            nome = AreaPublica.Nome,
-                            local = AreaPublica.Local,
-                            tamanho = AreaPublica.Tamanho,
-                            valorPagamento = AreaPublica.Valor,
+                            Estado = AreaPublica.Estado,
+                            Nome = AreaPublica.Nome,
+                            Local = AreaPublica.Local,
+                            Tamanho = AreaPublica.Tamanho,
+                            ValorPagamento = AreaPublica.Valor,
                             
                         };
             return query;
@@ -125,11 +125,11 @@ namespace Services
         {
             AreaPublicaE.IdArea = AreaPublicaModel.idAreaPublica;
             AreaPublicaE.IdCon = AreaPublicaModel.idCondominio;
-            AreaPublicaE.Nome = AreaPublicaModel.nome;
-            AreaPublicaE.Local = AreaPublicaModel.local;
-            AreaPublicaE.Tamanho = AreaPublicaModel.tamanho;
-            AreaPublicaE.Valor = AreaPublicaModel.valorPagamento;
-            AreaPublicaE.Estado = AreaPublicaModel.estado;
+            AreaPublicaE.Nome = AreaPublicaModel.Nome;
+            AreaPublicaE.Local = AreaPublicaModel.Local;
+            AreaPublicaE.Tamanho = AreaPublicaModel.Tamanho;
+            AreaPublicaE.Valor = AreaPublicaModel.ValorPagamento;
+            AreaPublicaE.Estado = AreaPublicaModel.Estado;
         }
     }
 }

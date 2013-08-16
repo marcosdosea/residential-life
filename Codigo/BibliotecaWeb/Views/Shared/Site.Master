@@ -23,7 +23,7 @@
                     <li><%: Html.ActionLink("Pessoa", "Index", "Pessoa")%></li>
                     <li><%: Html.ActionLink("Condominio", "Index", "Condominio")%></li>
                      <li><%: Html.ActionLink("Bloco", "Index", "Bloco")%></li>
-                    <li><%: Html.ActionLink("Area Publica", "Index", "AreaPublica")%></li>
+                    <li><%: Html.ActionLink("Área Pública", "Index", "AreaPublica")%></li>
                     <li><%: Html.ActionLink("About", "About", "Home")%></li>
                 </ul>
             </nav>
