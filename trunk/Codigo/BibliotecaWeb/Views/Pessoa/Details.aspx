@@ -9,97 +9,97 @@
 <h2>Details</h2>
 
 <fieldset>
-    <legend>Detalhar Pessoa</legend>
+    <legend><%: Models.App_GlobalResources.Mensagem.detalharPessoa %></legend>
 
-    <div class="display-label">Código</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.id %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.IdPes) %>
     </div>
 
-    <div class="display-label">Nome</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.nome %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Nome) %>
     </div>
 
-    <div class="display-label">CPF</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.cpf %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.CPF) %>
     </div>
 
-    <div class="display-label">RG</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.rg %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.RG) %>
     </div>
 
-    <div class="display-label">Sexo</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.sexo %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Sexo) %>
     </div>
 
-    <div class="display-label">Email</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.email %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Email) %>
     </div>
 
-    <div class="display-label">Login</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.login %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Login) %>
     </div>
 
-    <div class="display-label">Senha</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.senha %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Senha) %>
     </div>
 
-    <div class="display-label">Telefone Fixo</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.telefoneFixo %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.TelefoneFixo) %>
     </div>
 
-    <div class="display-label">Telefone Celular</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.telefoneCelular %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.TelefoneCelular) %>
     </div>
 
-    <div class="display-label">Rua</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.rua %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Rua) %>
     </div>
 
-    <div class="display-label">Numero</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.numero %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Numero) %>
     </div>
 
-    <div class="display-label">Complemento</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.complemento %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Complemento) %>
     </div>
 
-    <div class="display-label">Bairro</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.bairro %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Bairro) %>
     </div>
 
-    <div class="display-label">CEP</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.cep %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.CEP) %>
     </div>
 
-    <div class="display-label">Cidade</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.cidade %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Cidade) %>
     </div>
 
-    <div class="display-label">Estado</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.estado %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Estado) %>
     </div>
 
 </fieldset>
 <p>
-    <%: Html.ActionLink("Editar", "Edit", new { id=Model.IdPes }) %> |
-    <%: Html.ActionLink("Voltar para lista", "Index") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id=Model.IdPes }) %> |
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index") %>
 </p>
 
 </asp:Content>
