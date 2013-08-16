@@ -210,4 +210,19 @@
   <data name="novaPessoa" xml:space="preserve">
     <value>Nova Pessoa</value>
   </data>
+  <data name="apagarAreaPublica" xml:space="preserve">
+    <value>Apagar Área pública</value>
+  </data>
+  <data name="condominio" xml:space="preserve">
+    <value>Condomínio</value>
+  </data>
+  <data name="listaAreasPublicas" xml:space="preserve">
+    <value>Lista das Áreas públicas</value>
+  </data>
+  <data name="novaArea" xml:space="preserve">
+    <value>Nova Área Pública</value>
+  </data>
+  <data name="perguntaConfirmacao" xml:space="preserve">
+    <value>Você está seguro que quer fazer isso?</value>
+  </data>
 </root>

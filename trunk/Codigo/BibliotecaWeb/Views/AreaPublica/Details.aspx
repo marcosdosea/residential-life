@@ -6,12 +6,12 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Detalhes</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.detalhes %></h2>
 
 <fieldset>
-    <legend>Detalhes Área Pública</legend>
+    <legend><%: Models.App_GlobalResources.Mensagem.detalhes %></legend>
 
-    <div class="display-label">IdCondominio</div>
+     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.id %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.IdCondominio) %>
     </div>
@@ -44,8 +44,11 @@
     </div>
 </fieldset>
 <p>
-    <%: Html.ActionLink("Editar", "Edit", new {  id=Model.IdAreaPublica }) %> |
-    <%: Html.ActionLink("Voltar", "Index") %>
+    
+     <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = Model.IdAreaPublica })%> |
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index") %>
+
+   
 </p>
 
 </asp:Content>

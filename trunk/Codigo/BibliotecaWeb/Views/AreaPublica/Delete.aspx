@@ -6,11 +6,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Deletar</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.apagarAreaPublica %></h2>
 
-<h3>Você está seguro que quer fazer isso?</h3>
+<h3><%: Models.App_GlobalResources.Mensagem.perguntaConfirmacao %></h3>
 <fieldset>
-    <legend>Deletar Área Publica </legend>
+   <legend><%: Models.App_GlobalResources.Mensagem.apagar %></legend>
+  
+   <div class="display-label"><%: Models.App_GlobalResources.Mensagem.apagar %></div>
 
     <div class="display-label">IdAreaPublica</div>
     <div class="display-field">
@@ -49,8 +51,8 @@
 </fieldset>
 <% using (Html.BeginForm()) { %>
     <p>
-        <input type="submit" value="Delete" /> |
-        <%: Html.ActionLink("Voltar ", "Index") %>
+        <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.apagar %> /> |
+        <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index") %>
     </p>
 <% } %>
 
