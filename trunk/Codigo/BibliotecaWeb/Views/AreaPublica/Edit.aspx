@@ -17,17 +17,17 @@
         <legend>Editar Área Pública</legend>
 
         <div class="editor-field">
-            <%: Html.HiddenFor(model => model.idAreaPublica) %>
-            <%: Html.ValidationMessageFor(model => model.idAreaPublica) %>
+            <%: Html.HiddenFor(model => model.IdAreaPublica) %>
+            <%: Html.ValidationMessageFor(model => model.IdAreaPublica) %>
         </div>
 
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.idCondominio) %>
+            <%: Html.LabelFor(model => model.IdCondominio) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.idCondominio) %>
-            <%: Html.ValidationMessageFor(model => model.idCondominio) %>
+            <%: Html.EditorFor(model => model.IdCondominio) %>
+            <%: Html.ValidationMessageFor(model => model.IdCondominio) %>
         </div>
 
        
@@ -48,12 +48,13 @@
             <%: Html.ValidationMessageFor(model => model.Local) %>
         </div>
 
-         <div class="editor-label">
+          <div class="editor-label">
             <%: Html.LabelFor(model => model.Estado) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Estado) %>
-            <%: Html.ValidationMessageFor(model => model.Estado) %>
+            Disponivel <%: Html.RadioButtonFor(model => model.Estado, "Disponivel", true)%>
+            Indisponivel <%: Html.RadioButtonFor(model => model.Estado, "Indisponivel", false)%>
+            <%: Html.ValidationMessageFor(model => model.Estado)%>
         </div>
 
         <div class="editor-label">

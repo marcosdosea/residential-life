@@ -11,19 +11,19 @@
 <fieldset>
     <legend>Detalhes Área Pública</legend>
 
-    <div class="display-label">idCondominio</div>
+    <div class="display-label">IdCondominio</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.idCondominio) %>
+        <%: Html.DisplayFor(model => model.IdCondominio) %>
     </div>
 
     
 
-    <div class="display-label">nome</div>
+    <div class="display-label">Nome</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Nome) %>
     </div>
 
-    <div class="display-label">local</div>
+    <div class="display-label">Local</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Local) %>
     </div>
@@ -44,7 +44,7 @@
     </div>
 </fieldset>
 <p>
-    <%: Html.ActionLink("Editar", "Edit", new {  id=Model.idAreaPublica }) %> |
+    <%: Html.ActionLink("Editar", "Edit", new {  id=Model.IdAreaPublica }) %> |
     <%: Html.ActionLink("Voltar", "Index") %>
 </p>
 
