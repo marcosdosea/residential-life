@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Editar</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.editar %></h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -14,7 +14,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>Editar Área Pública</legend>
+       <legend><%: Models.App_GlobalResources.Mensagem.editar %></legend>
 
         <div class="editor-field">
             <%: Html.HiddenFor(model => model.IdAreaPublica) %>
@@ -74,13 +74,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.salvar %> />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Voltar", "Index") %>
+     <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index") %>
 </div>
 
 </asp:Content>
