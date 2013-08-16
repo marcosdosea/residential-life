@@ -10,7 +10,7 @@
 
 <h3>Tem certeza que deseja deletar esta pessoa?</h3>
 <fieldset>
-    <legend>Deletar Pessoa</legend>
+    <legend><%: Models.App_GlobalResources.Mensagem.apagar %></legend>
 
     <div class="display-label">Código</div>
     <div class="display-field">

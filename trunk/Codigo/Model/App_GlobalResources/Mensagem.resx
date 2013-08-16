@@ -183,17 +183,17 @@
   <data name="apagar" xml:space="preserve">
     <value>Apagar</value>
   </data>
-  <data name="cadastrarPessoa" xml:space="preserve">
-    <value>Cadastrar Pessoa</value>
-  </data>
-  <data name="detalharPessoa" xml:space="preserve">
-    <value>Detalhar Pessoa</value>
+  <data name="confirmacaoApagar" xml:space="preserve">
+    <value>Tem certeza que deseja deletar esta pessoa?</value>
   </data>
   <data name="detalhes" xml:space="preserve">
     <value>Detalhes</value>
   </data>
   <data name="editar" xml:space="preserve">
     <value>Editar</value>
+  </data>
+  <data name="novo" xml:space="preserve">
+    <value>Novo</value>
   </data>
   <data name="qtdeAndares" xml:space="preserve">
     <value>Quantidade de Andares</value>

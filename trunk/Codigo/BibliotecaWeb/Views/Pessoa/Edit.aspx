@@ -14,7 +14,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>Editar Pessoa</legend>
+        <legend><%: Models.App_GlobalResources.Mensagem.editar %></legend>
         
         <div class="editor-field">
             <%: Html.HiddenFor(model => model.IdPes) %>
