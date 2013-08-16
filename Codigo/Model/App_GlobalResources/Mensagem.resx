@@ -144,9 +144,6 @@
   <data name="login" xml:space="preserve">
     <value>Login</value>
   </data>
-  <data name="estado" xml:space="preserve">
-    <value>Estado</value>
-  </data>
   <data name="local" xml:space="preserve">
     <value>Local</value>
   </data>
@@ -182,5 +179,8 @@
   </data>
   <data name="valorPagamento" xml:space="preserve">
     <value>Valor Pagamento</value>
+  </data>
+  <data name="cadastrarPessoa" xml:space="preserve">
+    <value>Cadastrar Pessoa</value>
   </data>
 </root>

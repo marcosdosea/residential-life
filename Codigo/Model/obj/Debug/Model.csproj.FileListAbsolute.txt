@@ -39,3 +39,10 @@ C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Model\obj\Debug\Model.pdb
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Model\obj\Debug\Models.App_GlobalResources.Mensagem.resources
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Model\obj\Debug\Model.csproj.GenerateResource.Cache
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Model\bin\Debug\Model.dll.config
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Model\bin\Debug\Model.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Model\bin\Debug\Model.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Model\obj\Debug\Models.App_GlobalResources.Mensagem.resources
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Model\obj\Debug\Model.csproj.GenerateResource.Cache
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Model\obj\Debug\Model.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Model\obj\Debug\Model.pdb

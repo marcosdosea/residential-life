@@ -9,24 +9,21 @@
 <h2>Pessoas</h2>
 
 <p>
-    <%: Html.ActionLink("Cadastrar Pessoa", "Create") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.cadastrarPessoa, "Create") %>
 </p>
 <table>
     <tr>
         <th>
-            Código
+            <%: Models.App_GlobalResources.Mensagem.nome %>
         </th>
         <th>
-            Nome
+            <%: Models.App_GlobalResources.Mensagem.cpf %>
         </th>
         <th>
-            CPF
+            <%: Models.App_GlobalResources.Mensagem.telefoneFixo %>
         </th>
         <th>
-            Telefone Fixo
-        </th>
-        <th>
-            Telefone Celular
+            <%: Models.App_GlobalResources.Mensagem.telefoneCelular %>
         </th>
         <th></th>
     </tr>
