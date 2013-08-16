@@ -148,7 +148,7 @@
           <Key>
             <PropertyRef Name="IdAce" />
           </Key>
-          <Property Name="IdAce" Type="int" Nullable="false" />
+          <Property Name="IdAce" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="IdPes" Type="int" Nullable="false" />
           <Property Name="DataEntrada" Type="varchar" Nullable="false" MaxLength="45" />
           <Property Name="DataSaida" Type="varchar" MaxLength="45" />
@@ -165,7 +165,7 @@
           <Key>
             <PropertyRef Name="IdArea" />
           </Key>
-          <Property Name="IdArea" Type="int" Nullable="false" />
+          <Property Name="IdArea" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="60" />
           <Property Name="Local" Type="varchar" Nullable="false" MaxLength="60" />
           <Property Name="Tamanho" Type="varchar" Nullable="false" MaxLength="15" />
@@ -217,7 +217,7 @@
           <Property Name="Complemento" Type="varchar" MaxLength="100" />
           <Property Name="CEP" Type="varchar" Nullable="false" MaxLength="8" />
           <Property Name="Cidade" Type="varchar" Nullable="false" MaxLength="50" />
-          <Property Name="Estado" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Estado" Type="char" Nullable="false" MaxLength="2" />
         </EntityType>
         <EntityType Name="tb_enquete">
           <Key>
@@ -308,7 +308,7 @@
           <Property Name="Bairro" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="CEP" Type="varchar" Nullable="false" MaxLength="8" />
           <Property Name="Cidade" Type="varchar" Nullable="false" MaxLength="50" />
-          <Property Name="Estado" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Estado" Type="char" Nullable="false" MaxLength="2" />
         </EntityType>
         <EntityType Name="tb_pessoamoradia">
           <Key>
@@ -328,7 +328,7 @@
             <PropertyRef Name="Descricao" />
             <PropertyRef Name="Tipo" />
           </Key>
-          <Property Name="IdMov" Type="int" Nullable="false" />
+          <Property Name="IdMov" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="500" />
           <Property Name="Tipo" Type="varchar" Nullable="false" MaxLength="50" />
         </EntityType>
@@ -839,7 +839,7 @@
           <Key>
             <PropertyRef Name="IdAce" />
           </Key>
-          <Property Name="IdAce" Type="Int32" Nullable="false" />
+          <Property Name="IdAce" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdPes" Type="Int32" Nullable="false" />
           <Property Name="DataEntrada" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
           <Property Name="DataSaida" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
@@ -859,7 +859,7 @@
           <Key>
             <PropertyRef Name="IdArea" />
           </Key>
-          <Property Name="IdArea" Type="Int32" Nullable="false" />
+          <Property Name="IdArea" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nome" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
           <Property Name="Local" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
           <Property Name="Tamanho" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
@@ -918,7 +918,7 @@
           <Property Name="Complemento" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="CEP" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
           <Property Name="Cidade" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="Estado" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Estado" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="tb_administradora" Relationship="residentialbdModel.TB_Administradora_TB_Condominio1" FromRole="tb_condominio" ToRole="tb_administradora" />
           <NavigationProperty Name="tb_areapublica" Relationship="residentialbdModel.TB_Espaco_TB_Condominio1" FromRole="tb_condominio" ToRole="tb_areapublica" />
           <NavigationProperty Name="tb_bloco" Relationship="residentialbdModel.TB_Bloco_TB_Condominio1" FromRole="tb_condominio" ToRole="tb_bloco" />
@@ -1025,7 +1025,7 @@
           <Property Name="Bairro" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="CEP" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
           <Property Name="Cidade" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="Estado" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Estado" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="tb_acessopredio" Relationship="residentialbdModel.TB_Acesso_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_acessopredio" />
           <NavigationProperty Name="tb_atendimento" Relationship="residentialbdModel.TB_Atendimento_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_atendimento" />
           <NavigationProperty Name="tb_comentario" Relationship="residentialbdModel.TB_Comentario_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_comentario" />
@@ -1058,7 +1058,7 @@
             <PropertyRef Name="Descricao" />
             <PropertyRef Name="Tipo" />
           </Key>
-          <Property Name="IdMov" Type="Int32" Nullable="false" />
+          <Property Name="IdMov" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Descricao" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
           <Property Name="Tipo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="tb_movimentacaofinanceira" Relationship="residentialbdModel.TB_PlanoDeConta_TB_MovimentacaoFinanceira1" FromRole="tb_planodeconta" ToRole="tb_movimentacaofinanceira" />

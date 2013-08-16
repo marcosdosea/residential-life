@@ -11,6 +11,11 @@
 <fieldset>
     <legend>Detalhar Pessoa</legend>
 
+    <div class="display-label">Código</div>
+    <div class="display-field">
+        <%: Html.DisplayFor(model => model.IdPes) %>
+    </div>
+
     <div class="display-label">Nome</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Nome) %>
@@ -46,12 +51,12 @@
         <%: Html.DisplayFor(model => model.Senha) %>
     </div>
 
-    <div class="display-label">TelefoneFixo</div>
+    <div class="display-label">Telefone Fixo</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.TelefoneFixo) %>
     </div>
 
-    <div class="display-label">TelefoneCelular</div>
+    <div class="display-label">Telefone Celular</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.TelefoneCelular) %>
     </div>

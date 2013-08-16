@@ -6,13 +6,16 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Lista de Pessoas</h2>
+<h2>Pessoas</h2>
 
 <p>
     <%: Html.ActionLink("Cadastrar Pessoa", "Create") %>
 </p>
 <table>
     <tr>
+        <th>
+            Código
+        </th>
         <th>
             Nome
         </th>
@@ -30,6 +33,9 @@
 
 <% foreach (var item in Model) { %>
     <tr>
+        <td>
+            <%: Html.DisplayFor(modelItem => item.IdPes) %>
+        </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Nome) %>
         </td>
