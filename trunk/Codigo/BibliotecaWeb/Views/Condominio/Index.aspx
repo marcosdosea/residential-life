@@ -1,45 +1,45 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.CondominioModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    <%: Models.App_GlobalResources.Mensagem.condominios %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.condominios %></h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.novo, "Create") %>
 </p>
 <table>
     <tr>
      
         <th>
-            IDSindico
+            <%: Models.App_GlobalResources.Mensagem.idSindico %>
         </th>
         <th>
-            Nome
+            <%: Models.App_GlobalResources.Mensagem.nome %>
         </th>
         <th>
-            Rua
+            <%: Models.App_GlobalResources.Mensagem.rua %>
         </th>
         <th>
-            Numero
+            <%: Models.App_GlobalResources.Mensagem.numero %>
         </th>
         <th>
-            Bairro
+            <%: Models.App_GlobalResources.Mensagem.bairro %>
         </th>
         <th>
-            Complemento
+            <%: Models.App_GlobalResources.Mensagem.complemento %>
         </th>
         <th>
-            Cep
+            <%: Models.App_GlobalResources.Mensagem.cep %>
         </th>
         <th>
-            Cidade
+            <%: Models.App_GlobalResources.Mensagem.cidade %>
         </th>
         <th>
-            Estado
+            <%: Models.App_GlobalResources.Mensagem.estado %>
         </th>
         <th></th>
     </tr>
@@ -75,9 +75,9 @@
             <%: Html.DisplayFor(modelItem => item.Estado) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new {  id=item.IDCondominio }) %> |
-            <%: Html.ActionLink("Details", "Details", new {  id=item.IDCondominio  }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new {  id=item.IDCondominio }) %>
+            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editar , "Edit", new {  id=item.IDCondominio }) %> |
+            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.detalhes, "Details", new {  id=item.IDCondominio  }) %> |
+            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.apagar, "Delete", new {  id=item.IDCondominio }) %>
         </td>
     </tr>
 <% } %>
