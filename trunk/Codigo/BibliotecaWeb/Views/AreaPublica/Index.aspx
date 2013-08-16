@@ -17,22 +17,22 @@
             idAreaPublica
         </th>
         <th>
-            idCondominio
+            Condomínio
         </th>
         <th>
             Estado
         </th>
         <th>
-            nome
+            Nome
         </th>
         <th>
-            local
+            Local
         </th>
         <th>
-            tamanho
+            Tamanho
         </th>
         <th>
-            valorPagamento
+            Valor Pagamento
         </th>
         <th></th>
     </tr>

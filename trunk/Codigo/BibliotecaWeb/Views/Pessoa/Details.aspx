@@ -9,7 +9,7 @@
 <h2>Details</h2>
 
 <fieldset>
-    <legend>PessoaModel</legend>
+    <legend>Detalhar Pessoa</legend>
 
     <div class="display-label">Nome</div>
     <div class="display-field">
@@ -93,8 +93,8 @@
 
 </fieldset>
 <p>
-    <%: Html.ActionLink("Edit", "Edit", new { id=Model.IdPes }) %> |
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Editar", "Edit", new { id=Model.IdPes }) %> |
+    <%: Html.ActionLink("Voltar para lista", "Index") %>
 </p>
 
 </asp:Content>

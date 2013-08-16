@@ -14,7 +14,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>PessoaModel</legend>
+        <legend>Cadastrar Pessoa</legend>
 
         
         <div class="editor-label">
@@ -153,7 +153,7 @@
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Voltar para lista", "Index") %>
 </div>
 
 </asp:Content>

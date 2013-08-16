@@ -49,13 +49,7 @@
             <%: Html.ValidationMessageFor(model => model.QuantidadeMoradias) %>
         </div>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.QuantidadeMoradias) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.QuantidadeMoradias) %>
-            <%: Html.ValidationMessageFor(model => model.%>
-        </div>
+        
         <p>
             <input type="submit" value="Create" />
         </p>
