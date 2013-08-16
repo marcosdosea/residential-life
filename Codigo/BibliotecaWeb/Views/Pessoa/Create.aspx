@@ -14,7 +14,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>Cadastrar Pessoa</legend>
+        <legend><%: Models.App_GlobalResources.Mensagem.novo %></legend>
 
         
         <div class="editor-label">

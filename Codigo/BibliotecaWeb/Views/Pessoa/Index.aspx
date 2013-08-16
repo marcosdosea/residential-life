@@ -9,7 +9,7 @@
 <h2>Pessoas</h2>
 
 <p>
-    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.cadastrarPessoa, "Create") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.novo, "Create") %>
 </p>
 <table>
     <tr>

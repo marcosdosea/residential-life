@@ -9,7 +9,7 @@
 <h2>Details</h2>
 
 <fieldset>
-    <legend><%: Models.App_GlobalResources.Mensagem.detalharPessoa %></legend>
+    <legend><%: Models.App_GlobalResources.Mensagem.detalhes %></legend>
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.id %></div>
     <div class="display-field">

@@ -79,15 +79,6 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cadastrar Pessoa.
-        /// </summary>
-        public static string cadastrarPessoa {
-            get {
-                return ResourceManager.GetString("cadastrarPessoa", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to CEP.
         /// </summary>
         public static string cep {
@@ -115,20 +106,20 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tem certeza que deseja deletar esta pessoa?.
+        /// </summary>
+        public static string confirmacaoApagar {
+            get {
+                return ResourceManager.GetString("confirmacaoApagar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CPF.
         /// </summary>
         public static string cpf {
             get {
                 return ResourceManager.GetString("cpf", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Detalhar Pessoa.
-        /// </summary>
-        public static string detalharPessoa {
-            get {
-                return ResourceManager.GetString("detalharPessoa", resourceCulture);
             }
         }
         
@@ -201,6 +192,15 @@ namespace Models.App_GlobalResources {
         public static string nome {
             get {
                 return ResourceManager.GetString("nome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Novo.
+        /// </summary>
+        public static string novo {
+            get {
+                return ResourceManager.GetString("novo", resourceCulture);
             }
         }
         
