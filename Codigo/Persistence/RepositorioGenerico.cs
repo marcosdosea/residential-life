@@ -54,7 +54,7 @@ namespace Persistence
         /// <summary>
         /// Faz a edição dos dados de uma entidade
         /// </summary>
-        /// <param name="entidade"></param>
+        /// <param name="entidade">entidade que deve ser removida</param>
         public void Editar(T entidade)
         {
             _objectSet.Attach(entidade);

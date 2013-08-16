@@ -143,7 +143,7 @@
     <Key>
       <PropertyRef Name="IdAce" />
     </Key>
-    <Property Name="IdAce" Type="int" Nullable="false" />
+    <Property Name="IdAce" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="IdPes" Type="int" Nullable="false" />
     <Property Name="DataEntrada" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="DataSaida" Type="varchar" MaxLength="45" />
@@ -160,7 +160,7 @@
     <Key>
       <PropertyRef Name="IdArea" />
     </Key>
-    <Property Name="IdArea" Type="int" Nullable="false" />
+    <Property Name="IdArea" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="60" />
     <Property Name="Local" Type="varchar" Nullable="false" MaxLength="60" />
     <Property Name="Tamanho" Type="varchar" Nullable="false" MaxLength="15" />
@@ -212,7 +212,7 @@
     <Property Name="Complemento" Type="varchar" MaxLength="100" />
     <Property Name="CEP" Type="varchar" Nullable="false" MaxLength="8" />
     <Property Name="Cidade" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="Estado" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Estado" Type="char" Nullable="false" MaxLength="2" />
   </EntityType>
   <EntityType Name="tb_enquete">
     <Key>
@@ -303,7 +303,7 @@
     <Property Name="Bairro" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="CEP" Type="varchar" Nullable="false" MaxLength="8" />
     <Property Name="Cidade" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="Estado" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Estado" Type="char" Nullable="false" MaxLength="2" />
   </EntityType>
   <EntityType Name="tb_pessoamoradia">
     <Key>
@@ -323,7 +323,7 @@
       <PropertyRef Name="Descricao" />
       <PropertyRef Name="Tipo" />
     </Key>
-    <Property Name="IdMov" Type="int" Nullable="false" />
+    <Property Name="IdMov" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="500" />
     <Property Name="Tipo" Type="varchar" Nullable="false" MaxLength="50" />
   </EntityType>
