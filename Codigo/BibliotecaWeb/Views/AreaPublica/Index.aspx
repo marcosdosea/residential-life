@@ -6,64 +6,67 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.listaAreasPublicas %></h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.novo, "Create") %>
 </p>
 <table>
     <tr>
+        
         <th>
-            idAreaPublica
+              <%: Models.App_GlobalResources.Mensagem.condominio %>
+        </th>
+        
+        <th>
+              <%: Models.App_GlobalResources.Mensagem.nome %>
+
         </th>
         <th>
-            Condomínio
+              <%: Models.App_GlobalResources.Mensagem.local %>
         </th>
         <th>
-            Estado
+
+              <%: Models.App_GlobalResources.Mensagem.estado %>
+
         </th>
         <th>
-            Nome
+          <%: Models.App_GlobalResources.Mensagem.tamanho %>
+
         </th>
         <th>
-            Local
+            <%: Models.App_GlobalResources.Mensagem.valorPagamento %>
+
         </th>
-        <th>
-            Tamanho
-        </th>
-        <th>
-            Valor Pagamento
-        </th>
-        <th></th>
     </tr>
 
 <% foreach (var item in Model) { %>
     <tr>
+       
         <td>
-            <%: Html.DisplayFor(modelItem => item.idAreaPublica) %>
+            <%: Html.DisplayFor(modelItem => item.IdCondominio) %>
+        </td>
+       
+        <td>
+            <%: Html.DisplayFor(modelItem => item.Nome) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.idCondominio) %>
+            <%: Html.DisplayFor(modelItem => item.Local) %>
+        </td>
+         <td>
+            <%: Html.DisplayFor(modelItem => item.Estado) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.estado) %>
+            <%: Html.DisplayFor(modelItem => item.Tamanho) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.nome) %>
+            <%: Html.DisplayFor(modelItem => item.ValorPagamento) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.local) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.tamanho) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.valorPagamento) %>
-        </td>
-        <td>
-            <%: Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) %> |
-            <%: Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) %>
+         <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.IdAreaPublica })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdAreaPublica })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdAreaPublica })%>
+
         </td>
     </tr>
 <% } %>
