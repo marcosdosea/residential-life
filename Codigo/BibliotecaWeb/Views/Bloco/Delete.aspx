@@ -1,46 +1,46 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.BlocoModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Delete
+    <%: Models.App_GlobalResources.Mensagem.apagarBloco %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Delete</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.apagarBloco %></h2>
 
-<h3>Você realmente deseja excluir este bloco?</h3>
+<h3><%: Models.App_GlobalResources.Mensagem.confirmacaoBloco %></h3>
 <fieldset>
-    <legend>Deletar Bloco</legend>
+    <legend><%: Models.App_GlobalResources.Mensagem.apagar %></legend>
 
-    <div class="display-label">IdBloco</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.id %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.IdBloco) %>
     </div>
 
-    <div class="display-label">IdCondominio</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.idCondominio %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.IdCondominio) %>
     </div>
 
-    <div class="display-label">nome</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.nome %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Nome) %>
     </div>
 
-    <div class="display-label">quantAndares</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.qtdeAndares %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.QuantidadeAndares) %>
     </div>
 
-    <div class="display-label">quantMoradias</div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.qtdeMoradias %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.QuantidadeMoradias) %>
     </div>
 </fieldset>
 <% using (Html.BeginForm()) { %>
     <p>
-        <input type="submit" value="Delete" /> |
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.apagar %> /> |
+        <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index") %>
     </p>
 <% } %>
 
