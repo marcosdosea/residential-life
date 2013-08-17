@@ -21,12 +21,12 @@ namespace Models.Models
         public string Nome { get; set; }
 
         [Required]
-        [Display(Name = "qtdAndares", ResourceType = typeof(Mensagem))]
+        [Display(Name = "qtdeAndares", ResourceType = typeof(Mensagem))]
         [Range(1, 1000)]
         public int QuantidadeAndares { get; set; }
 
         [Required]
-        [Display(Name = "qtdMoradias", ResourceType = typeof(Mensagem))]
+        [Display(Name = "qtdeMoradias", ResourceType = typeof(Mensagem))]
         [Range(1, 500)]
         public int QuantidadeMoradias { get; set; }
 

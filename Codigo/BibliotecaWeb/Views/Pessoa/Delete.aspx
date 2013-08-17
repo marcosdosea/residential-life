@@ -6,9 +6,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Deletar</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.apagarPessoa %></h2>
 
-<h3>Tem certeza que deseja deletar esta pessoa?</h3>
+<h3><%: Models.App_GlobalResources.Mensagem.confirmacaoPessoa %></h3>
 <fieldset>
     <legend><%: Models.App_GlobalResources.Mensagem.apagar %></legend>
 

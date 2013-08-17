@@ -183,7 +183,7 @@
   <data name="apagar" xml:space="preserve">
     <value>Apagar</value>
   </data>
-  <data name="confirmacaoApagar" xml:space="preserve">
+  <data name="confirmacaoPessoa" xml:space="preserve">
     <value>Tem certeza que deseja deletar esta pessoa?</value>
   </data>
   <data name="detalhes" xml:space="preserve">
@@ -224,9 +224,6 @@
   </data>
   <data name="perguntaConfirmacao" xml:space="preserve">
     <value>Você está seguro que quer fazer isso?</value>
-  </data>
-  <data name="numer" xml:space="preserve">
-    <value />
   </data>
   <data name="apagarCondominio" xml:space="preserve">
     <value>Deletar Condomínio</value>
@@ -269,5 +266,17 @@
   </data>
   <data name="editarBloco" xml:space="preserve">
     <value>Editar Bloco</value>
+  </data>
+  <data name="apagarPessoa" xml:space="preserve">
+    <value>Apagar Pessoa</value>
+  </data>
+  <data name="detalhesPessoa" xml:space="preserve">
+    <value>Detalhes Pessoa</value>
+  </data>
+  <data name="editarPessoa" xml:space="preserve">
+    <value>Editar Pessoa</value>
+  </data>
+  <data name="pessoas" xml:space="preserve">
+    <value>Pessoas</value>
   </data>
 </root>

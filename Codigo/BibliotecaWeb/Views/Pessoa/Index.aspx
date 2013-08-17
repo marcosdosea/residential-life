@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Pessoas</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.pessoas %></h2>
 
 <p>
     <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.novo, "Create") %>
