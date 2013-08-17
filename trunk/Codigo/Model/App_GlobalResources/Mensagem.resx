@@ -252,4 +252,22 @@
   <data name="selecione" xml:space="preserve">
     <value>Selecione</value>
   </data>
+  <data name="apagarBloco" xml:space="preserve">
+    <value>Apagar Bloco</value>
+  </data>
+  <data name="bloco" xml:space="preserve">
+    <value>Bloco</value>
+  </data>
+  <data name="blocos" xml:space="preserve">
+    <value>Blocos</value>
+  </data>
+  <data name="confirmacaoBloco" xml:space="preserve">
+    <value>Tem certeza que deseja deletar este Bloco?</value>
+  </data>
+  <data name="detalhesBloco" xml:space="preserve">
+    <value>Detalhes do Bloco</value>
+  </data>
+  <data name="editarBloco" xml:space="preserve">
+    <value>Editar Bloco</value>
+  </data>
 </root>

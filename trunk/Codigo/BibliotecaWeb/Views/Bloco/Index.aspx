@@ -1,32 +1,32 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.BlocoModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Blocos 
+     <%: Models.App_GlobalResources.Mensagem.blocos %> 
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Blocos</h2>
+<h2> <%: Models.App_GlobalResources.Mensagem.blocos %></h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.novo, "Create") %>
 </p>
 <table>
     <tr>
         <th>
-            idBloco
+            <%: Models.App_GlobalResources.Mensagem.id %>
         </th>
         <th>
-            idCondominio
+            <%: Models.App_GlobalResources.Mensagem.idCondominio %>
         </th>
         <th>
-            nome
+            <%: Models.App_GlobalResources.Mensagem.nome %>
         </th>
         <th>
-            quantAndares
+            <%: Models.App_GlobalResources.Mensagem.qtdeAndares %>
         </th>
         <th>
-            quantMoradias
+            <%: Models.App_GlobalResources.Mensagem.qtdeMoradias %>
         </th>
         <th></th>
     </tr>
@@ -49,9 +49,9 @@
             <%: Html.DisplayFor(modelItem => item.QuantidadeMoradias) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new { id=item.IdBloco }) %> |
-            <%: Html.ActionLink("Details", "Details", new { id=item.IdBloco  }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { id=item.IdBloco  }) %>
+            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editar , "Edit", new {  id=item.IdBloco }) %> |
+            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.detalhes, "Details", new {  id=item.IdBloco  }) %> |
+            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.apagar, "Delete", new {  id=item.IdBloco }) %>
         </td>
     </tr>
 <% } %>

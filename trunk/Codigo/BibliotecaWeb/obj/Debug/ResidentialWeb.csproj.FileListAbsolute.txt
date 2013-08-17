@@ -89,3 +89,16 @@ C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\bin\Persistence
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\obj\Debug\ResidentialWeb.csprojResolveAssemblyReference.cache
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\BibliotecaWeb\bin\BibliotecaWeb.dll
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\BibliotecaWeb\bin\BibliotecaWeb.pdb
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\BibliotecaWeb\bin\EntityFramework.dll
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\BibliotecaWeb\bin\Model.dll
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\BibliotecaWeb\bin\Services.dll
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\BibliotecaWeb\bin\Persistence.dll
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\BibliotecaWeb\bin\Model.pdb
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\BibliotecaWeb\bin\Services.pdb
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\BibliotecaWeb\bin\EntityFramework.xml
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\BibliotecaWeb\bin\Persistence.pdb
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\BibliotecaWeb\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
