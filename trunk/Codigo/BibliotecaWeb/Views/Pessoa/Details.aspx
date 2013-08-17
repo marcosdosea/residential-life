@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2><%: Models.App_GlobalResources.Mensagem.detalhes %></h2>
+<h2><%: Models.App_GlobalResources.Mensagem.detalhesPessoa %></h2>
 
 <fieldset>
     <legend><%: Models.App_GlobalResources.Mensagem.detalhes %></legend>

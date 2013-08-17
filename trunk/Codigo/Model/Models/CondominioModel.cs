@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
+using Models.App_GlobalResources;
 
 namespace Models.Models
 {
@@ -12,41 +13,41 @@ namespace Models.Models
         public int IDSindico { get; set; } 
 
         [Required]
-        [Display(Name = "Nome")]
+        [Display(Name = "nome", ResourceType=typeof(Mensagem))]
         [StringLength(100)]
         public string Nome { get; set; }
 
         [Required]
-        [Display(Name = "Rua")]
+        [Display(Name = "rua", ResourceType = typeof(Mensagem))]
         [StringLength(100)]
         public string Rua { get; set; }
 
         [Required]
-        [Display(Name = "Número")]
+        [Display(Name = "numero", ResourceType = typeof(Mensagem))]
         [StringLength(10)]
         public string Numero { get; set; }
 
         [Required]
-        [Display(Name = "Bairro")]
+        [Display(Name = "bairro", ResourceType = typeof(Mensagem))]
         [StringLength(50)]
         public string Bairro { get; set; }
 
-        [Display(Name = "Complemento")]
+        [Display(Name = "complemento", ResourceType = typeof(Mensagem))]
         [StringLength(100)]
         public string Complemento { get; set; }
 
         [Required]
-        [Display(Name = "CEP")]
+        [Display(Name = "cep", ResourceType = typeof(Mensagem))]
         [StringLength(8)]
         public string Cep { get; set; }
 
         [Required]
-        [Display(Name = "Cidade")]
+        [Display(Name = "cidade", ResourceType = typeof(Mensagem))]
         [StringLength(50)]
         public string Cidade { get; set; }
 
         [Required]
-        [Display(Name = "Estado")]
+        [Display(Name = "estado", ResourceType = typeof(Mensagem))]
         [StringLength(2)]
         public String Estado { get; set; }
     }
