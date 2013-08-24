@@ -297,6 +297,9 @@
   <data name="apagarReservaAmbiente" xml:space="preserve">
     <value>Cancelar Reserva de Ambiente</value>
   </data>
+  <data name="areaPublica" xml:space="preserve">
+    <value>Área Pública</value>
+  </data>
   <data name="cancelar" xml:space="preserve">
     <value>Cancelar</value>
   </data>

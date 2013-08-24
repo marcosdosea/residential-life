@@ -91,7 +91,8 @@ namespace Services
                             IdArea = reservaAmbiente.IdArea,
                             DataInicio = reservaAmbiente.DataInicio,
                             DataFim = reservaAmbiente.DataFim,
-                            StatusPagamento = reservaAmbiente.StatusPagamento
+                            StatusPagamento = reservaAmbiente.StatusPagamento,
+                            NomeAreaPublica = reservaAmbiente.tb_areapublica.Nome
                         };
             return query;
         }
