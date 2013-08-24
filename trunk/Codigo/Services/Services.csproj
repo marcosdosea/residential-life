@@ -45,7 +45,6 @@
     <Compile Include="GerenciadorAreaPublica.cs" />
     <Compile Include="GerenciadorBloco.cs" />
     <Compile Include="GerenciadorCondominio.cs" />
-    <Compile Include="GerenciadorMoradia.cs" />
     <Compile Include="GerenciadorPessoa.cs" />
     <Compile Include="ServiceException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
