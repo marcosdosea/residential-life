@@ -321,4 +321,49 @@
   <data name="reservasAmbiente" xml:space="preserve">
     <value>Reservas de Ambiente</value>
   </data>
+  <data name="descricao" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="pessoa" xml:space="preserve">
+    <value>Pessoa</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="titulo" xml:space="preserve">
+    <value>Título</value>
+  </data>
+  <data name="apagarEnquete" xml:space="preserve">
+    <value>Excluir Enquete</value>
+  </data>
+  <data name="confirmacaoApagarEnquete" xml:space="preserve">
+    <value>Você realmente deseja excluir essa enquete?</value>
+  </data>
+  <data name="criador" xml:space="preserve">
+    <value>Criador</value>
+  </data>
+  <data name="dataFimEnquete" xml:space="preserve">
+    <value>Data de fechamento da enquete</value>
+  </data>
+  <data name="dataInicioEnquete" xml:space="preserve">
+    <value>Data de abertura da enquete</value>
+  </data>
+  <data name="detalhesEnquete" xml:space="preserve">
+    <value>Detalhes da Enquete</value>
+  </data>
+  <data name="editarEnquete" xml:space="preserve">
+    <value>Editar a Enquete</value>
+  </data>
+  <data name="enquete" xml:space="preserve">
+    <value>Enquete</value>
+  </data>
+  <data name="enquetes" xml:space="preserve">
+    <value>Enquetes</value>
+  </data>
+  <data name="excluir" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <data name="novaEnquete" xml:space="preserve">
+    <value>Nova Enquete</value>
+  </data>
 </root>

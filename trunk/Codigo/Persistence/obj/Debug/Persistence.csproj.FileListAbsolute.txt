@@ -70,3 +70,11 @@ C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Persistence\bin\Debug\Model.pdb
 C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Persistence\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Persistence\obj\Debug\Persistence.dll
 C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\obj\Debug\Persistence.pdb
