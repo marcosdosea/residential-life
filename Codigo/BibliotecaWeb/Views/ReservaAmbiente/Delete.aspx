@@ -17,9 +17,9 @@
         <%: Html.DisplayFor(model => model.IdRes) %>
     </div>
 
-    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.idArea %></div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.areaPublica %></div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdArea) %>
+        <%: Html.DisplayFor(model => model.NomeAreaPublica) %>
     </div>
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.idPessoa %></div>

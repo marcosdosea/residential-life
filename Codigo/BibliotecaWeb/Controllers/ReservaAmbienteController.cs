@@ -14,10 +14,12 @@ namespace BibliotecaWeb.Controllers
     public class ReservaAmbienteController : Controller
     {
         private GerenciadorReservaAmbiente gReservaAmbiente;
+        private GerenciadorAreaPublica gAreaPublica;
 
         public ReservaAmbienteController()
         {
             gReservaAmbiente = new GerenciadorReservaAmbiente();
+            gAreaPublica = new GerenciadorAreaPublica();
         }
 
         //
@@ -42,6 +44,8 @@ namespace BibliotecaWeb.Controllers
 
         public ActionResult Create()
         {
+            //Pegar somente as áreas públicas do condomínio corrente no futuro
+            ViewBag.IdArea = new SelectList(gAreaPublica.ObterTodos(), "IdAreaPublica", "Nome");
             return View();
         }
 
@@ -67,6 +71,7 @@ namespace BibliotecaWeb.Controllers
         {
 
             ReservaAmbienteModel reservaAmbiente = gReservaAmbiente.Obter(id);
+            ViewBag.IdArea = new SelectList(gAreaPublica.ObterTodos(), "IdAreaPublica", "Nome", reservaAmbiente.IdArea);
             return View(reservaAmbiente);
         }
 

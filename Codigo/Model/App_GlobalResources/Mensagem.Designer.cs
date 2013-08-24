@@ -115,6 +115,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Área Pública.
+        /// </summary>
+        public static string areaPublica {
+            get {
+                return ResourceManager.GetString("areaPublica", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bairro.
         /// </summary>
         public static string bairro {

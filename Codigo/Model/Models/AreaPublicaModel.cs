@@ -15,14 +15,17 @@ namespace Models.Models
             ErrorMessageResourceName = "required")]
         public int IdCondominio { get; set; }
        
+
         [Required]
         public string Estado { get; set; }
        
+
         [Display(Name = "nome", ResourceType= typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
         [StringLength(100)]
         public string Nome { get; set; }
+
 
         [Display(Name = "local", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
@@ -30,12 +33,14 @@ namespace Models.Models
         [StringLength(50)]
         public string Local { get; set; }
 
+   
         [Display(Name = "tamanho", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
         [StringLength(10)]
         public string Tamanho { get; set; }
 
+      
         [Display(Name = "valorPagamento", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]

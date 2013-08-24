@@ -25,10 +25,10 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdArea) %>
+            <%: Html.LabelFor(model => model.NomeAreaPublica) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdArea) %>
+            <%: Html.DropDownList("IdArea")%>
             <%: Html.ValidationMessageFor(model => model.IdArea) %>
         </div>
 

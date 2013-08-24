@@ -17,7 +17,7 @@
             <%: Models.App_GlobalResources.Mensagem.id %>
         </th>
         <th>
-            <%: Models.App_GlobalResources.Mensagem.idArea %>
+            <%: Models.App_GlobalResources.Mensagem.areaPublica %>
         </th>
         <th>
             <%: Models.App_GlobalResources.Mensagem.idPessoa %>
@@ -40,7 +40,7 @@
             <%: Html.DisplayFor(modelItem => item.IdRes) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.IdArea) %>
+            <%: Html.DisplayFor(modelItem => item.NomeAreaPublica) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.IdPes) %>
