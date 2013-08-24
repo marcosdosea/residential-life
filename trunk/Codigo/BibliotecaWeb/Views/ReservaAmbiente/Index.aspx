@@ -1,35 +1,35 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.ReservaAmbienteModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    <%: Models.App_GlobalResources.Mensagem.reservasAmbiente %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.reservasAmbiente %></h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.novaReservaAmbiente, "Create") %>
 </p>
 <table>
     <tr>
         <th>
-            IdRes
+            <%: Models.App_GlobalResources.Mensagem.id %>
         </th>
         <th>
-            IdArea
+            <%: Models.App_GlobalResources.Mensagem.idArea %>
         </th>
         <th>
-            IdPes
+            <%: Models.App_GlobalResources.Mensagem.idPessoa %>
         </th>
         <th>
-            DataInicio
+            <%: Models.App_GlobalResources.Mensagem.dataInicio %>
         </th>
         <th>
-            DataFim
+            <%: Models.App_GlobalResources.Mensagem.dataFim %>
         </th>
         <th>
-            StatusPagamento
+            <%: Models.App_GlobalResources.Mensagem.statusPagamento %>
         </th>
         <th></th>
     </tr>
@@ -55,9 +55,9 @@
             <%: Html.DisplayFor(modelItem => item.StatusPagamento) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new {  id=item.IdRes}) %> |
-            <%: Html.ActionLink("Details", "Details", new { id = item.IdRes })%> |
-            <%: Html.ActionLink("Delete", "Delete", new { id = item.IdRes })%>
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.IdRes })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdRes })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdRes })%>
         </td>
     </tr>
 <% } %>

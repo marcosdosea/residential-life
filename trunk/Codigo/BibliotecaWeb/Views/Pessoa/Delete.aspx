@@ -1,14 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.PessoaModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Delete
+    <%: Models.App_GlobalResources.Mensagem.apagar %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
 <h2><%: Models.App_GlobalResources.Mensagem.apagarPessoa %></h2>
 
-<h3><%: Models.App_GlobalResources.Mensagem.confirmacaoPessoa %></h3>
+<h3><%: Models.App_GlobalResources.Mensagem.confirmacaoApagarPessoa %></h3>
 <fieldset>
     <legend><%: Models.App_GlobalResources.Mensagem.apagar %></legend>
 
