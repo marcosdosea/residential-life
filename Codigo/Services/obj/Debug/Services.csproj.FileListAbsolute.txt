@@ -88,3 +88,12 @@ C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug
 C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Persistence.dll
 C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Model.pdb
 C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\bin\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\bin\Debug\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\obj\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\obj\Debug\Services.pdb
