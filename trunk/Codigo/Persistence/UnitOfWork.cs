@@ -22,6 +22,7 @@ namespace Persistence
         private IRepositorioGenerico<tb_reservaambiente> _repReservaAmbiente;
         private IRepositorioGenerico<tb_moradia> _repMoradia;
         private IRepositorioGenerico<tb_enquete> _repEnquete;
+        private IRepositorioGenerico<tb_ocorrencia> _repRegistrarOcorrencia; 
 
         /// <summary>
         /// Construtor cria contexto transacional
@@ -140,6 +141,21 @@ namespace Persistence
                     _repReservaAmbiente = new RepositorioGenerico<tb_reservaambiente>(_context);
                 }
                 return _repReservaAmbiente;
+            }
+        }
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de ocorrencia
+        /// </summary>
+        public IRepositorioGenerico<tb_ocorrencia> RepositorioRegistrarOcorrencia
+        {
+            get
+            {
+                if (_repRegistrarOcorrencia == null)
+                {
+                    _repRegistrarOcorrencia = new RepositorioGenerico<tb_ocorrencia>(_context);
+                }
+                return _repRegistrarOcorrencia;
             }
         }
 

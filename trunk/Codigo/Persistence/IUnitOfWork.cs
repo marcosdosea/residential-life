@@ -13,5 +13,6 @@ namespace Persistence
         IRepositorioGenerico<tb_moradia> RepositorioMoradia { get; }
         IRepositorioGenerico<tb_reservaambiente> RepositorioReservaAmbiente { get; }
         IRepositorioGenerico<tb_enquete> RepositorioEnquete { get; }
+        IRepositorioGenerico<tb_ocorrencia> RepositorioRegistrarOcorrencia { get; }
     }
 }
