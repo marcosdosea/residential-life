@@ -55,7 +55,7 @@
     <Compile Include="Models\AreaPublicaModel.cs" />
     <Compile Include="Models\BlocoModel.cs" />
     <Compile Include="Models\CondominioModel.cs" />
-    <Compile Include="Models\MoradiaModel.cs" />
+    <Compile Include="Models\ReservaAmbienteModel.cs" />
     <Compile Include="Models\PessoaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResidentialBD.Designer.cs">

@@ -71,7 +71,6 @@
     <Compile Include="Controllers\AreaPublicaController.cs" />
     <Compile Include="Controllers\BlocoController.cs" />
     <Compile Include="Controllers\CondominioController.cs" />
-    <Compile Include="Controllers\MoradiaController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ReservaAmbienteController.cs" />
