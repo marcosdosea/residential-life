@@ -18,7 +18,8 @@ namespace Persistence
         private IRepositorioGenerico<tb_pessoa> _repPessoa;
         private IRepositorioGenerico<tb_condominio> _repCondominio;
         private IRepositorioGenerico<tb_bloco> _repBloco;
-        private IRepositorioGenerico<tb_areapublica> _repAreaPublica;  
+        private IRepositorioGenerico<tb_areapublica> _repAreaPublica;
+        private IRepositorioGenerico<tb_moradia> _repMoradia;
 
         /// <summary>
         /// Construtor cria contexto transacional
@@ -91,6 +92,21 @@ namespace Persistence
                     _repAreaPublica = new RepositorioGenerico<tb_areapublica>(_context);
                 }
                 return _repAreaPublica;
+            }
+        }
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de pessoas
+        /// </summary>
+        public IRepositorioGenerico<tb_moradia> RepositorioMoradia
+        {
+            get
+            {
+                if (_repMoradia == null)
+                {
+                    _repMoradia = new RepositorioGenerico<tb_moradia>(_context);
+                }
+                return _repMoradia;
             }
         }
 

@@ -10,5 +10,6 @@ namespace Persistence
         IRepositorioGenerico<tb_condominio> RepositorioCondominio { get; }
         IRepositorioGenerico<tb_bloco> RepositorioBloco { get; }
         IRepositorioGenerico<tb_areapublica> RepositorioAreaPublica { get; }
+        IRepositorioGenerico<tb_moradia> RepositorioMoradia { get; }
     }
 }

@@ -57,3 +57,6 @@ C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Model\obj\Debug\GenerateResource.read.1.
 C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Model\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Model\obj\Debug\Model.dll
 C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Model\obj\Debug\Model.pdb
+D:\Tauany\residential-life\trunk\Codigo\Model\obj\Debug\Models.App_GlobalResources.Mensagem.resources
+D:\Tauany\residential-life\trunk\Codigo\Model\obj\Debug\GenerateResource.read.1.tlog
+D:\Tauany\residential-life\trunk\Codigo\Model\obj\Debug\GenerateResource.write.1.tlog
