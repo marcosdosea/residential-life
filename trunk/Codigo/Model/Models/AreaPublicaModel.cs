@@ -11,12 +11,15 @@ namespace Models.Models
     {
         public int IdAreaPublica { get; set; }
 
+        [Display(Name = "condominio", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
         public int IdCondominio { get; set; }
-       
 
-        [Required]
+
+         [Display(Name = "estado", ResourceType = typeof(Mensagem))]
+         [Required(ErrorMessageResourceType = typeof(Mensagem),
+            ErrorMessageResourceName = "required")]
         public string Estado { get; set; }
        
 
