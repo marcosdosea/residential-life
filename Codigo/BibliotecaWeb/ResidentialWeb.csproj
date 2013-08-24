@@ -71,6 +71,7 @@
     <Compile Include="Controllers\AreaPublicaController.cs" />
     <Compile Include="Controllers\BlocoController.cs" />
     <Compile Include="Controllers\CondominioController.cs" />
+    <Compile Include="Controllers\MoradiaController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -132,6 +133,11 @@
     <Content Include="Views\Condominio\Details.aspx" />
     <Content Include="Views\Condominio\Edit.aspx" />
     <Content Include="Views\Condominio\Index.aspx" />
+    <Content Include="Views\Moradia\Create.aspx" />
+    <Content Include="Views\Moradia\Delete.aspx" />
+    <Content Include="Views\Moradia\Details.aspx" />
+    <Content Include="Views\Moradia\Edit.aspx" />
+    <Content Include="Views\Moradia\Index.aspx" />
     <Content Include="Views\Pessoa\Create.aspx" />
     <Content Include="Views\Pessoa\Delete.aspx" />
     <Content Include="Views\Pessoa\Details.aspx" />
