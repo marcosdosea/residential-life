@@ -279,4 +279,19 @@
   <data name="pessoas" xml:space="preserve">
     <value>Pessoas</value>
   </data>
+  <data name="dataFim" xml:space="preserve">
+    <value>Data de Finalização</value>
+  </data>
+  <data name="dataInicio" xml:space="preserve">
+    <value>Data de Início</value>
+  </data>
+  <data name="idArea" xml:space="preserve">
+    <value>Código da Área Pública</value>
+  </data>
+  <data name="idPessoa" xml:space="preserve">
+    <value>Código da Pessoa</value>
+  </data>
+  <data name="statusPagamento" xml:space="preserve">
+    <value>Status do Pagamento</value>
+  </data>
 </root>

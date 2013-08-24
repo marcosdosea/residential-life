@@ -19,6 +19,7 @@ namespace Persistence
         private IRepositorioGenerico<tb_condominio> _repCondominio;
         private IRepositorioGenerico<tb_bloco> _repBloco;
         private IRepositorioGenerico<tb_areapublica> _repAreaPublica;
+        private IRepositorioGenerico<tb_reservaambiente> _repReservaAmbiente;
         private IRepositorioGenerico<tb_moradia> _repMoradia;
 
         /// <summary>
@@ -49,7 +50,7 @@ namespace Persistence
 
 
         /// <summary>
-        /// Repositório para manipular dados persistidos de pessoas
+        /// Repositório para manipular dados persistidos de condomínios
         /// </summary>
         public IRepositorioGenerico<tb_condominio> RepositorioCondominio
         {
@@ -66,7 +67,7 @@ namespace Persistence
 
 
         /// <summary>
-        /// Repositório para manipular dados persistidos de pessoas
+        /// Repositório para manipular dados persistidos de blocos
         /// </summary>
         public IRepositorioGenerico<tb_bloco> RepositorioBloco
         {
@@ -81,7 +82,7 @@ namespace Persistence
         }
 
         /// <summary>
-        /// Repositório para manipular dados persistidos de pessoas
+        /// Repositório para manipular dados persistidos de áreas públicas
         /// </summary>
         public IRepositorioGenerico<tb_areapublica> RepositorioAreaPublica
         {
@@ -107,6 +108,21 @@ namespace Persistence
                     _repMoradia = new RepositorioGenerico<tb_moradia>(_context);
                 }
                 return _repMoradia;
+            }
+        }
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de reservas de ambiente
+        /// </summary>
+        public IRepositorioGenerico<tb_reservaambiente> RepositorioReservaAmbiente
+        {
+            get
+            {
+                if (_repReservaAmbiente == null)
+                {
+                    _repReservaAmbiente = new RepositorioGenerico<tb_reservaambiente>(_context);
+                }
+                return _repReservaAmbiente;
             }
         }
 

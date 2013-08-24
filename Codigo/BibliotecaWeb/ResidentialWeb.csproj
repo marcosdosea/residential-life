@@ -74,6 +74,7 @@
     <Compile Include="Controllers\MoradiaController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReservaAmbienteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -143,6 +144,11 @@
     <Content Include="Views\Pessoa\Details.aspx" />
     <Content Include="Views\Pessoa\Edit.aspx" />
     <Content Include="Views\Pessoa\Index.aspx" />
+    <Content Include="Views\ReservaAmbiente\Create.aspx" />
+    <Content Include="Views\ReservaAmbiente\Delete.aspx" />
+    <Content Include="Views\ReservaAmbiente\Details.aspx" />
+    <Content Include="Views\ReservaAmbiente\Edit.aspx" />
+    <Content Include="Views\ReservaAmbiente\Index.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
