@@ -21,6 +21,7 @@ namespace Persistence
         private IRepositorioGenerico<tb_areapublica> _repAreaPublica;
         private IRepositorioGenerico<tb_reservaambiente> _repReservaAmbiente;
         private IRepositorioGenerico<tb_moradia> _repMoradia;
+        private IRepositorioGenerico<tb_enquete> _repEnquete;
 
         /// <summary>
         /// Construtor cria contexto transacional
@@ -31,6 +32,22 @@ namespace Persistence
         }
         
         #region IUnitOfWork Members
+
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de enquetes
+        /// </summary>
+        public IRepositorioGenerico<tb_enquete> RepositorioEnquete
+        {
+            get
+            {
+                if (_repEnquete == null)
+                {
+                    _repEnquete = new RepositorioGenerico<tb_enquete>(_context);
+                }
+                return _repEnquete;
+            }
+        }
 
         
         /// <summary>

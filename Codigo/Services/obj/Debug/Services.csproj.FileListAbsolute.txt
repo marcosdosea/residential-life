@@ -79,3 +79,12 @@ C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Services\bin\Debug\Persistence.pdb
 C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Services\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Services\obj\Debug\Services.dll
 C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\obj\Debug\Services.dll
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Services.dll
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Services.pdb
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Model.dll
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Persistence.dll
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Model.pdb
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Persistence.pdb
