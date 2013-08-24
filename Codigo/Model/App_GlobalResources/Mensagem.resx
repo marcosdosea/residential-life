@@ -183,7 +183,7 @@
   <data name="apagar" xml:space="preserve">
     <value>Apagar</value>
   </data>
-  <data name="confirmacaoPessoa" xml:space="preserve">
+  <data name="confirmacaoApagarPessoa" xml:space="preserve">
     <value>Tem certeza que deseja deletar esta pessoa?</value>
   </data>
   <data name="detalhes" xml:space="preserve">
@@ -226,10 +226,10 @@
     <value>Você está seguro que quer fazer isso?</value>
   </data>
   <data name="apagarCondominio" xml:space="preserve">
-    <value>Deletar Condomínio</value>
+    <value>Apagar Condomínio</value>
   </data>
   <data name="condominios" xml:space="preserve">
-    <value>Condominios</value>
+    <value>Condomínios</value>
   </data>
   <data name="confirmacaoCondominio" xml:space="preserve">
     <value>Tem certeza que deseja deletar este condominio?</value>
@@ -259,7 +259,7 @@
     <value>Blocos</value>
   </data>
   <data name="confirmacaoBloco" xml:space="preserve">
-    <value>Tem certeza que deseja deletar este Bloco?</value>
+    <value>Tem certeza que deseja deletar este bloco?</value>
   </data>
   <data name="detalhesBloco" xml:space="preserve">
     <value>Detalhes do Bloco</value>
@@ -293,5 +293,29 @@
   </data>
   <data name="statusPagamento" xml:space="preserve">
     <value>Status do Pagamento</value>
+  </data>
+  <data name="apagarReservaAmbiente" xml:space="preserve">
+    <value>Cancelar Reserva de Ambiente</value>
+  </data>
+  <data name="cancelar" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="confirmacaoApagarReserva" xml:space="preserve">
+    <value>Tem certeza que deseja cancelar esta reserva?</value>
+  </data>
+  <data name="detalhesReservaAmbiente" xml:space="preserve">
+    <value>Detalhes da Reserva de Ambiente</value>
+  </data>
+  <data name="editarReservaAmbiente" xml:space="preserve">
+    <value>Editar Reserva de Ambiente</value>
+  </data>
+  <data name="novaReservaAmbiente" xml:space="preserve">
+    <value>Nova Reserva de Ambiente</value>
+  </data>
+  <data name="reservaAmbiente" xml:space="preserve">
+    <value>Reserva de Ambiente</value>
+  </data>
+  <data name="reservasAmbiente" xml:space="preserve">
+    <value>Reservas de Ambiente</value>
   </data>
 </root>
