@@ -241,6 +241,24 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data de Finalização.
+        /// </summary>
+        public static string dataFim {
+            get {
+                return ResourceManager.GetString("dataFim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data de Início.
+        /// </summary>
+        public static string dataInicio {
+            get {
+                return ResourceManager.GetString("dataInicio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Detalhes.
         /// </summary>
         public static string detalhes {
@@ -358,11 +376,29 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Código da Área Pública.
+        /// </summary>
+        public static string idArea {
+            get {
+                return ResourceManager.GetString("idArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Código do condomínio.
         /// </summary>
         public static string idCondominio {
             get {
                 return ResourceManager.GetString("idCondominio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Código da Pessoa.
+        /// </summary>
+        public static string idPessoa {
+            get {
+                return ResourceManager.GetString("idPessoa", resourceCulture);
             }
         }
         
@@ -570,6 +606,15 @@ namespace Models.App_GlobalResources {
         public static string sexo {
             get {
                 return ResourceManager.GetString("sexo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status do Pagamento.
+        /// </summary>
+        public static string statusPagamento {
+            get {
+                return ResourceManager.GetString("statusPagamento", resourceCulture);
             }
         }
         

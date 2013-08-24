@@ -11,5 +11,6 @@ namespace Persistence
         IRepositorioGenerico<tb_bloco> RepositorioBloco { get; }
         IRepositorioGenerico<tb_areapublica> RepositorioAreaPublica { get; }
         IRepositorioGenerico<tb_moradia> RepositorioMoradia { get; }
+        IRepositorioGenerico<tb_reservaambiente> RepositorioReservaAmbiente { get; }
     }
 }
