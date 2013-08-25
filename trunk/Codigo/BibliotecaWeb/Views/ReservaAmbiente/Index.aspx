@@ -11,7 +11,7 @@
 <p>
     <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.novaReservaAmbiente, "Create") %>
 </p>
-<table>
+<table id="table">
     <tr>
         <th>
             <%: Models.App_GlobalResources.Mensagem.id %>

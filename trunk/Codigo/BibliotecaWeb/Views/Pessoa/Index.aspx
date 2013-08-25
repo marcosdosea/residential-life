@@ -11,8 +11,11 @@
 <p>
     <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.novo, "Create") %>
 </p>
-<table>
+<table id="table">
     <tr>
+         <th>
+            <%: Models.App_GlobalResources.Mensagem.idPessoa %>
+        </th>
         <th>
             <%: Models.App_GlobalResources.Mensagem.nome %>
         </th>
