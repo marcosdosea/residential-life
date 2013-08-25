@@ -11,7 +11,7 @@
 <p>
     <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.novaEnquete, "Create") %>
 </p>
-<table>
+<table id="table">
     <tr>
   
         <th>
