@@ -19,7 +19,6 @@ C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\bin\Debug\Pe
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\bin\Debug\Persistence.pdb
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\bin\Debug\Model.dll
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\bin\Debug\Model.pdb
-C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\obj\Debug\Persistence.dll
 C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\obj\Debug\Persistence.pdb
 C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Persistence\bin\Debug\Persistence.dll.config

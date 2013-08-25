@@ -60,8 +60,15 @@ namespace BibliotecaWeb.Controllers
                 gReservaAmbiente.Inserir(reservaAmbienteModel);
                 return RedirectToAction("Index");
             }
+            else
+            {
+                //Pegar somente as áreas públicas do condomínio corrente no futuro
+                ViewBag.IdArea = new SelectList(gAreaPublica.ObterTodos(), "IdAreaPublica", "Nome");
+                gReservaAmbiente.Inserir(reservaAmbienteModel);
+                return RedirectToAction("Index");
+            }
 
-            return View(reservaAmbienteModel);
+            //return View(reservaAmbienteModel);
         }
 
         //
@@ -81,11 +88,13 @@ namespace BibliotecaWeb.Controllers
         [HttpPost]
         public ActionResult Edit(ReservaAmbienteModel reservaAmbienteModel)
         {
+            //TODO: corrigir, não está funcionando, mas deveria
             if (ModelState.IsValid)
             {
                 gReservaAmbiente.Editar(reservaAmbienteModel);
                 return RedirectToAction("Index");
             }
+            
             return View(reservaAmbienteModel);
         }
 

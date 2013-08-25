@@ -25,7 +25,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.NomeAreaPublica) %>
+            <%: Html.LabelFor(model => model.IdArea) %>
         </div>
         <div class="editor-field">
             <%: Html.DropDownList("IdArea")%>

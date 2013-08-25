@@ -65,7 +65,7 @@
         </div>
 
         <p>
-            <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.voltar %> />
+            <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.salvar %> />
         </p>
     </fieldset>
 <% } %>
