@@ -42,11 +42,11 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdStatus)%>
+            <%: Html.LabelFor(model => model.IdStatusAreaPublica)%>
         </div>
         <div class="editor-field">
              <%: Html.DropDownList("IdStatusAreaPublica")%>
-            <%: Html.ValidationMessageFor(model => model.IdStatus)%>
+            <%: Html.ValidationMessageFor(model => model.IdStatusAreaPublica)%>
         </div>
 
 
