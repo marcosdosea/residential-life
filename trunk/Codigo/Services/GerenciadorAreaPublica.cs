@@ -92,7 +92,7 @@ namespace Services
                             Local = AreaPublica.Local,
                             Tamanho = AreaPublica.Tamanho,
                             ValorReserva = AreaPublica.ValorReserva,
-                            
+                            StatusAreaPublica = AreaPublica.tb_statusareapublica.StatusAreaPublica,
                         };
             return query;
         }

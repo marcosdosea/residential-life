@@ -54,7 +54,7 @@
             <%: Html.DisplayFor(modelItem => item.Local) %>
         </td>
          <td>
-            <%: Html.DisplayFor(modelItem => item.IdStatus) %>
+            <%: Html.DisplayFor(modelItem => item.StatusAreaPublica) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Tamanho) %>
