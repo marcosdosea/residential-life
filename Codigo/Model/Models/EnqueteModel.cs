@@ -41,6 +41,7 @@ namespace Models.Models
 
 
         public string StatusEnquete { get; set; }
+        public string NomeCriador { get; set; }
 
 
     }

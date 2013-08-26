@@ -140,6 +140,8 @@
     <Content Include="Views\Enquete\Delete.aspx" />
     <Content Include="Views\Enquete\Details.aspx" />
     <Content Include="Views\Enquete\Edit.aspx" />
+    <Content Include="Views\Enquete\EmAndamento.aspx" />
+    <Content Include="Views\Enquete\Finalizadas.aspx" />
     <Content Include="Views\Enquete\Index.aspx" />
     <Content Include="Views\Moradia\Create.aspx" />
     <Content Include="Views\Moradia\Delete.aspx" />

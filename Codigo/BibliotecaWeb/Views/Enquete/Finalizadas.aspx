@@ -1,21 +1,23 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.EnqueteModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    <%: Models.App_GlobalResources.Mensagem.todasEnquetes %>
+    <%: Models.App_GlobalResources.Mensagem.enquetes %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2><%: Models.App_GlobalResources.Mensagem.todasEnquetes %></h2>
+<h2><%: Models.App_GlobalResources.Mensagem.enquetesFinalizadas %></h2>
 
 <p>
     <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.novaEnquete, "Create") %>
 </p>
+
+<p>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.todasEnquetes, "Index") %>
+</p>
+
 <p>
     <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.enquetesEmAndamento, "EmAndamento") %>
-</p>
-<p>
-    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.enquetesFinalizadas, "Finalizadas") %>
 </p>
 <table id="table">
     <tr>

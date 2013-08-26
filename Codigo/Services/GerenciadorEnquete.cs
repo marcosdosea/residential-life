@@ -88,7 +88,8 @@ namespace Services
                             DataInicio = enquete.DataInicio,
                             DataFim = enquete.DataFim,
                             IdStatusEnquete = enquete.IdStatusEnquete,
-                            StatusEnquete  = enquete.tb_statusenquete.StatusEnquete
+                            StatusEnquete  = enquete.tb_statusenquete.StatusEnquete,
+                            NomeCriador = enquete.tb_pessoa.Nome
                             
                         };
             return query;
@@ -101,6 +102,24 @@ namespace Services
         public IEnumerable<EnqueteModel> ObterTodos()
         {
             return GetQuery();
+        }
+
+        /// <summary>
+        /// Obter todos as enquetes marcadas como finalizada
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<EnqueteModel> ObterEnquetesFinalizadas()
+        {
+            return GetQuery().Where(enquete => enquete.StatusEnquete.Contains("Finalizada"));
+        }
+
+        /// <summary>
+        /// Obter todos as enquetes não marcadas como finalizada
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<EnqueteModel> ObterEnquetesAtivas()
+        {
+            return GetQuery().Where(enquete => !enquete.StatusEnquete.Contains("Finalizada"));
         }
 
         /// <summary>
