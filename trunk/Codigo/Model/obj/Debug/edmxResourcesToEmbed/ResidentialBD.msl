@@ -28,8 +28,8 @@
           <ScalarProperty Name="Local" ColumnName="Local" />
           <ScalarProperty Name="Tamanho" ColumnName="Tamanho" />
           <ScalarProperty Name="Valor" ColumnName="Valor" />
-          <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="IdCon" ColumnName="IdCon" />
+          <ScalarProperty Name="IdStatusAreaPublica" ColumnName="IdStatusAreaPublica" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -144,8 +144,8 @@
           <ScalarProperty Name="Titulo" ColumnName="Titulo" />
           <ScalarProperty Name="Descricao" ColumnName="Descricao" />
           <ScalarProperty Name="DataCriacao" ColumnName="DataCriacao" />
-          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IdTipoOcorrencia" ColumnName="IdTipoOcorrencia" />
+          <ScalarProperty Name="IdStatusOcorrencia" ColumnName="IdStatusOcorrencia" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -231,7 +231,7 @@
           <ScalarProperty Name="IdPes" ColumnName="IdPes" />
           <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
           <ScalarProperty Name="DataFim" ColumnName="DataFim" />
-          <ScalarProperty Name="StatusPagamento" ColumnName="StatusPagamento" />
+          <ScalarProperty Name="IdStatusPagamento" ColumnName="IdStatusPagamento" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -241,6 +241,38 @@
           <ScalarProperty Name="IdSet" ColumnName="IdSet" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
           <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_statusareapublica">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_statusareapublica">
+        <MappingFragment StoreEntitySet="tb_statusareapublica">
+          <ScalarProperty Name="IdStatusAreaPublica" ColumnName="IdStatusAreaPublica" />
+          <ScalarProperty Name="StatusAreaPublica" ColumnName="StatusAreaPublica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_statusocorrencia">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_statusocorrencia">
+        <MappingFragment StoreEntitySet="tb_statusocorrencia">
+          <ScalarProperty Name="IdStatusOcorrencia" ColumnName="IdStatusOcorrencia" />
+          <ScalarProperty Name="StatusOcorrencia" ColumnName="StatusOcorrencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_statuspagamento">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_statuspagamento">
+        <MappingFragment StoreEntitySet="tb_statuspagamento">
+          <ScalarProperty Name="IdStatusPagamento" ColumnName="IdStatusPagamento" />
+          <ScalarProperty Name="StatusPagamento" ColumnName="StatusPagamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_tipoocorrencia">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_tipoocorrencia">
+        <MappingFragment StoreEntitySet="tb_tipoocorrencia">
+          <ScalarProperty Name="IdTipoOcorrencia" ColumnName="IdTipoOcorrencia" />
+          <ScalarProperty Name="TipoOcorrencia" ColumnName="TipoOcorrencia" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

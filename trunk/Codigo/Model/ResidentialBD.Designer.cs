@@ -22,6 +22,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Acesso_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_acessopredio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_acessopredio), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Administradora_TB_Condominio1", "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_condominio), "tb_administradora", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_administradora), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_MovimentacaoFinanceira_TB_Administradora1", "tb_administradora", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_administradora), "tb_movimentacaofinanceira", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_movimentacaofinanceira), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "TB_AreaPublica_TB_StatusAreaPublica1", "tb_statusareapublica", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_statusareapublica), "tb_areapublica", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_areapublica), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Espaco_TB_Condominio1", "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_condominio), "tb_areapublica", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_areapublica), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Reserva_TB_Espaco1", "tb_areapublica", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_areapublica), "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_reservaambiente), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Atendimento_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_atendimento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_atendimento), true)]
@@ -38,11 +39,14 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Pessoa1_TB_Moradia1", "tb_moradia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_moradia), "tb_pessoamoradia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoamoradia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_PlanoDeConta_TB_MovimentacaoFinanceira1", "tb_movimentacaofinanceira", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_movimentacaofinanceira), "tb_planodeconta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_planodeconta), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Ocorrencia_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_ocorrencia), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Ocorrencia_TB_StatusOcorrencia1", "tb_statusocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_statusocorrencia), "tb_ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_ocorrencia), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Ocorrencia_TB_TipoOcorrencia1", "tb_tipoocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_tipoocorrencia), "tb_ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_ocorrencia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_MuralEletronico_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_publicacaomural", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_publicacaomural), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Pessoa1_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_pessoamoradia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoamoradia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Postagem_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_postagem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_postagem), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_ReservaAmbiente_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_reservaambiente), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Veiculo_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_veiculo), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "TB_ReservaAmbiente_TB_StatusPagamento1", "tb_statuspagamento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_statuspagamento), "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_reservaambiente), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_votoenquete", "tb_opcoesenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_opcoesenquete), "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoa))]
 
 #endregion
@@ -418,6 +422,70 @@ namespace Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<tb_statusareapublica> tb_statusareapublica
+        {
+            get
+            {
+                if ((_tb_statusareapublica == null))
+                {
+                    _tb_statusareapublica = base.CreateObjectSet<tb_statusareapublica>("tb_statusareapublica");
+                }
+                return _tb_statusareapublica;
+            }
+        }
+        private ObjectSet<tb_statusareapublica> _tb_statusareapublica;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_statusocorrencia> tb_statusocorrencia
+        {
+            get
+            {
+                if ((_tb_statusocorrencia == null))
+                {
+                    _tb_statusocorrencia = base.CreateObjectSet<tb_statusocorrencia>("tb_statusocorrencia");
+                }
+                return _tb_statusocorrencia;
+            }
+        }
+        private ObjectSet<tb_statusocorrencia> _tb_statusocorrencia;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_statuspagamento> tb_statuspagamento
+        {
+            get
+            {
+                if ((_tb_statuspagamento == null))
+                {
+                    _tb_statuspagamento = base.CreateObjectSet<tb_statuspagamento>("tb_statuspagamento");
+                }
+                return _tb_statuspagamento;
+            }
+        }
+        private ObjectSet<tb_statuspagamento> _tb_statuspagamento;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_tipoocorrencia> tb_tipoocorrencia
+        {
+            get
+            {
+                if ((_tb_tipoocorrencia == null))
+                {
+                    _tb_tipoocorrencia = base.CreateObjectSet<tb_tipoocorrencia>("tb_tipoocorrencia");
+                }
+                return _tb_tipoocorrencia;
+            }
+        }
+        private ObjectSet<tb_tipoocorrencia> _tb_tipoocorrencia;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<tb_veiculo> tb_veiculo
         {
             get
@@ -593,6 +661,38 @@ namespace Models
         public void AddTotb_setor(tb_setor tb_setor)
         {
             base.AddObject("tb_setor", tb_setor);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_statusareapublica EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_statusareapublica(tb_statusareapublica tb_statusareapublica)
+        {
+            base.AddObject("tb_statusareapublica", tb_statusareapublica);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_statusocorrencia EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_statusocorrencia(tb_statusocorrencia tb_statusocorrencia)
+        {
+            base.AddObject("tb_statusocorrencia", tb_statusocorrencia);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_statuspagamento EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_statuspagamento(tb_statuspagamento tb_statuspagamento)
+        {
+            base.AddObject("tb_statuspagamento", tb_statuspagamento);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_tipoocorrencia EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_tipoocorrencia(tb_tipoocorrencia tb_tipoocorrencia)
+        {
+            base.AddObject("tb_tipoocorrencia", tb_tipoocorrencia);
         }
     
         /// <summary>
@@ -977,9 +1077,9 @@ namespace Models
         /// <param name="local">Initial value of the Local property.</param>
         /// <param name="tamanho">Initial value of the Tamanho property.</param>
         /// <param name="valor">Initial value of the Valor property.</param>
-        /// <param name="estado">Initial value of the Estado property.</param>
         /// <param name="idCon">Initial value of the IdCon property.</param>
-        public static tb_areapublica Createtb_areapublica(global::System.Int32 idArea, global::System.String nome, global::System.String local, global::System.String tamanho, global::System.Decimal valor, global::System.String estado, global::System.Int32 idCon)
+        /// <param name="idStatusAreaPublica">Initial value of the IdStatusAreaPublica property.</param>
+        public static tb_areapublica Createtb_areapublica(global::System.Int32 idArea, global::System.String nome, global::System.String local, global::System.String tamanho, global::System.Decimal valor, global::System.Int32 idCon, global::System.Int32 idStatusAreaPublica)
         {
             tb_areapublica tb_areapublica = new tb_areapublica();
             tb_areapublica.IdArea = idArea;
@@ -987,8 +1087,8 @@ namespace Models
             tb_areapublica.Local = local;
             tb_areapublica.Tamanho = tamanho;
             tb_areapublica.Valor = valor;
-            tb_areapublica.Estado = estado;
             tb_areapublica.IdCon = idCon;
+            tb_areapublica.IdStatusAreaPublica = idStatusAreaPublica;
             return tb_areapublica;
         }
 
@@ -1124,30 +1224,6 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Estado
-        {
-            get
-            {
-                return _Estado;
-            }
-            set
-            {
-                OnEstadoChanging(value);
-                ReportPropertyChanging("Estado");
-                _Estado = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Estado");
-                OnEstadoChanged();
-            }
-        }
-        private global::System.String _Estado;
-        partial void OnEstadoChanging(global::System.String value);
-        partial void OnEstadoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.Int32 IdCon
         {
             get
@@ -1166,11 +1242,73 @@ namespace Models
         private global::System.Int32 _IdCon;
         partial void OnIdConChanging(global::System.Int32 value);
         partial void OnIdConChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdStatusAreaPublica
+        {
+            get
+            {
+                return _IdStatusAreaPublica;
+            }
+            set
+            {
+                OnIdStatusAreaPublicaChanging(value);
+                ReportPropertyChanging("IdStatusAreaPublica");
+                _IdStatusAreaPublica = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdStatusAreaPublica");
+                OnIdStatusAreaPublicaChanged();
+            }
+        }
+        private global::System.Int32 _IdStatusAreaPublica;
+        partial void OnIdStatusAreaPublicaChanging(global::System.Int32 value);
+        partial void OnIdStatusAreaPublicaChanged();
 
         #endregion
 
     
         #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_AreaPublica_TB_StatusAreaPublica1", "tb_statusareapublica")]
+        public tb_statusareapublica tb_statusareapublica
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_statusareapublica>("residentialbdModel.TB_AreaPublica_TB_StatusAreaPublica1", "tb_statusareapublica").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_statusareapublica>("residentialbdModel.TB_AreaPublica_TB_StatusAreaPublica1", "tb_statusareapublica").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_statusareapublica> tb_statusareapublicaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_statusareapublica>("residentialbdModel.TB_AreaPublica_TB_StatusAreaPublica1", "tb_statusareapublica");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_statusareapublica>("residentialbdModel.TB_AreaPublica_TB_StatusAreaPublica1", "tb_statusareapublica", value);
+                }
+            }
+        }
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3532,9 +3670,9 @@ namespace Models
         /// <param name="titulo">Initial value of the Titulo property.</param>
         /// <param name="descricao">Initial value of the Descricao property.</param>
         /// <param name="dataCriacao">Initial value of the DataCriacao property.</param>
-        /// <param name="tipo">Initial value of the Tipo property.</param>
-        /// <param name="status">Initial value of the Status property.</param>
-        public static tb_ocorrencia Createtb_ocorrencia(global::System.Int32 idOco, global::System.Int32 idPes, global::System.String titulo, global::System.String descricao, global::System.DateTime dataCriacao, global::System.String tipo, global::System.String status)
+        /// <param name="idTipoOcorrencia">Initial value of the IdTipoOcorrencia property.</param>
+        /// <param name="idStatusOcorrencia">Initial value of the IdStatusOcorrencia property.</param>
+        public static tb_ocorrencia Createtb_ocorrencia(global::System.Int32 idOco, global::System.Int32 idPes, global::System.String titulo, global::System.String descricao, global::System.DateTime dataCriacao, global::System.Int32 idTipoOcorrencia, global::System.Int32 idStatusOcorrencia)
         {
             tb_ocorrencia tb_ocorrencia = new tb_ocorrencia();
             tb_ocorrencia.IdOco = idOco;
@@ -3542,8 +3680,8 @@ namespace Models
             tb_ocorrencia.Titulo = titulo;
             tb_ocorrencia.Descricao = descricao;
             tb_ocorrencia.DataCriacao = dataCriacao;
-            tb_ocorrencia.Tipo = tipo;
-            tb_ocorrencia.Status = status;
+            tb_ocorrencia.IdTipoOcorrencia = idTipoOcorrencia;
+            tb_ocorrencia.IdStatusOcorrencia = idStatusOcorrencia;
             return tb_ocorrencia;
         }
 
@@ -3679,48 +3817,48 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Tipo
+        public global::System.Int32 IdTipoOcorrencia
         {
             get
             {
-                return _Tipo;
+                return _IdTipoOcorrencia;
             }
             set
             {
-                OnTipoChanging(value);
-                ReportPropertyChanging("Tipo");
-                _Tipo = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Tipo");
-                OnTipoChanged();
+                OnIdTipoOcorrenciaChanging(value);
+                ReportPropertyChanging("IdTipoOcorrencia");
+                _IdTipoOcorrencia = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdTipoOcorrencia");
+                OnIdTipoOcorrenciaChanged();
             }
         }
-        private global::System.String _Tipo;
-        partial void OnTipoChanging(global::System.String value);
-        partial void OnTipoChanged();
+        private global::System.Int32 _IdTipoOcorrencia;
+        partial void OnIdTipoOcorrenciaChanging(global::System.Int32 value);
+        partial void OnIdTipoOcorrenciaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Status
+        public global::System.Int32 IdStatusOcorrencia
         {
             get
             {
-                return _Status;
+                return _IdStatusOcorrencia;
             }
             set
             {
-                OnStatusChanging(value);
-                ReportPropertyChanging("Status");
-                _Status = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Status");
-                OnStatusChanged();
+                OnIdStatusOcorrenciaChanging(value);
+                ReportPropertyChanging("IdStatusOcorrencia");
+                _IdStatusOcorrencia = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdStatusOcorrencia");
+                OnIdStatusOcorrenciaChanged();
             }
         }
-        private global::System.String _Status;
-        partial void OnStatusChanging(global::System.String value);
-        partial void OnStatusChanged();
+        private global::System.Int32 _IdStatusOcorrencia;
+        partial void OnIdStatusOcorrenciaChanging(global::System.Int32 value);
+        partial void OnIdStatusOcorrenciaChanged();
 
         #endregion
 
@@ -3761,6 +3899,82 @@ namespace Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pessoa>("residentialbdModel.TB_Ocorrencia_TB_Pessoa1", "tb_pessoa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Ocorrencia_TB_StatusOcorrencia1", "tb_statusocorrencia")]
+        public tb_statusocorrencia tb_statusocorrencia
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_statusocorrencia>("residentialbdModel.TB_Ocorrencia_TB_StatusOcorrencia1", "tb_statusocorrencia").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_statusocorrencia>("residentialbdModel.TB_Ocorrencia_TB_StatusOcorrencia1", "tb_statusocorrencia").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_statusocorrencia> tb_statusocorrenciaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_statusocorrencia>("residentialbdModel.TB_Ocorrencia_TB_StatusOcorrencia1", "tb_statusocorrencia");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_statusocorrencia>("residentialbdModel.TB_Ocorrencia_TB_StatusOcorrencia1", "tb_statusocorrencia", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Ocorrencia_TB_TipoOcorrencia1", "tb_tipoocorrencia")]
+        public tb_tipoocorrencia tb_tipoocorrencia
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_tipoocorrencia>("residentialbdModel.TB_Ocorrencia_TB_TipoOcorrencia1", "tb_tipoocorrencia").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_tipoocorrencia>("residentialbdModel.TB_Ocorrencia_TB_TipoOcorrencia1", "tb_tipoocorrencia").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_tipoocorrencia> tb_tipoocorrenciaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_tipoocorrencia>("residentialbdModel.TB_Ocorrencia_TB_TipoOcorrencia1", "tb_tipoocorrencia");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_tipoocorrencia>("residentialbdModel.TB_Ocorrencia_TB_TipoOcorrencia1", "tb_tipoocorrencia", value);
                 }
             }
         }
@@ -5566,8 +5780,8 @@ namespace Models
         /// <param name="idPes">Initial value of the IdPes property.</param>
         /// <param name="dataInicio">Initial value of the DataInicio property.</param>
         /// <param name="dataFim">Initial value of the DataFim property.</param>
-        /// <param name="statusPagamento">Initial value of the StatusPagamento property.</param>
-        public static tb_reservaambiente Createtb_reservaambiente(global::System.Int32 idRes, global::System.Int32 idArea, global::System.Int32 idPes, global::System.DateTime dataInicio, global::System.DateTime dataFim, global::System.String statusPagamento)
+        /// <param name="idStatusPagamento">Initial value of the IdStatusPagamento property.</param>
+        public static tb_reservaambiente Createtb_reservaambiente(global::System.Int32 idRes, global::System.Int32 idArea, global::System.Int32 idPes, global::System.DateTime dataInicio, global::System.DateTime dataFim, global::System.Int32 idStatusPagamento)
         {
             tb_reservaambiente tb_reservaambiente = new tb_reservaambiente();
             tb_reservaambiente.IdRes = idRes;
@@ -5575,7 +5789,7 @@ namespace Models
             tb_reservaambiente.IdPes = idPes;
             tb_reservaambiente.DataInicio = dataInicio;
             tb_reservaambiente.DataFim = dataFim;
-            tb_reservaambiente.StatusPagamento = statusPagamento;
+            tb_reservaambiente.IdStatusPagamento = idStatusPagamento;
             return tb_reservaambiente;
         }
 
@@ -5711,24 +5925,24 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String StatusPagamento
+        public global::System.Int32 IdStatusPagamento
         {
             get
             {
-                return _StatusPagamento;
+                return _IdStatusPagamento;
             }
             set
             {
-                OnStatusPagamentoChanging(value);
-                ReportPropertyChanging("StatusPagamento");
-                _StatusPagamento = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("StatusPagamento");
-                OnStatusPagamentoChanged();
+                OnIdStatusPagamentoChanging(value);
+                ReportPropertyChanging("IdStatusPagamento");
+                _IdStatusPagamento = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdStatusPagamento");
+                OnIdStatusPagamentoChanged();
             }
         }
-        private global::System.String _StatusPagamento;
-        partial void OnStatusPagamentoChanging(global::System.String value);
-        partial void OnStatusPagamentoChanged();
+        private global::System.Int32 _IdStatusPagamento;
+        partial void OnIdStatusPagamentoChanging(global::System.Int32 value);
+        partial void OnIdStatusPagamentoChanged();
 
         #endregion
 
@@ -5807,6 +6021,44 @@ namespace Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pessoa>("residentialbdModel.TB_ReservaAmbiente_TB_Pessoa1", "tb_pessoa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_ReservaAmbiente_TB_StatusPagamento1", "tb_statuspagamento")]
+        public tb_statuspagamento tb_statuspagamento
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_statuspagamento>("residentialbdModel.TB_ReservaAmbiente_TB_StatusPagamento1", "tb_statuspagamento").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_statuspagamento>("residentialbdModel.TB_ReservaAmbiente_TB_StatusPagamento1", "tb_statuspagamento").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_statuspagamento> tb_statuspagamentoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_statuspagamento>("residentialbdModel.TB_ReservaAmbiente_TB_StatusPagamento1", "tb_statuspagamento");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_statuspagamento>("residentialbdModel.TB_ReservaAmbiente_TB_StatusPagamento1", "tb_statuspagamento", value);
                 }
             }
         }
@@ -5942,6 +6194,442 @@ namespace Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_funcionario>("residentialbdModel.TB_Funcionario_TB_Setor1", "tb_funcionario", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="residentialbdModel", Name="tb_statusareapublica")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class tb_statusareapublica : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new tb_statusareapublica object.
+        /// </summary>
+        /// <param name="idStatusAreaPublica">Initial value of the IdStatusAreaPublica property.</param>
+        /// <param name="statusAreaPublica">Initial value of the StatusAreaPublica property.</param>
+        public static tb_statusareapublica Createtb_statusareapublica(global::System.Int32 idStatusAreaPublica, global::System.String statusAreaPublica)
+        {
+            tb_statusareapublica tb_statusareapublica = new tb_statusareapublica();
+            tb_statusareapublica.IdStatusAreaPublica = idStatusAreaPublica;
+            tb_statusareapublica.StatusAreaPublica = statusAreaPublica;
+            return tb_statusareapublica;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdStatusAreaPublica
+        {
+            get
+            {
+                return _IdStatusAreaPublica;
+            }
+            set
+            {
+                if (_IdStatusAreaPublica != value)
+                {
+                    OnIdStatusAreaPublicaChanging(value);
+                    ReportPropertyChanging("IdStatusAreaPublica");
+                    _IdStatusAreaPublica = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdStatusAreaPublica");
+                    OnIdStatusAreaPublicaChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdStatusAreaPublica;
+        partial void OnIdStatusAreaPublicaChanging(global::System.Int32 value);
+        partial void OnIdStatusAreaPublicaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String StatusAreaPublica
+        {
+            get
+            {
+                return _StatusAreaPublica;
+            }
+            set
+            {
+                OnStatusAreaPublicaChanging(value);
+                ReportPropertyChanging("StatusAreaPublica");
+                _StatusAreaPublica = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("StatusAreaPublica");
+                OnStatusAreaPublicaChanged();
+            }
+        }
+        private global::System.String _StatusAreaPublica;
+        partial void OnStatusAreaPublicaChanging(global::System.String value);
+        partial void OnStatusAreaPublicaChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_AreaPublica_TB_StatusAreaPublica1", "tb_areapublica")]
+        public EntityCollection<tb_areapublica> tb_areapublica
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_areapublica>("residentialbdModel.TB_AreaPublica_TB_StatusAreaPublica1", "tb_areapublica");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_areapublica>("residentialbdModel.TB_AreaPublica_TB_StatusAreaPublica1", "tb_areapublica", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="residentialbdModel", Name="tb_statusocorrencia")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class tb_statusocorrencia : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new tb_statusocorrencia object.
+        /// </summary>
+        /// <param name="idStatusOcorrencia">Initial value of the IdStatusOcorrencia property.</param>
+        /// <param name="statusOcorrencia">Initial value of the StatusOcorrencia property.</param>
+        public static tb_statusocorrencia Createtb_statusocorrencia(global::System.Int32 idStatusOcorrencia, global::System.String statusOcorrencia)
+        {
+            tb_statusocorrencia tb_statusocorrencia = new tb_statusocorrencia();
+            tb_statusocorrencia.IdStatusOcorrencia = idStatusOcorrencia;
+            tb_statusocorrencia.StatusOcorrencia = statusOcorrencia;
+            return tb_statusocorrencia;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdStatusOcorrencia
+        {
+            get
+            {
+                return _IdStatusOcorrencia;
+            }
+            set
+            {
+                if (_IdStatusOcorrencia != value)
+                {
+                    OnIdStatusOcorrenciaChanging(value);
+                    ReportPropertyChanging("IdStatusOcorrencia");
+                    _IdStatusOcorrencia = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdStatusOcorrencia");
+                    OnIdStatusOcorrenciaChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdStatusOcorrencia;
+        partial void OnIdStatusOcorrenciaChanging(global::System.Int32 value);
+        partial void OnIdStatusOcorrenciaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String StatusOcorrencia
+        {
+            get
+            {
+                return _StatusOcorrencia;
+            }
+            set
+            {
+                OnStatusOcorrenciaChanging(value);
+                ReportPropertyChanging("StatusOcorrencia");
+                _StatusOcorrencia = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("StatusOcorrencia");
+                OnStatusOcorrenciaChanged();
+            }
+        }
+        private global::System.String _StatusOcorrencia;
+        partial void OnStatusOcorrenciaChanging(global::System.String value);
+        partial void OnStatusOcorrenciaChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Ocorrencia_TB_StatusOcorrencia1", "tb_ocorrencia")]
+        public EntityCollection<tb_ocorrencia> tb_ocorrencia
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_ocorrencia>("residentialbdModel.TB_Ocorrencia_TB_StatusOcorrencia1", "tb_ocorrencia");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_ocorrencia>("residentialbdModel.TB_Ocorrencia_TB_StatusOcorrencia1", "tb_ocorrencia", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="residentialbdModel", Name="tb_statuspagamento")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class tb_statuspagamento : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new tb_statuspagamento object.
+        /// </summary>
+        /// <param name="idStatusPagamento">Initial value of the IdStatusPagamento property.</param>
+        /// <param name="statusPagamento">Initial value of the StatusPagamento property.</param>
+        public static tb_statuspagamento Createtb_statuspagamento(global::System.Int32 idStatusPagamento, global::System.String statusPagamento)
+        {
+            tb_statuspagamento tb_statuspagamento = new tb_statuspagamento();
+            tb_statuspagamento.IdStatusPagamento = idStatusPagamento;
+            tb_statuspagamento.StatusPagamento = statusPagamento;
+            return tb_statuspagamento;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdStatusPagamento
+        {
+            get
+            {
+                return _IdStatusPagamento;
+            }
+            set
+            {
+                if (_IdStatusPagamento != value)
+                {
+                    OnIdStatusPagamentoChanging(value);
+                    ReportPropertyChanging("IdStatusPagamento");
+                    _IdStatusPagamento = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdStatusPagamento");
+                    OnIdStatusPagamentoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdStatusPagamento;
+        partial void OnIdStatusPagamentoChanging(global::System.Int32 value);
+        partial void OnIdStatusPagamentoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String StatusPagamento
+        {
+            get
+            {
+                return _StatusPagamento;
+            }
+            set
+            {
+                OnStatusPagamentoChanging(value);
+                ReportPropertyChanging("StatusPagamento");
+                _StatusPagamento = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("StatusPagamento");
+                OnStatusPagamentoChanged();
+            }
+        }
+        private global::System.String _StatusPagamento;
+        partial void OnStatusPagamentoChanging(global::System.String value);
+        partial void OnStatusPagamentoChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_ReservaAmbiente_TB_StatusPagamento1", "tb_reservaambiente")]
+        public EntityCollection<tb_reservaambiente> tb_reservaambiente
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_reservaambiente>("residentialbdModel.TB_ReservaAmbiente_TB_StatusPagamento1", "tb_reservaambiente");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_reservaambiente>("residentialbdModel.TB_ReservaAmbiente_TB_StatusPagamento1", "tb_reservaambiente", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="residentialbdModel", Name="tb_tipoocorrencia")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class tb_tipoocorrencia : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new tb_tipoocorrencia object.
+        /// </summary>
+        /// <param name="idTipoOcorrencia">Initial value of the IdTipoOcorrencia property.</param>
+        /// <param name="tipoOcorrencia">Initial value of the TipoOcorrencia property.</param>
+        public static tb_tipoocorrencia Createtb_tipoocorrencia(global::System.Int32 idTipoOcorrencia, global::System.String tipoOcorrencia)
+        {
+            tb_tipoocorrencia tb_tipoocorrencia = new tb_tipoocorrencia();
+            tb_tipoocorrencia.IdTipoOcorrencia = idTipoOcorrencia;
+            tb_tipoocorrencia.TipoOcorrencia = tipoOcorrencia;
+            return tb_tipoocorrencia;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdTipoOcorrencia
+        {
+            get
+            {
+                return _IdTipoOcorrencia;
+            }
+            set
+            {
+                if (_IdTipoOcorrencia != value)
+                {
+                    OnIdTipoOcorrenciaChanging(value);
+                    ReportPropertyChanging("IdTipoOcorrencia");
+                    _IdTipoOcorrencia = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdTipoOcorrencia");
+                    OnIdTipoOcorrenciaChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdTipoOcorrencia;
+        partial void OnIdTipoOcorrenciaChanging(global::System.Int32 value);
+        partial void OnIdTipoOcorrenciaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String TipoOcorrencia
+        {
+            get
+            {
+                return _TipoOcorrencia;
+            }
+            set
+            {
+                OnTipoOcorrenciaChanging(value);
+                ReportPropertyChanging("TipoOcorrencia");
+                _TipoOcorrencia = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("TipoOcorrencia");
+                OnTipoOcorrenciaChanged();
+            }
+        }
+        private global::System.String _TipoOcorrencia;
+        partial void OnTipoOcorrenciaChanging(global::System.String value);
+        partial void OnTipoOcorrenciaChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Ocorrencia_TB_TipoOcorrencia1", "tb_ocorrencia")]
+        public EntityCollection<tb_ocorrencia> tb_ocorrencia
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_ocorrencia>("residentialbdModel.TB_Ocorrencia_TB_TipoOcorrencia1", "tb_ocorrencia");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_ocorrencia>("residentialbdModel.TB_Ocorrencia_TB_TipoOcorrencia1", "tb_ocorrencia", value);
                 }
             }
         }
