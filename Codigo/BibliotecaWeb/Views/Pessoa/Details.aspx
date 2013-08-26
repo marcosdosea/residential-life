@@ -98,7 +98,7 @@
 
 </fieldset>
 <p>
-    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id=Model.IdPes }) %> |
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id=Model.IdPessoa }) %> |
     <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index") %>
 </p>
 

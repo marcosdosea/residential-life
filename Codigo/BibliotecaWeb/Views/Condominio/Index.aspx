@@ -48,7 +48,7 @@
     <tr>
      
         <td>
-            <%: Html.DisplayFor(modelItem => item.IDSindico) %>
+            <%: Html.DisplayFor(modelItem => item.IdSindico) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Nome) %>
@@ -75,9 +75,9 @@
             <%: Html.DisplayFor(modelItem => item.Estado) %>
         </td>
         <td>
-            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editar , "Edit", new {  id=item.IDCondominio }) %> |
-            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.detalhes, "Details", new {  id=item.IDCondominio  }) %> |
-            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.apagar, "Delete", new {  id=item.IDCondominio }) %>
+            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editar , "Edit", new {  id=item.IdCondominio }) %> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdCondominio })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdCondominio })%>
         </td>
     </tr>
 <% } %>

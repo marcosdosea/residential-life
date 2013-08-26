@@ -17,11 +17,11 @@
         <legend><%: Models.App_GlobalResources.Mensagem.condominio %></legend>
 
            <div class="editor-label">
-            <%: Html.LabelFor(model => model.IDSindico) %>
+            <%: Html.LabelFor(model => model.IdSindico) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.IDSindico) %>
-            <%: Html.ValidationMessageFor(model => model.IDSindico) %>
+            <%: Html.EditorFor(model => model.IdSindico) %>
+            <%: Html.ValidationMessageFor(model => model.IdSindico) %>
         </div>
 
         <div class="editor-label">
