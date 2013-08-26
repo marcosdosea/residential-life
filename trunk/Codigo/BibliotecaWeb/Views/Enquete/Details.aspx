@@ -13,7 +13,7 @@
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.criador %></div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdPessoa) %>
+        <%: Html.DisplayFor(model => model.NomeCriador) %>
     </div>
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.titulo %></div>

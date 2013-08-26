@@ -381,4 +381,16 @@
   <data name="tipo" xml:space="preserve">
     <value>Tipo</value>
   </data>
+  <data name="enquetesFinalizadas" xml:space="preserve">
+    <value>Enquetes Finalizadas</value>
+  </data>
+  <data name="enquetesAtivas" xml:space="preserve">
+    <value>Enquetes Ativas</value>
+  </data>
+  <data name="enquetesEmAndamento" xml:space="preserve">
+    <value>Enquetes em Andamento</value>
+  </data>
+  <data name="todasEnquetes" xml:space="preserve">
+    <value>Todas Enquetes</value>
+  </data>
 </root>

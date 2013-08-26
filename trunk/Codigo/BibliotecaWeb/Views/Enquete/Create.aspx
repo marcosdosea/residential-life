@@ -17,7 +17,7 @@
         <legend><%: Models.App_GlobalResources.Mensagem.enquete %></legend>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdPessoa) %>
+            <%: Models.App_GlobalResources.Mensagem.criador %>
         </div>
          <div class="editor-field">
             <%: Html.DropDownList("IdPessoa")%>
