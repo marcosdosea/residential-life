@@ -22,8 +22,11 @@
             <%: Html.ValidationMessageFor(model => model.IdCondominio)%>
         </div>
 
+          <div class="editor-label">
+            <%: Html.LabelFor(model => model.IdSindico) %>
+        </div>
         <div class="editor-field">
-            <%: Html.HiddenFor(model => model.IdSindico) %>
+            <%: Html.DropDownList("IdSindico") %>
             <%: Html.ValidationMessageFor(model => model.IdSindico) %>
         </div>
 

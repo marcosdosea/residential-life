@@ -48,6 +48,7 @@
     <Compile Include="GerenciadorBloco.cs" />
     <Compile Include="GerenciadorCondominio.cs" />
     <Compile Include="GerenciadorPessoa.cs" />
+    <Compile Include="GerenciadorStatusEnquete.cs" />
     <Compile Include="ServiceException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

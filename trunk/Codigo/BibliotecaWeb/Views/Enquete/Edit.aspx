@@ -16,11 +16,8 @@
     <fieldset>
         <legend><%: Models.App_GlobalResources.Mensagem.enquete %></legend>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdEnquete) %>
-        </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdEnquete) %>
+            <%: Html.HiddenFor(model => model.IdEnquete) %>
             <%: Html.ValidationMessageFor(model => model.IdEnquete) %>
         </div>
 
@@ -64,16 +61,13 @@
             <%: Html.ValidationMessageFor(model => model.DataFim) %>
         </div>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Status) %>
+         <div class="editor-label">
+            <%: Html.LabelFor(model => model.IdStatusEnquete) %>
         </div>
-        <p>
-            <%: @Html.DropDownListFor(model => model.Status, new[]
-            {
-                new SelectListItem {Text = "Ativada", Value = "Ativada"},
-                new SelectListItem {Text = "Desativada", Value = "Desativada"},
-            }, "Selecione")%> 
-        </p> 
+        <div class="editor-field">
+            <%: Html.DropDownList("IdStatusEnquete") %>
+            <%: Html.ValidationMessageFor(model => model.IdStatusEnquete) %>
+        </div>  
 
         <p>
             <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
