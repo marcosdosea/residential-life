@@ -2913,17 +2913,17 @@ namespace Models
         /// </summary>
         /// <param name="idMor">Initial value of the IdMor property.</param>
         /// <param name="idBlo">Initial value of the IdBlo property.</param>
-        /// <param name="idRes">Initial value of the IdRes property.</param>
+        /// <param name="idProp">Initial value of the IdProp property.</param>
         /// <param name="predio">Initial value of the Predio property.</param>
         /// <param name="andar">Initial value of the Andar property.</param>
         /// <param name="numero">Initial value of the Numero property.</param>
         /// <param name="tipo">Initial value of the Tipo property.</param>
-        public static tb_moradia Createtb_moradia(global::System.Int32 idMor, global::System.Int32 idBlo, global::System.Int32 idRes, global::System.String predio, global::System.String andar, global::System.String numero, global::System.String tipo)
+        public static tb_moradia Createtb_moradia(global::System.Int32 idMor, global::System.Int32 idBlo, global::System.Int32 idProp, global::System.String predio, global::System.String andar, global::System.String numero, global::System.String tipo)
         {
             tb_moradia tb_moradia = new tb_moradia();
             tb_moradia.IdMor = idMor;
             tb_moradia.IdBlo = idBlo;
-            tb_moradia.IdRes = idRes;
+            tb_moradia.IdProp = idProp;
             tb_moradia.Predio = predio;
             tb_moradia.Andar = andar;
             tb_moradia.Numero = numero;
@@ -2991,24 +2991,24 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 IdRes
+        public global::System.Int32 IdProp
         {
             get
             {
-                return _IdRes;
+                return _IdProp;
             }
             set
             {
-                OnIdResChanging(value);
-                ReportPropertyChanging("IdRes");
-                _IdRes = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdRes");
-                OnIdResChanged();
+                OnIdPropChanging(value);
+                ReportPropertyChanging("IdProp");
+                _IdProp = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdProp");
+                OnIdPropChanged();
             }
         }
-        private global::System.Int32 _IdRes;
-        partial void OnIdResChanging(global::System.Int32 value);
-        partial void OnIdResChanged();
+        private global::System.Int32 _IdProp;
+        partial void OnIdPropChanging(global::System.Int32 value);
+        partial void OnIdPropChanged();
     
         /// <summary>
         /// No Metadata Documentation available.

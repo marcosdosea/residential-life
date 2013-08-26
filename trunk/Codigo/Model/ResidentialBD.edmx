@@ -249,7 +249,7 @@
           </Key>
           <Property Name="IdMor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="IdBlo" Type="int" Nullable="false" />
-          <Property Name="IdRes" Type="int" Nullable="false" />
+          <Property Name="IdProp" Type="int" Nullable="false" />
           <Property Name="Predio" Type="varchar" Nullable="false" MaxLength="45" />
           <Property Name="Andar" Type="varchar" Nullable="false" MaxLength="15" />
           <Property Name="Numero" Type="varchar" Nullable="false" MaxLength="10" />
@@ -547,7 +547,7 @@
               <PropertyRef Name="IdPes" />
             </Principal>
             <Dependent Role="tb_moradia">
-              <PropertyRef Name="IdRes" />
+              <PropertyRef Name="IdProp" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -958,7 +958,7 @@
           </Key>
           <Property Name="IdMor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdBlo" Type="Int32" Nullable="false" />
-          <Property Name="IdRes" Type="Int32" Nullable="false" />
+          <Property Name="IdProp" Type="Int32" Nullable="false" />
           <Property Name="Predio" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
           <Property Name="Andar" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
           <Property Name="Numero" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
@@ -1310,7 +1310,7 @@
               <PropertyRef Name="IdPes" />
             </Principal>
             <Dependent Role="tb_moradia">
-              <PropertyRef Name="IdRes" />
+              <PropertyRef Name="IdProp" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1533,7 +1533,7 @@
               <MappingFragment StoreEntitySet="tb_moradia">
                 <ScalarProperty Name="IdMor" ColumnName="IdMor" />
                 <ScalarProperty Name="IdBlo" ColumnName="IdBlo" />
-                <ScalarProperty Name="IdRes" ColumnName="IdRes" />
+                <ScalarProperty Name="IdProp" ColumnName="IdProp" />
                 <ScalarProperty Name="Predio" ColumnName="Predio" />
                 <ScalarProperty Name="Andar" ColumnName="Andar" />
                 <ScalarProperty Name="Numero" ColumnName="Numero" />

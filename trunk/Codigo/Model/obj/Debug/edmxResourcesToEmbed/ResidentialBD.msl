@@ -114,7 +114,7 @@
         <MappingFragment StoreEntitySet="tb_moradia">
           <ScalarProperty Name="IdMor" ColumnName="IdMor" />
           <ScalarProperty Name="IdBlo" ColumnName="IdBlo" />
-          <ScalarProperty Name="IdRes" ColumnName="IdRes" />
+          <ScalarProperty Name="IdProp" ColumnName="IdProp" />
           <ScalarProperty Name="Predio" ColumnName="Predio" />
           <ScalarProperty Name="Andar" ColumnName="Andar" />
           <ScalarProperty Name="Numero" ColumnName="Numero" />
