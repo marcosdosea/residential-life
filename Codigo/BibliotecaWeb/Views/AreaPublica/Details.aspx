@@ -30,7 +30,7 @@
 
     <div class="display-label">estado</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdStatus) %>
+        <%: Html.DisplayFor(model => model.StatusAreaPublica) %>
     </div>
 
     <div class="display-label">tamanho</div>
