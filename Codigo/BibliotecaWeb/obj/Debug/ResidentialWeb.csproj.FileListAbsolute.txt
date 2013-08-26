@@ -154,3 +154,5 @@ C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\bin\EntityFramework.xml
 C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\bin\Persistence.pdb
 C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
 C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\BibliotecaWeb\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb

@@ -23,8 +23,8 @@ namespace Persistence
         private IRepositorioGenerico<tb_reservaambiente> _repReservaAmbiente;
         private IRepositorioGenerico<tb_moradia> _repMoradia;
         private IRepositorioGenerico<tb_enquete> _repEnquete;
-        private IRepositorioGenerico<tb_ocorrencia> _repRegistrarOcorrencia;
         private IRepositorioGenerico<tb_statusenquete> _repStatusEnquete; 
+        private IRepositorioGenerico<tb_statusareapublica> _repStatusAreaPublica;
 
         /// <summary>
         /// Construtor cria contexto transacional
@@ -178,6 +178,22 @@ namespace Persistence
                 return _repRegistrarOcorrencia;
             }
         }
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de status áreas públicas
+        /// </summary>
+        public IRepositorioGenerico<tb_statusareapublica> RepositorioStatusAreaPublica
+        {
+            get
+            {
+                if (_repStatusAreaPublica == null)
+                {
+                    _repStatusAreaPublica = new RepositorioGenerico<tb_statusareapublica>(_context);
+                }
+                return _repStatusAreaPublica;
+            }
+        }
+
 
         /// <summary>
         /// Salva todas as mudanças realizadas no contexto

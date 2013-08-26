@@ -26,7 +26,7 @@
 
     <div class="display-label">estado</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.Estado) %>
+        <%: Html.DisplayFor(model => model.IdStatus) %>
     </div>
 
     <div class="display-label">nome</div>
@@ -46,7 +46,7 @@
 
     <div class="display-label">valorPagamento</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.ValorPagamento) %>
+        <%: Html.DisplayFor(model => model.ValorReserva) %>
     </div>
 </fieldset>
 <% using (Html.BeginForm()) { %>

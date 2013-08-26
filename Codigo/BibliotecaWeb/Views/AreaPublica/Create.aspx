@@ -42,12 +42,11 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Estado) %>
+            <%: Html.LabelFor(model => model.IdStatus)%>
         </div>
         <div class="editor-field">
-            Disponivel <%: Html.RadioButtonFor(model => model.Estado, "Disponivel", true)%>
-            Indisponivel <%: Html.RadioButtonFor(model => model.Estado, "Indisponivel", false)%>
-            <%: Html.ValidationMessageFor(model => model.Estado)%>
+             <%: Html.DropDownList("IdStatusAreaPublica")%>
+            <%: Html.ValidationMessageFor(model => model.IdStatus)%>
         </div>
 
 
@@ -60,11 +59,11 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.ValorPagamento) %>
+            <%: Html.LabelFor(model => model.ValorReserva)%>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.ValorPagamento) %>
-            <%: Html.ValidationMessageFor(model => model.ValorPagamento) %>
+            <%: Html.EditorFor(model => model.ValorReserva)%>
+            <%: Html.ValidationMessageFor(model => model.ValorReserva)%>
         </div>
 
         <p>

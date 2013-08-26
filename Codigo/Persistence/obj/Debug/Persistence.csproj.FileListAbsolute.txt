@@ -102,3 +102,11 @@ C:\Users\Thiago\Desktop\Nova pasta\Persistence\bin\Debug\Model.dll
 C:\Users\Thiago\Desktop\Nova pasta\Persistence\bin\Debug\Model.pdb
 C:\Users\Thiago\Desktop\Nova pasta\Persistence\obj\Debug\Persistence.dll
 C:\Users\Thiago\Desktop\Nova pasta\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\obj\Debug\Persistence.pdb
