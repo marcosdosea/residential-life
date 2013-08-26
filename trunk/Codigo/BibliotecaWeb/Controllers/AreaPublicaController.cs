@@ -72,7 +72,7 @@ namespace BibliotecaWeb.Controllers
 
 
             ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IDCondominio", "Nome", AreaPublica.IdCondominio);
-            ViewBag.IdStatusAreaPublica = new SelectList(gStatusAreaPublica.ObterTodos(), "IdStatusAreaPublica", "Status", AreaPublica.IdStatus);
+            ViewBag.IdStatusAreaPublica = new SelectList(gStatusAreaPublica.ObterTodos(), "IdStatusAreaPublica", "Status", AreaPublica.IdStatusAreaPublica);
             return View(AreaPublica);
         }
 

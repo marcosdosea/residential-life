@@ -87,7 +87,7 @@ namespace Services
                         {
                             IdAreaPublica = AreaPublica.IdAreaPublica,
                             IdCondominio = AreaPublica.IdCondominio,
-                            IdStatus = AreaPublica.IdStatusAreaPublica,
+                            IdStatusAreaPublica = AreaPublica.IdStatusAreaPublica,
                             Nome = AreaPublica.Nome,
                             Local = AreaPublica.Local,
                             Tamanho = AreaPublica.Tamanho,
@@ -130,7 +130,7 @@ namespace Services
             AreaPublicaE.Local = AreaPublicaModel.Local;
             AreaPublicaE.Tamanho = AreaPublicaModel.Tamanho;
             AreaPublicaE.ValorReserva = AreaPublicaModel.ValorReserva;
-            AreaPublicaE.IdStatusAreaPublica = AreaPublicaModel.IdStatus;
+            AreaPublicaE.IdStatusAreaPublica = AreaPublicaModel.IdStatusAreaPublica;
         }
     }
 }
