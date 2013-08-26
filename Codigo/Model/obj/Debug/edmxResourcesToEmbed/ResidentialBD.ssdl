@@ -244,7 +244,7 @@
     </Key>
     <Property Name="IdMor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="IdBlo" Type="int" Nullable="false" />
-    <Property Name="IdRes" Type="int" Nullable="false" />
+    <Property Name="IdProp" Type="int" Nullable="false" />
     <Property Name="Predio" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="Andar" Type="varchar" Nullable="false" MaxLength="15" />
     <Property Name="Numero" Type="varchar" Nullable="false" MaxLength="10" />
@@ -542,7 +542,7 @@
         <PropertyRef Name="IdPes" />
       </Principal>
       <Dependent Role="tb_moradia">
-        <PropertyRef Name="IdRes" />
+        <PropertyRef Name="IdProp" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

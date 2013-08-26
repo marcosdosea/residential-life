@@ -246,7 +246,7 @@
     </Key>
     <Property Name="IdMor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IdBlo" Type="Int32" Nullable="false" />
-    <Property Name="IdRes" Type="Int32" Nullable="false" />
+    <Property Name="IdProp" Type="Int32" Nullable="false" />
     <Property Name="Predio" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
     <Property Name="Andar" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
     <Property Name="Numero" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
@@ -598,7 +598,7 @@
         <PropertyRef Name="IdPes" />
       </Principal>
       <Dependent Role="tb_moradia">
-        <PropertyRef Name="IdRes" />
+        <PropertyRef Name="IdProp" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
