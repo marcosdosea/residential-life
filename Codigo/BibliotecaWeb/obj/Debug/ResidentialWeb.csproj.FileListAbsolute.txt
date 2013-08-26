@@ -141,6 +141,7 @@ C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codi
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\BibliotecaWeb\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
+C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\obj\Debug\ResidentialWeb.csprojResolveAssemblyReference.cache
 C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\bin\BibliotecaWeb.dll
 C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\bin\BibliotecaWeb.pdb
 C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\bin\EntityFramework.dll
@@ -151,6 +152,5 @@ C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\bin\Model.pdb
 C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\bin\Services.pdb
 C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\bin\EntityFramework.xml
 C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\bin\Persistence.pdb
-C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\obj\Debug\ResidentialWeb.csprojResolveAssemblyReference.cache
 C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
 C:\Users\Thiago\Desktop\Nova pasta\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
