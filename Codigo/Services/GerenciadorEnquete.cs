@@ -44,7 +44,7 @@ namespace Services
             Atribuir(enqueteModel, enqueteE);
             unitOfWork.RepositorioEnquete.Inserir(enqueteE);
             unitOfWork.Commit(shared);
-            return enqueteE.IdEnq;
+            return enqueteE.IdEnquete;
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace Services
         /// <param name="enqueteModel">Identificador do enquete na base de dados</param>
         public void Remover(int idEnquete)
         {
-            unitOfWork.RepositorioEnquete.Remover(enquete => enquete.IdEnq.Equals(idEnquete));
+            unitOfWork.RepositorioEnquete.Remover(enquete => enquete.IdEnquete.Equals(idEnquete));
             unitOfWork.Commit(shared);
         }
 
@@ -81,13 +81,13 @@ namespace Services
             var query = from enquete in tb_enquete
                         select new EnqueteModel
                         {
-                            IdEnquete = enquete.IdEnq,
-                            IdPessoa = enquete.IdPes,
+                            IdEnquete = enquete.IdEnquete,
+                            IdPessoa = enquete.IdPesssoa,
                             Titulo = enquete.Titulo,
                             Descricao = enquete.Descricao,
                             DataInicio = enquete.DataInicio,
                             DataFim = enquete.DataFim,
-                            Status = enquete.Status
+                            IdStatusEnquete = enquete.IdStatusEnquete
                         };
             return query;
         }
@@ -119,13 +119,13 @@ namespace Services
         /// <param name="enqueteE">Entity mapeada da base de dados</param>
         private void Atribuir(EnqueteModel enqueteModel, tb_enquete enqueteE)
         {
-            enqueteE.IdEnq = enqueteModel.IdEnquete;
-            enqueteE.IdPes = enqueteModel.IdPessoa;
+            enqueteE.IdEnquete = enqueteModel.IdEnquete;
+            enqueteE.IdPesssoa = enqueteModel.IdPessoa;
             enqueteE.Titulo = enqueteModel.Titulo;
             enqueteE.Descricao = enqueteModel.Descricao;
             enqueteE.DataInicio = enqueteModel.DataInicio;
             enqueteE.DataFim = enqueteModel.DataFim;
-            enqueteE.Status = enqueteModel.Status;
+            enqueteE.IdStatusEnquete = enqueteModel.IdStatusEnquete;
            
         }
     }

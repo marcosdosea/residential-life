@@ -39,7 +39,7 @@ namespace Models.Models
 
         [Required]
         [Display(Name = "status", ResourceType = typeof(Mensagem))]
-        public String Status { get; set; }
+        public int IdStatusEnquete { get; set; }
 
     }
 }

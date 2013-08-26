@@ -49,7 +49,7 @@ namespace Services
             Atribuir(pessoaModel, pessoaE);
             unitOfWork.RepositorioPessoa.Inserir(pessoaE);
             unitOfWork.Commit(shared);
-            return pessoaE.IdPes;
+            return pessoaE.IdPessoa;
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Services
         /// <param name="pessoaModel"> </param>
         public void Remover(int idPes)
         {
-            unitOfWork.RepositorioPessoa.Remover(pessoa => pessoa.IdPes.Equals(idPes));
+            unitOfWork.RepositorioPessoa.Remover(pessoa => pessoa.IdPessoa.Equals(idPes));
             unitOfWork.Commit(shared);
         }
 
@@ -85,7 +85,7 @@ namespace Services
             var query = from pessoa in tb_pessoa 
                         select new PessoaModel
                         {
-                            IdPes = pessoa.IdPes,
+                            IdPessoa = pessoa.IdPessoa,
                             Bairro = pessoa.Bairro,
                             CEP = pessoa.CEP,
                             Cidade = pessoa.Cidade,
@@ -122,7 +122,7 @@ namespace Services
         /// <returns>Autor model</returns>
         public PessoaModel Obter(int idPessoa)
         {
-            IEnumerable<PessoaModel> pessoaE = GetQuery().Where(pessoaModel => pessoaModel.IdPes.Equals(idPessoa));
+            IEnumerable<PessoaModel> pessoaE = GetQuery().Where(pessoaModel => pessoaModel.IdPessoa.Equals(idPessoa));
             return pessoaE.ElementAtOrDefault(0);
         }
 
@@ -133,7 +133,7 @@ namespace Services
         /// <param name="pessoaE">Entity mapeada da base de dados</param>
         private void Atribuir(PessoaModel pessoaModel, tb_pessoa pessoaE)
         {
-            pessoaE.IdPes = pessoaModel.IdPes;
+            pessoaE.IdPessoa = pessoaModel.IdPessoa;
             pessoaE.Bairro = pessoaModel.Bairro;
             pessoaE.CEP = pessoaModel.CEP;
             pessoaE.Cidade = pessoaModel.Cidade;

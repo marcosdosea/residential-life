@@ -48,7 +48,7 @@ namespace Services
             Atribuir(blocoModel, blocoE);
             unitOfWork.RepositorioBloco.Inserir(blocoE);
             unitOfWork.Commit(shared);
-            return blocoE.IdBlo;
+            return blocoE.IdBloco;
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Services
         /// <param name="blocoModel">Identificador do bloco na base de dados</param>
         public void Remover(int idBloco)
         {
-            unitOfWork.RepositorioBloco.Remover(bloco => bloco.IdBlo.Equals(idBloco));
+            unitOfWork.RepositorioBloco.Remover(bloco => bloco.IdBloco.Equals(idBloco));
             unitOfWork.Commit(shared);
         }
 
@@ -84,8 +84,8 @@ namespace Services
             var query = from bloco in tb_bloco
                         select new BlocoModel
                         {
-                            IdBloco = bloco.IdBlo,
-                            IdCondominio = bloco.IdCon,
+                            IdBloco = bloco.IdBloco,
+                            IdCondominio = bloco.IdCondominio,
                             Nome = bloco.Nome,
                             QuantidadeAndares = bloco.QuantidadeAndares,
                             QuantidadeMoradias = bloco.QuantidadeMoradias
@@ -122,8 +122,8 @@ namespace Services
         /// <param name="blocoE">Entity mapeada da base de dados</param>
         private void Atribuir(BlocoModel blocoModel, tb_bloco blocoE)
         {
-            blocoE.IdBlo = blocoModel.IdBloco;
-            blocoE.IdCon = blocoModel.IdCondominio;
+            blocoE.IdBloco = blocoModel.IdBloco;
+            blocoE.IdCondominio = blocoModel.IdCondominio;
             blocoE.Nome = blocoModel.Nome;
             blocoE.QuantidadeAndares = blocoModel.QuantidadeAndares;
             blocoE.QuantidadeMoradias = blocoModel.QuantidadeMoradias;

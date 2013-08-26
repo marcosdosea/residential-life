@@ -11,6 +11,7 @@ namespace Models.Models
     {
         public int IdAreaPublica { get; set; }
 
+
         [Display(Name = "condominio", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
@@ -20,7 +21,7 @@ namespace Models.Models
          [Display(Name = "estado", ResourceType = typeof(Mensagem))]
          [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
-        public string Estado { get; set; }
+        public int Estado { get; set; }
        
 
         [Display(Name = "nome", ResourceType= typeof(Mensagem))]
