@@ -43,7 +43,7 @@ namespace BibliotecaWeb.Controllers
         public ActionResult Create()
         {
             ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome");
-            ViewBag.IdStatusAreaPublica = new SelectList(gStatusAreaPublica.ObterTodos(), "IdStatusAreaPublica", "Nome");
+            ViewBag.IdStatusAreaPublica = new SelectList(gStatusAreaPublica.ObterTodos(), "IdStatusAreaPublica", "Status");
             return View();
         }
 
@@ -72,7 +72,7 @@ namespace BibliotecaWeb.Controllers
 
 
             ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IDCondominio", "Nome", AreaPublica.IdCondominio);
-            ViewBag.IdStatusAreaPublica = new SelectList(gStatusAreaPublica.ObterTodos(), "IdStatusAreaPublica", "Nome", AreaPublica.IdStatus);
+            ViewBag.IdStatusAreaPublica = new SelectList(gStatusAreaPublica.ObterTodos(), "IdStatusAreaPublica", "Status", AreaPublica.IdStatus);
             return View(AreaPublica);
         }
 

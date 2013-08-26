@@ -23,6 +23,8 @@ namespace Persistence
         private IRepositorioGenerico<tb_reservaambiente> _repReservaAmbiente;
         private IRepositorioGenerico<tb_moradia> _repMoradia;
         private IRepositorioGenerico<tb_enquete> _repEnquete;
+        private IRepositorioGenerico<tb_ocorrencia> _repRegistrarOcorrencia;
+
         private IRepositorioGenerico<tb_statusenquete> _repStatusEnquete; 
         private IRepositorioGenerico<tb_statusareapublica> _repStatusAreaPublica;
 
