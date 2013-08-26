@@ -61,7 +61,7 @@
         </div>
         <div class="editor-field">
             <%: Html.DropDownList("IdStatusEnquete")%>
-            <%: Html.ValidationMessageFor(model => model.IdPessoa) %>
+            <%: Html.ValidationMessageFor(model => model.IdStatusEnquete) %>
         </div>
         <p>
             <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />

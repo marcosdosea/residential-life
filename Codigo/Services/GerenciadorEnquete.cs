@@ -87,7 +87,9 @@ namespace Services
                             Descricao = enquete.Descricao,
                             DataInicio = enquete.DataInicio,
                             DataFim = enquete.DataFim,
-                            IdStatusEnquete = enquete.IdStatusEnquete
+                            IdStatusEnquete = enquete.IdStatusEnquete,
+                            StatusEnquete  = enquete.tb_statusenquete.StatusEnquete
+                            
                         };
             return query;
         }

@@ -11,6 +11,7 @@ namespace Models.Models
     {
         public int IdEnquete { get; set; }
 
+        [Required]
         [Display(Name = "pessoa", ResourceType = typeof(Mensagem))]
         public int IdPessoa { get; set; }
 
@@ -35,11 +36,12 @@ namespace Models.Models
         public DateTime DataFim { get; set; }
 
         [Required]
-        public int IdStatus { get; set; }
-
-        [Required]
         [Display(Name = "status", ResourceType = typeof(Mensagem))]
         public int IdStatusEnquete { get; set; }
+
+
+        public string StatusEnquete { get; set; }
+
 
     }
 }

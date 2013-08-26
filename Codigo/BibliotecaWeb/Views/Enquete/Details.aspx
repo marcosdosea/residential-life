@@ -38,7 +38,7 @@
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.status %></div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.Status) %>
+        <%: Html.DisplayFor(model => model.StatusEnquete) %>
     </div>
 </fieldset>
 <p>

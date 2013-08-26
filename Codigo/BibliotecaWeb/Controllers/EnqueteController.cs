@@ -15,12 +15,12 @@ namespace BibliotecaWeb.Controllers
 
         private GerenciadorEnquete gEnquete;
         private GerenciadorPessoa gPessoa;
-        //private GerenciadorStatusEnquete gStatusEnquete;
+        private GerenciadorStatusEnquete gStatusEnquete;
 
         public EnqueteController()
         {
             gEnquete = new GerenciadorEnquete();
-           // gStatusEnquete = new GerenciadorStatusEnquete();
+            gStatusEnquete = new GerenciadorStatusEnquete();
             gPessoa = new GerenciadorPessoa();
         }
 
@@ -44,7 +44,7 @@ namespace BibliotecaWeb.Controllers
         public ActionResult Create()
         {
             ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
-            ViewBag.IdStatusEnquete = new SelectList(gPessoa.ObterTodos(), "IdStatusEnquete", "StatusEnquete");
+            ViewBag.IdStatusEnquete = new SelectList(gStatusEnquete.ObterTodos(), "IdStatusEnquete", "StatusEnquete");
             return View();
         }
 
@@ -69,8 +69,8 @@ namespace BibliotecaWeb.Controllers
         public ActionResult Edit(int id)
         {
             EnqueteModel enqueteModel = gEnquete.Obter(id);
-            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPes", "Nome", enqueteModel.IdPessoa);
-
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", enqueteModel.IdPessoa);
+            ViewBag.IdStatusEnquete = new SelectList(gStatusEnquete.ObterTodos(), "IdStatusEnquete", "StatusEnquete");
             return View(enqueteModel);
         }
 
