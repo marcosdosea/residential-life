@@ -28,7 +28,15 @@ namespace BibliotecaWeb.Controllers
         {
             return View(gEnquete.ObterTodos());
         }
+        public ViewResult EmAndamento()
+        {
+            return View(gEnquete.ObterEnquetesAtivas());
+        }
 
+        public ViewResult Finalizadas()
+        {
+            return View(gEnquete.ObterEnquetesFinalizadas());
+        }
         //
         // GET: /enquete/Details/5
 

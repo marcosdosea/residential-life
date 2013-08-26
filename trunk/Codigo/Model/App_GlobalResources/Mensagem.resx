@@ -393,4 +393,7 @@
   <data name="todasEnquetes" xml:space="preserve">
     <value>Todas Enquetes</value>
   </data>
+  <data name="sindico" xml:space="preserve">
+    <value>Síndico</value>
+  </data>
 </root>

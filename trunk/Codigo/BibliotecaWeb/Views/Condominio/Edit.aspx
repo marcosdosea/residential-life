@@ -23,7 +23,7 @@
         </div>
 
           <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdSindico) %>
+          <%: Models.App_GlobalResources.Mensagem.sindico %>
         </div>
         <div class="editor-field">
             <%: Html.DropDownList("IdSindico") %>
