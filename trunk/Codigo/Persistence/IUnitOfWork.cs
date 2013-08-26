@@ -1,7 +1,8 @@
 ﻿using System;
 using Persistence;
 using Models;
-using Models.Models;
+
+
 namespace Persistence
 {
     public interface IUnitOfWork
