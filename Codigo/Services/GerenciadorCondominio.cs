@@ -95,7 +95,8 @@ namespace Services
                             Complemento = condominio.Complemento,
                             Cep = condominio.CEP,
                             Cidade = condominio.Cidade,
-                            Estado = condominio.Estado
+                            Estado = condominio.Estado,
+                            NomeSindico = condominio.tb_pessoa.Nome
                         };
             return query;
         }

@@ -13,9 +13,9 @@
 
   
 
-    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.idSindico %></div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.sindico %></div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdSindico) %>
+        <%: Html.DisplayFor(model => model.NomeSindico) %>
     </div>
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.nome %></div>

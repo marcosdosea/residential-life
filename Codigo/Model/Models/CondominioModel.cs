@@ -11,6 +11,7 @@ namespace Models.Models
     {
         public int IdCondominio { get; set;}
         public int IdSindico { get; set; } 
+        public string NomeSindico {get; set;}
 
         [Required]
         [Display(Name = "nome", ResourceType=typeof(Mensagem))]

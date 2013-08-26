@@ -799,6 +799,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Síndico.
+        /// </summary>
+        public static string sindico {
+            get {
+                return ResourceManager.GetString("sindico", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Status.
         /// </summary>
         public static string status {

@@ -15,7 +15,7 @@
     <tr>
      
         <th>
-            <%: Models.App_GlobalResources.Mensagem.idSindico %>
+            <%: Models.App_GlobalResources.Mensagem.sindico %>
         </th>
         <th>
             <%: Models.App_GlobalResources.Mensagem.nome %>
@@ -48,7 +48,7 @@
     <tr>
      
         <td>
-            <%: Html.DisplayFor(modelItem => item.IdSindico) %>
+            <%: Html.DisplayFor(modelItem => item.NomeSindico) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Nome) %>
