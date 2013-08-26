@@ -47,7 +47,7 @@
             <%: Html.DisplayFor(modelItem => item.DataFim) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.Status) %>
+            <%: Html.DisplayFor(modelItem => item.IdStatusEnquete) %>
         </td>
         <td>
             <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editar , "Edit", new {  id=item.IdEnquete }) %> |

@@ -48,7 +48,7 @@ namespace Services
             Atribuir(AreaPublicaModel, AreaPublicaE);
             unitOfWork.RepositorioAreaPublica.Inserir(AreaPublicaE);
             unitOfWork.Commit(shared);
-            return AreaPublicaE.IdArea;
+            return AreaPublicaE.IdAreaPublica;
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Services
         /// <param name="AreaPublicaModel"> Dados do modelo</param>
         public void Remover(int idAreaPublica)
         {
-            unitOfWork.RepositorioAreaPublica.Remover(AreaPublica => AreaPublica.IdArea.Equals(idAreaPublica));
+            unitOfWork.RepositorioAreaPublica.Remover(AreaPublica => AreaPublica.IdAreaPublica.Equals(idAreaPublica));
             unitOfWork.Commit(shared);
         }
 
@@ -85,13 +85,13 @@ namespace Services
             var query = from AreaPublica in tb_AreaPublica
                         select new AreaPublicaModel
                         {
-                            IdAreaPublica = AreaPublica.IdArea,
-                            IdCondominio = AreaPublica.IdCon,
-                            Estado = AreaPublica.Estado,
+                            IdAreaPublica = AreaPublica.IdAreaPublica,
+                            IdCondominio = AreaPublica.IdCondominio,
+                            Estado = AreaPublica.IdStatusAreaPublica,
                             Nome = AreaPublica.Nome,
                             Local = AreaPublica.Local,
                             Tamanho = AreaPublica.Tamanho,
-                            ValorPagamento = AreaPublica.Valor,
+                            ValorReserva = AreaPublica.ValorReserva,
                             
                         };
             return query;
@@ -124,13 +124,13 @@ namespace Services
         /// <param name="AreaPublicaE">Entity mapeada da base de dados</param>
         private void Atribuir(AreaPublicaModel AreaPublicaModel, tb_areapublica AreaPublicaE)
         {
-            AreaPublicaE.IdArea = AreaPublicaModel.IdAreaPublica;
-            AreaPublicaE.IdCon = AreaPublicaModel.IdCondominio;
+            AreaPublicaE.IdAreaPublica = AreaPublicaModel.IdAreaPublica;
+            AreaPublicaE.IdCondominio = AreaPublicaModel.IdCondominio;
             AreaPublicaE.Nome = AreaPublicaModel.Nome;
             AreaPublicaE.Local = AreaPublicaModel.Local;
             AreaPublicaE.Tamanho = AreaPublicaModel.Tamanho;
-            AreaPublicaE.Valor = AreaPublicaModel.ValorPagamento;
-            AreaPublicaE.Estado = AreaPublicaModel.Estado;
+            AreaPublicaE.ValorReserva = AreaPublicaModel.ValorReserva;
+            AreaPublicaE.IdStatusAreaPublica = AreaPublicaModel.Estado;
         }
     }
 }

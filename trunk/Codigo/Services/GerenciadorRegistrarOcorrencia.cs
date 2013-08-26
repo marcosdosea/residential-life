@@ -48,7 +48,7 @@ namespace Services
             Atribuir(AreaPublicaModel, RegistrarOcorrenciaE);
             unitOfWork.RepositorioRegistrarOcorrencia.Inserir(RegistrarOcorrenciaE);
             unitOfWork.Commit(shared);
-            return RegistrarOcorrenciaE.IdOco;
+            return RegistrarOcorrenciaE.IdOcorrencia;
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Services
         /// <param name="RegistrarOcorrenciaModel"> Dados do modelo</param>
         public void Remover(int idRegistrarOcorrencia)
         {
-            unitOfWork.RepositorioRegistrarOcorrencia.Remover(RegistrarOcorrencia => RegistrarOcorrencia.IdOco.Equals(idRegistrarOcorrencia));
+            unitOfWork.RepositorioRegistrarOcorrencia.Remover(RegistrarOcorrencia => RegistrarOcorrencia.IdOcorrencia.Equals(idRegistrarOcorrencia));
             unitOfWork.Commit(shared);
         }
 
@@ -85,13 +85,13 @@ namespace Services
             var query = from registrarOcorrencia in tb_ocorrencia
                         select new RegistrarOcorrenciaModel
                         {
-                            IdOcorrencia = registrarOcorrencia.IdOco,
-                            IdPessoa = registrarOcorrencia.IdPes,
+                            IdOcorrencia = registrarOcorrencia.IdOcorrencia,
+                            IdPessoa = registrarOcorrencia.IdPessoa,
                             Titulo = registrarOcorrencia.Titulo,
                             Descricao = registrarOcorrencia.Descricao,
                             Data = registrarOcorrencia.DataCriacao,
-                            Tipo = registrarOcorrencia.Tipo,
-                            Status = registrarOcorrencia.Status,
+                            IdTipo = registrarOcorrencia.IdTipoOcorrencia,
+                            IdStatus = registrarOcorrencia.IdStatusOcorrencia,
 
                         };
             return query;
@@ -124,13 +124,13 @@ namespace Services
         /// <param name="RegistrarOcorrenciaE">Entity mapeada da base de dados</param>
         private void Atribuir(RegistrarOcorrenciaModel RegistrarOcorrenciaModel, tb_ocorrencia RegistrarOcorrenciaE)
         {
-            RegistrarOcorrenciaE.IdOco = RegistrarOcorrenciaModel.IdOcorrencia;
-            RegistrarOcorrenciaE.IdPes = RegistrarOcorrenciaModel.IdPessoa;
+            RegistrarOcorrenciaE.IdOcorrencia = RegistrarOcorrenciaModel.IdOcorrencia;
+            RegistrarOcorrenciaE.IdPessoa = RegistrarOcorrenciaModel.IdPessoa;
             RegistrarOcorrenciaE.Titulo = RegistrarOcorrenciaModel.Titulo;
             RegistrarOcorrenciaE.Descricao = RegistrarOcorrenciaModel.Descricao;
-            RegistrarOcorrenciaE.Tipo = RegistrarOcorrenciaModel.Tipo;
+            RegistrarOcorrenciaE.IdTipoOcorrencia = RegistrarOcorrenciaModel.IdTipo;
             RegistrarOcorrenciaE.DataCriacao = RegistrarOcorrenciaModel.Data;
-            RegistrarOcorrenciaE.Status = "Em análise";
+            RegistrarOcorrenciaE.IdStatusOcorrencia = RegistrarOcorrenciaModel.IdStatus;
 
         }
 

@@ -49,7 +49,7 @@ namespace Services
             Atribuir(condominioModel, condominioE);
             unitOfWork.RepositorioCondominio.Inserir(condominioE);
             unitOfWork.Commit(shared);
-            return condominioE.IdCon;
+            return condominioE.IdCondominio;
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Services
         /// <param name="condominioModel">Identificador do condominio na base de dados</param>
         public void Remover(int idCondominio)
         {
-            unitOfWork.RepositorioCondominio.Remover(condominio => condominio.IdCon.Equals(idCondominio));
+            unitOfWork.RepositorioCondominio.Remover(condominio => condominio.IdCondominio.Equals(idCondominio));
             unitOfWork.Commit(shared);
         }
 
@@ -86,8 +86,8 @@ namespace Services
             var query = from condominio in tb_condominio
                         select new CondominioModel
                         {
-                            IDCondominio = condominio.IdCon,
-                            IDSindico = condominio.IdSin,
+                            IdCondominio = condominio.IdCondominio,
+                            IdSindico = condominio.IdSindico,
                             Nome = condominio.Nome,
                             Rua = condominio.Rua,
                             Numero = condominio.Numero,
@@ -116,7 +116,7 @@ namespace Services
         /// <returns>Condominio model</returns>
         public CondominioModel Obter(int idCondominio)
         {
-            IEnumerable<CondominioModel> condominioEs = GetQuery().Where(condominioModel => condominioModel.IDCondominio.Equals(idCondominio));
+            IEnumerable<CondominioModel> condominioEs = GetQuery().Where(condominioModel => condominioModel.IdCondominio.Equals(idCondominio));
             return condominioEs.ElementAtOrDefault(0);
         }
 
@@ -127,8 +127,8 @@ namespace Services
         /// <param name="condominioE">Entity mapeada da base de dados</param>
         private void Atribuir(CondominioModel condominioModel, tb_condominio condominioE)
         {
-            condominioE.IdCon = condominioModel.IDCondominio;
-            condominioE.IdSin = condominioModel.IDSindico;
+            condominioE.IdCondominio = condominioModel.IdCondominio;
+            condominioE.IdSindico = condominioModel.IdSindico;
             condominioE.Nome = condominioModel.Nome;
             condominioE.Rua = condominioModel.Rua;
             condominioE.Numero = condominioModel.Numero;

@@ -50,7 +50,7 @@ namespace Services
             Atribuir(reservaAmbienteModel, reservaAmbienteE);
             unitOfWork.RepositorioReservaAmbiente.Inserir(reservaAmbienteE);
             unitOfWork.Commit(shared);
-            return reservaAmbienteE.IdRes;
+            return reservaAmbienteE.IdReservaAmbiente;
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Services
         /// <param name="reservaAmbienteModel"> </param>
         public void Remover(int IdRes)
         {
-            unitOfWork.RepositorioReservaAmbiente.Remover(reservaAmbiente => reservaAmbiente.IdRes.Equals(IdRes));
+            unitOfWork.RepositorioReservaAmbiente.Remover(reservaAmbiente => reservaAmbiente.IdReservaAmbiente.Equals(IdRes));
             unitOfWork.Commit(shared);
         }
 
@@ -86,13 +86,13 @@ namespace Services
             var query = from reservaAmbiente in tb_reservaambiente 
                         select new ReservaAmbienteModel
                         {
-                            IdReservaAmbiente = reservaAmbiente.IdPes,
-                            IdPes = reservaAmbiente.IdPes,
-                            IdAreaPublica = reservaAmbiente.IdArea,
+                            IdReservaAmbiente = reservaAmbiente.IdPesssoa,
+                            IdPesssoa = reservaAmbiente.IdPesssoa,
+                            IdAreaPublica = reservaAmbiente.IdAreaPublica,
                             DataInicio = reservaAmbiente.DataInicio,
                             DataFim = reservaAmbiente.DataFim,
-                            StatusPagamento = reservaAmbiente.StatusPagamento,
-                            NomeAreaPublica = reservaAmbiente.tb_areapublica.Nome
+                            IdStatusPagamento = reservaAmbiente.IdStatusPagamento
+                          
                         };
             return query;
         }
@@ -124,12 +124,13 @@ namespace Services
         /// <param name="reservaAmbienteE">Entity mapeada da base de dados</param>
         private void Atribuir(ReservaAmbienteModel reservaAmbienteModel, tb_reservaambiente reservaAmbienteE)
         {
-            reservaAmbienteE.IdRes = reservaAmbienteModel.IdPes;
-            reservaAmbienteE.IdPes = reservaAmbienteModel.IdPes;
-            reservaAmbienteE.IdArea = reservaAmbienteModel.IdAreaPublica;
+            reservaAmbienteE.IdReservaAmbiente = reservaAmbienteModel.IdReservaAmbiente;
+            reservaAmbienteE.IdPesssoa = reservaAmbienteModel.IdPesssoa;
+            reservaAmbienteE.IdAreaPublica = reservaAmbienteModel.IdAreaPublica;
             reservaAmbienteE.DataInicio = reservaAmbienteModel.DataInicio;
             reservaAmbienteE.DataFim = reservaAmbienteModel.DataFim;
-            reservaAmbienteE.StatusPagamento = reservaAmbienteModel.StatusPagamento;
+            reservaAmbienteE.IdStatusPagamento = reservaAmbienteModel.IdStatusPagamento;
+           
             
         }
     }
