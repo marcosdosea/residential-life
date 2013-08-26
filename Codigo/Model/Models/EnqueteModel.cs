@@ -35,6 +35,9 @@ namespace Models.Models
         public DateTime DataFim { get; set; }
 
         [Required]
+        public int IdStatus { get; set; }
+
+        [Required]
         [Display(Name = "status", ResourceType = typeof(Mensagem))]
         public String Status { get; set; }
 

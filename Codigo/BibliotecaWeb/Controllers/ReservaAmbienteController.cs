@@ -78,7 +78,7 @@ namespace BibliotecaWeb.Controllers
         {
 
             ReservaAmbienteModel reservaAmbiente = gReservaAmbiente.Obter(id);
-            ViewBag.IdArea = new SelectList(gAreaPublica.ObterTodos(), "IdAreaPublica", "Nome", reservaAmbiente.IdArea);
+            ViewBag.IdArea = new SelectList(gAreaPublica.ObterTodos(), "IdAreaPublica", "Nome", reservaAmbiente.IdAreaPublica);
             return View(reservaAmbiente);
         }
 

@@ -86,9 +86,9 @@ namespace Services
             var query = from reservaAmbiente in tb_reservaambiente 
                         select new ReservaAmbienteModel
                         {
-                            IdRes = reservaAmbiente.IdPes,
+                            IdReservaAmbiente = reservaAmbiente.IdPes,
                             IdPes = reservaAmbiente.IdPes,
-                            IdArea = reservaAmbiente.IdArea,
+                            IdAreaPublica = reservaAmbiente.IdArea,
                             DataInicio = reservaAmbiente.DataInicio,
                             DataFim = reservaAmbiente.DataFim,
                             StatusPagamento = reservaAmbiente.StatusPagamento,
@@ -113,7 +113,7 @@ namespace Services
         /// <returns>Autor model</returns>
         public ReservaAmbienteModel Obter(int IdRes)
         {
-            IEnumerable<ReservaAmbienteModel> reservaAmbienteE = GetQuery().Where(reservaAmbienteModel => reservaAmbienteModel.IdRes.Equals(IdRes));
+            IEnumerable<ReservaAmbienteModel> reservaAmbienteE = GetQuery().Where(reservaAmbienteModel => reservaAmbienteModel.IdReservaAmbiente.Equals(IdRes));
             return reservaAmbienteE.ElementAtOrDefault(0);
         }
 
@@ -126,7 +126,7 @@ namespace Services
         {
             reservaAmbienteE.IdRes = reservaAmbienteModel.IdPes;
             reservaAmbienteE.IdPes = reservaAmbienteModel.IdPes;
-            reservaAmbienteE.IdArea = reservaAmbienteModel.IdArea;
+            reservaAmbienteE.IdArea = reservaAmbienteModel.IdAreaPublica;
             reservaAmbienteE.DataInicio = reservaAmbienteModel.DataInicio;
             reservaAmbienteE.DataFim = reservaAmbienteModel.DataFim;
             reservaAmbienteE.StatusPagamento = reservaAmbienteModel.StatusPagamento;

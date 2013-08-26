@@ -90,3 +90,11 @@ C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codi
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Model\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Model\obj\Debug\Model.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Model\obj\Debug\Model.pdb
+C:\Users\Thiago\Desktop\Nova pasta\Model\bin\Debug\Model.dll.config
+C:\Users\Thiago\Desktop\Nova pasta\Model\bin\Debug\Model.dll
+C:\Users\Thiago\Desktop\Nova pasta\Model\bin\Debug\Model.pdb
+C:\Users\Thiago\Desktop\Nova pasta\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Desktop\Nova pasta\Model\obj\Debug\Models.App_GlobalResources.Mensagem.resources
+C:\Users\Thiago\Desktop\Nova pasta\Model\obj\Debug\Model.csproj.GenerateResource.Cache
+C:\Users\Thiago\Desktop\Nova pasta\Model\obj\Debug\Model.dll
+C:\Users\Thiago\Desktop\Nova pasta\Model\obj\Debug\Model.pdb
