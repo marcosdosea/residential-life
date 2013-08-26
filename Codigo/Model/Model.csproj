@@ -59,6 +59,7 @@
     <Compile Include="Models\RegistrarOcorrenciaModel.cs" />
     <Compile Include="Models\ReservaAmbienteModel.cs" />
     <Compile Include="Models\PessoaModel.cs" />
+    <Compile Include="Models\StatusAreaPublicaModel.cs" />
     <Compile Include="Models\StatusEnqueteModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResidentialBD.Designer.cs">
