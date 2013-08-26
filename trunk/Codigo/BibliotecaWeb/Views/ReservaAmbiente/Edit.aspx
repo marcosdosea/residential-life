@@ -17,11 +17,11 @@
         <legend><%: Models.App_GlobalResources.Mensagem.editarReservaAmbiente %></legend>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdRes) %>
+            <%: Html.LabelFor(model => model.IdReservaAmbiente) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdRes) %>
-            <%: Html.ValidationMessageFor(model => model.IdRes) %>
+            <%: Html.EditorFor(model => model.IdReservaAmbiente) %>
+            <%: Html.ValidationMessageFor(model => model.IdReservaAmbiente) %>
         </div>
 
         <div class="editor-label">
@@ -29,15 +29,15 @@
         </div>
         <div class="editor-field">
             <%: Html.DropDownList("IdArea")%>
-            <%: Html.ValidationMessageFor(model => model.IdArea) %>
+            <%: Html.ValidationMessageFor(model => model.IdAreaPublica) %>
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdPes) %>
+            <%: Html.LabelFor(model => model.IdPesssoa) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdPes) %>
-            <%: Html.ValidationMessageFor(model => model.IdPes) %>
+            <%: Html.EditorFor(model => model.IdPesssoa) %>
+            <%: Html.ValidationMessageFor(model => model.IdPesssoa) %>
         </div>
 
         <div class="editor-label">

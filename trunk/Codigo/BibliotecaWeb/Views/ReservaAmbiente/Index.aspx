@@ -37,13 +37,13 @@
 <% foreach (var item in Model) { %>
     <tr>
         <td>
-            <%: Html.DisplayFor(modelItem => item.IdRes) %>
+            <%: Html.DisplayFor(modelItem => item.IdReservaAmbiente) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.NomeAreaPublica) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.IdPes) %>
+            <%: Html.DisplayFor(modelItem => item.IdPesssoa) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.DataInicio) %>
@@ -55,9 +55,9 @@
             <%: Html.DisplayFor(modelItem => item.StatusPagamento) %>
         </td>
         <td>
-            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.IdRes })%> |
-            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdRes })%> |
-            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdRes })%>
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.IdReservaAmbiente })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdReservaAmbiente })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdReservaAmbiente })%>
         </td>
     </tr>
 <% } %>

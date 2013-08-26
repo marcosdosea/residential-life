@@ -15,7 +15,7 @@
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.idSindico %></div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.IDSindico) %>
+        <%: Html.DisplayFor(model => model.IdSindico) %>
     </div>
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.nome %></div>
@@ -59,7 +59,7 @@
     </div>
 </fieldset>
 <p>
-    <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editar, "Edit", new {  id=Model.IDCondominio}) %> |
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = Model.IdCondominio })%> |
     <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.voltar, "Index") %>
 </p>
 

@@ -34,7 +34,7 @@
 <% foreach (var item in Model) { %>
     <tr>
         <td>
-            <%: Html.DisplayFor(modelItem => item.IdPes) %>
+            <%: Html.DisplayFor(modelItem => item.IdPessoa) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Nome) %>
@@ -49,9 +49,9 @@
             <%: Html.DisplayFor(modelItem => item.TelefoneCelular) %>
         </td>
         <td>
-            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.IdPes })%> |
-            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdPes })%> |
-            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdPes })%>
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.IdPessoa })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdPessoa })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdPessoa })%>
         </td>
     </tr>
 <% } %>

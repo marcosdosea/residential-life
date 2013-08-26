@@ -14,7 +14,7 @@
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.apagar %></div>
     <div class="display-field">
-        <%: Html.LabelFor(model => model.IdPes) %>
+        <%: Html.LabelFor(model => model.IdPessoa) %>
     </div>
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.apagar %></div>

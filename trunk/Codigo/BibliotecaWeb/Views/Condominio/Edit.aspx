@@ -18,13 +18,13 @@
 
        
         <div class="editor-field">
-            <%: Html.HiddenFor(model => model.IDCondominio) %>
-            <%: Html.ValidationMessageFor(model => model.IDCondominio) %>
+            <%: Html.HiddenFor(model => model.IdCondominio)%>
+            <%: Html.ValidationMessageFor(model => model.IdCondominio)%>
         </div>
 
         <div class="editor-field">
-            <%: Html.HiddenFor(model => model.IDSindico) %>
-            <%: Html.ValidationMessageFor(model => model.IDSindico) %>
+            <%: Html.HiddenFor(model => model.IdSindico) %>
+            <%: Html.ValidationMessageFor(model => model.IdSindico) %>
         </div>
 
         <div class="editor-label">

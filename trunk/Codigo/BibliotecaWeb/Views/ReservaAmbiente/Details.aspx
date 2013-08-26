@@ -13,7 +13,7 @@
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.id %></div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdRes) %>
+        <%: Html.DisplayFor(model => model.IdReservaAmbiente) %>
     </div>
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.areaPublica %></div>
@@ -23,7 +23,7 @@
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.idPessoa %></div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdPes) %>
+        <%: Html.DisplayFor(model => model.IdPesssoa) %>
     </div>
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.dataInicio %></div>
@@ -42,7 +42,7 @@
     </div>
 </fieldset>
 <p>
-    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = Model.IdRes })%> |
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = Model.IdReservaAmbiente })%> |
     <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
 </p>
 
