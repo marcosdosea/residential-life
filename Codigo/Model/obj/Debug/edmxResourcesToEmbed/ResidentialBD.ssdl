@@ -27,6 +27,10 @@
     <EntitySet Name="tb_publicacaomural" EntityType="residentialbdModel.Store.tb_publicacaomural" store:Type="Tables" Schema="residentialbd" />
     <EntitySet Name="tb_reservaambiente" EntityType="residentialbdModel.Store.tb_reservaambiente" store:Type="Tables" Schema="residentialbd" />
     <EntitySet Name="tb_setor" EntityType="residentialbdModel.Store.tb_setor" store:Type="Tables" Schema="residentialbd" />
+    <EntitySet Name="tb_statusareapublica" EntityType="residentialbdModel.Store.tb_statusareapublica" store:Type="Tables" Schema="residentialbd" />
+    <EntitySet Name="tb_statusocorrencia" EntityType="residentialbdModel.Store.tb_statusocorrencia" store:Type="Tables" Schema="residentialbd" />
+    <EntitySet Name="tb_statuspagamento" EntityType="residentialbdModel.Store.tb_statuspagamento" store:Type="Tables" Schema="residentialbd" />
+    <EntitySet Name="tb_tipoocorrencia" EntityType="residentialbdModel.Store.tb_tipoocorrencia" store:Type="Tables" Schema="residentialbd" />
     <EntitySet Name="tb_veiculo" EntityType="residentialbdModel.Store.tb_veiculo" store:Type="Tables" Schema="residentialbd" />
     <EntitySet Name="tb_votoenquete" EntityType="residentialbdModel.Store.tb_votoenquete" store:Type="Tables" store:Schema="residentialbd" store:Name="tb_votoenquete">
       <DefiningQuery>SELECT
@@ -41,6 +45,10 @@
     <AssociationSet Name="TB_Administradora_TB_Condominio1" Association="residentialbdModel.Store.TB_Administradora_TB_Condominio1">
       <End Role="tb_condominio" EntitySet="tb_condominio" />
       <End Role="tb_administradora" EntitySet="tb_administradora" />
+    </AssociationSet>
+    <AssociationSet Name="TB_AreaPublica_TB_StatusAreaPublica1" Association="residentialbdModel.Store.TB_AreaPublica_TB_StatusAreaPublica1">
+      <End Role="tb_statusareapublica" EntitySet="tb_statusareapublica" />
+      <End Role="tb_areapublica" EntitySet="tb_areapublica" />
     </AssociationSet>
     <AssociationSet Name="TB_Atendimento_TB_Pessoa1" Association="residentialbdModel.Store.TB_Atendimento_TB_Pessoa1">
       <End Role="tb_pessoa" EntitySet="tb_pessoa" />
@@ -98,6 +106,14 @@
       <End Role="tb_pessoa" EntitySet="tb_pessoa" />
       <End Role="tb_ocorrencia" EntitySet="tb_ocorrencia" />
     </AssociationSet>
+    <AssociationSet Name="TB_Ocorrencia_TB_StatusOcorrencia1" Association="residentialbdModel.Store.TB_Ocorrencia_TB_StatusOcorrencia1">
+      <End Role="tb_statusocorrencia" EntitySet="tb_statusocorrencia" />
+      <End Role="tb_ocorrencia" EntitySet="tb_ocorrencia" />
+    </AssociationSet>
+    <AssociationSet Name="TB_Ocorrencia_TB_TipoOcorrencia1" Association="residentialbdModel.Store.TB_Ocorrencia_TB_TipoOcorrencia1">
+      <End Role="tb_tipoocorrencia" EntitySet="tb_tipoocorrencia" />
+      <End Role="tb_ocorrencia" EntitySet="tb_ocorrencia" />
+    </AssociationSet>
     <AssociationSet Name="TB_OpcoesEnquete_TB_Enquete1" Association="residentialbdModel.Store.TB_OpcoesEnquete_TB_Enquete1">
       <End Role="tb_enquete" EntitySet="tb_enquete" />
       <End Role="tb_opcoesenquete" EntitySet="tb_opcoesenquete" />
@@ -124,6 +140,10 @@
     </AssociationSet>
     <AssociationSet Name="TB_ReservaAmbiente_TB_Pessoa1" Association="residentialbdModel.Store.TB_ReservaAmbiente_TB_Pessoa1">
       <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+      <End Role="tb_reservaambiente" EntitySet="tb_reservaambiente" />
+    </AssociationSet>
+    <AssociationSet Name="TB_ReservaAmbiente_TB_StatusPagamento1" Association="residentialbdModel.Store.TB_ReservaAmbiente_TB_StatusPagamento1">
+      <End Role="tb_statuspagamento" EntitySet="tb_statuspagamento" />
       <End Role="tb_reservaambiente" EntitySet="tb_reservaambiente" />
     </AssociationSet>
     <AssociationSet Name="TB_Veiculo_TB_Pessoa1" Association="residentialbdModel.Store.TB_Veiculo_TB_Pessoa1">
@@ -165,8 +185,8 @@
     <Property Name="Local" Type="varchar" Nullable="false" MaxLength="60" />
     <Property Name="Tamanho" Type="varchar" Nullable="false" MaxLength="15" />
     <Property Name="Valor" Type="decimal" Nullable="false" />
-    <Property Name="Estado" Type="varchar" Nullable="false" MaxLength="15" />
     <Property Name="IdCon" Type="int" Nullable="false" />
+    <Property Name="IdStatusAreaPublica" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_atendimento">
     <Key>
@@ -272,8 +292,8 @@
     <Property Name="Titulo" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="500" />
     <Property Name="DataCriacao" Type="datetime" Nullable="false" />
-    <Property Name="Tipo" Type="varchar" Nullable="false" MaxLength="45" />
-    <Property Name="Status" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdTipoOcorrencia" Type="int" Nullable="false" />
+    <Property Name="IdStatusOcorrencia" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_opcoesenquete">
     <Key>
@@ -358,7 +378,7 @@
     <Property Name="IdPes" Type="int" Nullable="false" />
     <Property Name="DataInicio" Type="datetime" Nullable="false" />
     <Property Name="DataFim" Type="datetime" Nullable="false" />
-    <Property Name="StatusPagamento" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="IdStatusPagamento" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_setor">
     <Key>
@@ -367,6 +387,34 @@
     <Property Name="IdSet" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="45" />
     <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tb_statusareapublica">
+    <Key>
+      <PropertyRef Name="IdStatusAreaPublica" />
+    </Key>
+    <Property Name="IdStatusAreaPublica" Type="int" Nullable="false" />
+    <Property Name="StatusAreaPublica" Type="varchar" Nullable="false" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="tb_statusocorrencia">
+    <Key>
+      <PropertyRef Name="IdStatusOcorrencia" />
+    </Key>
+    <Property Name="IdStatusOcorrencia" Type="int" Nullable="false" />
+    <Property Name="StatusOcorrencia" Type="varchar" Nullable="false" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="tb_statuspagamento">
+    <Key>
+      <PropertyRef Name="IdStatusPagamento" />
+    </Key>
+    <Property Name="IdStatusPagamento" Type="int" Nullable="false" />
+    <Property Name="StatusPagamento" Type="varchar" Nullable="false" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="tb_tipoocorrencia">
+    <Key>
+      <PropertyRef Name="IdTipoOcorrencia" />
+    </Key>
+    <Property Name="IdTipoOcorrencia" Type="int" Nullable="false" />
+    <Property Name="TipoOcorrencia" Type="varchar" Nullable="false" MaxLength="45" />
   </EntityType>
   <EntityType Name="tb_veiculo">
     <Key>
@@ -411,6 +459,18 @@
       </Principal>
       <Dependent Role="tb_administradora">
         <PropertyRef Name="IdCon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TB_AreaPublica_TB_StatusAreaPublica1">
+    <End Role="tb_statusareapublica" Type="residentialbdModel.Store.tb_statusareapublica" Multiplicity="1" />
+    <End Role="tb_areapublica" Type="residentialbdModel.Store.tb_areapublica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_statusareapublica">
+        <PropertyRef Name="IdStatusAreaPublica" />
+      </Principal>
+      <Dependent Role="tb_areapublica">
+        <PropertyRef Name="IdStatusAreaPublica" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -582,6 +642,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="TB_Ocorrencia_TB_StatusOcorrencia1">
+    <End Role="tb_statusocorrencia" Type="residentialbdModel.Store.tb_statusocorrencia" Multiplicity="1" />
+    <End Role="tb_ocorrencia" Type="residentialbdModel.Store.tb_ocorrencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_statusocorrencia">
+        <PropertyRef Name="IdStatusOcorrencia" />
+      </Principal>
+      <Dependent Role="tb_ocorrencia">
+        <PropertyRef Name="IdStatusOcorrencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TB_Ocorrencia_TB_TipoOcorrencia1">
+    <End Role="tb_tipoocorrencia" Type="residentialbdModel.Store.tb_tipoocorrencia" Multiplicity="1" />
+    <End Role="tb_ocorrencia" Type="residentialbdModel.Store.tb_ocorrencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_tipoocorrencia">
+        <PropertyRef Name="IdTipoOcorrencia" />
+      </Principal>
+      <Dependent Role="tb_ocorrencia">
+        <PropertyRef Name="IdTipoOcorrencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="TB_OpcoesEnquete_TB_Enquete1">
     <End Role="tb_enquete" Type="residentialbdModel.Store.tb_enquete" Multiplicity="1" />
     <End Role="tb_opcoesenquete" Type="residentialbdModel.Store.tb_opcoesenquete" Multiplicity="*" />
@@ -663,6 +747,18 @@
       </Principal>
       <Dependent Role="tb_reservaambiente">
         <PropertyRef Name="IdPes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TB_ReservaAmbiente_TB_StatusPagamento1">
+    <End Role="tb_statuspagamento" Type="residentialbdModel.Store.tb_statuspagamento" Multiplicity="1" />
+    <End Role="tb_reservaambiente" Type="residentialbdModel.Store.tb_reservaambiente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_statuspagamento">
+        <PropertyRef Name="IdStatusPagamento" />
+      </Principal>
+      <Dependent Role="tb_reservaambiente">
+        <PropertyRef Name="IdStatusPagamento" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
