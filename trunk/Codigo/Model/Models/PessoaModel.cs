@@ -11,7 +11,7 @@ namespace Models
     {
         //[Required]
         [Display(Name = "id", ResourceType = typeof(Mensagem))]
-        public int IdPes { get; set; }
+        public int IdPessoa{ get; set; }
 
         [Required]
         [Display(Name = "nome", ResourceType=typeof(Mensagem))]

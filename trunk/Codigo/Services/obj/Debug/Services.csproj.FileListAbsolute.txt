@@ -106,3 +106,5 @@ C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codi
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Services\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Services\obj\Debug\Services.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Services\obj\Debug\Services.pdb
+C:\Users\Thiago\Desktop\Nova pasta\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Desktop\Nova pasta\Services\obj\Debug\Services.dll

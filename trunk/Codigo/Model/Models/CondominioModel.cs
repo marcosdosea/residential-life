@@ -9,8 +9,8 @@ namespace Models.Models
 {
     public class CondominioModel
     {
-        public int IDCondominio { get; set;}
-        public int IDSindico { get; set; } 
+        public int IdCondominio { get; set;}
+        public int IdSindico { get; set; } 
 
         [Required]
         [Display(Name = "nome", ResourceType=typeof(Mensagem))]

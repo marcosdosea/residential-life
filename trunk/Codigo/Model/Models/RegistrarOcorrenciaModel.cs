@@ -35,6 +35,8 @@ namespace Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Data { get; set; }
 
+        public int IdTipo { get; set; }
+
         [Display(Name = "tipo", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
@@ -44,6 +46,7 @@ namespace Models
         // [Required(ErrorMessageResourceType = typeof(Mensagem),
         //     ErrorMessageResourceName = "required")]
         public string Status { get; set; }
+        public int IdStatus { get; set; }
 
 
     }

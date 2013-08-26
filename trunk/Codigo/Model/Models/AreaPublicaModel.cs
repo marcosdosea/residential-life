@@ -47,7 +47,7 @@ namespace Models.Models
         [Display(Name = "valorPagamento", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
-        public decimal ValorPagamento { get; set; }
+        public decimal ValorReserva { get; set; }
 
     }
 }
