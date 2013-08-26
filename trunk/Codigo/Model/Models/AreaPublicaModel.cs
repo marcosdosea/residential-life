@@ -21,7 +21,7 @@ namespace Models.Models
          [Display(Name = "estado", ResourceType = typeof(Mensagem))]
          [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
-        public int Estado { get; set; }
+        public int IdStatus{ get; set; }
        
 
         [Display(Name = "nome", ResourceType= typeof(Mensagem))]

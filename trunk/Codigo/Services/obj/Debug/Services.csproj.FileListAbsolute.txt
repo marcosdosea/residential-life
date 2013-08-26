@@ -115,3 +115,5 @@ C:\Users\Thiago\Desktop\Nova pasta\Services\bin\Debug\Model.pdb
 C:\Users\Thiago\Desktop\Nova pasta\Services\bin\Debug\Persistence.pdb
 C:\Users\Thiago\Desktop\Nova pasta\Services\obj\Debug\Services.dll
 C:\Users\Thiago\Desktop\Nova pasta\Services\obj\Debug\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Services\obj\Debug\Services.pdb

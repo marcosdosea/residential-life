@@ -54,13 +54,13 @@
             <%: Html.DisplayFor(modelItem => item.Local) %>
         </td>
          <td>
-            <%: Html.DisplayFor(modelItem => item.Estado) %>
+            <%: Html.DisplayFor(modelItem => item.IdStatus) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Tamanho) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.ValorPagamento) %>
+            <%: Html.DisplayFor(modelItem => item.ValorReserva) %>
         </td>
         <td>
          <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.IdAreaPublica })%> |

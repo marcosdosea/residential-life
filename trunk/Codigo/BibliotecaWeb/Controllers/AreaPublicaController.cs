@@ -12,11 +12,13 @@ namespace BibliotecaWeb.Controllers
     {
         private GerenciadorAreaPublica gAreaPublica;
         private GerenciadorCondominio gCondominio;
+        private GerenciadorStatusAreaPublica gStatusAreaPublica;
 
         public AreaPublicaController()
         {
             gAreaPublica = new GerenciadorAreaPublica();
             gCondominio = new GerenciadorCondominio();
+            gStatusAreaPublica = new GerenciadorStatusAreaPublica();
         }
         //
         // GET: /AreaPublica/
@@ -40,7 +42,8 @@ namespace BibliotecaWeb.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IDCondominio", "Nome");
+            ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome");
+            ViewBag.IdStatusAreaPublica = new SelectList(gStatusAreaPublica.ObterTodos(), "IdStatusAreaPublica", "Nome");
             return View();
         }
 
@@ -66,7 +69,10 @@ namespace BibliotecaWeb.Controllers
         {
 
             AreaPublicaModel AreaPublica = gAreaPublica.Obter(id);
+
+
             ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IDCondominio", "Nome", AreaPublica.IdCondominio);
+            ViewBag.IdStatusAreaPublica = new SelectList(gStatusAreaPublica.ObterTodos(), "IdStatusAreaPublica", "Nome", AreaPublica.IdStatus);
             return View(AreaPublica);
         }
 
