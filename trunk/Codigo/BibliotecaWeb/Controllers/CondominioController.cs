@@ -67,7 +67,7 @@ namespace BibliotecaWeb.Controllers
         {
 
             CondominioModel condominio = gCondominio.Obter(id);
-            ViewBag.IdSindico = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome"); 
+            ViewBag.IdSindico = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", condominio.IdSindico); 
             return View(condominio);
         }
 

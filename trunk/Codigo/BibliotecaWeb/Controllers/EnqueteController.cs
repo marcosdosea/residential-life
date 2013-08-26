@@ -78,7 +78,7 @@ namespace BibliotecaWeb.Controllers
         {
             EnqueteModel enqueteModel = gEnquete.Obter(id);
             ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", enqueteModel.IdPessoa);
-            ViewBag.IdStatusEnquete = new SelectList(gStatusEnquete.ObterTodos(), "IdStatusEnquete", "StatusEnquete");
+            ViewBag.IdStatusEnquete = new SelectList(gStatusEnquete.ObterTodos(), "IdStatusEnquete", "StatusEnquete",enqueteModel.IdStatusEnquete);
             return View(enqueteModel);
         }
 
