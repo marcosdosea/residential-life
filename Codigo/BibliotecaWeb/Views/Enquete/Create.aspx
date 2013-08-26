@@ -59,10 +59,13 @@
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Status) %>
         </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.Status) %>
-            <%: Html.ValidationMessageFor(model => model.Status) %>
-        </div>
+        <p>
+            <%: @Html.DropDownListFor(model => model.Status, new[]
+            {
+                new SelectListItem {Text = "Ativada", Value = "Ativada"},
+                new SelectListItem {Text = "Desativada", Value = "Desativada"},
+            }, "Selecione")%> 
+        </p> 
 
         <p>
             <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
