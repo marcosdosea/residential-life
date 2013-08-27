@@ -117,8 +117,6 @@ namespace Services
         {
             statusEnqueteE.IdStatusEnquete = statusEnqueteModel.idStatusEnquete;
             statusEnqueteE.StatusEnquete = statusEnqueteModel.StatusEnquete;
-         
-   
         }
     }
 }

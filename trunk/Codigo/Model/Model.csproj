@@ -61,6 +61,7 @@
     <Compile Include="Models\PessoaModel.cs" />
     <Compile Include="Models\StatusAreaPublicaModel.cs" />
     <Compile Include="Models\StatusEnqueteModel.cs" />
+    <Compile Include="Models\StatusPagamentoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResidentialBD.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -15,11 +15,13 @@ namespace BibliotecaWeb.Controllers
     {
         private GerenciadorReservaAmbiente gReservaAmbiente;
         private GerenciadorAreaPublica gAreaPublica;
+        private GerenciadorStatusPagamento gStatusPagamento;
 
         public ReservaAmbienteController()
         {
             gReservaAmbiente = new GerenciadorReservaAmbiente();
             gAreaPublica = new GerenciadorAreaPublica();
+            gStatusPagamento = new GerenciadorStatusPagamento();
         }
 
         //
@@ -45,7 +47,8 @@ namespace BibliotecaWeb.Controllers
         public ActionResult Create()
         {
             //Pegar somente as áreas públicas do condomínio corrente no futuro
-            ViewBag.IdArea = new SelectList(gAreaPublica.ObterTodos(), "IdAreaPublica", "Nome");
+            ViewBag.IdAreaPublica = new SelectList(gAreaPublica.ObterTodos(), "IdAreaPublica", "Nome");
+            ViewBag.IdStatusPagamento = new SelectList(gStatusPagamento.ObterTodos(), "IdStatusPagamento", "StatusPagamento");
             return View();
         }
 
@@ -76,9 +79,9 @@ namespace BibliotecaWeb.Controllers
 
         public ActionResult Edit(int id)
         {
-
             ReservaAmbienteModel reservaAmbiente = gReservaAmbiente.Obter(id);
-            ViewBag.IdArea = new SelectList(gAreaPublica.ObterTodos(), "IdAreaPublica", "Nome", reservaAmbiente.IdAreaPublica);
+            ViewBag.IdAreaPublica = new SelectList(gAreaPublica.ObterTodos(), "IdAreaPublica", "Nome", reservaAmbiente.IdAreaPublica);
+            ViewBag.IdStatusPagamento = new SelectList(gStatusPagamento.ObterTodos(), "IdStatusPagamento", "StatusPagamento", reservaAmbiente.IdStatusPagamento);
             return View(reservaAmbiente);
         }
 

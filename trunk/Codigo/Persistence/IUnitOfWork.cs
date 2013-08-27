@@ -18,5 +18,6 @@ namespace Persistence
         IRepositorioGenerico<tb_ocorrencia> RepositorioRegistrarOcorrencia { get; }
         IRepositorioGenerico<tb_statusenquete> RepositorioStatusEnquete{ get; }
         IRepositorioGenerico<tb_statusareapublica> RepositorioStatusAreaPublica { get; }
+        IRepositorioGenerico<tb_statuspagamento> RepositorioStatusPagamento { get; }
     }
 }

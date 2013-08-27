@@ -16,19 +16,17 @@
     <fieldset>
         <legend><%: Models.App_GlobalResources.Mensagem.editarReservaAmbiente %></legend>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdReservaAmbiente) %>
-        </div>
+        
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdReservaAmbiente) %>
-            <%: Html.ValidationMessageFor(model => model.IdReservaAmbiente) %>
+            <%: Html.HiddenFor(model => model.IdReservaAmbiente) %>
+            
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.NomeAreaPublica) %>
+            <%: Html.LabelFor(model => model.IdAreaPublica)%>
         </div>
         <div class="editor-field">
-            <%: Html.DropDownList("IdArea")%>
+            <%: Html.DropDownList("IdAreaPublica")%>
             <%: Html.ValidationMessageFor(model => model.IdAreaPublica) %>
         </div>
 
@@ -57,11 +55,11 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.StatusPagamento) %>
+            <%: Html.LabelFor(model => model.IdStatusPagamento) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.StatusPagamento) %>
-            <%: Html.ValidationMessageFor(model => model.StatusPagamento) %>
+            <%: Html.DropDownList("IdStatusPagamento")%>
+            <%: Html.ValidationMessageFor(model => model.IdStatusPagamento) %>
         </div>
 
         <p>

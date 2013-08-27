@@ -9,7 +9,6 @@ namespace Models.Models
 {
     public class ReservaAmbienteModel
     {
-        [Display(Name = "id", ResourceType = typeof(Mensagem))]
         public int IdReservaAmbiente { get; set; }
 
 
@@ -19,8 +18,6 @@ namespace Models.Models
         public int IdAreaPublica { get; set; }
 
         [Display(Name="areaPublica", ResourceType = typeof(Mensagem))]
-        [Required(ErrorMessageResourceType = typeof(Mensagem),
-            ErrorMessageResourceName = "required")]
         [StringLength(100)]
         public string NomeAreaPublica { get; set; }
 
