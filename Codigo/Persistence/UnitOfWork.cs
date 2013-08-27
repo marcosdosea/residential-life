@@ -24,9 +24,9 @@ namespace Persistence
         private IRepositorioGenerico<tb_moradia> _repMoradia;
         private IRepositorioGenerico<tb_enquete> _repEnquete;
         private IRepositorioGenerico<tb_ocorrencia> _repRegistrarOcorrencia;
-
         private IRepositorioGenerico<tb_statusenquete> _repStatusEnquete; 
         private IRepositorioGenerico<tb_statusareapublica> _repStatusAreaPublica;
+        private IRepositorioGenerico<tb_statuspagamento> _repStatusPagamento;
 
         /// <summary>
         /// Construtor cria contexto transacional
@@ -193,6 +193,21 @@ namespace Persistence
                     _repStatusAreaPublica = new RepositorioGenerico<tb_statusareapublica>(_context);
                 }
                 return _repStatusAreaPublica;
+            }
+        }
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de status pagamento
+        /// </summary>
+        public IRepositorioGenerico<tb_statuspagamento> RepositorioStatusPagamento
+        {
+            get
+            {
+                if (_repStatusPagamento == null)
+                {
+                    _repStatusPagamento = new RepositorioGenerico<tb_statuspagamento>(_context);
+                }
+                return _repStatusPagamento;
             }
         }
 

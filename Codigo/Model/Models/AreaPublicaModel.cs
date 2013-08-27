@@ -18,12 +18,12 @@ namespace Models.Models
         public int IdCondominio { get; set; }
 
 
-         [Display(Name = "estado", ResourceType = typeof(Mensagem))]
-         [Required(ErrorMessageResourceType = typeof(Mensagem),
+        [Display(Name = "estado", ResourceType = typeof(Mensagem))]
+        [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
         public int IdStatusAreaPublica{ get; set; }
 
-         public string StatusAreaPublica { get; set; }
+        public string StatusAreaPublica { get; set; }
 
         [Display(Name = "nome", ResourceType= typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
