@@ -45,8 +45,9 @@ namespace Models
         //[Display(Name = "status", ResourceType = typeof(Mensagem))]
         // [Required(ErrorMessageResourceType = typeof(Mensagem),
         //     ErrorMessageResourceName = "required")]
-        public string StatusOcorrencia { get; set; }
+        
         public int IdStatusOcorrenicia { get; set; }
+        public string StatusOcorrencia { get; set; }
 
 
     }

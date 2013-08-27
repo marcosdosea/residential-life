@@ -38,12 +38,12 @@
 
     <div class="display-label">Tipo</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.Tipo) %>
+        <%: Html.DisplayFor(model => model.TipoOcorrencia) %>
     </div>
 
     <div class="display-label">Status</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.Status) %>
+        <%: Html.DisplayFor(model => model.StatusOcorrencia) %>
     </div>
 </fieldset>
 <p>
