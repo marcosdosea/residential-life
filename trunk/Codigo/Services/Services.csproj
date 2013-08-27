@@ -50,7 +50,9 @@
     <Compile Include="GerenciadorPessoa.cs" />
     <Compile Include="GerenciadorStatusAreaPublica.cs" />
     <Compile Include="GerenciadorStatusEnquete.cs" />
+    <Compile Include="GerenciadorStatusOcorrencia.cs" />
     <Compile Include="GerenciadorStatusPagamento.cs" />
+    <Compile Include="GerenciadorTipoOcorrencia.cs" />
     <Compile Include="ServiceException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
