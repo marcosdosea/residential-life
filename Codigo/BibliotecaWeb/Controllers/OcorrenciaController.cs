@@ -13,11 +13,16 @@ namespace BibliotecaWeb.Controllers
 
         private GerenciadorPessoa gPessoa;
         private GerenciadorOcorrencia gOcorrencia;
+        private GerenciadorStatusOcorrencia gStatusOcorrencia;
+        private GerenciadorTipoOcorrencia gTipoOcorrencia;
 
         public OcorrenciaController()
         {
             gOcorrencia = new GerenciadorOcorrencia();
             gPessoa = new GerenciadorPessoa();
+            gStatusOcorrencia = new GerenciadorStatusOcorrencia();
+            gTipoOcorrencia = new GerenciadorTipoOcorrencia();
+
         }
 
 
@@ -43,6 +48,8 @@ namespace BibliotecaWeb.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.IdTipoOcorrencia = new SelectList(gTipoOcorrencia.ObterTodos(), "IdTipoOcorrencia", "TipoOcorrencia");
+            ViewBag.IdStatusOcorrencia = new SelectList(gStatusOcorrencia.ObterTodos(), "IdStatusOcorrencia", "StatusOcorrencia");
             return View();
         }
 
@@ -68,6 +75,10 @@ namespace BibliotecaWeb.Controllers
         {
 
             OcorrenciaModel Ocorrencia = gOcorrencia.Obter(id);
+
+            ViewBag.IdTipoOcorrencia = new SelectList(gTipoOcorrencia.ObterTodos(), "IdTipoOcorrencia", "TipoOcorrencia", Ocorrencia.IdTipoOcorrencia);
+            ViewBag.IdStatusOcorrencia = new SelectList(gStatusOcorrencia.ObterTodos(), "IdStatusOcorrencia", "StatusOcorrencia");
+
             return View(Ocorrencia);
         }
 

@@ -90,8 +90,10 @@ namespace Services
                             Titulo = Ocorrencia.Titulo,
                             Descricao = Ocorrencia.Descricao,
                             Data = Ocorrencia.DataCriacao,
-                            IdTipo = Ocorrencia.IdTipoOcorrencia,
-                            IdStatus = Ocorrencia.IdStatusOcorrencia,
+                            IdTipoOcorrencia = Ocorrencia.IdTipoOcorrencia,
+                            IdStatusOcorrenicia = Ocorrencia.IdStatusOcorrencia,
+                            StatusOcorrencia = Ocorrencia.tb_statusocorrencia.StatusOcorrencia,
+                            TipoOcorrencia = Ocorrencia.tb_tipoocorrencia.TipoOcorrencia
 
                         };
             return query;
@@ -128,9 +130,9 @@ namespace Services
             OcorrenciaE.IdPessoa = OcorrenciaModel.IdPessoa;
             OcorrenciaE.Titulo = OcorrenciaModel.Titulo;
             OcorrenciaE.Descricao = OcorrenciaModel.Descricao;
-            OcorrenciaE.IdTipoOcorrencia = OcorrenciaModel.IdTipo;
+            OcorrenciaE.IdTipoOcorrencia = OcorrenciaModel.IdTipoOcorrencia;
             OcorrenciaE.DataCriacao = OcorrenciaModel.Data;
-            OcorrenciaE.IdStatusOcorrencia = OcorrenciaModel.IdStatus;
+            OcorrenciaE.IdStatusOcorrencia = OcorrenciaModel.IdStatusOcorrenicia;
 
         }
 

@@ -51,17 +51,20 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Tipo) %>
+            <%: Html.LabelFor(model => model.IdTipoOcorrencia) %>
         </div>
         <p>
-            <%: @Html.DropDownListFor(model => model.Tipo, new[]
-            {
-                new SelectListItem {Text = "Barulho", Value = "Barulho"},
-                new SelectListItem {Text = "Vizinho", Value = "Vizinho"},
-                new SelectListItem {Text = "Sujeira", Value = "Sujeira"},
-
-            }, Models.App_GlobalResources.Mensagem.selecione)%> 
+             <%: Html.DropDownList("IdTipoOcorrencia")%>
+              <%: Html.ValidationMessageFor(model => model.IdTipoOcorrencia)%>
         </p>    
+
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.IdStatusOcorrenicia) %>
+        </div>
+        <p>
+             <%: Html.DropDownList("IdStatusOcorrencia")%>
+              <%: Html.ValidationMessageFor(model => model.IdStatusOcorrenicia)%>
+        </p>  
 
        
         <p>
