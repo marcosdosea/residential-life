@@ -7,7 +7,7 @@ using Models.App_GlobalResources;
 
 namespace Models
 {
-    public class RegistrarOcorrenciaModel
+    public class OcorrenciaModel
     {
 
         public int IdOcorrencia { get; set; }
