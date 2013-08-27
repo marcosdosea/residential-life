@@ -45,10 +45,10 @@
             <%: Html.DisplayFor(modelItem => item.Data) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.Tipo) %>
+            <%: Html.DisplayFor(modelItem => item.TipoOcorrencia) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.Status) %>
+            <%: Html.DisplayFor(modelItem => item.StatusOcorrencia) %>
         </td>
         <td>
             <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.IdOcorrencia })%> |

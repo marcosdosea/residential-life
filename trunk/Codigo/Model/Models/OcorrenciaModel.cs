@@ -35,18 +35,18 @@ namespace Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Data { get; set; }
 
-        public int IdTipo { get; set; }
+        public int IdTipoOcorrencia { get; set; }
 
         [Display(Name = "tipo", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
-        public string Tipo { get; set; }
+        public string TipoOcorrencia { get; set; }
 
         //[Display(Name = "status", ResourceType = typeof(Mensagem))]
         // [Required(ErrorMessageResourceType = typeof(Mensagem),
         //     ErrorMessageResourceName = "required")]
-        public string Status { get; set; }
-        public int IdStatus { get; set; }
+        public string StatusOcorrencia { get; set; }
+        public int IdStatusOcorrenicia { get; set; }
 
 
     }
