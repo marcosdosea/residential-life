@@ -50,7 +50,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdStatusPagamento) %>
+            <%: Html.LabelFor(model => model.StatusPagamento) %>
         </div>
         <div class="editor-field">
             <%: Html.DropDownList("IdStatusPagamento")%>

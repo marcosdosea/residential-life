@@ -17,6 +17,7 @@ namespace Models.Models
             ErrorMessageResourceName = "required")]
         public int IdAreaPublica { get; set; }
 
+
         [Display(Name="areaPublica", ResourceType = typeof(Mensagem))]
         [StringLength(100)]
         public string NomeAreaPublica { get; set; }
@@ -31,20 +32,24 @@ namespace Models.Models
         [Display(Name = "dataInicio", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
-        //[Range(typeof(DateTime), "1/1/1900", "31/12/2200")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DataInicio { get; set; }
 
 
         [Display(Name = "dataFim", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
-        //[Range(typeof(DateTime), "1/1/1900", "31/12/2200")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DataFim { get; set; }
 
-        //[Display(Name = "idStatusPagamento", ResourceType = typeof(Mensagem))]
+
+        [Display(Name = "idStatusPagamento", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
         public int IdStatusPagamento { get; set; }
+
 
         [Display(Name = "statusPagamento", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),

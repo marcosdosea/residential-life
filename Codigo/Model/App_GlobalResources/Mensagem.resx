@@ -396,4 +396,7 @@
   <data name="sindico" xml:space="preserve">
     <value>Síndico</value>
   </data>
+  <data name="idStatusPagamento" xml:space="preserve">
+    <value>Código Status Pagamento</value>
+  </data>
 </root>
