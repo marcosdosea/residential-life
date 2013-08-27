@@ -74,7 +74,7 @@
     <Compile Include="Controllers\EnqueteController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\RegistrarOcorrenciaController.cs" />
+    <Compile Include="Controllers\OcorrenciaController.cs" />
     <Compile Include="Controllers\ReservaAmbienteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

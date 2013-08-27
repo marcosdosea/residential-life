@@ -23,7 +23,7 @@ namespace Persistence
         private IRepositorioGenerico<tb_reservaambiente> _repReservaAmbiente;
         private IRepositorioGenerico<tb_moradia> _repMoradia;
         private IRepositorioGenerico<tb_enquete> _repEnquete;
-        private IRepositorioGenerico<tb_ocorrencia> _repRegistrarOcorrencia;
+        private IRepositorioGenerico<tb_ocorrencia> _repOcorrencia;
         private IRepositorioGenerico<tb_statusenquete> _repStatusEnquete; 
         private IRepositorioGenerico<tb_statusareapublica> _repStatusAreaPublica;
         private IRepositorioGenerico<tb_statuspagamento> _repStatusPagamento;
@@ -169,15 +169,15 @@ namespace Persistence
         /// <summary>
         /// Repositório para manipular dados persistidos de ocorrencia
         /// </summary>
-        public IRepositorioGenerico<tb_ocorrencia> RepositorioRegistrarOcorrencia
+        public IRepositorioGenerico<tb_ocorrencia> RepositorioOcorrencia
         {
             get
             {
-                if (_repRegistrarOcorrencia == null)
+                if (_repOcorrencia == null)
                 {
-                    _repRegistrarOcorrencia = new RepositorioGenerico<tb_ocorrencia>(_context);
+                    _repOcorrencia = new RepositorioGenerico<tb_ocorrencia>(_context);
                 }
-                return _repRegistrarOcorrencia;
+                return _repOcorrencia;
             }
         }
 
