@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Models.Models
 {
-    class TipoOcorrenciaModel
+   public class TipoOcorrenciaModel
     {
         public int IdTipoOcorrencia { get; set; }
 
