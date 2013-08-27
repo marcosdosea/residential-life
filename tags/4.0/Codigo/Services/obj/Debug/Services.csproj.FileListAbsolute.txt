@@ -1,0 +1,126 @@
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Services\bin\Debug\Services.dll
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Services\bin\Debug\Services.pdb
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Services\bin\Debug\Model.dll
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Services\bin\Debug\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Services\bin\Debug\Model.pdb
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Services\bin\Debug\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Services\obj\Debug\Services.dll
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\Thiago\Desktop\es2\Services\bin\Debug\Services.dll
+C:\Users\Thiago\Desktop\es2\Services\bin\Debug\Services.pdb
+C:\Users\Thiago\Desktop\es2\Services\bin\Debug\Model.dll
+C:\Users\Thiago\Desktop\es2\Services\bin\Debug\Persistence.dll
+C:\Users\Thiago\Desktop\es2\Services\bin\Debug\Model.pdb
+C:\Users\Thiago\Desktop\es2\Services\bin\Debug\Persistence.pdb
+C:\Users\Thiago\Desktop\es2\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Desktop\es2\Services\obj\Debug\Services.dll
+C:\Users\Thiago\Desktop\es2\Services\obj\Debug\Services.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Services\bin\Debug\Services.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Services\bin\Debug\Services.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Services\bin\Debug\Model.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Services\bin\Debug\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Services\bin\Debug\Model.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Services\bin\Debug\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Services\obj\Debug\Services.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\bin\Debug\Services.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\bin\Debug\Services.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\bin\Debug\Model.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\bin\Debug\Persistence.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\bin\Debug\Model.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\bin\Debug\Persistence.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\obj\Debug\Services.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Services\bin\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Services\bin\Debug\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Services\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Services\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Services\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Services\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Services\obj\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Services\obj\Debug\Services.pdb
+D:\Tauany\residential-life\trunk\Codigo\Services\obj\Debug\ResolveAssemblyReference.cache
+D:\Tauany\residential-life\trunk\Codigo\Services\bin\Debug\Services.dll
+D:\Tauany\residential-life\trunk\Codigo\Services\bin\Debug\Services.pdb
+D:\Tauany\residential-life\trunk\Codigo\Services\bin\Debug\Model.dll
+D:\Tauany\residential-life\trunk\Codigo\Services\bin\Debug\Persistence.dll
+D:\Tauany\residential-life\trunk\Codigo\Services\bin\Debug\Model.pdb
+D:\Tauany\residential-life\trunk\Codigo\Services\bin\Debug\Persistence.pdb
+D:\Tauany\residential-life\trunk\Codigo\Services\obj\Debug\Services.dll
+D:\Tauany\residential-life\trunk\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Services\bin\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Services\bin\Debug\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Services\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Services\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Services\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Services\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Services\obj\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Services\bin\Debug\Services.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Services\bin\Debug\Services.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Services\bin\Debug\Model.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Services\bin\Debug\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Services\bin\Debug\Model.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Services\bin\Debug\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Services\obj\Debug\Services.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Services\obj\Debug\Services.pdb
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Services\bin\Debug\Services.dll
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Services\bin\Debug\Services.pdb
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Services\bin\Debug\Model.dll
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Services\bin\Debug\Persistence.dll
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Services\bin\Debug\Model.pdb
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Services\bin\Debug\Persistence.pdb
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Services\obj\Debug\Services.dll
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\obj\Debug\Services.dll
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Services.dll
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Services.pdb
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Model.dll
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Persistence.dll
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Model.pdb
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Services\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\bin\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\bin\Debug\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\obj\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Services\obj\Debug\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Services\bin\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Services\bin\Debug\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Services\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Services\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Services\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Services\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Services\obj\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Services\obj\Debug\Services.pdb
+C:\Users\Thiago\Desktop\Nova pasta\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Desktop\Nova pasta\Services\bin\Debug\Services.dll
+C:\Users\Thiago\Desktop\Nova pasta\Services\bin\Debug\Services.pdb
+C:\Users\Thiago\Desktop\Nova pasta\Services\bin\Debug\Model.dll
+C:\Users\Thiago\Desktop\Nova pasta\Services\bin\Debug\Persistence.dll
+C:\Users\Thiago\Desktop\Nova pasta\Services\bin\Debug\Model.pdb
+C:\Users\Thiago\Desktop\Nova pasta\Services\bin\Debug\Persistence.pdb
+C:\Users\Thiago\Desktop\Nova pasta\Services\obj\Debug\Services.dll
+C:\Users\Thiago\Desktop\Nova pasta\Services\obj\Debug\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Services\bin\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Services\bin\Debug\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Services\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Services\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Services\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Services\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Services\obj\Debug\Services.dll
