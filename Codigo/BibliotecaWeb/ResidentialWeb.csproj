@@ -153,11 +153,11 @@
     <Content Include="Views\Pessoa\Details.aspx" />
     <Content Include="Views\Pessoa\Edit.aspx" />
     <Content Include="Views\Pessoa\Index.aspx" />
-    <Content Include="Views\RegistrarOcorrencia\Create.aspx" />
-    <Content Include="Views\RegistrarOcorrencia\Delete.aspx" />
-    <Content Include="Views\RegistrarOcorrencia\Details.aspx" />
-    <Content Include="Views\RegistrarOcorrencia\Edit.aspx" />
-    <Content Include="Views\RegistrarOcorrencia\Index.aspx" />
+    <Content Include="Views\Ocorrencia\Create.aspx" />
+    <Content Include="Views\Ocorrencia\Delete.aspx" />
+    <Content Include="Views\Ocorrencia\Details.aspx" />
+    <Content Include="Views\Ocorrencia\Edit.aspx" />
+    <Content Include="Views\Ocorrencia\Index.aspx" />
     <Content Include="Views\ReservaAmbiente\Create.aspx" />
     <Content Include="Views\ReservaAmbiente\Delete.aspx" />
     <Content Include="Views\ReservaAmbiente\Details.aspx" />
