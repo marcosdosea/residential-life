@@ -12,3 +12,12 @@ values
 (1,"Pago"),
 (2,"Não Pago");
 
+
+insert into tb_statusocorrencia(IdStatusOcorrencia,StatusOcorrencia)
+values(1,'Em análise'),
+(2,'Resolvida');
+
+insert into tb_tipoocorrencia(IdTipoOcorrencia,TipoOcorrencia)
+values(1,'Barulho'),
+(2,'Vizinho'),
+(3,'Sujeira');
