@@ -89,9 +89,11 @@ namespace Services
                             IdReservaAmbiente = reservaAmbiente.IdPesssoa,
                             IdPesssoa = reservaAmbiente.IdPesssoa,
                             IdAreaPublica = reservaAmbiente.IdAreaPublica,
+                            NomeAreaPublica = reservaAmbiente.tb_areapublica.Nome,
                             DataInicio = reservaAmbiente.DataInicio,
                             DataFim = reservaAmbiente.DataFim,
-                            IdStatusPagamento = reservaAmbiente.IdStatusPagamento
+                            IdStatusPagamento = reservaAmbiente.IdStatusPagamento,
+                            StatusPagamento = reservaAmbiente.tb_statuspagamento.StatusPagamento,
                           
                         };
             return query;
