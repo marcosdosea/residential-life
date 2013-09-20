@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Services;
 using Models;
+using Microsoft.Reporting.WebForms;
 
 namespace BibliotecaWeb.Controllers
 {
@@ -98,7 +99,6 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /Ocorrencia/Delete/5
-
         public ActionResult Delete(int id)
         {
             OcorrenciaModel OcorrenciaModel = gOcorrencia.Obter(id);
@@ -107,12 +107,54 @@ namespace BibliotecaWeb.Controllers
 
         //
         // POST: /Ocorrencia/Delete/5
-
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
             gOcorrencia.Remover(id);
             return RedirectToAction("Index");
+        }
+
+        public ActionResult RelatorioOcorrencia()
+        {
+            LocalReport relatorio = new LocalReport();
+
+            //Caminho onde o arquivo do Report Viewer está localizado
+            relatorio.ReportPath = Server.MapPath("~/Relatorios/Ocorrencia.rdlc");
+            //Define o nome do nosso DataSource e qual rotina irá preenche-lo, no caso, nosso método criado anteriormente
+            relatorio.DataSources.Add(new ReportDataSource("RegistroOcorrencia", gOcorrencia.ObterTodos()));
+
+            string reportType = "PDF";
+            string mimeType;
+            string encoding;
+            string fileNameExtension;
+
+            string deviceInfo =
+             "<DeviceInfo>" +
+             " <OutputFormat>PDF</OutputFormat>" +
+             " <PageWidth>9in</PageWidth>" +
+             " <PageHeight>11in</PageHeight>" +
+             " <MarginTop>0.7in</MarginTop>" +
+             " <MarginLeft>2in</MarginLeft>" +
+             " <MarginRight>2in</MarginRight>" +
+             " <MarginBottom>0.7in</MarginBottom>" +
+             "</DeviceInfo>";
+
+            Warning[] warnings;
+            string[] streams;
+            byte[] bytes;
+
+            //Renderiza o relatório em bytes
+            bytes = relatorio.Render(
+            reportType,
+            deviceInfo,
+            out mimeType,
+            out encoding,
+            out fileNameExtension,
+            out streams,
+            out warnings);
+
+            return File(bytes, mimeType);
+
         }
 
         protected override void Dispose(bool disposing)

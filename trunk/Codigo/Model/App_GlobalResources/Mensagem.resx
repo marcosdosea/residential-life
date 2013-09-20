@@ -405,4 +405,13 @@
   <data name="dataExclusao" xml:space="preserve">
     <value>Data de Exclusão Automática</value>
   </data>
+  <data name="apagarPostagem" xml:space="preserve">
+    <value>Apagar Postagem</value>
+  </data>
+  <data name="novaPostagem" xml:space="preserve">
+    <value>Nova Postagem</value>
+  </data>
+  <data name="postagens" xml:space="preserve">
+    <value>Postagens</value>
+  </data>
 </root>
