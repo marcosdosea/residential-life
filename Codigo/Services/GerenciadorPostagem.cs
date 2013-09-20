@@ -11,7 +11,7 @@ namespace Services
      /// <summary>
     /// Gerencia todas as regras de negócio da entidade Postagem
     /// </summary>
-    class GerenciadorPostagem
+    public class GerenciadorPostagem
     {
         private IUnitOfWork unitOfWork;
         private bool shared;

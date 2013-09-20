@@ -115,6 +115,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apagar Postagem.
+        /// </summary>
+        public static string apagarPostagem {
+            get {
+                return ResourceManager.GetString("apagarPostagem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancelar Reserva de Ambiente.
         /// </summary>
         public static string apagarReservaAmbiente {
@@ -664,6 +673,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nova Postagem.
+        /// </summary>
+        public static string novaPostagem {
+            get {
+                return ResourceManager.GetString("novaPostagem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nova Reserva de Ambiente.
         /// </summary>
         public static string novaReservaAmbiente {
@@ -723,6 +741,15 @@ namespace Models.App_GlobalResources {
         public static string pessoas {
             get {
                 return ResourceManager.GetString("pessoas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Postagens.
+        /// </summary>
+        public static string postagens {
+            get {
+                return ResourceManager.GetString("postagens", resourceCulture);
             }
         }
         
