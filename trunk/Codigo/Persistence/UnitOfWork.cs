@@ -27,9 +27,12 @@ namespace Persistence
         private IRepositorioGenerico<tb_statusenquete> _repStatusEnquete; 
         private IRepositorioGenerico<tb_statusareapublica> _repStatusAreaPublica;
         private IRepositorioGenerico<tb_statuspagamento> _repStatusPagamento;
-
         private IRepositorioGenerico<tb_statusocorrencia> _repStatusOcorrencia;
         private IRepositorioGenerico<tb_tipoocorrencia> _repTipoOcorrencia;
+
+        private IRepositorioGenerico<tb_postagem> _repPostagem;
+
+
         /// <summary>
         /// Construtor cria contexto transacional
         /// </summary>
@@ -241,6 +244,21 @@ namespace Persistence
                     _repStatusOcorrencia = new RepositorioGenerico<tb_statusocorrencia>(_context);
                 }
                 return _repStatusOcorrencia;
+            }
+        }
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de postagem
+        /// </summary>
+        public IRepositorioGenerico<tb_postagem> RepositorioPostagem
+        {
+            get
+            {
+                if (_repPostagem == null)
+                {
+                    _repPostagem = new RepositorioGenerico<tb_postagem>(_context);
+                }
+                return _repPostagem;
             }
         }
 
