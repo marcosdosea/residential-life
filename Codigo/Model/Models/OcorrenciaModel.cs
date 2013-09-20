@@ -36,11 +36,12 @@ namespace Models
         public DateTime Data { get; set; }
 
         public int IdTipoOcorrencia { get; set; }
+        public string TipoOcorrencia { get; set; }
 
         [Display(Name = "tipo", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
-        public string TipoOcorrencia { get; set; }
+        
 
         //[Display(Name = "status", ResourceType = typeof(Mensagem))]
         // [Required(ErrorMessageResourceType = typeof(Mensagem),
