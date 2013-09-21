@@ -37,7 +37,7 @@
             <%: Html.LabelFor(model => model.DataInicio) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.DataInicio) %>
+            <%: Html.TextBoxFor(model => model.DataInicio, new { @class = "date", @type = "date" })%>
             <%: Html.ValidationMessageFor(model => model.DataInicio) %>
         </div>
 
@@ -45,7 +45,7 @@
             <%: Html.LabelFor(model => model.DataFim) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.DataFim) %>
+            <%: Html.TextBoxFor(model => model.DataFim, new { @class = "date", @type = "date" })%>
             <%: Html.ValidationMessageFor(model => model.DataFim) %>
         </div>
 
