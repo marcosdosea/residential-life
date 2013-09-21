@@ -44,7 +44,7 @@
             <%: Html.LabelFor(model => model.dataPublAutomatica) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.dataPublAutomatica) %>
+            <%: Html.TextBoxFor(model => model.dataPublAutomatica, new { @class = "date", @type = "date" })%>
             <%: Html.ValidationMessageFor(model => model.dataPublAutomatica) %>
         </div>
 
@@ -52,7 +52,7 @@
             <%: Html.LabelFor(model => model.dataExclusaoAutomatica) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.dataExclusaoAutomatica) %>
+            <%: Html.TextBoxFor(model => model.dataExclusaoAutomatica, new { @class = "date", @type = "date" })%>
             <%: Html.ValidationMessageFor(model => model.dataExclusaoAutomatica) %>
         </div>
 

@@ -27,7 +27,7 @@ namespace Models.Models
 
         [Required]
         [DataType(DataType.Date)]
-        [Range(typeof(DateTime), "1/1/1900", "1/1/2100", ErrorMessage = "data incorreta")]
+        //[Range(typeof(DateTime), "01/01/1900", "01/01/2100", ErrorMessage = "data incorreta")]
         [Display(Name = "dataInicio", ResourceType = typeof(Mensagem))]
         public DateTime DataInicio { get; set; }
 

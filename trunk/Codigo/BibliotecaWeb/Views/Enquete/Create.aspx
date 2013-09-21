@@ -10,7 +10,10 @@
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
+<script src="<%: Url.Content("~/Scripts/jquery.simple-dtpicker.js") %>" type="text/javascript"></script>
 
+  <link href="../../Content/themes/base/jquery.simple-dtpicker.css" rel="stylesheet"
+        type="text/css" />
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
@@ -44,7 +47,7 @@
             <%: Html.LabelFor(model => model.DataInicio) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.DataInicio) %>
+            <%: Html.TextBoxFor(model => model.DataInicio, new { @class = "date", @type = "date" })%>
             <%: Html.ValidationMessageFor(model => model.DataInicio) %>
         </div>
 
@@ -52,7 +55,7 @@
             <%: Html.LabelFor(model => model.DataFim) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.DataFim) %>
+            <%: Html.TextBoxFor(model => model.DataFim, new { @class = "date", @type = "date" })%>
             <%: Html.ValidationMessageFor(model => model.DataFim) %>
         </div>
 

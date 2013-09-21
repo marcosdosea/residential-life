@@ -14,3 +14,4 @@ function formataData(campo, evt) {
     if (tam > 4)
         campo.value = vr.substr(0, 2) + '/' + vr.substr(2, 2) + '/' + vr.substr(4);
 }
+
