@@ -86,6 +86,7 @@ namespace Services
                         {
                             IdBloco = bloco.IdBloco,
                             IdCondominio = bloco.IdCondominio,
+                            NomeCondominio = bloco.tb_condominio.Nome,
                             Nome = bloco.Nome,
                             QuantidadeAndares = bloco.QuantidadeAndares,
                             QuantidadeMoradias = bloco.QuantidadeMoradias

@@ -78,30 +78,7 @@ namespace BibliotecaWeb.Controllers
             return View(opcoesEnqueteModel);
         }
 
-        //
-        // GET: /enquete/Edit/5
-
-        public ActionResult Edit(int id)
-        {
-            EnqueteModel enqueteModel = gEnquete.Obter(id);
-            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", enqueteModel.IdPessoa);
-            ViewBag.IdStatusEnquete = new SelectList(gStatusEnquete.ObterTodos(), "IdStatusEnquete", "StatusEnquete",enqueteModel.IdStatusEnquete);
-            return View(enqueteModel);
-        }
-
-        //
-        // POST: /enquete/Edit/5
-
-        [HttpPost]
-        public ActionResult Edit(EnqueteModel enqueteModel)
-        {
-            if (ModelState.IsValid)
-            {
-                gEnquete.Editar(enqueteModel);
-                return RedirectToAction("Index");
-            }
-            return View(enqueteModel);
-        }
+      
 
         //
         // GET: /enquete/Delete/5
