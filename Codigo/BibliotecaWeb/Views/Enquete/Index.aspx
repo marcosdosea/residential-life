@@ -56,7 +56,6 @@
             <%: Html.DisplayFor(modelItem => item.StatusEnquete) %>
         </td>
         <td>
-            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editar , "Edit", new {  id=item.IdEnquete }) %> |
             <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.detalhes, "Details", new {  id=item.IdEnquete  }) %> |
             <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.apagar, "Delete", new {  id=item.IdEnquete }) %>
         </td>
