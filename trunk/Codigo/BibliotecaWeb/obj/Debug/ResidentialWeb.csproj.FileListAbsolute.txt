@@ -197,6 +197,23 @@ C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\BibliotecaWeb\obj\Deb
 C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\BibliotecaWeb\obj\Debug\RdlCompile.compiled
 C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
 C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
+<<<<<<< .mine
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\bin\BibliotecaWeb.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\bin\BibliotecaWeb.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\bin\EntityFramework.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\bin\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\bin\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\bin\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\bin\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\bin\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\bin\EntityFramework.xml
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\bin\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\obj\Debug\RdlCompile.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\obj\Debug\RdlCompile.compiled
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
+=======
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\BibliotecaWeb\bin\BibliotecaWeb.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\BibliotecaWeb\bin\BibliotecaWeb.pdb
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\BibliotecaWeb\bin\EntityFramework.dll
@@ -212,3 +229,4 @@ C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codi
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\BibliotecaWeb\obj\Debug\RdlCompile.compiled
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
+>>>>>>> .r137
