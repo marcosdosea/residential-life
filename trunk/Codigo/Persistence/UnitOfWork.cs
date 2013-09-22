@@ -29,8 +29,10 @@ namespace Persistence
         private IRepositorioGenerico<tb_statuspagamento> _repStatusPagamento;
         private IRepositorioGenerico<tb_statusocorrencia> _repStatusOcorrencia;
         private IRepositorioGenerico<tb_tipoocorrencia> _repTipoOcorrencia;
-
         private IRepositorioGenerico<tb_postagem> _repPostagem;
+        private IRepositorioGenerico<tb_veiculo> _repVeiculo;
+        private IRepositorioGenerico<tb_tipoveiculo> _repTipoVeiculo;
+
 
 
         /// <summary>
@@ -259,6 +261,38 @@ namespace Persistence
                     _repPostagem = new RepositorioGenerico<tb_postagem>(_context);
                 }
                 return _repPostagem;
+            }
+        }
+
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de veículo
+        /// </summary>
+        public IRepositorioGenerico<tb_veiculo> RepositorioVeiculo
+        {
+            get
+            {
+                if (_repVeiculo == null)
+                {
+                    _repVeiculo = new RepositorioGenerico<tb_veiculo>(_context);
+                }
+                return _repVeiculo;
+            }
+        }
+
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de tipo de veículo
+        /// </summary>
+        public IRepositorioGenerico<tb_tipoveiculo> RepositorioTipoVeiculo
+        {
+            get
+            {
+                if (_repTipoVeiculo == null)
+                {
+                    _repTipoVeiculo = new RepositorioGenerico<tb_tipoveiculo>(_context);
+                }
+                return _repTipoVeiculo;
             }
         }
 

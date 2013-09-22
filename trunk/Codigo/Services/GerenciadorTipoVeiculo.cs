@@ -8,7 +8,7 @@ using Models;
 
 namespace Services
 {
-    public class GerenciadorTipoOcorrencia
+    public class GerenciadorTipoVeiculo
     {
         private IUnitOfWork unitOfWork;
         private bool shared;
@@ -16,7 +16,7 @@ namespace Services
         /// <summary>
         /// Construtor pode ser acessado externamente e não compartilha contexto
         /// </summary>
-        public GerenciadorTipoOcorrencia()
+        public GerenciadorTipoVeiculo()
         {
             this.unitOfWork = new UnitOfWork();
             shared = false;
@@ -27,35 +27,35 @@ namespace Services
         /// contexto com outras classes de negócio
         /// </summary>
         /// <param name="unitOfWork">Interface que cria os repositórios</param>
-        internal GerenciadorTipoOcorrencia(IUnitOfWork unitOfWork)
+        internal GerenciadorTipoVeiculo(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
             shared = true;
         }
 
         /// <summary>
-        /// Insere um novo na base de dados
+        /// Insere um novo veiculo na base de dados
         /// </summary>
         /// <param name="statusOcorrenciaModel">Dados do modelo</param>
         /// <returns>Chave identificante na base</returns>
-        public int Inserir(TipoOcorrenciaModel tipoOcorrenciaModel)
+        public int Inserir(TipoVeiculoModel tipoVeiculoModel)
         {
-            tb_tipoocorrencia tipoOcorrenciaModelE = new tb_tipoocorrencia();
-            Atribuir(tipoOcorrenciaModel, tipoOcorrenciaModelE);
-            unitOfWork.RepositorioTipoOcorrencia.Inserir(tipoOcorrenciaModelE);
+            tb_tipoveiculo tipoVeiculoModelE = new tb_tipoveiculo();
+            Atribuir(tipoVeiculoModel, tipoVeiculoModelE);
+            unitOfWork.RepositorioTipoVeiculo.Inserir(tipoVeiculoModelE);
             unitOfWork.Commit(shared);
-            return tipoOcorrenciaModelE.IdTipoOcorrencia;
+            return tipoVeiculoModelE.IdTipoVeiculo;
         }
 
         /// <summary>
         /// Altera dados na base de dados
         /// </summary>
         /// <param name="enqueteModel">Dados do modelo</param>
-        public void Editar(TipoOcorrenciaModel tipoOcorrenciaModel)
+        public void Editar(TipoVeiculoModel tipoVeiculoModel)
         {
-            tb_tipoocorrencia tipoOcorrenciaModelE = new tb_tipoocorrencia();
-            Atribuir(tipoOcorrenciaModel, tipoOcorrenciaModelE);
-            unitOfWork.RepositorioTipoOcorrencia.Editar(tipoOcorrenciaModelE);
+            tb_tipoveiculo tipoVeiculoModelE = new tb_tipoveiculo();
+            Atribuir(tipoVeiculoModel, tipoVeiculoModelE);
+            unitOfWork.RepositorioTipoVeiculo.Editar(tipoVeiculoModelE);
             unitOfWork.Commit(shared);
         }
 
@@ -64,9 +64,9 @@ namespace Services
         /// Remove da base de dados
         /// </summary>
         /// <param name="statusPagamentoModel">Identificador do pagamento na base de dados</param>
-        public void Remover(int idTipoOcorrencia)
+        public void Remover(int idTipoVeiculo)
         {
-            unitOfWork.RepositorioTipoOcorrencia.Remover(tipoOcorrencia => tipoOcorrencia.IdTipoOcorrencia.Equals(idTipoOcorrencia));
+            unitOfWork.RepositorioTipoVeiculo.Remover(TipoVeiculo => TipoVeiculo.IdTipoVeiculo.Equals(idTipoVeiculo));
             unitOfWork.Commit(shared);
         }
 
@@ -75,14 +75,14 @@ namespace Services
         /// Consulta padrão para retornar dados do statusenquete como model
         /// </summary>
         /// <returns></returns>
-        private IQueryable<TipoOcorrenciaModel> GetQuery()
+        private IQueryable<TipoVeiculoModel> GetQuery()
         {
-            IQueryable<tb_tipoocorrencia> tb_tipoocorrencia = unitOfWork.RepositorioTipoOcorrencia.GetQueryable();
-            var query = from tipoOcorrencia in tb_tipoocorrencia
-                        select new TipoOcorrenciaModel
+            IQueryable<tb_tipoveiculo> tb_tipoveiculo = unitOfWork.RepositorioTipoVeiculo.GetQueryable();
+            var query = from TipoVeiculo in tb_tipoveiculo
+                        select new TipoVeiculoModel
                         {
-                            IdTipoOcorrencia = tipoOcorrencia.IdTipoOcorrencia,
-                            TipoOcorrencia = tipoOcorrencia.TipoOcorrencia
+                            IdTipoVeiculo = TipoVeiculo.IdTipoVeiculo,
+                            TipoVeiculo = TipoVeiculo.TipoVeiculo
                            
                         };
             return query;
@@ -92,7 +92,7 @@ namespace Services
         /// Obter todos as entidades cadastradas
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<TipoOcorrenciaModel> ObterTodos()
+        public IEnumerable<TipoVeiculoModel> ObterTodos()
         {
             return GetQuery();
         }
@@ -102,10 +102,10 @@ namespace Services
         /// </summary>
         /// <param name="idStatusOcorrencia">Identificador do pagamento na base de dados</param>
         /// <returns>Pagamento model</returns>
-        public TipoOcorrenciaModel Obter(int idTipoOcorrencia)
+        public TipoVeiculoModel Obter(int idTipoVeiculo)
         {
-            IEnumerable<TipoOcorrenciaModel> tipoOcorrenciaEs = GetQuery().Where(tipoOcorrencia => tipoOcorrencia.IdTipoOcorrencia.Equals(idTipoOcorrencia));
-            return tipoOcorrenciaEs.ElementAtOrDefault(0);
+            IEnumerable<TipoVeiculoModel> tipoVeiculoEs = GetQuery().Where(TipoVeiculo => TipoVeiculo.IdTipoVeiculo.Equals(idTipoVeiculo));
+            return tipoVeiculoEs.ElementAtOrDefault(0);
         }
 
         /// <summary>
@@ -113,10 +113,10 @@ namespace Services
         /// </summary>
         /// <param name="statusPagamentoModel">Objeto do modelo</param>
         /// <param name="statusPagamentoE">Entity mapeada da base de dados</param>
-        private void Atribuir(TipoOcorrenciaModel tipoOcorrenciaModel, tb_tipoocorrencia tipoOcorrenciaE)
+        private void Atribuir(TipoVeiculoModel tipoVeiculoModel, tb_tipoveiculo tipoVeiculoE)
         {
-            tipoOcorrenciaE.IdTipoOcorrencia = tipoOcorrenciaModel.IdTipoOcorrencia;
-            tipoOcorrenciaE.TipoOcorrencia = tipoOcorrenciaModel.TipoOcorrencia;
+            tipoVeiculoE.IdTipoVeiculo = tipoVeiculoModel.IdTipoVeiculo;
+            tipoVeiculoE.TipoVeiculo = tipoVeiculoModel.TipoVeiculo;
          
    
         }

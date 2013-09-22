@@ -184,7 +184,7 @@
     <value>Apagar</value>
   </data>
   <data name="confirmacaoApagarPessoa" xml:space="preserve">
-    <value>Tem certeza que deseja deletar esta pessoa?</value>
+    <value>Tem certeza que deseja apagar esta pessoa?</value>
   </data>
   <data name="detalhes" xml:space="preserve">
     <value>Detalhes</value>
@@ -232,7 +232,7 @@
     <value>Condomínios</value>
   </data>
   <data name="confirmacaoCondominio" xml:space="preserve">
-    <value>Tem certeza que deseja deletar este condominio?</value>
+    <value>Tem certeza que deseja apagar este condominio?</value>
   </data>
   <data name="detalhesCondominio" xml:space="preserve">
     <value>Detalhes do Condomínio</value>
@@ -259,7 +259,7 @@
     <value>Blocos</value>
   </data>
   <data name="confirmacaoBloco" xml:space="preserve">
-    <value>Tem certeza que deseja deletar este bloco?</value>
+    <value>Tem certeza que deseja apagar este bloco?</value>
   </data>
   <data name="detalhesBloco" xml:space="preserve">
     <value>Detalhes do Bloco</value>
@@ -334,10 +334,10 @@
     <value>Título</value>
   </data>
   <data name="apagarEnquete" xml:space="preserve">
-    <value>Excluir Enquete</value>
+    <value>Apagar Enquete</value>
   </data>
   <data name="confirmacaoApagarEnquete" xml:space="preserve">
-    <value>Você realmente deseja excluir essa enquete?</value>
+    <value>Você realmente deseja apagar essa enquete?</value>
   </data>
   <data name="criador" xml:space="preserve">
     <value>Criador</value>
@@ -413,5 +413,41 @@
   </data>
   <data name="postagens" xml:space="preserve">
     <value>Postagens</value>
+  </data>
+  <data name="apagarVeiculo" xml:space="preserve">
+    <value>Apagar Veículo</value>
+  </data>
+  <data name="confirmacaoApagarVeiculo" xml:space="preserve">
+    <value>Tem certeza que deseja apagar este veículo?</value>
+  </data>
+  <data name="cor" xml:space="preserve">
+    <value>Cor</value>
+  </data>
+  <data name="detalhesVeiculo" xml:space="preserve">
+    <value>Detalhes do Veículo</value>
+  </data>
+  <data name="editarVeiculo" xml:space="preserve">
+    <value>Editar Veículo</value>
+  </data>
+  <data name="idVeiculo" xml:space="preserve">
+    <value>Código do Veículo</value>
+  </data>
+  <data name="modelo" xml:space="preserve">
+    <value>Modelo</value>
+  </data>
+  <data name="novoVeiculo" xml:space="preserve">
+    <value>Novo Veículo</value>
+  </data>
+  <data name="placa" xml:space="preserve">
+    <value>Placa</value>
+  </data>
+  <data name="tipoVeiculo" xml:space="preserve">
+    <value>Tipo do veículo</value>
+  </data>
+  <data name="veiculos" xml:space="preserve">
+    <value>Veiculos</value>
+  </data>
+  <data name="veiculo" xml:space="preserve">
+    <value>Veículo</value>
   </data>
 </root>
