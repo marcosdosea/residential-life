@@ -132,6 +132,17 @@ C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Model\obj\Debug\Model
 C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Model\obj\Debug\Model.csproj.GenerateResource.Cache
 C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Model\obj\Debug\Model.dll
 C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Model\obj\Debug\Model.pdb
+<<<<<<< .mine
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Model\bin\Debug\Model.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Model\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Model\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Model\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Model\obj\Debug\Models.App_GlobalResources.Mensagem.resources
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Model\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Model\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Model\obj\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Model\obj\Debug\Model.pdb
+=======
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Model\bin\Debug\Model.dll.config
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Model\bin\Debug\Model.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Model\bin\Debug\Model.pdb
@@ -160,3 +171,4 @@ C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\Model\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\Model\obj\Debug\Model.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\Model\obj\Debug\Model.pdb
+>>>>>>> .r139
