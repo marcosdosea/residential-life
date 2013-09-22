@@ -19,10 +19,10 @@ namespace Persistence
         IRepositorioGenerico<tb_statusenquete> RepositorioStatusEnquete{ get; }
         IRepositorioGenerico<tb_statusareapublica> RepositorioStatusAreaPublica { get; }
         IRepositorioGenerico<tb_statuspagamento> RepositorioStatusPagamento { get; }
-
         IRepositorioGenerico<tb_statusocorrencia> RepositorioStatusOcorrencia { get; }
         IRepositorioGenerico<tb_tipoocorrencia> RepositorioTipoOcorrencia { get; }
-
         IRepositorioGenerico<tb_postagem> RepositorioPostagem { get; }
+        IRepositorioGenerico<tb_veiculo> RepositorioVeiculo { get; }
+        IRepositorioGenerico<tb_tipoveiculo> RepositorioTipoVeiculo { get; }
     }
 }

@@ -21,3 +21,9 @@ insert into tb_tipoocorrencia(IdTipoOcorrencia,TipoOcorrencia)
 values(1,'Barulho'),
 (2,'Vizinho'),
 (3,'Sujeira');
+
+insert into tb_tipooveiculo(IdTipoVeiculo,TipoVeiculo)
+values(1,'Moto'),
+(2,'Carro'),
+(3,'Caminhão');
+
