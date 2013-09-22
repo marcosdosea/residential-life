@@ -230,3 +230,8 @@ C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codi
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
 >>>>>>> .r137
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\BibliotecaWeb\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\BibliotecaWeb\obj\Debug\RdlCompile.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\BibliotecaWeb\obj\Debug\RdlCompile.compiled
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
