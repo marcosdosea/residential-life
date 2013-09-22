@@ -79,7 +79,7 @@ namespace ResidentialWeb.Controllers
             {
                 // Attempt to register the user
                 MembershipCreateStatus createStatus;
-                Membership.CreateUser(model.UserName, model.Password, model.Email, null, null, true, null, out createStatus);
+                Membership.CreateUser(model.UserName, model.Password, model.Email, "teste1", "teste2", true, out createStatus);
 
                 if (createStatus == MembershipCreateStatus.Success)
                 {
