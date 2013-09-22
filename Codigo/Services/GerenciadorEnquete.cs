@@ -38,12 +38,16 @@ namespace Services
         /// </summary>
         /// <param name="enqueteModel">Dados do modelo</param>
         /// <returns>Chave identificante na base</returns>
-        public int Inserir(EnqueteModel enqueteModel)
+        public int Inserir(EnqueteModel enqueteModel )
         {
             tb_enquete enqueteE = new tb_enquete();
+            tb_opcoesenquete opcoesEnqueteE = new tb_opcoesenquete();
+
             Atribuir(enqueteModel, enqueteE);
             unitOfWork.RepositorioEnquete.Inserir(enqueteE);
+
             unitOfWork.Commit(shared);
+            
             return enqueteE.IdEnquete;
         }
 
@@ -66,6 +70,7 @@ namespace Services
         /// <param name="enqueteModel">Identificador do enquete na base de dados</param>
         public void Remover(int idEnquete)
         {
+            unitOfWork.RepositorioOpcaoEnquete.Remover(opcao => opcao.IdEnquete.Equals(idEnquete));
             unitOfWork.RepositorioEnquete.Remover(enquete => enquete.IdEnquete.Equals(idEnquete));
             unitOfWork.Commit(shared);
         }
