@@ -20,6 +20,8 @@ namespace Models.Models
         [StringLength(100)]
         public string Nome { get; set; }
 
+        public string NomeCondominio { get; set; }
+
         [Required]
         [Display(Name = "qtdeAndares", ResourceType = typeof(Mensagem))]
         [Range(1, 1000)]
