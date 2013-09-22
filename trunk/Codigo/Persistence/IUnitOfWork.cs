@@ -22,7 +22,11 @@ namespace Persistence
         IRepositorioGenerico<tb_statusocorrencia> RepositorioStatusOcorrencia { get; }
         IRepositorioGenerico<tb_tipoocorrencia> RepositorioTipoOcorrencia { get; }
         IRepositorioGenerico<tb_postagem> RepositorioPostagem { get; }
+
+        IRepositorioGenerico<tb_opcoesenquete> RepositorioOpcaoEnquete { get; }
+
         IRepositorioGenerico<tb_veiculo> RepositorioVeiculo { get; }
         IRepositorioGenerico<tb_tipoveiculo> RepositorioTipoVeiculo { get; }
+
     }
 }

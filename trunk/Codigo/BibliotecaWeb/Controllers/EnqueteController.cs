@@ -16,12 +16,14 @@ namespace BibliotecaWeb.Controllers
         private GerenciadorEnquete gEnquete;
         private GerenciadorPessoa gPessoa;
         private GerenciadorStatusEnquete gStatusEnquete;
+        private GerenciadorOpcaoEnquete gOpcao;
 
         public EnqueteController()
         {
             gEnquete = new GerenciadorEnquete();
             gStatusEnquete = new GerenciadorStatusEnquete();
             gPessoa = new GerenciadorPessoa();
+            gOpcao = new GerenciadorOpcaoEnquete();
         }
 
         public ViewResult Index()
@@ -60,15 +62,20 @@ namespace BibliotecaWeb.Controllers
         // POST: /enquete/Create
 
         [HttpPost]
-        public ActionResult Create(EnqueteModel enqueteModel)
+        public ActionResult Create(OpcoesEnqueteModel opcoesEnqueteModel)
         {
             if (ModelState.IsValid)
             {
-                gEnquete.Inserir(enqueteModel);
+                int id_enquete = gEnquete.Inserir(opcoesEnqueteModel.Enquete);
+               
+                foreach (OpcaoModel opcao in opcoesEnqueteModel.Opcoes)
+                {
+                    gOpcao.Inserir(opcao, id_enquete);
+                }
                 return RedirectToAction("Index");
             }
 
-            return View(enqueteModel);
+            return View(opcoesEnqueteModel);
         }
 
         //
@@ -81,8 +88,6 @@ namespace BibliotecaWeb.Controllers
             ViewBag.IdStatusEnquete = new SelectList(gStatusEnquete.ObterTodos(), "IdStatusEnquete", "StatusEnquete",enqueteModel.IdStatusEnquete);
             return View(enqueteModel);
         }
-
-
 
         //
         // POST: /enquete/Edit/5

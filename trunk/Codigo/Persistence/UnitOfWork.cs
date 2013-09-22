@@ -30,6 +30,8 @@ namespace Persistence
         private IRepositorioGenerico<tb_statusocorrencia> _repStatusOcorrencia;
         private IRepositorioGenerico<tb_tipoocorrencia> _repTipoOcorrencia;
         private IRepositorioGenerico<tb_postagem> _repPostagem;
+        private IRepositorioGenerico<tb_opcoesenquete> _repOpcaoEnquete;
+
         private IRepositorioGenerico<tb_veiculo> _repVeiculo;
         private IRepositorioGenerico<tb_tipoveiculo> _repTipoVeiculo;
 
@@ -58,6 +60,18 @@ namespace Persistence
                     _repStatusEnquete = new RepositorioGenerico<tb_statusenquete>(_context);
                 }
                 return _repStatusEnquete;
+            }
+        }
+
+        public IRepositorioGenerico<tb_opcoesenquete> RepositorioOpcaoEnquete
+        {
+            get
+            {
+                if (_repOpcaoEnquete == null)
+                {
+                    _repOpcaoEnquete = new RepositorioGenerico<tb_opcoesenquete>(_context);
+                }
+                return _repOpcaoEnquete;
             }
         }
 

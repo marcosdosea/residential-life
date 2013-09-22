@@ -1,79 +1,117 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.EnqueteModel>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.OpcoesEnqueteModel>" %>
 
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+</script>
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Create
 </asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-<h2><%: Models.App_GlobalResources.Mensagem.enquete %></h2>
-
-<script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
-<script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
-<script src="<%: Url.Content("~/Scripts/jquery.simple-dtpicker.js") %>" type="text/javascript"></script>
-
-  <link href="../../Content/themes/base/jquery.simple-dtpicker.css" rel="stylesheet"
+    <h2>
+        <%: Models.App_GlobalResources.Mensagem.enquete %></h2>
+    <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
+    <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>"
+        type="text/javascript"></script>
+    <script src="<%: Url.Content("~/Scripts/jquery.simple-dtpicker.js") %>" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-enquete.js" type="text/javascript"></script>
+    <link href="../../Content/themes/base/jquery.simple-dtpicker.css" rel="stylesheet"
         type="text/css" />
-<% using (Html.BeginForm()) { %>
+    <% using (Html.BeginForm())
+       { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend><%: Models.App_GlobalResources.Mensagem.enquete %></legend>
-
+        <legend>
+            <%: Models.App_GlobalResources.Mensagem.enquete %></legend>
         <div class="editor-label">
             <%: Models.App_GlobalResources.Mensagem.criador %>
         </div>
-         <div class="editor-field">
-            <%: Html.DropDownList("IdPessoa")%>
-            <%: Html.ValidationMessageFor(model => model.IdPessoa) %>
+        <div class="editor-field">
+            <%: Html.DropDownListFor(model => model.Enquete.IdPessoa, ViewBag.IdPessoa as SelectList)%>
+            <%: Html.ValidationMessageFor(model => model.Enquete.IdPessoa)%>
         </div>
-
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Titulo) %>
+            <%: Html.LabelFor(model => model.Enquete.Titulo)%>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Titulo) %>
-            <%: Html.ValidationMessageFor(model => model.Titulo) %>
+            <%: Html.EditorFor(model => model.Enquete.Titulo)%>
+            <%: Html.ValidationMessageFor(model => model.Enquete.Titulo)%>
         </div>
-
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Descricao) %>
+            <%: Html.LabelFor(model => model.Enquete.Descricao)%>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Descricao) %>
-            <%: Html.ValidationMessageFor(model => model.Descricao) %>
+            <%: Html.EditorFor(model => model.Enquete.Descricao)%>
+            <%: Html.ValidationMessageFor(model => model.Enquete.Descricao)%>
         </div>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.DataInicio) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.TextBoxFor(model => model.DataInicio, new { @class = "date", @type = "date" })%>
-            <%: Html.ValidationMessageFor(model => model.DataInicio) %>
+        <div style="float: left;">
+         <fieldset>
+        <legend> Opções </legend>
+
+        <a  href="javascript:addRow();">Adicionar opção</a>
+        <table id="formTable">
+            <thead>
+                <tr>
+                    <th>
+                        
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Opção 1:
+                        <%: Html.EditorFor(model => model.Opcoes[0].Descricao)%>
+                        <%: Html.ValidationMessageFor(model => model.Opcoes[0].Descricao)%>
+                    </td>
+                </tr>
+                <tr>
+                
+                    <td>
+                        Opção 2:
+                        <%: Html.EditorFor(model => model.Opcoes[1].Descricao)%>
+                        <%: Html.ValidationMessageFor(model => model.Opcoes[1].Descricao)%>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </fieldset>
         </div>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.DataFim) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.TextBoxFor(model => model.DataFim, new { @class = "date", @type = "date" })%>
-            <%: Html.ValidationMessageFor(model => model.DataFim) %>
-        </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdStatusEnquete) %>
+            <%: Html.LabelFor(model => model.Enquete.DataInicio)%>
         </div>
         <div class="editor-field">
-            <%: Html.DropDownList("IdStatusEnquete")%>
-            <%: Html.ValidationMessageFor(model => model.IdStatusEnquete) %>
+            <%: Html.TextBoxFor(model => model.Enquete.DataInicio, new { @class = "date", @type = "date" })%>
+            <%: Html.ValidationMessageFor(model => model.Enquete.DataInicio)%>
+        </div>
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Enquete.DataFim)%>
+        </div>
+        <div class="editor-field">
+            <%: Html.TextBoxFor(model => model.Enquete.DataFim, new { @class = "date", @type = "date" })%>
+            <%: Html.ValidationMessageFor(model => model.Enquete.DataFim)%>
+        </div>
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.Enquete.IdStatusEnquete)%>
+        </div>
+        <div class="editor-field">
+            <%: Html.DropDownListFor(model => model.Enquete.IdStatusEnquete, ViewBag.IdStatusEnquete as SelectList)%>
+            <%: Html.ValidationMessageFor(model => model.Enquete.IdStatusEnquete)%>
         </div>
         <p>
-            <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
+           
         </p>
     </fieldset>
-<% } %>
-
-<div>
-    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
-</div>
-
+     <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
+    </div>
+    <% } %>
+    <div>
+        <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
+    </div>
 </asp:Content>
