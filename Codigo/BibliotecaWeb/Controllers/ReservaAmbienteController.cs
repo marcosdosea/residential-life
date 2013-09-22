@@ -127,8 +127,6 @@ namespace BibliotecaWeb.Controllers
             base.Dispose(disposing);
         }
 
-       
-
         public ActionResult RelatorioReservasPorData()
         {
             LocalReport relatorio = new LocalReport();

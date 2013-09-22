@@ -149,7 +149,6 @@ namespace BibliotecaWeb.Controllers
             return File(bytes, mimeType);
 
         }
-    
 
 
         public ActionResult RelatorioPessoa()

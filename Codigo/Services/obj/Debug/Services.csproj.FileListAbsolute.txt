@@ -142,6 +142,17 @@ C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Services\bin\Debug\Pe
 C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
 C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Services\obj\Debug\Services.dll
 C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Services\obj\Debug\Services.pdb
+<<<<<<< .mine
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Services\bin\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Services\bin\Debug\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Services\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Services\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Services\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Services\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Services\obj\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Services\obj\Debug\Services.pdb
+=======
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Services\bin\Debug\Services.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Services\bin\Debug\Services.pdb
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Services\bin\Debug\Model.dll
@@ -151,3 +162,4 @@ C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codi
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Services\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Services\obj\Debug\Services.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Services\obj\Debug\Services.pdb
+>>>>>>> .r137

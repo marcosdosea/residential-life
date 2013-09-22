@@ -134,6 +134,16 @@ C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Persistence\bin\Debug
 C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
 C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Persistence\obj\Debug\Persistence.dll
 C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Persistence\obj\Debug\Persistence.pdb
+<<<<<<< .mine
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\obj\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\obj\Debug\Persistence.pdb
+=======
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Persistence\bin\Debug\Persistence.dll.config
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Persistence\bin\Debug\Persistence.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Persistence\bin\Debug\Persistence.pdb
@@ -142,3 +152,4 @@ C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codi
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Persistence\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Persistence\obj\Debug\Persistence.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Persistence\obj\Debug\Persistence.pdb
+>>>>>>> .r137
