@@ -9,6 +9,7 @@ using Microsoft.Reporting.WebForms;
 
 namespace BibliotecaWeb
 {
+    [Authorize(Roles = "Morador")]
     public class VeiculoController : Controller
     {
         
