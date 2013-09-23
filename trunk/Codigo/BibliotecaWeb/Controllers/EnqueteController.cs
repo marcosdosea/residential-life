@@ -26,22 +26,24 @@ namespace BibliotecaWeb.Controllers
             gOpcao = new GerenciadorOpcaoEnquete();
         }
 
+        [Authorize(Roles = "Síndico")]
         public ViewResult Index()
         {
             return View(gEnquete.ObterTodos());
         }
+        [Authorize(Roles = "Síndico")]
         public ViewResult EmAndamento()
         {
             return View(gEnquete.ObterEnquetesAtivas());
         }
-
+        [Authorize(Roles = "Síndico")]
         public ViewResult Finalizadas()
         {
             return View(gEnquete.ObterEnquetesFinalizadas());
         }
         //
         // GET: /enquete/Details/5
-
+        [Authorize(Roles = "Síndico")]
         public ViewResult Details(int id)
         {
             EnqueteModel enquete = gEnquete.Obter(id);
@@ -50,7 +52,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /enquete/Create
-
+        [Authorize(Roles = "Síndico")]
         public ActionResult Create()
         {
             ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
@@ -82,7 +84,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /enquete/Delete/5
-
+        [Authorize(Roles = "Síndico")]
         public ActionResult Delete(int id)
         {
             EnqueteModel enqueteModel = gEnquete.Obter(id);
