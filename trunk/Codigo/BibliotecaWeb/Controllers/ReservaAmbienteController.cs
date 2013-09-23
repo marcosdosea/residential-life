@@ -12,6 +12,8 @@ using Microsoft.Reporting.WebForms;
 
 namespace BibliotecaWeb.Controllers
 {
+    
+    
     public class ReservaAmbienteController : Controller
     {
         private GerenciadorReservaAmbiente gReservaAmbiente;
@@ -28,6 +30,7 @@ namespace BibliotecaWeb.Controllers
         //
         // GET: /ReservaAmbiente/
 
+       
         public ViewResult Index()
         {
             return View(gReservaAmbiente.ObterTodos());
@@ -36,6 +39,8 @@ namespace BibliotecaWeb.Controllers
         //
         // GET: /ReservaAmbiente/Details/5
 
+        [Authorize(Roles = "Morador")]
+        [Authorize(Roles = "Síndico")]
         public ViewResult Details(int id)
         {
             ReservaAmbienteModel reservaAmbiente = gReservaAmbiente.Obter(id);
@@ -45,6 +50,7 @@ namespace BibliotecaWeb.Controllers
         //
         // GET: /ReservaAmbiente/Create
 
+        [Authorize(Roles = "Morador")]
         public ActionResult Create()
         {
             //Pegar somente as áreas públicas do condomínio corrente no futuro
@@ -79,6 +85,7 @@ namespace BibliotecaWeb.Controllers
         //
         // GET: /ReservaAmbiente/Edit/5
 
+        [Authorize(Roles = "Morador")]
         public ActionResult Edit(int id)
         {
             ReservaAmbienteModel reservaAmbiente = gReservaAmbiente.Obter(id);
@@ -106,6 +113,7 @@ namespace BibliotecaWeb.Controllers
         //
         // GET: /ReservaAmbiente/Delete/5
 
+        [Authorize(Roles = "Morador")]
         public ActionResult Delete(int id)
         {
             ReservaAmbienteModel reservaAmbienteModel = gReservaAmbiente.Obter(id);
@@ -127,6 +135,7 @@ namespace BibliotecaWeb.Controllers
             base.Dispose(disposing);
         }
 
+        [Authorize(Roles = "Síndico")]
         public ActionResult RelatorioReservasPorData()
         {
             LocalReport relatorio = new LocalReport();
