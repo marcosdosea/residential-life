@@ -111,5 +111,48 @@ namespace BibliotecaWeb
             base.Dispose(disposing);
         }
 
+
+        public ActionResult RelatorioVeiculos()
+        {
+            LocalReport relatorio = new LocalReport();
+
+            //Caminho onde o arquivo do Report Viewer está localizado
+            relatorio.ReportPath = Server.MapPath("~/Relatorios/ReportListaVeiculos.rdlc");
+            //Define o nome do nosso DataSource e qual rotina irá preenche-lo, no caso, nosso método criado anteriormente
+            relatorio.DataSources.Add(new ReportDataSource("DataSetVeiculos", gVeiculo.ObterTodos()));
+
+            string reportType = "PDF";
+            string mimeType;
+            string encoding;
+            string fileNameExtension;
+
+            string deviceInfo =
+             "<DeviceInfo>" +
+             " <OutputFormat>PDF</OutputFormat>" +
+             " <PageWidth>9in</PageWidth>" +
+             " <PageHeight>11in</PageHeight>" +
+             " <MarginTop>0.7in</MarginTop>" +
+             " <MarginLeft>2in</MarginLeft>" +
+             " <MarginRight>2in</MarginRight>" +
+             " <MarginBottom>0.7in</MarginBottom>" +
+             "</DeviceInfo>";
+
+            Warning[] warnings;
+            string[] streams;
+            byte[] bytes;
+
+            //Renderiza o relatório em bytes
+            bytes = relatorio.Render(
+            reportType,
+            deviceInfo,
+            out mimeType,
+            out encoding,
+            out fileNameExtension,
+            out streams,
+            out warnings);
+
+            return File(bytes, mimeType);
+
+        }
     }
 }

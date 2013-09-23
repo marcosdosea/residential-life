@@ -135,7 +135,7 @@ namespace BibliotecaWeb.Controllers
             base.Dispose(disposing);
         }
 
-        [Authorize(Roles = "Síndico")]
+        
         public ActionResult RelatorioReservasPorData()
         {
             LocalReport relatorio = new LocalReport();
