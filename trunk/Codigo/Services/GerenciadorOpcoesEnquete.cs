@@ -102,6 +102,12 @@ namespace Services
             return GetQuery();
         }
 
+        public IEnumerable<OpcaoModel> ObterOpcoesEnquete(int id)
+        {
+            return GetQuery().Where(opcoes => opcoes.IdEnquete.Equals(id));
+        }
+
+
         
         /// <summary>
         /// Obtém um opcao
