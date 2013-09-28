@@ -26,7 +26,7 @@ namespace BibliotecaWeb.Controllers
             gOpcao = new GerenciadorOpcaoEnquete();
         }
 
-        [Authorize(Roles = "Síndico")]
+        //[Authorize(Roles = "Síndico")]
         public ViewResult Index()
         {
             return View(gEnquete.ObterTodos());
@@ -52,11 +52,25 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /enquete/Create
-        [Authorize(Roles = "Síndico")]
+        //[Authorize(Roles = "Síndico")]
         public ActionResult Create()
         {
             ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
             ViewBag.IdStatusEnquete = new SelectList(gStatusEnquete.ObterTodos(), "IdStatusEnquete", "StatusEnquete");
+            return View();
+        }
+
+        //
+        // GET: /enquete/Votar
+        //[Authorize(Roles = "Morador")]
+        public ActionResult Votar()
+        {
+            return View(gEnquete.ObterEnquetesAtivas());
+        }
+
+        public ActionResult VotarEnquete(int id)
+        {
+            ViewBag.OpcoesEnquete = new SelectList(gOpcao.ObterOpcoesEnquete(id), "IdOpcao", "Descricao");
             return View();
         }
 

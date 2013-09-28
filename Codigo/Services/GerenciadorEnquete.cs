@@ -115,7 +115,7 @@ namespace Services
         /// <returns></returns>
         public IEnumerable<EnqueteModel> ObterEnquetesFinalizadas()
         {
-            return GetQuery().Where(enquete => enquete.StatusEnquete.Contains("Finalizada"));
+            return GetQuery().Where(enquete => enquete.StatusEnquete.Contains("Fechada"));
         }
 
         /// <summary>
@@ -124,8 +124,9 @@ namespace Services
         /// <returns></returns>
         public IEnumerable<EnqueteModel> ObterEnquetesAtivas()
         {
-            return GetQuery().Where(enquete => !enquete.StatusEnquete.Contains("Finalizada"));
+            return GetQuery().Where(enquete => !enquete.StatusEnquete.Contains("Fechada"));
         }
+
 
         /// <summary>
         /// Obtém um enquete

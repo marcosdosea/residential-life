@@ -35,6 +35,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Enquete_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_enquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_enquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Enquete_TB_StatusEnquete1", "tb_statusenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_statusenquete), "tb_enquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_enquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_OpcoesEnquete_TB_Enquete1", "tb_enquete", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_enquete), "tb_opcoesenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_opcoesenquete), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "tb_votoenquete_tb_enquete1", "tb_enquete", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_enquete), "tb_votoenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_votoenquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Funcionario_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_funcionario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_funcionario), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Funcionario_TB_Setor1", "tb_setor", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_setor), "tb_funcionario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_funcionario), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Moradia_TB_Pessoa2", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_moradia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_moradia), true)]
@@ -45,15 +46,15 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Ocorrencia_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_ocorrencia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Ocorrencia_TB_StatusOcorrencia1", "tb_statusocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_statusocorrencia), "tb_ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_ocorrencia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Ocorrencia_TB_TipoOcorrencia1", "tb_tipoocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_tipoocorrencia), "tb_ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_ocorrencia), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "TB_VotoEnquete_TB_OpcoesEnquete1", "tb_opcoesenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_opcoesenquete), "tb_votoenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_votoenquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_MuralEletronico_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_publicacaomural", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_publicacaomural), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Pessoa1_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_pessoamoradia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoamoradia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Postagem_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_postagem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_postagem), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_ReservaAmbiente_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_reservaambiente), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Veiculo_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_veiculo), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "TB_VotoEnquete_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_votoenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_votoenquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_PlanoDeConta_TB_TipoPlanoDeConta1", "tb_tipoplanodeconta", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_tipoplanodeconta), "tb_planodeconta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_planodeconta), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_ReservaAmbiente_TB_StatusPagamento1", "tb_statuspagamento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_statuspagamento), "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_reservaambiente), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "tb_veiculo_tb_tipoveiculo1", "tb_tipoveiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_tipoveiculo), "tb_veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_veiculo), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "tb_votoenquete", "tb_opcoesenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_opcoesenquete), "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoa))]
 
 #endregion
 
@@ -600,6 +601,22 @@ namespace Models
             }
         }
         private ObjectSet<tb_veiculo> _tb_veiculo;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_votoenquete> tb_votoenquete
+        {
+            get
+            {
+                if ((_tb_votoenquete == null))
+                {
+                    _tb_votoenquete = base.CreateObjectSet<tb_votoenquete>("tb_votoenquete");
+                }
+                return _tb_votoenquete;
+            }
+        }
+        private ObjectSet<tb_votoenquete> _tb_votoenquete;
 
         #endregion
 
@@ -851,6 +868,14 @@ namespace Models
         public void AddTotb_veiculo(tb_veiculo tb_veiculo)
         {
             base.AddObject("tb_veiculo", tb_veiculo);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_votoenquete EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_votoenquete(tb_votoenquete tb_votoenquete)
+        {
+            base.AddObject("tb_votoenquete", tb_votoenquete);
         }
 
         #endregion
@@ -2964,6 +2989,28 @@ namespace Models
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_votoenquete_tb_enquete1", "tb_votoenquete")]
+        public EntityCollection<tb_votoenquete> tb_votoenquete
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_votoenquete>("residentialbdModel.tb_votoenquete_tb_enquete1", "tb_votoenquete");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_votoenquete>("residentialbdModel.tb_votoenquete_tb_enquete1", "tb_votoenquete", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -4454,18 +4501,18 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_votoenquete", "tb_pessoa")]
-        public EntityCollection<tb_pessoa> tb_pessoa
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_VotoEnquete_TB_OpcoesEnquete1", "tb_votoenquete")]
+        public EntityCollection<tb_votoenquete> tb_votoenquete
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pessoa>("residentialbdModel.tb_votoenquete", "tb_pessoa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_votoenquete>("residentialbdModel.TB_VotoEnquete_TB_OpcoesEnquete1", "tb_votoenquete");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pessoa>("residentialbdModel.tb_votoenquete", "tb_pessoa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_votoenquete>("residentialbdModel.TB_VotoEnquete_TB_OpcoesEnquete1", "tb_votoenquete", value);
                 }
             }
         }
@@ -5233,18 +5280,18 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_votoenquete", "tb_opcoesenquete")]
-        public EntityCollection<tb_opcoesenquete> tb_opcoesenquete
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_VotoEnquete_TB_Pessoa1", "tb_votoenquete")]
+        public EntityCollection<tb_votoenquete> tb_votoenquete
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_opcoesenquete>("residentialbdModel.tb_votoenquete", "tb_opcoesenquete");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_votoenquete>("residentialbdModel.TB_VotoEnquete_TB_Pessoa1", "tb_votoenquete");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_opcoesenquete>("residentialbdModel.tb_votoenquete", "tb_opcoesenquete", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_votoenquete>("residentialbdModel.TB_VotoEnquete_TB_Pessoa1", "tb_votoenquete", value);
                 }
             }
         }
@@ -7598,32 +7645,6 @@ namespace Models
         #endregion
 
     
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_veiculo_tb_tipoveiculo1", "tb_veiculo")]
-        public EntityCollection<tb_veiculo> tb_veiculo
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_veiculo>("residentialbdModel.tb_veiculo_tb_tipoveiculo1", "tb_veiculo");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_veiculo>("residentialbdModel.tb_veiculo_tb_tipoveiculo1", "tb_veiculo", value);
-                }
-            }
-        }
-
-        #endregion
-
     }
     
     /// <summary>
@@ -7644,8 +7665,7 @@ namespace Models
         /// <param name="placa">Initial value of the Placa property.</param>
         /// <param name="modelo">Initial value of the Modelo property.</param>
         /// <param name="cor">Initial value of the Cor property.</param>
-        /// <param name="idTipoVeiculo">Initial value of the IdTipoVeiculo property.</param>
-        public static tb_veiculo Createtb_veiculo(global::System.Int32 idVeiculo, global::System.Int32 idPesssoa, global::System.String placa, global::System.String modelo, global::System.String cor, global::System.Int32 idTipoVeiculo)
+        public static tb_veiculo Createtb_veiculo(global::System.Int32 idVeiculo, global::System.Int32 idPesssoa, global::System.String placa, global::System.String modelo, global::System.String cor)
         {
             tb_veiculo tb_veiculo = new tb_veiculo();
             tb_veiculo.IdVeiculo = idVeiculo;
@@ -7653,7 +7673,6 @@ namespace Models
             tb_veiculo.Placa = placa;
             tb_veiculo.Modelo = modelo;
             tb_veiculo.Cor = cor;
-            tb_veiculo.IdTipoVeiculo = idTipoVeiculo;
             return tb_veiculo;
         }
 
@@ -7787,26 +7806,26 @@ namespace Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Int32 IdTipoVeiculo
+        public global::System.String Tipo
         {
             get
             {
-                return _IdTipoVeiculo;
+                return _Tipo;
             }
             set
             {
-                OnIdTipoVeiculoChanging(value);
-                ReportPropertyChanging("IdTipoVeiculo");
-                _IdTipoVeiculo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdTipoVeiculo");
-                OnIdTipoVeiculoChanged();
+                OnTipoChanging(value);
+                ReportPropertyChanging("Tipo");
+                _Tipo = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Tipo");
+                OnTipoChanged();
             }
         }
-        private global::System.Int32 _IdTipoVeiculo;
-        partial void OnIdTipoVeiculoChanging(global::System.Int32 value);
-        partial void OnIdTipoVeiculoChanged();
+        private global::System.String _Tipo;
+        partial void OnTipoChanging(global::System.String value);
+        partial void OnTipoChanged();
 
         #endregion
 
@@ -7850,6 +7869,171 @@ namespace Models
                 }
             }
         }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="residentialbdModel", Name="tb_votoenquete")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class tb_votoenquete : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new tb_votoenquete object.
+        /// </summary>
+        /// <param name="idVoto">Initial value of the IdVoto property.</param>
+        /// <param name="idPessoa">Initial value of the IdPessoa property.</param>
+        /// <param name="idEnquete">Initial value of the IdEnquete property.</param>
+        /// <param name="idOpcao">Initial value of the IdOpcao property.</param>
+        /// <param name="dataVoto">Initial value of the DataVoto property.</param>
+        public static tb_votoenquete Createtb_votoenquete(global::System.Int32 idVoto, global::System.Int32 idPessoa, global::System.Int32 idEnquete, global::System.Int32 idOpcao, global::System.DateTime dataVoto)
+        {
+            tb_votoenquete tb_votoenquete = new tb_votoenquete();
+            tb_votoenquete.IdVoto = idVoto;
+            tb_votoenquete.IdPessoa = idPessoa;
+            tb_votoenquete.IdEnquete = idEnquete;
+            tb_votoenquete.IdOpcao = idOpcao;
+            tb_votoenquete.DataVoto = dataVoto;
+            return tb_votoenquete;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdVoto
+        {
+            get
+            {
+                return _IdVoto;
+            }
+            set
+            {
+                if (_IdVoto != value)
+                {
+                    OnIdVotoChanging(value);
+                    ReportPropertyChanging("IdVoto");
+                    _IdVoto = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdVoto");
+                    OnIdVotoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdVoto;
+        partial void OnIdVotoChanging(global::System.Int32 value);
+        partial void OnIdVotoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdPessoa
+        {
+            get
+            {
+                return _IdPessoa;
+            }
+            set
+            {
+                OnIdPessoaChanging(value);
+                ReportPropertyChanging("IdPessoa");
+                _IdPessoa = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPessoa");
+                OnIdPessoaChanged();
+            }
+        }
+        private global::System.Int32 _IdPessoa;
+        partial void OnIdPessoaChanging(global::System.Int32 value);
+        partial void OnIdPessoaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdEnquete
+        {
+            get
+            {
+                return _IdEnquete;
+            }
+            set
+            {
+                OnIdEnqueteChanging(value);
+                ReportPropertyChanging("IdEnquete");
+                _IdEnquete = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdEnquete");
+                OnIdEnqueteChanged();
+            }
+        }
+        private global::System.Int32 _IdEnquete;
+        partial void OnIdEnqueteChanging(global::System.Int32 value);
+        partial void OnIdEnqueteChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdOpcao
+        {
+            get
+            {
+                return _IdOpcao;
+            }
+            set
+            {
+                OnIdOpcaoChanging(value);
+                ReportPropertyChanging("IdOpcao");
+                _IdOpcao = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdOpcao");
+                OnIdOpcaoChanged();
+            }
+        }
+        private global::System.Int32 _IdOpcao;
+        partial void OnIdOpcaoChanging(global::System.Int32 value);
+        partial void OnIdOpcaoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime DataVoto
+        {
+            get
+            {
+                return _DataVoto;
+            }
+            set
+            {
+                OnDataVotoChanging(value);
+                ReportPropertyChanging("DataVoto");
+                _DataVoto = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DataVoto");
+                OnDataVotoChanged();
+            }
+        }
+        private global::System.DateTime _DataVoto;
+        partial void OnDataVotoChanging(global::System.DateTime value);
+        partial void OnDataVotoChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -7857,16 +8041,16 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_veiculo_tb_tipoveiculo1", "tb_tipoveiculo")]
-        public tb_tipoveiculo tb_tipoveiculo
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_votoenquete_tb_enquete1", "tb_enquete")]
+        public tb_enquete tb_enquete
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_tipoveiculo>("residentialbdModel.tb_veiculo_tb_tipoveiculo1", "tb_tipoveiculo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_enquete>("residentialbdModel.tb_votoenquete_tb_enquete1", "tb_enquete").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_tipoveiculo>("residentialbdModel.tb_veiculo_tb_tipoveiculo1", "tb_tipoveiculo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_enquete>("residentialbdModel.tb_votoenquete_tb_enquete1", "tb_enquete").Value = value;
             }
         }
         /// <summary>
@@ -7874,17 +8058,93 @@ namespace Models
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<tb_tipoveiculo> tb_tipoveiculoReference
+        public EntityReference<tb_enquete> tb_enqueteReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_tipoveiculo>("residentialbdModel.tb_veiculo_tb_tipoveiculo1", "tb_tipoveiculo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_enquete>("residentialbdModel.tb_votoenquete_tb_enquete1", "tb_enquete");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_tipoveiculo>("residentialbdModel.tb_veiculo_tb_tipoveiculo1", "tb_tipoveiculo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_enquete>("residentialbdModel.tb_votoenquete_tb_enquete1", "tb_enquete", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_VotoEnquete_TB_OpcoesEnquete1", "tb_opcoesenquete")]
+        public tb_opcoesenquete tb_opcoesenquete
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_opcoesenquete>("residentialbdModel.TB_VotoEnquete_TB_OpcoesEnquete1", "tb_opcoesenquete").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_opcoesenquete>("residentialbdModel.TB_VotoEnquete_TB_OpcoesEnquete1", "tb_opcoesenquete").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_opcoesenquete> tb_opcoesenqueteReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_opcoesenquete>("residentialbdModel.TB_VotoEnquete_TB_OpcoesEnquete1", "tb_opcoesenquete");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_opcoesenquete>("residentialbdModel.TB_VotoEnquete_TB_OpcoesEnquete1", "tb_opcoesenquete", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_VotoEnquete_TB_Pessoa1", "tb_pessoa")]
+        public tb_pessoa tb_pessoa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.TB_VotoEnquete_TB_Pessoa1", "tb_pessoa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.TB_VotoEnquete_TB_Pessoa1", "tb_pessoa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_pessoa> tb_pessoaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.TB_VotoEnquete_TB_Pessoa1", "tb_pessoa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pessoa>("residentialbdModel.TB_VotoEnquete_TB_Pessoa1", "tb_pessoa", value);
                 }
             }
         }
