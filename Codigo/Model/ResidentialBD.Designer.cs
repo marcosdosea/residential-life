@@ -4983,6 +4983,54 @@ namespace Models
         private global::System.String _Estado;
         partial void OnEstadoChanging(global::System.String value);
         partial void OnEstadoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> idUser
+        {
+            get
+            {
+                return _idUser;
+            }
+            set
+            {
+                OnidUserChanging(value);
+                ReportPropertyChanging("idUser");
+                _idUser = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idUser");
+                OnidUserChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _idUser;
+        partial void OnidUserChanging(Nullable<global::System.Int32> value);
+        partial void OnidUserChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> idRole
+        {
+            get
+            {
+                return _idRole;
+            }
+            set
+            {
+                OnidRoleChanging(value);
+                ReportPropertyChanging("idRole");
+                _idRole = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idRole");
+                OnidRoleChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _idRole;
+        partial void OnidRoleChanging(Nullable<global::System.Int32> value);
+        partial void OnidRoleChanged();
 
         #endregion
 

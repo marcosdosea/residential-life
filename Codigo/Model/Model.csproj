@@ -89,7 +89,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <EntityDeploy Include="ResidentialBD.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ResidentialBD.Designer.cs</LastGenOutput>
