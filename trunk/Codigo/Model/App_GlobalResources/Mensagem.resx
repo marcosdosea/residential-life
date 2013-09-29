@@ -465,4 +465,16 @@
   <data name="senhaAtual" xml:space="preserve">
     <value>Senha Atual</value>
   </data>
+  <data name="andar" xml:space="preserve">
+    <value>Andar</value>
+  </data>
+  <data name="idTipoMoradia" xml:space="preserve">
+    <value>Código Tipo Moradia</value>
+  </data>
+  <data name="predio" xml:space="preserve">
+    <value>Predio</value>
+  </data>
+  <data name="tipoMoradia" xml:space="preserve">
+    <value>Tipo Moradia</value>
+  </data>
 </root>

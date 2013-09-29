@@ -36,7 +36,7 @@ namespace Persistence
         private IRepositorioGenerico<tb_veiculo> _repVeiculo;
         private IRepositorioGenerico<tb_tipoveiculo> _repTipoVeiculo;
 
-
+        private IRepositorioGenerico<tb_tipomoradia> _repTipoMoradia;
 
         /// <summary>
         /// Construtor cria contexto transacional
@@ -182,6 +182,22 @@ namespace Persistence
                     _repMoradia = new RepositorioGenerico<tb_moradia>(_context);
                 }
                 return _repMoradia;
+            }
+        }
+
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de tipo de moradia
+        /// </summary>
+        public IRepositorioGenerico<tb_tipomoradia> RepositorioTipoMoradia
+        {
+            get
+            {
+                if (_repTipoMoradia == null)
+                {
+                    _repTipoMoradia = new RepositorioGenerico<tb_tipomoradia>(_context);
+                }
+                return _repTipoMoradia;
             }
         }
 

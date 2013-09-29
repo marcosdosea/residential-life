@@ -27,6 +27,8 @@ namespace Persistence
         IRepositorioGenerico<tb_votoenquete> RepositorioVotoEnquete { get; }
         IRepositorioGenerico<tb_veiculo> RepositorioVeiculo { get; }
         IRepositorioGenerico<tb_tipoveiculo> RepositorioTipoVeiculo { get; }
+                
+        IRepositorioGenerico<tb_tipomoradia> RepositorioTipoMoradia { get; }
 
     }
 }

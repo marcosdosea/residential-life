@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GerenciadorMoradia.cs" />
     <Compile Include="GerenciadorOpcoesEnquete.cs" />
     <Compile Include="GerenciadorPostagem.cs" />
     <Compile Include="GerenciadorEnquete.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="GerenciadorStatusEnquete.cs" />
     <Compile Include="GerenciadorStatusOcorrencia.cs" />
     <Compile Include="GerenciadorStatusPagamento.cs" />
+    <Compile Include="GerenciadorTipoMoradia.cs" />
     <Compile Include="GerenciadorTipoOcorrencia.cs" />
     <Compile Include="GerenciadorTipoVeiculo.cs" />
     <Compile Include="GerenciadorVeiculo.cs" />
