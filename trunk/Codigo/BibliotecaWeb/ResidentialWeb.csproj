@@ -76,6 +76,7 @@
     <Compile Include="Controllers\BlocoController.cs" />
     <Compile Include="Controllers\CondominioController.cs" />
     <Compile Include="Controllers\EnqueteController.cs" />
+    <Compile Include="Controllers\MoradiaController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OcorrenciaController.cs" />
@@ -159,7 +160,6 @@
     <Content Include="Views\Moradia\Details.aspx" />
     <Content Include="Views\Moradia\Edit.aspx" />
     <Content Include="Views\Moradia\Index.aspx" />
-
     <Content Include="Views\Pessoa\Create.aspx" />
     <Content Include="Views\Pessoa\Delete.aspx" />
     <Content Include="Views\Pessoa\Details.aspx" />

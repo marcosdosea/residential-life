@@ -112,6 +112,15 @@ namespace Services
             return GetQuery().Where(moradia => moradia.IdPessoa.Equals(idPessoa));
         }
 
+        /// <summary>
+        /// Obter todos as entidades cadastradas
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<MoradiaModel> ObterTodosPorBloco(int idBloco)
+        {
+            return GetQuery().Where(moradiaModel => moradiaModel.IdBloco.Equals(idBloco));
+        }
+
 
         /// <summary>
         /// Obtém uma reserva de ambiente
