@@ -57,6 +57,7 @@
     <Compile Include="GerenciadorTipoOcorrencia.cs" />
     <Compile Include="GerenciadorTipoVeiculo.cs" />
     <Compile Include="GerenciadorVeiculo.cs" />
+    <Compile Include="GerencidorVotoEnquete.cs" />
     <Compile Include="ServiceException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
