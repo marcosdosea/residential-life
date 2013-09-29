@@ -17,6 +17,7 @@ namespace BibliotecaWeb.Controllers
         private GerenciadorPessoa gPessoa;
         private GerenciadorStatusEnquete gStatusEnquete;
         private GerenciadorOpcaoEnquete gOpcao;
+        private GerenciadorVotoEnquete gVoto;
 
         public EnqueteController()
         {
@@ -24,6 +25,7 @@ namespace BibliotecaWeb.Controllers
             gStatusEnquete = new GerenciadorStatusEnquete();
             gPessoa = new GerenciadorPessoa();
             gOpcao = new GerenciadorOpcaoEnquete();
+            gVoto = new GerenciadorVotoEnquete();
         }
 
         //[Authorize(Roles = "Síndico")]
@@ -59,6 +61,25 @@ namespace BibliotecaWeb.Controllers
             ViewBag.IdStatusEnquete = new SelectList(gStatusEnquete.ObterTodos(), "IdStatusEnquete", "StatusEnquete");
             return View();
         }
+        //
+        // POST: /enquete/Create
+
+        [HttpPost]
+        public ActionResult Create(OpcoesEnqueteModel opcoesEnqueteModel)
+        {
+            if (ModelState.IsValid)
+            {
+                int id_enquete = gEnquete.Inserir(opcoesEnqueteModel.Enquete);
+
+                foreach (OpcaoModel opcao in opcoesEnqueteModel.Opcoes)
+                {
+                    gOpcao.Inserir(opcao, id_enquete);
+                }
+                return RedirectToAction("Index");
+            }
+
+            return View(opcoesEnqueteModel);
+        }
 
         //
         // GET: /enquete/Votar
@@ -70,29 +91,28 @@ namespace BibliotecaWeb.Controllers
 
         public ActionResult VotarEnquete(int id)
         {
-            ViewBag.OpcoesEnquete = new SelectList(gOpcao.ObterOpcoesEnquete(id), "IdOpcao", "Descricao");
+            ViewBag.Enquete = gEnquete.Obter(id);
+            ViewBag.IdEnquete = id;
+            ViewBag.IdOpcao = gOpcao.ObterOpcoesEnquete(id);
             return View();
         }
 
-        //
-        // POST: /enquete/Create
-
         [HttpPost]
-        public ActionResult Create(OpcoesEnqueteModel opcoesEnqueteModel)
+        public ActionResult VotarEnquete(VotoEnqueteModel votoModel)
         {
+            votoModel.IdPessoa = 1;
+            votoModel.DataVoto = DateTime.Now;
             if (ModelState.IsValid)
             {
-                int id_enquete = gEnquete.Inserir(opcoesEnqueteModel.Enquete);
-               
-                foreach (OpcaoModel opcao in opcoesEnqueteModel.Opcoes)
-                {
-                    gOpcao.Inserir(opcao, id_enquete);
-                }
+                gVoto.Inserir(votoModel);
                 return RedirectToAction("Index");
             }
-
-            return View(opcoesEnqueteModel);
+            ViewBag.Enquete = gEnquete.Obter(votoModel.IdEnquete);
+            ViewBag.IdEnquete = votoModel.IdEnquete;
+            ViewBag.IdOpcao = gOpcao.ObterOpcoesEnquete(votoModel.IdEnquete);
+            return View();
         }
+       
 
       
 
