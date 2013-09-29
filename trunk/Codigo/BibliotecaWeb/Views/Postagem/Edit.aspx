@@ -16,11 +16,8 @@
     <fieldset>
        <legend><%:Models.App_GlobalResources.Mensagem.editar%></legend>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdPessoa) %>
-        </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdPessoa) %>
+            <%: Html.HiddenFor(model => model.IdPessoa) %>
             <%: Html.ValidationMessageFor(model => model.IdPessoa) %>
         </div>
 

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Models.Models;
 using Services;
 using Microsoft.Reporting.WebForms;
+using System.Web.Security;
 
 namespace BibliotecaWeb.Controllers
 {
@@ -13,10 +14,13 @@ namespace BibliotecaWeb.Controllers
     {
 
          private GerenciadorPostagem gPostagem;
+         private GerenciadorPessoa gPessoa;
+
      
         public PostagemController()
         {
             gPostagem = new GerenciadorPostagem();
+            gPessoa = new GerenciadorPessoa();
         }
 
         //
@@ -24,11 +28,13 @@ namespace BibliotecaWeb.Controllers
 
         public ActionResult Index()
         {
-            return View(gPostagem.ObterTodos());
+            int idPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
+            return View(gPostagem.ObterTodosPorPessoa(idPessoa));
         }
 
         //
         // GET: /Postagem/Create
+        [Authorize(Roles = "Morador")]     
         public ActionResult Create()
         {
             return View();
@@ -39,6 +45,7 @@ namespace BibliotecaWeb.Controllers
         [HttpPost]
         public ActionResult Create(PostagemModel postagemModel)
         {
+            postagemModel.IdPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
             if (ModelState.IsValid)
             {
                 gPostagem.Inserir(postagemModel);
@@ -50,6 +57,8 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /pessoa/Details/5
+        [Authorize(Roles = "Morador")]
+        [Authorize(Roles = "Síndico")]
         public ViewResult Details(int id)
         {
             PostagemModel postagem = gPostagem.Obter(id);
@@ -58,6 +67,8 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /Postagem/Edit/5
+        [Authorize(Roles = "Morador")]
+        [Authorize(Roles = "Síndico")]
         public ActionResult Edit(int id)
         {
             PostagemModel postagem = gPostagem.Obter(id);
@@ -79,6 +90,8 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /Postagem/Delete/5
+        [Authorize(Roles = "Morador")]
+        [Authorize(Roles = "Síndico")]
         public ActionResult Delete(int id)
         {
             PostagemModel postagemModel = gPostagem.Obter(id);

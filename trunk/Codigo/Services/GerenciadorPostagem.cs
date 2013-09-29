@@ -104,6 +104,15 @@ namespace Services
         }
 
         /// <summary>
+        /// Obter todos as entidades cadastradas
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<PostagemModel> ObterTodosPorPessoa(int idPessoa)
+        {
+            return GetQuery().Where(postagem => postagem.IdPessoa.Equals(idPessoa));
+        }
+
+        /// <summary>
         /// Obtém um autor
         /// </summary>
         /// <param name="idPostagem">Identificador da postagem na base de dados</param>

@@ -15,12 +15,7 @@
     <div class="display-field">
         <%: Html.DisplayFor(model => model.IdPostagem) %>
     </div>
-
-    <div class="display-label">IdPessoa</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdPessoa) %>
-    </div>
-
+      
     <div class="display-label">titulo</div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.titulo) %>
