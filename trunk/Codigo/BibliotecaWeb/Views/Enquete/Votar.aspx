@@ -26,12 +26,7 @@
         <th>
             DataFim
         </th>
-        <th>
-            IdStatusEnquete
-        </th>
-        <th>
-            StatusEnquete
-        </th>
+
         <th>
             NomeCriador
         </th>
@@ -54,19 +49,9 @@
             <%: Html.DisplayFor(modelItem => item.DataFim) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.IdStatusEnquete) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.StatusEnquete) %>
-        </td>
-        <td>
             <%: Html.DisplayFor(modelItem => item.NomeCriador) %>
         </td>
-        <td>
-            <%: Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) %> |
-            <%: Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) %>
-        </td>
+
     </tr>
 <% } %>
 

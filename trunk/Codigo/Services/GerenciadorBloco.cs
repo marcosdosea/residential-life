@@ -96,6 +96,7 @@ namespace Services
             return query;
         }
 
+
         /// <summary>
         /// Obter todos as entidades cadastradas
         /// </summary>

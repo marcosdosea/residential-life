@@ -26,13 +26,7 @@
     <fieldset>
         <legend>
             <%: Models.App_GlobalResources.Mensagem.enquete %></legend>
-        <div class="editor-label">
-            <%: Models.App_GlobalResources.Mensagem.criador %>
-        </div>
-        <div class="editor-field">
-            <%: Html.DropDownListFor(model => model.Enquete.IdPessoa, ViewBag.IdPessoa as SelectList)%>
-            <%: Html.ValidationMessageFor(model => model.Enquete.IdPessoa)%>
-        </div>
+        
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Enquete.Titulo)%>
         </div>
