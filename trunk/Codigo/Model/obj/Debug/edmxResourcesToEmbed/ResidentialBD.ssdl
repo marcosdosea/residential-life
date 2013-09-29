@@ -169,6 +169,10 @@
       <End Role="tb_tipoveiculo" EntitySet="tb_tipoveiculo" />
       <End Role="tb_veiculo" EntitySet="tb_veiculo" />
     </AssociationSet>
+    <AssociationSet Name="tb_votoenquete_tb_enquete1" Association="residentialbdModel.Store.tb_votoenquete_tb_enquete1">
+      <End Role="tb_enquete" EntitySet="tb_enquete" />
+      <End Role="tb_votoenquete" EntitySet="tb_votoenquete" />
+    </AssociationSet>
     <AssociationSet Name="TB_VotoEnquete_TB_OpcoesEnquete1" Association="residentialbdModel.Store.TB_VotoEnquete_TB_OpcoesEnquete1">
       <End Role="tb_opcoesenquete" EntitySet="tb_opcoesenquete" />
       <End Role="tb_votoenquete" EntitySet="tb_votoenquete" />
@@ -485,11 +489,13 @@
   </EntityType>
   <EntityType Name="tb_votoenquete">
     <Key>
-      <PropertyRef Name="IdPessoa" />
-      <PropertyRef Name="IdOpcao" />
+      <PropertyRef Name="IdVoto" />
     </Key>
+    <Property Name="IdVoto" Type="int" Nullable="false" />
     <Property Name="IdPessoa" Type="int" Nullable="false" />
+    <Property Name="IdEnquete" Type="int" Nullable="false" />
     <Property Name="IdOpcao" Type="int" Nullable="false" />
+    <Property Name="DataVoto" Type="datetime" Nullable="false" />
   </EntityType>
   <Association Name="TB_Acesso_TB_Pessoa1">
     <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
@@ -896,6 +902,18 @@
       </Principal>
       <Dependent Role="tb_veiculo">
         <PropertyRef Name="IdTipoVeiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_votoenquete_tb_enquete1">
+    <End Role="tb_enquete" Type="residentialbdModel.Store.tb_enquete" Multiplicity="1" />
+    <End Role="tb_votoenquete" Type="residentialbdModel.Store.tb_votoenquete" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_enquete">
+        <PropertyRef Name="IdEnquete" />
+      </Principal>
+      <Dependent Role="tb_votoenquete">
+        <PropertyRef Name="IdEnquete" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
