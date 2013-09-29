@@ -117,6 +117,8 @@ namespace Services
             return blocoEs.ElementAtOrDefault(0);
         }
 
+
+
         /// <summary>
         /// Atribui dados do Bloco Model para o Bloco Entity
         /// </summary>
