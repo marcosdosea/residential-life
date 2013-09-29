@@ -110,6 +110,16 @@ namespace Services
         }
 
         /// <summary>
+        /// Obter todos as entidades cadastradas
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<OcorrenciaModel> ObterTodosPorPessoa(int idPessoa)
+        {
+            return GetQuery().Where(ocorrencia => ocorrencia.IdPessoa.Equals(idPessoa));
+        }
+
+
+        /// <summary>
         /// Obtém o registro de uma ocorrencia
         /// </summary>
         /// <param name="idRegitroOcorrencia">Identificador do autor na base de dados</param>

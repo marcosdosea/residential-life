@@ -15,11 +15,7 @@
     <div class="display-field">
         <%: Html.DisplayFor(model => model.IdOcorrencia) %>
     </div>
-
-    <div class="display-label">IdPessoa</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdPessoa) %>
-    </div>
+      
 
     <div class="display-label">Titulo</div>
     <div class="display-field">

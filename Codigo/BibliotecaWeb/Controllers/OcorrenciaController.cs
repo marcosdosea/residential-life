@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Services;
 using Models;
 using Microsoft.Reporting.WebForms;
+using System.Web.Security;
 
 namespace BibliotecaWeb.Controllers
 {
@@ -32,12 +33,13 @@ namespace BibliotecaWeb.Controllers
 
         public ActionResult Index()
         {
-            return View(gOcorrencia.ObterTodos());
+            int idPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
+            return View(gOcorrencia.ObterTodosPorPessoa(idPessoa));
         }
 
         //
         // GET: /Ocorrencia/Details/5
-
+        [Authorize(Roles = "Morador")]  
         public ViewResult Details(int id)
         {
             OcorrenciaModel Ocorrencia = gOcorrencia.Obter(id);
@@ -46,7 +48,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /Ocorrencia/Create
-
+        [Authorize(Roles = "Morador")]  
         public ActionResult Create()
         {
             ViewBag.IdTipoOcorrencia = new SelectList(gTipoOcorrencia.ObterTodos(), "IdTipoOcorrencia", "TipoOcorrencia");
@@ -58,20 +60,21 @@ namespace BibliotecaWeb.Controllers
         // POST: /Ocorrencia/Create
 
         [HttpPost]
-        public ActionResult Create(OcorrenciaModel OcorrenciaModel)
+        public ActionResult Create(OcorrenciaModel ocorrenciaModel)
         {
+            ocorrenciaModel.IdPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
             if (ModelState.IsValid)
             {
-                gOcorrencia.Inserir(OcorrenciaModel);
+                gOcorrencia.Inserir(ocorrenciaModel);
                 return RedirectToAction("Index");
             }
 
-            return View(OcorrenciaModel);
+            return View(ocorrenciaModel);
         }
 
         //
         // GET: /Ocorrencia/Edit/5
-
+        [Authorize(Roles = "Morador")]  
         public ActionResult Edit(int id)
         {
 
@@ -99,6 +102,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /Ocorrencia/Delete/5
+        [Authorize(Roles = "Morador")]  
         public ActionResult Delete(int id)
         {
             OcorrenciaModel OcorrenciaModel = gOcorrencia.Obter(id);
