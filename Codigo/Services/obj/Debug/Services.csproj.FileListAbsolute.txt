@@ -173,3 +173,12 @@ C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\Services\obj\Debug\Services.dll
 C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\Services\obj\Debug\Services.pdb
 >>>>>>> .r139
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Services\bin\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Services\bin\Debug\Services.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Services\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Services\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Services\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Services\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Services\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Services\obj\Debug\Services.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Services\obj\Debug\Services.pdb

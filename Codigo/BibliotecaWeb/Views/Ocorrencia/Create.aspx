@@ -54,7 +54,7 @@
             <%: Html.LabelFor(model => model.IdTipoOcorrencia) %>
         </div>
         <p>
-             <%: Html.DropDownList("IdTipoOcorrencia")%>
+             <%: Html.DropDownListFor(model => model.IdTipoOcorrencia, ViewBag.IdTipoOcorrencia as SelectList)%>
               <%: Html.ValidationMessageFor(model => model.IdTipoOcorrencia)%>
         </p>    
 
@@ -62,7 +62,7 @@
             <%: Html.LabelFor(model => model.IdStatusOcorrenicia) %>
         </div>
         <p>
-             <%: Html.DropDownList("IdStatusOcorrencia")%>
+             <%: Html.DropDownListFor(model => model.IdStatusOcorrenicia, ViewBag.IdStatusOcorrencia as SelectList)%>
               <%: Html.ValidationMessageFor(model => model.IdStatusOcorrenicia)%>
         </p>  
 
