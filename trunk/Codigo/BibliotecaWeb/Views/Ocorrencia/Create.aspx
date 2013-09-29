@@ -15,16 +15,7 @@
     <%: Html.ValidationSummary(true) %>
     <fieldset>
         <legend><%:Models.App_GlobalResources.Mensagem.novo%> </legend>
-
-        
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdPessoa) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdPessoa) %>
-            <%: Html.ValidationMessageFor(model => model.IdPessoa) %>
-        </div>
-
+           
        
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Titulo) %>
