@@ -236,11 +236,14 @@
   <ItemGroup>
     <EmbeddedResource Include="Relatorios\Ocorrencia.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportListaAreaPublica.rdlc" />
-    <EmbeddedResource Include="Relatorios\ReportListaBlocos.rdlc" />
+    <EmbeddedResource Include="Relatorios\ReportListaBlocos.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Relatorios\ReportListaPessoas.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportListaPostagemPorData.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportListaReservasPorData.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportListaVeiculos.rdlc" />
+    <EmbeddedResource Include="Relatorios\ReportListaVeiculosPorPessoa.rdlc" />
     <EmbeddedResource Include="Relatorios\RepostListaPessoasPorEstado.rdlc" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

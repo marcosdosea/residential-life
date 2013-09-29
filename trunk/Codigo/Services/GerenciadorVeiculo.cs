@@ -86,8 +86,8 @@ namespace Services
                             Placa = Veiculo.Placa,
                             Modelo = Veiculo.Modelo,
                             Cor = Veiculo.Cor,
-                            Tipo = Veiculo.tb_tipoveiculo.TipoVeiculo
-                           
+                            Tipo = Veiculo.tb_tipoveiculo.TipoVeiculo,
+                            NomePessoa = Veiculo.tb_pessoa.Nome
                         };
             return query;
         }
@@ -103,10 +103,10 @@ namespace Services
 
         
         /// <summary>
-        /// Obter todos as veículos por pessoa
+        /// Obter todos as veículos de uma pessoa
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<VeiculoModel> ObterTodosPorPessoa(int idPessoa)
+        public IEnumerable<VeiculoModel> ObterTodosDePessoa(int idPessoa)
         {
             return GetQuery().Where(Veiculo => Veiculo.IdPessoa.Equals(idPessoa));
         }
