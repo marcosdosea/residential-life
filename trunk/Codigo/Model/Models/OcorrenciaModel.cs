@@ -38,9 +38,9 @@ namespace Models
         public int IdTipoOcorrencia { get; set; }
         public string TipoOcorrencia { get; set; }
 
-        [Display(Name = "tipo", ResourceType = typeof(Mensagem))]
-        [Required(ErrorMessageResourceType = typeof(Mensagem),
-            ErrorMessageResourceName = "required")]
+        //[Display(Name = "tipo", ResourceType = typeof(Mensagem))]
+       // [Required(ErrorMessageResourceType = typeof(Mensagem),
+       //     ErrorMessageResourceName = "required")]
         
 
         //[Display(Name = "status", ResourceType = typeof(Mensagem))]
