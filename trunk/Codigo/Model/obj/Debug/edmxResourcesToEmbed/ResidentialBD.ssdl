@@ -347,6 +347,8 @@
     <Property Name="CEP" Type="varchar" Nullable="false" MaxLength="8" />
     <Property Name="Cidade" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="Estado" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="idUser" Type="int" />
+    <Property Name="idRole" Type="int" />
   </EntityType>
   <EntityType Name="tb_pessoamoradia">
     <Key>

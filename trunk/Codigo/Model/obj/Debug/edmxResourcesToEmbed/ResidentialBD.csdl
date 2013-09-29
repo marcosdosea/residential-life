@@ -381,6 +381,8 @@
     <Property Name="CEP" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
     <Property Name="Cidade" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="Estado" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="idUser" Type="Int32" />
+    <Property Name="idRole" Type="Int32" />
     <NavigationProperty Name="tb_acessopredio" Relationship="residentialbdModel.TB_Acesso_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_acessopredio" />
     <NavigationProperty Name="tb_atendimento" Relationship="residentialbdModel.TB_Atendimento_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_atendimento" />
     <NavigationProperty Name="tb_comentario" Relationship="residentialbdModel.TB_Comentario_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_comentario" />

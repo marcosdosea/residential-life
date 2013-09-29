@@ -178,6 +178,8 @@
           <ScalarProperty Name="CEP" ColumnName="CEP" />
           <ScalarProperty Name="Cidade" ColumnName="Cidade" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+          <ScalarProperty Name="idRole" ColumnName="idRole" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
