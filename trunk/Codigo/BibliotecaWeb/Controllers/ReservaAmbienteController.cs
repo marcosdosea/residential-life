@@ -9,6 +9,7 @@ using Models;
 using Services;
 using Models.Models;
 using Microsoft.Reporting.WebForms;
+using System.Web.Security;
 
 namespace BibliotecaWeb.Controllers
 {
@@ -19,12 +20,14 @@ namespace BibliotecaWeb.Controllers
         private GerenciadorReservaAmbiente gReservaAmbiente;
         private GerenciadorAreaPublica gAreaPublica;
         private GerenciadorStatusPagamento gStatusPagamento;
+        private GerenciadorPessoa gPessoa;
 
         public ReservaAmbienteController()
         {
             gReservaAmbiente = new GerenciadorReservaAmbiente();
             gAreaPublica = new GerenciadorAreaPublica();
             gStatusPagamento = new GerenciadorStatusPagamento();
+            gPessoa = new GerenciadorPessoa();
         }
 
         //
@@ -33,7 +36,8 @@ namespace BibliotecaWeb.Controllers
        
         public ViewResult Index()
         {
-            return View(gReservaAmbiente.ObterTodos());
+            int idPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
+            return View(gReservaAmbiente.ObterTodosPorPessoa(idPessoa));
         }
 
         //
@@ -65,6 +69,7 @@ namespace BibliotecaWeb.Controllers
         [HttpPost]
         public ActionResult Create(ReservaAmbienteModel reservaAmbienteModel)
         {
+            reservaAmbienteModel.IdPesssoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
             if (ModelState.IsValid)
             {
                 gReservaAmbiente.Inserir(reservaAmbienteModel);
@@ -92,7 +97,7 @@ namespace BibliotecaWeb.Controllers
         [HttpPost]
         public ActionResult Edit(ReservaAmbienteModel reservaAmbienteModel)
         {
-            //TODO: corrigir, não está funcionando, mas deveria
+            //reservaAmbienteModel.IdPesssoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
             if (ModelState.IsValid)
             {
                 gReservaAmbiente.Editar(reservaAmbienteModel);

@@ -20,9 +20,6 @@
             <%: Models.App_GlobalResources.Mensagem.areaPublica %>
         </th>
         <th>
-            <%: Models.App_GlobalResources.Mensagem.idPessoa %>
-        </th>
-        <th>
             <%: Models.App_GlobalResources.Mensagem.dataInicio %>
         </th>
         <th>
@@ -41,9 +38,6 @@
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.NomeAreaPublica) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.IdPesssoa) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.DataInicio) %>

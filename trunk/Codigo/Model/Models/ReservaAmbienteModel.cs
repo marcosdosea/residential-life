@@ -24,8 +24,6 @@ namespace Models.Models
 
 
         [Display(Name = "idPessoa", ResourceType = typeof(Mensagem))]
-        [Required(ErrorMessageResourceType = typeof(Mensagem),
-            ErrorMessageResourceName = "required")]
         public int IdPesssoa { get; set; }
 
 

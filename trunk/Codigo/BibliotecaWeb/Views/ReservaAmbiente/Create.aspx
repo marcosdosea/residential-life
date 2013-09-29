@@ -26,14 +26,6 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdPesssoa) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdPesssoa) %>
-            <%: Html.ValidationMessageFor(model => model.IdPesssoa) %>
-        </div>
-
-        <div class="editor-label">
             <%: Html.LabelFor(model => model.DataInicio) %>
         </div>
         <div class="editor-field">

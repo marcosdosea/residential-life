@@ -21,11 +21,6 @@
         <%: Html.DisplayFor(model => model.NomeAreaPublica) %>
     </div>
 
-    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.idPessoa %></div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdPesssoa) %>
-    </div>
-
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.dataInicio %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.DataInicio) %>

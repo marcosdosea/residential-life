@@ -116,7 +116,7 @@ namespace Services
         }
 
         /// <summary>
-        /// Obtém um autor
+        /// Obtém uma pessoa
         /// </summary>
         /// <param name="idPessoa">Identificador da entidade na base de dados</param>
         /// <returns>Autor model</returns>
@@ -125,6 +125,19 @@ namespace Services
             IEnumerable<PessoaModel> pessoaE = GetQuery().Where(pessoaModel => pessoaModel.IdPessoa.Equals(idPessoa));
             return pessoaE.ElementAtOrDefault(0);
         }
+
+
+        /// <summary>
+        /// Obtém uma pessoa pelo username
+        /// </summary>
+        /// <param name="idPessoa">Identificador da entidade na base de dados</param>
+        /// <returns>Autor model</returns>
+        public PessoaModel ObterPorUsername(string userName)
+        {
+            IEnumerable<PessoaModel> pessoaE = GetQuery().Where(pessoaModel => pessoaModel.Login.Equals(userName));
+            return pessoaE.ElementAtOrDefault(0);
+        }
+
 
         /// <summary>
         /// Atribui dados da Entidade Model para a Entidade Entity

@@ -86,7 +86,7 @@ namespace Services
             var query = from reservaAmbiente in tb_reservaambiente 
                         select new ReservaAmbienteModel
                         {
-                            IdReservaAmbiente = reservaAmbiente.IdPesssoa,
+                            IdReservaAmbiente = reservaAmbiente.IdReservaAmbiente,
                             IdPesssoa = reservaAmbiente.IdPesssoa,
                             IdAreaPublica = reservaAmbiente.IdAreaPublica,
                             NomeAreaPublica = reservaAmbiente.tb_areapublica.Nome,
@@ -107,6 +107,17 @@ namespace Services
         {
             return GetQuery();
         }
+
+
+        /// <summary>
+        /// Obter todos as entidades cadastradas
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<ReservaAmbienteModel> ObterTodosPorPessoa(int idPessoa)
+        {
+            return GetQuery().Where(reservaAmbienteModel => reservaAmbienteModel.IdPesssoa.Equals(idPessoa));
+        }
+
 
         /// <summary>
         /// Obtém uma reserva de ambiente
