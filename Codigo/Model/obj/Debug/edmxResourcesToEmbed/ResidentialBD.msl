@@ -336,13 +336,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="tb_votoenquete" TypeName="residentialbdModel.tb_votoenquete" StoreEntitySet="tb_votoenquete">
-      <EndProperty Name="tb_opcoesenquete">
-        <ScalarProperty Name="IdOpcao" ColumnName="IdOpcao" />
-      </EndProperty>
-      <EndProperty Name="tb_pessoa">
-        <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
-      </EndProperty>
-    </AssociationSetMapping>
+    <EntitySetMapping Name="tb_votoenquete">
+      <EntityTypeMapping TypeName="residentialbdModel.tb_votoenquete">
+        <MappingFragment StoreEntitySet="tb_votoenquete">
+          <ScalarProperty Name="IdVoto" ColumnName="IdVoto" />
+          <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+          <ScalarProperty Name="IdEnquete" ColumnName="IdEnquete" />
+          <ScalarProperty Name="IdOpcao" ColumnName="IdOpcao" />
+          <ScalarProperty Name="DataVoto" ColumnName="DataVoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

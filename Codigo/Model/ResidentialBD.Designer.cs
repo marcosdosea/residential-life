@@ -55,6 +55,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_VotoEnquete_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_votoenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_votoenquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_PlanoDeConta_TB_TipoPlanoDeConta1", "tb_tipoplanodeconta", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_tipoplanodeconta), "tb_planodeconta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_planodeconta), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_ReservaAmbiente_TB_StatusPagamento1", "tb_statuspagamento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_statuspagamento), "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_reservaambiente), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "tb_veiculo_tb_tipoveiculo1", "tb_tipoveiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_tipoveiculo), "tb_veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_veiculo), true)]
 
 #endregion
 
@@ -7645,6 +7646,32 @@ namespace Models
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_veiculo_tb_tipoveiculo1", "tb_veiculo")]
+        public EntityCollection<tb_veiculo> tb_veiculo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_veiculo>("residentialbdModel.tb_veiculo_tb_tipoveiculo1", "tb_veiculo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_veiculo>("residentialbdModel.tb_veiculo_tb_tipoveiculo1", "tb_veiculo", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
     
     /// <summary>
@@ -7665,7 +7692,8 @@ namespace Models
         /// <param name="placa">Initial value of the Placa property.</param>
         /// <param name="modelo">Initial value of the Modelo property.</param>
         /// <param name="cor">Initial value of the Cor property.</param>
-        public static tb_veiculo Createtb_veiculo(global::System.Int32 idVeiculo, global::System.Int32 idPesssoa, global::System.String placa, global::System.String modelo, global::System.String cor)
+        /// <param name="idTipoVeiculo">Initial value of the IdTipoVeiculo property.</param>
+        public static tb_veiculo Createtb_veiculo(global::System.Int32 idVeiculo, global::System.Int32 idPesssoa, global::System.String placa, global::System.String modelo, global::System.String cor, global::System.Int32 idTipoVeiculo)
         {
             tb_veiculo tb_veiculo = new tb_veiculo();
             tb_veiculo.IdVeiculo = idVeiculo;
@@ -7673,6 +7701,7 @@ namespace Models
             tb_veiculo.Placa = placa;
             tb_veiculo.Modelo = modelo;
             tb_veiculo.Cor = cor;
+            tb_veiculo.IdTipoVeiculo = idTipoVeiculo;
             return tb_veiculo;
         }
 
@@ -7806,26 +7835,26 @@ namespace Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Tipo
+        public global::System.Int32 IdTipoVeiculo
         {
             get
             {
-                return _Tipo;
+                return _IdTipoVeiculo;
             }
             set
             {
-                OnTipoChanging(value);
-                ReportPropertyChanging("Tipo");
-                _Tipo = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Tipo");
-                OnTipoChanged();
+                OnIdTipoVeiculoChanging(value);
+                ReportPropertyChanging("IdTipoVeiculo");
+                _IdTipoVeiculo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdTipoVeiculo");
+                OnIdTipoVeiculoChanged();
             }
         }
-        private global::System.String _Tipo;
-        partial void OnTipoChanging(global::System.String value);
-        partial void OnTipoChanged();
+        private global::System.Int32 _IdTipoVeiculo;
+        partial void OnIdTipoVeiculoChanging(global::System.Int32 value);
+        partial void OnIdTipoVeiculoChanged();
 
         #endregion
 
@@ -7866,6 +7895,44 @@ namespace Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pessoa>("residentialbdModel.TB_Veiculo_TB_Pessoa1", "tb_pessoa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_veiculo_tb_tipoveiculo1", "tb_tipoveiculo")]
+        public tb_tipoveiculo tb_tipoveiculo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_tipoveiculo>("residentialbdModel.tb_veiculo_tb_tipoveiculo1", "tb_tipoveiculo").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_tipoveiculo>("residentialbdModel.tb_veiculo_tb_tipoveiculo1", "tb_tipoveiculo").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_tipoveiculo> tb_tipoveiculoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_tipoveiculo>("residentialbdModel.tb_veiculo_tb_tipoveiculo1", "tb_tipoveiculo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_tipoveiculo>("residentialbdModel.tb_veiculo_tb_tipoveiculo1", "tb_tipoveiculo", value);
                 }
             }
         }
