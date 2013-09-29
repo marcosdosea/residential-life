@@ -90,10 +90,11 @@ namespace Services
                             Titulo = Ocorrencia.Titulo,
                             Descricao = Ocorrencia.Descricao,
                             Data = Ocorrencia.DataCriacao,
-                            IdTipoOcorrencia = Ocorrencia.IdTipoOcorrencia,
-                            IdStatusOcorrenicia = Ocorrencia.IdStatusOcorrencia,
-                            StatusOcorrencia = Ocorrencia.tb_statusocorrencia.StatusOcorrencia,
+                            //IdTipoOcorrencia = Ocorrencia.IdTipoOcorrencia,                            
                             TipoOcorrencia = Ocorrencia.tb_tipoocorrencia.TipoOcorrencia,
+                           // IdStatusOcorrenicia = Ocorrencia.IdStatusOcorrencia,
+                            StatusOcorrencia = Ocorrencia.tb_statusocorrencia.StatusOcorrencia,
+                           
 
                         };
             return query;
