@@ -23,7 +23,9 @@ namespace Models.Models
             ErrorMessageResourceName = "required")]
         public int IdStatusAreaPublica{ get; set; }
 
+
         public string StatusAreaPublica { get; set; }
+
 
         [Display(Name = "nome", ResourceType= typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),

@@ -70,16 +70,8 @@ namespace BibliotecaWeb.Controllers
                 gReservaAmbiente.Inserir(reservaAmbienteModel);
                 return RedirectToAction("Index");
             }
-            else
-            {
-                //Pegar somente as áreas públicas do condomínio corrente no futuro
-                ViewBag.IdArea = new SelectList(gAreaPublica.ObterTodos(), "IdAreaPublica", "Nome");
-                ViewBag.IdStatusPagamento = new SelectList(gStatusPagamento.ObterTodos(), "IdStatusPagamento", "StatusPagamento");
-                gReservaAmbiente.Inserir(reservaAmbienteModel);
-                return RedirectToAction("Index");
-            }
 
-            //return View(reservaAmbienteModel);
+            return View(reservaAmbienteModel);
         }
 
         //
