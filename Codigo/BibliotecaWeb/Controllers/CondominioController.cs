@@ -21,7 +21,7 @@ namespace BibliotecaWeb.Controllers
         }
         //
         // GET: /condominio/
-
+        [Authorize(Roles = "Adm Sistema")]
         public ViewResult Index()
         {
             return View(gCondominio.ObterTodos());
@@ -29,7 +29,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /condominio/Details/5
-
+        [Authorize(Roles = "Adm Sistema")]
         public ViewResult Details(int id)
         {
             CondominioModel condominio = gCondominio.Obter(id);
@@ -38,7 +38,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /condominio/Create
-
+        [Authorize(Roles = "Adm Sistema")]
         public ActionResult Create()
         {
             ViewBag.IdSindico = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
@@ -62,7 +62,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /condominio/Edit/5
-
+        [Authorize(Roles = "Adm Sistema")]
         public ActionResult Edit(int id)
         {
 
@@ -89,7 +89,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /condominio/Delete/5
-
+        [Authorize(Roles = "Adm Sistema")]
         public ActionResult Delete(int id)
         {
             CondominioModel condominioModel = gCondominio.Obter(id);

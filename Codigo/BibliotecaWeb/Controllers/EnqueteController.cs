@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Services;
 using Models.Models;
+using System.Web.Security;
 
 namespace BibliotecaWeb.Controllers
 {
@@ -54,10 +55,11 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /enquete/Create
-        //[Authorize(Roles = "Síndico")]
+        [Authorize(Roles = "Síndico")]
         public ActionResult Create()
         {
-            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
+
+            //ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
             ViewBag.IdStatusEnquete = new SelectList(gStatusEnquete.ObterTodos(), "IdStatusEnquete", "StatusEnquete");
             return View();
         }
@@ -67,6 +69,7 @@ namespace BibliotecaWeb.Controllers
         [HttpPost]
         public ActionResult Create(OpcoesEnqueteModel opcoesEnqueteModel)
         {
+            opcoesEnqueteModel.Enquete.IdPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
             if (ModelState.IsValid)
             {
                 int id_enquete = gEnquete.Inserir(opcoesEnqueteModel.Enquete);
@@ -83,12 +86,12 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /enquete/Votar
-        //[Authorize(Roles = "Morador")]
+        [Authorize(Roles = "Morador")]
         public ActionResult Votar()
         {
             return View(gEnquete.ObterEnquetesAtivas());
         }
-
+        [Authorize(Roles = "Morador")]
         public ActionResult VotarEnquete(int id)
         {
             ViewBag.Enquete = gEnquete.Obter(id);
@@ -100,7 +103,7 @@ namespace BibliotecaWeb.Controllers
         [HttpPost]
         public ActionResult VotarEnquete(VotoEnqueteModel votoModel)
         {
-            votoModel.IdPessoa = 1;
+            votoModel.IdPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
             votoModel.DataVoto = DateTime.Now;
             if (ModelState.IsValid)
             {
