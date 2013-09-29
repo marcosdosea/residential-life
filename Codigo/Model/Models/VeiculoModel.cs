@@ -9,17 +9,24 @@ namespace Models.Models
 {
     public class VeiculoModel
     {
-        [Required(ErrorMessageResourceType = typeof(Mensagem),
-            ErrorMessageResourceName = "required")]
         public int IdPessoa { get; set; }
+        
+        
+        [Display(Name = "pessoa", ResourceType = typeof(Mensagem))]
+        [StringLength(45)]
+        public string NomePessoa { get; set; }
 
+        
         public int IdVeiculo { get; set; }
+
+
 
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
         [Display(Name = "placa", ResourceType = typeof(Mensagem))]
         [StringLength(7)]
         public string Placa { get; set; }
+
 
 
         [Required(ErrorMessageResourceType = typeof(Mensagem),
@@ -29,6 +36,7 @@ namespace Models.Models
         public string Modelo { get; set; }
 
 
+
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
         [Display(Name = "cor", ResourceType = typeof(Mensagem))]
@@ -36,11 +44,12 @@ namespace Models.Models
         public string Cor { get; set; }
 
 
-        [Required(ErrorMessageResourceType = typeof(Mensagem),
-            ErrorMessageResourceName = "required")]
+
         [Display(Name = "tipoVeiculo", ResourceType = typeof(Mensagem))]
         [StringLength(45)]
         public string Tipo { get; set; }
+
+
 
         public int IdTipoVeiculo { get; set; }
     }

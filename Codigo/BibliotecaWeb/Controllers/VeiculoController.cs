@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Models.Models;
 using Services;
 using Microsoft.Reporting.WebForms;
+using System.Web.Security;
 
 namespace BibliotecaWeb
 {
@@ -15,11 +16,14 @@ namespace BibliotecaWeb
         
         private GerenciadorVeiculo gVeiculo;
         private GerenciadorTipoVeiculo gTipoVeiculo;
+        private GerenciadorPessoa gPessoa;
+
      
         public VeiculoController()
         {
             gVeiculo = new GerenciadorVeiculo();
             gTipoVeiculo = new GerenciadorTipoVeiculo();
+            gPessoa = new GerenciadorPessoa();
         }
 
         
@@ -28,7 +32,8 @@ namespace BibliotecaWeb
 
         public ActionResult Index()
         {
-            return View(gVeiculo.ObterTodos());
+            int idPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
+            return View(gVeiculo.ObterTodosPorPessoa(idPessoa));
         }
 
         //
@@ -44,19 +49,14 @@ namespace BibliotecaWeb
         [HttpPost]
         public ActionResult Create(VeiculoModel veiculoModel)
         {
+            veiculoModel.IdPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
             if (ModelState.IsValid)
             {
                 gVeiculo.Inserir(veiculoModel);
                 return RedirectToAction("Index");
             }
-            else
-            {
-                ViewBag.IdTipoVeiculo = new SelectList(gTipoVeiculo.ObterTodos(), "IdTipoVeiculo", "TipoVeiculo");
-                gVeiculo.Inserir(veiculoModel);
-                return RedirectToAction("Index");
-            }
 
-            //return View(veiculoModel);
+            return View(veiculoModel);
         }
 
         //
@@ -72,7 +72,7 @@ namespace BibliotecaWeb
         public ActionResult Edit(int id)
         {
             VeiculoModel veiculo = gVeiculo.Obter(id);
-            ViewBag.IdSindico = new SelectList(gTipoVeiculo.ObterTodos(), "IdTipoVeiculo", "Veiculo", veiculo.IdTipoVeiculo); 
+            ViewBag.IdTipoVeiculo = new SelectList(gTipoVeiculo.ObterTodos(), "IdTipoVeiculo", "TipoVeiculo", veiculo.IdTipoVeiculo); 
             return View(veiculo);
         }
 

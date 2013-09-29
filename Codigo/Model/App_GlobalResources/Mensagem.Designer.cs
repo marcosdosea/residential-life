@@ -1042,7 +1042,7 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Veiculos.
+        ///   Looks up a localized string similar to Veículos.
         /// </summary>
         public static string veiculos {
             get {

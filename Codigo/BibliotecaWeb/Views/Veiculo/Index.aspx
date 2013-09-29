@@ -11,11 +11,8 @@
 <p>
     <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.novo, "Create") %>
 </p>
-<table>
+<table id="table">
     <tr>
-        <th>
-            <%: Models.App_GlobalResources.Mensagem.idPessoa %>
-        </th>
         <th>
             <%: Models.App_GlobalResources.Mensagem.placa %>
         </th>
@@ -33,9 +30,7 @@
 
 <% foreach (var item in Model) { %>
     <tr>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.IdPessoa) %>
-        </td>
+        <%: Html.HiddenFor(modelItem => item.IdVeiculo) %>
         <td>
             <%: Html.DisplayFor(modelItem => item.Placa) %>
         </td>
