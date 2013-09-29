@@ -81,6 +81,7 @@ namespace Services
             var query = from Veiculo in tb_veiculo
                         select new VeiculoModel
                         {
+                            IdPessoa = Veiculo.IdPesssoa,
                             IdVeiculo = Veiculo.IdVeiculo,
                             Placa = Veiculo.Placa,
                             Modelo = Veiculo.Modelo,
@@ -100,6 +101,17 @@ namespace Services
             return GetQuery();
         }
 
+        
+        /// <summary>
+        /// Obter todos as veículos por pessoa
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<VeiculoModel> ObterTodosPorPessoa(int idPessoa)
+        {
+            return GetQuery().Where(Veiculo => Veiculo.IdPessoa.Equals(idPessoa));
+        }
+
+
         /// <summary>
         /// Obtém um veiculo
         /// </summary>
@@ -118,6 +130,7 @@ namespace Services
         /// <param name="statusVeiculoE">Entity mapeada da base de dados</param>
         private void Atribuir(VeiculoModel veiculoModel, tb_veiculo veiculoE)
         {
+            veiculoE.IdPesssoa = veiculoModel.IdPessoa;
             veiculoE.IdVeiculo = veiculoModel.IdVeiculo;
             veiculoE.Placa = veiculoModel.Placa;
             veiculoE.Modelo = veiculoModel.Modelo;

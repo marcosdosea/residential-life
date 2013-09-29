@@ -97,7 +97,6 @@ namespace BibliotecaWeb.Controllers
         [HttpPost]
         public ActionResult Edit(ReservaAmbienteModel reservaAmbienteModel)
         {
-            //reservaAmbienteModel.IdPesssoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
             if (ModelState.IsValid)
             {
                 gReservaAmbiente.Editar(reservaAmbienteModel);

@@ -18,13 +18,6 @@
 
         
         <div class="editor-label">
-            <%: Models.App_GlobalResources.Mensagem.idPessoa %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdPessoa) %>
-            <%: Html.ValidationMessageFor(model => model.IdPessoa) %>
-        </div>
-        <div class="editor-label">
             <%: Models.App_GlobalResources.Mensagem.placa %>
         </div>
         <div class="editor-field">

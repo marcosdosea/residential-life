@@ -22,11 +22,8 @@
             <%: Html.ValidationMessageFor(model => model.IdVeiculo) %>
         </div>
 
-        <div class="editor-label">
-            <%: Models.App_GlobalResources.Mensagem.idPessoa %>
-        </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdPessoa) %>
+            <%: Html.HiddenFor(model => model.IdPessoa)%>
             <%: Html.ValidationMessageFor(model => model.IdPessoa) %>
         </div>
 
