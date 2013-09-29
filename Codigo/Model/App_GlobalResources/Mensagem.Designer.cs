@@ -295,6 +295,24 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ConfirmaNovaSenha.
+        /// </summary>
+        public static string confirmaNovaSenha {
+            get {
+                return ResourceManager.GetString("confirmaNovaSenha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirma Senha.
+        /// </summary>
+        public static string confirmaSenha {
+            get {
+                return ResourceManager.GetString("confirmaSenha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cor.
         /// </summary>
         public static string cor {
@@ -691,6 +709,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mantenha-me conectado.
+        /// </summary>
+        public static string manterConectado {
+            get {
+                return ResourceManager.GetString("manterConectado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Modelo.
         /// </summary>
         public static string modelo {
@@ -750,6 +777,15 @@ namespace Models.App_GlobalResources {
         public static string novaReservaAmbiente {
             get {
                 return ResourceManager.GetString("novaReservaAmbiente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nova Senha.
+        /// </summary>
+        public static string novaSenha {
+            get {
+                return ResourceManager.GetString("novaSenha", resourceCulture);
             }
         }
         
@@ -921,6 +957,15 @@ namespace Models.App_GlobalResources {
         public static string senha {
             get {
                 return ResourceManager.GetString("senha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senha Atual.
+        /// </summary>
+        public static string senhaAtual {
+            get {
+                return ResourceManager.GetString("senhaAtual", resourceCulture);
             }
         }
         

@@ -46,9 +46,8 @@
         <%: Html.DisplayFor(model => model.Login) %>
     </div>
 
-    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.senha %></div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.Senha) %>
+        <%: Html.HiddenFor(model => model.Senha) %>
     </div>
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.telefoneFixo %></div>

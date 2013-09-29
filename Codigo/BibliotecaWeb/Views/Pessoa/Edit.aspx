@@ -22,7 +22,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Nome) %>
+            <%: Models.App_GlobalResources.Mensagem.nome %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Nome) %>
@@ -30,7 +30,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.CPF) %>
+            <%: Models.App_GlobalResources.Mensagem.cpf %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.CPF) %>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.RG) %>
+            <%: Models.App_GlobalResources.Mensagem.rg %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.RG) %>
@@ -46,7 +46,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Sexo) %>
+            <%: Models.App_GlobalResources.Mensagem.sexo %>
         </div>
         <div class="editor-field">
             <%: Html.RadioButtonFor(model => model.Sexo, 'M') %> Masculino <br /> 
@@ -55,31 +55,25 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Email) %>
+            <%: Models.App_GlobalResources.Mensagem.email %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Email) %>
             <%: Html.ValidationMessageFor(model => model.Email) %>
         </div>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Login) %>
-        </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Login) %>
+            <%: Html.HiddenFor(model => model.Login) %>
             <%: Html.ValidationMessageFor(model => model.Login) %>
         </div>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Senha) %>
-        </div>
         <div class="editor-field">
-            <%: Html.PasswordFor(model => model.Senha) %>
+            <%: Html.HiddenFor(model => model.Senha) %>
             <%: Html.ValidationMessageFor(model => model.Senha) %>
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.TelefoneFixo) %>
+            <%: Models.App_GlobalResources.Mensagem.telefoneFixo %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.TelefoneFixo) %>
@@ -87,7 +81,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.TelefoneCelular) %>
+            <%: Models.App_GlobalResources.Mensagem.telefoneCelular %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.TelefoneCelular) %>
@@ -95,7 +89,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Rua) %>
+            <%: Models.App_GlobalResources.Mensagem.rua %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Rua) %>
@@ -103,7 +97,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Numero) %>
+            <%: Models.App_GlobalResources.Mensagem.numero %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Numero) %>
@@ -111,7 +105,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Complemento) %>
+            <%: Models.App_GlobalResources.Mensagem.complemento %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Complemento) %>
@@ -119,7 +113,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Bairro) %>
+            <%: Models.App_GlobalResources.Mensagem.bairro %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Bairro) %>
@@ -127,7 +121,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.CEP) %>
+            <%: Models.App_GlobalResources.Mensagem.cep %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.CEP) %>
@@ -135,7 +129,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Cidade) %>
+            <%: Models.App_GlobalResources.Mensagem.cidade %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Cidade) %>
@@ -143,7 +137,7 @@
         </div>
 
        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Estado) %>
+            <%: Models.App_GlobalResources.Mensagem.estado %>
         </div>
         <p>
             <%: @Html.DropDownListFor(model => model.Estado, new[]
@@ -157,7 +151,7 @@
 
 
         <p>
-            <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.salvar %> />
+            <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %> />"
         </p>
     </fieldset>
 <% } %>

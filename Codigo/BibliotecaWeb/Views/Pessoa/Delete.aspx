@@ -100,7 +100,7 @@
 </fieldset>
 <% using (Html.BeginForm()) { %>
     <p>
-        <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.apagar %> /> |
+        <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.apagar %> />" |
         <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index") %>
     </p>
 <% } %>
