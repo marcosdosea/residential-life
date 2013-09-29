@@ -450,4 +450,19 @@
   <data name="veiculo" xml:space="preserve">
     <value>Veículo</value>
   </data>
+  <data name="confirmaNovaSenha" xml:space="preserve">
+    <value>ConfirmaNovaSenha</value>
+  </data>
+  <data name="confirmaSenha" xml:space="preserve">
+    <value>Confirma Senha</value>
+  </data>
+  <data name="manterConectado" xml:space="preserve">
+    <value>Mantenha-me conectado</value>
+  </data>
+  <data name="novaSenha" xml:space="preserve">
+    <value>Nova Senha</value>
+  </data>
+  <data name="senhaAtual" xml:space="preserve">
+    <value>Senha Atual</value>
+  </data>
 </root>

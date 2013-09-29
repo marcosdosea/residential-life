@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Web.Mvc;
 using System.Web.Security;
+using Models.App_GlobalResources;
 
 
 namespace Models
@@ -13,33 +14,33 @@ namespace Models
     {
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Current password")]
+        [Display(Name = "senhaAtual", ResourceType = typeof(Mensagem))]
         public string OldPassword { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "O {0} deve ter ao menos {2} caracteres.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "New password")]
+        [Display(Name = "novaSenha", ResourceType = typeof(Mensagem))]
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm new password")]
-        [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+        [Display(Name = "confirmaNovaSenha", ResourceType = typeof(Mensagem))]
+        [Compare("NewPassword", ErrorMessage = "A senha e a confirmação de senha não combinam.")]
         public string ConfirmPassword { get; set; }
     }
 
     public class LogOnModel
     {
         [Required]
-        [Display(Name = "User name")]
+        [Display(Name = "login", ResourceType = typeof(Mensagem))]
         public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "senha", ResourceType = typeof(Mensagem))]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "manterConectado", ResourceType = typeof(Mensagem))]
         public bool RememberMe { get; set; }
     }
 
@@ -55,18 +56,18 @@ namespace Models
 
         [Required]
         [DataType(DataType.EmailAddress)]
-        [Display(Name = "Email address")]
+        [Display(Name = "nome", ResourceType = typeof(Mensagem))]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "O {0} deve ter ao menos {2} caracteres.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "senha", ResourceType = typeof(Mensagem))]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "confirmaSenha", ResourceType = typeof(Mensagem))]
+        [Compare("Password", ErrorMessage = "A senha e a confirmação de senha não combinam.")]
         public string ConfirmPassword { get; set; }
     }
 }
