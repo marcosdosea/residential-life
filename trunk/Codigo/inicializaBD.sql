@@ -22,7 +22,7 @@ values(1,'Barulho'),
 (2,'Vizinho'),
 (3,'Sujeira');
 
-insert into tb_tipooveiculo(IdTipoVeiculo,TipoVeiculo)
+insert into tb_tipoveiculo(IdTipoVeiculo,TipoVeiculo)
 values(1,'Moto'),
 (2,'Carro'),
 (3,'Caminhão');

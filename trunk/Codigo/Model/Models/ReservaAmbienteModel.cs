@@ -52,8 +52,6 @@ namespace Models.Models
 
 
         [Display(Name = "statusPagamento", ResourceType = typeof(Mensagem))]
-        [Required(ErrorMessageResourceType = typeof(Mensagem),
-            ErrorMessageResourceName = "required")]
         [StringLength(50)]
         public string StatusPagamento { get; set; }
 
