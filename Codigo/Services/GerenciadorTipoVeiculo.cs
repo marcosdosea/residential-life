@@ -117,8 +117,6 @@ namespace Services
         {
             tipoVeiculoE.IdTipoVeiculo = tipoVeiculoModel.IdTipoVeiculo;
             tipoVeiculoE.TipoVeiculo = tipoVeiculoModel.TipoVeiculo;
-         
-   
         }
     }
 }

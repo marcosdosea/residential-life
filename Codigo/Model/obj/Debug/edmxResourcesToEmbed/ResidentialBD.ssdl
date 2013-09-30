@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="residentialbdModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="residentialbdModelStoreContainer">
+    <EntitySet Name="my_aspnet_applications" EntityType="residentialbdModel.Store.my_aspnet_applications" store:Type="Tables" Schema="residentialbd" />
+    <EntitySet Name="my_aspnet_membership" EntityType="residentialbdModel.Store.my_aspnet_membership" store:Type="Tables" Schema="residentialbd" />
+    <EntitySet Name="my_aspnet_profiles" EntityType="residentialbdModel.Store.my_aspnet_profiles" store:Type="Tables" Schema="residentialbd" />
+    <EntitySet Name="my_aspnet_roles" EntityType="residentialbdModel.Store.my_aspnet_roles" store:Type="Tables" Schema="residentialbd" />
+    <EntitySet Name="my_aspnet_sessioncleanup" EntityType="residentialbdModel.Store.my_aspnet_sessioncleanup" store:Type="Tables" Schema="residentialbd" />
+    <EntitySet Name="my_aspnet_sessions" EntityType="residentialbdModel.Store.my_aspnet_sessions" store:Type="Tables" Schema="residentialbd" />
+    <EntitySet Name="my_aspnet_users" EntityType="residentialbdModel.Store.my_aspnet_users" store:Type="Tables" Schema="residentialbd" />
+    <EntitySet Name="my_aspnet_usersinroles" EntityType="residentialbdModel.Store.my_aspnet_usersinroles" store:Type="Tables" Schema="residentialbd" />
     <EntitySet Name="tb_acessopredio" EntityType="residentialbdModel.Store.tb_acessopredio" store:Type="Tables" Schema="residentialbd" />
     <EntitySet Name="tb_administradora" EntityType="residentialbdModel.Store.tb_administradora" store:Type="Tables" Schema="residentialbd" />
     <EntitySet Name="tb_areapublica" EntityType="residentialbdModel.Store.tb_areapublica" store:Type="Tables" Schema="residentialbd" />
@@ -182,6 +190,98 @@
       <End Role="tb_votoenquete" EntitySet="tb_votoenquete" />
     </AssociationSet>
   </EntityContainer>
+  <EntityType Name="my_aspnet_applications">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" MaxLength="256" />
+    <Property Name="description" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="my_aspnet_membership">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="128" />
+    <Property Name="Comment" Type="varchar" MaxLength="255" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordKey" Type="char" MaxLength="32" />
+    <Property Name="PasswordFormat" Type="tinyint" />
+    <Property Name="PasswordQuestion" Type="varchar" MaxLength="255" />
+    <Property Name="PasswordAnswer" Type="varchar" MaxLength="255" />
+    <Property Name="IsApproved" Type="bool" />
+    <Property Name="LastActivityDate" Type="datetime" />
+    <Property Name="LastLoginDate" Type="datetime" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="IsLockedOut" Type="bool" />
+    <Property Name="LastLockedOutDate" Type="datetime" />
+    <Property Name="FailedPasswordAttemptCount" Type="uint" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="uint" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" />
+  </EntityType>
+  <EntityType Name="my_aspnet_profiles">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="valueindex" Type="longtext" />
+    <Property Name="stringdata" Type="longtext" />
+    <Property Name="binarydata" Type="longblob" />
+    <Property Name="lastUpdatedDate" Type="timestamp" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="my_aspnet_roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="applicationId" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="my_aspnet_sessioncleanup">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="LastRun" Type="datetime" Nullable="false" />
+    <Property Name="IntervalMinutes" Type="int" Nullable="false" />
+    <Property Name="ApplicationId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_sessions">
+    <Key>
+      <PropertyRef Name="SessionId" />
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="SessionId" Type="varchar" Nullable="false" MaxLength="191" />
+    <Property Name="ApplicationId" Type="int" Nullable="false" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="Expires" Type="datetime" Nullable="false" />
+    <Property Name="LockDate" Type="datetime" Nullable="false" />
+    <Property Name="LockId" Type="int" Nullable="false" />
+    <Property Name="Timeout" Type="int" Nullable="false" />
+    <Property Name="Locked" Type="bool" Nullable="false" />
+    <Property Name="SessionItems" Type="longblob" />
+    <Property Name="Flags" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="applicationId" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="256" />
+    <Property Name="isAnonymous" Type="bool" Nullable="false" />
+    <Property Name="lastActivityDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="my_aspnet_usersinroles">
+    <Key>
+      <PropertyRef Name="userId" />
+      <PropertyRef Name="roleId" />
+    </Key>
+    <Property Name="userId" Type="int" Nullable="false" />
+    <Property Name="roleId" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="tb_acessopredio">
     <Key>
       <PropertyRef Name="IdAcessoPredio" />
@@ -299,7 +399,7 @@
     </Key>
     <Property Name="IdMovimentacaoFinanceira" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="IdAdministradora" Type="int" Nullable="false" />
-    <Property Name="Valor" Type="float" Nullable="false" />
+    <Property Name="Valor" Type="decimal" Scale="2" />
     <Property Name="Data" Type="datetime" Nullable="false" />
     <Property Name="Competencia" Type="varchar" Nullable="false" MaxLength="30" />
     <Property Name="Descricao" Type="varchar" MaxLength="200" />
@@ -943,4 +1043,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'def.residentialbd.my_aspnet_schemaversion' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="my_aspnet_schemaversion">
+        <Property Name="version" Type="int" />
+      </EntityType>-->
 </Schema>

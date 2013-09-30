@@ -27,3 +27,17 @@ values(1,'Moto'),
 (2,'Carro'),
 (3,'Caminhão');
 
+insert into tb_tipoplanodeconta(IdTipoPlanoDeConta, TipoPlanoDeConta)
+values(1, 'Despesa Ordinária'),
+(2, 'Despesa Extraordinária'),
+(3, 'Receita Ordinária'),
+(4, 'Receita Extraordinária');
+
+insert into tb_statusmovimentacaofinanceira(IdStatusMovimentacaoFinanceira, StatusMovimentacaoFinanceira)
+values(1,'Em análise'),
+(2,'Autorizada'),
+(3,'Não autorizada'),
+(4,'Registrada'),
+(5,'Finalizada');
+
+

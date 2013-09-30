@@ -15,6 +15,7 @@ namespace BibliotecaWeb.Controllers
 {
     
     
+    [Authorize(Roles="Morador")]
     public class ReservaAmbienteController : Controller
     {
         private GerenciadorReservaAmbiente gReservaAmbiente;

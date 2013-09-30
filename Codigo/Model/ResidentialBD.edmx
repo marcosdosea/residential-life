@@ -6,6 +6,14 @@
     <edmx:StorageModels>
       <Schema Namespace="residentialbdModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="residentialbdModelStoreContainer">
+          <EntitySet Name="my_aspnet_applications" EntityType="residentialbdModel.Store.my_aspnet_applications" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="my_aspnet_membership" EntityType="residentialbdModel.Store.my_aspnet_membership" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="my_aspnet_profiles" EntityType="residentialbdModel.Store.my_aspnet_profiles" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="my_aspnet_roles" EntityType="residentialbdModel.Store.my_aspnet_roles" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="my_aspnet_sessioncleanup" EntityType="residentialbdModel.Store.my_aspnet_sessioncleanup" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="my_aspnet_sessions" EntityType="residentialbdModel.Store.my_aspnet_sessions" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="my_aspnet_users" EntityType="residentialbdModel.Store.my_aspnet_users" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="my_aspnet_usersinroles" EntityType="residentialbdModel.Store.my_aspnet_usersinroles" store:Type="Tables" Schema="residentialbd" />
           <EntitySet Name="tb_acessopredio" EntityType="residentialbdModel.Store.tb_acessopredio" store:Type="Tables" Schema="residentialbd" />
           <EntitySet Name="tb_administradora" EntityType="residentialbdModel.Store.tb_administradora" store:Type="Tables" Schema="residentialbd" />
           <EntitySet Name="tb_areapublica" EntityType="residentialbdModel.Store.tb_areapublica" store:Type="Tables" Schema="residentialbd" />
@@ -187,6 +195,98 @@
             <End Role="tb_votoenquete" EntitySet="tb_votoenquete" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="my_aspnet_applications">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" MaxLength="256" />
+          <Property Name="description" Type="varchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="my_aspnet_membership">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="int" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="128" />
+          <Property Name="Comment" Type="varchar" MaxLength="255" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordKey" Type="char" MaxLength="32" />
+          <Property Name="PasswordFormat" Type="tinyint" />
+          <Property Name="PasswordQuestion" Type="varchar" MaxLength="255" />
+          <Property Name="PasswordAnswer" Type="varchar" MaxLength="255" />
+          <Property Name="IsApproved" Type="bool" />
+          <Property Name="LastActivityDate" Type="datetime" />
+          <Property Name="LastLoginDate" Type="datetime" />
+          <Property Name="LastPasswordChangedDate" Type="datetime" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="IsLockedOut" Type="bool" />
+          <Property Name="LastLockedOutDate" Type="datetime" />
+          <Property Name="FailedPasswordAttemptCount" Type="uint" />
+          <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" />
+          <Property Name="FailedPasswordAnswerAttemptCount" Type="uint" />
+          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" />
+        </EntityType>
+        <EntityType Name="my_aspnet_profiles">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="int" Nullable="false" />
+          <Property Name="valueindex" Type="longtext" />
+          <Property Name="stringdata" Type="longtext" />
+          <Property Name="binarydata" Type="longblob" />
+          <Property Name="lastUpdatedDate" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="my_aspnet_roles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="applicationId" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="my_aspnet_sessioncleanup">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="LastRun" Type="datetime" Nullable="false" />
+          <Property Name="IntervalMinutes" Type="int" Nullable="false" />
+          <Property Name="ApplicationId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_sessions">
+          <Key>
+            <PropertyRef Name="SessionId" />
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="SessionId" Type="varchar" Nullable="false" MaxLength="191" />
+          <Property Name="ApplicationId" Type="int" Nullable="false" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="Expires" Type="datetime" Nullable="false" />
+          <Property Name="LockDate" Type="datetime" Nullable="false" />
+          <Property Name="LockId" Type="int" Nullable="false" />
+          <Property Name="Timeout" Type="int" Nullable="false" />
+          <Property Name="Locked" Type="bool" Nullable="false" />
+          <Property Name="SessionItems" Type="longblob" />
+          <Property Name="Flags" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="applicationId" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="isAnonymous" Type="bool" Nullable="false" />
+          <Property Name="lastActivityDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="my_aspnet_usersinroles">
+          <Key>
+            <PropertyRef Name="userId" />
+            <PropertyRef Name="roleId" />
+          </Key>
+          <Property Name="userId" Type="int" Nullable="false" />
+          <Property Name="roleId" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="tb_acessopredio">
           <Key>
             <PropertyRef Name="IdAcessoPredio" />
@@ -304,7 +404,7 @@
           </Key>
           <Property Name="IdMovimentacaoFinanceira" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="IdAdministradora" Type="int" Nullable="false" />
-          <Property Name="Valor" Type="float" Nullable="false" />
+          <Property Name="Valor" Type="decimal" Scale="2" />
           <Property Name="Data" Type="datetime" Nullable="false" />
           <Property Name="Competencia" Type="varchar" Nullable="false" MaxLength="30" />
           <Property Name="Descricao" Type="varchar" MaxLength="200" />
@@ -948,12 +1048,26 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'def.residentialbd.my_aspnet_schemaversion' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="my_aspnet_schemaversion">
+        <Property Name="version" Type="int" />
+      </EntityType>-->
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="residentialbdModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="residentialbdEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="my_aspnet_applications" EntityType="residentialbdModel.my_aspnet_applications" />
+          <EntitySet Name="my_aspnet_membership" EntityType="residentialbdModel.my_aspnet_membership" />
+          <EntitySet Name="my_aspnet_profiles" EntityType="residentialbdModel.my_aspnet_profiles" />
+          <EntitySet Name="my_aspnet_roles" EntityType="residentialbdModel.my_aspnet_roles" />
+          <EntitySet Name="my_aspnet_sessioncleanup" EntityType="residentialbdModel.my_aspnet_sessioncleanup" />
+          <EntitySet Name="my_aspnet_sessions" EntityType="residentialbdModel.my_aspnet_sessions" />
+          <EntitySet Name="my_aspnet_users" EntityType="residentialbdModel.my_aspnet_users" />
+          <EntitySet Name="my_aspnet_usersinroles" EntityType="residentialbdModel.my_aspnet_usersinroles" />
           <EntitySet Name="tb_acessopredio" EntityType="residentialbdModel.tb_acessopredio" />
           <EntitySet Name="tb_administradora" EntityType="residentialbdModel.tb_administradora" />
           <EntitySet Name="tb_areapublica" EntityType="residentialbdModel.tb_areapublica" />
@@ -1135,6 +1249,98 @@
             <End Role="tb_veiculo" EntitySet="tb_veiculo" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="my_aspnet_applications">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_membership">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="Comment" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="PasswordKey" Type="String" MaxLength="32" Unicode="false" FixedLength="false" />
+          <Property Name="PasswordFormat" Type="SByte" />
+          <Property Name="PasswordQuestion" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="PasswordAnswer" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="IsApproved" Type="Boolean" />
+          <Property Name="LastActivityDate" Type="DateTime" />
+          <Property Name="LastLoginDate" Type="DateTime" />
+          <Property Name="LastPasswordChangedDate" Type="DateTime" />
+          <Property Name="CreationDate" Type="DateTime" />
+          <Property Name="IsLockedOut" Type="Boolean" />
+          <Property Name="LastLockedOutDate" Type="DateTime" />
+          <Property Name="FailedPasswordAttemptCount" Type="Int64" />
+          <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" />
+          <Property Name="FailedPasswordAnswerAttemptCount" Type="Int64" />
+          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="my_aspnet_profiles">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="Int32" Nullable="false" />
+          <Property Name="valueindex" Type="String" MaxLength="1073741823" Unicode="false" FixedLength="false" />
+          <Property Name="stringdata" Type="String" MaxLength="1073741823" Unicode="false" FixedLength="false" />
+          <Property Name="binarydata" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="lastUpdatedDate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_roles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="applicationId" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_sessioncleanup">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="LastRun" Type="DateTime" Nullable="false" />
+          <Property Name="IntervalMinutes" Type="Int32" Nullable="false" />
+          <Property Name="ApplicationId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_sessions">
+          <Key>
+            <PropertyRef Name="SessionId" />
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="SessionId" Type="String" Nullable="false" MaxLength="191" Unicode="false" FixedLength="false" />
+          <Property Name="ApplicationId" Type="Int32" Nullable="false" />
+          <Property Name="Created" Type="DateTime" Nullable="false" />
+          <Property Name="Expires" Type="DateTime" Nullable="false" />
+          <Property Name="LockDate" Type="DateTime" Nullable="false" />
+          <Property Name="LockId" Type="Int32" Nullable="false" />
+          <Property Name="Timeout" Type="Int32" Nullable="false" />
+          <Property Name="Locked" Type="Boolean" Nullable="false" />
+          <Property Name="SessionItems" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Flags" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="applicationId" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="isAnonymous" Type="Boolean" Nullable="false" />
+          <Property Name="lastActivityDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="my_aspnet_usersinroles">
+          <Key>
+            <PropertyRef Name="userId" />
+            <PropertyRef Name="roleId" />
+          </Key>
+          <Property Name="userId" Type="Int32" Nullable="false" />
+          <Property Name="roleId" Type="Int32" Nullable="false" />
+        </EntityType>
         <EntityType Name="tb_acessopredio">
           <Key>
             <PropertyRef Name="IdAcessoPredio" />
@@ -1278,7 +1484,7 @@
           </Key>
           <Property Name="IdMovimentacaoFinanceira" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdAdministradora" Type="Int32" Nullable="false" />
-          <Property Name="Valor" Type="Single" Nullable="false" />
+          <Property Name="Valor" Type="Decimal" />
           <Property Name="Data" Type="DateTime" Nullable="false" />
           <Property Name="Competencia" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
           <Property Name="Descricao" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
@@ -1976,6 +2182,104 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="residentialbdModelStoreContainer" CdmEntityContainer="residentialbdEntities">
+          <EntitySetMapping Name="my_aspnet_applications">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_applications">
+              <MappingFragment StoreEntitySet="my_aspnet_applications">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_membership">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_membership">
+              <MappingFragment StoreEntitySet="my_aspnet_membership">
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PasswordKey" ColumnName="PasswordKey" />
+                <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+                <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+                <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+                <ScalarProperty Name="LastLockedOutDate" ColumnName="LastLockedOutDate" />
+                <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+                <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+                <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+                <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_profiles">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_profiles">
+              <MappingFragment StoreEntitySet="my_aspnet_profiles">
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="valueindex" ColumnName="valueindex" />
+                <ScalarProperty Name="stringdata" ColumnName="stringdata" />
+                <ScalarProperty Name="binarydata" ColumnName="binarydata" />
+                <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_roles">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_roles">
+              <MappingFragment StoreEntitySet="my_aspnet_roles">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="applicationId" ColumnName="applicationId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_sessioncleanup">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_sessioncleanup">
+              <MappingFragment StoreEntitySet="my_aspnet_sessioncleanup">
+                <ScalarProperty Name="LastRun" ColumnName="LastRun" />
+                <ScalarProperty Name="IntervalMinutes" ColumnName="IntervalMinutes" />
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_sessions">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_sessions">
+              <MappingFragment StoreEntitySet="my_aspnet_sessions">
+                <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Expires" ColumnName="Expires" />
+                <ScalarProperty Name="LockDate" ColumnName="LockDate" />
+                <ScalarProperty Name="LockId" ColumnName="LockId" />
+                <ScalarProperty Name="Timeout" ColumnName="Timeout" />
+                <ScalarProperty Name="Locked" ColumnName="Locked" />
+                <ScalarProperty Name="SessionItems" ColumnName="SessionItems" />
+                <ScalarProperty Name="Flags" ColumnName="Flags" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_users">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_users">
+              <MappingFragment StoreEntitySet="my_aspnet_users">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="applicationId" ColumnName="applicationId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="isAnonymous" ColumnName="isAnonymous" />
+                <ScalarProperty Name="lastActivityDate" ColumnName="lastActivityDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_usersinroles">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_usersinroles">
+              <MappingFragment StoreEntitySet="my_aspnet_usersinroles">
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="roleId" ColumnName="roleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tb_acessopredio">
             <EntityTypeMapping TypeName="residentialbdModel.tb_acessopredio">
               <MappingFragment StoreEntitySet="tb_acessopredio">
@@ -2345,27 +2649,35 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="ResidentialBD">
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_applications" Width="1.5" PointX="0.75" PointY="0.75" Height="1.59568359375" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_membership" Width="1.5" PointX="2.75" PointY="0.75" Height="4.6725065104166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_profiles" Width="1.5" PointX="4.75" PointY="0.75" Height="1.9802864583333326" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_roles" Width="1.5" PointX="4.75" PointY="3.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_sessioncleanup" Width="1.5" PointX="6.75" PointY="0.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_sessions" Width="1.5" PointX="0.75" PointY="6.75" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_users" Width="1.5" PointX="2.75" PointY="6.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_usersinroles" Width="1.5" PointX="6.75" PointY="3.75" Height="1.4033821614583317" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_acessopredio" Width="1.5" PointX="3" PointY="16.125" Height="1.9802864583333317" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_administradora" Width="1.5" PointX="5.25" PointY="25.25" Height="1.9802864583333317" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_areapublica" Width="1.5" PointX="5.25" PointY="21.25" Height="2.9417936197916674" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_atendimento" Width="1.5" PointX="3" PointY="22" Height="2.3648893229166674" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_bloco" Width="1.5" PointX="5.25" PointY="31.625" Height="2.3648893229166674" IsExpanded="true" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_comentario" Width="1.5" PointX="8.25" PointY="31.875" Height="2.5571907552083353" IsExpanded="true" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_condominio" Width="1.5" PointX="3" PointY="25.875" Height="3.7109993489583317" IsExpanded="true" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_enquete" Width="1.5" PointX="8" PointY="20.625" Height="3.1340950520833317" IsExpanded="true" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_funcionario" Width="1.5" PointX="6" PointY="16.875" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_comentario" Width="1.5" PointX="8.25" PointY="31.875" Height="2.5571907552083388" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_condominio" Width="1.5" PointX="3" PointY="25.875" Height="3.7109993489583388" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_enquete" Width="1.5" PointX="8" PointY="20.625" Height="3.1340950520833388" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_funcionario" Width="1.5" PointX="6" PointY="16.875" Height="2.749492187499996" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_moradia" Width="1.5" PointX="10.5" PointY="25.25" Height="3.1340950520833388" IsExpanded="true" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_movimentacaofinanceira" Width="1.5" PointX="7.5" PointY="24.625" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_movimentacaofinanceira" Width="1.5" PointX="7.5" PointY="24.625" Height="3.1340950520833388" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_ocorrencia" Width="1.5" PointX="9" PointY="16.75" Height="2.9417936197916674" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_opcoesenquete" Width="1.5" PointX="10.25" PointY="13.25" Height="1.9802864583333388" IsExpanded="true" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_pessoa" Width="1.5" PointX="0.75" PointY="19.5" Height="7.364726562499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_pessoa" Width="1.5" PointX="0.75" PointY="19.5" Height="7.36472656250001" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_pessoamoradia" Width="1.5" PointX="12.75" PointY="25.875" Height="1.9802864583333388" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_planodeconta" Width="1.5" PointX="5.25" PointY="35" Height="1.9802864583333388" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_postagem" Width="1.5" PointX="3" PointY="42.125" Height="2.5571907552083388" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_publicacaomural" Width="1.5" PointX="3" PointY="45.5" Height="2.3648893229166674" IsExpanded="true" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_reservaambiente" Width="1.5" PointX="13.5" PointY="21.875" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_reservaambiente" Width="1.5" PointX="13.5" PointY="21.875" Height="2.7494921875000102" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_setor" Width="1.5" PointX="3.75" PointY="13.25" Height="1.7879850260416674" IsExpanded="true" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_statusareapublica" Width="1.5" PointX="3" PointY="19" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_statusareapublica" Width="1.5" PointX="3" PointY="19" Height="1.595683593749996" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_statusatendimento" Width="1.5" PointX="0.75" PointY="16.375" Height="1.595683593749996" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_statusenquete" Width="1.5" PointX="5.75" PointY="8.375" Height="1.595683593749996" IsExpanded="true" />
         <EntityTypeShape EntityType="residentialbdModel.tb_statusmovimentacaofinanceira" Width="1.5" PointX="5.25" PointY="28.75" Height="1.595683593749996" IsExpanded="true" />
@@ -2392,8 +2704,8 @@
           <ConnectorPoint PointX="7.5" PointY="26.240143229166666" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_AreaPublica_TB_StatusAreaPublica1" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="20.141337890625003" />
-          <ConnectorPoint PointX="5.59375" PointY="20.141337890625003" />
+          <ConnectorPoint PointX="4.5" PointY="20.141337890624996" />
+          <ConnectorPoint PointX="5.59375" PointY="20.141337890624996" />
           <ConnectorPoint PointX="5.59375" PointY="21.25" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Espaco_TB_Condominio1" ManuallyRouted="false">
@@ -2404,18 +2716,18 @@
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Reserva_TB_Espaco1" ManuallyRouted="false">
           <ConnectorPoint PointX="6" PointY="24.191793619791667" />
-          <ConnectorPoint PointX="6" PointY="24.559591471354171" />
-          <ConnectorPoint PointX="7.041666666666667" PointY="24.559591471354171" />
-          <ConnectorPoint PointX="7.333333333333333" PointY="24.559591471354171" />
-          <ConnectorPoint PointX="9.6979166666666661" PointY="24.559591471354171" />
-          <ConnectorPoint PointX="9.8645833333333339" PointY="24.559591471354171" />
-          <ConnectorPoint PointX="10.416666666666666" PointY="24.559591471354171" />
-          <ConnectorPoint PointX="10.583333333333334" PointY="24.559591471354171" />
-          <ConnectorPoint PointX="10.791666666666666" PointY="24.559591471354171" />
-          <ConnectorPoint PointX="10.958333333333334" PointY="24.559591471354171" />
-          <ConnectorPoint PointX="11.666666666666666" PointY="24.559591471354171" />
-          <ConnectorPoint PointX="11.833333333333334" PointY="24.559591471354171" />
-          <ConnectorPoint PointX="13.5" PointY="24.559591471354171" />
+          <ConnectorPoint PointX="6" PointY="24.559591471354175" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="24.559591471354175" />
+          <ConnectorPoint PointX="7.333333333333333" PointY="24.559591471354175" />
+          <ConnectorPoint PointX="9.6979166666666661" PointY="24.559591471354175" />
+          <ConnectorPoint PointX="9.8645833333333339" PointY="24.559591471354175" />
+          <ConnectorPoint PointX="10.416666666666666" PointY="24.559591471354175" />
+          <ConnectorPoint PointX="10.583333333333334" PointY="24.559591471354175" />
+          <ConnectorPoint PointX="10.791666666666666" PointY="24.559591471354175" />
+          <ConnectorPoint PointX="10.958333333333334" PointY="24.559591471354175" />
+          <ConnectorPoint PointX="11.666666666666666" PointY="24.559591471354175" />
+          <ConnectorPoint PointX="11.833333333333334" PointY="24.559591471354175" />
+          <ConnectorPoint PointX="13.5" PointY="24.559591471354175" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Atendimento_TB_Pessoa1" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="23.182444661458334" />
@@ -2432,7 +2744,7 @@
           <ConnectorPoint PointX="3" PointY="22.559970330729165" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Bloco_TB_Condominio1" ManuallyRouted="false">
-          <ConnectorPoint PointX="3.75" PointY="29.585999348958332" />
+          <ConnectorPoint PointX="3.75" PointY="29.585999348958339" />
           <ConnectorPoint PointX="3.75" PointY="32.807444661458334" />
           <ConnectorPoint PointX="5.25" PointY="32.807444661458334" />
         </AssociationConnector>
@@ -2446,7 +2758,7 @@
           <ConnectorPoint PointX="10.84375" PointY="28.384095052083339" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Comentario_TB_Pessoa1" ManuallyRouted="false">
-          <ConnectorPoint PointX="1.5" PointY="26.864726562499996" />
+          <ConnectorPoint PointX="1.5" PointY="26.86472656250001" />
           <ConnectorPoint PointX="1.5" PointY="34.2422900390625" />
           <ConnectorPoint PointX="1.8229191666666667" PointY="34.2422900390625" />
           <ConnectorPoint PointX="1.9895858333333332" PointY="34.2422900390625" />
@@ -2462,8 +2774,8 @@
           <ConnectorPoint PointX="8.25" PointY="34.432190755208339" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Condominio_TB_Pessoa1" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="26.369863281249998" />
-          <ConnectorPoint PointX="3" PointY="26.369863281249998" />
+          <ConnectorPoint PointX="2.25" PointY="26.369863281250005" />
+          <ConnectorPoint PointX="3" PointY="26.369863281250005" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Enquete_TB_Pessoa1" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="20.90625" />
@@ -2501,13 +2813,13 @@
           <ConnectorPoint PointX="13" PointY="20.307190755208325" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Funcionario_TB_Pessoa1" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="24.873545735677084" />
-          <ConnectorPoint PointX="2.5416666666666665" PointY="24.873545735677084" />
-          <ConnectorPoint PointX="2.7083333333333335" PointY="24.873545735677084" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="24.873545735677084" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="24.873545735677084" />
-          <ConnectorPoint PointX="7.125" PointY="24.873545735677084" />
-          <ConnectorPoint PointX="7.125" PointY="19.624492187500003" />
+          <ConnectorPoint PointX="2.25" PointY="24.873545735677087" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="24.873545735677087" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="24.873545735677087" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="24.873545735677087" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="24.873545735677087" />
+          <ConnectorPoint PointX="7.125" PointY="24.873545735677087" />
+          <ConnectorPoint PointX="7.125" PointY="19.624492187499996" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Funcionario_TB_Setor1" ManuallyRouted="false">
           <ConnectorPoint PointX="4.90625" PointY="15.037985026041667" />
@@ -2515,18 +2827,18 @@
           <ConnectorPoint PointX="6" PointY="18.552643229166666" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Moradia_TB_Pessoa2" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="24.527141113281253" />
-          <ConnectorPoint PointX="2.2916666666666665" PointY="24.527141113281253" />
-          <ConnectorPoint PointX="2.7083333333333335" PointY="24.527141113281253" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="24.527141113281253" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="24.527141113281253" />
-          <ConnectorPoint PointX="7.041666666666667" PointY="24.527141113281253" />
-          <ConnectorPoint PointX="7.458333333333333" PointY="24.527141113281253" />
-          <ConnectorPoint PointX="9.6979166666666661" PointY="24.527141113281253" />
-          <ConnectorPoint PointX="9.8645833333333339" PointY="24.527141113281253" />
-          <ConnectorPoint PointX="10.416666666666666" PointY="24.527141113281253" />
-          <ConnectorPoint PointX="10.583333333333334" PointY="24.527141113281253" />
-          <ConnectorPoint PointX="10.75" PointY="24.527141113281253" />
+          <ConnectorPoint PointX="2.25" PointY="24.527141113281257" />
+          <ConnectorPoint PointX="2.2916666666666665" PointY="24.527141113281257" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="24.527141113281257" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="24.527141113281257" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="24.527141113281257" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="24.527141113281257" />
+          <ConnectorPoint PointX="7.458333333333333" PointY="24.527141113281257" />
+          <ConnectorPoint PointX="9.6979166666666661" PointY="24.527141113281257" />
+          <ConnectorPoint PointX="9.8645833333333339" PointY="24.527141113281257" />
+          <ConnectorPoint PointX="10.416666666666666" PointY="24.527141113281257" />
+          <ConnectorPoint PointX="10.583333333333334" PointY="24.527141113281257" />
+          <ConnectorPoint PointX="10.75" PointY="24.527141113281257" />
           <ConnectorPoint PointX="10.75" PointY="25.25" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Moradia_TB_TipoMoradia1" ManuallyRouted="false">
@@ -2543,26 +2855,26 @@
         <AssociationConnector Association="residentialbdModel.TB_MovimentacaoFinanceira_TB_PlanoDeConta1" ManuallyRouted="false">
           <ConnectorPoint PointX="6.75" PointY="35.46875" />
           <ConnectorPoint PointX="7.6875" PointY="35.46875" />
-          <ConnectorPoint PointX="7.6875" PointY="27.759095052083332" />
+          <ConnectorPoint PointX="7.6875" PointY="27.759095052083339" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_MovimentacaoFinanceira_TB_TipoMovimentacaoFinanceira1" ManuallyRouted="false">
           <ConnectorPoint PointX="6.75" PointY="29.03125" />
           <ConnectorPoint PointX="7.604166666666667" PointY="29.03125" />
           <ConnectorPoint PointX="7.770833333333333" PointY="29.03125" />
           <ConnectorPoint PointX="8.2187525" PointY="29.03125" />
-          <ConnectorPoint PointX="8.2187525" PointY="27.759095052083332" />
+          <ConnectorPoint PointX="8.2187525" PointY="27.759095052083339" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Ocorrencia_TB_Pessoa1" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="24.495888613281259" />
-          <ConnectorPoint PointX="2.2916666666666665" PointY="24.495888613281259" />
-          <ConnectorPoint PointX="2.7083333333333335" PointY="24.495888613281259" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="24.495888613281259" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="24.495888613281259" />
-          <ConnectorPoint PointX="7.041666666666667" PointY="24.495888613281259" />
-          <ConnectorPoint PointX="7.458333333333333" PointY="24.495888613281259" />
-          <ConnectorPoint PointX="9.6979166666666661" PointY="24.495888613281259" />
-          <ConnectorPoint PointX="9.8645833333333339" PointY="24.495888613281259" />
-          <ConnectorPoint PointX="10" PointY="24.495888613281259" />
+          <ConnectorPoint PointX="2.25" PointY="24.495888613281263" />
+          <ConnectorPoint PointX="2.2916666666666665" PointY="24.495888613281263" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="24.495888613281263" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="24.495888613281263" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="24.495888613281263" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="24.495888613281263" />
+          <ConnectorPoint PointX="7.458333333333333" PointY="24.495888613281263" />
+          <ConnectorPoint PointX="9.6979166666666661" PointY="24.495888613281263" />
+          <ConnectorPoint PointX="9.8645833333333339" PointY="24.495888613281263" />
+          <ConnectorPoint PointX="10" PointY="24.495888613281263" />
           <ConnectorPoint PointX="10" PointY="19.691793619791667" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Ocorrencia_TB_StatusOcorrencia1" ManuallyRouted="false">
@@ -2587,7 +2899,7 @@
           <ConnectorPoint PointX="12.5" PointY="20.030742187499996" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_MuralEletronico_TB_Pessoa1" ManuallyRouted="false">
-          <ConnectorPoint PointX="1.9062525" PointY="26.864726562499996" />
+          <ConnectorPoint PointX="1.9062525" PointY="26.86472656250001" />
           <ConnectorPoint PointX="1.9062525" PointY="46.682444661458334" />
           <ConnectorPoint PointX="3" PointY="46.682444661458334" />
         </AssociationConnector>
@@ -2604,28 +2916,28 @@
           <ConnectorPoint PointX="7.041666666666667" PointY="24.739889322916667" />
           <ConnectorPoint PointX="7.208333333333333" PointY="24.739889322916667" />
           <ConnectorPoint PointX="7.25" PointY="24.739889322916667" />
-          <ConnectorPoint PointX="7.25" PointY="24.009095052083332" />
-          <ConnectorPoint PointX="9.9166666666666661" PointY="24.009095052083332" />
-          <ConnectorPoint PointX="10.083333333333334" PointY="24.009095052083332" />
-          <ConnectorPoint PointX="10.5" PointY="24.009095052083332" />
-          <ConnectorPoint PointX="10.5" PointY="24.874492187500003" />
-          <ConnectorPoint PointX="10.666666666666666" PointY="24.874492187500003" />
-          <ConnectorPoint PointX="10.833333333333334" PointY="24.874492187500003" />
-          <ConnectorPoint PointX="12.541666666666666" PointY="24.874492187500003" />
-          <ConnectorPoint PointX="12.708333333333334" PointY="24.874492187500003" />
-          <ConnectorPoint PointX="13.5" PointY="24.874492187500003" />
+          <ConnectorPoint PointX="7.25" PointY="24.009095052083339" />
+          <ConnectorPoint PointX="9.9166666666666661" PointY="24.009095052083339" />
+          <ConnectorPoint PointX="10.083333333333334" PointY="24.009095052083339" />
+          <ConnectorPoint PointX="10.5" PointY="24.009095052083339" />
+          <ConnectorPoint PointX="10.5" PointY="24.87449218750001" />
+          <ConnectorPoint PointX="10.666666666666666" PointY="24.87449218750001" />
+          <ConnectorPoint PointX="10.833333333333334" PointY="24.87449218750001" />
+          <ConnectorPoint PointX="12.541666666666666" PointY="24.87449218750001" />
+          <ConnectorPoint PointX="12.708333333333334" PointY="24.87449218750001" />
+          <ConnectorPoint PointX="13.5" PointY="24.87449218750001" />
           <ConnectorPoint PointX="13.5" PointY="25.875" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Postagem_TB_Pessoa1" ManuallyRouted="false">
-          <ConnectorPoint PointX="1.0937475" PointY="26.864726562499996" />
+          <ConnectorPoint PointX="1.0937475" PointY="26.86472656250001" />
           <ConnectorPoint PointX="1.0937475" PointY="43.403595377604169" />
           <ConnectorPoint PointX="1.8229191666666667" PointY="43.403595377604169" />
           <ConnectorPoint PointX="1.9895858333333332" PointY="43.403595377604169" />
           <ConnectorPoint PointX="3" PointY="43.403595377604169" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_ReservaAmbiente_TB_Pessoa1" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="25.621704508463541" />
-          <ConnectorPoint PointX="2.625" PointY="25.621704508463541" />
+          <ConnectorPoint PointX="2.25" PointY="25.621704508463544" />
+          <ConnectorPoint PointX="2.625" PointY="25.621704508463544" />
           <ConnectorPoint PointX="2.625" PointY="21.125" />
           <ConnectorPoint PointX="2.7291666666666665" PointY="21.125" />
           <ConnectorPoint PointX="2.8958333333333335" PointY="21.125" />
@@ -2657,12 +2969,12 @@
           <ConnectorPoint PointX="7.041666666666667" PointY="24.614889322916667" />
           <ConnectorPoint PointX="7.333333333333333" PointY="24.614889322916667" />
           <ConnectorPoint PointX="7.375" PointY="24.614889322916667" />
-          <ConnectorPoint PointX="7.375" PointY="24.134095052083332" />
-          <ConnectorPoint PointX="9.9166666666666661" PointY="24.134095052083332" />
-          <ConnectorPoint PointX="10.083333333333334" PointY="24.134095052083332" />
-          <ConnectorPoint PointX="10.416666666666666" PointY="24.134095052083332" />
-          <ConnectorPoint PointX="10.583333333333334" PointY="24.134095052083332" />
-          <ConnectorPoint PointX="10.875" PointY="24.134095052083332" />
+          <ConnectorPoint PointX="7.375" PointY="24.134095052083339" />
+          <ConnectorPoint PointX="9.9166666666666661" PointY="24.134095052083339" />
+          <ConnectorPoint PointX="10.083333333333334" PointY="24.134095052083339" />
+          <ConnectorPoint PointX="10.416666666666666" PointY="24.134095052083339" />
+          <ConnectorPoint PointX="10.583333333333334" PointY="24.134095052083339" />
+          <ConnectorPoint PointX="10.875" PointY="24.134095052083339" />
           <ConnectorPoint PointX="10.875" PointY="24.682190755208339" />
           <ConnectorPoint PointX="11.75" PointY="24.682190755208339" />
           <ConnectorPoint PointX="11.75" PointY="24.432190755208339" />
@@ -2696,19 +3008,19 @@
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_ReservaAmbiente_TB_StatusPagamento1" ManuallyRouted="false">
           <ConnectorPoint PointX="12.625" PointY="29.375" />
-          <ConnectorPoint PointX="12.625" PointY="24.590843971354165" />
-          <ConnectorPoint PointX="13.5" PointY="24.590843971354165" />
+          <ConnectorPoint PointX="12.625" PointY="24.590843971354168" />
+          <ConnectorPoint PointX="13.5" PointY="24.590843971354168" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_veiculo_tb_tipoveiculo1" ManuallyRouted="false">
           <ConnectorPoint PointX="9.78125" PointY="29.375" />
-          <ConnectorPoint PointX="9.78125" PointY="24.283142903645835" />
-          <ConnectorPoint PointX="9.9166666666666661" PointY="24.283142903645835" />
-          <ConnectorPoint PointX="10.083333333333334" PointY="24.283142903645835" />
-          <ConnectorPoint PointX="10.416666666666666" PointY="24.283142903645835" />
-          <ConnectorPoint PointX="10.583333333333334" PointY="24.283142903645835" />
-          <ConnectorPoint PointX="10.791666666666666" PointY="24.283142903645835" />
-          <ConnectorPoint PointX="10.958333333333334" PointY="24.283142903645835" />
-          <ConnectorPoint PointX="11" PointY="24.283142903645835" />
+          <ConnectorPoint PointX="9.78125" PointY="24.283142903645839" />
+          <ConnectorPoint PointX="9.9166666666666661" PointY="24.283142903645839" />
+          <ConnectorPoint PointX="10.083333333333334" PointY="24.283142903645839" />
+          <ConnectorPoint PointX="10.416666666666666" PointY="24.283142903645839" />
+          <ConnectorPoint PointX="10.583333333333334" PointY="24.283142903645839" />
+          <ConnectorPoint PointX="10.791666666666666" PointY="24.283142903645839" />
+          <ConnectorPoint PointX="10.958333333333334" PointY="24.283142903645839" />
+          <ConnectorPoint PointX="11" PointY="24.283142903645839" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>
