@@ -75,8 +75,23 @@ namespace Services
                             IdPessoa = voto.IdPessoa,
                             IdOpcao = voto.IdOpcao,
                             IdEnquete = voto.IdEnquete,
-                            DataVoto = voto.DataVoto
+                            DataVoto = voto.DataVoto,
+                            Descricao = voto.tb_opcoesenquete.Descricao
 
+                        };
+            return query;
+        }
+
+        private IQueryable<VotoEnqueteModel> GetQueryResultado()
+        {
+            IQueryable<tb_votoenquete> tb_voto = unitOfWork.RepositorioVotoEnquete.GetQueryable();
+            var query = from voto in tb_voto
+                        select new VotoEnqueteModel
+                        {
+                            IdOpcao = voto.IdOpcao,
+                            IdEnquete = voto.IdEnquete,
+                            Descricao = voto.tb_opcoesenquete.Descricao,
+                            TituloEnquete = voto.tb_enquete.Titulo
                         };
             return query;
         }
@@ -89,12 +104,14 @@ namespace Services
         {
             return GetQuery();
         }
-
+        public IEnumerable<VotoEnqueteModel> ObterVotosEnquetes(int id)
+        {
+            return GetQueryResultado().Where(votos => votos.IdEnquete.Equals(id));
+        }
         public IEnumerable<VotoEnqueteModel> ObterOpcoesEnquete(int id)
         {
             return GetQuery().Where(opcoes => opcoes.IdEnquete.Equals(id));
         }
-
 
 
         /// <summary>
