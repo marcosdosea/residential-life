@@ -82,7 +82,9 @@ namespace Services
                         {
                             IdMoradia = moradia.IdMoradia,
                             IdBloco = moradia.IdBloco,
+                            NomeBloco = moradia.tb_bloco.Nome,
                             IdPessoa = moradia.IdProprietario,
+                            NomePessoa = moradia.tb_pessoa.Nome,
                             Predio = moradia.Predio,
                             Andar = moradia.Andar,                           
                             Numero = moradia.Numero,

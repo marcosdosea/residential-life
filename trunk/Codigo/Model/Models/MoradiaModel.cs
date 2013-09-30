@@ -17,8 +17,10 @@ namespace Models.Models
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
         public int IdBloco { get; set; }
+        public string NomeBloco { get; set; }
 
         public int IdPessoa { get; set; }
+        public string NomePessoa { get; set; }
 
         [Display(Name = "predio", ResourceType = typeof(Mensagem))]
         [StringLength(100)]
