@@ -113,6 +113,17 @@ namespace Services
             return GetQuery().Where(opcoes => opcoes.IdEnquete.Equals(id));
         }
 
+        public bool UsuarioVotouEnquete(int idEnquete, int idUsuario)
+        {
+
+            if (GetQuery().Where(opcoes => opcoes.IdEnquete.Equals(idEnquete) && opcoes.IdPessoa.Equals(idUsuario)).Count() > 0)
+                return true;
+            else
+                return false;
+
+
+        }
+
 
         /// <summary>
         /// Obtém um voto

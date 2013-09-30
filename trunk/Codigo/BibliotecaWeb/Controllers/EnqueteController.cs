@@ -98,6 +98,7 @@ namespace BibliotecaWeb.Controllers
             ViewBag.Enquete = gEnquete.Obter(id);
             ViewBag.IdEnquete = id;
             ViewBag.IdOpcao = gOpcao.ObterOpcoesEnquete(id);
+            ViewBag.MensagemVoto = "";
             return View();
         }
 
@@ -106,10 +107,17 @@ namespace BibliotecaWeb.Controllers
         {
             votoModel.IdPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
             votoModel.DataVoto = DateTime.Now;
+            ViewBag.MensagemVoto = "";
             if (ModelState.IsValid)
             {
-                gVoto.Inserir(votoModel);
-                return RedirectToAction("Index");
+                if (!gVoto.UsuarioVotouEnquete(votoModel.IdEnquete, votoModel.IdPessoa))
+                {
+                    gVoto.Inserir(votoModel);
+                    return RedirectToAction("Index");
+                }
+                else
+                    ViewBag.MensagemVoto = "Usuário já votou nessa enquete!";
+                
             }
             ViewBag.Enquete = gEnquete.Obter(votoModel.IdEnquete);
             ViewBag.IdEnquete = votoModel.IdEnquete;
