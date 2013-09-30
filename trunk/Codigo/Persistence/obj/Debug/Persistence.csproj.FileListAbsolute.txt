@@ -1,0 +1,188 @@
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\TDI\Nova pasta\trunk\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Thiago\Desktop\es2\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Thiago\Desktop\es2\Persistence\bin\Debug\Persistence.dll
+C:\Users\Thiago\Desktop\es2\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Thiago\Desktop\es2\Persistence\bin\Debug\Model.dll
+C:\Users\Thiago\Desktop\es2\Persistence\bin\Debug\Model.pdb
+C:\Users\Thiago\Desktop\es2\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Desktop\es2\Persistence\obj\Debug\Persistence.dll
+C:\Users\Thiago\Desktop\es2\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Leonardo\Desktop\Residential Life\trunk\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL3\Codigo\Persistence\obj\Debug\Persistence.pdb
+D:\Tauany\residential-life\trunk\Codigo\Persistence\bin\Debug\Persistence.dll.config
+D:\Tauany\residential-life\trunk\Codigo\Persistence\bin\Debug\Persistence.dll
+D:\Tauany\residential-life\trunk\Codigo\Persistence\bin\Debug\Persistence.pdb
+D:\Tauany\residential-life\trunk\Codigo\Persistence\bin\Debug\Model.dll
+D:\Tauany\residential-life\trunk\Codigo\Persistence\bin\Debug\Model.pdb
+D:\Tauany\residential-life\trunk\Codigo\Persistence\obj\Debug\ResolveAssemblyReference.cache
+D:\Tauany\residential-life\trunk\Codigo\Persistence\obj\Debug\Persistence.dll
+D:\Tauany\residential-life\trunk\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENCIAL4\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Persistence\bin\Debug\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Persistence\bin\Debug\Model.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Persistence\bin\Debug\Model.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Persistence\obj\Debug\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto 2\Persistence\obj\Debug\Persistence.pdb
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\JH-INFORMÁTICA\Desktop\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Leonardo\Desktop\residential-life-Atual\trunk\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Persistence\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Persistence\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Persistence\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Persistence\obj\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo novo RL6\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Persistence\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Persistence\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Persistence\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Persistence\obj\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL 7\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\Projeto\Codigo\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Desktop\Nova pasta\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Desktop\Nova pasta\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Thiago\Desktop\Nova pasta\Persistence\bin\Debug\Persistence.dll
+C:\Users\Thiago\Desktop\Nova pasta\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Thiago\Desktop\Nova pasta\Persistence\bin\Debug\Model.dll
+C:\Users\Thiago\Desktop\Nova pasta\Persistence\bin\Debug\Model.pdb
+C:\Users\Thiago\Desktop\Nova pasta\Persistence\obj\Debug\Persistence.dll
+C:\Users\Thiago\Desktop\Nova pasta\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL LIFE\trunk\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Thiago\Desktop\104\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Thiago\Desktop\104\Persistence\bin\Debug\Persistence.dll
+C:\Users\Thiago\Desktop\104\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Thiago\Desktop\104\Persistence\bin\Debug\Model.dll
+C:\Users\Thiago\Desktop\104\Persistence\bin\Debug\Model.pdb
+C:\Users\Thiago\Desktop\104\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Desktop\104\Persistence\obj\Debug\Persistence.dll
+C:\Users\Thiago\Desktop\104\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL L\trunk\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL L\trunk\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL L\trunk\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL L\trunk\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL L\trunk\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL L\trunk\Codigo\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL L\trunk\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESIDENTIAL L\trunk\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Thiago\Google Drive\2013.1\ESII\ProjetoES2\Codigo\Persistence\obj\Debug\Persistence.pdb
+<<<<<<< .mine
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\obj\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\RESI 136\Persistence\obj\Debug\Persistence.pdb
+=======
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Persistence\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Persistence\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Persistence\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Persistence\obj\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Codigo RL\Persistence\obj\Debug\Persistence.pdb
+>>>>>>> .r137
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\Persistence\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\Persistence\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\Persistence\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\Persistence\obj\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\Resi 138\Persistence\obj\Debug\Persistence.pdb
+>>>>>>> .r139
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Persistence\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\resi 149\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\cod 159\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\cod 159\Persistence\bin\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\cod 159\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\cod 159\Persistence\bin\Debug\Model.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\cod 159\Persistence\bin\Debug\Model.pdb
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\cod 159\Persistence\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\cod 159\Persistence\obj\Debug\Persistence.dll
+C:\Users\Nathan\Google Drive\SISTEMAS\PERÍODO VI\ENGENHARIA DE SOFTWARE II\PROJETO RESIDENTIAL\cod 159\Persistence\obj\Debug\Persistence.pdb
+C:\Users\Thiago\Desktop\163\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\Thiago\Desktop\163\Persistence\bin\Debug\Persistence.dll
+C:\Users\Thiago\Desktop\163\Persistence\bin\Debug\Persistence.pdb
+C:\Users\Thiago\Desktop\163\Persistence\bin\Debug\Model.dll
+C:\Users\Thiago\Desktop\163\Persistence\bin\Debug\Model.pdb
+C:\Users\Thiago\Desktop\163\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Desktop\163\Persistence\obj\Debug\Persistence.dll
+C:\Users\Thiago\Desktop\163\Persistence\obj\Debug\Persistence.pdb
