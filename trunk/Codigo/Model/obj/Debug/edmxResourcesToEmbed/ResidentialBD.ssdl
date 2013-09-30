@@ -45,10 +45,6 @@
       <End Role="tb_pessoa" EntitySet="tb_pessoa" />
       <End Role="tb_acessopredio" EntitySet="tb_acessopredio" />
     </AssociationSet>
-    <AssociationSet Name="TB_Administradora_TB_Condominio1" Association="residentialbdModel.Store.TB_Administradora_TB_Condominio1">
-      <End Role="tb_condominio" EntitySet="tb_condominio" />
-      <End Role="tb_administradora" EntitySet="tb_administradora" />
-    </AssociationSet>
     <AssociationSet Name="TB_AreaPublica_TB_StatusAreaPublica1" Association="residentialbdModel.Store.TB_AreaPublica_TB_StatusAreaPublica1">
       <End Role="tb_statusareapublica" EntitySet="tb_statusareapublica" />
       <End Role="tb_areapublica" EntitySet="tb_areapublica" />
@@ -72,6 +68,10 @@
     <AssociationSet Name="TB_Comentario_TB_Postagem1" Association="residentialbdModel.Store.TB_Comentario_TB_Postagem1">
       <End Role="tb_postagem" EntitySet="tb_postagem" />
       <End Role="tb_comentario" EntitySet="tb_comentario" />
+    </AssociationSet>
+    <AssociationSet Name="tb_condominio_tb_administradora1" Association="residentialbdModel.Store.tb_condominio_tb_administradora1">
+      <End Role="tb_administradora" EntitySet="tb_administradora" />
+      <End Role="tb_condominio" EntitySet="tb_condominio" />
     </AssociationSet>
     <AssociationSet Name="TB_Condominio_TB_Pessoa1" Association="residentialbdModel.Store.TB_Condominio_TB_Pessoa1">
       <End Role="tb_pessoa" EntitySet="tb_pessoa" />
@@ -296,8 +296,10 @@
       <PropertyRef Name="IdAdministradora" />
     </Key>
     <Property Name="IdAdministradora" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="IdCondominio" Type="int" Nullable="false" />
     <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Login" Type="varchar" Nullable="false" MaxLength="16" />
+    <Property Name="Senha" Type="varchar" Nullable="false" MaxLength="16" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="45" />
   </EntityType>
   <EntityType Name="tb_areapublica">
     <Key>
@@ -356,6 +358,7 @@
     <Property Name="CEP" Type="varchar" Nullable="false" MaxLength="8" />
     <Property Name="Cidade" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="Estado" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="IdAdministradora" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_enquete">
     <Key>
@@ -399,7 +402,7 @@
     </Key>
     <Property Name="IdMovimentacaoFinanceira" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="IdAdministradora" Type="int" Nullable="false" />
-    <Property Name="Valor" Type="decimal" Scale="2" />
+    <Property Name="Valor" Type="decimal" Nullable="false" Scale="2" />
     <Property Name="Data" Type="datetime" Nullable="false" />
     <Property Name="Competencia" Type="varchar" Nullable="false" MaxLength="30" />
     <Property Name="Descricao" Type="varchar" MaxLength="200" />
@@ -611,18 +614,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="TB_Administradora_TB_Condominio1">
-    <End Role="tb_condominio" Type="residentialbdModel.Store.tb_condominio" Multiplicity="1" />
-    <End Role="tb_administradora" Type="residentialbdModel.Store.tb_administradora" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_condominio">
-        <PropertyRef Name="IdCondominio" />
-      </Principal>
-      <Dependent Role="tb_administradora">
-        <PropertyRef Name="IdCondominio" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="TB_AreaPublica_TB_StatusAreaPublica1">
     <End Role="tb_statusareapublica" Type="residentialbdModel.Store.tb_statusareapublica" Multiplicity="1" />
     <End Role="tb_areapublica" Type="residentialbdModel.Store.tb_areapublica" Multiplicity="*" />
@@ -692,6 +683,18 @@
       </Principal>
       <Dependent Role="tb_comentario">
         <PropertyRef Name="IdPostagem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_condominio_tb_administradora1">
+    <End Role="tb_administradora" Type="residentialbdModel.Store.tb_administradora" Multiplicity="1" />
+    <End Role="tb_condominio" Type="residentialbdModel.Store.tb_condominio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_administradora">
+        <PropertyRef Name="IdAdministradora" />
+      </Principal>
+      <Dependent Role="tb_condominio">
+        <PropertyRef Name="IdAdministradora" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

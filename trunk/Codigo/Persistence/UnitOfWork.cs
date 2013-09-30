@@ -39,6 +39,7 @@ namespace Persistence
         private IRepositorioGenerico<tb_planodeconta> _repPlanoDeConta;
         private IRepositorioGenerico<tb_tipomoradia> _repTipoMoradia;
         private IRepositorioGenerico<tb_movimentacaofinanceira> _repMovimentacaoFinanceira;
+        private IRepositorioGenerico<tb_administradora> _repAdministradora;
 
         /// <summary>
         /// Construtor cria contexto transacional
@@ -391,7 +392,7 @@ namespace Persistence
 
 
         /// <summary>
-        /// Repositório para manipular dados persistidos de status de movimentação financeira
+        /// Repositório para manipular dados persistidos  de movimentação financeira
         /// </summary>
         public IRepositorioGenerico<tb_movimentacaofinanceira> RepositorioMovimentacaoFinanceira
         {
@@ -402,6 +403,22 @@ namespace Persistence
                     _repMovimentacaoFinanceira = new RepositorioGenerico<tb_movimentacaofinanceira>(_context);
                 }
                 return _repMovimentacaoFinanceira;
+            }
+        }
+
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de status de administradora
+        /// </summary>
+        public IRepositorioGenerico<tb_administradora> RepositorioAdministradora
+        {
+            get
+            {
+                if (_repAdministradora == null)
+                {
+                    _repAdministradora = new RepositorioGenerico<tb_administradora>(_context);
+                }
+                return _repAdministradora;
             }
         }
 

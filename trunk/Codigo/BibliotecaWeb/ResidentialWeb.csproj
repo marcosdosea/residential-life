@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdministradoraController.cs" />
     <Compile Include="Controllers\AreaPublicaController.cs" />
     <Compile Include="Controllers\BlocoController.cs" />
     <Compile Include="Controllers\CondominioController.cs" />
@@ -134,6 +135,11 @@
     <Content Include="Scripts\jquery-1.7.2.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Views\Administradora\Create.aspx" />
+    <Content Include="Views\Administradora\Delete.aspx" />
+    <Content Include="Views\Administradora\Details.aspx" />
+    <Content Include="Views\Administradora\Edit.aspx" />
+    <Content Include="Views\Administradora\Index.aspx" />
     <Content Include="Views\AreaPublica\Create.aspx" />
     <Content Include="Views\AreaPublica\Delete.aspx" />
     <Content Include="Views\AreaPublica\Details.aspx" />
