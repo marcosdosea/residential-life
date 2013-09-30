@@ -1,55 +1,47 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.MoradiaModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.moradia %></h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.novaMoradia, "Create") %>
 </p>
-<table>
+<table id="table">
     <tr>
         <th>
-            IdMoradia
+            <%: Models.App_GlobalResources.Mensagem.bloco %>
         </th>
         <th>
-            IdBloco
+           <%: Models.App_GlobalResources.Mensagem.proprietario %>
         </th>
         <th>
-            IdPessoa
+            <%: Models.App_GlobalResources.Mensagem.predio %>
         </th>
         <th>
-            Predio
+            <%: Models.App_GlobalResources.Mensagem.andar %>
         </th>
         <th>
-            Andar
+            <%: Models.App_GlobalResources.Mensagem.numero %>
         </th>
         <th>
-            Numero
-        </th>
-        <th>
-            IdTipoMoradia
-        </th>
-        <th>
-            TipoMoradia
+            <%: Models.App_GlobalResources.Mensagem.tipoMoradia%>
         </th>
         <th></th>
     </tr>
 
 <% foreach (var item in Model) { %>
     <tr>
+
         <td>
-            <%: Html.DisplayFor(modelItem => item.IdMoradia) %>
+            <%: Html.DisplayFor(modelItem => item.NomeBloco) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.IdBloco) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.IdPessoa) %>
+            <%: Html.DisplayFor(modelItem => item.NomePessoa) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Predio) %>
@@ -61,15 +53,11 @@
             <%: Html.DisplayFor(modelItem => item.Numero) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.IdTipoMoradia) %>
-        </td>
-        <td>
             <%: Html.DisplayFor(modelItem => item.TipoMoradia) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) %> |
-            <%: Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) %>
+            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editarProprietario, "Edit", new { id=item.IdMoradia }) %> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdMoradia })%>
         </td>
     </tr>
 <% } %>

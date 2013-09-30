@@ -477,6 +477,23 @@
   <data name="tipoMoradia" xml:space="preserve">
     <value>Tipo Moradia</value>
   </data>
+
+  <data name="confirmacaoApagarMoradia" xml:space="preserve">
+    <value>Tem certeza que deseja apagar esta moradia?</value>
+  </data>
+  <data name="editarProprietario" xml:space="preserve">
+    <value>Editar proprietário</value>
+  </data>
+  <data name="moradia" xml:space="preserve">
+    <value>Moradia</value>
+  </data>
+  <data name="novaMoradia" xml:space="preserve">
+    <value>Nova moradia</value>
+  </data>
+  <data name="proprietario" xml:space="preserve">
+    <value>Proprietário</value>
+  </data>
+
   <data name="apagarPlanoDeConta" xml:space="preserve">
     <value>Apagar Plano de Conta</value>
   </data>

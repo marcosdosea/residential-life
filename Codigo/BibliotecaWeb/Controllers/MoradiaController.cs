@@ -13,12 +13,14 @@ namespace BibliotecaWeb.Controllers
 
         private GerenciadorMoradia gMoradia;
         private GerenciadorBloco gBloco;
+        private GerenciadorPessoa gPessoa;
         private GerenciadorTipoMoradia gTipoMoradia;
         
          public MoradiaController()
         {
             gMoradia = new GerenciadorMoradia();
             gBloco = new GerenciadorBloco();
+            gPessoa = new GerenciadorPessoa();
             gTipoMoradia = new GerenciadorTipoMoradia();
         }
 
@@ -31,11 +33,12 @@ namespace BibliotecaWeb.Controllers
             return View(gMoradia.ObterTodos());
         }
 
-        [Authorize(Roles = "Morador")]
+        //[Authorize(Roles = "Morador")]
         public ActionResult Create()
         {
             //Pegar somente as áreas públicas do condomínio corrente no futuro
-            ViewBag.IdBloco = new SelectList(gBloco.ObterTodos(), "IdBloco", "Bloco");
+            ViewBag.IdBloco = new SelectList(gBloco.ObterTodos(), "IdBloco", "Nome");
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
             ViewBag.IdTipoMoradia = new SelectList(gTipoMoradia.ObterTodos(), "IdTipoMoradia", "TipoMoradia");
             return View();
         }
@@ -54,6 +57,48 @@ namespace BibliotecaWeb.Controllers
             }
 
             return View(moradiaModel);
+        }
+
+
+        public ActionResult Edit(int id)
+        {
+
+            MoradiaModel moradiaModel = gMoradia.Obter(id);
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", moradiaModel.IdPessoa);
+            return View(moradiaModel);
+        }
+
+        //
+        // POST: /pessoa/Edit/5
+
+        [HttpPost]
+        public ActionResult Edit(MoradiaModel moradiaModel)
+        {
+            if (ModelState.IsValid)
+            {
+                gMoradia.Editar(moradiaModel);
+                return RedirectToAction("Index");
+            }
+            return View(moradiaModel);
+        }
+
+        //
+        // GET: /pessoa/Delete/5
+
+        public ActionResult Delete(int id)
+        {
+            MoradiaModel moradiaModel = gMoradia.Obter(id);
+            return View(moradiaModel);
+        }
+
+        //
+        // POST: /pessoa/Delete/5
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            gMoradia.Remover(id);
+            return RedirectToAction("Index");
         }
 
     }
