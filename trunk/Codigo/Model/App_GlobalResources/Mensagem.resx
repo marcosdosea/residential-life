@@ -477,4 +477,64 @@
   <data name="tipoMoradia" xml:space="preserve">
     <value>Tipo Moradia</value>
   </data>
+  <data name="apagarPlanoDeConta" xml:space="preserve">
+    <value>Apagar Plano de Conta</value>
+  </data>
+  <data name="competencia" xml:space="preserve">
+    <value>Competência</value>
+  </data>
+  <data name="confirmacaoApagarPlanoDeConta" xml:space="preserve">
+    <value>Tem certeza que deseja apagar este Plano de Conta?</value>
+  </data>
+  <data name="detalhesPlanoDeConta" xml:space="preserve">
+    <value>Detalhes Plano de Conta</value>
+  </data>
+  <data name="editarPlanoDeConta" xml:space="preserve">
+    <value>Editar Plano de Conta</value>
+  </data>
+  <data name="novoPlanoDeConta" xml:space="preserve">
+    <value>Novo Plano de Conta</value>
+  </data>
+  <data name="planoDeConta" xml:space="preserve">
+    <value>Plano de Conta</value>
+  </data>
+  <data name="planosDeConta" xml:space="preserve">
+    <value>Planos de Conta</value>
+  </data>
+  <data name="tipoDePlanoDeConta" xml:space="preserve">
+    <value>Tipo de Plano de Conta</value>
+  </data>
+  <data name="administradora" xml:space="preserve">
+    <value>Administradora</value>
+  </data>
+  <data name="apagarMovimentacaoFinanceira" xml:space="preserve">
+    <value>Apagar Movimentação Financeira</value>
+  </data>
+  <data name="confirmacaoApagarMovimentacaoFinanceira" xml:space="preserve">
+    <value>Tem certeza que deseja apagar esta movimentação financeira?</value>
+  </data>
+  <data name="editarMovimentacaoFinanceira" xml:space="preserve">
+    <value>Editar Movimentação Financeira</value>
+  </data>
+  <data name="idAdministradora" xml:space="preserve">
+    <value>Código Administradora</value>
+  </data>
+  <data name="movimentacaoFinanceira" xml:space="preserve">
+    <value>Movimentação Financeira</value>
+  </data>
+  <data name="movimentacoesFinanceiras" xml:space="preserve">
+    <value>Movimentações Financeiras</value>
+  </data>
+  <data name="novaMovimentacaoFinanceira" xml:space="preserve">
+    <value>Nova Movimentacao Financeira</value>
+  </data>
+  <data name="detalhesMovimentacaoFinanceira" xml:space="preserve">
+    <value>Detalhes Movimentação Financeira</value>
+  </data>
+  <data name="statusMovimentacaoFinanceira" xml:space="preserve">
+    <value>Status Movimentação Financeira</value>
+  </data>
+  <data name="valor" xml:space="preserve">
+    <value>valor</value>
+  </data>
 </root>

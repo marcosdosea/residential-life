@@ -31,12 +31,14 @@ namespace Persistence
         private IRepositorioGenerico<tb_tipoocorrencia> _repTipoOcorrencia;
         private IRepositorioGenerico<tb_postagem> _repPostagem;
         private IRepositorioGenerico<tb_opcoesenquete> _repOpcaoEnquete;
-
         private IRepositorioGenerico<tb_votoenquete> _repVotoEnquete;
         private IRepositorioGenerico<tb_veiculo> _repVeiculo;
         private IRepositorioGenerico<tb_tipoveiculo> _repTipoVeiculo;
-
+        private IRepositorioGenerico<tb_tipoplanodeconta> _repTipoPlanoDeConta;
+        private IRepositorioGenerico<tb_statusmovimentacaofinanceira> _repStatusMovimentacaoFinanceira;
+        private IRepositorioGenerico<tb_planodeconta> _repPlanoDeConta;
         private IRepositorioGenerico<tb_tipomoradia> _repTipoMoradia;
+        private IRepositorioGenerico<tb_movimentacaofinanceira> _repMovimentacaoFinanceira;
 
         /// <summary>
         /// Construtor cria contexto transacional
@@ -336,6 +338,70 @@ namespace Persistence
                     _repTipoVeiculo = new RepositorioGenerico<tb_tipoveiculo>(_context);
                 }
                 return _repTipoVeiculo;
+            }
+        }
+
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de tipo de plano de conta
+        /// </summary>
+        public IRepositorioGenerico<tb_tipoplanodeconta> RepositorioTipoPlanoDeConta
+        {
+            get
+            {
+                if (_repTipoPlanoDeConta == null)
+                {
+                    _repTipoPlanoDeConta = new RepositorioGenerico<tb_tipoplanodeconta>(_context);
+                }
+                return _repTipoPlanoDeConta;
+            }
+        }
+
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de plano de conta
+        /// </summary>
+        public IRepositorioGenerico<tb_planodeconta> RepositorioPlanoDeConta
+        {
+            get
+            {
+                if (_repPlanoDeConta == null)
+                {
+                    _repPlanoDeConta = new RepositorioGenerico<tb_planodeconta>(_context);
+                }
+                return _repPlanoDeConta;
+            }
+        }
+
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de status de movimentação financeira
+        /// </summary>
+        public IRepositorioGenerico<tb_statusmovimentacaofinanceira> RepositorioStatusMovimentacaoFinanceira
+        {
+            get
+            {
+                if (_repStatusMovimentacaoFinanceira == null)
+                {
+                    _repStatusMovimentacaoFinanceira = new RepositorioGenerico<tb_statusmovimentacaofinanceira>(_context);
+                }
+                return _repStatusMovimentacaoFinanceira;
+            }
+        }
+
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de status de movimentação financeira
+        /// </summary>
+        public IRepositorioGenerico<tb_movimentacaofinanceira> RepositorioMovimentacaoFinanceira
+        {
+            get
+            {
+                if (_repMovimentacaoFinanceira == null)
+                {
+                    _repMovimentacaoFinanceira = new RepositorioGenerico<tb_movimentacaofinanceira>(_context);
+                }
+                return _repMovimentacaoFinanceira;
             }
         }
 
