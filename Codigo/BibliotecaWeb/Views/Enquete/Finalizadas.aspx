@@ -22,9 +22,7 @@
 <table id="table">
     <tr>
   
-        <th>
-            <%: Models.App_GlobalResources.Mensagem.criador %>
-        </th>
+       
         <th>
             <%: Models.App_GlobalResources.Mensagem.titulo %>
         </th>
@@ -37,16 +35,17 @@
         <th>
             <%: Models.App_GlobalResources.Mensagem.status %>
         </th>
+         <th>
+            <%: Models.App_GlobalResources.Mensagem.criador %>
+        </th>
     </tr>
 
 <% foreach (var item in Model) { %>
     <tr>
    
+       
         <td>
-            <%: Html.DisplayFor(modelItem => item.NomeCriador) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.Titulo) %>
+            <%: Html.ActionLink(item.Titulo, "relatorioVotosEnquete", new { id = item.IdEnquete })%>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.DataInicio) %>
@@ -56,6 +55,9 @@
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.StatusEnquete) %>
+        </td>
+         <td>
+            <%: Html.DisplayFor(modelItem => item.NomeCriador) %>
         </td>
         <td>
             <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editar , "Edit", new {  id=item.IdEnquete }) %> |

@@ -12,5 +12,7 @@ namespace Models.Models
         public int IdEnquete { get; set; }
         public int IdOpcao { get; set; }
         public DateTime DataVoto { get; set; }
+        public string Descricao { get; set; }
+        public string TituloEnquete { get; set; } 
     }
 }
