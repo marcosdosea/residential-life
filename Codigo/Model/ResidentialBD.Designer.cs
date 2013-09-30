@@ -20,7 +20,7 @@ using System.Xml.Serialization;
 #region EDM Relationship Metadata
 
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Acesso_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_acessopredio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_acessopredio), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Administradora_TB_Condominio1", "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_condominio), "tb_administradora", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_administradora), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "tb_condominio_tb_administradora1", "tb_administradora", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_administradora), "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_condominio), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_MovimentacaoFinanceira_TB_Administradora1", "tb_administradora", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_administradora), "tb_movimentacaofinanceira", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_movimentacaofinanceira), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_AreaPublica_TB_StatusAreaPublica1", "tb_statusareapublica", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_statusareapublica), "tb_areapublica", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_areapublica), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Espaco_TB_Condominio1", "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_condominio), "tb_areapublica", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_areapublica), true)]
@@ -2774,14 +2774,18 @@ namespace Models
         /// Create a new tb_administradora object.
         /// </summary>
         /// <param name="idAdministradora">Initial value of the IdAdministradora property.</param>
-        /// <param name="idCondominio">Initial value of the IdCondominio property.</param>
         /// <param name="nome">Initial value of the Nome property.</param>
-        public static tb_administradora Createtb_administradora(global::System.Int32 idAdministradora, global::System.Int32 idCondominio, global::System.String nome)
+        /// <param name="login">Initial value of the Login property.</param>
+        /// <param name="senha">Initial value of the Senha property.</param>
+        /// <param name="email">Initial value of the Email property.</param>
+        public static tb_administradora Createtb_administradora(global::System.Int32 idAdministradora, global::System.String nome, global::System.String login, global::System.String senha, global::System.String email)
         {
             tb_administradora tb_administradora = new tb_administradora();
             tb_administradora.IdAdministradora = idAdministradora;
-            tb_administradora.IdCondominio = idCondominio;
             tb_administradora.Nome = nome;
+            tb_administradora.Login = login;
+            tb_administradora.Senha = senha;
+            tb_administradora.Email = email;
             return tb_administradora;
         }
 
@@ -2821,30 +2825,6 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 IdCondominio
-        {
-            get
-            {
-                return _IdCondominio;
-            }
-            set
-            {
-                OnIdCondominioChanging(value);
-                ReportPropertyChanging("IdCondominio");
-                _IdCondominio = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdCondominio");
-                OnIdCondominioChanged();
-            }
-        }
-        private global::System.Int32 _IdCondominio;
-        partial void OnIdCondominioChanging(global::System.Int32 value);
-        partial void OnIdCondominioChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.String Nome
         {
             get
@@ -2863,6 +2843,78 @@ namespace Models
         private global::System.String _Nome;
         partial void OnNomeChanging(global::System.String value);
         partial void OnNomeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Login
+        {
+            get
+            {
+                return _Login;
+            }
+            set
+            {
+                OnLoginChanging(value);
+                ReportPropertyChanging("Login");
+                _Login = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Login");
+                OnLoginChanged();
+            }
+        }
+        private global::System.String _Login;
+        partial void OnLoginChanging(global::System.String value);
+        partial void OnLoginChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Senha
+        {
+            get
+            {
+                return _Senha;
+            }
+            set
+            {
+                OnSenhaChanging(value);
+                ReportPropertyChanging("Senha");
+                _Senha = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Senha");
+                OnSenhaChanged();
+            }
+        }
+        private global::System.String _Senha;
+        partial void OnSenhaChanging(global::System.String value);
+        partial void OnSenhaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Email
+        {
+            get
+            {
+                return _Email;
+            }
+            set
+            {
+                OnEmailChanging(value);
+                ReportPropertyChanging("Email");
+                _Email = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Email");
+                OnEmailChanged();
+            }
+        }
+        private global::System.String _Email;
+        partial void OnEmailChanging(global::System.String value);
+        partial void OnEmailChanged();
 
         #endregion
 
@@ -2875,34 +2927,18 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Administradora_TB_Condominio1", "tb_condominio")]
-        public tb_condominio tb_condominio
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_condominio_tb_administradora1", "tb_condominio")]
+        public EntityCollection<tb_condominio> tb_condominio
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_condominio>("residentialbdModel.TB_Administradora_TB_Condominio1", "tb_condominio").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_condominio>("residentialbdModel.TB_Administradora_TB_Condominio1", "tb_condominio").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<tb_condominio> tb_condominioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_condominio>("residentialbdModel.TB_Administradora_TB_Condominio1", "tb_condominio");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_condominio>("residentialbdModel.tb_condominio_tb_administradora1", "tb_condominio");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_condominio>("residentialbdModel.TB_Administradora_TB_Condominio1", "tb_condominio", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_condominio>("residentialbdModel.tb_condominio_tb_administradora1", "tb_condominio", value);
                 }
             }
         }
@@ -4003,7 +4039,8 @@ namespace Models
         /// <param name="cEP">Initial value of the CEP property.</param>
         /// <param name="cidade">Initial value of the Cidade property.</param>
         /// <param name="estado">Initial value of the Estado property.</param>
-        public static tb_condominio Createtb_condominio(global::System.Int32 idCondominio, global::System.Int32 idSindico, global::System.String nome, global::System.String rua, global::System.String numero, global::System.String bairro, global::System.String cEP, global::System.String cidade, global::System.String estado)
+        /// <param name="idAdministradora">Initial value of the IdAdministradora property.</param>
+        public static tb_condominio Createtb_condominio(global::System.Int32 idCondominio, global::System.Int32 idSindico, global::System.String nome, global::System.String rua, global::System.String numero, global::System.String bairro, global::System.String cEP, global::System.String cidade, global::System.String estado, global::System.Int32 idAdministradora)
         {
             tb_condominio tb_condominio = new tb_condominio();
             tb_condominio.IdCondominio = idCondominio;
@@ -4015,6 +4052,7 @@ namespace Models
             tb_condominio.CEP = cEP;
             tb_condominio.Cidade = cidade;
             tb_condominio.Estado = estado;
+            tb_condominio.IdAdministradora = idAdministradora;
             return tb_condominio;
         }
 
@@ -4264,6 +4302,30 @@ namespace Models
         private global::System.String _Estado;
         partial void OnEstadoChanging(global::System.String value);
         partial void OnEstadoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdAdministradora
+        {
+            get
+            {
+                return _IdAdministradora;
+            }
+            set
+            {
+                OnIdAdministradoraChanging(value);
+                ReportPropertyChanging("IdAdministradora");
+                _IdAdministradora = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdAdministradora");
+                OnIdAdministradoraChanged();
+            }
+        }
+        private global::System.Int32 _IdAdministradora;
+        partial void OnIdAdministradoraChanging(global::System.Int32 value);
+        partial void OnIdAdministradoraChanged();
 
         #endregion
 
@@ -4276,18 +4338,34 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Administradora_TB_Condominio1", "tb_administradora")]
-        public EntityCollection<tb_administradora> tb_administradora
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_condominio_tb_administradora1", "tb_administradora")]
+        public tb_administradora tb_administradora
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_administradora>("residentialbdModel.TB_Administradora_TB_Condominio1", "tb_administradora");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_administradora>("residentialbdModel.tb_condominio_tb_administradora1", "tb_administradora").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_administradora>("residentialbdModel.tb_condominio_tb_administradora1", "tb_administradora").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_administradora> tb_administradoraReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_administradora>("residentialbdModel.tb_condominio_tb_administradora1", "tb_administradora");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_administradora>("residentialbdModel.TB_Administradora_TB_Condominio1", "tb_administradora", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_administradora>("residentialbdModel.tb_condominio_tb_administradora1", "tb_administradora", value);
                 }
             }
         }
@@ -5376,15 +5454,17 @@ namespace Models
         /// </summary>
         /// <param name="idMovimentacaoFinanceira">Initial value of the IdMovimentacaoFinanceira property.</param>
         /// <param name="idAdministradora">Initial value of the IdAdministradora property.</param>
+        /// <param name="valor">Initial value of the Valor property.</param>
         /// <param name="data">Initial value of the Data property.</param>
         /// <param name="competencia">Initial value of the Competencia property.</param>
         /// <param name="idStatusMovimentacaoFinanceira">Initial value of the IdStatusMovimentacaoFinanceira property.</param>
         /// <param name="idPlanoDeConta">Initial value of the IdPlanoDeConta property.</param>
-        public static tb_movimentacaofinanceira Createtb_movimentacaofinanceira(global::System.Int32 idMovimentacaoFinanceira, global::System.Int32 idAdministradora, global::System.DateTime data, global::System.String competencia, global::System.Int32 idStatusMovimentacaoFinanceira, global::System.Int32 idPlanoDeConta)
+        public static tb_movimentacaofinanceira Createtb_movimentacaofinanceira(global::System.Int32 idMovimentacaoFinanceira, global::System.Int32 idAdministradora, global::System.Decimal valor, global::System.DateTime data, global::System.String competencia, global::System.Int32 idStatusMovimentacaoFinanceira, global::System.Int32 idPlanoDeConta)
         {
             tb_movimentacaofinanceira tb_movimentacaofinanceira = new tb_movimentacaofinanceira();
             tb_movimentacaofinanceira.IdMovimentacaoFinanceira = idMovimentacaoFinanceira;
             tb_movimentacaofinanceira.IdAdministradora = idAdministradora;
+            tb_movimentacaofinanceira.Valor = valor;
             tb_movimentacaofinanceira.Data = data;
             tb_movimentacaofinanceira.Competencia = competencia;
             tb_movimentacaofinanceira.IdStatusMovimentacaoFinanceira = idStatusMovimentacaoFinanceira;
@@ -5450,9 +5530,9 @@ namespace Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> Valor
+        public global::System.Decimal Valor
         {
             get
             {
@@ -5467,8 +5547,8 @@ namespace Models
                 OnValorChanged();
             }
         }
-        private Nullable<global::System.Decimal> _Valor;
-        partial void OnValorChanging(Nullable<global::System.Decimal> value);
+        private global::System.Decimal _Valor;
+        partial void OnValorChanging(global::System.Decimal value);
         partial void OnValorChanged();
     
         /// <summary>

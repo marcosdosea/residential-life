@@ -31,6 +31,7 @@ namespace Persistence
         IRepositorioGenerico<tb_planodeconta> RepositorioPlanoDeConta { get; }
         IRepositorioGenerico<tb_tipomoradia> RepositorioTipoMoradia { get; }
         IRepositorioGenerico<tb_movimentacaofinanceira> RepositorioMovimentacaoFinanceira { get; }
+        IRepositorioGenerico<tb_administradora> RepositorioAdministradora { get; }
 
     }
 }

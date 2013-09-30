@@ -113,8 +113,10 @@
       <EntityTypeMapping TypeName="residentialbdModel.tb_administradora">
         <MappingFragment StoreEntitySet="tb_administradora">
           <ScalarProperty Name="IdAdministradora" ColumnName="IdAdministradora" />
-          <ScalarProperty Name="IdCondominio" ColumnName="IdCondominio" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -178,6 +180,7 @@
           <ScalarProperty Name="CEP" ColumnName="CEP" />
           <ScalarProperty Name="Cidade" ColumnName="Cidade" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdAdministradora" ColumnName="IdAdministradora" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
