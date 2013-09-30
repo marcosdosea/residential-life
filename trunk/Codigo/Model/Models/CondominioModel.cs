@@ -10,6 +10,7 @@ namespace Models.Models
     public class CondominioModel
     {
         public int IdCondominio { get; set;}
+        public int IdAdministradora { get; set; }
         public int IdSindico { get; set; } 
         public string NomeSindico {get; set;}
 

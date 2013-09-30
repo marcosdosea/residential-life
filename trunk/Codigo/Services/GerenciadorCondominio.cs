@@ -88,6 +88,7 @@ namespace Services
                         {
                             IdCondominio = condominio.IdCondominio,
                             IdSindico = condominio.IdSindico,
+                            IdAdministradora = condominio.IdAdministradora,
                             Nome = condominio.Nome,
                             Rua = condominio.Rua,
                             Numero = condominio.Numero,
@@ -130,6 +131,7 @@ namespace Services
         {
             condominioE.IdCondominio = condominioModel.IdCondominio;
             condominioE.IdSindico = condominioModel.IdSindico;
+            condominioE.IdAdministradora = condominioModel.IdAdministradora;
             condominioE.Nome = condominioModel.Nome;
             condominioE.Rua = condominioModel.Rua;
             condominioE.Numero = condominioModel.Numero;

@@ -13,11 +13,13 @@ namespace BibliotecaWeb.Controllers
  
         private GerenciadorCondominio gCondominio;
         private GerenciadorPessoa gPessoa;
+        private GerenciadorAdministradora gAdministradora;
 
         public CondominioController()
         {
             gCondominio = new GerenciadorCondominio();
             gPessoa = new GerenciadorPessoa();
+            gAdministradora = new GerenciadorAdministradora();
         }
         //
         // GET: /condominio/
@@ -42,6 +44,7 @@ namespace BibliotecaWeb.Controllers
         public ActionResult Create()
         {
             ViewBag.IdSindico = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
+            ViewBag.IdAdministradora = new SelectList(gAdministradora.ObterTodos(), "IdAdministradora", "Nome");
             return View();
         }
 
@@ -67,7 +70,8 @@ namespace BibliotecaWeb.Controllers
         {
 
             CondominioModel condominio = gCondominio.Obter(id);
-            ViewBag.IdSindico = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", condominio.IdSindico); 
+            ViewBag.IdSindico = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", condominio.IdSindico);
+            ViewBag.IdAdministradora = new SelectList(gAdministradora.ObterTodos(), "IdAdministradora", "Nome", condominio.IdAdministradora); 
             return View(condominio);
         }
 

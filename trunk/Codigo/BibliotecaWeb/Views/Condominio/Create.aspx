@@ -20,8 +20,13 @@
             <%: Models.App_GlobalResources.Mensagem.sindico %>
         </div>
         <div class="editor-field">
-            <%: Html.DropDownList("IdSindico") %>
+            <%: Html.DropDownListFor(model => model.IdSindico, ViewBag.IdSindico as SelectList)%>
             <%: Html.ValidationMessageFor(model => model.IdSindico) %>
+        </div>
+
+         <div class="editor-field">
+            <%: Html.DropDownListFor(model => model.IdAdministradora, ViewBag.IdAdministradora as SelectList)%>
+            <%: Html.ValidationMessageFor(model => model.IdAdministradora)%>
         </div>
 
         <div class="editor-label">
