@@ -33,7 +33,7 @@ namespace BibliotecaWeb.Controllers
             return View(gMoradia.ObterTodos());
         }
 
-        //[Authorize(Roles = "Morador")]
+        [Authorize(Roles = "Síndico")]
         public ActionResult Create()
         {
             //Pegar somente as áreas públicas do condomínio corrente no futuro
@@ -59,7 +59,7 @@ namespace BibliotecaWeb.Controllers
             return View(moradiaModel);
         }
 
-
+        [Authorize(Roles = "Síndico")]
         public ActionResult Edit(int id)
         {
 
@@ -84,7 +84,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /pessoa/Delete/5
-
+        [Authorize(Roles = "Síndico")]
         public ActionResult Delete(int id)
         {
             MoradiaModel moradiaModel = gMoradia.Obter(id);
