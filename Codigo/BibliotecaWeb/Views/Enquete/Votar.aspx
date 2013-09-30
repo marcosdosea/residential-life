@@ -1,34 +1,34 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.EnqueteModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Votar
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Votar</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.votar %></h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.novaEnquete, "Create") %>
 </p>
         <table id="table">
     <tr>
        
         <th>
-            Titulo
+            <%: Models.App_GlobalResources.Mensagem.titulo %>
         </th>
         <th>
-            Descricao
+            <%: Models.App_GlobalResources.Mensagem.descricao %>
         </th>
         <th>
-            DataInicio
+            <%: Models.App_GlobalResources.Mensagem.dataInicio %>
         </th>
         <th>
-            DataFim
+            <%: Models.App_GlobalResources.Mensagem.dataFim %>
         </th>
 
         <th>
-            NomeCriador
+            <%: Models.App_GlobalResources.Mensagem.criador %>
         </th>
         <th></th>
     </tr>

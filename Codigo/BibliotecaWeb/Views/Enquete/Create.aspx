@@ -28,14 +28,14 @@
             <%: Models.App_GlobalResources.Mensagem.enquete %></legend>
         
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Enquete.Titulo)%>
+           <%: Models.App_GlobalResources.Mensagem.titulo %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Enquete.Titulo)%>
             <%: Html.ValidationMessageFor(model => model.Enquete.Titulo)%>
         </div>
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Enquete.Descricao)%>
+            <%: Models.App_GlobalResources.Mensagem.descricao %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Enquete.Descricao)%>
@@ -44,9 +44,9 @@
 
         <div style="float: left;">
          <fieldset>
-        <legend> Opções </legend>
+        <legend> <%: Models.App_GlobalResources.Mensagem.opcoes %> </legend>
 
-        <a  href="javascript:addRow();">Adicionar opção</a>
+        <a  href="javascript:addRow();"><%: Models.App_GlobalResources.Mensagem.adicionarOpcao %></a>
         <table id="formTable">
             <thead>
                 <tr>
@@ -78,21 +78,21 @@
 
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Enquete.DataInicio)%>
+            <%: Models.App_GlobalResources.Mensagem.dataInicio %>
         </div>
         <div class="editor-field">
             <%: Html.TextBoxFor(model => model.Enquete.DataInicio, new { @class = "date", @type = "date" })%>
             <%: Html.ValidationMessageFor(model => model.Enquete.DataInicio)%>
         </div>
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Enquete.DataFim)%>
+            <%: Models.App_GlobalResources.Mensagem.dataFim %>
         </div>
         <div class="editor-field">
             <%: Html.TextBoxFor(model => model.Enquete.DataFim, new { @class = "date", @type = "date" })%>
             <%: Html.ValidationMessageFor(model => model.Enquete.DataFim)%>
         </div>
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Enquete.IdStatusEnquete)%>
+            <%: Models.App_GlobalResources.Mensagem.statusEnquete %>
         </div>
         <div class="editor-field">
             <%: Html.DropDownListFor(model => model.Enquete.IdStatusEnquete, ViewBag.IdStatusEnquete as SelectList)%>

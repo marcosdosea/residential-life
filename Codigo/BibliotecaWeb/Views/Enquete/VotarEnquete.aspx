@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.VotoEnqueteModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    VotarEnquete
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2>
-        VotarEnquete</h2>
+        <%: Models.App_GlobalResources.Mensagem.votar %></h2>
     <% using (Html.BeginForm())
        { %>
     <%: Html.ValidationSummary(true) %>
@@ -24,6 +24,6 @@
         </p>
         <%    }
         %>
-        <input type="submit" value="Votar" />
+        <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.votar %>" />
         <% } %>
 </asp:Content>
