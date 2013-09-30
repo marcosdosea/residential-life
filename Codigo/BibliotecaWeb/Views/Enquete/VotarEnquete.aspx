@@ -10,7 +10,7 @@
        { %>
     <%: Html.ValidationSummary(true) %>
     <INPUT TYPE="hidden" NAME="IdEnquete" VALUE="<%: ViewBag.IdEnquete %>">
-
+    <%: ViewBag.MensagemVoto %>
     <fieldset>
         <legend>
         <%:ViewBag.Enquete.Titulo %></legend>
