@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GerenciadorAcessoPredio.cs" />
+    <Compile Include="GerenciadorAdministradora.cs" />
     <Compile Include="GerenciadorMoradia.cs" />
     <Compile Include="GerenciadorOpcoesEnquete.cs" />
     <Compile Include="GerenciadorPostagem.cs" />

@@ -187,3 +187,12 @@ C:\Users\Thiago\Desktop\163\Model\obj\Debug\Models.App_GlobalResources.Mensagem.
 C:\Users\Thiago\Desktop\163\Model\obj\Debug\Model.csproj.GenerateResource.Cache
 C:\Users\Thiago\Desktop\163\Model\obj\Debug\Model.dll
 C:\Users\Thiago\Desktop\163\Model\obj\Debug\Model.pdb
+D:\RL\COD 171\Codigo\Model\bin\Debug\Model.dll.config
+D:\RL\COD 171\Codigo\Model\bin\Debug\Model.dll
+D:\RL\COD 171\Codigo\Model\bin\Debug\Model.pdb
+D:\RL\COD 171\Codigo\Model\obj\Debug\ResolveAssemblyReference.cache
+D:\RL\COD 171\Codigo\Model\obj\Debug\Models.App_GlobalResources.Mensagem.resources
+D:\RL\COD 171\Codigo\Model\obj\Debug\GenerateResource.read.1.tlog
+D:\RL\COD 171\Codigo\Model\obj\Debug\GenerateResource.write.1.tlog
+D:\RL\COD 171\Codigo\Model\obj\Debug\Model.dll
+D:\RL\COD 171\Codigo\Model\obj\Debug\Model.pdb

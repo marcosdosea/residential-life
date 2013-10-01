@@ -30,6 +30,7 @@ namespace Persistence
                 
         IRepositorioGenerico<tb_tipomoradia> RepositorioTipoMoradia { get; }
         IRepositorioGenerico<tb_acessopredio> RepositorioAcessoPredio { get; }
+        IRepositorioGenerico<tb_administradora> RepositorioAdministradora { get; }
 
     }
 }

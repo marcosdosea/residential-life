@@ -52,6 +52,8 @@
       <DependentUpon>Mensagem.resx</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AcessoPredioModel.cs" />
+    <Compile Include="Models\AdministradoraModel.cs" />
     <Compile Include="Models\AreaPublicaModel.cs" />
     <Compile Include="Models\BlocoModel.cs" />
     <Compile Include="Models\CondominioModel.cs" />
