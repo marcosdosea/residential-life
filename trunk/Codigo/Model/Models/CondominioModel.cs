@@ -9,12 +9,14 @@ namespace Models.Models
 {
     public class CondominioModel
     {
-        public int IdCondominio { get; set;}
-        public int IdSindico { get; set; } 
-        public string NomeSindico {get; set;}
+        public int IdCondominio { get; set; }
+        public int IdAdministradora { get; set; }
+        public string nomeAdministradora { get; set; }
+        public int IdSindico { get; set; }
+        public string NomeSindico { get; set; }
 
         [Required]
-        [Display(Name = "nome", ResourceType=typeof(Mensagem))]
+        [Display(Name = "nome", ResourceType = typeof(Mensagem))]
         [StringLength(100)]
         public string Nome { get; set; }
 

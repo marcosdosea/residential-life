@@ -519,4 +519,10 @@
   <data name="novaAdministradora" xml:space="preserve">
     <value>Nova Administradora</value>
   </data>
+  <data name="apargarCondominio" xml:space="preserve">
+    <value>Apargar Condomínio</value>
+  </data>
+  <data name="novoCondominio" xml:space="preserve">
+    <value>Novo Condomínio</value>
+  </data>
 </root>
