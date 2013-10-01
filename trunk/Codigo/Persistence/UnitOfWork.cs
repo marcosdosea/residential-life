@@ -39,6 +39,9 @@ namespace Persistence
         private IRepositorioGenerico<tb_tipomoradia> _repTipoMoradia;
         private IRepositorioGenerico<tb_acessopredio> _repAcessoPredio;
 
+        private IRepositorioGenerico<tb_administradora> _repAdministradora;
+
+
         /// <summary>
         /// Construtor cria contexto transacional
         /// </summary>
@@ -352,6 +355,21 @@ namespace Persistence
                     _repAcessoPredio = new RepositorioGenerico<tb_acessopredio>(_context);
                 }
                 return _repAcessoPredio;
+            }
+        }
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de administradora
+        /// </summary>
+        public IRepositorioGenerico<tb_administradora> RepositorioAdministradora
+        {
+            get
+            {
+                if (_repAdministradora == null)
+                {
+                    _repAdministradora = new RepositorioGenerico<tb_administradora>(_context);
+                }
+                return _repAdministradora;
             }
         }
 

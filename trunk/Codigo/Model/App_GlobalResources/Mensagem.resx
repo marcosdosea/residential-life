@@ -477,4 +477,10 @@
   <data name="tipoMoradia" xml:space="preserve">
     <value>Tipo Moradia</value>
   </data>
+  <data name="dataEntrada" xml:space="preserve">
+    <value>Data Entrada</value>
+  </data>
+  <data name="dataSaida" xml:space="preserve">
+    <value>Data Saida</value>
+  </data>
 </root>

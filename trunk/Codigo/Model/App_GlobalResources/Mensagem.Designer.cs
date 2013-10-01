@@ -367,6 +367,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data Entrada.
+        /// </summary>
+        public static string dataEntrada {
+            get {
+                return ResourceManager.GetString("dataEntrada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Data de Exclusão Automática.
         /// </summary>
         public static string dataExclusao {
@@ -408,6 +417,15 @@ namespace Models.App_GlobalResources {
         public static string dataInicioEnquete {
             get {
                 return ResourceManager.GetString("dataInicioEnquete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data Saida.
+        /// </summary>
+        public static string dataSaida {
+            get {
+                return ResourceManager.GetString("dataSaida", resourceCulture);
             }
         }
         
