@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.AdministradoraModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Create
+    <%: Models.App_GlobalResources.Mensagem.novaAdministradora %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Create</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.novaAdministradora %></h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -14,11 +14,11 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>AdministradoraModel</legend>
+        <legend><%: Models.App_GlobalResources.Mensagem.novaAdministradora %></legend>
 
       
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Nome) %>
+            <%: Models.App_GlobalResources.Mensagem.nome %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Nome) %>
@@ -27,7 +27,7 @@
 
         
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Login) %>
+            <%: Models.App_GlobalResources.Mensagem.login %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Login) %>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Senha) %>
+            <%: Models.App_GlobalResources.Mensagem.senha %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Senha) %>
@@ -44,7 +44,7 @@
 
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Email) %>
+            <%: Models.App_GlobalResources.Mensagem.email %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Email) %>
@@ -52,13 +52,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
 </div>
 
 </asp:Content>

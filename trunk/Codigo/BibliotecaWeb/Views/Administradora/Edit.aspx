@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.AdministradoraModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Edit
+    <%: Models.App_GlobalResources.Mensagem.editarAdministradora %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Edit</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.editarAdministradora %></h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -14,42 +14,30 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>AdministradoraModel</legend>
+        <legend><%: Models.App_GlobalResources.Mensagem.administradora %></h2></legend>
 
+        <%: Html.HiddenFor(model => model.IdAdministradora) %>
+        
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdAdministradora) %>
+            <%: Models.App_GlobalResources.Mensagem.nome %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdAdministradora) %>
-            <%: Html.ValidationMessageFor(model => model.IdAdministradora) %>
+            <%: Html.HiddenFor(model => model.Login) %>
+            <%: Html.ValidationMessageFor(model => model.Nome) %>
         </div>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Nome) %>
+        <div class="editor-field">
+            <%: Html.HiddenFor(model => model.Senha)%>
+            <%: Html.ValidationMessageFor(model => model.Nome) %>
         </div>
+
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Nome) %>
             <%: Html.ValidationMessageFor(model => model.Nome) %>
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Senha) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.Senha) %>
-            <%: Html.ValidationMessageFor(model => model.Senha) %>
-        </div>
-
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Login) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.Login) %>
-            <%: Html.ValidationMessageFor(model => model.Login) %>
-        </div>
-
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Email) %>
+            <%: Models.App_GlobalResources.Mensagem.email %>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Email) %>
@@ -57,13 +45,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
 </div>
 
 </asp:Content>
