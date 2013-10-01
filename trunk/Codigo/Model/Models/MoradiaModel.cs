@@ -11,14 +11,16 @@ namespace Models.Models
     {
 
         public int IdMoradia { get; set; }
-               
+
 
         [Display(Name = "bloco", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
         public int IdBloco { get; set; }
+        public string NomeBloco { get; set; }
 
         public int IdPessoa { get; set; }
+        public string NomePessoa { get; set; }
 
         [Display(Name = "predio", ResourceType = typeof(Mensagem))]
         [StringLength(100)]
@@ -35,8 +37,8 @@ namespace Models.Models
         [Display(Name = "numero", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
            ErrorMessageResourceName = "required")]
-        public string Numero { get; set; }       
-        
+        public string Numero { get; set; }
+
         [Display(Name = "idTipoMoradia", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
