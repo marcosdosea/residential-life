@@ -29,6 +29,7 @@ namespace BibliotecaWeb.Controllers
             return View(gAreaPublica.ObterTodos());
         }
 
+        
         //
         // GET: /AreaPublica/Details/5
 

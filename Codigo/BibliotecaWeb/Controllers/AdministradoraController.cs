@@ -9,6 +9,7 @@ using Services;
 
 namespace BibliotecaWeb.Controllers
 {
+    [Authorize(Roles = "Adm Sistema")]
     public class AdministradoraController : Controller
     {
         //
@@ -24,7 +25,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /Administradora/
-
+        [Authorize(Roles = "Adm Sistema")]
         public ActionResult Index()
         {
             return View(gAdministradora.ObterTodos());
@@ -32,6 +33,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /Administradora/Create
+        [Authorize(Roles = "Adm Sistema")]
         public ActionResult Create()
         {
             return View();
@@ -67,6 +69,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /pessoa/Details/5
+        [Authorize(Roles = "Adm Sistema")]
         public ViewResult Details(int id)
         {
             AdministradoraModel veiculo = gAdministradora.Obter(id);
@@ -75,6 +78,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /Administradora/Edit/5
+        [Authorize(Roles = "Adm Sistema")]
         public ActionResult Edit(int id)
         {
             AdministradoraModel veiculo = gAdministradora.Obter(id);
@@ -96,6 +100,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /Administradora/Delete/5
+        [Authorize(Roles = "Adm Sistema")]
         public ActionResult Delete(int id)
         {
             AdministradoraModel administradoraModel = gAdministradora.Obter(id);

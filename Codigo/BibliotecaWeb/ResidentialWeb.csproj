@@ -146,7 +146,6 @@
     <Content Include="Views\AreaPublica\Details.aspx" />
     <Content Include="Views\AreaPublica\Edit.aspx" />
     <Content Include="Views\AreaPublica\Index.aspx" />
-    <Content Include="Views\AreaPublica\Index2.aspx" />
     <Content Include="Views\Bloco\Create.aspx" />
     <Content Include="Views\Bloco\Delete.aspx" />
     <Content Include="Views\Bloco\Details.aspx" />

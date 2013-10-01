@@ -498,4 +498,25 @@
   <data name="proprietario" xml:space="preserve">
     <value>Proprietário</value>
   </data>
+  <data name="administradora" xml:space="preserve">
+    <value>Administradora</value>
+  </data>
+  <data name="administradoras" xml:space="preserve">
+    <value>Administradoras</value>
+  </data>
+  <data name="apagarAdministradora" xml:space="preserve">
+    <value>Apagar Administradora</value>
+  </data>
+  <data name="confirmacaoApagarAdministradora" xml:space="preserve">
+    <value>Tem certeza que deseja apagar esta Administradora?</value>
+  </data>
+  <data name="detalhesAdministradora" xml:space="preserve">
+    <value>Detalhes Administradora</value>
+  </data>
+  <data name="editarAdministradora" xml:space="preserve">
+    <value>Editar Administradora</value>
+  </data>
+  <data name="novaAdministradora" xml:space="preserve">
+    <value>Nova Administradora</value>
+  </data>
 </root>

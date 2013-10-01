@@ -1,42 +1,36 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.AdministradoraModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    <%: Models.App_GlobalResources.Mensagem.administradoras %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.administradoras %></h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.novo, "Create")%>
 </p>
-<table>
+<table id="table">
     <tr>
         
         <th>
-            Nome
+            <%: Models.App_GlobalResources.Mensagem.nome %>
         </th>
         <th>
-            Senha
+            <%: Models.App_GlobalResources.Mensagem.login %>
         </th>
         <th>
-            Login
-        </th>
-        <th>
-            Email
+            <%: Models.App_GlobalResources.Mensagem.email %>
         </th>
         <th></th>
     </tr>
 
 <% foreach (var item in Model) { %>
     <tr>
-       
+        <%: Html.HiddenFor(modelItem => item.IdAdministradora) %>
         <td>
             <%: Html.DisplayFor(modelItem => item.Nome) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.Senha) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Login) %>
@@ -45,9 +39,9 @@
             <%: Html.DisplayFor(modelItem => item.Email) %>
         </td>
         <td>
-            <%: Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) %> |
-            <%: Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) %>
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.IdAdministradora })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdAdministradora })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdAdministradora })%>
         </td>
     </tr>
 <% } %>
