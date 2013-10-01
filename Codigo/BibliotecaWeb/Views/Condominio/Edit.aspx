@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.CondominioModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-   <%: Models.App_GlobalResources.Mensagem.editarCondominio %>
+    Edit
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2><%: Models.App_GlobalResources.Mensagem.editarCondominio %></h2>
+<h2><%:Models.App_GlobalResources.Mensagem.editar%></h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -15,23 +15,28 @@
     <%: Html.ValidationSummary(true) %>
     <fieldset>
         <legend><%: Models.App_GlobalResources.Mensagem.condominio %></legend>
-
-       
-        <div class="editor-field">
-            <%: Html.HiddenFor(model => model.IdCondominio)%>
-            <%: Html.ValidationMessageFor(model => model.IdCondominio)%>
-        </div>
-
-          <div class="editor-label">
-          <%: Models.App_GlobalResources.Mensagem.sindico %>
-        </div>
-        <div class="editor-field">
-            <%: Html.DropDownList("IdSindico") %>
-            <%: Html.ValidationMessageFor(model => model.IdSindico) %>
-        </div>
+              
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Nome) %>
+            <%: Models.App_GlobalResources.Mensagem.administradora%>
+        </div>
+        <div class="editor-field">
+            <%:  Html.DropDownListFor(model => model.IdAdministradora, ViewBag.IdAdministradora as SelectList)%>
+            <%: Html.ValidationMessageFor(model => model.IdAdministradora) %>
+        </div>
+
+       
+        <div class="editor-label">
+            <%:  Models.App_GlobalResources.Mensagem.sindico%>
+        </div>
+        <div class="editor-field">
+            <%: Html.DropDownListFor(model => model.IdSindico, ViewBag.IdSindico as SelectList)%>
+            <%: Html.ValidationMessageFor(model => model.IdSindico) %>
+        </div>
+              
+
+        <div class="editor-label">
+            <%: Models.App_GlobalResources.Mensagem.nome%>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Nome) %>
@@ -42,12 +47,12 @@
             <%: Html.LabelFor(model => model.Rua) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Rua) %>
+            <%: Models.App_GlobalResources.Mensagem.rua%>
             <%: Html.ValidationMessageFor(model => model.Rua) %>
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Numero) %>
+            <%: Models.App_GlobalResources.Mensagem.numero%>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Numero) %>
@@ -55,7 +60,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Bairro) %>
+            <%: Models.App_GlobalResources.Mensagem.bairro%>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Bairro) %>
@@ -63,7 +68,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Complemento) %>
+            <%: Models.App_GlobalResources.Mensagem.complemento%>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Complemento) %>
@@ -71,7 +76,7 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Cep) %>
+            <%: Models.App_GlobalResources.Mensagem.cep%>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Cep) %>
@@ -79,33 +84,29 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Cidade) %>
+            <%: Models.App_GlobalResources.Mensagem.cidade%>
         </div>
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Cidade) %>
             <%: Html.ValidationMessageFor(model => model.Cidade) %>
         </div>
 
-         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Estado) %>
+        <div class="editor-label">
+            <%: Models.App_GlobalResources.Mensagem.estado%>
         </div>
-        <p>
-            <%: @Html.DropDownListFor(model => model.Estado, new[]
-            {
-                new SelectListItem {Text = "Sergipe", Value = "SE"},
-                new SelectListItem {Text = "Bahia", Value = "BA"},
-                new SelectListItem {Text = "Alagoas", Value = "AL"},
+        <div class="editor-field">
+            <%: Html.EditorFor(model => model.Estado) %>
+            <%: Html.ValidationMessageFor(model => model.Estado) %>
+        </div>
 
-            },Models.App_GlobalResources.Mensagem.selecione )%> 
-        </p>    
         <p>
-            <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.editar %>" />
+         <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.salvar %> /> 
         </p>
     </fieldset>
 <% } %>
 
 <div>
-    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index") %>
+   <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
 </div>
 
 </asp:Content>

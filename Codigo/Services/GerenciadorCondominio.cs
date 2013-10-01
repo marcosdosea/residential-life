@@ -87,7 +87,10 @@ namespace Services
                         select new CondominioModel
                         {
                             IdCondominio = condominio.IdCondominio,
-                            IdSindico = condominio.IdSindico,
+                           // IdSindico = condominio.IdSindico,
+                           // IdAdministradora = condominio.IdAdministradora,
+                            NomeSindico = condominio.tb_pessoa.Nome,
+                            nomeAdministradora = condominio.tb_administradora.Nome,
                             Nome = condominio.Nome,
                             Rua = condominio.Rua,
                             Numero = condominio.Numero,
@@ -96,7 +99,7 @@ namespace Services
                             Cep = condominio.CEP,
                             Cidade = condominio.Cidade,
                             Estado = condominio.Estado,
-                            NomeSindico = condominio.tb_pessoa.Nome
+                            
                         };
             return query;
         }
@@ -130,6 +133,7 @@ namespace Services
         {
             condominioE.IdCondominio = condominioModel.IdCondominio;
             condominioE.IdSindico = condominioModel.IdSindico;
+            condominioE.IdAdministradora = condominioModel.IdAdministradora;
             condominioE.Nome = condominioModel.Nome;
             condominioE.Rua = condominioModel.Rua;
             condominioE.Numero = condominioModel.Numero;

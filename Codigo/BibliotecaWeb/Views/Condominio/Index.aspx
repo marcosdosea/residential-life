@@ -1,19 +1,23 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.CondominioModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    <%: Models.App_GlobalResources.Mensagem.condominios %>
+    Index
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2><%: Models.App_GlobalResources.Mensagem.condominios %></h2>
+<h2><%: Models.App_GlobalResources.Mensagem.condominios%></h2>
 
 <p>
     <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.novo, "Create") %>
 </p>
-<table id="table">
+<table>
     <tr>
-     
+      
+        <th>
+             <%: Models.App_GlobalResources.Mensagem.administradora %>
+        </th>
+       
         <th>
             <%: Models.App_GlobalResources.Mensagem.sindico %>
         </th>
@@ -46,8 +50,12 @@
 
 <% foreach (var item in Model) { %>
     <tr>
-     
+       
+       
         <td>
+            <%: Html.DisplayFor(modelItem => item.nomeAdministradora) %>
+        </td>
+         <td>
             <%: Html.DisplayFor(modelItem => item.NomeSindico) %>
         </td>
         <td>
@@ -75,7 +83,7 @@
             <%: Html.DisplayFor(modelItem => item.Estado) %>
         </td>
         <td>
-            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editar , "Edit", new {  id=item.IdCondominio }) %> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.IdCondominio })%> |
             <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdCondominio })%> |
             <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdCondominio })%>
         </td>
