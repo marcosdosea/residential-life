@@ -82,13 +82,15 @@ namespace Services
                         {
                             IdMoradia = moradia.IdMoradia,
                             IdBloco = moradia.IdBloco,
+                            NomeBloco = moradia.tb_bloco.Nome,
                             IdPessoa = moradia.IdProprietario,
+                            NomePessoa = moradia.tb_pessoa.Nome,
                             Predio = moradia.Predio,
-                            Andar = moradia.Andar,                           
+                            Andar = moradia.Andar,
                             Numero = moradia.Numero,
                             IdTipoMoradia = moradia.IdTipoMoradia,
                             TipoMoradia = moradia.tb_tipomoradia.TipoMoradia,
-                          
+
                         };
             return query;
         }
@@ -147,8 +149,8 @@ namespace Services
             reservaAmbienteE.Andar = moradiaModel.Andar;
             reservaAmbienteE.Numero = moradiaModel.Numero;
             reservaAmbienteE.IdTipoMoradia = moradiaModel.IdTipoMoradia;
-           
-            
+
+
         }
 
     }

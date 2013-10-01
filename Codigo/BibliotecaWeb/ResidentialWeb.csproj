@@ -167,7 +167,6 @@
     <Content Include="Views\Enquete\VotarEnquete.aspx" />
     <Content Include="Views\Moradia\Create.aspx" />
     <Content Include="Views\Moradia\Delete.aspx" />
-    <Content Include="Views\Moradia\Details.aspx" />
     <Content Include="Views\Moradia\Edit.aspx" />
     <Content Include="Views\Moradia\Index.aspx" />
     <Content Include="Views\Pessoa\Create.aspx" />

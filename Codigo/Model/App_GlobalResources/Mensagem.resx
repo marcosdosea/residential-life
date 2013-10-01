@@ -483,4 +483,19 @@
   <data name="dataSaida" xml:space="preserve">
     <value>Data Saida</value>
   </data>
+  <data name="confirmacaoApagarMoradia" xml:space="preserve">
+    <value>Deseja realmente Apagar Moradia</value>
+  </data>
+  <data name="editarProprietario" xml:space="preserve">
+    <value>Editar Proprietário</value>
+  </data>
+  <data name="moradia" xml:space="preserve">
+    <value>Moradia</value>
+  </data>
+  <data name="novaMoradia" xml:space="preserve">
+    <value>Nova Moradia</value>
+  </data>
+  <data name="proprietario" xml:space="preserve">
+    <value>Proprietário</value>
+  </data>
 </root>

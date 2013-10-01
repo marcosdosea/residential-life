@@ -259,6 +259,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Deseja realmente Apagar Moradia.
+        /// </summary>
+        public static string confirmacaoApagarMoradia {
+            get {
+                return ResourceManager.GetString("confirmacaoApagarMoradia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tem certeza que deseja apagar esta pessoa?.
         /// </summary>
         public static string confirmacaoApagarPessoa {
@@ -547,6 +556,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Editar Proprietário.
+        /// </summary>
+        public static string editarProprietario {
+            get {
+                return ResourceManager.GetString("editarProprietario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Editar Reserva de Ambiente.
         /// </summary>
         public static string editarReservaAmbiente {
@@ -763,6 +781,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Moradia.
+        /// </summary>
+        public static string moradia {
+            get {
+                return ResourceManager.GetString("moradia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nome.
         /// </summary>
         public static string nome {
@@ -786,6 +813,15 @@ namespace Models.App_GlobalResources {
         public static string novaEnquete {
             get {
                 return ResourceManager.GetString("novaEnquete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nova Moradia.
+        /// </summary>
+        public static string novaMoradia {
+            get {
+                return ResourceManager.GetString("novaMoradia", resourceCulture);
             }
         }
         
@@ -912,6 +948,15 @@ namespace Models.App_GlobalResources {
         public static string predio {
             get {
                 return ResourceManager.GetString("predio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Proprietário.
+        /// </summary>
+        public static string proprietario {
+            get {
+                return ResourceManager.GetString("proprietario", resourceCulture);
             }
         }
         
