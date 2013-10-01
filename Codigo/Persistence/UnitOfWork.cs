@@ -37,6 +37,7 @@ namespace Persistence
         private IRepositorioGenerico<tb_tipoveiculo> _repTipoVeiculo;
 
         private IRepositorioGenerico<tb_tipomoradia> _repTipoMoradia;
+        private IRepositorioGenerico<tb_acessopredio> _repAcessoPredio;
 
         /// <summary>
         /// Construtor cria contexto transacional
@@ -339,6 +340,20 @@ namespace Persistence
             }
         }
 
+        /// <summary>
+        /// Repositório para manipular dados persistidos de acesso ao predio
+        /// </summary>
+        public IRepositorioGenerico<tb_acessopredio> RepositorioAcessoPredio
+        {
+            get
+            {
+                if (_repAcessoPredio == null)
+                {
+                    _repAcessoPredio = new RepositorioGenerico<tb_acessopredio>(_context);
+                }
+                return _repAcessoPredio;
+            }
+        }
 
         /// <summary>
         /// Salva todas as mudanças realizadas no contexto

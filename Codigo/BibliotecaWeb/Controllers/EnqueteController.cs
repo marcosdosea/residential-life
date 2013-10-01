@@ -30,24 +30,24 @@ namespace BibliotecaWeb.Controllers
             gVoto = new GerenciadorVotoEnquete();
         }
 
-        [Authorize(Roles = "Síndico")]
+       // [Authorize(Roles = "Síndico")]
         public ViewResult Index()
         {
             return View(gEnquete.ObterTodos());
         }
-        [Authorize(Roles = "Síndico")]
+      //  [Authorize(Roles = "Síndico")]
         public ViewResult EmAndamento()
         {
             return View(gEnquete.ObterEnquetesAtivas());
         }
-        [Authorize(Roles = "Síndico")]
+     //   [Authorize(Roles = "Síndico")]
         public ViewResult Finalizadas()
         {
             return View(gEnquete.ObterEnquetesFinalizadas());
         }
         //
         // GET: /enquete/Details/5
-        [Authorize(Roles = "Síndico")]
+     //   [Authorize(Roles = "Síndico")]
         public ViewResult Details(int id)
         {
             EnqueteModel enquete = gEnquete.Obter(id);
@@ -56,7 +56,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /enquete/Create
-        [Authorize(Roles = "Síndico")]
+      //  [Authorize(Roles = "Síndico")]
         public ActionResult Create()
         {
 
