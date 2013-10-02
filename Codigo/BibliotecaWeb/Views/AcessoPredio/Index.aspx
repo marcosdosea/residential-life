@@ -1,29 +1,28 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.AcessoPredioModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Index</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.acesso %></h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.registrarAcesso, "Create") %>
 </p>
-<table>
+<table id="table">
     <tr>
        
         <th>
-            IdPessoa
+            <%: Models.App_GlobalResources.Mensagem.codigoPessoa %>
         </th>
         <th>
-            DataEntrada
+            <%: Models.App_GlobalResources.Mensagem.dataEntrada %>
         </th>
         <th>
-            DataSaida
+            <%: Models.App_GlobalResources.Mensagem.dataSaida %>
         </th>
-        <th></th>
     </tr>
 
 <% foreach (var item in Model) { %>
@@ -38,11 +37,7 @@
         <td>
             <%: Html.DisplayFor(modelItem => item.DataSaida) %>
         </td>
-        <td>
-            <%: Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) %> |
-            <%: Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) %> |
-            <%: Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) %>
-        </td>
+
     </tr>
 <% } %>
 

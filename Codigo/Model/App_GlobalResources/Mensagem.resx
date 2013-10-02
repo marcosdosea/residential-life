@@ -525,4 +525,19 @@
   <data name="novoCondominio" xml:space="preserve">
     <value>Novo Condomínio</value>
   </data>
+  <data name="acesso" xml:space="preserve">
+    <value>Acesso</value>
+  </data>
+  <data name="acessoPredio" xml:space="preserve">
+    <value>Acesso ao prédio</value>
+  </data>
+  <data name="codigoPessoa" xml:space="preserve">
+    <value>Código do morador</value>
+  </data>
+  <data name="novoRegistroAcesso" xml:space="preserve">
+    <value>Novo registro de acesso</value>
+  </data>
+  <data name="registrarAcesso" xml:space="preserve">
+    <value>Registrar acesso</value>
+  </data>
 </root>
