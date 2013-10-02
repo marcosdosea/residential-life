@@ -36,6 +36,8 @@ namespace BibliotecaWeb.Controllers
         //  [Authorize(Roles = "Porteiro")]
         public ActionResult Create()
         {
+            ViewBag.HoraAtual = DateTime.Now;
+            ViewBag.Mensagem = ""; 
             return View();
         }
 
@@ -44,13 +46,20 @@ namespace BibliotecaWeb.Controllers
         [HttpPost]
         public ActionResult Create(AcessoPredioModel acessoPredioModel)
         {
+            ViewBag.HoraAtual = DateTime.Now;
             if (ModelState.IsValid)
             {
-                gAcessoPredio.Inserir(acessoPredioModel);
-                return RedirectToAction("Index");
+                if (gPessoa.existePessoa(acessoPredioModel.IdPessoa))
+                {
+                    gAcessoPredio.Inserir(acessoPredioModel);
+                    return RedirectToAction("Index");
+                }
+                else
+                    ViewBag.Mensagem = "Identificador de morador não encontrado no sistema!";
+                
             }
 
-            return View(gAcessoPredio);
+            return View(acessoPredioModel);
         }
 
     }

@@ -116,6 +116,20 @@ namespace Services
         }
 
         /// <summary>
+        /// Obter todos as entidades cadastradas
+        /// </summary>
+        /// <returns></returns>
+        public bool existePessoa(int id)
+        {
+            if (GetQuery().Where(pessoa => pessoa.IdPessoa.Equals(id)).Count() > 0)
+                return true;
+            else
+                return false;
+            
+        }
+
+
+        /// <summary>
         /// Obtém uma pessoa
         /// </summary>
         /// <param name="idPessoa">Identificador da entidade na base de dados</param>
