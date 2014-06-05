@@ -332,3 +332,19 @@ D:\RL\COD 171\Codigo\BibliotecaWeb\obj\Debug\RdlCompile.cache
 D:\RL\COD 171\Codigo\BibliotecaWeb\obj\Debug\RdlCompile.compiled
 D:\RL\COD 171\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
 D:\RL\COD 171\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\bin\Relatorios\ReportListaBlocos.rdlc
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\bin\BibliotecaWeb.dll
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\bin\BibliotecaWeb.pdb
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\bin\EntityFramework.dll
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\bin\Model.dll
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\bin\Services.dll
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\bin\Persistence.dll
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\bin\Model.pdb
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\bin\Services.pdb
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\bin\EntityFramework.xml
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\bin\Persistence.pdb
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\obj\Debug\ResidentialWeb.csprojResolveAssemblyReference.cache
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\obj\Debug\RdlCompile.cache
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\obj\Debug\RdlCompile.compiled
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.dll
+C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\BibliotecaWeb\obj\Debug\BibliotecaWeb.pdb
