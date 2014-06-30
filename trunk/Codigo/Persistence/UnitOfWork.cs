@@ -16,31 +16,32 @@ namespace Persistence
     public class UnitOfWork : IDisposable, IUnitOfWork
     {
         private residentialbdEntities _context;
-        private IRepositorioGenerico<tb_pessoa> _repPessoa;
-        private IRepositorioGenerico<tb_condominio> _repCondominio;
-        private IRepositorioGenerico<tb_bloco> _repBloco;
-        private IRepositorioGenerico<tb_areapublica> _repAreaPublica;
-        private IRepositorioGenerico<tb_reservaambiente> _repReservaAmbiente;
-        private IRepositorioGenerico<tb_moradia> _repMoradia;
-        private IRepositorioGenerico<tb_enquete> _repEnquete;
-        private IRepositorioGenerico<tb_ocorrencia> _repOcorrencia;
-        private IRepositorioGenerico<tb_statusenquete> _repStatusEnquete; 
-        private IRepositorioGenerico<tb_statusareapublica> _repStatusAreaPublica;
-        private IRepositorioGenerico<tb_statuspagamento> _repStatusPagamento;
-        private IRepositorioGenerico<tb_statusocorrencia> _repStatusOcorrencia;
-        private IRepositorioGenerico<tb_tipoocorrencia> _repTipoOcorrencia;
-        private IRepositorioGenerico<tb_postagem> _repPostagem;
-        private IRepositorioGenerico<tb_opcoesenquete> _repOpcaoEnquete;
-
-        private IRepositorioGenerico<tb_votoenquete> _repVotoEnquete;
-        private IRepositorioGenerico<tb_veiculo> _repVeiculo;
-        private IRepositorioGenerico<tb_tipoveiculo> _repTipoVeiculo;
-
-        private IRepositorioGenerico<tb_tipomoradia> _repTipoMoradia;
-        private IRepositorioGenerico<tb_acessopredio> _repAcessoPredio;
-
+        
+        private IRepositorioGenerico<tb_acessocondominio> _repAcessoCondominio;
+        private IRepositorioGenerico<tb_acessoveiculo> _repAcessoVeiculo;
         private IRepositorioGenerico<tb_administradora> _repAdministradora;
-
+        private IRepositorioGenerico<tb_areapublica> _repAreaPublica;
+        private IRepositorioGenerico<tb_atendimento> _repAtendimento;
+        private IRepositorioGenerico<tb_bloco> _repBloco;
+        private IRepositorioGenerico<tb_comentario> _repComentario;
+        private IRepositorioGenerico<tb_condominio> _repCondominio;
+        private IRepositorioGenerico<tb_enquete> _repEnquete;
+        private IRepositorioGenerico<tb_funcionario> _repFuncionario;
+        private IRepositorioGenerico<tb_grupoplanocontas> _repGrupoPlanoContas;
+        private IRepositorioGenerico<tb_moradia> _repMoradia;
+        private IRepositorioGenerico<tb_movimentacaofinanceira> _repMovimentacaoFinanceira;
+        private IRepositorioGenerico<tb_ocorrencia> _repOcorrencia;
+        private IRepositorioGenerico<tb_opcoesenquete> _repOpcaoEnquete;
+        private IRepositorioGenerico<tb_pessoa> _repPessoa;
+        private IRepositorioGenerico<tb_pessoamoradia> _repPessoaMoradia;
+        private IRepositorioGenerico<tb_planodeconta> _repPlanoDeConta;
+        private IRepositorioGenerico<tb_postagem> _repPostagem;
+        private IRepositorioGenerico<tb_publicacaomural> _repPublicacaoMural;
+        private IRepositorioGenerico<tb_reservaambiente> _repReservaAmbiente;
+        private IRepositorioGenerico<tb_restricaoacesso> _repRestricaoAcesso;
+        private IRepositorioGenerico<tb_setor> _repSetor;
+        private IRepositorioGenerico<tb_veiculo> _repVeiculo;
+        private IRepositorioGenerico<tb_votoenquete> _repVotoEnquete;
 
         /// <summary>
         /// Construtor cria contexto transacional
@@ -52,22 +53,6 @@ namespace Persistence
         
         #region IUnitOfWork Members
 
-
-        /// <summary>
-        /// Repositório para manipular dados persistidos de status de enquetes
-        /// </summary>
-        public IRepositorioGenerico<tb_statusenquete> RepositorioStatusEnquete
-        {
-            get
-            {
-                if (_repStatusEnquete == null)
-                {
-                    _repStatusEnquete = new RepositorioGenerico<tb_statusenquete>(_context);
-                }
-                return _repStatusEnquete;
-            }
-        }
-
         public IRepositorioGenerico<tb_opcoesenquete> RepositorioOpcaoEnquete
         {
             get
@@ -77,6 +62,150 @@ namespace Persistence
                     _repOpcaoEnquete = new RepositorioGenerico<tb_opcoesenquete>(_context);
                 }
                 return _repOpcaoEnquete;
+            }
+        }
+
+        public IRepositorioGenerico<tb_acessocondominio> RepositorioAcessoCondominio
+        {
+            get
+            {
+                if (_repAcessoCondominio == null)
+                {
+                    _repAcessoCondominio = new RepositorioGenerico<tb_acessocondominio>(_context);
+                }
+                return _repAcessoCondominio;
+            }
+        }
+
+        public IRepositorioGenerico<tb_acessoveiculo> RepositorioAcessoVeiculo
+        {
+            get
+            {
+                if (_repAcessoVeiculo == null)
+                {
+                    _repAcessoVeiculo = new RepositorioGenerico<tb_acessoveiculo>(_context);
+                }
+                return _repAcessoVeiculo;
+            }
+        }
+
+        public IRepositorioGenerico<tb_atendimento> RepositorioAtendimento
+        {
+            get
+            {
+                if (_repAtendimento == null)
+                {
+                    _repAtendimento = new RepositorioGenerico<tb_atendimento>(_context);
+                }
+                return _repAtendimento;
+            }
+        }
+
+        public IRepositorioGenerico<tb_comentario> RepositorioComentario
+        {
+            get
+            {
+                if (_repComentario == null)
+                {
+                    _repComentario = new RepositorioGenerico<tb_comentario>(_context);
+                }
+                return _repComentario;
+            }
+        }
+
+        public IRepositorioGenerico<tb_funcionario> RepositorioFuncionario
+        {
+            get
+            {
+                if (_repFuncionario == null)
+                {
+                    _repFuncionario = new RepositorioGenerico<tb_funcionario>(_context);
+                }
+                return _repFuncionario;
+            }
+        }
+
+        public IRepositorioGenerico<tb_grupoplanocontas> RepositorioGrupoPlanoContas
+        {
+            get
+            {
+                if (_repGrupoPlanoContas == null)
+                {
+                    _repGrupoPlanoContas = new RepositorioGenerico<tb_grupoplanocontas>(_context);
+                }
+                return _repGrupoPlanoContas;
+            }
+        }
+
+        public IRepositorioGenerico<tb_movimentacaofinanceira> RepositorioMovimentacaoFinanceira
+        {
+            get
+            {
+                if (_repMovimentacaoFinanceira == null)
+                {
+                    _repMovimentacaoFinanceira = new RepositorioGenerico<tb_movimentacaofinanceira>(_context);
+                }
+                return _repMovimentacaoFinanceira;
+            }
+        }
+
+        public IRepositorioGenerico<tb_pessoamoradia> RepositorioPessoaMoradia
+        {
+            get
+            {
+                if (_repPessoaMoradia == null)
+                {
+                    _repPessoaMoradia = new RepositorioGenerico<tb_pessoamoradia>(_context);
+                }
+                return _repPessoaMoradia;
+            }
+        }
+
+        public IRepositorioGenerico<tb_planodeconta> RepositorioPlanoDeConta
+        {
+            get
+            {
+                if (_repPlanoDeConta == null)
+                {
+                    _repPlanoDeConta = new RepositorioGenerico<tb_planodeconta>(_context);
+                }
+                return _repPlanoDeConta;
+            }
+        }
+
+        public IRepositorioGenerico<tb_publicacaomural> RepositorioPublicacaoMural
+        {
+            get
+            {
+                if (_repPublicacaoMural == null)
+                {
+                    _repPublicacaoMural = new RepositorioGenerico<tb_publicacaomural>(_context);
+                }
+                return _repPublicacaoMural;
+            }
+        }
+
+        public IRepositorioGenerico<tb_restricaoacesso> RepositorioRestricaoAcesso
+        {
+            get
+            {
+                if (_repRestricaoAcesso == null)
+                {
+                    _repRestricaoAcesso = new RepositorioGenerico<tb_restricaoacesso>(_context);
+                }
+                return _repRestricaoAcesso;
+            }
+        }
+
+        public IRepositorioGenerico<tb_setor> RepositorioSetor
+        {
+            get
+            {
+                if (_repSetor == null)
+                {
+                    _repSetor = new RepositorioGenerico<tb_setor>(_context);
+                }
+                return _repSetor;
             }
         }
 
@@ -191,21 +320,6 @@ namespace Persistence
 
 
         /// <summary>
-        /// Repositório para manipular dados persistidos de tipo de moradia
-        /// </summary>
-        public IRepositorioGenerico<tb_tipomoradia> RepositorioTipoMoradia
-        {
-            get
-            {
-                if (_repTipoMoradia == null)
-                {
-                    _repTipoMoradia = new RepositorioGenerico<tb_tipomoradia>(_context);
-                }
-                return _repTipoMoradia;
-            }
-        }
-
-        /// <summary>
         /// Repositório para manipular dados persistidos de reservas de ambiente
         /// </summary>
         public IRepositorioGenerico<tb_reservaambiente> RepositorioReservaAmbiente
@@ -235,67 +349,7 @@ namespace Persistence
             }
         }
 
-        /// <summary>
-        /// Repositório para manipular dados persistidos de status áreas públicas
-        /// </summary>
-        public IRepositorioGenerico<tb_statusareapublica> RepositorioStatusAreaPublica
-        {
-            get
-            {
-                if (_repStatusAreaPublica == null)
-                {
-                    _repStatusAreaPublica = new RepositorioGenerico<tb_statusareapublica>(_context);
-                }
-                return _repStatusAreaPublica;
-            }
-        }
-
-        /// <summary>
-        /// Repositório para manipular dados persistidos de status pagamento
-        /// </summary>
-        public IRepositorioGenerico<tb_statuspagamento> RepositorioStatusPagamento
-        {
-            get
-            {
-                if (_repStatusPagamento == null)
-                {
-                    _repStatusPagamento = new RepositorioGenerico<tb_statuspagamento>(_context);
-                }
-                return _repStatusPagamento;
-            }
-        }
-
-
-        /// <summary>
-        /// Repositório para manipular dados persistidos de tipo ocorrencia
-        /// </summary>
-        public IRepositorioGenerico<tb_tipoocorrencia> RepositorioTipoOcorrencia
-        {
-            get
-            {
-                if (_repTipoOcorrencia == null)
-                {
-                    _repTipoOcorrencia = new RepositorioGenerico<tb_tipoocorrencia>(_context);
-                }
-                return _repTipoOcorrencia;
-            }
-        }
-
-        /// <summary>
-        /// Repositório para manipular dados persistidos de status ocorrencia
-        /// </summary>
-        public IRepositorioGenerico<tb_statusocorrencia> RepositorioStatusOcorrencia
-        {
-            get
-            {
-                if (_repStatusOcorrencia == null)
-                {
-                    _repStatusOcorrencia = new RepositorioGenerico<tb_statusocorrencia>(_context);
-                }
-                return _repStatusOcorrencia;
-            }
-        }
-
+        
         /// <summary>
         /// Repositório para manipular dados persistidos de postagem
         /// </summary>
@@ -327,36 +381,6 @@ namespace Persistence
             }
         }
 
-
-        /// <summary>
-        /// Repositório para manipular dados persistidos de tipo de veículo
-        /// </summary>
-        public IRepositorioGenerico<tb_tipoveiculo> RepositorioTipoVeiculo
-        {
-            get
-            {
-                if (_repTipoVeiculo == null)
-                {
-                    _repTipoVeiculo = new RepositorioGenerico<tb_tipoveiculo>(_context);
-                }
-                return _repTipoVeiculo;
-            }
-        }
-
-        /// <summary>
-        /// Repositório para manipular dados persistidos de acesso ao predio
-        /// </summary>
-        public IRepositorioGenerico<tb_acessopredio> RepositorioAcessoPredio
-        {
-            get
-            {
-                if (_repAcessoPredio == null)
-                {
-                    _repAcessoPredio = new RepositorioGenerico<tb_acessopredio>(_context);
-                }
-                return _repAcessoPredio;
-            }
-        }
 
         /// <summary>
         /// Repositório para manipular dados persistidos de administradora

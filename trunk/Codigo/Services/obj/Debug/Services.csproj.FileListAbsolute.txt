@@ -218,3 +218,6 @@ C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Resid
 C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
 C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\Services\obj\Debug\Services.dll
 C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\Services\obj\Debug\Services.pdb
+C:\Users\CLEVERTON\Desktop\Residential Life\trunk\Codigo\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\CLEVERTON\Desktop\Residential Life\trunk\Codigo\Services\obj\Debug\Services.dll
+C:\Users\CLEVERTON\Desktop\Residential Life\trunk\Codigo\Services\obj\Debug\Services.pdb
