@@ -202,3 +202,11 @@ C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Resid
 C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
 C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\Persistence\obj\Debug\Persistence.dll
 C:\Users\Andrés\Documents\Andrés\Arquivos UFS\6º Período\Engenharia II\Residential Life\trunk\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\CLEVERTON\Desktop\Residential Life\trunk\Codigo\Persistence\obj\Debug\Persistence.csprojResolveAssemblyReference.cache
+C:\Users\CLEVERTON\Desktop\Residential Life\trunk\Codigo\Persistence\obj\Debug\Persistence.dll
+C:\Users\CLEVERTON\Desktop\Residential Life\trunk\Codigo\Persistence\obj\Debug\Persistence.pdb
+C:\Users\CLEVERTON\Desktop\Residential Life\trunk\Codigo\Persistence\bin\Debug\Persistence.dll.config
+C:\Users\CLEVERTON\Desktop\Residential Life\trunk\Codigo\Persistence\bin\Debug\Persistence.dll
+C:\Users\CLEVERTON\Desktop\Residential Life\trunk\Codigo\Persistence\bin\Debug\Persistence.pdb
+C:\Users\CLEVERTON\Desktop\Residential Life\trunk\Codigo\Persistence\bin\Debug\Model.dll
+C:\Users\CLEVERTON\Desktop\Residential Life\trunk\Codigo\Persistence\bin\Debug\Model.pdb
