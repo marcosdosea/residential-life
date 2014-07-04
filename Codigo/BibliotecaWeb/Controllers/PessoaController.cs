@@ -65,7 +65,7 @@ namespace BibliotecaWeb.Controllers
                 {
                     ModelState.AddModelError("", ErrorCodeToString(createStatus));
                 }
-                Roles.AddUserToRole(pessoaModel.Login, "Morador");
+                 //Roles.AddUserToRole(pessoaModel.Login, "Morador");
                 gPessoa.Inserir(pessoaModel);
                 return RedirectToAction("Index");  
             }

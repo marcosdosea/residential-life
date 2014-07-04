@@ -561,4 +561,16 @@
   <data name="planoDeConta" xml:space="preserve">
     <value>Plano de Conta</value>
   </data>
+  <data name="EmAnalise" xml:space="preserve">
+    <value>Em Análise</value>
+  </data>
+  <data name="Resolvido" xml:space="preserve">
+    <value>Resolvido</value>
+  </data>
+  <data name="status_atendimento" xml:space="preserve">
+    <value>Status Atentimento</value>
+  </data>
+  <data name="atendimento" xml:space="preserve">
+    <value>Atendimento</value>
+  </data>
 </root>

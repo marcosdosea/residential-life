@@ -51,10 +51,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Mensagem.resx</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\EnumDropDownList.cs" />
+    <Compile Include="Helpers\LocalizarDisplayNomeAtributo.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AcessoPredioModel.cs" />
     <Compile Include="Models\AdministradoraModel.cs" />
     <Compile Include="Models\AreaPublicaModel.cs" />
+    <Compile Include="Models\AtendimentoModel.cs" />
     <Compile Include="Models\BlocoModel.cs" />
     <Compile Include="Models\CondominioModel.cs" />
     <Compile Include="Models\EnqueteModel.cs" />
@@ -103,6 +106,7 @@
       <LastGenOutput>ResidentialBD.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
