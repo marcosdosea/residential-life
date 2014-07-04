@@ -8,11 +8,11 @@ using Services;
 using Microsoft.Reporting.WebForms;
 using System.Web.Security;
 
-namespace BibliotecaWeb.Controllers
+namespace BibliotecaWeb
 {
     public class PostagemController : Controller
     {
-
+        /*
          private GerenciadorPostagem gPostagem;
          private GerenciadorPessoa gPessoa;
 
@@ -34,7 +34,7 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /Postagem/Create
-        [Authorize(Roles = "Morador")]     
+        //[Authorize(Roles = "Morador")]     
         public ActionResult Create()
         {
             return View();
@@ -112,6 +112,7 @@ namespace BibliotecaWeb.Controllers
             base.Dispose(disposing);
         }
 
+        
         public ActionResult RelatorioPostagemPorData()
         {
             LocalReport relatorio = new LocalReport();
@@ -153,7 +154,7 @@ namespace BibliotecaWeb.Controllers
 
             return File(bytes, mimeType);
 
-        }
+        } */
 
     }
 }
