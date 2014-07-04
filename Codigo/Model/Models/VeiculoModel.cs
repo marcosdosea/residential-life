@@ -1,56 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using Models.App_GlobalResources;
 
-namespace Models.Models
+namespace Models
 {
+    public enum ListaTipoVeiculo { Carro = 0, Motocicleta = 1 }
+
     public class VeiculoModel
     {
+        
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "codigo", ResourceType = typeof(Mensagem))]
         public int IdPessoa { get; set; }
-        
-        
-        [Display(Name = "pessoa", ResourceType = typeof(Mensagem))]
-        [StringLength(45)]
+
+        [Display(Name = "nomePessoa", ResourceType = typeof(Mensagem))]
+        [StringLength(100)]
         public string NomePessoa { get; set; }
 
-        
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "codigo", ResourceType = typeof(Mensagem))]
         public int IdVeiculo { get; set; }
 
-
-
-        [Required(ErrorMessageResourceType = typeof(Mensagem),
-            ErrorMessageResourceName = "required")]
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
         [Display(Name = "placa", ResourceType = typeof(Mensagem))]
         [StringLength(7)]
         public string Placa { get; set; }
 
-
-
-        [Required(ErrorMessageResourceType = typeof(Mensagem),
-            ErrorMessageResourceName = "required")]
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
         [Display(Name = "modelo", ResourceType = typeof(Mensagem))]
         [StringLength(50)]
         public string Modelo { get; set; }
 
-
-
-        [Required(ErrorMessageResourceType = typeof(Mensagem),
-            ErrorMessageResourceName = "required")]
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
         [Display(Name = "cor", ResourceType = typeof(Mensagem))]
         [StringLength(20)]
         public string Cor { get; set; }
 
-
-
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
         [Display(Name = "tipoVeiculo", ResourceType = typeof(Mensagem))]
-        [StringLength(45)]
-        public string Tipo { get; set; }
+        public ListaTipoVeiculo TipoVeiculo { get; set; }
 
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "codigo", ResourceType = typeof(Mensagem))]
+        public int IdMoradia { get; set; }
 
-
-        public int IdTipoVeiculo { get; set; }
+        [Display(Name = "moradia", ResourceType = typeof(Mensagem))]
+        public string Moradia { get; set; }
     }
 }

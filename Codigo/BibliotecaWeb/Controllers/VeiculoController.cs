@@ -1,28 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Models.Models;
-using Services;
-using Microsoft.Reporting.WebForms;
+﻿using System.Web.Mvc;
 using System.Web.Security;
+using Models;
+using Services;
 
 namespace BibliotecaWeb
 {
-    [Authorize(Roles = "Morador")]
     public class VeiculoController : Controller
     {
-        /*
         private GerenciadorVeiculo gVeiculo;
-        private GerenciadorTipoVeiculo gTipoVeiculo;
         private GerenciadorPessoa gPessoa;
-
      
         public VeiculoController()
         {
             gVeiculo = new GerenciadorVeiculo();
-            gTipoVeiculo = new GerenciadorTipoVeiculo();
             gPessoa = new GerenciadorPessoa();
         }
 
@@ -40,7 +30,6 @@ namespace BibliotecaWeb
         // GET: /Veiculo/Create
         public ActionResult Create()
         {
-            ViewBag.IdTipoVeiculo = new SelectList(gTipoVeiculo.ObterTodos(), "IdTipoVeiculo", "TipoVeiculo");
             return View();
         }
 
@@ -72,7 +61,6 @@ namespace BibliotecaWeb
         public ActionResult Edit(int id)
         {
             VeiculoModel veiculo = gVeiculo.Obter(id);
-            ViewBag.IdTipoVeiculo = new SelectList(gTipoVeiculo.ObterTodos(), "IdTipoVeiculo", "TipoVeiculo", veiculo.IdTipoVeiculo); 
             return View(veiculo);
         }
 
@@ -111,7 +99,7 @@ namespace BibliotecaWeb
             base.Dispose(disposing);
         }
 
-
+        /*
         public ActionResult RelatorioVeiculosPorPessoa()
         {
             LocalReport relatorio = new LocalReport();

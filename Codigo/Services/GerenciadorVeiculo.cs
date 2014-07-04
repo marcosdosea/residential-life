@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Persistence;
-using Models.Models;
 using Models;
+using Persistence;
 
 namespace Services
 {
     public class GerenciadorVeiculo
     {
-        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -84,11 +80,13 @@ namespace Services
                         {
                             IdPessoa = Veiculo.IdPesssoa,
                             IdVeiculo = Veiculo.IdVeiculo,
+                            IdMoradia = Veiculo.IdMoradia,
                             Placa = Veiculo.Placa,
                             Modelo = Veiculo.Modelo,
                             Cor = Veiculo.Cor,
-                            Tipo = Veiculo.tb_tipoveiculo.TipoVeiculo,
-                            NomePessoa = Veiculo.tb_pessoa.Nome
+                            TipoVeiculo  = (Veiculo.TipoVeiculo == "Carro" ? ListaTipoVeiculo.Carro : ListaTipoVeiculo.Motocicleta),
+                            NomePessoa = Veiculo.tb_pessoa.Nome,
+                            Moradia = Veiculo.tb_moradia.Numero
                         };
             return query;
         }
@@ -136,7 +134,8 @@ namespace Services
             veiculoE.Placa = veiculoModel.Placa;
             veiculoE.Modelo = veiculoModel.Modelo;
             veiculoE.Cor = veiculoModel.Cor;
-            veiculoE.IdTipoVeiculo = veiculoModel.IdTipoVeiculo;
-        } */
+            veiculoE.TipoVeiculo = veiculoModel.TipoVeiculo.ToString();
+            veiculoE.IdMoradia = veiculoModel.IdMoradia;
+        } 
     }
 }

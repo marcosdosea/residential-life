@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Persistence;
-using Models.Models;
 using Models;
+using Persistence;
 
 namespace Services
 {
@@ -86,10 +84,11 @@ namespace Services
                         {
                             IdPostagem = Postagem.IdPostagem,
                             IdPessoa = Postagem.IdPessoa,
-                            titulo = Postagem.Titulo,
-                            descricao = Postagem.Descricao,
-                            dataPublAutomatica = Postagem.DataCriacao,
-                            dataExclusaoAutomatica = (DateTime)Postagem.DataEncerramento,                       
+                            Titulo = Postagem.Titulo,
+                            Descricao = Postagem.Descricao,
+                            DataPublicacao = Postagem.DataCriacao,
+                            DataExclusao  = (DateTime) Postagem.DataEncerramento,
+                            NomePessoa = Postagem.tb_pessoa.Nome
                         };
             return query;
         }
@@ -132,10 +131,10 @@ namespace Services
         {
             PostagemE.IdPostagem = PostagemModel.IdPostagem;
             PostagemE.IdPessoa = PostagemModel.IdPessoa;
-            PostagemE.Titulo = PostagemModel.titulo;
-            PostagemE.Descricao = PostagemModel.descricao;
-            PostagemE.DataCriacao = PostagemModel.dataPublAutomatica;
-            PostagemE.DataEncerramento = PostagemModel.dataExclusaoAutomatica;           
+            PostagemE.Titulo = PostagemModel.Titulo;
+            PostagemE.Descricao = PostagemModel.Descricao;
+            PostagemE.DataCriacao = PostagemModel.DataPublicacao;
+            PostagemE.DataEncerramento = PostagemModel.DataExclusao;           
         }
 
     }
