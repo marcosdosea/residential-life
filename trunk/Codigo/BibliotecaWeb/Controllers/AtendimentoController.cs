@@ -15,6 +15,7 @@ namespace BibliotecaWeb.Controllers
         //
         // GET: /Atendimento/
 
+        private GerenciadorPessoa gPessoa;
         private GerenciadorAtendimento gAtendimento;
 
         public AtendimentoController()
@@ -34,6 +35,7 @@ namespace BibliotecaWeb.Controllers
         // GET: /Atendimento/Create
         public ActionResult Create()
         {
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
             return View();
         }
 

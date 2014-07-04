@@ -1,12 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<Models.AtendimentoModel>" %>
 
+<%@ Import Namespace="Model.Helpers" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     <%: Models.App_GlobalResources.Mensagem.atendimento %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Create</h2>
+<h2>Criar</h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -14,14 +16,13 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend>tb_atendimento</legend>
+        <legend><%: Models.App_GlobalResources.Mensagem.atendimento %></legend>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdPesssoa, "tb_pessoa") %>
+            <%: Html.LabelFor(model => model.NomePessoa) %>
         </div>
         <div class="editor-field">
-            <%: Html.DropDownList("IdPesssoa", String.Empty) %>
-            <%: Html.ValidationMessageFor(model => model.IdPesssoa) %>
+            <%: Html.DropDownList("IdPesssoa", "Selecione") %>
         </div>
 
         <div class="editor-label">
@@ -44,7 +45,7 @@
             <%: Html.LabelFor(model => model.StatusAtendimento) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.StatusAtendimento) %>
+            <%: Html.EnumDropDownListFor(model => model.StatusAtendimento, Models.AtendimentoModel.ListaStatusAtendimento.EmAnalise)%>
             <%: Html.ValidationMessageFor(model => model.StatusAtendimento) %>
         </div>
 

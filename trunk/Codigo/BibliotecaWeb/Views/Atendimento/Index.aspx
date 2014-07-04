@@ -9,12 +9,12 @@
 <h2><%: Models.App_GlobalResources.Mensagem.atendimento %></h2>
 
 <p>
-    <%: Html.ActionLink("Create New", "Create") %>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.novo, "Create") %>
 </p>
 <table>
     <tr>
         <th>
-            tb_pessoa
+            Nome da Pessoa
         </th>
         <th>
             Titulo

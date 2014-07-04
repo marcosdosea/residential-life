@@ -573,4 +573,7 @@
   <data name="atendimento" xml:space="preserve">
     <value>Atendimento</value>
   </data>
+  <data name="nome_pessoa" xml:space="preserve">
+    <value>Nome Pessoa</value>
+  </data>
 </root>
