@@ -10,7 +10,7 @@ namespace Services
 {
     public class GerenciadorTipoMoradia
     {
-
+        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -120,6 +120,6 @@ namespace Services
             tipoMoradiaE.TipoMoradia = tipoMoradiaModel.TipoMoradia;
          
    
-        }
+        }*/
     }
 }

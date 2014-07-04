@@ -10,6 +10,7 @@ namespace Services
 {
     public class GerenciadorEnquete
     {
+        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -154,6 +155,6 @@ namespace Services
             enqueteE.DataFim = enqueteModel.DataFim;
             enqueteE.IdStatusEnquete = enqueteModel.IdStatusEnquete;
            
-        }
+        }*/
     }
 }

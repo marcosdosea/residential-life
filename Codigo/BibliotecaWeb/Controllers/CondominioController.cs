@@ -10,7 +10,7 @@ namespace BibliotecaWeb.Controllers
 {
     public class CondominioController : Controller
     {
-
+        /*
         private GerenciadorCondominio gCondominio;
         private GerenciadorPessoa gPessoa;
         private GerenciadorAdministradora gAdministradora;
@@ -113,7 +113,7 @@ namespace BibliotecaWeb.Controllers
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
-        }
+        } */
 
     }
 }

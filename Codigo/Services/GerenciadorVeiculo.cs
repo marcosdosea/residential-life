@@ -10,6 +10,7 @@ namespace Services
 {
     public class GerenciadorVeiculo
     {
+        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -136,6 +137,6 @@ namespace Services
             veiculoE.Modelo = veiculoModel.Modelo;
             veiculoE.Cor = veiculoModel.Cor;
             veiculoE.IdTipoVeiculo = veiculoModel.IdTipoVeiculo;
-        }
+        } */
     }
 }

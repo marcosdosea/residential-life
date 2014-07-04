@@ -17,6 +17,7 @@ namespace BibliotecaWeb.Controllers
     
     public class ReservaAmbienteController : Controller
     {
+        /*
         private GerenciadorReservaAmbiente gReservaAmbiente;
         private GerenciadorAreaPublica gAreaPublica;
         private GerenciadorStatusPagamento gStatusPagamento;
@@ -173,7 +174,7 @@ namespace BibliotecaWeb.Controllers
 
             return File(bytes, mimeType);
 
-        }
+        } */
 
     }
 }

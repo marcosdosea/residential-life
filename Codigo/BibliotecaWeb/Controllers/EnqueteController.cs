@@ -14,7 +14,7 @@ namespace BibliotecaWeb.Controllers
     {
         //
         // GET: /Enquete/
-
+        /*
         private GerenciadorEnquete gEnquete;
         private GerenciadorPessoa gPessoa;
         private GerenciadorStatusEnquete gStatusEnquete;
@@ -185,6 +185,6 @@ namespace BibliotecaWeb.Controllers
 
             return File(bytes, mimeType);
 
-        }
+        }*/
     }
 }

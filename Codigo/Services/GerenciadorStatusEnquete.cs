@@ -10,6 +10,7 @@ namespace Services
 {
     public class GerenciadorStatusEnquete
     {
+        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -117,6 +118,6 @@ namespace Services
         {
             statusEnqueteE.IdStatusEnquete = statusEnqueteModel.idStatusEnquete;
             statusEnqueteE.StatusEnquete = statusEnqueteModel.StatusEnquete;
-        }
+        }*/
     }
 }

@@ -13,7 +13,7 @@ namespace Services
     /// </summary>
     public class GerenciadorOcorrencia
     {
-
+        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -146,6 +146,6 @@ namespace Services
             OcorrenciaE.IdStatusOcorrencia = OcorrenciaModel.IdStatusOcorrenicia;
 
         }
-
+        */
     }
 }

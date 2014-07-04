@@ -11,6 +11,7 @@ namespace Services
 {
     public class GerenciadorStatusOcorrencia
     {
+        /*
        private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -120,6 +121,6 @@ namespace Services
             statusOcorrenciaE.StatusOcorrencia = statusOcorrenciaModel.StatusOcorrencia;
          
    
-        }
+        }*/
     }
 }

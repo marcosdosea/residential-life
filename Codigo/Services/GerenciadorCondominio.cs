@@ -15,6 +15,7 @@ namespace Services
 
     public class GerenciadorCondominio
     {
+        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -142,6 +143,6 @@ namespace Services
             condominioE.CEP = condominioModel.Cep;
             condominioE.Cidade = condominioModel.Cidade;
             condominioE.Estado = condominioModel.Estado;
-        }
+        }*/
     }
 }

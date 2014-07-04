@@ -10,6 +10,7 @@ namespace Services
 {
     public class GerenciadorAcessoPredio
     {
+        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -130,6 +131,6 @@ namespace Services
             AcessoPredioE.DataEntrada = AcessoPredioModel.DataEntrada;
             AcessoPredioE.DataSaida = AcessoPredioModel.DataSaida;
 
-        }
+        }*/
     }
 }

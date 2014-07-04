@@ -16,6 +16,7 @@ namespace Services
     public class GerenciadorReservaAmbiente
 
     {
+        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -145,6 +146,6 @@ namespace Services
             reservaAmbienteE.IdStatusPagamento = reservaAmbienteModel.IdStatusPagamento;
            
             
-        }
+        } */
     }
 }

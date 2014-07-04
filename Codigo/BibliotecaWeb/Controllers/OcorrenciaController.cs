@@ -12,7 +12,7 @@ namespace BibliotecaWeb.Controllers
 {
     public class OcorrenciaController : Controller
     {
-
+        /*
         private GerenciadorPessoa gPessoa;
         private GerenciadorOcorrencia gOcorrencia;
         private GerenciadorStatusOcorrencia gStatusOcorrencia;
@@ -165,7 +165,7 @@ namespace BibliotecaWeb.Controllers
         {
             base.Dispose(disposing);
         }
-
+        */
 
     }
 }

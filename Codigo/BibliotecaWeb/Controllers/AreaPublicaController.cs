@@ -11,6 +11,7 @@ namespace BibliotecaWeb.Controllers
 {
     public class AreaPublicaController : Controller
     {
+        /*
         private GerenciadorAreaPublica gAreaPublica;
         private GerenciadorCondominio gCondominio;
         private GerenciadorStatusAreaPublica gStatusAreaPublica;
@@ -158,6 +159,6 @@ namespace BibliotecaWeb.Controllers
 
             return File(bytes, mimeType);
 
-        }
+        } */
     }
 }
