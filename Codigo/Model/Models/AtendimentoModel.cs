@@ -13,6 +13,7 @@ namespace Models
         [Display(Name = "id", ResourceType = typeof(Mensagem))]
         public int IdPessoa { get; set; }
 
+        [Display(Name = "nome_pessoa", ResourceType = typeof(Mensagem))]
         public string NomePessoa { get; set; }
 
         [Display(Name = "titulo", ResourceType = typeof(Mensagem))]
