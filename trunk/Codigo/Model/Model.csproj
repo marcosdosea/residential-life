@@ -61,6 +61,7 @@
     <Compile Include="Models\MoradiaModel.cs" />
     <Compile Include="Models\OpcaoModel.cs" />
     <Compile Include="Models\OpcoesEnqueteModel.cs" />
+    <Compile Include="Models\PlanoDeConta.cs" />
     <Compile Include="Models\PostagemModel.cs" />
     <Compile Include="Models\OcorrenciaModel.cs" />
     <Compile Include="Models\ReservaAmbienteModel.cs" />
