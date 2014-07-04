@@ -13,7 +13,7 @@ namespace BibliotecaWeb
     [Authorize(Roles = "Morador")]
     public class VeiculoController : Controller
     {
-        
+        /*
         private GerenciadorVeiculo gVeiculo;
         private GerenciadorTipoVeiculo gTipoVeiculo;
         private GerenciadorPessoa gPessoa;
@@ -196,6 +196,6 @@ namespace BibliotecaWeb
 
             return File(bytes, mimeType);
 
-        }
+        } */
     }
 }

@@ -14,6 +14,7 @@ namespace Services
 
     public class GerenciadorAreaPublica
     {
+        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -131,6 +132,6 @@ namespace Services
             AreaPublicaE.Tamanho = AreaPublicaModel.Tamanho;
             AreaPublicaE.ValorReserva = AreaPublicaModel.ValorReserva;
             AreaPublicaE.IdStatusAreaPublica = AreaPublicaModel.IdStatusAreaPublica;
-        }
+        } */
     }
 }

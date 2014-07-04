@@ -10,7 +10,7 @@ namespace BibliotecaWeb.Controllers
 {
     public class MoradiaController : Controller
     {
-
+        /*
         private GerenciadorMoradia gMoradia;
         private GerenciadorBloco gBloco;
         private GerenciadorPessoa gPessoa;
@@ -99,7 +99,7 @@ namespace BibliotecaWeb.Controllers
         {
             gMoradia.Remover(id);
             return RedirectToAction("Index");
-        }
+        }*/
 
     }
 }

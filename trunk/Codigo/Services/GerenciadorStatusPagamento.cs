@@ -10,6 +10,7 @@ namespace Services
 {
     public class GerenciadorStatusPagamento
     {
+        /*
        private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -119,6 +120,6 @@ namespace Services
             statusPagamentoE.StatusPagamento = statusPagamentoModel.StatusPagamento;
          
    
-        }
+        } */
     }
 }

@@ -540,4 +540,25 @@
   <data name="registrarAcesso" xml:space="preserve">
     <value>Registrar acesso</value>
   </data>
+  <data name="apagarPlanoDeConta" xml:space="preserve">
+    <value>Apagar Plano de Conta</value>
+  </data>
+  <data name="codigo" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="confirmacaoPlanoDeConta" xml:space="preserve">
+    <value>Tem certeza que deseja apagar o Plano de Conta?</value>
+  </data>
+  <data name="detalhesPlanoDeConta" xml:space="preserve">
+    <value>Detalhes do Plano de Conta</value>
+  </data>
+  <data name="editarPlanoDeConta" xml:space="preserve">
+    <value>Editar Plano de Conta</value>
+  </data>
+  <data name="opcoes" xml:space="preserve">
+    <value>Opções</value>
+  </data>
+  <data name="planoDeConta" xml:space="preserve">
+    <value>Plano de Conta</value>
+  </data>
 </root>

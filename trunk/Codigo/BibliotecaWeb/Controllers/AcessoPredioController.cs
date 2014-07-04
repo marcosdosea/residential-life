@@ -10,6 +10,7 @@ namespace BibliotecaWeb.Controllers
 {
     public class AcessoPredioController : Controller
     {
+        /*
         private GerenciadorAcessoPredio gAcessoPredio;
         private GerenciadorPessoa gPessoa;
 
@@ -60,7 +61,7 @@ namespace BibliotecaWeb.Controllers
             }
 
             return View(acessoPredioModel);
-        }
+        } */
 
     }
 }

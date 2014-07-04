@@ -10,6 +10,7 @@ namespace Services
 {
     public class GerenciadorMoradia
     {
+        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -152,6 +153,6 @@ namespace Services
 
 
         }
-
+        */
     }
 }
