@@ -75,6 +75,7 @@
     <Compile Include="Controllers\AcessoPredioController.cs" />
     <Compile Include="Controllers\AdministradoraController.cs" />
     <Compile Include="Controllers\AreaPublicaController.cs" />
+    <Compile Include="Controllers\AtendimentoController.cs" />
     <Compile Include="Controllers\BlocoController.cs" />
     <Compile Include="Controllers\CondominioController.cs" />
     <Compile Include="Controllers\EnqueteController.cs" />
@@ -148,6 +149,11 @@
     <Content Include="Views\AreaPublica\Details.aspx" />
     <Content Include="Views\AreaPublica\Edit.aspx" />
     <Content Include="Views\AreaPublica\Index.aspx" />
+    <Content Include="Views\Atendimento\Create.aspx" />
+    <Content Include="Views\Atendimento\Delete.aspx" />
+    <Content Include="Views\Atendimento\Details.aspx" />
+    <Content Include="Views\Atendimento\Edit.aspx" />
+    <Content Include="Views\Atendimento\Index.aspx" />
     <Content Include="Views\Bloco\Create.aspx" />
     <Content Include="Views\Bloco\Delete.aspx" />
     <Content Include="Views\Bloco\Details.aspx" />
