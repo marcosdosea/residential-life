@@ -21,6 +21,7 @@ namespace BibliotecaWeb.Controllers
         public AtendimentoController()
         {
             gAtendimento = new GerenciadorAtendimento();
+            gPessoa = new GerenciadorPessoa();
         }
 
 
@@ -66,6 +67,7 @@ namespace BibliotecaWeb.Controllers
         public ActionResult Edit(int id)
         {
             AtendimentoModel atendimento = gAtendimento.Obter(id);
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", atendimento.IdPessoa);
             return View(atendimento);
         }
 

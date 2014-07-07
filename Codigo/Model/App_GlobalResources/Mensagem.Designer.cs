@@ -1314,9 +1314,9 @@ namespace Models.App_GlobalResources {
         /// <summary>
         ///   Looks up a localized string similar to Status Atentimento.
         /// </summary>
-        public static string status_atendimento {
+        public static string status_atentimento {
             get {
-                return ResourceManager.GetString("status_atendimento", resourceCulture);
+                return ResourceManager.GetString("status_atentimento", resourceCulture);
             }
         }
         

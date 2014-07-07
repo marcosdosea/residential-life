@@ -22,7 +22,7 @@
             <%: Html.LabelFor(model => model.NomePessoa) %>
         </div>
         <div class="editor-field">
-            <%: Html.DropDownList("IdPesssoa", "Selecione") %>
+            <%: Html.DropDownList("IdPessoa", "Selecione")%>
         </div>
 
         <div class="editor-label">
