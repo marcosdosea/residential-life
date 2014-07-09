@@ -11,11 +11,13 @@
 <fieldset>
     <legend><%:Models.App_GlobalResources.Mensagem.detalhes%> </legend>
 
-    <div class="display-label">IdOcorrencia</div>
+    <%: Html.HiddenFor(model => model.IdOcorrencia) %>
+    <%: Html.HiddenFor(model => model.IdPessoa) %>
+    
+    <div class="display-label">Pessoa</div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdOcorrencia) %>
-    </div>
-      
+        <%: Html.DisplayFor(model => model.NomePessoa) %>
+    </div>  
 
     <div class="display-label">Titulo</div>
     <div class="display-field">

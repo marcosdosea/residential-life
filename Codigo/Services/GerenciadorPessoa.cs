@@ -15,8 +15,19 @@ namespace Services
     public class GerenciadorPessoa
 
     {
+        private static GerenciadorPessoa gPessoa;
+
         private IUnitOfWork unitOfWork;
         private bool shared;
+
+        public static GerenciadorPessoa GetInstance()
+        {
+            if (gPessoa == null)
+            {
+                gPessoa = new GerenciadorPessoa();
+            }
+            return gPessoa;
+        }
 
         /// <summary>
         /// Construtor pode ser acessado externamente e não compartilha contexto
