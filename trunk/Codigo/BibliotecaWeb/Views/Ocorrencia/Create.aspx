@@ -1,10 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.OcorrenciaModel>" %>
+<%@ Import Namespace="Model.Helpers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Create
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
 
 <h2><%:Models.App_GlobalResources.Mensagem.novoRegistroOcorrencia%></h2>
 
@@ -15,7 +17,14 @@
     <%: Html.ValidationSummary(true) %>
     <fieldset>
         <legend><%:Models.App_GlobalResources.Mensagem.novo%> </legend>
-           
+        
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.NomePessoa) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.DropDownList("IdPessoa", "Selecione")%>
+            <%: Html.ValidationMessageFor(model => model.IdPessoa) %>
+        </div>   
        
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Titulo) %>
@@ -29,7 +38,7 @@
             <%: Html.LabelFor(model => model.Descricao) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Descricao) %>
+            <%: Html.TextAreaFor(model => model.Descricao) %>
             <%: Html.ValidationMessageFor(model => model.Descricao) %>
         </div>
 
@@ -42,22 +51,21 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdTipoOcorrencia) %>
+            <%: Html.LabelFor(model => model.TipoOcorrencia) %>
         </div>
-        <p>
-             <%: Html.DropDownListFor(model => model.IdTipoOcorrencia, ViewBag.IdTipoOcorrencia as SelectList)%>
-              <%: Html.ValidationMessageFor(model => model.IdTipoOcorrencia)%>
-        </p>    
-
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.IdStatusOcorrenicia) %>
+        <div class="editor-field">
+            <%: Html.EnumDropDownListFor(model => model.TipoOcorrencia, Models.OcorrenciaModel.ListaTipoOcorrencia.Barulho)%>
+            <%: Html.ValidationMessageFor(model => model.TipoOcorrencia) %>
         </div>
-        <p>
-             <%: Html.DropDownListFor(model => model.IdStatusOcorrenicia, ViewBag.IdStatusOcorrencia as SelectList)%>
-              <%: Html.ValidationMessageFor(model => model.IdStatusOcorrenicia)%>
-        </p>  
 
-       
+       <div class="editor-label">
+            <%: Html.LabelFor(model => model.StatusOcorrencia) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EnumDropDownListFor(model => model.StatusOcorrencia, Models.OcorrenciaModel.ListaStatusOcorrencia.EmAnalise)%>
+            <%: Html.ValidationMessageFor(model => model.StatusOcorrencia) %>
+        </div>
+
         <p>
             <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.salvar %> /> 
         </p>

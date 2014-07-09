@@ -13,7 +13,7 @@ namespace Services
     /// </summary>
     public class GerenciadorOcorrencia
     {
-        /*
+        
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -42,10 +42,10 @@ namespace Services
         /// </summary>
         /// <param name="OcorrenciaModel">Dados do modelo</param>
         /// <returns>Chave identificante na base</returns>
-        public int Inserir(OcorrenciaModel AreaPublicaModel)
+        public int Inserir(OcorrenciaModel ocorrenciaModel)
         {
             tb_ocorrencia OcorrenciaE = new tb_ocorrencia();
-            Atribuir(AreaPublicaModel, OcorrenciaE);
+            Atribuir(ocorrenciaModel, OcorrenciaE);
             unitOfWork.RepositorioOcorrencia.Inserir(OcorrenciaE);
             unitOfWork.Commit(shared);
             return OcorrenciaE.IdOcorrencia;
@@ -81,8 +81,11 @@ namespace Services
         /// 
         private IQueryable<OcorrenciaModel> GetQuery()
         {
+            IQueryable<tb_pessoa> tb_pessoa = unitOfWork.RepositorioPessoa.GetQueryable();
             IQueryable<tb_ocorrencia> tb_ocorrencia = unitOfWork.RepositorioOcorrencia.GetQueryable();
             var query = from Ocorrencia in tb_ocorrencia
+                        join Pessoa in tb_pessoa
+                        on Ocorrencia.IdPessoa equals Pessoa.IdPessoa
                         select new OcorrenciaModel
                         {
                             IdOcorrencia = Ocorrencia.IdOcorrencia,
@@ -90,12 +93,9 @@ namespace Services
                             Titulo = Ocorrencia.Titulo,
                             Descricao = Ocorrencia.Descricao,
                             Data = Ocorrencia.DataCriacao,
-                            //IdTipoOcorrencia = Ocorrencia.IdTipoOcorrencia,                            
-                            TipoOcorrencia = Ocorrencia.tb_tipoocorrencia.TipoOcorrencia,
-                           // IdStatusOcorrenicia = Ocorrencia.IdStatusOcorrencia,
-                            StatusOcorrencia = Ocorrencia.tb_statusocorrencia.StatusOcorrencia,
-                           
-
+                            TipoOcorrencia = (Ocorrencia.TipoOcorrencia == "Barulho" ? Models.OcorrenciaModel.ListaTipoOcorrencia.Barulho : (Ocorrencia.TipoOcorrencia == "DanoAoPatrimonio" ? Models.OcorrenciaModel.ListaTipoOcorrencia.DanoAoPatrimonio : (Ocorrencia.TipoOcorrencia == "Outros" ? Models.OcorrenciaModel.ListaTipoOcorrencia.Outros : OcorrenciaModel.ListaTipoOcorrencia.Roubo))),
+                            StatusOcorrencia = (Ocorrencia.StatusOcorrencia == "EmAnalise" ? Models.OcorrenciaModel.ListaStatusOcorrencia.EmAnalise : (Ocorrencia.StatusOcorrencia == "EmExecucao" ? Models.OcorrenciaModel.ListaStatusOcorrencia.EmExecucao : (Ocorrencia.StatusOcorrencia == "Finalizada" ? Models.OcorrenciaModel.ListaStatusOcorrencia.Finalizada : OcorrenciaModel.ListaStatusOcorrencia.Rresolvida))),
+                            NomePessoa = Pessoa.Nome
                         };
             return query;
         }
@@ -142,10 +142,9 @@ namespace Services
             OcorrenciaE.Titulo = OcorrenciaModel.Titulo;
             OcorrenciaE.Descricao = OcorrenciaModel.Descricao;            
             OcorrenciaE.DataCriacao = OcorrenciaModel.Data;
-            OcorrenciaE.IdTipoOcorrencia = OcorrenciaModel.IdTipoOcorrencia;
-            OcorrenciaE.IdStatusOcorrencia = OcorrenciaModel.IdStatusOcorrenicia;
+            OcorrenciaE.TipoOcorrencia = OcorrenciaModel.TipoOcorrencia.ToString();
+            OcorrenciaE.StatusOcorrencia = OcorrenciaModel.StatusOcorrencia.ToString();
 
         }
-        */
     }
 }

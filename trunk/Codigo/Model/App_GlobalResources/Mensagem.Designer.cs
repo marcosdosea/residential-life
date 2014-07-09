@@ -250,6 +250,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Barulho.
+        /// </summary>
+        public static string Barulho {
+            get {
+                return ResourceManager.GetString("Barulho", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bloco.
         /// </summary>
         public static string bloco {
@@ -462,6 +471,15 @@ namespace Models.App_GlobalResources {
         public static string criador {
             get {
                 return ResourceManager.GetString("criador", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dano ao Patrimônio.
+        /// </summary>
+        public static string DanoAoPatrimonio {
+            get {
+                return ResourceManager.GetString("DanoAoPatrimonio", resourceCulture);
             }
         }
         
@@ -745,6 +763,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Em Execução.
+        /// </summary>
+        public static string EmExecucao {
+            get {
+                return ResourceManager.GetString("EmExecucao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enquete.
         /// </summary>
         public static string enquete {
@@ -804,6 +831,15 @@ namespace Models.App_GlobalResources {
         public static string excluir {
             get {
                 return ResourceManager.GetString("excluir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Finalizada.
+        /// </summary>
+        public static string Finalizada {
+            get {
+                return ResourceManager.GetString("Finalizada", resourceCulture);
             }
         }
         
@@ -1096,6 +1132,24 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Outros.
+        /// </summary>
+        public static string Outros {
+            get {
+                return ResourceManager.GetString("Outros", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Outros Tipos de Ocorrência.
+        /// </summary>
+        public static string outros_tipos_ocorrencia {
+            get {
+                return ResourceManager.GetString("outros_tipos_ocorrencia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Você está seguro que quer fazer isso?.
         /// </summary>
         public static string perguntaConfirmacao {
@@ -1240,6 +1294,24 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Roubo.
+        /// </summary>
+        public static string Roubo {
+            get {
+                return ResourceManager.GetString("Roubo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resolvida.
+        /// </summary>
+        public static string Rresolvida {
+            get {
+                return ResourceManager.GetString("Rresolvida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rua.
         /// </summary>
         public static string rua {
@@ -1321,6 +1393,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Status Ocorrência.
+        /// </summary>
+        public static string status_ocorrencia {
+            get {
+                return ResourceManager.GetString("status_ocorrencia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Status do Pagamento.
         /// </summary>
         public static string statusPagamento {
@@ -1362,6 +1443,15 @@ namespace Models.App_GlobalResources {
         public static string tipo {
             get {
                 return ResourceManager.GetString("tipo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tipo de Ocorrência.
+        /// </summary>
+        public static string tipo_ocorrencia {
+            get {
+                return ResourceManager.GetString("tipo_ocorrencia", resourceCulture);
             }
         }
         

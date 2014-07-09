@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.OcorrenciaModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    <%:Models.App_GlobalResources.Mensagem.listaRegistroOcorrencia%>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -13,7 +13,9 @@
 </p>
 <table id="table">
     <tr>
-        
+        <th> 
+           <%:  Models.App_GlobalResources.Mensagem.pessoa%>
+        </th>
         <th> 
            <%:  Models.App_GlobalResources.Mensagem.titulo%>
         </th>
@@ -29,12 +31,14 @@
         <th>
              <%: Models.App_GlobalResources.Mensagem.status %>
         </th>
-        <th></th>
+        <th>Opções</th>
     </tr>
 
 <% foreach (var item in Model) { %>
     <tr>
-       
+       <td>
+            <%: Html.DisplayFor(modelItem => item.NomePessoa) %>
+        </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Titulo) %>
         </td>

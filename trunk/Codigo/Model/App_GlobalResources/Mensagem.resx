@@ -576,4 +576,34 @@
   <data name="nome_pessoa" xml:space="preserve">
     <value>Nome Pessoa</value>
   </data>
+  <data name="Barulho" xml:space="preserve">
+    <value>Barulho</value>
+  </data>
+  <data name="DanoAoPatrimonio" xml:space="preserve">
+    <value>Dano ao Patrimônio</value>
+  </data>
+  <data name="EmExecucao" xml:space="preserve">
+    <value>Em Execução</value>
+  </data>
+  <data name="Finalizada" xml:space="preserve">
+    <value>Finalizada</value>
+  </data>
+  <data name="Outros" xml:space="preserve">
+    <value>Outros</value>
+  </data>
+  <data name="outros_tipos_ocorrencia" xml:space="preserve">
+    <value>Outros Tipos de Ocorrência</value>
+  </data>
+  <data name="Roubo" xml:space="preserve">
+    <value>Roubo</value>
+  </data>
+  <data name="Rresolvida" xml:space="preserve">
+    <value>Resolvida</value>
+  </data>
+  <data name="status_ocorrencia" xml:space="preserve">
+    <value>Status Ocorrência</value>
+  </data>
+  <data name="tipo_ocorrencia" xml:space="preserve">
+    <value>Tipo de Ocorrência</value>
+  </data>
 </root>

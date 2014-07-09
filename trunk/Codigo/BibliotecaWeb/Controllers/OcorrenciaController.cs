@@ -12,34 +12,28 @@ namespace BibliotecaWeb.Controllers
 {
     public class OcorrenciaController : Controller
     {
-        /*
-        private GerenciadorPessoa gPessoa;
         private GerenciadorOcorrencia gOcorrencia;
-        private GerenciadorStatusOcorrencia gStatusOcorrencia;
-        private GerenciadorTipoOcorrencia gTipoOcorrencia;
+        private GerenciadorPessoa gPessoa;
 
         public OcorrenciaController()
         {
             gOcorrencia = new GerenciadorOcorrencia();
             gPessoa = new GerenciadorPessoa();
-            gStatusOcorrencia = new GerenciadorStatusOcorrencia();
-            gTipoOcorrencia = new GerenciadorTipoOcorrencia();
 
         }
-
 
         //
         // GET: /Ocorrencia/
 
         public ActionResult Index()
         {
-            int idPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
-            return View(gOcorrencia.ObterTodosPorPessoa(idPessoa));
+            //int idPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
+            //return View(gOcorrencia.ObterTodosPorPessoa(idPessoa));
+            return View(gOcorrencia.ObterTodos());
         }
 
         //
         // GET: /Ocorrencia/Details/5
-        [Authorize(Roles = "Morador")]  
         public ViewResult Details(int id)
         {
             OcorrenciaModel Ocorrencia = gOcorrencia.Obter(id);
@@ -47,12 +41,10 @@ namespace BibliotecaWeb.Controllers
         }
 
         //
-        // GET: /Ocorrencia/Create
-        [Authorize(Roles = "Morador")]  
+        // GET: /Ocorrencia/Create 
         public ActionResult Create()
         {
-            ViewBag.IdTipoOcorrencia = new SelectList(gTipoOcorrencia.ObterTodos(), "IdTipoOcorrencia", "TipoOcorrencia");
-            ViewBag.IdStatusOcorrencia = new SelectList(gStatusOcorrencia.ObterTodos(), "IdStatusOcorrencia", "StatusOcorrencia");
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
             return View();
         }
 
@@ -62,7 +54,7 @@ namespace BibliotecaWeb.Controllers
         [HttpPost]
         public ActionResult Create(OcorrenciaModel ocorrenciaModel)
         {
-            ocorrenciaModel.IdPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
+            //ocorrenciaModel.IdPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
             if (ModelState.IsValid)
             {
                 gOcorrencia.Inserir(ocorrenciaModel);
@@ -74,14 +66,10 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /Ocorrencia/Edit/5
-        [Authorize(Roles = "Morador")]  
         public ActionResult Edit(int id)
         {
-
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
             OcorrenciaModel Ocorrencia = gOcorrencia.Obter(id);
-
-            ViewBag.IdTipoOcorrencia = new SelectList(gTipoOcorrencia.ObterTodos(), "IdTipoOcorrencia", "TipoOcorrencia", Ocorrencia.IdTipoOcorrencia);
-            ViewBag.IdStatusOcorrencia = new SelectList(gStatusOcorrencia.ObterTodos(), "IdStatusOcorrencia", "StatusOcorrencia");
 
             return View(Ocorrencia);
         }
@@ -102,7 +90,6 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /Ocorrencia/Delete/5
-        [Authorize(Roles = "Morador")]  
         public ActionResult Delete(int id)
         {
             OcorrenciaModel OcorrenciaModel = gOcorrencia.Obter(id);
@@ -111,7 +98,6 @@ namespace BibliotecaWeb.Controllers
 
         //
         // POST: /Ocorrencia/Delete/5
-        [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
             gOcorrencia.Remover(id);
@@ -165,7 +151,6 @@ namespace BibliotecaWeb.Controllers
         {
             base.Dispose(disposing);
         }
-        */
 
     }
 }
