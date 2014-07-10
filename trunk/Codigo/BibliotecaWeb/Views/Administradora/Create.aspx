@@ -38,7 +38,7 @@
             <%: Models.App_GlobalResources.Mensagem.senha %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Senha) %>
+            <%: Html.PasswordFor(model => model.Senha)%>
             <%: Html.ValidationMessageFor(model => model.Senha) %>
         </div>
 

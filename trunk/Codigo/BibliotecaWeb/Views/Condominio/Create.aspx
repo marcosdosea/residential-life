@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.CondominioModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Create
+    <%:Models.App_GlobalResources.Mensagem.criador%>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -22,14 +22,6 @@
         <div class="editor-field">
             <%: Html.DropDownListFor(model => model.IdAdministradora, ViewBag.IdAdministradora as SelectList)%>
             <%: Html.ValidationMessageFor(model => model.IdAdministradora) %>
-        </div>
-
-        <div class="editor-label">
-            <%:  Models.App_GlobalResources.Mensagem.sindico%>
-        </div>
-        <div class="editor-field">
-            <%: Html.DropDownListFor(model => model.IdSindico, ViewBag.IdSindico as SelectList)%>
-            <%: Html.ValidationMessageFor(model => model.IdSindico) %>
         </div>
                
         <div class="editor-label">
@@ -92,7 +84,7 @@
             <%: Models.App_GlobalResources.Mensagem.estado%>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Estado) %>
+            <%: Html.EditorFor(model => model.Estado, new { MaxLength = 2 })%>
             <%: Html.ValidationMessageFor(model => model.Estado) %>
         </div>
 

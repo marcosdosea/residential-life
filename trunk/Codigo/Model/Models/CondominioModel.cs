@@ -11,9 +11,9 @@ namespace Models.Models
     {
         public int IdCondominio { get; set; }
         public int IdAdministradora { get; set; }
+
+        [Display(Name = "nome_adm", ResourceType = typeof(Mensagem))]
         public string nomeAdministradora { get; set; }
-        public int IdSindico { get; set; }
-        public string NomeSindico { get; set; }
 
         [Required]
         [Display(Name = "nome", ResourceType = typeof(Mensagem))]

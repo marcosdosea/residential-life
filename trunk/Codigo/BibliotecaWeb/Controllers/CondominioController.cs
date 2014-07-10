@@ -10,15 +10,13 @@ namespace BibliotecaWeb.Controllers
 {
     public class CondominioController : Controller
     {
-        /*
+        
         private GerenciadorCondominio gCondominio;
-        private GerenciadorPessoa gPessoa;
         private GerenciadorAdministradora gAdministradora;
 
         public CondominioController()
         {
             gCondominio = new GerenciadorCondominio();
-            gPessoa = new GerenciadorPessoa();
             gAdministradora = new GerenciadorAdministradora();
         }
         //
@@ -43,7 +41,6 @@ namespace BibliotecaWeb.Controllers
         //[Authorize(Roles = "Adm Sistema")]
         public ActionResult Create()
         {
-            ViewBag.IdSindico = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
             ViewBag.IdAdministradora = new SelectList(gAdministradora.ObterTodos(), "IdAdministradora", "Nome");
             return View();
         }
@@ -68,9 +65,7 @@ namespace BibliotecaWeb.Controllers
         // [Authorize(Roles = "Adm Sistema")]
         public ActionResult Edit(int id)
         {
-
             CondominioModel condominio = gCondominio.Obter(id);
-            ViewBag.IdSindico = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", condominio.IdSindico);
             ViewBag.IdAdministradora = new SelectList(gAdministradora.ObterTodos(), "IdAdministradora", "Nome", condominio.IdAdministradora);
             return View(condominio);
         }
@@ -93,7 +88,6 @@ namespace BibliotecaWeb.Controllers
 
         //
         // GET: /condominio/Delete/5
-        [Authorize(Roles = "Adm Sistema")]
         public ActionResult Delete(int id)
         {
             CondominioModel condominioModel = gCondominio.Obter(id);
@@ -113,7 +107,7 @@ namespace BibliotecaWeb.Controllers
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
-        } */
+        }
 
     }
 }

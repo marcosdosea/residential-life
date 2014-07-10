@@ -10,8 +10,19 @@ namespace Services
 {
     public class GerenciadorAdministradora
     {
+        private static GerenciadorAdministradora gAdm;
+
         private IUnitOfWork unitOfWork;
         private bool shared;
+
+        public static GerenciadorAdministradora GetInstance()
+        {
+            if (gAdm == null)
+            {
+                gAdm = new GerenciadorAdministradora();
+            }
+            return gAdm;
+        }
 
         /// <summary>
         /// Construtor pode ser acessado externamente e não compartilha contexto
@@ -108,6 +119,17 @@ namespace Services
         {
             IEnumerable<AdministradoraModel> tipoVeiculoEs = GetQuery().Where(Administradora => Administradora.IdAdministradora.Equals(idAdministradora));
             return tipoVeiculoEs.ElementAtOrDefault(0);
+        }
+
+        /// <summary>
+        /// Obtém um tipo de plano de conta
+        /// </summary>
+        /// <param name="idAdministradora">Identificador do tipo de plano de conta na base de dados</param>
+        /// <returns>Tipo de Plano de Conta model</returns>
+        public AdministradoraModel ObterPorNomeEmail(string Nome, string email)
+        {
+            IEnumerable<AdministradoraModel> adm = GetQuery().Where(Administradora => Administradora.Nome == Nome && Administradora.Email == email);
+            return adm.ElementAtOrDefault(0);
         }
 
         /// <summary>

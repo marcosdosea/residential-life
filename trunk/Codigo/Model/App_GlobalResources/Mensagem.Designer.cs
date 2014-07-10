@@ -988,6 +988,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nome Administradora.
+        /// </summary>
+        public static string nome_adm {
+            get {
+                return ResourceManager.GetString("nome_adm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nome Pessoa.
         /// </summary>
         public static string nome_pessoa {

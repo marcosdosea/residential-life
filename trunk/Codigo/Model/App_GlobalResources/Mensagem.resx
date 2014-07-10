@@ -606,4 +606,7 @@
   <data name="tipo_ocorrencia" xml:space="preserve">
     <value>Tipo de Ocorrência</value>
   </data>
+  <data name="nome_adm" xml:space="preserve">
+    <value>Nome Administradora</value>
+  </data>
 </root>
