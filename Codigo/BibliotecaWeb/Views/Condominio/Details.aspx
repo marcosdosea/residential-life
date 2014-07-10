@@ -16,11 +16,6 @@
     <div class="display-field">
         <%: Html.DisplayFor(model => model.nomeAdministradora) %>
     </div>
-       
-    <div class="display-label">NomeSindico</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.NomeSindico) %>
-    </div>
 
     <div class="display-label">Nome</div>
     <div class="display-field">

@@ -23,7 +23,7 @@
         <th>
             <%: Models.App_GlobalResources.Mensagem.email %>
         </th>
-        <th></th>
+        <th><%: Models.App_GlobalResources.Mensagem.opcoes %></th>
     </tr>
 
 <% foreach (var item in Model) { %>

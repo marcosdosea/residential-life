@@ -15,7 +15,7 @@ namespace Services
 
     public class GerenciadorCondominio
     {
-        /*
+        
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -88,9 +88,7 @@ namespace Services
                         select new CondominioModel
                         {
                             IdCondominio = condominio.IdCondominio,
-                           // IdSindico = condominio.IdSindico,
-                           // IdAdministradora = condominio.IdAdministradora,
-                            NomeSindico = condominio.tb_pessoa.Nome,
+                            IdAdministradora = condominio.IdAdministradora,
                             nomeAdministradora = condominio.tb_administradora.Nome,
                             Nome = condominio.Nome,
                             Rua = condominio.Rua,
@@ -100,7 +98,6 @@ namespace Services
                             Cep = condominio.CEP,
                             Cidade = condominio.Cidade,
                             Estado = condominio.Estado,
-                            
                         };
             return query;
         }
@@ -133,7 +130,6 @@ namespace Services
         private void Atribuir(CondominioModel condominioModel, tb_condominio condominioE)
         {
             condominioE.IdCondominio = condominioModel.IdCondominio;
-            condominioE.IdSindico = condominioModel.IdSindico;
             condominioE.IdAdministradora = condominioModel.IdAdministradora;
             condominioE.Nome = condominioModel.Nome;
             condominioE.Rua = condominioModel.Rua;
@@ -143,6 +139,6 @@ namespace Services
             condominioE.CEP = condominioModel.Cep;
             condominioE.Cidade = condominioModel.Cidade;
             condominioE.Estado = condominioModel.Estado;
-        }*/
+        }
     }
 }

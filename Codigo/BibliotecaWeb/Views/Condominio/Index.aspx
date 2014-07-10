@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.CondominioModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    <%: Models.App_GlobalResources.Mensagem.condominios%>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -11,15 +11,11 @@
 <p>
     <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.novo, "Create") %>
 </p>
-<table>
+<table id="table">
     <tr>
       
         <th>
              <%: Models.App_GlobalResources.Mensagem.administradora %>
-        </th>
-       
-        <th>
-            <%: Models.App_GlobalResources.Mensagem.sindico %>
         </th>
         <th>
             <%: Models.App_GlobalResources.Mensagem.nome %>
@@ -45,7 +41,7 @@
         <th>
             <%: Models.App_GlobalResources.Mensagem.estado %>
         </th>
-        <th></th>
+        <th><%: Models.App_GlobalResources.Mensagem.opcoes %></th>
     </tr>
 
 <% foreach (var item in Model) { %>
@@ -54,9 +50,6 @@
        
         <td>
             <%: Html.DisplayFor(modelItem => item.nomeAdministradora) %>
-        </td>
-         <td>
-            <%: Html.DisplayFor(modelItem => item.NomeSindico) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Nome) %>

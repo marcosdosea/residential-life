@@ -24,15 +24,6 @@
             <%:  Html.DropDownListFor(model => model.IdAdministradora, ViewBag.IdAdministradora as SelectList)%>
             <%: Html.ValidationMessageFor(model => model.IdAdministradora) %>
         </div>
-
-       
-        <div class="editor-label">
-            <%:  Models.App_GlobalResources.Mensagem.sindico%>
-        </div>
-        <div class="editor-field">
-            <%: Html.DropDownListFor(model => model.IdSindico, ViewBag.IdSindico as SelectList)%>
-            <%: Html.ValidationMessageFor(model => model.IdSindico) %>
-        </div>
               
 
         <div class="editor-label">
@@ -44,10 +35,10 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Rua) %>
+            <%: Models.App_GlobalResources.Mensagem.rua%>
         </div>
         <div class="editor-field">
-            <%: Models.App_GlobalResources.Mensagem.rua%>
+            <%: Html.EditorFor(model => model.Rua) %>
             <%: Html.ValidationMessageFor(model => model.Rua) %>
         </div>
 
@@ -95,7 +86,7 @@
             <%: Models.App_GlobalResources.Mensagem.estado%>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Estado) %>
+            <%: Html.EditorFor(model => model.Estado, new { MaxLength = 2 })%>
             <%: Html.ValidationMessageFor(model => model.Estado) %>
         </div>
 
