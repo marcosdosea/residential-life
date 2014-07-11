@@ -1,0 +1,171 @@
+﻿body {
+    margin: 0px;
+    text-align: center;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+#main_container {
+    position: relative;
+    left: -32px;
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.u0_container {
+    position:absolute;
+    left:32px;
+    top:9px;
+    width:1024px;
+    height:712px;
+}
+
+#u0_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:1024px;
+    height:712px;
+}
+
+.u1 {
+    position:absolute;
+    left:2px;
+    top:348px;
+    width:1020px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u2_normal {
+    background-image: url('../Menu_AdmSIS_files/u2_normal.png');
+}
+
+.u2_container {
+    position:absolute;
+    left:891px;
+    top:319px;
+    width:52px;
+    height:47px;
+}
+
+#u2_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:52px;
+    height:47px;
+}
+
+.u3 {
+    position:absolute;
+    left:2px;
+    top:16px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u4_normal {
+    background-image: url('../Menu_AdmSIS_files/u4_normal.png');
+}
+
+.u4_container {
+    position:absolute;
+    left:385px;
+    top:402px;
+    width:343px;
+    height:179px;
+}
+
+#u4_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:343px;
+    height:179px;
+}
+
+.u5 {
+    position:absolute;
+    left:2px;
+    top:82px;
+    width:339px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u6 {
+    position:absolute;
+    left:414px;
+    top:526px;
+    width:293px;
+    height:48px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u7 {
+    position:absolute;
+    left:413px;
+    top:465px;
+    width:293px;
+    height:48px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u8 {
+    position:absolute;
+    left:413px;
+    top:403px;
+    width:293px;
+    height:48px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
