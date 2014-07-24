@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.MoradiaModel>" %>
+<%@ Import Namespace="Model.Helpers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Edit
@@ -15,48 +16,64 @@
     <%: Html.ValidationSummary(true) %>
     <fieldset>
         <legend><%: Models.App_GlobalResources.Mensagem.moradia %></legend>
-
-        <div class="editor-field">
-            <%: Html.HiddenFor(model => model.IdMoradia) %>
-            <%: Html.ValidationMessageFor(model => model.IdMoradia) %>
-        </div>
-
-        <div class="editor-field">
-            <%: Html.HiddenFor(model => model.IdBloco)%>
-            <%: Html.ValidationMessageFor(model => model.IdBloco) %>
-        </div>
+        
+        <%: Html.HiddenFor(model => model.IdMoradia) %>
 
         <div class="editor-label">
             <%: Models.App_GlobalResources.Mensagem.proprietario %>
         </div>
         <div class="editor-field">
-            <%: Html.DropDownListFor(model => model.IdPessoa, ViewBag.IdPessoa as SelectList)%>
+           <%: Html.DropDownListFor(model => model.IdPessoa, ViewBag.IdPessoa as SelectList, "Selecione", null)%>
             <%: Html.ValidationMessageFor(model => model.IdPessoa) %>
         </div>
-
+      <% using (Html.BeginForm("Create", "Moradia", FormMethod.Post, null))
+         { %>
+        <div class="editor-label">
+            <%: Models.App_GlobalResources.Mensagem.condominio%>
+        </div>
         <div class="editor-field">
-            <%: Html.HiddenFor(model => model.Predio)%>
+            <%: Html.DropDownListFor(model => model.IdCondominio, ViewBag.IdCondominio as SelectList, "Selecione", new { onchange = "this.form.submit();" })%>
+            <%: Html.ValidationMessageFor(model => model.IdCondominio)%>
+        </div>
+        <% } %>
+
+        <div class="editor-label">
+            <%: Models.App_GlobalResources.Mensagem.bloco%>
+        </div>
+        <div class="editor-field">
+            <%: Html.DropDownListFor(model => model.IdBloco, ViewBag.IdBloco as SelectList, "Selecione")%>
+            <%: Html.ValidationMessageFor(model => model.IdBloco)%>
+        </div>
+
+        <div class="editor-label">
+             <%: Models.App_GlobalResources.Mensagem.predio %>
+        </div>
+        <div class="editor-field">
+            <%: Html.TextBoxFor(model => model.Predio) %>
             <%: Html.ValidationMessageFor(model => model.Predio) %>
         </div>
 
+        <div class="editor-label">
+             <%: Models.App_GlobalResources.Mensagem.andar %>
+        </div>
         <div class="editor-field">
-            <%: Html.HiddenFor(model => model.Andar)%>
+            <%: Html.EditorFor(model => model.Andar) %>
             <%: Html.ValidationMessageFor(model => model.Andar) %>
         </div>
 
-
+        <div class="editor-label">
+             <%: Models.App_GlobalResources.Mensagem.numero %>
+        </div>
         <div class="editor-field">
-            <%: Html.HiddenFor(model => model.Numero)%>
+            <%: Html.EditorFor(model => model.Numero) %>
             <%: Html.ValidationMessageFor(model => model.Numero) %>
         </div>
 
-        <div class="editor-field">
-            <%: Html.HiddenFor(model => model.IdTipoMoradia)%>
-            <%: Html.ValidationMessageFor(model => model.IdTipoMoradia) %>
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.TipoMoradia) %>
         </div>
-
         <div class="editor-field">
-            <%: Html.HiddenFor(model => model.TipoMoradia)%>
+            <%: Html.EnumDropDownListFor(model => model.TipoMoradia, Models.Models.MoradiaModel.ListaTipoMoradia.Padrao)%>
             <%: Html.ValidationMessageFor(model => model.TipoMoradia) %>
         </div>
 

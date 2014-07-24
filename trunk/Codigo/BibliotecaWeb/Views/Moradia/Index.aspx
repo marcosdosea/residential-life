@@ -14,10 +14,10 @@
 <table id="table">
     <tr>
         <th>
-            <%: Models.App_GlobalResources.Mensagem.bloco %>
+           <%: Models.App_GlobalResources.Mensagem.proprietario %>
         </th>
         <th>
-           <%: Models.App_GlobalResources.Mensagem.proprietario %>
+            <%: Models.App_GlobalResources.Mensagem.bloco %>
         </th>
         <th>
             <%: Models.App_GlobalResources.Mensagem.predio %>
@@ -31,17 +31,16 @@
         <th>
             <%: Models.App_GlobalResources.Mensagem.tipoMoradia%>
         </th>
-        <th></th>
+        <th><%: Models.App_GlobalResources.Mensagem.opcoes%></th>
     </tr>
 
 <% foreach (var item in Model) { %>
     <tr>
-
-        <td>
-            <%: Html.DisplayFor(modelItem => item.NomeBloco) %>
-        </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.NomePessoa) %>
+        </td>
+        <td>
+            <%: Html.DisplayFor(modelItem => item.NomeBloco) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Predio) %>

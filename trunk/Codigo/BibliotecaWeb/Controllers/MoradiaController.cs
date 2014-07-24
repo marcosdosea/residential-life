@@ -10,18 +10,18 @@ namespace BibliotecaWeb.Controllers
 {
     public class MoradiaController : Controller
     {
-        /*
+        
         private GerenciadorMoradia gMoradia;
         private GerenciadorBloco gBloco;
         private GerenciadorPessoa gPessoa;
-        private GerenciadorTipoMoradia gTipoMoradia;
+        private GerenciadorCondominio gCondominio;
 
         public MoradiaController()
         {
             gMoradia = new GerenciadorMoradia();
             gBloco = new GerenciadorBloco();
             gPessoa = new GerenciadorPessoa();
-            gTipoMoradia = new GerenciadorTipoMoradia();
+            gCondominio = new GerenciadorCondominio();
         }
 
         //
@@ -29,7 +29,6 @@ namespace BibliotecaWeb.Controllers
 
         public ActionResult Index()
         {
-            //int idBloco = gMoradia.ObterTodosPorBloco(idBloco);
             return View(gMoradia.ObterTodos());
         }
 
@@ -39,7 +38,7 @@ namespace BibliotecaWeb.Controllers
             //Pegar somente as áreas públicas do condomínio corrente no futuro
             ViewBag.IdBloco = new SelectList(gBloco.ObterTodos(), "IdBloco", "Nome");
             ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
-            ViewBag.IdTipoMoradia = new SelectList(gTipoMoradia.ObterTodos(), "IdTipoMoradia", "TipoMoradia");
+            ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome");
             return View();
         }
 
@@ -49,11 +48,16 @@ namespace BibliotecaWeb.Controllers
         [HttpPost]
         public ActionResult Create(MoradiaModel moradiaModel)
         {
-
             if (ModelState.IsValid)
             {
                 gMoradia.Inserir(moradiaModel);
                 return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(moradiaModel.IdCondominio), "IdBloco", "Nome");
+                ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", moradiaModel.IdPessoa);
+                ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", moradiaModel.IdCondominio);
             }
 
             return View(moradiaModel);
@@ -62,9 +66,10 @@ namespace BibliotecaWeb.Controllers
        // [Authorize(Roles = "Síndico")]
         public ActionResult Edit(int id)
         {
-
             MoradiaModel moradiaModel = gMoradia.Obter(id);
             ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", moradiaModel.IdPessoa);
+            ViewBag.IdBloco = new SelectList(gBloco.ObterTodos(), "IdBloco", "Nome", moradiaModel.IdBloco);
+            ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", moradiaModel.IdCondominio);
             return View(moradiaModel);
         }
 
@@ -78,6 +83,12 @@ namespace BibliotecaWeb.Controllers
             {
                 gMoradia.Editar(moradiaModel);
                 return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(moradiaModel.IdCondominio), "IdBloco", "Nome");
+                ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", moradiaModel.IdPessoa);
+                ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", moradiaModel.IdCondominio);
             }
             return View(moradiaModel);
         }
@@ -99,7 +110,7 @@ namespace BibliotecaWeb.Controllers
         {
             gMoradia.Remover(id);
             return RedirectToAction("Index");
-        }*/
+        }
 
     }
 }

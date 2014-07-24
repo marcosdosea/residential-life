@@ -14,8 +14,19 @@ namespace Services
 
     public class GerenciadorBloco
     {
+        private static GerenciadorBloco gBloco;
+
         private IUnitOfWork unitOfWork;
         private bool shared;
+
+        public static GerenciadorBloco GetInstance()
+        {
+            if (gBloco == null)
+            {
+                gBloco = new GerenciadorBloco();
+            }
+            return gBloco;
+        }
 
         /// <summary>
         /// Construtor pode ser acessado externamente e não compartilha contexto
@@ -117,6 +128,16 @@ namespace Services
             return blocoEs.ElementAtOrDefault(0);
         }
 
+        /// <summary>
+        /// Obtém um bloco
+        /// </summary>
+        /// <param name="idBloco">Identificador do bloco na base de dados</param>
+        /// <returns>Bloco model</returns>
+        public IEnumerable<BlocoModel> ObterPorCondominio(int idCondominio)
+        {
+            IEnumerable<BlocoModel> blocoEs = GetQuery().Where(blocoModel => blocoModel.IdCondominio.Equals(idCondominio));
+            return blocoEs;
+        }
 
 
         /// <summary>

@@ -26,11 +26,12 @@
 			<li><%: Html.ActionLink("Home", "Index", "Home")%></li>
             <li><%: Html.ActionLink("Pessoa", "Index", "Pessoa")%></li>
             <li><%: Html.ActionLink("Condomínio", "Index", "Condominio")%></li>
+            <li><%: Html.ActionLink("Bloco", "Index", "Bloco")%></li>
+            <li><%: Html.ActionLink("Moradia", "Index", "Moradia")%></li>
             <li><%: Html.ActionLink("Plano De Conta", "Index", "PlanoDeConta")%></li>
             <li><%: Html.ActionLink("Ocorrência", "Index", "Ocorrencia")%></li>
             <!--<li><%: Html.ActionLink("Veículo", "Index", "Veiculo")%></li>
             <li><%: Html.ActionLink("Condominio", "Index", "Condominio")%></li>
-            <li><%: Html.ActionLink("Bloco", "Index", "Bloco")%></li>
             <li><%: Html.ActionLink("Área Pública", "Index", "AreaPublica")%></li>
             <li><%: Html.ActionLink("Reserva Ambiente", "Index", "ReservaAmbiente")%></li>
             <li><%: Html.ActionLink("Registrar Ocorrência", "Index", "Ocorrencia")%></li>

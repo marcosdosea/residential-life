@@ -9,15 +9,18 @@ namespace Models.Models
 {
     public class MoradiaModel
     {
+        public enum ListaTipoMoradia { Cobertura = 0, Padrao = 1, Duplex = 2, Triplex = 3, Casa = 4 }
 
         public int IdMoradia { get; set; }
-
 
         [Display(Name = "bloco", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
         public int IdBloco { get; set; }
         public string NomeBloco { get; set; }
+
+        public int IdCondominio { get; set; }
+        public string NomeCondominio { get; set; }
 
         public int IdPessoa { get; set; }
         public string NomePessoa { get; set; }
@@ -27,7 +30,6 @@ namespace Models.Models
         [Required(ErrorMessageResourceType = typeof(Mensagem),
            ErrorMessageResourceName = "required")]
         public string Predio { get; set; }
-
 
         [Display(Name = "andar", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
@@ -39,15 +41,8 @@ namespace Models.Models
            ErrorMessageResourceName = "required")]
         public string Numero { get; set; }
 
-        [Display(Name = "idTipoMoradia", ResourceType = typeof(Mensagem))]
-        [Required(ErrorMessageResourceType = typeof(Mensagem),
-            ErrorMessageResourceName = "required")]
-        public int IdTipoMoradia { get; set; }
-
-
         [Display(Name = "tipoMoradia", ResourceType = typeof(Mensagem))]
-        [StringLength(50)]
-        public string TipoMoradia { get; set; }
+        public ListaTipoMoradia TipoMoradia { get; set; }
 
     }
 }

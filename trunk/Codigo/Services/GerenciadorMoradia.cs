@@ -10,7 +10,7 @@ namespace Services
 {
     public class GerenciadorMoradia
     {
-        /*
+        
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -89,8 +89,7 @@ namespace Services
                             Predio = moradia.Predio,
                             Andar = moradia.Andar,
                             Numero = moradia.Numero,
-                            IdTipoMoradia = moradia.IdTipoMoradia,
-                            TipoMoradia = moradia.tb_tipomoradia.TipoMoradia,
+                            TipoMoradia = (moradia.TipoMoradia == "Cobertura" ? Models.Models.MoradiaModel.ListaTipoMoradia.Cobertura : (moradia.TipoMoradia == "Casa" ? Models.Models.MoradiaModel.ListaTipoMoradia.Casa : (moradia.TipoMoradia == "Duplex" ? Models.Models.MoradiaModel.ListaTipoMoradia.Duplex : (moradia.TipoMoradia == "Padrao" ? Models.Models.MoradiaModel.ListaTipoMoradia.Padrao : MoradiaModel.ListaTipoMoradia.Triplex))) )
 
                         };
             return query;
@@ -141,18 +140,15 @@ namespace Services
         /// </summary>
         /// <param name="reservaAmbienteModel">Objeto do modelo</param>
         /// <param name="reservaAmbienteE">Entity mapeada da base de dados</param>
-        private void Atribuir(MoradiaModel moradiaModel, tb_moradia reservaAmbienteE)
+        private void Atribuir(MoradiaModel moradiaModel, tb_moradia moradiaE)
         {
-            reservaAmbienteE.IdMoradia = moradiaModel.IdMoradia;
-            reservaAmbienteE.IdBloco = moradiaModel.IdBloco;
-            reservaAmbienteE.IdProprietario = moradiaModel.IdPessoa;
-            reservaAmbienteE.Predio = moradiaModel.Predio;
-            reservaAmbienteE.Andar = moradiaModel.Andar;
-            reservaAmbienteE.Numero = moradiaModel.Numero;
-            reservaAmbienteE.IdTipoMoradia = moradiaModel.IdTipoMoradia;
-
-
+            moradiaE.IdMoradia = moradiaModel.IdMoradia;
+            moradiaE.IdBloco = moradiaModel.IdBloco;
+            moradiaE.IdProprietario = moradiaModel.IdPessoa;
+            moradiaE.Predio = moradiaModel.Predio;
+            moradiaE.Andar = moradiaModel.Andar;
+            moradiaE.Numero = moradiaModel.Numero;
+            moradiaE.TipoMoradia = moradiaModel.TipoMoradia.ToString();
         }
-        */
     }
 }
