@@ -12,10 +12,12 @@ namespace BibliotecaWeb.Controllers
     public class BlocoController : Controller
     {
         private GerenciadorBloco gBloco;
+        private GerenciadorCondominio gCondominio;
 
         public BlocoController()
         {
             gBloco = new GerenciadorBloco();
+            gCondominio = new GerenciadorCondominio();
         }
         //
         // GET: /bloco/
@@ -39,7 +41,7 @@ namespace BibliotecaWeb.Controllers
 
         public ActionResult Create()
         {
-           
+            ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome");
             return View();
         }
 
@@ -63,7 +65,6 @@ namespace BibliotecaWeb.Controllers
 
         public ActionResult Edit(int id)
         {
-
             BlocoModel bloco = gBloco.Obter(id);
             return View(bloco);
         }

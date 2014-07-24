@@ -15,9 +15,19 @@ namespace Services
 
     public class GerenciadorCondominio
     {
+        private static GerenciadorCondominio gCondominio;
         
         private IUnitOfWork unitOfWork;
         private bool shared;
+
+        public static GerenciadorCondominio GetInstance()
+        {
+            if (gCondominio == null)
+            {
+                gCondominio = new GerenciadorCondominio();
+            }
+            return gCondominio;
+        }
 
         /// <summary>
         /// Construtor pode ser acessado externamente e não compartilha contexto

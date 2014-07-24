@@ -13,14 +13,11 @@
 </p>
 <table id="table">
     <tr>
-        <th>
-            <%: Models.App_GlobalResources.Mensagem.id %>
-        </th>
-        <th>
-            <%: Models.App_GlobalResources.Mensagem.idCondominio %>
-        </th>
-        <th>
+        <th style="width:400px;">
             <%: Models.App_GlobalResources.Mensagem.nome %>
+        </th>
+        <th>
+            <%: Models.App_GlobalResources.Mensagem.condominio %>
         </th>
         <th>
             <%: Models.App_GlobalResources.Mensagem.qtdeAndares %>
@@ -28,19 +25,16 @@
         <th>
             <%: Models.App_GlobalResources.Mensagem.qtdeMoradias %>
         </th>
-        <th></th>
+        <th><%: Models.App_GlobalResources.Mensagem.opcoes %></th>
     </tr>
 
 <% foreach (var item in Model) { %>
     <tr>
         <td>
-            <%: Html.DisplayFor(modelItem => item.IdBloco) %>
+            <%: Html.DisplayFor(modelItem => item.Nome)%>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.IdCondominio) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.Nome) %>
+            <%: Html.DisplayFor(modelItem => item.NomeCondominio)%>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.QuantidadeAndares) %>
