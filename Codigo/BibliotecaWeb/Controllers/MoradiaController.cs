@@ -55,11 +55,10 @@ namespace BibliotecaWeb.Controllers
             }
             else
             {
-                ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(moradiaModel.IdCondominio), "IdBloco", "Nome");
-                ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", moradiaModel.IdPessoa);
-                ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", moradiaModel.IdCondominio);
+                //ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(moradiaModel.IdCondominio), "IdBloco", "Nome");
+                //ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", moradiaModel.IdPessoa);
+                //ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", moradiaModel.IdCondominio);
             }
-
             return View(moradiaModel);
         }
 
@@ -67,9 +66,9 @@ namespace BibliotecaWeb.Controllers
         public ActionResult Edit(int id)
         {
             MoradiaModel moradiaModel = gMoradia.Obter(id);
-            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", moradiaModel.IdPessoa);
+            //ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", moradiaModel.IdPessoa);
             ViewBag.IdBloco = new SelectList(gBloco.ObterTodos(), "IdBloco", "Nome", moradiaModel.IdBloco);
-            ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", moradiaModel.IdCondominio);
+            //ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", moradiaModel.IdCondominio);
             return View(moradiaModel);
         }
 
@@ -86,9 +85,9 @@ namespace BibliotecaWeb.Controllers
             }
             else
             {
-                ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(moradiaModel.IdCondominio), "IdBloco", "Nome");
-                ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", moradiaModel.IdPessoa);
-                ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", moradiaModel.IdCondominio);
+                //ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(moradiaModel.IdCondominio), "IdBloco", "Nome");
+                //ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", moradiaModel.IdPessoa);
+                //ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", moradiaModel.IdCondominio);
             }
             return View(moradiaModel);
         }

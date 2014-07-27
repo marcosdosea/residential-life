@@ -83,10 +83,6 @@ namespace Services
                         {
                             IdMoradia = moradia.IdMoradia,
                             IdBloco = moradia.IdBloco,
-                            NomeBloco = moradia.tb_bloco.Nome,
-                            IdPessoa = moradia.IdProprietario,
-                            NomePessoa = moradia.tb_pessoa.Nome,
-                            Predio = moradia.Predio,
                             Andar = moradia.Andar,
                             Numero = moradia.Numero,
                             TipoMoradia = (moradia.TipoMoradia == "Cobertura" ? Models.Models.MoradiaModel.ListaTipoMoradia.Cobertura : (moradia.TipoMoradia == "Casa" ? Models.Models.MoradiaModel.ListaTipoMoradia.Casa : (moradia.TipoMoradia == "Duplex" ? Models.Models.MoradiaModel.ListaTipoMoradia.Duplex : (moradia.TipoMoradia == "Padrao" ? Models.Models.MoradiaModel.ListaTipoMoradia.Padrao : MoradiaModel.ListaTipoMoradia.Triplex))) )
@@ -104,15 +100,6 @@ namespace Services
             return GetQuery();
         }
 
-
-        /// <summary>
-        /// Obter todos as entidades cadastradas
-        /// </summary>
-        /// <returns></returns>
-        public IEnumerable<MoradiaModel> ObterTodosPorPessoa(int idPessoa)
-        {
-            return GetQuery().Where(moradia => moradia.IdPessoa.Equals(idPessoa));
-        }
 
         /// <summary>
         /// Obter todos as entidades cadastradas
@@ -144,8 +131,6 @@ namespace Services
         {
             moradiaE.IdMoradia = moradiaModel.IdMoradia;
             moradiaE.IdBloco = moradiaModel.IdBloco;
-            moradiaE.IdProprietario = moradiaModel.IdPessoa;
-            moradiaE.Predio = moradiaModel.Predio;
             moradiaE.Andar = moradiaModel.Andar;
             moradiaE.Numero = moradiaModel.Numero;
             moradiaE.TipoMoradia = moradiaModel.TipoMoradia.ToString();
