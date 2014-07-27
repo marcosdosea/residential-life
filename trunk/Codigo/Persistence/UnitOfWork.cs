@@ -36,7 +36,6 @@ namespace Persistence
         private IRepositorioGenerico<tb_pessoamoradia> _repPessoaMoradia;
         private IRepositorioGenerico<tb_planodeconta> _repPlanoDeConta;
         private IRepositorioGenerico<tb_postagem> _repPostagem;
-        private IRepositorioGenerico<tb_publicacaomural> _repPublicacaoMural;
         private IRepositorioGenerico<tb_reservaambiente> _repReservaAmbiente;
         private IRepositorioGenerico<tb_restricaoacesso> _repRestricaoAcesso;
         private IRepositorioGenerico<tb_setor> _repSetor;
@@ -170,18 +169,6 @@ namespace Persistence
                     _repPlanoDeConta = new RepositorioGenerico<tb_planodeconta>(_context);
                 }
                 return _repPlanoDeConta;
-            }
-        }
-
-        public IRepositorioGenerico<tb_publicacaomural> RepositorioPublicacaoMural
-        {
-            get
-            {
-                if (_repPublicacaoMural == null)
-                {
-                    _repPublicacaoMural = new RepositorioGenerico<tb_publicacaomural>(_context);
-                }
-                return _repPublicacaoMural;
             }
         }
 

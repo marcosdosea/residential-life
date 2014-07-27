@@ -27,7 +27,6 @@ namespace Persistence
         IRepositorioGenerico<tb_pessoamoradia> RepositorioPessoaMoradia { get; }
         IRepositorioGenerico<tb_planodeconta> RepositorioPlanoDeConta { get; }
         IRepositorioGenerico<tb_postagem> RepositorioPostagem { get; }
-        IRepositorioGenerico<tb_publicacaomural> RepositorioPublicacaoMural { get; }
         IRepositorioGenerico<tb_reservaambiente> RepositorioReservaAmbiente { get; }
         IRepositorioGenerico<tb_restricaoacesso> RepositorioRestricaoAcesso { get; }
         IRepositorioGenerico<tb_setor> RepositorioSetor { get; }

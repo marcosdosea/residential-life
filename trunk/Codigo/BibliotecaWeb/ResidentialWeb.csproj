@@ -86,6 +86,7 @@
     <Compile Include="Controllers\PlanoDeContaController.cs" />
     <Compile Include="Controllers\PostagemController.cs" />
     <Compile Include="Controllers\ReservaAmbienteController.cs" />
+    <Compile Include="Controllers\SetorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -201,6 +202,11 @@
     <Content Include="Views\ReservaAmbiente\Details.aspx" />
     <Content Include="Views\ReservaAmbiente\Edit.aspx" />
     <Content Include="Views\ReservaAmbiente\Index.aspx" />
+    <Content Include="Views\Setor\Create.aspx" />
+    <Content Include="Views\Setor\Delete.aspx" />
+    <Content Include="Views\Setor\Details.aspx" />
+    <Content Include="Views\Setor\Edit.aspx" />
+    <Content Include="Views\Setor\Index.aspx" />
     <Content Include="Views\Veiculo\Create.aspx" />
     <Content Include="Views\Veiculo\Delete.aspx" />
     <Content Include="Views\Veiculo\Details.aspx" />

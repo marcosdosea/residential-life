@@ -609,4 +609,19 @@
   <data name="nome_adm" xml:space="preserve">
     <value>Nome Administradora</value>
   </data>
+  <data name="apagarSetor" xml:space="preserve">
+    <value>Apagar Setor</value>
+  </data>
+  <data name="confirmacaoSetor" xml:space="preserve">
+    <value>Tem certeza que deseja apagar este setor?</value>
+  </data>
+  <data name="detalhesSetor" xml:space="preserve">
+    <value>Detalhes do Setor</value>
+  </data>
+  <data name="editarSetor" xml:space="preserve">
+    <value>Editar Setor</value>
+  </data>
+  <data name="setor" xml:space="preserve">
+    <value>Setor</value>
+  </data>
 </root>

@@ -69,6 +69,7 @@
     <Compile Include="Models\OcorrenciaModel.cs" />
     <Compile Include="Models\ReservaAmbienteModel.cs" />
     <Compile Include="Models\PessoaModel.cs" />
+    <Compile Include="Models\SetorModel.cs" />
     <Compile Include="Models\StatusAreaPublicaModel.cs" />
     <Compile Include="Models\StatusEnqueteModel.cs" />
     <Compile Include="Models\StatusOcorrenciaModel.cs" />
