@@ -61,6 +61,8 @@
     <Compile Include="Models\BlocoModel.cs" />
     <Compile Include="Models\CondominioModel.cs" />
     <Compile Include="Models\EnqueteModel.cs" />
+    <Compile Include="Models\FuncionarioModel.cs" />
+    <Compile Include="Models\GrupoPlanoDeContasModel.cs" />
     <Compile Include="Models\MoradiaModel.cs" />
     <Compile Include="Models\OpcaoModel.cs" />
     <Compile Include="Models\OpcoesEnqueteModel.cs" />

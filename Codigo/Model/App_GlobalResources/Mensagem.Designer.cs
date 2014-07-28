@@ -160,6 +160,24 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apagar Funcionário.
+        /// </summary>
+        public static string apagarFuncionario {
+            get {
+                return ResourceManager.GetString("apagarFuncionario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apagar Grupo Plano de Contas.
+        /// </summary>
+        public static string apagarGrupoPlanoDeConta {
+            get {
+                return ResourceManager.GetString("apagarGrupoPlanoDeConta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Apagar Pessoa.
         /// </summary>
         public static string apagarPessoa {
@@ -430,6 +448,24 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tem certeza que deseja apagar este funcionário?.
+        /// </summary>
+        public static string confirmacaoFuncionario {
+            get {
+                return ResourceManager.GetString("confirmacaoFuncionario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tem certeza que deseja apagar esse grupo plano de conta?.
+        /// </summary>
+        public static string confirmacaoGrupoPlanoDeConta {
+            get {
+                return ResourceManager.GetString("confirmacaoGrupoPlanoDeConta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tem certeza que deseja apagar o Plano de Conta?.
         /// </summary>
         public static string confirmacaoPlanoDeConta {
@@ -592,6 +628,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Descrição do Plano de Conta.
+        /// </summary>
+        public static string descricaoPlanoDeConta {
+            get {
+                return ResourceManager.GetString("descricaoPlanoDeConta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Detalhes.
         /// </summary>
         public static string detalhes {
@@ -633,6 +678,24 @@ namespace Models.App_GlobalResources {
         public static string detalhesEnquete {
             get {
                 return ResourceManager.GetString("detalhesEnquete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhes do Funcionário.
+        /// </summary>
+        public static string detalhesFuncionario {
+            get {
+                return ResourceManager.GetString("detalhesFuncionario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhes do Grupo Plano de Contas.
+        /// </summary>
+        public static string detalhesGrupoPlanoDeContas {
+            get {
+                return ResourceManager.GetString("detalhesGrupoPlanoDeContas", resourceCulture);
             }
         }
         
@@ -723,6 +786,24 @@ namespace Models.App_GlobalResources {
         public static string editarEnquete {
             get {
                 return ResourceManager.GetString("editarEnquete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Editar Funcionário.
+        /// </summary>
+        public static string editarFuncionario {
+            get {
+                return ResourceManager.GetString("editarFuncionario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Editar Grupo Plano de Contas.
+        /// </summary>
+        public static string editarGrupoPlanoDeContas {
+            get {
+                return ResourceManager.GetString("editarGrupoPlanoDeContas", resourceCulture);
             }
         }
         
@@ -876,6 +957,60 @@ namespace Models.App_GlobalResources {
         public static string Finalizada {
             get {
                 return ResourceManager.GetString("Finalizada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frequência.
+        /// </summary>
+        public static string frequencia {
+            get {
+                return ResourceManager.GetString("frequencia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Funcionário.
+        /// </summary>
+        public static string funcionario {
+            get {
+                return ResourceManager.GetString("funcionario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Funcionários.
+        /// </summary>
+        public static string funcionarios {
+            get {
+                return ResourceManager.GetString("funcionarios", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Grupo Plano de Conta.
+        /// </summary>
+        public static string grupoPlanoDeConta {
+            get {
+                return ResourceManager.GetString("grupoPlanoDeConta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Grupo Plano de Contas.
+        /// </summary>
+        public static string grupoPlanoDeContas {
+            get {
+                return ResourceManager.GetString("grupoPlanoDeContas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Horário Permitido.
+        /// </summary>
+        public static string horarioPermitido {
+            get {
+                return ResourceManager.GetString("horarioPermitido", resourceCulture);
             }
         }
         
@@ -1042,6 +1177,24 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nome da Pessoa.
+        /// </summary>
+        public static string nomePessoa {
+            get {
+                return ResourceManager.GetString("nomePessoa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome do Setor.
+        /// </summary>
+        public static string nomeSetor {
+            get {
+                return ResourceManager.GetString("nomeSetor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nova Administradora.
         /// </summary>
         public static string novaAdministradora {
@@ -1168,6 +1321,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ocupação.
+        /// </summary>
+        public static string ocupacao {
+            get {
+                return ResourceManager.GetString("ocupacao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Opções.
         /// </summary>
         public static string opcoes {
@@ -1236,6 +1398,15 @@ namespace Models.App_GlobalResources {
         public static string planoDeConta {
             get {
                 return ResourceManager.GetString("planoDeConta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pontuação.
+        /// </summary>
+        public static string pontuacao {
+            get {
+                return ResourceManager.GetString("pontuacao", resourceCulture);
             }
         }
         
@@ -1515,6 +1686,15 @@ namespace Models.App_GlobalResources {
         public static string tipoMoradia {
             get {
                 return ResourceManager.GetString("tipoMoradia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tipo do Plano de Conta.
+        /// </summary>
+        public static string tipoPlanoDeConta {
+            get {
+                return ResourceManager.GetString("tipoPlanoDeConta", resourceCulture);
             }
         }
         
