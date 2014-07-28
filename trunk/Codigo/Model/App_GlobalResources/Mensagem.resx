@@ -624,4 +624,64 @@
   <data name="setor" xml:space="preserve">
     <value>Setor</value>
   </data>
+  <data name="apagarFuncionario" xml:space="preserve">
+    <value>Apagar Funcionário</value>
+  </data>
+  <data name="confirmacaoFuncionario" xml:space="preserve">
+    <value>Tem certeza que deseja apagar este funcionário?</value>
+  </data>
+  <data name="detalhesFuncionario" xml:space="preserve">
+    <value>Detalhes do Funcionário</value>
+  </data>
+  <data name="editarFuncionario" xml:space="preserve">
+    <value>Editar Funcionário</value>
+  </data>
+  <data name="frequencia" xml:space="preserve">
+    <value>Frequência</value>
+  </data>
+  <data name="funcionario" xml:space="preserve">
+    <value>Funcionário</value>
+  </data>
+  <data name="funcionarios" xml:space="preserve">
+    <value>Funcionários</value>
+  </data>
+  <data name="horarioPermitido" xml:space="preserve">
+    <value>Horário Permitido</value>
+  </data>
+  <data name="nomePessoa" xml:space="preserve">
+    <value>Nome da Pessoa</value>
+  </data>
+  <data name="nomeSetor" xml:space="preserve">
+    <value>Nome do Setor</value>
+  </data>
+  <data name="ocupacao" xml:space="preserve">
+    <value>Ocupação</value>
+  </data>
+  <data name="pontuacao" xml:space="preserve">
+    <value>Pontuação</value>
+  </data>
+  <data name="apagarGrupoPlanoDeConta" xml:space="preserve">
+    <value>Apagar Grupo Plano de Contas</value>
+  </data>
+  <data name="confirmacaoGrupoPlanoDeConta" xml:space="preserve">
+    <value>Tem certeza que deseja apagar esse grupo plano de conta?</value>
+  </data>
+  <data name="descricaoPlanoDeConta" xml:space="preserve">
+    <value>Descrição do Plano de Conta</value>
+  </data>
+  <data name="detalhesGrupoPlanoDeContas" xml:space="preserve">
+    <value>Detalhes do Grupo Plano de Contas</value>
+  </data>
+  <data name="editarGrupoPlanoDeContas" xml:space="preserve">
+    <value>Editar Grupo Plano de Contas</value>
+  </data>
+  <data name="grupoPlanoDeConta" xml:space="preserve">
+    <value>Grupo Plano de Conta</value>
+  </data>
+  <data name="grupoPlanoDeContas" xml:space="preserve">
+    <value>Grupo Plano de Contas</value>
+  </data>
+  <data name="tipoPlanoDeConta" xml:space="preserve">
+    <value>Tipo do Plano de Conta</value>
+  </data>
 </root>

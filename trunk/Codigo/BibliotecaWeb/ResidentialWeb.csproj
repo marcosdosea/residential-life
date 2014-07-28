@@ -79,6 +79,8 @@
     <Compile Include="Controllers\BlocoController.cs" />
     <Compile Include="Controllers\CondominioController.cs" />
     <Compile Include="Controllers\EnqueteController.cs" />
+    <Compile Include="Controllers\FuncionarioController.cs" />
+    <Compile Include="Controllers\GrupoPlanoDeContasController.cs" />
     <Compile Include="Controllers\MoradiaController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -173,6 +175,16 @@
     <Content Include="Views\Enquete\Index.aspx" />
     <Content Include="Views\Enquete\Votar.aspx" />
     <Content Include="Views\Enquete\VotarEnquete.aspx" />
+    <Content Include="Views\Funcionario\Create.aspx" />
+    <Content Include="Views\Funcionario\Delete.aspx" />
+    <Content Include="Views\Funcionario\Details.aspx" />
+    <Content Include="Views\Funcionario\Edit.aspx" />
+    <Content Include="Views\Funcionario\Index.aspx" />
+    <Content Include="Views\GrupoPlanoDeContas\Create.aspx" />
+    <Content Include="Views\GrupoPlanoDeContas\Delete.aspx" />
+    <Content Include="Views\GrupoPlanoDeContas\Details.aspx" />
+    <Content Include="Views\GrupoPlanoDeContas\Edit.aspx" />
+    <Content Include="Views\GrupoPlanoDeContas\Index.aspx" />
     <Content Include="Views\Moradia\Create.aspx" />
     <Content Include="Views\Moradia\Delete.aspx" />
     <Content Include="Views\Moradia\Edit.aspx" />
