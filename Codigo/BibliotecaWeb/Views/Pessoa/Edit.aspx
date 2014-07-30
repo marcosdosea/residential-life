@@ -55,24 +55,6 @@
         </div>
 
         <div class="editor-label">
-            <%: Models.App_GlobalResources.Mensagem.email %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.Email) %>
-            <%: Html.ValidationMessageFor(model => model.Email) %>
-        </div>
-
-        <div class="editor-field">
-            <%: Html.HiddenFor(model => model.Login) %>
-            <%: Html.ValidationMessageFor(model => model.Login) %>
-        </div>
-
-        <div class="editor-field">
-            <%: Html.HiddenFor(model => model.Senha) %>
-            <%: Html.ValidationMessageFor(model => model.Senha) %>
-        </div>
-
-        <div class="editor-label">
             <%: Models.App_GlobalResources.Mensagem.telefoneFixo %>
         </div>
         <div class="editor-field">

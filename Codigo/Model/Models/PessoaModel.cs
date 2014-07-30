@@ -40,30 +40,6 @@ namespace Models
         [StringLength(1)]
         public string Sexo { get; set; }
 
-
-        [Required(ErrorMessageResourceType = typeof(Mensagem),
-            ErrorMessageResourceName = "required")]
-        [DataType(DataType.EmailAddress)]
-        [Display(Name = "email", ResourceType = typeof(Mensagem))]
-        [StringLength(50)]
-        public string Email { get; set; }
-
-
-        [Required(ErrorMessageResourceType = typeof(Mensagem),
-            ErrorMessageResourceName = "required")]
-        [Display(Name = "login", ResourceType = typeof(Mensagem))]
-        [StringLength(16)]
-        public string Login { get; set; }
-
-
-        [Required(ErrorMessageResourceType = typeof(Mensagem),
-            ErrorMessageResourceName = "required")]
-        [DataType(DataType.Password)]
-        [Display(Name = "senha", ResourceType = typeof(Mensagem))]
-        [StringLength(16)]
-        public string Senha { get; set; }
-
-
         [Display(Name = "telefoneFixo", ResourceType = typeof(Mensagem))]
         [StringLength(12)]
         public string TelefoneFixo { get; set; }

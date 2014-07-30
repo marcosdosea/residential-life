@@ -22,8 +22,8 @@ namespace BibliotecaWeb
 
         public ActionResult Index()
         {
-            int idPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
-            return View(gVeiculo.ObterTodosDePessoa(idPessoa));
+            //int idPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
+            return View(gVeiculo.ObterTodos());
         }
 
         //
@@ -38,13 +38,12 @@ namespace BibliotecaWeb
         [HttpPost]
         public ActionResult Create(VeiculoModel veiculoModel)
         {
-            veiculoModel.IdPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
+            //veiculoModel.IdPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
             if (ModelState.IsValid)
             {
                 gVeiculo.Inserir(veiculoModel);
                 return RedirectToAction("Index");
             }
-
             return View(veiculoModel);
         }
 

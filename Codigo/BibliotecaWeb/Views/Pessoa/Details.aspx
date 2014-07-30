@@ -36,20 +36,6 @@
         <%: Html.DisplayFor(model => model.Sexo) %>
     </div>
 
-    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.email %></div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.Email) %>
-    </div>
-
-    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.login %></div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.Login) %>
-    </div>
-
-    <div class="display-field">
-        <%: Html.HiddenFor(model => model.Senha) %>
-    </div>
-
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.telefoneFixo %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.TelefoneFixo) %>

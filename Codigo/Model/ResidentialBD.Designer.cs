@@ -4702,16 +4702,13 @@ namespace Models
         /// <param name="nome">Initial value of the Nome property.</param>
         /// <param name="rG">Initial value of the RG property.</param>
         /// <param name="sexo">Initial value of the Sexo property.</param>
-        /// <param name="email">Initial value of the Email property.</param>
-        /// <param name="login">Initial value of the Login property.</param>
-        /// <param name="senha">Initial value of the Senha property.</param>
         /// <param name="rua">Initial value of the Rua property.</param>
         /// <param name="numero">Initial value of the Numero property.</param>
         /// <param name="bairro">Initial value of the Bairro property.</param>
         /// <param name="cEP">Initial value of the CEP property.</param>
         /// <param name="cidade">Initial value of the Cidade property.</param>
         /// <param name="estado">Initial value of the Estado property.</param>
-        public static tb_pessoa Createtb_pessoa(global::System.Int32 idPessoa, global::System.String cPF, global::System.String nome, global::System.String rG, global::System.String sexo, global::System.String email, global::System.String login, global::System.String senha, global::System.String rua, global::System.String numero, global::System.String bairro, global::System.String cEP, global::System.String cidade, global::System.String estado)
+        public static tb_pessoa Createtb_pessoa(global::System.Int32 idPessoa, global::System.String cPF, global::System.String nome, global::System.String rG, global::System.String sexo, global::System.String rua, global::System.String numero, global::System.String bairro, global::System.String cEP, global::System.String cidade, global::System.String estado)
         {
             tb_pessoa tb_pessoa = new tb_pessoa();
             tb_pessoa.IdPessoa = idPessoa;
@@ -4719,9 +4716,6 @@ namespace Models
             tb_pessoa.Nome = nome;
             tb_pessoa.RG = rG;
             tb_pessoa.Sexo = sexo;
-            tb_pessoa.Email = email;
-            tb_pessoa.Login = login;
-            tb_pessoa.Senha = senha;
             tb_pessoa.Rua = rua;
             tb_pessoa.Numero = numero;
             tb_pessoa.Bairro = bairro;
@@ -4857,78 +4851,6 @@ namespace Models
         private global::System.String _Sexo;
         partial void OnSexoChanging(global::System.String value);
         partial void OnSexoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Email
-        {
-            get
-            {
-                return _Email;
-            }
-            set
-            {
-                OnEmailChanging(value);
-                ReportPropertyChanging("Email");
-                _Email = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Email");
-                OnEmailChanged();
-            }
-        }
-        private global::System.String _Email;
-        partial void OnEmailChanging(global::System.String value);
-        partial void OnEmailChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Login
-        {
-            get
-            {
-                return _Login;
-            }
-            set
-            {
-                OnLoginChanging(value);
-                ReportPropertyChanging("Login");
-                _Login = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Login");
-                OnLoginChanged();
-            }
-        }
-        private global::System.String _Login;
-        partial void OnLoginChanging(global::System.String value);
-        partial void OnLoginChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Senha
-        {
-            get
-            {
-                return _Senha;
-            }
-            set
-            {
-                OnSenhaChanging(value);
-                ReportPropertyChanging("Senha");
-                _Senha = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Senha");
-                OnSenhaChanged();
-            }
-        }
-        private global::System.String _Senha;
-        partial void OnSenhaChanging(global::System.String value);
-        partial void OnSenhaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5145,54 +5067,6 @@ namespace Models
         private global::System.String _Estado;
         partial void OnEstadoChanging(global::System.String value);
         partial void OnEstadoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> idUser
-        {
-            get
-            {
-                return _idUser;
-            }
-            set
-            {
-                OnidUserChanging(value);
-                ReportPropertyChanging("idUser");
-                _idUser = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idUser");
-                OnidUserChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _idUser;
-        partial void OnidUserChanging(Nullable<global::System.Int32> value);
-        partial void OnidUserChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> idRole
-        {
-            get
-            {
-                return _idRole;
-            }
-            set
-            {
-                OnidRoleChanging(value);
-                ReportPropertyChanging("idRole");
-                _idRole = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idRole");
-                OnidRoleChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _idRole;
-        partial void OnidRoleChanging(Nullable<global::System.Int32> value);
-        partial void OnidRoleChanged();
 
         #endregion
 
