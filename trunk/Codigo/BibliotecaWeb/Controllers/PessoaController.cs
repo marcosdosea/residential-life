@@ -53,23 +53,9 @@ namespace BibliotecaWeb.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Attempt to register the user
-                MembershipCreateStatus createStatus;
-                Membership.CreateUser(pessoaModel.Login, pessoaModel.Senha, pessoaModel.Email, "-", "-", true, out createStatus);
-
-                if (createStatus == MembershipCreateStatus.Success)
-                {
-                    FormsAuthentication.SetAuthCookie(pessoaModel.Login, false /* createPersistentCookie */);
-                }
-                else
-                {
-                    ModelState.AddModelError("", ErrorCodeToString(createStatus));
-                }
-                 //Roles.AddUserToRole(pessoaModel.Login, "Morador");
                 gPessoa.Inserir(pessoaModel);
                 return RedirectToAction("Index");  
             }
-
             return View(pessoaModel);
         }
         
@@ -78,7 +64,6 @@ namespace BibliotecaWeb.Controllers
  
         public ActionResult Edit(int id)
         {
-
             PessoaModel pessoa = gPessoa.Obter(id);
             return View(pessoa);
         }

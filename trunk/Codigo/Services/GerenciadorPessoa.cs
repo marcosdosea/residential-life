@@ -102,14 +102,11 @@ namespace Services
                             Cidade = pessoa.Cidade,
                             Complemento = pessoa.Complemento,
                             CPF = pessoa.CPF,
-                            Email = pessoa.Email,
                             Estado = pessoa.Estado,
-                            Login = pessoa.Login,
                             Nome = pessoa.Nome,
                             Numero = pessoa.Numero,
                             RG = pessoa.RG,
                             Rua = pessoa.Rua,
-                            Senha = pessoa.Senha,
                             Sexo = pessoa.Sexo,
                             TelefoneCelular = pessoa.TelefoneCelular,
                             TelefoneFixo = pessoa.TelefoneFixo,
@@ -153,18 +150,6 @@ namespace Services
 
 
         /// <summary>
-        /// Obtém uma pessoa pelo username
-        /// </summary>
-        /// <param name="idPessoa">Identificador da entidade na base de dados</param>
-        /// <returns>Autor model</returns>
-        public PessoaModel ObterPorUsername(string userName)
-        {
-            IEnumerable<PessoaModel> pessoaE = GetQuery().Where(pessoaModel => pessoaModel.Login.Equals(userName));
-            return pessoaE.ElementAtOrDefault(0);
-        }
-
-
-        /// <summary>
         /// Atribui dados da Entidade Model para a Entidade Entity
         /// </summary>
         /// <param name="pessoaModel">Objeto do modelo</param>
@@ -177,14 +162,11 @@ namespace Services
             pessoaE.Cidade = pessoaModel.Cidade;
             pessoaE.Complemento = pessoaModel.Complemento;
             pessoaE.CPF = pessoaModel.CPF;
-            pessoaE.Email = pessoaModel.Email;
             pessoaE.Estado = pessoaModel.Estado;
-            pessoaE.Login = pessoaModel.Login;
             pessoaE.Nome = pessoaModel.Nome;
             pessoaE.Numero = pessoaModel.Numero;
             pessoaE.RG = pessoaModel.RG;
             pessoaE.Rua = pessoaModel.Rua;
-            pessoaE.Senha = pessoaModel.Senha;
             pessoaE.Sexo = pessoaModel.Sexo;
             pessoaE.TelefoneCelular = pessoaModel.TelefoneCelular;
             pessoaE.TelefoneFixo = pessoaModel.TelefoneFixo;
