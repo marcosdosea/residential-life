@@ -684,4 +684,31 @@
   <data name="tipoPlanoDeConta" xml:space="preserve">
     <value>Tipo do Plano de Conta</value>
   </data>
+  <data name="campo_requerido" xml:space="preserve">
+    <value>Campo Requerido</value>
+  </data>
+  <data name="confirmarEmail" xml:space="preserve">
+    <value>Confirme o E-mail</value>
+  </data>
+  <data name="confirmeSenha" xml:space="preserve">
+    <value>Confirme a Senha</value>
+  </data>
+  <data name="emailNaoCoincidem" xml:space="preserve">
+    <value>Os E-mail não coincidem</value>
+  </data>
+  <data name="email_invalido" xml:space="preserve">
+    <value>E-mail Inválido</value>
+  </data>
+  <data name="enderecoEmail" xml:space="preserve">
+    <value>Endereço de E-mail</value>
+  </data>
+  <data name="nomeUsuario" xml:space="preserve">
+    <value>Nome do Usuário</value>
+  </data>
+  <data name="senhaConfSenhaNaoCoincidem" xml:space="preserve">
+    <value>A senha e a confirmação da senha não coincidem</value>
+  </data>
+  <data name="senhaCurta" xml:space="preserve">
+    <value>Senha Curta</value>
+  </data>
 </root>

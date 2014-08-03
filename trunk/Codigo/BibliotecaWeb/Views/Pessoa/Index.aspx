@@ -8,9 +8,9 @@
 
 <h2><%: Models.App_GlobalResources.Mensagem.pessoas %></h2>
 
-<p>
+<!--p>
     <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.novo, "Create") %>
-</p>
+</p-->
 <table id="table">
     <tr>
         <th>
