@@ -50,24 +50,104 @@ namespace Models
 
     public class RegisterModel
     {
-        [Required]
-        [Display(Name = "User name")]
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "campo_requerido")]
+        [Display(Name = "nomeUsuario", ResourceType = typeof(Mensagem))]
         public string UserName { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "campo_requerido")]
+        [RegularExpression(@"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$", ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "email_invalido")]
         [DataType(DataType.EmailAddress)]
-        [Display(Name = "nome", ResourceType = typeof(Mensagem))]
+        [Display(Name = "enderecoEmail", ResourceType = typeof(Mensagem))]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "O {0} deve ter ao menos {2} caracteres.", MinimumLength = 6)]
+        [Display(Name = "confirmarEmail", ResourceType = typeof(Mensagem))]
+        [RegularExpression(@"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$", ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "email_invalido")]
+        [Compare("Email", ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "emailNaoCoincidem")]
+        public string ConfirmaEmail { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "campo_requerido")]
+        [StringLength(100, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "senhaCurta", MinimumLength = 3)]
         [DataType(DataType.Password)]
         [Display(Name = "senha", ResourceType = typeof(Mensagem))]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "confirmaSenha", ResourceType = typeof(Mensagem))]
-        [Compare("Password", ErrorMessage = "A senha e a confirmação de senha não combinam.")]
+        [Display(Name = "confirmeSenha", ResourceType = typeof(Mensagem))]
+        [Compare("Password", ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "senhaConfSenhaNaoCoincidem")]
         public string ConfirmPassword { get; set; }
+
+        /// <summary>
+        /// parte da pessoa
+        /// </summary>
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "codigo", ResourceType = typeof(Mensagem))]
+        public int IdPessoa { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "codigo", ResourceType = typeof(Mensagem))]
+        public int IdUser { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "nome", ResourceType = typeof(Mensagem))]
+        [StringLength(100)]
+        public string Nome { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "cpf", ResourceType = typeof(Mensagem))]
+        [StringLength(11)]
+        public string CPF { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "rg", ResourceType = typeof(Mensagem))]
+        [StringLength(15)]
+        public string RG { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "sexo", ResourceType = typeof(Mensagem))]
+        [StringLength(1)]
+        public string Sexo { get; set; }
+
+        [Display(Name = "telefoneFixo", ResourceType = typeof(Mensagem))]
+        [StringLength(12)]
+        public string TelefoneFixo { get; set; }
+
+        [Display(Name = "telefoneCelular", ResourceType = typeof(Mensagem))]
+        [StringLength(12)]
+        public string TelefoneCelular { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "rua", ResourceType = typeof(Mensagem))]
+        [StringLength(100)]
+        public string Rua { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "numero", ResourceType = typeof(Mensagem))]
+        [StringLength(10)]
+        public string Numero { get; set; }
+
+        [Display(Name = "complemento", ResourceType = typeof(Mensagem))]
+        [StringLength(100)]
+        public string Complemento { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "bairro", ResourceType = typeof(Mensagem))]
+        [StringLength(50)]
+        public string Bairro { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "cep", ResourceType = typeof(Mensagem))]
+        [StringLength(8)]
+        public string CEP { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "cidade", ResourceType = typeof(Mensagem))]
+        [StringLength(50)]
+        public string Cidade { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "estado", ResourceType = typeof(Mensagem))]
+        [StringLength(2)]
+        public string Estado { get; set; }
     }
 }

@@ -97,6 +97,7 @@ namespace Services
                         select new PessoaModel
                         {
                             IdPessoa = pessoa.IdPessoa,
+                            IdUser = pessoa.IdUser,
                             Bairro = pessoa.Bairro,
                             CEP = pessoa.CEP,
                             Cidade = pessoa.Cidade,
@@ -110,6 +111,8 @@ namespace Services
                             Sexo = pessoa.Sexo,
                             TelefoneCelular = pessoa.TelefoneCelular,
                             TelefoneFixo = pessoa.TelefoneFixo,
+
+                            NomeUsuario = pessoa.my_aspnet_users.name
                         };
             return query;
         }
@@ -157,6 +160,7 @@ namespace Services
         private void Atribuir(PessoaModel pessoaModel, tb_pessoa pessoaE)
         {
             pessoaE.IdPessoa = pessoaModel.IdPessoa;
+            pessoaE.IdUser = pessoaModel.IdUser;
             pessoaE.Bairro = pessoaModel.Bairro;
             pessoaE.CEP = pessoaModel.CEP;
             pessoaE.Cidade = pessoaModel.Cidade;

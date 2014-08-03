@@ -18,7 +18,9 @@
         
         <div class="editor-field">
             <%: Html.HiddenFor(model => model.IdPessoa) %>
-            <%: Html.ValidationMessageFor(model => model.IdPessoa) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.HiddenFor(model => model.IdUser) %>
         </div>
 
         <div class="editor-label">

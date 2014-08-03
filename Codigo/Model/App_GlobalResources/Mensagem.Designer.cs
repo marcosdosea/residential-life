@@ -304,6 +304,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Campo Requerido.
+        /// </summary>
+        public static string campo_requerido {
+            get {
+                return ResourceManager.GetString("campo_requerido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancelar.
         /// </summary>
         public static string cancelar {
@@ -493,11 +502,29 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Confirme o E-mail.
+        /// </summary>
+        public static string confirmarEmail {
+            get {
+                return ResourceManager.GetString("confirmarEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Confirma Senha.
         /// </summary>
         public static string confirmaSenha {
             get {
                 return ResourceManager.GetString("confirmaSenha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirme a Senha.
+        /// </summary>
+        public static string confirmeSenha {
+            get {
+                return ResourceManager.GetString("confirmeSenha", resourceCulture);
             }
         }
         
@@ -871,6 +898,24 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to E-mail Inválido.
+        /// </summary>
+        public static string email_invalido {
+            get {
+                return ResourceManager.GetString("email_invalido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Os E-mail não coincidem.
+        /// </summary>
+        public static string emailNaoCoincidem {
+            get {
+                return ResourceManager.GetString("emailNaoCoincidem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Em Análise.
         /// </summary>
         public static string EmAnalise {
@@ -885,6 +930,15 @@ namespace Models.App_GlobalResources {
         public static string EmExecucao {
             get {
                 return ResourceManager.GetString("EmExecucao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço de E-mail.
+        /// </summary>
+        public static string enderecoEmail {
+            get {
+                return ResourceManager.GetString("enderecoEmail", resourceCulture);
             }
         }
         
@@ -1191,6 +1245,15 @@ namespace Models.App_GlobalResources {
         public static string nomeSetor {
             get {
                 return ResourceManager.GetString("nomeSetor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome do Usuário.
+        /// </summary>
+        public static string nomeUsuario {
+            get {
+                return ResourceManager.GetString("nomeUsuario", resourceCulture);
             }
         }
         
@@ -1569,6 +1632,24 @@ namespace Models.App_GlobalResources {
         public static string senhaAtual {
             get {
                 return ResourceManager.GetString("senhaAtual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A senha e a confirmação da senha não coincidem.
+        /// </summary>
+        public static string senhaConfSenhaNaoCoincidem {
+            get {
+                return ResourceManager.GetString("senhaConfSenhaNaoCoincidem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senha Curta.
+        /// </summary>
+        public static string senhaCurta {
+            get {
+                return ResourceManager.GetString("senhaCurta", resourceCulture);
             }
         }
         

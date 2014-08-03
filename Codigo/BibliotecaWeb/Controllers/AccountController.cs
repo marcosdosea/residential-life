@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
 using Models;
+using Services;
 
 namespace ResidentialWeb.Controllers
 {
@@ -81,6 +82,26 @@ namespace ResidentialWeb.Controllers
                 MembershipCreateStatus createStatus;
                 Membership.CreateUser(model.UserName, model.Password, model.Email, "teste1", "teste2", true, out createStatus);
 
+
+                MembershipUser usuario = string.IsNullOrEmpty(model.UserName) ? null : Membership.GetUser(model.UserName);
+
+                PessoaModel pessoaModel = new PessoaModel();
+                pessoaModel.IdUser = (int)usuario.ProviderUserKey;
+                pessoaModel.Bairro = model.Bairro;
+                pessoaModel.CEP = model.CEP;
+                pessoaModel.Cidade = model.Cidade;
+                pessoaModel.Complemento = model.Complemento;
+                pessoaModel.CPF = model.CPF;
+                pessoaModel.Estado = model.Estado;
+                pessoaModel.Nome = model.Nome;
+                pessoaModel.Numero = model.Numero;
+                pessoaModel.RG = model.RG;
+                pessoaModel.Rua = model.Rua;
+                pessoaModel.Sexo = model.Sexo;
+                pessoaModel.TelefoneCelular = model.TelefoneCelular;
+                pessoaModel.TelefoneFixo = model.TelefoneFixo;
+                GerenciadorPessoa.GetInstance().Inserir(pessoaModel);
+                
                 if (createStatus == MembershipCreateStatus.Success)
                 {
                     FormsAuthentication.SetAuthCookie(model.UserName, false /* createPersistentCookie */);
