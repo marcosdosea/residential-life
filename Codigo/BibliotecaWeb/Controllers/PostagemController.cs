@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Models.Models;
-using Services;
-using Microsoft.Reporting.WebForms;
+﻿using System.Web.Mvc;
 using System.Web.Security;
+using Microsoft.Reporting.WebForms;
+using Models;
+using Services;
+using System;
 
 namespace BibliotecaWeb
 {
     public class PostagemController : Controller
     {
-        /*
-         private GerenciadorPostagem gPostagem;
-         private GerenciadorPessoa gPessoa;
+        private GerenciadorPostagem gPostagem;
+        private GerenciadorPessoa gPessoa;
 
-     
         public PostagemController()
         {
             gPostagem = new GerenciadorPostagem();
@@ -28,8 +23,7 @@ namespace BibliotecaWeb
 
         public ActionResult Index()
         {
-            int idPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
-            return View(gPostagem.ObterTodosPorPessoa(idPessoa));
+            return View(gPostagem.ObterTodos());
         }
 
         //
@@ -45,20 +39,20 @@ namespace BibliotecaWeb
         [HttpPost]
         public ActionResult Create(PostagemModel postagemModel)
         {
-            postagemModel.IdPessoa = gPessoa.ObterPorUsername(Membership.GetUser(true).UserName).IdPessoa;
+            postagemModel.IdPessoa = gPessoa.ObterPessoaLogada((int)Membership.GetUser(true).ProviderUserKey).IdPessoa;
+            postagemModel.DataPublicacao = DateTime.Now;
             if (ModelState.IsValid)
             {
                 gPostagem.Inserir(postagemModel);
                 return RedirectToAction("Index");
             }
-
             return View(gPostagem);
         }
 
         //
         // GET: /pessoa/Details/5
-        [Authorize(Roles = "Morador")]
-        [Authorize(Roles = "Síndico")]
+        //[Authorize(Roles = "Morador")]
+        //[Authorize(Roles = "Síndico")]
         public ViewResult Details(int id)
         {
             PostagemModel postagem = gPostagem.Obter(id);
@@ -67,8 +61,8 @@ namespace BibliotecaWeb
 
         //
         // GET: /Postagem/Edit/5
-        [Authorize(Roles = "Morador")]
-        [Authorize(Roles = "Síndico")]
+        //[Authorize(Roles = "Morador")]
+        //[Authorize(Roles = "Síndico")]
         public ActionResult Edit(int id)
         {
             PostagemModel postagem = gPostagem.Obter(id);
@@ -90,8 +84,8 @@ namespace BibliotecaWeb
 
         //
         // GET: /Postagem/Delete/5
-        [Authorize(Roles = "Morador")]
-        [Authorize(Roles = "Síndico")]
+        //[Authorize(Roles = "Morador")]
+        //[Authorize(Roles = "Síndico")]
         public ActionResult Delete(int id)
         {
             PostagemModel postagemModel = gPostagem.Obter(id);
@@ -112,7 +106,7 @@ namespace BibliotecaWeb
             base.Dispose(disposing);
         }
 
-        
+
         public ActionResult RelatorioPostagemPorData()
         {
             LocalReport relatorio = new LocalReport();
@@ -154,7 +148,7 @@ namespace BibliotecaWeb
 
             return File(bytes, mimeType);
 
-        } */
+        }
 
     }
 }

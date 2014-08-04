@@ -1,61 +1,47 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.PostagemModel>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.PostagemModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Create
 </asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-<h2><%:Models.App_GlobalResources.Mensagem.novaPostagem%></h2>
-
-<script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
-<script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
-
-<% using (Html.BeginForm()) { %>
+    <h2>
+        <%:Models.App_GlobalResources.Mensagem.postagem%></h2>
+    <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
+    <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>"
+        type="text/javascript"></script>
+    <% using (Html.BeginForm())
+       { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-         <legend><%:Models.App_GlobalResources.Mensagem.novo%> </legend>
-                  
+        <legend>
+            <%:Models.App_GlobalResources.Mensagem.postagem%>
+        </legend>
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.titulo) %>
+            <%: Html.LabelFor(model => model.Titulo) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.titulo) %>
-            <%: Html.ValidationMessageFor(model => model.titulo) %>
+            <%: Html.EditorFor(model => model.Titulo) %>
+            <%: Html.ValidationMessageFor(model => model.Titulo) %>
         </div>
-
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.descricao) %>
+            <%: Html.LabelFor(model => model.Descricao) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.descricao) %>
-            <%: Html.ValidationMessageFor(model => model.descricao) %>
+            <%: Html.EditorFor(model => model.Descricao) %>
+            <%: Html.ValidationMessageFor(model => model.Descricao) %>
         </div>
-
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.dataPublAutomatica) %>
+            <%: Html.LabelFor(model => model.DataExclusao) %>
         </div>
         <div class="editor-field">
-            <%: Html.TextBoxFor(model => model.dataPublAutomatica, new { @class = "date", @type = "date" })%>
-            <%: Html.ValidationMessageFor(model => model.dataPublAutomatica) %>
+            <%: Html.TextBoxFor(model => model.DataExclusao, new { @class = "date", @type = "date" })%>
+            <%: Html.ValidationMessageFor(model => model.DataExclusao) %>
         </div>
-
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.dataExclusaoAutomatica) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.TextBoxFor(model => model.dataExclusaoAutomatica, new { @class = "date", @type = "date" })%>
-            <%: Html.ValidationMessageFor(model => model.dataExclusaoAutomatica) %>
-        </div>
-
         <p>
-           <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.salvar %> /> 
+            <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
         </p>
     </fieldset>
-<% } %>
-
-<div>
-     <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
-</div>
-
+    <% } %>
+    <div>
+        <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
+    </div>
 </asp:Content>

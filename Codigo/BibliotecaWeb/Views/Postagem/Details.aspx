@@ -1,44 +1,38 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.PostagemModel>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.PostagemModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Details
+    <%:Models.App_GlobalResources.Mensagem.detalhesPostagem%>
 </asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-<h2><%:Models.App_GlobalResources.Mensagem.detalhes%> </h2>
-
-<fieldset>
-    <legend><%:Models.App_GlobalResources.Mensagem.detalhes%> </legend>
-
-    <div class="display-label">IdPostagem</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdPostagem) %>
-    </div>
-      
-    <div class="display-label">titulo</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.titulo) %>
-    </div>
-
-    <div class="display-label">descricao</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.descricao) %>
-    </div>
-
-    <div class="display-label">dataPublAutomatica</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.dataPublAutomatica) %>
-    </div>
-
-    <div class="display-label">dataExclusaoAutomatica</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.dataExclusaoAutomatica) %>
-    </div>
-</fieldset>
-<p>
-   <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new {  id=Model.IdPostagem  })%> |
-    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
-</p>
-
+    <h2>
+        <%:Models.App_GlobalResources.Mensagem.detalhesPostagem%>
+    </h2>
+    <fieldset>
+        <legend>
+            <%:Models.App_GlobalResources.Mensagem.postagem%>
+        </legend>
+        <div class="display-label">
+            <%:Models.App_GlobalResources.Mensagem.titulo%></div>
+        <div class="display-field">
+            <%: Html.DisplayFor(model => model.Titulo) %>
+        </div>
+        <div class="display-label">
+            <%:Models.App_GlobalResources.Mensagem.descricao%></div>
+        <div class="display-field">
+            <%: Html.DisplayFor(model => model.Descricao) %>
+        </div>
+        <div class="display-label">
+            <%:Models.App_GlobalResources.Mensagem.dataPublicacao%></div>
+        <div class="display-field">
+            <%: Html.DisplayFor(model => model.DataPublicacao) %>
+        </div>
+        <div class="display-label">
+            <%:Models.App_GlobalResources.Mensagem.dataExclusao%></div>
+        <div class="display-field">
+            <%: Html.DisplayFor(model => model.DataExclusao) %>
+        </div>
+    </fieldset>
+    <p>
+        <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
+    </p>
 </asp:Content>

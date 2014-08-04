@@ -41,6 +41,7 @@
             <li><%: Html.ActionLink("Enquetes", "Index", "Enquete")%></li>-->
             <li><%: Html.ActionLink("Atendimento", "Index", "Atendimento")%></li>
             <li><%: Html.ActionLink("Administradora", "Index", "Administradora")%></li>
+            <li><%: Html.ActionLink("Postagens", "Index", "Postagem")%></li>
             <li><%: Html.ActionLink("About", "About", "Home")%></li>
 		</ul>
 	</div>

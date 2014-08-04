@@ -103,7 +103,7 @@ namespace Services
         }
 
         /// <summary>
-        /// Obter todos as entidades cadastradas
+        /// Obter todos as entidades cadastradas por pessoa
         /// </summary>
         /// <returns></returns>
         public IEnumerable<PostagemModel> ObterTodosPorPessoa(int idPessoa)
