@@ -741,4 +741,16 @@
   <data name="tituloPostagem" xml:space="preserve">
     <value>Título da Postagem</value>
   </data>
+  <data name="comentar" xml:space="preserve">
+    <value>Comentar</value>
+  </data>
+  <data name="meusComentarios" xml:space="preserve">
+    <value>Meus Comentários</value>
+  </data>
+  <data name="visualizarComentarios" xml:space="preserve">
+    <value>Visualizar Comentários</value>
+  </data>
+  <data name="minhasPostagens" xml:space="preserve">
+    <value>Minhas Postagens</value>
+  </data>
 </root>

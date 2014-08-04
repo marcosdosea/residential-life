@@ -132,6 +132,20 @@ namespace Services
             return comentarioE;
         }
 
+
+        /// <summary>
+        /// Obtem comentarios de determinada pessoa e postagem
+        /// </summary>
+        /// <param name="idPostagem">Identificador da postagem</param>
+        /// <param name="idPessoa">Identificador da pessoa</param>
+        /// <returns>Lista de pessoas</returns>
+        public IEnumerable<ComentarioModel> ObterPorPostagemPessoa(int idPostagem, int idPessoa)
+        {
+            IEnumerable<ComentarioModel> comentarioE = GetQuery().Where(c => c.IdPostagem.Equals(idPostagem) && 
+                c.IdPessoa.Equals(idPessoa));
+            return comentarioE;
+        }
+
         /// <summary>
         /// Atribui dados do Cometario Model para o comentario Entity
         /// </summary>

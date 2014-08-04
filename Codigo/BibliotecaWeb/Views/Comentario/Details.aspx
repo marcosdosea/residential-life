@@ -38,6 +38,11 @@
         </div>
     </fieldset>
     <p>
-        <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
+        <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index", "Comentario", new { idPostagem = Model.IdPostagem },
+            new { @style = "font-size:small;" })%>
+        <% if(Model.IdPessoa.Equals(ViewBag.IdPessoaLogada)) { %>
+            |<%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", "Comentario", new { id = Model.IdComentario },
+                new { @style = "font-size:small;" })%>
+        <% } %>
     </p>
 </asp:Content>

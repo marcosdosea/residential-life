@@ -34,5 +34,8 @@
     </fieldset>
     <p>
         <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
+        <% if(Model.IdPessoa.Equals(ViewBag.IdPessoa)) { %>
+            |<%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", "Postagem", new { id = Model.IdPostagem })%>
+        <% } %>
     </p>
 </asp:Content>

@@ -10,11 +10,13 @@ namespace BibliotecaWeb
     {
         private GerenciadorComentario gComentario;
         private GerenciadorPessoa gPessoa;
+        private GerenciadorPostagem gPostagem;
 
         public ComentarioController()
         {
             gComentario = new GerenciadorComentario();
             gPessoa = new GerenciadorPessoa();
+            gPostagem = new GerenciadorPostagem();
         }
 
         //
@@ -22,7 +24,26 @@ namespace BibliotecaWeb
 
         public ActionResult Index(int idPostagem)
         {
-            return View(gComentario.ObterPorPostagem(idPostagem));
+            PostagemModel postagem = gPostagem.Obter(idPostagem);
+            ViewsBagsComentarios(postagem);
+            return View(gComentario.ObterPorPostagem(postagem.IdPostagem));
+        }
+
+        public ActionResult MeusComentarios(int idPostagem)
+        {
+            PostagemModel postagem = gPostagem.Obter(idPostagem);
+            int idPessoa = ViewsBagsComentarios(postagem);
+            return View("Index", gComentario.ObterPorPostagemPessoa(postagem.IdPostagem, idPessoa));
+        }
+
+        private int ViewsBagsComentarios(PostagemModel postagem)
+        {
+            ViewBag.NomePessoa = postagem.NomePessoa;
+            ViewBag.Titulo = postagem.Titulo;
+            ViewBag.IdPostagem = postagem.IdPostagem;
+            int idPessoa = gPessoa.ObterPessoaLogada((int)Membership.GetUser(true).ProviderUserKey).IdPessoa;
+            ViewBag.IdPessoaLogada = idPessoa;
+            return idPessoa;
         }
 
         //
@@ -44,8 +65,10 @@ namespace BibliotecaWeb
             comentarioModel.Data = DateTime.Now;
             if (ModelState.IsValid)
             {
+                int idPostagem = comentarioModel.IdPostagem;
                 gComentario.Inserir(comentarioModel);
-                return RedirectToAction("Index");
+                ViewsBagsComentarios(gPostagem.Obter(idPostagem));
+                return View("Index", gComentario.ObterPorPostagem(idPostagem));
             }
             return View(gComentario);
         }
@@ -56,6 +79,7 @@ namespace BibliotecaWeb
         //[Authorize(Roles = "Síndico")]
         public ViewResult Details(int id)
         {
+            ViewBag.IdPessoaLogada = gPessoa.ObterPessoaLogada((int)Membership.GetUser(true).ProviderUserKey).IdPessoa;
             ComentarioModel comentario = gComentario.Obter(id);
             return View(comentario);
         }
@@ -77,8 +101,10 @@ namespace BibliotecaWeb
         {
             if (ModelState.IsValid)
             {
+                int idPostagem = comentarioModel.IdPostagem;
                 gComentario.Editar(comentarioModel);
-                return RedirectToAction("Index");
+                ViewsBagsComentarios(gPostagem.Obter(idPostagem));
+                return View("Index", gComentario.ObterPorPostagem(idPostagem));
             }
             return View(comentarioModel);
         }
@@ -98,8 +124,10 @@ namespace BibliotecaWeb
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
+            int idPostagem = gComentario.Obter(id).IdPostagem;
             gComentario.Remover(id);
-            return RedirectToAction("Index");
+            ViewsBagsComentarios(gPostagem.Obter(idPostagem));
+            return View("Index", gComentario.ObterPorPostagem(idPostagem));
         }
 
         protected override void Dispose(bool disposing)

@@ -42,7 +42,8 @@
     <p>
         <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.apagar %>" />
         |
-        <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
+        <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index", "Comentario", new { idPostagem = Model.IdPostagem },
+            new { @style = "font-size:small;" })%>
     </p>
     <% } %>
 </asp:Content>

@@ -23,7 +23,7 @@
         <%: Html.DisplayFor(model => model.Descricao) %>
     </div>
 
-    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.dataExclusao %></div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.dataPublicacao %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.DataPublicacao) %>
     </div>

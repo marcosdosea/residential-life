@@ -367,6 +367,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Comentar.
+        /// </summary>
+        public static string comentar {
+            get {
+                return ResourceManager.GetString("comentar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Comentário.
         /// </summary>
         public static string comentario {
@@ -1258,6 +1267,24 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Meus Comentários.
+        /// </summary>
+        public static string meusComentarios {
+            get {
+                return ResourceManager.GetString("meusComentarios", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minhas Postagens.
+        /// </summary>
+        public static string minhasPostagens {
+            get {
+                return ResourceManager.GetString("minhasPostagens", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Modelo.
         /// </summary>
         public static string modelo {
@@ -1920,6 +1947,15 @@ namespace Models.App_GlobalResources {
         public static string veiculos {
             get {
                 return ResourceManager.GetString("veiculos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visualizar Comentários.
+        /// </summary>
+        public static string visualizarComentarios {
+            get {
+                return ResourceManager.GetString("visualizarComentarios", resourceCulture);
             }
         }
         

@@ -21,6 +21,9 @@
         <div class="editor-field">
             <%: Html.HiddenFor(model => model.IdPostagem) %>
         </div>
+        <div class="editor-field">
+            <%: Html.HiddenFor(model => model.DataPublicacao) %>
+        </div>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Titulo) %>
         </div>
@@ -36,17 +39,10 @@
             <%: Html.ValidationMessageFor(model => model.Descricao) %>
         </div>
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.DataPublicacao) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.DataPublicacao) %>
-            <%: Html.ValidationMessageFor(model => model.DataPublicacao) %>
-        </div>
-        <div class="editor-label">
             <%: Html.LabelFor(model => model.DataExclusao) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.DataExclusao) %>
+            <%: Html.TextBoxFor(model => model.DataExclusao, new { @class = "date", @type = "date" })%>
             <%: Html.ValidationMessageFor(model => model.DataExclusao) %>
         </div>
         <p>
