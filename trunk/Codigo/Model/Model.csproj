@@ -59,6 +59,7 @@
     <Compile Include="Models\AreaPublicaModel.cs" />
     <Compile Include="Models\AtendimentoModel.cs" />
     <Compile Include="Models\BlocoModel.cs" />
+    <Compile Include="Models\ComentarioModel.cs" />
     <Compile Include="Models\CondominioModel.cs" />
     <Compile Include="Models\EnqueteModel.cs" />
     <Compile Include="Models\FuncionarioModel.cs" />

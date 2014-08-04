@@ -77,6 +77,7 @@
     <Compile Include="Controllers\AreaPublicaController.cs" />
     <Compile Include="Controllers\AtendimentoController.cs" />
     <Compile Include="Controllers\BlocoController.cs" />
+    <Compile Include="Controllers\ComentarioController.cs" />
     <Compile Include="Controllers\CondominioController.cs" />
     <Compile Include="Controllers\EnqueteController.cs" />
     <Compile Include="Controllers\FuncionarioController.cs" />
@@ -162,6 +163,11 @@
     <Content Include="Views\Bloco\Details.aspx" />
     <Content Include="Views\Bloco\Edit.aspx" />
     <Content Include="Views\Bloco\Index.aspx" />
+    <Content Include="Views\Comentario\Create.aspx" />
+    <Content Include="Views\Comentario\Delete.aspx" />
+    <Content Include="Views\Comentario\Details.aspx" />
+    <Content Include="Views\Comentario\Edit.aspx" />
+    <Content Include="Views\Comentario\Index.aspx" />
     <Content Include="Views\Condominio\Create.aspx" />
     <Content Include="Views\Condominio\Delete.aspx" />
     <Content Include="Views\Condominio\Details.aspx" />

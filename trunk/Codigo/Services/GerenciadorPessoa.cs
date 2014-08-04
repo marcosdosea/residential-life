@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Models;
 using Persistence;
 
@@ -13,7 +11,6 @@ namespace Services
     /// </summary>
     
     public class GerenciadorPessoa
-
     {
         private static GerenciadorPessoa gPessoa;
 
@@ -151,6 +148,16 @@ namespace Services
             return pessoaE.ElementAtOrDefault(0);
         }
 
+        /// <summary>
+        /// Obtem a partir do id do usuario logada uma pessoa
+        /// </summary>
+        /// <param name="idUser"></param>
+        /// <returns>Pessoa Logada no sistema</returns>
+        public PessoaModel ObterPessoaLogada(int idUser)
+        {
+            IEnumerable<PessoaModel> pessoaE = GetQuery().Where(pessoaModel => pessoaModel.IdUser == idUser);
+            return pessoaE.ElementAtOrDefault(0);
+        }
 
         /// <summary>
         /// Atribui dados da Entidade Model para a Entidade Entity

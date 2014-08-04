@@ -711,4 +711,34 @@
   <data name="senhaCurta" xml:space="preserve">
     <value>Senha Curta</value>
   </data>
+  <data name="apagarComentario" xml:space="preserve">
+    <value>Apagar Comentário</value>
+  </data>
+  <data name="comentario" xml:space="preserve">
+    <value>Comentário</value>
+  </data>
+  <data name="comentarios" xml:space="preserve">
+    <value>Comentarios</value>
+  </data>
+  <data name="dataPublicacao" xml:space="preserve">
+    <value>Data de Publicação</value>
+  </data>
+  <data name="detalhesComentario" xml:space="preserve">
+    <value>Detalhes do Comentário</value>
+  </data>
+  <data name="detalhesPostagem" xml:space="preserve">
+    <value>Detalhes da Postagem</value>
+  </data>
+  <data name="editarComentario" xml:space="preserve">
+    <value>Editar Comentário</value>
+  </data>
+  <data name="editarPostagem" xml:space="preserve">
+    <value>Editar Postagem</value>
+  </data>
+  <data name="postagem" xml:space="preserve">
+    <value>Postagem</value>
+  </data>
+  <data name="tituloPostagem" xml:space="preserve">
+    <value>Título da Postagem</value>
+  </data>
 </root>

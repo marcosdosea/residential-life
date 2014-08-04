@@ -142,6 +142,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apagar Comentário.
+        /// </summary>
+        public static string apagarComentario {
+            get {
+                return ResourceManager.GetString("apagarComentario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Apagar Condomínio.
         /// </summary>
         public static string apagarCondominio {
@@ -354,6 +363,24 @@ namespace Models.App_GlobalResources {
         public static string codigoPessoa {
             get {
                 return ResourceManager.GetString("codigoPessoa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comentário.
+        /// </summary>
+        public static string comentario {
+            get {
+                return ResourceManager.GetString("comentario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comentarios.
+        /// </summary>
+        public static string comentarios {
+            get {
+                return ResourceManager.GetString("comentarios", resourceCulture);
             }
         }
         
@@ -637,6 +664,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data de Publicação.
+        /// </summary>
+        public static string dataPublicacao {
+            get {
+                return ResourceManager.GetString("dataPublicacao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Data Saida.
         /// </summary>
         public static string dataSaida {
@@ -687,6 +723,15 @@ namespace Models.App_GlobalResources {
         public static string detalhesBloco {
             get {
                 return ResourceManager.GetString("detalhesBloco", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhes do Comentário.
+        /// </summary>
+        public static string detalhesComentario {
+            get {
+                return ResourceManager.GetString("detalhesComentario", resourceCulture);
             }
         }
         
@@ -745,6 +790,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Detalhes da Postagem.
+        /// </summary>
+        public static string detalhesPostagem {
+            get {
+                return ResourceManager.GetString("detalhesPostagem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Detalhes da Reserva de Ambiente.
         /// </summary>
         public static string detalhesReservaAmbiente {
@@ -799,6 +853,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Editar Comentário.
+        /// </summary>
+        public static string editarComentario {
+            get {
+                return ResourceManager.GetString("editarComentario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Editar Condomínio.
         /// </summary>
         public static string editarCondominio {
@@ -849,6 +912,15 @@ namespace Models.App_GlobalResources {
         public static string editarPlanoDeConta {
             get {
                 return ResourceManager.GetString("editarPlanoDeConta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Editar Postagem.
+        /// </summary>
+        public static string editarPostagem {
+            get {
+                return ResourceManager.GetString("editarPostagem", resourceCulture);
             }
         }
         
@@ -1474,6 +1546,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Postagem.
+        /// </summary>
+        public static string postagem {
+            get {
+                return ResourceManager.GetString("postagem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Postagens.
         /// </summary>
         public static string postagens {
@@ -1794,6 +1875,15 @@ namespace Models.App_GlobalResources {
         public static string titulo {
             get {
                 return ResourceManager.GetString("titulo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Título da Postagem.
+        /// </summary>
+        public static string tituloPostagem {
+            get {
+                return ResourceManager.GetString("tituloPostagem", resourceCulture);
             }
         }
         

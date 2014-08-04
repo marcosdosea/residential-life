@@ -44,6 +44,7 @@
     <Compile Include="GerenciadorAcessoPredio.cs" />
     <Compile Include="GerenciadorAdministradora.cs" />
     <Compile Include="GerenciadorAtendimento.cs" />
+    <Compile Include="GerenciadorComentario.cs" />
     <Compile Include="GerenciadorFuncionario.cs" />
     <Compile Include="GerenciadorGrupoPlanoDeContas.cs" />
     <Compile Include="GerenciadorMoradia.cs" />
