@@ -8,6 +8,8 @@
         <%:Models.App_GlobalResources.Mensagem.postagens%></h2>
     <p>
         <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.novo, "Create")%>
+        &nbsp&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp&nbsp
+        <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.minhasPostagens, "MinhasPostagens")%>
     </p>
     <table id="table">
         <tr>
@@ -50,6 +52,15 @@
             <td>
                 <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdPostagem })%>
                 |
+                <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.visualizarComentarios, "Index", "Comentario", new { idPostagem = item.IdPostagem }, new { @style = "font-size:small;" })%>
+                |
+                <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.comentar, "create", "Comentario", new { idPostagem = item.IdPostagem }, new { @style = "font-size:small;" })%>
+                <% if(item.IdPessoa.Equals(ViewBag.IdPessoa)) { %>
+                    |
+                    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdPostagem })%>
+                    |
+                    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.IdPostagem })%>
+                <% } %>
             </td>
         </tr>
         <% } %>

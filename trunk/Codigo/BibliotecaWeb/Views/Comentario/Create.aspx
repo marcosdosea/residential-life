@@ -37,7 +37,5 @@
         </p>
     </fieldset>
     <% } %>
-    <div>
-        <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
-    </div>
+    <div><%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index", "Postagem", null, new { @style = "font-size:small;" })%></div>
 </asp:Content>

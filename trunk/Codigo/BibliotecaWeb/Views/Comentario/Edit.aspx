@@ -24,12 +24,8 @@
         <div class="editor-field">
             <%: Html.HiddenFor(model => model.IdComentario) %>
         </div>
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Titulo) %>
-        </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Titulo) %>
-            <%: Html.ValidationMessageFor(model => model.Titulo) %>
+            <%: Html.HiddenFor(model => model.Data) %>
         </div>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Comentario) %>
@@ -37,13 +33,6 @@
         <div class="editor-field">
             <%: Html.EditorFor(model => model.Comentario) %>
             <%: Html.ValidationMessageFor(model => model.Comentario) %>
-        </div>
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Data) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.TextBoxFor(model => model.Data, new { @class = "date", @type = "date" })%>
-            <%: Html.ValidationMessageFor(model => model.Data) %>
         </div>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Status) %>
@@ -58,6 +47,7 @@
     </fieldset>
     <% } %>
     <div>
-        <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
+        <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index", "Comentario", new { idPostagem = Model.IdPostagem }, 
+            new { @style = "font-size:small;" })%>
     </div>
 </asp:Content>

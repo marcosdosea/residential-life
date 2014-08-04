@@ -23,9 +23,18 @@ namespace BibliotecaWeb
 
         public ActionResult Index()
         {
+            ViewBag.IdPessoa = gPessoa.ObterPessoaLogada((int)Membership.GetUser(true).ProviderUserKey).IdPessoa;
             return View(gPostagem.ObterTodos());
         }
 
+
+        public ActionResult MinhasPostagens()
+        {
+            int idPessoa = gPessoa.ObterPessoaLogada((int)Membership.GetUser(true).ProviderUserKey).IdPessoa;
+            ViewBag.IdPessoa = idPessoa;
+            return View("Index", gPostagem.ObterTodosPorPessoa(idPessoa));
+        }
+        
         //
         // GET: /Postagem/Create
         //[Authorize(Roles = "Morador")]     
