@@ -74,6 +74,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AcessoPredioController.cs" />
     <Compile Include="Controllers\AdministradoraController.cs" />
+    <Compile Include="Controllers\AlocarPessoaMoradiaController.cs" />
     <Compile Include="Controllers\AreaPublicaController.cs" />
     <Compile Include="Controllers\AtendimentoController.cs" />
     <Compile Include="Controllers\BlocoController.cs" />
@@ -148,6 +149,11 @@
     <Content Include="Views\Administradora\Details.aspx" />
     <Content Include="Views\Administradora\Edit.aspx" />
     <Content Include="Views\Administradora\Index.aspx" />
+    <Content Include="Views\AlocarPessoaMoradia\Create.aspx" />
+    <Content Include="Views\AlocarPessoaMoradia\Delete.aspx" />
+    <Content Include="Views\AlocarPessoaMoradia\Details.aspx" />
+    <Content Include="Views\AlocarPessoaMoradia\Edit.aspx" />
+    <Content Include="Views\AlocarPessoaMoradia\Index.aspx" />
     <Content Include="Views\AreaPublica\Create.aspx" />
     <Content Include="Views\AreaPublica\Delete.aspx" />
     <Content Include="Views\AreaPublica\Details.aspx" />

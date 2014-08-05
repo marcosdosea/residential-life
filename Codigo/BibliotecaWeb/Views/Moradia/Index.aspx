@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.MoradiaModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Index
+    <%: Models.App_GlobalResources.Mensagem.moradia %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -14,19 +14,16 @@
 <table id="table">
     <tr>
         <th>
-           <%: Models.App_GlobalResources.Mensagem.proprietario %>
-        </th>
-        <th>
-            <%: Models.App_GlobalResources.Mensagem.bloco %>
-        </th>
-        <th>
-            <%: Models.App_GlobalResources.Mensagem.predio %>
+            <%: Models.App_GlobalResources.Mensagem.numero %>
         </th>
         <th>
             <%: Models.App_GlobalResources.Mensagem.andar %>
         </th>
         <th>
-            <%: Models.App_GlobalResources.Mensagem.numero %>
+            <%: Models.App_GlobalResources.Mensagem.bloco %>
+        </th>
+        <th>
+            <%: Models.App_GlobalResources.Mensagem.condominio %>
         </th>
         <th>
             <%: Models.App_GlobalResources.Mensagem.tipoMoradia%>
@@ -37,19 +34,16 @@
 <% foreach (var item in Model) { %>
     <tr>
         <td>
-            <%: Html.DisplayFor(modelItem => item.NomePessoa) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.NomeBloco) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.Predio) %>
+            <%: Html.DisplayFor(modelItem => item.Numero) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Andar) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.Numero) %>
+            <%: Html.DisplayFor(modelItem => item.NomeBloco) %>
+        </td>
+        <td>
+            <%: Html.DisplayFor(modelItem => item.Condominio) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.TipoMoradia) %>
