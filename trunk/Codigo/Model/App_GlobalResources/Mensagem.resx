@@ -753,4 +753,10 @@
   <data name="minhasPostagens" xml:space="preserve">
     <value>Minhas Postagens</value>
   </data>
+  <data name="alocar" xml:space="preserve">
+    <value>Alocar</value>
+  </data>
+  <data name="alocar_pessoa_moradia" xml:space="preserve">
+    <value>Alocar Pessoa em Moradia</value>
+  </data>
 </root>

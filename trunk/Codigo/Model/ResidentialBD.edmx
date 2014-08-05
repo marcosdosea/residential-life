@@ -2387,16 +2387,16 @@
         <EntityTypeShape EntityType="residentialbdModel.my_aspnet_usersinroles" Width="1.5" PointX="10.75" PointY="6.75" Height="1.4033821614583246" />
         <EntityTypeShape EntityType="residentialbdModel.tb_acessocondominio" Width="1.5" PointX="5.25" PointY="21.125" Height="2.1725878906250102" />
         <EntityTypeShape EntityType="residentialbdModel.tb_acessoveiculo" Width="1.5" PointX="10.5" PointY="13.5" Height="1.595683593749996" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_administradora" Width="1.5" PointX="1.5" PointY="6.125" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_administradora" Width="1.5" PointX="1.5" PointY="6.125" Height="2.364889322916639" />
         <EntityTypeShape EntityType="residentialbdModel.tb_areapublica" Width="1.5" PointX="3" PointY="1.875" Height="2.7494921875000102" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_atendimento" Width="1.5" PointX="5.25" PointY="17.875" Height="2.172587890624996" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_atendimento" Width="1.5" PointX="5.25" PointY="17.875" Height="2.1725878906249818" />
         <EntityTypeShape EntityType="residentialbdModel.tb_bloco" Width="1.5" PointX="3.75" PointY="10.125" Height="2.3648893229166674" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_comentario" Width="1.5" PointX="7.5" PointY="27.875" Height="2.5571907552083388" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_condominio" Width="1.5" PointX="1.5" PointY="9.375" Height="3.9033007812500102" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_comentario" Width="1.5" PointX="7.5" PointY="27.875" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_condominio" Width="1.5" PointX="1.5" PointY="9.375" Height="3.9033007812499818" />
         <EntityTypeShape EntityType="residentialbdModel.tb_enquete" Width="1.5" PointX="5.25" PointY="24.125" Height="2.9417936197916674" />
         <EntityTypeShape EntityType="residentialbdModel.tb_funcionario" Width="1.5" PointX="8.25" PointY="16.75" Height="2.9417936197916674" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_grupoplanocontas" Width="1.5" PointX="13.5" PointY="9.875" Height="1.9802864583333388" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_moradia" Width="1.5" PointX="6" PointY="9.875" Height="2.7494921875000102" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_grupoplanocontas" Width="1.5" PointX="13.5" PointY="9.875" Height="1.980286458333353" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_moradia" Width="1.5" PointX="6" PointY="9.875" Height="2.7494921874999818" />
         <EntityTypeShape EntityType="residentialbdModel.tb_movimentacaofinanceira" Width="1.5" PointX="13.5" PointY="14.75" Height="4.2879036458333246" />
         <EntityTypeShape EntityType="residentialbdModel.tb_ocorrencia" Width="1.5" PointX="5.25" PointY="31.5" Height="2.7494921874999818" />
         <EntityTypeShape EntityType="residentialbdModel.tb_opcoesenquete" Width="1.5" PointX="7.5" PointY="24.625" Height="1.9802864583333246" />
@@ -2414,13 +2414,13 @@
           <ConnectorPoint PointX="3" PointY="21.211293945312498" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_acessocondominio_tb_condominio1" >
-          <ConnectorPoint PointX="2.9999999999999996" PointY="13.27830078125001" />
-          <ConnectorPoint PointX="3.375" PointY="13.65330078125001" />
-          <ConnectorPoint PointX="3.4791691666666664" PointY="13.65330078125001" />
-          <ConnectorPoint PointX="3.6458358333333334" PointY="13.65330078125001" />
-          <ConnectorPoint PointX="4.2135447916666671" PointY="13.65330078125001" />
-          <ConnectorPoint PointX="4.3802114583333331" PointY="13.65330078125001" />
-          <ConnectorPoint PointX="4.875" PointY="13.65330078125001" />
+          <ConnectorPoint PointX="2.9999999999999996" PointY="13.278300781249982" />
+          <ConnectorPoint PointX="3.375" PointY="13.653300781249982" />
+          <ConnectorPoint PointX="3.4791691666666664" PointY="13.653300781249982" />
+          <ConnectorPoint PointX="3.6458358333333334" PointY="13.653300781249982" />
+          <ConnectorPoint PointX="4.2135447916666671" PointY="13.653300781249982" />
+          <ConnectorPoint PointX="4.3802114583333331" PointY="13.653300781249982" />
+          <ConnectorPoint PointX="4.875" PointY="13.653300781249982" />
           <ConnectorPoint PointX="4.875" PointY="20.748847153846153" />
           <ConnectorPoint PointX="5.2511528461538459" PointY="21.125" />
         </AssociationConnector>
@@ -2433,16 +2433,16 @@
           <ConnectorPoint PointX="10.5" PointY="14.297841796874998" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_condominio_tb_administradora1" >
-          <ConnectorPoint PointX="2.25" PointY="8.4898893229166674" />
+          <ConnectorPoint PointX="2.25" PointY="8.489889322916639" />
           <ConnectorPoint PointX="2.25" PointY="9.375" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_MovimentacaoFinanceira_TB_Administradora1" >
-          <ConnectorPoint PointX="3" PointY="7.3074446614583337" />
-          <ConnectorPoint PointX="3.2916666666666665" PointY="7.3074446614583328" />
-          <ConnectorPoint PointX="3.4583333333333335" PointY="7.3074446614583337" />
-          <ConnectorPoint PointX="3.4791691666666664" PointY="7.3074446614583328" />
-          <ConnectorPoint PointX="3.6458358333333334" PointY="7.3074446614583337" />
-          <ConnectorPoint PointX="5.75" PointY="7.3074446614583337" />
+          <ConnectorPoint PointX="3" PointY="7.3074446614583195" />
+          <ConnectorPoint PointX="3.2916666666666665" PointY="7.3074446614583186" />
+          <ConnectorPoint PointX="3.4583333333333335" PointY="7.3074446614583195" />
+          <ConnectorPoint PointX="3.4791691666666664" PointY="7.3074446614583186" />
+          <ConnectorPoint PointX="3.6458358333333334" PointY="7.3074446614583195" />
+          <ConnectorPoint PointX="5.75" PointY="7.3074446614583195" />
           <ConnectorPoint PointX="5.75" PointY="9.625" />
           <ConnectorPoint PointX="7.791666666666667" PointY="9.625" />
           <ConnectorPoint PointX="7.958333333333333" PointY="9.625" />
@@ -2466,10 +2466,10 @@
           <ConnectorPoint PointX="5.25" PointY="15.278595377604162" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Atendimento_TB_Pessoa1" >
-          <ConnectorPoint PointX="4.5" PointY="19.086293945312498" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="19.086293945312498" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="19.086293945312498" />
-          <ConnectorPoint PointX="5.25" PointY="19.086293945312498" />
+          <ConnectorPoint PointX="4.5" PointY="19.086293945312491" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="19.086293945312491" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="19.086293945312491" />
+          <ConnectorPoint PointX="5.25" PointY="19.086293945312491" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Bloco_TB_Condominio1" >
           <ConnectorPoint PointX="3" PointY="11.307444661458334" />
@@ -2483,31 +2483,31 @@
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Comentario_TB_Pessoa1" >
           <ConnectorPoint PointX="3.75" PointY="24.528219401041667" />
-          <ConnectorPoint PointX="3.75" PointY="29.153595377604169" />
-          <ConnectorPoint PointX="4.0729191666666669" PointY="29.153595377604169" />
-          <ConnectorPoint PointX="4.2395858333333329" PointY="29.153595377604169" />
-          <ConnectorPoint PointX="4.2760454166666664" PointY="29.153595377604169" />
-          <ConnectorPoint PointX="4.4427120833333325" PointY="29.153595377604169" />
-          <ConnectorPoint PointX="7.5" PointY="29.153595377604169" />
+          <ConnectorPoint PointX="3.75" PointY="29.153595377604162" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="29.153595377604162" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="29.153595377604162" />
+          <ConnectorPoint PointX="4.2760454166666664" PointY="29.153595377604162" />
+          <ConnectorPoint PointX="4.4427120833333325" PointY="29.153595377604162" />
+          <ConnectorPoint PointX="7.5" PointY="29.153595377604162" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Comentario_TB_Postagem1" >
           <ConnectorPoint PointX="6.75" PointY="39.028595377604162" />
           <ConnectorPoint PointX="8.25" PointY="39.028595377604162" />
-          <ConnectorPoint PointX="8.25" PointY="30.432190755208339" />
+          <ConnectorPoint PointX="8.25" PointY="30.432190755208325" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_pessoa1_tb_condominio2" >
-          <ConnectorPoint PointX="3" PointY="12.292872721354172" />
-          <ConnectorPoint PointX="3.25" PointY="12.292872721354172" />
-          <ConnectorPoint PointX="3.25" PointY="12.87449218750001" />
-          <ConnectorPoint PointX="3.4791691666666664" PointY="12.87449218750001" />
-          <ConnectorPoint PointX="3.6458358333333334" PointY="12.87449218750001" />
-          <ConnectorPoint PointX="6.8697891666666671" PointY="12.87449218750001" />
-          <ConnectorPoint PointX="7.0364558333333331" PointY="12.87449218750001" />
-          <ConnectorPoint PointX="7.072916666666667" PointY="12.87449218750001" />
-          <ConnectorPoint PointX="7.239583333333333" PointY="12.87449218750001" />
-          <ConnectorPoint PointX="7.791666666666667" PointY="12.87449218750001" />
-          <ConnectorPoint PointX="7.958333333333333" PointY="12.87449218750001" />
-          <ConnectorPoint PointX="8" PointY="12.87449218750001" />
+          <ConnectorPoint PointX="3" PointY="12.292872721354158" />
+          <ConnectorPoint PointX="3.25" PointY="12.292872721354158" />
+          <ConnectorPoint PointX="3.25" PointY="12.874492187499982" />
+          <ConnectorPoint PointX="3.4791691666666664" PointY="12.874492187499982" />
+          <ConnectorPoint PointX="3.6458358333333334" PointY="12.874492187499982" />
+          <ConnectorPoint PointX="6.8697891666666671" PointY="12.874492187499982" />
+          <ConnectorPoint PointX="7.0364558333333331" PointY="12.874492187499982" />
+          <ConnectorPoint PointX="7.072916666666667" PointY="12.874492187499982" />
+          <ConnectorPoint PointX="7.239583333333333" PointY="12.874492187499982" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="12.874492187499982" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="12.874492187499982" />
+          <ConnectorPoint PointX="8" PointY="12.874492187499982" />
           <ConnectorPoint PointX="8" PointY="15.941793619791667" />
           <ConnectorPoint PointX="12" PointY="15.941793619791667" />
           <ConnectorPoint PointX="12" PointY="16.875" />
@@ -2532,12 +2532,12 @@
           <ConnectorPoint PointX="9.96875" PointY="23.807190755208325" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Funcionario_TB_Pessoa1" >
-          <ConnectorPoint PointX="4.5" PointY="20.586293945312498" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="20.586293945312498" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="20.586293945312498" />
-          <ConnectorPoint PointX="6.8697891666666671" PointY="20.586293945312498" />
-          <ConnectorPoint PointX="7.0364558333333331" PointY="20.586293945312498" />
-          <ConnectorPoint PointX="8.96875" PointY="20.586293945312498" />
+          <ConnectorPoint PointX="4.5" PointY="20.586293945312491" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="20.586293945312491" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="20.586293945312491" />
+          <ConnectorPoint PointX="6.8697891666666671" PointY="20.586293945312491" />
+          <ConnectorPoint PointX="7.0364558333333331" PointY="20.586293945312491" />
+          <ConnectorPoint PointX="8.96875" PointY="20.586293945312491" />
           <ConnectorPoint PointX="8.96875" PointY="19.691793619791667" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Funcionario_TB_Setor1" >
@@ -2561,7 +2561,7 @@
           <ConnectorPoint PointX="13.5" PointY="10.893992513020834" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_movimentacaofinanceira_tb_moradia1" >
-          <ConnectorPoint PointX="7.15625" PointY="12.62449218750001" />
+          <ConnectorPoint PointX="7.15625" PointY="12.624492187499982" />
           <ConnectorPoint PointX="7.15625" PointY="16.653595377604162" />
           <ConnectorPoint PointX="7.791666666666667" PointY="16.653595377604162" />
           <ConnectorPoint PointX="7.958333333333333" PointY="16.653595377604162" />
@@ -2572,15 +2572,15 @@
           <ConnectorPoint PointX="13.5" PointY="16.653595377604162" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Pessoa1_TB_Moradia1" >
-          <ConnectorPoint PointX="6.9531225" PointY="12.62449218750001" />
+          <ConnectorPoint PointX="6.9531225" PointY="12.624492187499982" />
           <ConnectorPoint PointX="6.9531225" PointY="27.179790039062496" />
           <ConnectorPoint PointX="10.25" PointY="27.179790039062496" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_veiculo_tb_moradia1" >
-          <ConnectorPoint PointX="7.5" PointY="11.249746093750005" />
-          <ConnectorPoint PointX="7.791666666666667" PointY="11.249746093750005" />
-          <ConnectorPoint PointX="7.958333333333333" PointY="11.249746093750005" />
-          <ConnectorPoint PointX="9" PointY="11.249746093750005" />
+          <ConnectorPoint PointX="7.5" PointY="11.249746093749991" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="11.249746093749991" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="11.249746093749991" />
+          <ConnectorPoint PointX="9" PointY="11.249746093749991" />
           <ConnectorPoint PointX="9" PointY="12.75" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_MovimentacaoFinanceira_TB_PlanoDeConta1" >
@@ -2627,14 +2627,14 @@
           <ConnectorPoint PointX="10.25" PointY="27.154541829427082" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_pessoa1_tb_pessoa2" >
-          <ConnectorPoint PointX="4.5" PointY="20.316938417968696" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="20.316938417968696" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="20.316938417968696" />
-          <ConnectorPoint PointX="6.8697891666666671" PointY="20.316938417968696" />
-          <ConnectorPoint PointX="7.0364558333333331" PointY="20.316938417968696" />
-          <ConnectorPoint PointX="8.8854166666666661" PointY="20.316938417968696" />
-          <ConnectorPoint PointX="9.0520833333333339" PointY="20.316938417968696" />
-          <ConnectorPoint PointX="12.03125" PointY="20.316938417968696" />
+          <ConnectorPoint PointX="4.5" PointY="20.316938417968686" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="20.316938417968686" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="20.316938417968686" />
+          <ConnectorPoint PointX="6.8697891666666671" PointY="20.316938417968686" />
+          <ConnectorPoint PointX="7.0364558333333331" PointY="20.316938417968686" />
+          <ConnectorPoint PointX="8.8854166666666661" PointY="20.316938417968686" />
+          <ConnectorPoint PointX="9.0520833333333339" PointY="20.316938417968686" />
+          <ConnectorPoint PointX="12.03125" PointY="20.316938417968686" />
           <ConnectorPoint PointX="12.03125" PointY="19.624492187499982" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Postagem_TB_Pessoa1" >
@@ -2653,14 +2653,14 @@
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Veiculo_TB_Pessoa1" >
           <ConnectorPoint PointX="4.296878125" PointY="18.125" />
-          <ConnectorPoint PointX="4.296878125" PointY="13.045143984375017" />
-          <ConnectorPoint PointX="6.8697891666666671" PointY="13.045143984375017" />
-          <ConnectorPoint PointX="7.0364558333333331" PointY="13.045143984375017" />
-          <ConnectorPoint PointX="7.072916666666667" PointY="13.045143984375017" />
-          <ConnectorPoint PointX="7.239583333333333" PointY="13.045143984375017" />
-          <ConnectorPoint PointX="7.791666666666667" PointY="13.045143984375015" />
-          <ConnectorPoint PointX="8.0833333333333339" PointY="13.045143984375017" />
-          <ConnectorPoint PointX="8.25" PointY="13.045143984375017" />
+          <ConnectorPoint PointX="4.296878125" PointY="13.045143984374988" />
+          <ConnectorPoint PointX="6.8697891666666671" PointY="13.045143984374988" />
+          <ConnectorPoint PointX="7.0364558333333331" PointY="13.045143984374988" />
+          <ConnectorPoint PointX="7.072916666666667" PointY="13.045143984374988" />
+          <ConnectorPoint PointX="7.239583333333333" PointY="13.045143984374988" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="13.045143984374986" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="13.045143984374988" />
+          <ConnectorPoint PointX="8.25" PointY="13.045143984374988" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_VotoEnquete_TB_Pessoa1" >
           <ConnectorPoint PointX="4.5" PointY="23.583639322916667" />

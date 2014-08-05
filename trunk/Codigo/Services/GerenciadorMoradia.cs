@@ -85,6 +85,8 @@ namespace Services
                             IdBloco = moradia.IdBloco,
                             Andar = moradia.Andar,
                             Numero = moradia.Numero,
+                            Condominio = moradia.tb_bloco.tb_condominio.Nome,
+                            NomeBloco = moradia.tb_bloco.Nome,
                             TipoMoradia = (moradia.TipoMoradia == "Cobertura" ? Models.Models.MoradiaModel.ListaTipoMoradia.Cobertura : (moradia.TipoMoradia == "Casa" ? Models.Models.MoradiaModel.ListaTipoMoradia.Casa : (moradia.TipoMoradia == "Duplex" ? Models.Models.MoradiaModel.ListaTipoMoradia.Duplex : (moradia.TipoMoradia == "Padrao" ? Models.Models.MoradiaModel.ListaTipoMoradia.Padrao : MoradiaModel.ListaTipoMoradia.Triplex))) )
 
                         };

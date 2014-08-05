@@ -26,10 +26,11 @@
 			<li><%: Html.ActionLink("Home", "Index", "Home")%></li>
             <li><%: Html.ActionLink("Pessoa", "Index", "Pessoa")%></li>
             <li><%: Html.ActionLink("Funcionário", "Index", "Funcionario")%></li>
+            <li><%: Html.ActionLink("Alocar Pessoa em Moradia", "Index", "AlocarPessoaMoradia")%></li>
             <li><%: Html.ActionLink("Condomínio", "Index", "Condominio")%></li>
             <li><%: Html.ActionLink("Bloco", "Index", "Bloco")%></li>
             <li><%: Html.ActionLink("Setor", "Index", "Setor")%></li>
-            <!--li><%: Html.ActionLink("Moradia", "Index", "Moradia")%></li-->
+            <li><%: Html.ActionLink("Moradia", "Index", "Moradia")%></li>
             <li><%: Html.ActionLink("Plano De Conta", "Index", "PlanoDeConta")%></li>
             <li><%: Html.ActionLink("Grupo Plano De Conta", "Index", "GrupoPlanoDeContas")%></li>
             <li><%: Html.ActionLink("Ocorrência", "Index", "Ocorrencia")%></li>

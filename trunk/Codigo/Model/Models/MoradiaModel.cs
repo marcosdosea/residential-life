@@ -11,6 +11,11 @@ namespace Models.Models
     {
         public enum ListaTipoMoradia { Cobertura = 0, Padrao = 1, Duplex = 2, Triplex = 3, Casa = 4 }
 
+        [Display(Name = "condominio", ResourceType = typeof(Mensagem))]
+        public int IdCondominio { get; set; }
+
+        public string Condominio { get; set; }
+
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
         public int IdMoradia { get; set; }
 

@@ -83,7 +83,7 @@ namespace ResidentialWeb.Controllers
                 Membership.CreateUser(model.UserName, model.Password, model.Email, "teste1", "teste2", true, out createStatus);
 
 
-                MembershipUser usuario = string.IsNullOrEmpty(model.UserName) ? null : Membership.GetUser(model.UserName);
+                MembershipUser usuario = (string.IsNullOrEmpty(model.UserName) ? null : Membership.GetUser(model.UserName));
 
                 PessoaModel pessoaModel = new PessoaModel();
                 pessoaModel.IdUser = (int)usuario.ProviderUserKey;
