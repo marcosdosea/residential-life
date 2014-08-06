@@ -45,5 +45,15 @@ namespace Models
 
         [Display(Name = "moradia", ResourceType = typeof(Mensagem))]
         public string Moradia { get; set; }
+
+        public int IdCondominio { get; set; }
+
+        [Display(Name = "condominio", ResourceType = typeof(Mensagem))]
+        public string Condominio { get; set; }
+
+        public int IdBloco { get; set; }
+
+        [Display(Name = "bloco", ResourceType = typeof(Mensagem))]
+        public string Bloco { get; set; }
     }
 }

@@ -86,7 +86,11 @@ namespace Services
                             Cor = Veiculo.Cor,
                             TipoVeiculo  = (Veiculo.TipoVeiculo == "Carro" ? ListaTipoVeiculo.Carro : ListaTipoVeiculo.Motocicleta),
                             NomePessoa = Veiculo.tb_pessoa.Nome,
-                            Moradia = Veiculo.tb_moradia.Numero
+                            Moradia = Veiculo.tb_moradia.Numero,
+                            IdCondominio = Veiculo.tb_moradia.tb_bloco.tb_condominio.IdCondominio,
+                            Condominio = Veiculo.tb_moradia.tb_bloco.tb_condominio.Nome,
+                            IdBloco = Veiculo.tb_moradia.tb_bloco.IdBloco,
+                            Bloco = Veiculo.tb_moradia.tb_bloco.Nome
                         };
             return query;
         }
@@ -97,7 +101,7 @@ namespace Services
         /// <returns></returns>
         public IEnumerable<VeiculoModel> ObterTodos()
         {
-            return GetQuery();
+            return GetQuery().OrderBy(v => v.Modelo);
         }
 
         
@@ -107,7 +111,7 @@ namespace Services
         /// <returns></returns>
         public IEnumerable<VeiculoModel> ObterTodosDePessoa(int idPessoa)
         {
-            return GetQuery().Where(Veiculo => Veiculo.IdPessoa.Equals(idPessoa));
+            return GetQuery().Where(Veiculo => Veiculo.IdPessoa.Equals(idPessoa)).OrderBy(v => v.Modelo);
         }
 
 

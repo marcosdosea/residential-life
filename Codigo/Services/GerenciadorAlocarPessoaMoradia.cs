@@ -85,7 +85,9 @@ namespace Services
                             NomePessoa = pessoamoradia.tb_pessoa.Nome,
                             NumeroMoradia = pessoamoradia.tb_moradia.Numero,
                             Condominio = pessoamoradia.tb_moradia.tb_bloco.tb_condominio.Nome,
+                            IdCondominio = pessoamoradia.tb_moradia.tb_bloco.tb_condominio.IdCondominio,
                             Bloco = pessoamoradia.tb_moradia.tb_bloco.Nome,
+                            IdBloco = pessoamoradia.tb_moradia.tb_bloco.IdBloco,
                             Tipo = (pessoamoradia.Tipo == "Morador" ? Models.Models.AlocarPessoaMoradiaModel.ListaTipoPessoaMoradia.Morador : AlocarPessoaMoradiaModel.ListaTipoPessoaMoradia.Visitante)
                         };
             return query;

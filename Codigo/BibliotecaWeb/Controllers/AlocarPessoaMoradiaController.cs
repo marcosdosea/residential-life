@@ -89,7 +89,7 @@ namespace BibliotecaWeb.Controllers
             return View(alocarPessoaMoradiaModel);
         }
 
-       // [Authorize(Roles = "Síndico")]
+
         public ActionResult Edit(int idPessoa, int idMoradia)
         {
             AlocarPessoaMoradiaModel alocarPessoaMoradiaModel = gPessoaMoradia.Obter(idPessoa, idMoradia);
@@ -100,9 +100,6 @@ namespace BibliotecaWeb.Controllers
             ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", alocarPessoaMoradiaModel.IdPessoa);
             return View(alocarPessoaMoradiaModel);
         }
-
-        //
-        // POST: /pessoa/Edit/5
 
         [HttpPost]
         public ActionResult Edit(AlocarPessoaMoradiaModel alocarPessoaMoradiaModel)
