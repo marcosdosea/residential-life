@@ -59,6 +59,11 @@
 		width: 1200px;
 	}
 	
+	.containerMenu
+	{
+		margin: -5px auto;
+		width: 1300px;
+	}
 /*********************************************************************************/
 /* Image Style                                                                   */
 /*********************************************************************************/
@@ -235,7 +240,7 @@
 
 	#menu ul
 	{
-		padding: 20px 0px 20px 0px;
+		padding: 10px 0px 10px 0px;
 		list-style: none;
 		line-height: normal;
 	}
@@ -243,6 +248,7 @@
 	#menu li
 	{
 		display: inline-block;
+		font-size: smaller;
 	}
 	
 	#menu a

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<Models.tb_pessoamoradia>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<Models.Models.AlocarPessoaMoradiaModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Delete
@@ -11,6 +11,26 @@
 <h3>Are you sure you want to delete this?</h3>
 <fieldset>
     <legend>tb_pessoamoradia</legend>
+
+    <div class="display-label">Nome da Pessoa</div>
+    <div class="display-field">
+        <%: Html.DisplayFor(model => model.NomePessoa) %>
+    </div>
+
+    <div class="display-label">Condominio</div>
+    <div class="display-field">
+        <%: Html.DisplayFor(model => model.Condominio) %>
+    </div>
+
+    <div class="display-label">Bloco</div>
+    <div class="display-field">
+        <%: Html.DisplayFor(model => model.Bloco) %>
+    </div>
+
+    <div class="display-label">Apartamento</div>
+    <div class="display-field">
+        <%: Html.DisplayFor(model => model.NumeroMoradia) %>
+    </div>
 
     <div class="display-label">Tipo</div>
     <div class="display-field">

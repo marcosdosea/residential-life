@@ -49,9 +49,8 @@
             <%: Html.DisplayFor(modelItem => item.Tipo) %>
         </td>
         <td>
-            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { id = item.IdPessoa, item.IdMoradia })%> |
-            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdPessoa, item.IdMoradia })%> |
-            <%: Html.ActionLink("Delete", "Delete", new { id = item.IdPessoa, item.IdMoradia })%>
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { idPessoa = item.IdPessoa, idMoradia = item.IdMoradia })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { idPessoa = item.IdPessoa, idMoradia = item.IdMoradia })%>
         </td>
     </tr>
 <% } %>
