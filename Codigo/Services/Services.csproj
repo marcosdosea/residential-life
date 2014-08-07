@@ -46,13 +46,13 @@
     <Compile Include="GerenciadorAlocarPessoaMoradia.cs" />
     <Compile Include="GerenciadorAtendimento.cs" />
     <Compile Include="GerenciadorComentario.cs" />
+    <Compile Include="GerenciadorEnquete.cs" />
     <Compile Include="GerenciadorFuncionario.cs" />
     <Compile Include="GerenciadorGrupoPlanoDeContas.cs" />
     <Compile Include="GerenciadorMoradia.cs" />
     <Compile Include="GerenciadorOpcoesEnquete.cs" />
     <Compile Include="GerenciadorPlanoDeConta.cs" />
     <Compile Include="GerenciadorPostagem.cs" />
-    <Compile Include="GerenciadorEnquete.cs" />
     <Compile Include="GerenciadorOcorrencia.cs" />
     <Compile Include="GerenciadorReservaAmbiente.cs" />
     <Compile Include="GerenciadorAreaPublica.cs" />

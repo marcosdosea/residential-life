@@ -51,6 +51,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Mensagem.resx</DependentUpon>
     </Compile>
+    <Compile Include="EnquenteModel.cs" />
     <Compile Include="Helpers\EnumDropDownList.cs" />
     <Compile Include="Helpers\LocalizarDisplayNomeAtributo.cs" />
     <Compile Include="Models\AccountModels.cs" />
@@ -62,7 +63,6 @@
     <Compile Include="Models\BlocoModel.cs" />
     <Compile Include="Models\ComentarioModel.cs" />
     <Compile Include="Models\CondominioModel.cs" />
-    <Compile Include="Models\EnqueteModel.cs" />
     <Compile Include="Models\FuncionarioModel.cs" />
     <Compile Include="Models\GrupoPlanoDeContasModel.cs" />
     <Compile Include="Models\MoradiaModel.cs" />

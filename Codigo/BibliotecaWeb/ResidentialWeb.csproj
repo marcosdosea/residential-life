@@ -182,11 +182,8 @@
     <Content Include="Views\Enquete\Create.aspx" />
     <Content Include="Views\Enquete\Delete.aspx" />
     <Content Include="Views\Enquete\Details.aspx" />
-    <Content Include="Views\Enquete\EmAndamento.aspx" />
-    <Content Include="Views\Enquete\Finalizadas.aspx" />
+    <Content Include="Views\Enquete\Edit.aspx" />
     <Content Include="Views\Enquete\Index.aspx" />
-    <Content Include="Views\Enquete\Votar.aspx" />
-    <Content Include="Views\Enquete\VotarEnquete.aspx" />
     <Content Include="Views\Funcionario\Create.aspx" />
     <Content Include="Views\Funcionario\Delete.aspx" />
     <Content Include="Views\Funcionario\Details.aspx" />
