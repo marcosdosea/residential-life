@@ -36,8 +36,8 @@
             <!--li><%: Html.ActionLink("Condominio", "Index", "Condominio")%></li>
             <li><%: Html.ActionLink("Área Pública", "Index", "AreaPublica")%></li>
             <li><%: Html.ActionLink("Reserva Ambiente", "Index", "ReservaAmbiente")%></li>
-            <li><%: Html.ActionLink("Registrar Ocorrência", "Index", "Ocorrencia")%></li>
-            <li><%: Html.ActionLink("Enquetes", "Index", "Enquete")%></li>-->
+            <li><%: Html.ActionLink("Registrar Ocorrência", "Index", "Ocorrencia")%></li-->
+            <li><%: Html.ActionLink("Enquetes", "Index", "Enquete")%></li>
             <li><%: Html.ActionLink("Atendimento", "Index", "Atendimento")%></li>
             <li><%: Html.ActionLink("Administradora", "Index", "Administradora")%></li>
             <li><%: Html.ActionLink("Postagens", "Index", "Postagem")%></li>
