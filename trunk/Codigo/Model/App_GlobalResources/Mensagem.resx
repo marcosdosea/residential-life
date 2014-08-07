@@ -759,4 +759,7 @@
   <data name="alocar_pessoa_moradia" xml:space="preserve">
     <value>Alocar Pessoa em Moradia</value>
   </data>
+  <data name="statusEnquente" xml:space="preserve">
+    <value>Status da Enquente</value>
+  </data>
 </root>

@@ -7,7 +7,7 @@ namespace Models.Models
 {
     public class OpcoesEnqueteModel
     {
-        public EnqueteModel Enquete{ get; set; }
+        //public EnqueteModel Enquete{ get; set; }
         public IList<OpcaoModel> Opcoes{ get; set; }
     }
 }
