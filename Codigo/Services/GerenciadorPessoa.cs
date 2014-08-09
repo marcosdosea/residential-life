@@ -95,6 +95,7 @@ namespace Services
                         {
                             IdPessoa = pessoa.IdPessoa,
                             IdUser = pessoa.IdUser,
+                            IdSetor = pessoa.IdSetor,
                             Bairro = pessoa.Bairro,
                             CEP = pessoa.CEP,
                             Cidade = pessoa.Cidade,
@@ -109,7 +110,8 @@ namespace Services
                             TelefoneCelular = pessoa.TelefoneCelular,
                             TelefoneFixo = pessoa.TelefoneFixo,
 
-                            NomeUsuario = pessoa.my_aspnet_users.name
+                            NomeUsuario = pessoa.my_aspnet_users.name,
+                            NomeSetor = pessoa.tb_setor.Nome
                         };
             return query;
         }
@@ -168,6 +170,7 @@ namespace Services
         {
             pessoaE.IdPessoa = pessoaModel.IdPessoa;
             pessoaE.IdUser = pessoaModel.IdUser;
+            pessoaE.IdSetor = pessoaModel.IdSetor;
             pessoaE.Bairro = pessoaModel.Bairro;
             pessoaE.CEP = pessoaModel.CEP;
             pessoaE.Cidade = pessoaModel.Cidade;
@@ -181,7 +184,6 @@ namespace Services
             pessoaE.Sexo = pessoaModel.Sexo;
             pessoaE.TelefoneCelular = pessoaModel.TelefoneCelular;
             pessoaE.TelefoneFixo = pessoaModel.TelefoneFixo;
-            
         }
     }
 }

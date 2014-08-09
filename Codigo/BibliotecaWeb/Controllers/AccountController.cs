@@ -100,6 +100,7 @@ namespace ResidentialWeb.Controllers
                 pessoaModel.Sexo = model.Sexo;
                 pessoaModel.TelefoneCelular = model.TelefoneCelular;
                 pessoaModel.TelefoneFixo = model.TelefoneFixo;
+                pessoaModel.IdSetor = Global.SetorPadraoInicial;
                 GerenciadorPessoa.GetInstance().Inserir(pessoaModel);
                 
                 if (createStatus == MembershipCreateStatus.Success)

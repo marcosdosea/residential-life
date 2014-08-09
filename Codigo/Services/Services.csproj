@@ -50,6 +50,7 @@
     <Compile Include="GerenciadorGrupoPlanoDeContas.cs" />
     <Compile Include="GerenciadorMoradia.cs" />
     <Compile Include="GerenciadorOpcoesEnquete.cs" />
+    <Compile Include="GerenciadorPerfilPessoa.cs" />
     <Compile Include="GerenciadorPlanoDeConta.cs" />
     <Compile Include="GerenciadorPostagem.cs" />
     <Compile Include="GerenciadorOcorrencia.cs" />
