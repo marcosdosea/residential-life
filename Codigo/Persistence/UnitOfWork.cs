@@ -26,7 +26,6 @@ namespace Persistence
         private IRepositorioGenerico<tb_comentario> _repComentario;
         private IRepositorioGenerico<tb_condominio> _repCondominio;
         private IRepositorioGenerico<tb_enquete> _repEnquete;
-        private IRepositorioGenerico<tb_funcionario> _repFuncionario;
         private IRepositorioGenerico<tb_grupoplanocontas> _repGrupoPlanoContas;
         private IRepositorioGenerico<tb_moradia> _repMoradia;
         private IRepositorioGenerico<tb_movimentacaofinanceira> _repMovimentacaoFinanceira;
@@ -41,6 +40,8 @@ namespace Persistence
         private IRepositorioGenerico<tb_setor> _repSetor;
         private IRepositorioGenerico<tb_veiculo> _repVeiculo;
         private IRepositorioGenerico<tb_votoenquete> _repVotoEnquete;
+        private IRepositorioGenerico<tb_pontuacao> _repPontuacao;
+        private IRepositorioGenerico<tb_pontuacaopessoa> _repPontuacaoPessoa;
 
         /// <summary>
         /// Construtor cria contexto transacional
@@ -109,18 +110,6 @@ namespace Persistence
                     _repComentario = new RepositorioGenerico<tb_comentario>(_context);
                 }
                 return _repComentario;
-            }
-        }
-
-        public IRepositorioGenerico<tb_funcionario> RepositorioFuncionario
-        {
-            get
-            {
-                if (_repFuncionario == null)
-                {
-                    _repFuncionario = new RepositorioGenerico<tb_funcionario>(_context);
-                }
-                return _repFuncionario;
             }
         }
 
@@ -381,6 +370,38 @@ namespace Persistence
                     _repAdministradora = new RepositorioGenerico<tb_administradora>(_context);
                 }
                 return _repAdministradora;
+            }
+        }
+
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de veículo
+        /// </summary>
+        public IRepositorioGenerico<tb_pontuacao> RepositorioPontuacao
+        {
+            get
+            {
+                if (_repPontuacao == null)
+                {
+                    _repPontuacao = new RepositorioGenerico<tb_pontuacao>(_context);
+                }
+                return _repPontuacao;
+            }
+        }
+
+
+        /// <summary>
+        /// Repositório para manipular dados persistidos de administradora
+        /// </summary>
+        public IRepositorioGenerico<tb_pontuacaopessoa> RepositorioPontuacaoPessoa
+        {
+            get
+            {
+                if (_repPontuacaoPessoa == null)
+                {
+                    _repPontuacaoPessoa = new RepositorioGenerico<tb_pontuacaopessoa>(_context);
+                }
+                return _repPontuacaoPessoa;
             }
         }
 

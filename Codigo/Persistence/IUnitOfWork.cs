@@ -17,7 +17,6 @@ namespace Persistence
         IRepositorioGenerico<tb_comentario> RepositorioComentario { get; }
         IRepositorioGenerico<tb_condominio> RepositorioCondominio { get; }
         IRepositorioGenerico<tb_enquete> RepositorioEnquete { get; }
-        IRepositorioGenerico<tb_funcionario> RepositorioFuncionario { get; }
         IRepositorioGenerico<tb_grupoplanocontas> RepositorioGrupoPlanoContas { get; }
         IRepositorioGenerico<tb_moradia> RepositorioMoradia { get; }
         IRepositorioGenerico<tb_movimentacaofinanceira> RepositorioMovimentacaoFinanceira { get; }
@@ -32,6 +31,8 @@ namespace Persistence
         IRepositorioGenerico<tb_setor> RepositorioSetor { get; }
         IRepositorioGenerico<tb_veiculo> RepositorioVeiculo { get; }
         IRepositorioGenerico<tb_votoenquete> RepositorioVotoEnquete { get; }
+        IRepositorioGenerico<tb_pontuacao> RepositorioPontuacao { get; }
+        IRepositorioGenerico<tb_pontuacaopessoa> RepositorioPontuacaoPessoa { get; }
         
     }
 }

@@ -81,7 +81,6 @@
     <Compile Include="Controllers\ComentarioController.cs" />
     <Compile Include="Controllers\CondominioController.cs" />
     <Compile Include="Controllers\EnqueteController.cs" />
-    <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\GrupoPlanoDeContasController.cs" />
     <Compile Include="Controllers\MoradiaController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
