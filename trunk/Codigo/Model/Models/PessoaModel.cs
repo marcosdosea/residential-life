@@ -22,6 +22,15 @@ namespace Models
         [StringLength(100)]
         public string Nome { get; set; }
 
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "codigo", ResourceType = typeof(Mensagem))]
+        public int IdSetor { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "nomeSetor", ResourceType = typeof(Mensagem))]
+        [StringLength(45)]
+        public string NomeSetor { get; set; }
+
         [Display(Name = "nomeUsuario", ResourceType = typeof(Mensagem))]
         [StringLength(256)]
         public string NomeUsuario { get; set; }

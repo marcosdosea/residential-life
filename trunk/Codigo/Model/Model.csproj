@@ -33,7 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -64,10 +63,12 @@
     <Compile Include="Models\ComentarioModel.cs" />
     <Compile Include="Models\CondominioModel.cs" />
     <Compile Include="Models\FuncionarioModel.cs" />
+    <Compile Include="Models\Global.cs" />
     <Compile Include="Models\GrupoPlanoDeContasModel.cs" />
     <Compile Include="Models\MoradiaModel.cs" />
     <Compile Include="Models\OpcaoModel.cs" />
     <Compile Include="Models\OpcoesEnqueteModel.cs" />
+    <Compile Include="Models\PerfilPessoaModel.cs" />
     <Compile Include="Models\PlanoDeConta.cs" />
     <Compile Include="Models\PostagemModel.cs" />
     <Compile Include="Models\OcorrenciaModel.cs" />
