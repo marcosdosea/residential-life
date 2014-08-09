@@ -15,13 +15,22 @@
     <%: Html.ValidationSummary(true) %>
     <fieldset>
         <legend><%: Models.App_GlobalResources.Mensagem.planoDeConta %></legend>
-        <%: Html.HiddenFor(model => model.IdPlanoDeConta) %>
 
+        <% using (Html.BeginForm("Create", "PlanoDeConta", FormMethod.Post, null))
+           { %>
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.DescricaoGrupoPlanoContas)%>
+        </div>
+        <div class="editor-field">
+            <%: Html.DropDownList("IdGrupoPlanoDeConta", null, "Selecione", new { onchange = "this.form.submit();" })%>
+            <%: Html.ValidationMessageFor(model => model.IdGrupoPlanoDeConta)%>
+        </div>
+        <% } %>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Descricao) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Descricao) %>
+            <%: Html.TextBoxFor(model => model.Descricao, new { Width = 200, MaxLength = 150 })%>
             <%: Html.ValidationMessageFor(model => model.Descricao) %>
         </div>
 

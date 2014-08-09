@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.GrupoPlanoDeContasModel>" %>
+<%@ Import Namespace="Model.Helpers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
    <%: Models.App_GlobalResources.Mensagem.editarGrupoPlanoDeContas %>
@@ -17,23 +18,7 @@
         <legend><%: Models.App_GlobalResources.Mensagem.grupoPlanoDeConta %></legend>
       
         <div class="editor-field">
-            <%: Html.HiddenFor(model => model.IdTipoPlanoDeConta) %>
-        </div>
-
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.DescricaoPlanoDeConta) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.DropDownList("IdPlanoDeConta") %>
-            <%: Html.ValidationMessageFor(model => model.IdPlanoDeConta)%>
-        </div>
-
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.TipoPlanoDeConta) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.TipoPlanoDeConta) %>
-            <%: Html.ValidationMessageFor(model => model.TipoPlanoDeConta) %>
+            <%: Html.HiddenFor(model => model.IdGrupoPlanoDeConta) %>
         </div>
 
         <div class="editor-label">
@@ -44,6 +29,14 @@
             <%: Html.ValidationMessageFor(model => model.Descricao) %>
         </div>
 
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.TipoPlanoDeConta) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EnumDropDownListFor(model => model.TipoPlanoDeConta, Models.ListaTipoPlanoConta.Receita)%>
+            <%: Html.ValidationMessageFor(model => model.TipoPlanoDeConta) %>
+        </div>
+        <br />
         <p>
             <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.editar %>" />
         </p>

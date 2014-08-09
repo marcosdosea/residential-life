@@ -20,9 +20,6 @@
             <%: Models.App_GlobalResources.Mensagem.tipoPlanoDeConta %>
         </th>
         <th>
-            <%: Models.App_GlobalResources.Mensagem.descricao %>
-        </th>
-        <th>
             <%: Models.App_GlobalResources.Mensagem.opcoes %>
         </th>
     </tr>
@@ -30,18 +27,15 @@
 <% foreach (var item in Model) { %>
     <tr>
         <td>
-            <%: Html.DisplayFor(modelItem => item.DescricaoPlanoDeConta)%>
+            <%: Html.DisplayFor(modelItem => item.Descricao)%>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.TipoPlanoDeConta)%>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.Descricao) %>
-        </td>
-        <td>
-            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editar , "Edit", new {  id = item.IdTipoPlanoDeConta }) %> |
-            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdTipoPlanoDeConta })%> |
-            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdTipoPlanoDeConta })%>
+            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editar , "Edit", new {  id = item.IdGrupoPlanoDeConta }) %> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdGrupoPlanoDeConta })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdGrupoPlanoDeConta })%>
         </td>
     </tr>
 <% } %>

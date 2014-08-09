@@ -14,13 +14,24 @@
     <fieldset>
         <legend>
             <%: Models.App_GlobalResources.Mensagem.planoDeConta %></legend>
+        <% using (Html.BeginForm("Create", "PlanoDeConta", FormMethod.Post, null))
+           { %>
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.DescricaoGrupoPlanoContas)%>
+        </div>
+        <div class="editor-field">
+            <%: Html.DropDownList("IdGrupoPlanoDeConta", null, "Selecione", new { onchange = "this.form.submit();" })%>
+            <%: Html.ValidationMessageFor(model => model.IdGrupoPlanoDeConta)%>
+        </div>
+        <% } %>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Descricao) %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.Descricao) %>
+            <%: Html.TextBoxFor(model => model.Descricao, new { style = "width:350px;", MaxLength = 150 })%>
             <%: Html.ValidationMessageFor(model => model.Descricao) %>
         </div>
+        <br />
         <p>
             <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
         </p>

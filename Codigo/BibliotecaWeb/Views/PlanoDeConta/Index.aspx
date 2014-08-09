@@ -13,8 +13,11 @@
 </p>
 <table id="table">
     <tr>
-        <th>
+        <th style="width:450px;">
             <%: Models.App_GlobalResources.Mensagem.descricao %>
+        </th>
+        <th>
+            <%: Models.App_GlobalResources.Mensagem.grupoPlanoDeContas %>
         </th>
         <th>
             <%: Models.App_GlobalResources.Mensagem.opcoes %>
@@ -25,6 +28,9 @@
     <tr>
         <td>
             <%: Html.DisplayFor(modelItem => item.Descricao) %>
+        </td>
+        <td>
+            <%: Html.DisplayFor(modelItem => item.DescricaoGrupoPlanoContas) %>
         </td>
         <td>
             <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editar , "Edit", new {  id = item.IdPlanoDeConta }) %> |

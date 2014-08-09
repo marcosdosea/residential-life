@@ -15,6 +15,10 @@
     <div class="display-field">
         <%: Html.DisplayFor(model => model.Descricao) %>
     </div>
+    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.grupoPlanoDeContas %></div>
+    <div class="display-field">
+        <%: Html.DisplayFor(model => model.DescricaoGrupoPlanoContas) %>
+    </div>
 </fieldset>
 <p>
     <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editar, "Edit", new {  id = Model.IdPlanoDeConta}) %> |

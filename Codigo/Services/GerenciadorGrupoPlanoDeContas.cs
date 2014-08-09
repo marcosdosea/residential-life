@@ -41,7 +41,7 @@ namespace Services
             Atribuir(grupoModel, grupoE);
             unitOfWork.RepositorioGrupoPlanoContas.Inserir(grupoE);
             unitOfWork.Commit(shared);
-            return grupoE.IdTipoPlanoDeConta;
+            return grupoE.IdGrupoPlanoDeConta;
         }
 
         /// <summary>
@@ -60,9 +60,9 @@ namespace Services
         /// Remove da base de dados
         /// </summary>
         /// <param name="idTipoPlanoDeConta"> </param>
-        public void Remover(int idTipoPlanoDeConta)
+        public void Remover(int idGrupoPlanoDeConta)
         {
-            unitOfWork.RepositorioGrupoPlanoContas.Remover(gp => gp.IdTipoPlanoDeConta == idTipoPlanoDeConta);
+            unitOfWork.RepositorioGrupoPlanoContas.Remover(gp => gp.IdGrupoPlanoDeConta == idGrupoPlanoDeConta);
             unitOfWork.Commit(shared);
         }
 
@@ -77,13 +77,9 @@ namespace Services
             var query = from grupoPlanoDeConta in tb_grupoplanocontas
                         select new GrupoPlanoDeContasModel
                         {
-                            IdTipoPlanoDeConta = grupoPlanoDeConta.IdTipoPlanoDeConta,
-                            IdPlanoDeConta = grupoPlanoDeConta.IdPlanoDeConta,
-                            TipoPlanoDeConta = grupoPlanoDeConta.TipoPlanoDeConta,
-                            Descricao = grupoPlanoDeConta.Descricao,
-
-                            DescricaoPlanoDeConta = grupoPlanoDeConta.tb_planodeconta.Descricao
-
+                            IdGrupoPlanoDeConta = grupoPlanoDeConta.IdGrupoPlanoDeConta,
+                            TipoPlanoDeConta = (grupoPlanoDeConta.TipoPlanoDeConta == "Receita" ? ListaTipoPlanoConta.Receita : ListaTipoPlanoConta.Despesa),
+                            Descricao = grupoPlanoDeConta.Descricao
                         };
             return query;
         }
@@ -103,9 +99,9 @@ namespace Services
         /// </summary>
         /// <param name="idTipoPlanoDeConta">Identificador da entidade na base de dados</param>
         /// <returns>GrupoPlanoDeContasModel</returns>
-        public GrupoPlanoDeContasModel Obter(int idTipoPlanoDeConta)
+        public GrupoPlanoDeContasModel Obter(int idGrupoPlanoDeConta)
         {
-            IEnumerable<GrupoPlanoDeContasModel> grupoE = GetQuery().Where(gp => gp.IdTipoPlanoDeConta == idTipoPlanoDeConta);
+            IEnumerable<GrupoPlanoDeContasModel> grupoE = GetQuery().Where(gp => gp.IdGrupoPlanoDeConta == idGrupoPlanoDeConta);
             return grupoE.ElementAtOrDefault(0);
         }
 
@@ -116,10 +112,9 @@ namespace Services
         /// <param name="grupoE">Entity mapeada da base de dados</param>
         private void Atribuir(GrupoPlanoDeContasModel grupoModel, tb_grupoplanocontas grupoE)
         {
-            grupoE.IdTipoPlanoDeConta = grupoModel.IdTipoPlanoDeConta;
-            grupoE.IdPlanoDeConta = grupoModel.IdPlanoDeConta;
+            grupoE.IdGrupoPlanoDeConta = grupoModel.IdGrupoPlanoDeConta;
+            grupoE.TipoPlanoDeConta = grupoModel.TipoPlanoDeConta.ToString();
             grupoE.Descricao = grupoModel.Descricao;
-            grupoE.TipoPlanoDeConta = grupoModel.TipoPlanoDeConta;
         }
     }
 }
