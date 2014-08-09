@@ -9,7 +9,7 @@
 <h2><%: Models.App_GlobalResources.Mensagem.alocar_pessoa_moradia %></h2>
 
 <p>
-    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.alocar, "Create")%>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.alocar, "Create")%> &nbsp <%: Html.ActionLink("Gerar Relatório", "ReportPessoaMoradia")%>
 </p>
 <table id="table">
     <tr>

@@ -299,6 +299,7 @@
     <EmbeddedResource Include="Relatorios\ReportListaReservasPorData.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportListaVeiculos.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportListaVeiculosPorPessoa.rdlc" />
+    <EmbeddedResource Include="Relatorios\ReportPessoaMoradia.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportVotosEnquete.rdlc" />
     <EmbeddedResource Include="Relatorios\RepostListaPessoasPorEstado.rdlc" />
   </ItemGroup>
