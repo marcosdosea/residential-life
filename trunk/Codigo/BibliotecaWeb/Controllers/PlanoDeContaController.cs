@@ -7,10 +7,12 @@ namespace BibliotecaWeb
     public class PlanoDeContaController : Controller
     {
         private GerenciadorPlanoDeConta gPlanoDeConta;
+        private GerenciadorGrupoPlanoDeContas gGrupoPlanoDeContas;
 
         public PlanoDeContaController()
         {
             gPlanoDeConta = new GerenciadorPlanoDeConta();
+            gGrupoPlanoDeContas = new GerenciadorGrupoPlanoDeContas();
         }
         //
         // GET: /planoDeConta/
@@ -34,6 +36,7 @@ namespace BibliotecaWeb
 
         public ActionResult Create()
         {
+            ViewBag.IdGrupoPlanoDeConta = new SelectList(gGrupoPlanoDeContas.ObterTodos(), "IdGrupoPlanoDeConta", "Descricao");
             return View();
         }
 
@@ -48,6 +51,7 @@ namespace BibliotecaWeb
                 gPlanoDeConta.Inserir(planoDeConta);
                 return RedirectToAction("Index");
             }
+            ViewBag.IdGrupoPlanoDeConta = new SelectList(gGrupoPlanoDeContas.ObterTodos(), "IdGrupoPlanoDeConta", "Descricao", planoDeConta.IdGrupoPlanoDeConta);
             return View(planoDeConta);
         }
 
@@ -57,6 +61,7 @@ namespace BibliotecaWeb
         public ActionResult Edit(int id)
         {
             PlanoDeContaModel planoDeConta = gPlanoDeConta.Obter(id);
+            ViewBag.IdGrupoPlanoDeConta = new SelectList(gGrupoPlanoDeContas.ObterTodos(), "IdGrupoPlanoDeConta", "Descricao", planoDeConta.IdGrupoPlanoDeConta);
             return View(planoDeConta);
         }
 
@@ -71,6 +76,7 @@ namespace BibliotecaWeb
                 gPlanoDeConta.Editar(planoDeConta);
                 return RedirectToAction("Index");
             }
+            ViewBag.IdGrupoPlanoDeConta = new SelectList(gGrupoPlanoDeContas.ObterTodos(), "IdGrupoPlanoDeConta", "Descricao", planoDeConta.IdGrupoPlanoDeConta);
             return View(planoDeConta);
         }
 

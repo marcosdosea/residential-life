@@ -16,6 +16,11 @@
         <div class="display-field">
             <%: Html.DisplayFor(model => model.Descricao) %>
         </div>
+        <div class="display-label">
+            <%: Models.App_GlobalResources.Mensagem.grupoPlanoDeContas %></div>
+        <div class="display-field">
+            <%: Html.DisplayFor(model => model.DescricaoGrupoPlanoContas) %>
+        </div>
     </fieldset>
     <% using (Html.BeginForm())
        { %>

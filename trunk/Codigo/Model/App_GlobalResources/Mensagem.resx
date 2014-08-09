@@ -762,4 +762,7 @@
   <data name="statusEnquente" xml:space="preserve">
     <value>Status da Enquente</value>
   </data>
+  <data name="descricaoGrupoPlanoContas" xml:space="preserve">
+    <value>Descrição do Grupo de Plano de Contas</value>
+  </data>
 </root>

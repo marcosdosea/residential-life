@@ -36,7 +36,6 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Enquete_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_enquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_enquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_OpcoesEnquete_TB_Enquete1", "tb_enquete", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_enquete), "tb_opcoesenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_opcoesenquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_votoenquete_tb_enquete1", "tb_enquete", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_enquete), "tb_votoenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_votoenquete), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "tb_grupoplanocontas_tb_planodeconta1", "tb_planodeconta", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_planodeconta), "tb_grupoplanocontas", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_grupoplanocontas), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_movimentacaofinanceira_tb_moradia1", "tb_moradia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_moradia), "tb_movimentacaofinanceira", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_movimentacaofinanceira), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Pessoa1_TB_Moradia1", "tb_moradia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_moradia), "tb_pessoamoradia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoamoradia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_veiculo_tb_moradia1", "tb_moradia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_moradia), "tb_veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_veiculo), true)]
@@ -54,6 +53,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_VotoEnquete_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_votoenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_votoenquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1", "tb_pontuacao", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pontuacao), "tb_pontuacaopessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pontuacaopessoa), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_perfilpessoa", "my_aspnet_roles", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.my_aspnet_roles), "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoa))]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_planodeconta_tb_grupoplanocontas1", "tb_grupoplanocontas", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_grupoplanocontas), "tb_planodeconta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_planodeconta), true)]
 
 #endregion
 
@@ -380,22 +380,6 @@ namespace Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<tb_grupoplanocontas> tb_grupoplanocontas
-        {
-            get
-            {
-                if ((_tb_grupoplanocontas == null))
-                {
-                    _tb_grupoplanocontas = base.CreateObjectSet<tb_grupoplanocontas>("tb_grupoplanocontas");
-                }
-                return _tb_grupoplanocontas;
-            }
-        }
-        private ObjectSet<tb_grupoplanocontas> _tb_grupoplanocontas;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<tb_moradia> tb_moradia
         {
             get
@@ -632,6 +616,22 @@ namespace Models
             }
         }
         private ObjectSet<tb_votoenquete> _tb_votoenquete;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_grupoplanocontas> tb_grupoplanocontas
+        {
+            get
+            {
+                if ((_tb_grupoplanocontas == null))
+                {
+                    _tb_grupoplanocontas = base.CreateObjectSet<tb_grupoplanocontas>("tb_grupoplanocontas");
+                }
+                return _tb_grupoplanocontas;
+            }
+        }
+        private ObjectSet<tb_grupoplanocontas> _tb_grupoplanocontas;
 
         #endregion
 
@@ -774,14 +774,6 @@ namespace Models
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the tb_grupoplanocontas EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddTotb_grupoplanocontas(tb_grupoplanocontas tb_grupoplanocontas)
-        {
-            base.AddObject("tb_grupoplanocontas", tb_grupoplanocontas);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the tb_moradia EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddTotb_moradia(tb_moradia tb_moradia)
@@ -899,6 +891,14 @@ namespace Models
         public void AddTotb_votoenquete(tb_votoenquete tb_votoenquete)
         {
             base.AddObject("tb_votoenquete", tb_votoenquete);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_grupoplanocontas EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_grupoplanocontas(tb_grupoplanocontas tb_grupoplanocontas)
+        {
+            base.AddObject("tb_grupoplanocontas", tb_grupoplanocontas);
         }
 
         #endregion
@@ -4725,17 +4725,15 @@ namespace Models
         /// <summary>
         /// Create a new tb_grupoplanocontas object.
         /// </summary>
-        /// <param name="idTipoPlanoDeConta">Initial value of the IdTipoPlanoDeConta property.</param>
+        /// <param name="idGrupoPlanoDeConta">Initial value of the IdGrupoPlanoDeConta property.</param>
         /// <param name="tipoPlanoDeConta">Initial value of the TipoPlanoDeConta property.</param>
         /// <param name="descricao">Initial value of the Descricao property.</param>
-        /// <param name="idPlanoDeConta">Initial value of the IdPlanoDeConta property.</param>
-        public static tb_grupoplanocontas Createtb_grupoplanocontas(global::System.Int32 idTipoPlanoDeConta, global::System.String tipoPlanoDeConta, global::System.String descricao, global::System.Int32 idPlanoDeConta)
+        public static tb_grupoplanocontas Createtb_grupoplanocontas(global::System.Int32 idGrupoPlanoDeConta, global::System.String tipoPlanoDeConta, global::System.String descricao)
         {
             tb_grupoplanocontas tb_grupoplanocontas = new tb_grupoplanocontas();
-            tb_grupoplanocontas.IdTipoPlanoDeConta = idTipoPlanoDeConta;
+            tb_grupoplanocontas.IdGrupoPlanoDeConta = idGrupoPlanoDeConta;
             tb_grupoplanocontas.TipoPlanoDeConta = tipoPlanoDeConta;
             tb_grupoplanocontas.Descricao = descricao;
-            tb_grupoplanocontas.IdPlanoDeConta = idPlanoDeConta;
             return tb_grupoplanocontas;
         }
 
@@ -4748,27 +4746,27 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 IdTipoPlanoDeConta
+        public global::System.Int32 IdGrupoPlanoDeConta
         {
             get
             {
-                return _IdTipoPlanoDeConta;
+                return _IdGrupoPlanoDeConta;
             }
             set
             {
-                if (_IdTipoPlanoDeConta != value)
+                if (_IdGrupoPlanoDeConta != value)
                 {
-                    OnIdTipoPlanoDeContaChanging(value);
-                    ReportPropertyChanging("IdTipoPlanoDeConta");
-                    _IdTipoPlanoDeConta = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdTipoPlanoDeConta");
-                    OnIdTipoPlanoDeContaChanged();
+                    OnIdGrupoPlanoDeContaChanging(value);
+                    ReportPropertyChanging("IdGrupoPlanoDeConta");
+                    _IdGrupoPlanoDeConta = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdGrupoPlanoDeConta");
+                    OnIdGrupoPlanoDeContaChanged();
                 }
             }
         }
-        private global::System.Int32 _IdTipoPlanoDeConta;
-        partial void OnIdTipoPlanoDeContaChanging(global::System.Int32 value);
-        partial void OnIdTipoPlanoDeContaChanged();
+        private global::System.Int32 _IdGrupoPlanoDeConta;
+        partial void OnIdGrupoPlanoDeContaChanging(global::System.Int32 value);
+        partial void OnIdGrupoPlanoDeContaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -4817,30 +4815,6 @@ namespace Models
         private global::System.String _Descricao;
         partial void OnDescricaoChanging(global::System.String value);
         partial void OnDescricaoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdPlanoDeConta
-        {
-            get
-            {
-                return _IdPlanoDeConta;
-            }
-            set
-            {
-                OnIdPlanoDeContaChanging(value);
-                ReportPropertyChanging("IdPlanoDeConta");
-                _IdPlanoDeConta = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdPlanoDeConta");
-                OnIdPlanoDeContaChanged();
-            }
-        }
-        private global::System.Int32 _IdPlanoDeConta;
-        partial void OnIdPlanoDeContaChanging(global::System.Int32 value);
-        partial void OnIdPlanoDeContaChanged();
 
         #endregion
 
@@ -4853,34 +4827,18 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_grupoplanocontas_tb_planodeconta1", "tb_planodeconta")]
-        public tb_planodeconta tb_planodeconta
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_planodeconta_tb_grupoplanocontas1", "tb_planodeconta")]
+        public EntityCollection<tb_planodeconta> tb_planodeconta
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_planodeconta>("residentialbdModel.tb_grupoplanocontas_tb_planodeconta1", "tb_planodeconta").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_planodeconta>("residentialbdModel.tb_grupoplanocontas_tb_planodeconta1", "tb_planodeconta").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<tb_planodeconta> tb_planodecontaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_planodeconta>("residentialbdModel.tb_grupoplanocontas_tb_planodeconta1", "tb_planodeconta");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_planodeconta>("residentialbdModel.fk_tb_planodeconta_tb_grupoplanocontas1", "tb_planodeconta");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_planodeconta>("residentialbdModel.tb_grupoplanocontas_tb_planodeconta1", "tb_planodeconta", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_planodeconta>("residentialbdModel.fk_tb_planodeconta_tb_grupoplanocontas1", "tb_planodeconta", value);
                 }
             }
         }
@@ -7121,11 +7079,13 @@ namespace Models
         /// </summary>
         /// <param name="idPlanoDeConta">Initial value of the IdPlanoDeConta property.</param>
         /// <param name="descricao">Initial value of the Descricao property.</param>
-        public static tb_planodeconta Createtb_planodeconta(global::System.Int32 idPlanoDeConta, global::System.String descricao)
+        /// <param name="idTipoPlanoDeConta">Initial value of the IdTipoPlanoDeConta property.</param>
+        public static tb_planodeconta Createtb_planodeconta(global::System.Int32 idPlanoDeConta, global::System.String descricao, global::System.Int32 idTipoPlanoDeConta)
         {
             tb_planodeconta tb_planodeconta = new tb_planodeconta();
             tb_planodeconta.IdPlanoDeConta = idPlanoDeConta;
             tb_planodeconta.Descricao = descricao;
+            tb_planodeconta.IdTipoPlanoDeConta = idTipoPlanoDeConta;
             return tb_planodeconta;
         }
 
@@ -7183,33 +7143,35 @@ namespace Models
         private global::System.String _Descricao;
         partial void OnDescricaoChanging(global::System.String value);
         partial void OnDescricaoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdTipoPlanoDeConta
+        {
+            get
+            {
+                return _IdTipoPlanoDeConta;
+            }
+            set
+            {
+                OnIdTipoPlanoDeContaChanging(value);
+                ReportPropertyChanging("IdTipoPlanoDeConta");
+                _IdTipoPlanoDeConta = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdTipoPlanoDeConta");
+                OnIdTipoPlanoDeContaChanged();
+            }
+        }
+        private global::System.Int32 _IdTipoPlanoDeConta;
+        partial void OnIdTipoPlanoDeContaChanging(global::System.Int32 value);
+        partial void OnIdTipoPlanoDeContaChanged();
 
         #endregion
 
     
         #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_grupoplanocontas_tb_planodeconta1", "tb_grupoplanocontas")]
-        public EntityCollection<tb_grupoplanocontas> tb_grupoplanocontas
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_grupoplanocontas>("residentialbdModel.tb_grupoplanocontas_tb_planodeconta1", "tb_grupoplanocontas");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_grupoplanocontas>("residentialbdModel.tb_grupoplanocontas_tb_planodeconta1", "tb_grupoplanocontas", value);
-                }
-            }
-        }
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -7229,6 +7191,44 @@ namespace Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.TB_MovimentacaoFinanceira_TB_PlanoDeConta1", "tb_movimentacaofinanceira", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_planodeconta_tb_grupoplanocontas1", "tb_grupoplanocontas")]
+        public tb_grupoplanocontas tb_grupoplanocontas
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_grupoplanocontas>("residentialbdModel.fk_tb_planodeconta_tb_grupoplanocontas1", "tb_grupoplanocontas").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_grupoplanocontas>("residentialbdModel.fk_tb_planodeconta_tb_grupoplanocontas1", "tb_grupoplanocontas").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<tb_grupoplanocontas> tb_grupoplanocontasReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_grupoplanocontas>("residentialbdModel.fk_tb_planodeconta_tb_grupoplanocontas1", "tb_grupoplanocontas");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_grupoplanocontas>("residentialbdModel.fk_tb_planodeconta_tb_grupoplanocontas1", "tb_grupoplanocontas", value);
                 }
             }
         }

@@ -14,17 +14,12 @@
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.descricaoPlanoDeConta %></div>
     <div class="display-field">
-        <%: Html.DisplayFor(model => model.DescricaoPlanoDeConta) %>
+        <%: Html.DisplayFor(model => model.Descricao) %>
     </div>
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.tipoPlanoDeConta %></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.TipoPlanoDeConta) %>
-    </div>
-
-    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.descricao %></div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.Descricao) %>
     </div>
 
 </fieldset>

@@ -82,7 +82,9 @@ namespace Services
                         select new PlanoDeContaModel
                         {
                             IdPlanoDeConta = planoDeConta.IdPlanoDeConta,
-                            Descricao = planoDeConta.Descricao
+                            Descricao = planoDeConta.Descricao,
+                            IdGrupoPlanoDeConta = planoDeConta.tb_grupoplanocontas.IdGrupoPlanoDeConta,
+                            DescricaoGrupoPlanoContas = planoDeConta.tb_grupoplanocontas.Descricao
                         };
             return query;
         }
@@ -118,6 +120,7 @@ namespace Services
         {
             planoDeContaE.IdPlanoDeConta = planoDeContaModel.IdPlanoDeConta;
             planoDeContaE.Descricao = planoDeContaModel.Descricao;
+            planoDeContaE.IdTipoPlanoDeConta = planoDeContaModel.IdGrupoPlanoDeConta;
         }
     }
 }

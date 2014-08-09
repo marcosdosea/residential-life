@@ -3,28 +3,21 @@ using Models.App_GlobalResources;
 
 namespace Models
 {
+    public enum ListaTipoPlanoConta { Receita = 0, Despesa = 1 }
+
     public class GrupoPlanoDeContasModel
     {
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
         [Display(Name = "codigo", ResourceType = typeof(Mensagem))]
-        public int IdTipoPlanoDeConta { get; set; }
-
-        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
-        [Display(Name = "codigo", ResourceType = typeof(Mensagem))]
-        public int IdPlanoDeConta { get; set; }
-
-        [Display(Name = "descricaoPlanoDeConta", ResourceType = typeof(Mensagem))]
-        [StringLength(500)]
-        public string DescricaoPlanoDeConta { get; set; }
+        public int IdGrupoPlanoDeConta { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
         [Display(Name = "tipoPlanoDeConta", ResourceType = typeof(Mensagem))]
-        [StringLength(50)]
-        public string TipoPlanoDeConta { get; set; }
+        public ListaTipoPlanoConta TipoPlanoDeConta { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
-        [Display(Name = "descricao", ResourceType = typeof(Mensagem))]
-        [StringLength(50)]
+        [Display(Name = "descricaoGrupoPlanoContas", ResourceType = typeof(Mensagem))]
+        [StringLength(100)]
         public string Descricao { get; set; }
 
     }
