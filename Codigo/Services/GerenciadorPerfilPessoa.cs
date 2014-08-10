@@ -1,13 +1,12 @@
-﻿using Models;
-using Persistence;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Models;
+using Persistence;
 
 namespace Services
 {
     public class GerenciadorPerfilPessoa
     {
-        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -31,49 +30,99 @@ namespace Services
             shared = true;
         }
 
-        /*
-        public void InserirPerfilPessoa(PerfilPessoaModel perfilPessoa)
+        /// <summary>
+        /// Insere um novo na base de dados
+        /// </summary>
+        /// <param name="perfilPessoa">Dados do modelo</param>
+        /// <returns>Chave identificante na base</returns>
+        public void Inserir(PerfilPessoaModel perfilPessoa)
         {
-            tb_pessoa _tb_pessoa = unitOfWork.RepositorioPessoa.ObterEntidade(p => p.IdPessoa == perfilPessoa.IdPessoa);
-            my_aspnet_roles _perfil = unitOfWork.RepositorioPerfil.ObterEntidade(p => p.id == perfilPessoa.IdPerfil);
-            _tb_pessoa.my_aspnet_roles.Add(_perfil);
+            tb_perfilpessoa perfilPessoaE = new tb_perfilpessoa();
+            Atribuir(perfilPessoa, perfilPessoaE);
+            unitOfWork.RepositorioPerfilPessoa.Inserir(perfilPessoaE);
             unitOfWork.Commit(shared);
         }
 
-        
-        public void RemoverPerfilPessoa(PerfilPessoaModel perfilPessoa)
+        /// <summary>
+        /// Altera dados na base de dados
+        /// </summary>
+        /// <param name="perfilPessoa">Dados do modelo</param>
+        public void Editar(PerfilPessoaModel perfilPessoa)
         {
-            tb_pessoa _tb_pessoa = unitOfWork.RepositorioPessoa.ObterEntidade(p => p.IdPessoa == perfilPessoa.IdPessoa);
-            my_aspnet_roles _perfil = unitOfWork.RepositorioPerfil.ObterEntidade(p => p.id == perfilPessoa.IdPerfil);
-            _tb_pessoa.my_aspnet_roles.Remove(_perfil);
+            tb_perfilpessoa perfilPessoaE = new tb_perfilpessoa();
+            Atribuir(perfilPessoa, perfilPessoaE);
+            unitOfWork.RepositorioPerfilPessoa.Editar(perfilPessoaE);
             unitOfWork.Commit(shared);
         }
 
-        
-        public IEnumerable<my_aspnet_roles> ObterPerfisPorPessoa(int idPessoa)
+        /// <summary>
+        /// Remove da base de dados
+        /// </summary>
+        /// <param name="idPerfil">Identificador do perfil na base de dados</param>
+        /// <param name="idPessoa">Identificador do pessoa na base de dados</param>
+        public void Remover(int idPerfil, int idPessoa)
         {
-            tb_pessoa _tb_pessoa = unitOfWork.RepositorioPessoa.ObterEntidade(p => p.IdPessoa.Equals(idPessoa));
-            var query = from perfil in _tb_pessoa.my_aspnet_roles
-                        select new my_aspnet_roles
+            unitOfWork.RepositorioPerfilPessoa.Remover(p => p.IdPerfil.Equals(idPerfil) && p.IdPessoa.Equals(idPessoa));
+            unitOfWork.Commit(shared);
+        }
+
+
+        /// <summary>
+        /// Consulta padrão para retornar dados do perfil como model
+        /// </summary>
+        /// <returns></returns>
+        private IQueryable<PerfilPessoaModel> GetQuery()
+        {
+            IQueryable<tb_perfilpessoa> tb_perfilpessoa = unitOfWork.RepositorioPerfilPessoa.GetQueryable();
+            var query = from perfilPessoa in tb_perfilpessoa
+                        select new PerfilPessoaModel
                         {
-                            id = perfil.id,
-                            name = perfil.name
+                            IdPerfil = perfilPessoa.IdPerfil,
+                            IdPessoa = perfilPessoa.IdPessoa,
+                            Ativo = perfilPessoa.Ativo,
+
+                            CPF = perfilPessoa.tb_pessoa.CPF,
+                            NomePessoa = perfilPessoa.tb_pessoa.Nome,
+                            RG = perfilPessoa.tb_pessoa.RG,
+
+                            Perfil = perfilPessoa.my_aspnet_roles.name
                         };
             return query;
         }
 
-        public IEnumerable<tb_pessoa> ObterPessoasPorPerfil(int idPerfil)
+
+        /// <summary>
+        /// Obter todos as entidades cadastradas
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<PerfilPessoaModel> ObterTodos()
         {
-            my_aspnet_roles _tb_perfil = unitOfWork.RepositorioPerfil.ObterEntidade(p => p.id.Equals(idPerfil));
-            var query = from pessoa in _tb_perfil.tb_pessoa
-                        select new tb_pessoa
-                        {
-                            IdPessoa = pessoa.IdPessoa,
-                            CPF = pessoa.CPF,
-                            Nome = pessoa.Nome,
-                            RG = pessoa.RG
-                        };
-            return query;
-        } */
+            return GetQuery();
+        }
+
+        /// <summary>
+        /// Obtém um perfil
+        /// </summary>
+        /// <param name="idPerfil">Identificador do perfil na base de dados</param>
+        /// <returns>Pontuacao model</returns>
+        public PerfilPessoaModel Obter(int idPerfil, int idPessoa)
+        {
+            IEnumerable<PerfilPessoaModel> perfilPessoaE = GetQuery().Where(p => p.IdPerfil.Equals(idPerfil) && 
+                p.IdPessoa.Equals(idPessoa));
+            return perfilPessoaE.ElementAtOrDefault(0);
+        }
+
+
+        /// <summary>
+        /// Atribui dados do Setor Model para o Setor Entity
+        /// </summary>
+        /// <param name="perfilPessoa">Objeto do modelo</param>
+        /// <param name="perfilPessoaE">Entity mapeada da base de dados</param>
+        private void Atribuir(PerfilPessoaModel perfilPessoa, tb_perfilpessoa perfilPessoaE)
+        {
+            perfilPessoaE.IdPerfil = perfilPessoa.IdPerfil;
+            perfilPessoaE.IdPessoa = perfilPessoa.IdPessoa;
+            perfilPessoaE.Ativo = perfilPessoaE.Ativo;
+        }
     }
 }
