@@ -88,6 +88,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OcorrenciaController.cs" />
     <Compile Include="Controllers\PlanoDeContaController.cs" />
+    <Compile Include="Controllers\PontuacaoController.cs" />
     <Compile Include="Controllers\PostagemController.cs" />
     <Compile Include="Controllers\ReservaAmbienteController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
@@ -214,6 +215,11 @@
     <Content Include="Views\PlanoDeConta\Details.aspx" />
     <Content Include="Views\PlanoDeConta\Edit.aspx" />
     <Content Include="Views\PlanoDeConta\Index.aspx" />
+    <Content Include="Views\Pontuacao\Create.aspx" />
+    <Content Include="Views\Pontuacao\Delete.aspx" />
+    <Content Include="Views\Pontuacao\Details.aspx" />
+    <Content Include="Views\Pontuacao\Edit.aspx" />
+    <Content Include="Views\Pontuacao\Index.aspx" />
     <Content Include="Views\Postagem\Create.aspx" />
     <Content Include="Views\Postagem\Delete.aspx" />
     <Content Include="Views\Postagem\Details.aspx" />

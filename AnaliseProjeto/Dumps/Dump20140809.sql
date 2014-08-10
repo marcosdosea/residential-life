@@ -177,7 +177,7 @@ CREATE TABLE `my_aspnet_sessioncleanup` (
 
 LOCK TABLES `my_aspnet_sessioncleanup` WRITE;
 /*!40000 ALTER TABLE `my_aspnet_sessioncleanup` DISABLE KEYS */;
-INSERT INTO `my_aspnet_sessioncleanup` VALUES ('2014-08-09 18:56:00',10,1);
+INSERT INTO `my_aspnet_sessioncleanup` VALUES ('2014-08-09 22:46:40',10,1);
 /*!40000 ALTER TABLE `my_aspnet_sessioncleanup` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -680,6 +680,7 @@ DROP TABLE IF EXISTS `tb_perfilpessoa`;
 CREATE TABLE `tb_perfilpessoa` (
   `IdPerfil` int(11) NOT NULL,
   `IdPessoa` int(11) NOT NULL,
+  `Ativo` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`IdPerfil`,`IdPessoa`),
   KEY `fk_tb_perfilpessoa_tb_pessoa1_idx` (`IdPessoa`),
   CONSTRAINT `fk_tb_perfilpessoa_my_aspnet_roles1` FOREIGN KEY (`IdPerfil`) REFERENCES `my_aspnet_roles` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -802,9 +803,9 @@ DROP TABLE IF EXISTS `tb_pontuacao`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_pontuacao` (
   `IdPontuacao` int(11) NOT NULL AUTO_INCREMENT,
-  `Pontuacao` enum('0','1','2','3','4','5','6','7','8','9','10') NOT NULL,
+  `Pontuacao` enum('Zero','Um','Dois','Tres','Quatro','Cinco','Seis','Sete','Oito','Nove','Dez') NOT NULL,
   PRIMARY KEY (`IdPontuacao`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -813,6 +814,7 @@ CREATE TABLE `tb_pontuacao` (
 
 LOCK TABLES `tb_pontuacao` WRITE;
 /*!40000 ALTER TABLE `tb_pontuacao` DISABLE KEYS */;
+INSERT INTO `tb_pontuacao` VALUES (4,'Zero');
 /*!40000 ALTER TABLE `tb_pontuacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1032,4 +1034,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-08-09 18:59:47
+-- Dump completed on 2014-08-09 22:57:01

@@ -33,6 +33,6 @@ namespace Persistence
         IRepositorioGenerico<tb_votoenquete> RepositorioVotoEnquete { get; }
         IRepositorioGenerico<tb_pontuacao> RepositorioPontuacao { get; }
         IRepositorioGenerico<tb_pontuacaopessoa> RepositorioPontuacaoPessoa { get; }
-        IRepositorioGenerico<my_aspnet_roles> RepositorioPerfil { get; }
+        IRepositorioGenerico<tb_perfilpessoa> RepositorioPerfilPessoa { get; }
     }
 }

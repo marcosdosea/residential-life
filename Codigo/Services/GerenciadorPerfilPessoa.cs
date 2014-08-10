@@ -7,7 +7,7 @@ namespace Services
 {
     public class GerenciadorPerfilPessoa
     {
-
+        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -31,6 +31,7 @@ namespace Services
             shared = true;
         }
 
+        /*
         public void InserirPerfilPessoa(PerfilPessoaModel perfilPessoa)
         {
             tb_pessoa _tb_pessoa = unitOfWork.RepositorioPessoa.ObterEntidade(p => p.IdPessoa == perfilPessoa.IdPessoa);
@@ -73,6 +74,6 @@ namespace Services
                             RG = pessoa.RG
                         };
             return query;
-        }
+        } */
     }
 }
