@@ -112,6 +112,17 @@ namespace Services
             return perfilPessoaE.ElementAtOrDefault(0);
         }
 
+        /// <summary>
+        /// Obtem todas as pessoas com perfil de funcionario ou profissional
+        /// </summary>
+        /// <returns>Lista com profissionais e funcionarios</returns>
+        public IEnumerable<PerfilPessoaModel> ObterProfissionaisEFuncionariosAtivos()
+        {
+            IEnumerable<PerfilPessoaModel> perfilPessoaE = GetQuery().Where(p => (p.IdPerfil.Equals(Global.IdPerfilProfissional) ||
+                p.IdPerfil.Equals(Global.IdPerfilFuncionario)) && p.Ativo == true);
+            return perfilPessoaE;
+        }
+
 
         /// <summary>
         /// Atribui dados do Setor Model para o Setor Entity

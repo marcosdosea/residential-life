@@ -1645,6 +1645,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Perfil.
+        /// </summary>
+        public static string perfil {
+            get {
+                return ResourceManager.GetString("perfil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Você está seguro que quer fazer isso?.
         /// </summary>
         public static string perguntaConfirmacao {
@@ -1695,6 +1704,33 @@ namespace Models.App_GlobalResources {
         public static string pontuacao {
             get {
                 return ResourceManager.GetString("pontuacao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pontuações.
+        /// </summary>
+        public static string pontuacoes {
+            get {
+                return ResourceManager.GetString("pontuacoes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pontuar.
+        /// </summary>
+        public static string pontuar {
+            get {
+                return ResourceManager.GetString("pontuar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pontuar Pessoa.
+        /// </summary>
+        public static string pontuarPessoa {
+            get {
+                return ResourceManager.GetString("pontuarPessoa", resourceCulture);
             }
         }
         
@@ -2136,6 +2172,15 @@ namespace Models.App_GlobalResources {
         public static string visualizarComentarios {
             get {
                 return ResourceManager.GetString("visualizarComentarios", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visualizar Pontuações.
+        /// </summary>
+        public static string visualizarPontuacoes {
+            get {
+                return ResourceManager.GetString("visualizarPontuacoes", resourceCulture);
             }
         }
         

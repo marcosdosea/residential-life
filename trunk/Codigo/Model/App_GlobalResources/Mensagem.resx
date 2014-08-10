@@ -816,4 +816,19 @@
   <data name="ativo" xml:space="preserve">
     <value>Ativo</value>
   </data>
+  <data name="perfil" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+  <data name="pontuacoes" xml:space="preserve">
+    <value>Pontuações</value>
+  </data>
+  <data name="pontuar" xml:space="preserve">
+    <value>Pontuar</value>
+  </data>
+  <data name="pontuarPessoa" xml:space="preserve">
+    <value>Pontuar Pessoa</value>
+  </data>
+  <data name="visualizarPontuacoes" xml:space="preserve">
+    <value>Visualizar Pontuações</value>
+  </data>
 </root>

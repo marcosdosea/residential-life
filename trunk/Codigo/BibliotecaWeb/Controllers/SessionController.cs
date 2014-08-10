@@ -4,11 +4,11 @@ namespace BibliotecaWeb
 {
     public class SessionController
     {
-        public static int Teste
+        public static string Teste
         {
             get
             {
-                return (int)HttpContext.Current.Session["_Teste"];
+                return (string)HttpContext.Current.Session["_Teste"];
             }
             set
             {

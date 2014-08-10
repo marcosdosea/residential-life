@@ -52,9 +52,9 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_ReservaAmbiente_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_reservaambiente), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Veiculo_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_veiculo), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_VotoEnquete_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_votoenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_votoenquete), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1", "tb_pontuacao", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pontuacao), "tb_pontuacaopessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pontuacaopessoa), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_perfilpessoa_my_aspnet_roles1", "my_aspnet_roles", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.my_aspnet_roles), "tb_perfilpessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_perfilpessoa), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_perfilpessoa_tb_pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_perfilpessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_perfilpessoa), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1", "tb_pontuacao", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pontuacao), "tb_pontuacaopessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pontuacaopessoa), true)]
 
 #endregion
 
@@ -509,22 +509,6 @@ namespace Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<tb_pontuacao> tb_pontuacao
-        {
-            get
-            {
-                if ((_tb_pontuacao == null))
-                {
-                    _tb_pontuacao = base.CreateObjectSet<tb_pontuacao>("tb_pontuacao");
-                }
-                return _tb_pontuacao;
-            }
-        }
-        private ObjectSet<tb_pontuacao> _tb_pontuacao;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<tb_pontuacaopessoa> tb_pontuacaopessoa
         {
             get
@@ -649,6 +633,22 @@ namespace Models
             }
         }
         private ObjectSet<tb_perfilpessoa> _tb_perfilpessoa;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_pontuacao> tb_pontuacao
+        {
+            get
+            {
+                if ((_tb_pontuacao == null))
+                {
+                    _tb_pontuacao = base.CreateObjectSet<tb_pontuacao>("tb_pontuacao");
+                }
+                return _tb_pontuacao;
+            }
+        }
+        private ObjectSet<tb_pontuacao> _tb_pontuacao;
 
         #endregion
 
@@ -855,14 +855,6 @@ namespace Models
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the tb_pontuacao EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddTotb_pontuacao(tb_pontuacao tb_pontuacao)
-        {
-            base.AddObject("tb_pontuacao", tb_pontuacao);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the tb_pontuacaopessoa EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddTotb_pontuacaopessoa(tb_pontuacaopessoa tb_pontuacaopessoa)
@@ -924,6 +916,14 @@ namespace Models
         public void AddTotb_perfilpessoa(tb_perfilpessoa tb_perfilpessoa)
         {
             base.AddObject("tb_perfilpessoa", tb_perfilpessoa);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_pontuacao EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_pontuacao(tb_pontuacao tb_pontuacao)
+        {
+            base.AddObject("tb_pontuacao", tb_pontuacao);
         }
 
         #endregion
@@ -7469,7 +7469,7 @@ namespace Models
         /// </summary>
         /// <param name="idPontuacao">Initial value of the IdPontuacao property.</param>
         /// <param name="pontuacao">Initial value of the Pontuacao property.</param>
-        public static tb_pontuacao Createtb_pontuacao(global::System.Int32 idPontuacao, global::System.String pontuacao)
+        public static tb_pontuacao Createtb_pontuacao(global::System.Int32 idPontuacao, global::System.Int32 pontuacao)
         {
             tb_pontuacao tb_pontuacao = new tb_pontuacao();
             tb_pontuacao.IdPontuacao = idPontuacao;
@@ -7513,7 +7513,7 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Pontuacao
+        public global::System.Int32 Pontuacao
         {
             get
             {
@@ -7523,13 +7523,13 @@ namespace Models
             {
                 OnPontuacaoChanging(value);
                 ReportPropertyChanging("Pontuacao");
-                _Pontuacao = StructuralObject.SetValidValue(value, false);
+                _Pontuacao = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("Pontuacao");
                 OnPontuacaoChanged();
             }
         }
-        private global::System.String _Pontuacao;
-        partial void OnPontuacaoChanging(global::System.String value);
+        private global::System.Int32 _Pontuacao;
+        partial void OnPontuacaoChanging(global::System.Int32 value);
         partial void OnPontuacaoChanged();
 
         #endregion

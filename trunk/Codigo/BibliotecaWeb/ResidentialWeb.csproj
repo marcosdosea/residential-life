@@ -89,6 +89,7 @@
     <Compile Include="Controllers\OcorrenciaController.cs" />
     <Compile Include="Controllers\PlanoDeContaController.cs" />
     <Compile Include="Controllers\PontuacaoController.cs" />
+    <Compile Include="Controllers\PontuarPessoaController.cs" />
     <Compile Include="Controllers\PostagemController.cs" />
     <Compile Include="Controllers\ReservaAmbienteController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
@@ -220,6 +221,13 @@
     <Content Include="Views\Pontuacao\Details.aspx" />
     <Content Include="Views\Pontuacao\Edit.aspx" />
     <Content Include="Views\Pontuacao\Index.aspx" />
+    <Content Include="Views\PontuarPessoa\Create.aspx" />
+    <Content Include="Views\PontuarPessoa\Delete.aspx" />
+    <Content Include="Views\PontuarPessoa\Details.aspx" />
+    <Content Include="Views\PontuarPessoa\Edit.aspx" />
+    <Content Include="Views\PontuarPessoa\Index.aspx" />
+    <Content Include="Views\PontuarPessoa\Pontuar.aspx" />
+    <Content Include="Views\PontuarPessoa\VisualizarPontuacoes.aspx" />
     <Content Include="Views\Postagem\Create.aspx" />
     <Content Include="Views\Postagem\Delete.aspx" />
     <Content Include="Views\Postagem\Details.aspx" />

@@ -32,7 +32,7 @@ namespace Persistence
         IRepositorioGenerico<tb_veiculo> RepositorioVeiculo { get; }
         IRepositorioGenerico<tb_votoenquete> RepositorioVotoEnquete { get; }
         IRepositorioGenerico<tb_pontuacao> RepositorioPontuacao { get; }
-        IRepositorioGenerico<tb_pontuacaopessoa> RepositorioPontuacaoPessoa { get; }
+        IRepositorioGenerico<tb_pontuacaopessoa> RepositorioPontuarPessoa { get; }
         IRepositorioGenerico<tb_perfilpessoa> RepositorioPerfilPessoa { get; }
     }
 }
