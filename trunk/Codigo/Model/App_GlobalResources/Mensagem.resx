@@ -813,4 +813,7 @@
   <data name="Zero" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="ativo" xml:space="preserve">
+    <value>Ativo</value>
+  </data>
 </root>
