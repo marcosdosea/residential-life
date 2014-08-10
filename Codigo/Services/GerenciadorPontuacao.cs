@@ -78,16 +78,7 @@ namespace Services
                         select new PontuacaoModel
                         {
                             IdPontuacao = pontuacao.IdPontuacao,
-                            Pontuacao = (pontuacao.Pontuacao == "Zero") ? Models.PontuacaoModel.ListaPontuacao.Zero :
-                                (pontuacao.Pontuacao == "Um") ? Models.PontuacaoModel.ListaPontuacao.Um : (pontuacao.Pontuacao == "Dois") ?
-                                Models.PontuacaoModel.ListaPontuacao.Dois : (pontuacao.Pontuacao == "Tres") ?
-                                Models.PontuacaoModel.ListaPontuacao.Tres : (pontuacao.Pontuacao == "Quatro") ?
-                                Models.PontuacaoModel.ListaPontuacao.Quatro : (pontuacao.Pontuacao == "Cinco") ?
-                                Models.PontuacaoModel.ListaPontuacao.Cinco : (pontuacao.Pontuacao == "Seis") ?
-                                Models.PontuacaoModel.ListaPontuacao.Seis : (pontuacao.Pontuacao == "Sete") ?
-                                Models.PontuacaoModel.ListaPontuacao.Sete : (pontuacao.Pontuacao == "Oito") ?
-                                Models.PontuacaoModel.ListaPontuacao.Oito : (pontuacao.Pontuacao == "Nove") ?
-                                Models.PontuacaoModel.ListaPontuacao.Nove : Models.PontuacaoModel.ListaPontuacao.Dez
+                            Pontuacao = pontuacao.Pontuacao
                         };
             return query;
         }
@@ -122,7 +113,7 @@ namespace Services
         private void Atribuir(PontuacaoModel pontuacaoModel, tb_pontuacao pontuacaoE)
         {
             pontuacaoE.IdPontuacao = pontuacaoModel.IdPontuacao;
-            pontuacaoE.Pontuacao = pontuacaoModel.Pontuacao.ToString();
+            pontuacaoE.Pontuacao = pontuacaoModel.Pontuacao;
         }
     }
 }

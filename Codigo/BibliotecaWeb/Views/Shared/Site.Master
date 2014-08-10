@@ -42,6 +42,7 @@
             <li><%: Html.ActionLink("Administradora", "Index", "Administradora")%></li>
             <li><%: Html.ActionLink("Postagens", "Index", "Postagem")%></li>
             <li><%: Html.ActionLink("Pontuação", "Index", "Pontuacao")%></li>
+            <li><%: Html.ActionLink("Pontuar Pessoa", "Index", "PontuarPessoa")%></li>
             <li><%: Html.ActionLink("About", "About", "Home")%></li>
 		</ul>
 	</div>

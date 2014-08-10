@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.PontuacaoModel>" %>
-<%@ Import Namespace="Model.Helpers" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     <%: Models.App_GlobalResources.Mensagem.pontuacao %>
 </asp:Content>
@@ -16,7 +16,7 @@
             <%: Html.LabelFor(model => model.Pontuacao) %>
         </div>
         <div class="editor-field">
-            <%: Html.EnumDropDownListFor(model => model.Pontuacao, Models.PontuacaoModel.ListaPontuacao.Zero)%>
+            <%: Html.TextBoxFor(model => model.Pontuacao)%>
             <%: Html.ValidationMessageFor(model => model.Pontuacao) %>
         </div>
     </fieldset>

@@ -41,7 +41,7 @@ namespace Persistence
         private IRepositorioGenerico<tb_veiculo> _repVeiculo;
         private IRepositorioGenerico<tb_votoenquete> _repVotoEnquete;
         private IRepositorioGenerico<tb_pontuacao> _repPontuacao;
-        private IRepositorioGenerico<tb_pontuacaopessoa> _repPontuacaoPessoa;
+        private IRepositorioGenerico<tb_pontuacaopessoa> _repPontuarPessoa;
         private IRepositorioGenerico<tb_perfilpessoa> _repPerfilPessoa;
 
         /// <summary>
@@ -394,15 +394,15 @@ namespace Persistence
         /// <summary>
         /// Repositório para manipular dados persistidos de administradora
         /// </summary>
-        public IRepositorioGenerico<tb_pontuacaopessoa> RepositorioPontuacaoPessoa
+        public IRepositorioGenerico<tb_pontuacaopessoa> RepositorioPontuarPessoa
         {
             get
             {
-                if (_repPontuacaoPessoa == null)
+                if (_repPontuarPessoa == null)
                 {
-                    _repPontuacaoPessoa = new RepositorioGenerico<tb_pontuacaopessoa>(_context);
+                    _repPontuarPessoa = new RepositorioGenerico<tb_pontuacaopessoa>(_context);
                 }
-                return _repPontuacaoPessoa;
+                return _repPontuarPessoa;
             }
         }
 
