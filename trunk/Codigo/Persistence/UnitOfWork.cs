@@ -42,7 +42,7 @@ namespace Persistence
         private IRepositorioGenerico<tb_votoenquete> _repVotoEnquete;
         private IRepositorioGenerico<tb_pontuacao> _repPontuacao;
         private IRepositorioGenerico<tb_pontuacaopessoa> _repPontuacaoPessoa;
-        private IRepositorioGenerico<my_aspnet_roles> _repPerfil;
+        private IRepositorioGenerico<tb_perfilpessoa> _repPerfilPessoa;
 
         /// <summary>
         /// Construtor cria contexto transacional
@@ -409,15 +409,15 @@ namespace Persistence
         /// <summary>
         /// Repositório para manipular dados persistidos de perfil
         /// </summary>
-        public IRepositorioGenerico<my_aspnet_roles> RepositorioPerfil
+        public IRepositorioGenerico<tb_perfilpessoa> RepositorioPerfilPessoa
         {
             get
             {
-                if (_repPerfil == null)
+                if (_repPerfilPessoa == null)
                 {
-                    _repPerfil = new RepositorioGenerico<my_aspnet_roles>(_context);
+                    _repPerfilPessoa = new RepositorioGenerico<tb_perfilpessoa>(_context);
                 }
-                return _repPerfil;
+                return _repPerfilPessoa;
             }
         }
 
