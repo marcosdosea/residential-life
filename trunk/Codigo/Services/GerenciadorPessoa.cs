@@ -162,6 +162,17 @@ namespace Services
         }
 
         /// <summary>
+        /// Obtem a partir do id do usuario logada uma pessoa
+        /// </summary>
+        /// <param name="idUser"></param>
+        /// <returns>Pessoa Logada no sistema</returns>
+        public PessoaModel ObterPessoaLogadaUser(string UserName)
+        {
+            IEnumerable<PessoaModel> pessoaE = GetQuery().Where(pessoaModel => pessoaModel.NomeUsuario == UserName);
+            return pessoaE.ElementAtOrDefault(0);
+        }
+
+        /// <summary>
         /// Atribui dados da Entidade Model para a Entidade Entity
         /// </summary>
         /// <param name="pessoaModel">Objeto do modelo</param>
