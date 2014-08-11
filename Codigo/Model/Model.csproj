@@ -70,7 +70,6 @@
     <Compile Include="Models\OpcoesEnqueteModel.cs" />
     <Compile Include="Models\PerfilPessoaModel.cs" />
     <Compile Include="Models\PlanoDeConta.cs" />
-    <Compile Include="Models\PontuacaoModel.cs" />
     <Compile Include="Models\PontuarPessoaModel.cs" />
     <Compile Include="Models\PostagemModel.cs" />
     <Compile Include="Models\OcorrenciaModel.cs" />

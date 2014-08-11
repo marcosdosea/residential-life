@@ -14,14 +14,12 @@ namespace BibliotecaWeb
     {
         private GerenciadorPontuarPessoa gPontuarPessoa;
         private GerenciadorPerfilPessoa gPerfilPessoa;
-        private GerenciadorPontuacao gPontuacao;
         private GerenciadorPessoa gPessoa;
 
         public PontuarPessoaController()
         {
             gPontuarPessoa = new GerenciadorPontuarPessoa();
             gPerfilPessoa = new GerenciadorPerfilPessoa();
-            gPontuacao = new GerenciadorPontuacao();
             gPessoa = new GerenciadorPessoa();
         }
         //
@@ -46,7 +44,6 @@ namespace BibliotecaWeb
             PontuarPessoaModel pontuarPessoa = new PontuarPessoaModel();
             pontuarPessoa.IdPessoa = idPessoa;
             pontuarPessoa.NomePessoa = gPessoa.Obter(idPessoa).Nome;
-            ViewBag.IdPontuacao = new SelectList(gPontuacao.ObterTodos(), "IdPontuacao", "Pontuacao");
             pontuarPessoa.Comentario = "";
             return View(pontuarPessoa);
         }
@@ -62,7 +59,6 @@ namespace BibliotecaWeb
                 gPontuarPessoa.Inserir(pontuarPessoa);
                 return RedirectToAction("Index");
             }
-            ViewBag.IdPontuacao = new SelectList(gPontuacao.ObterTodos(), "IdPontuacao", "Pontuacao", pontuarPessoa.IdPontuacao);
             return View(pontuarPessoa);
         }
     }

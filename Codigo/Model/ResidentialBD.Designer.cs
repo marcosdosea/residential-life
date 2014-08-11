@@ -19,12 +19,11 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
+[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_perfilpessoa_my_aspnet_roles1", "my_aspnet_roles", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.my_aspnet_roles), "tb_perfilpessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_perfilpessoa), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_pessoa_my_aspnet_users1", "my_aspnet_users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.my_aspnet_users), "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoa), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_acessocondominio_tb_condominio1", "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_condominio), "tb_acessocondominio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_acessocondominio), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_acessocondominio_tb_pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_acessocondominio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_acessocondominio), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_acessoveiculo_tb_veiculo1", "tb_veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_veiculo), "tb_acessoveiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_acessoveiculo), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "tb_condominio_tb_administradora1", "tb_administradora", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_administradora), "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_condominio), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "TB_MovimentacaoFinanceira_TB_Administradora1", "tb_administradora", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_administradora), "tb_movimentacaofinanceira", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_movimentacaofinanceira), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Espaco_TB_Condominio1", "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_condominio), "tb_areapublica", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_areapublica), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_reservaambiente_tb_areapublica1", "tb_areapublica", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_areapublica), "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_reservaambiente), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Atendimento_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_atendimento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_atendimento), true)]
@@ -44,6 +43,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_movimentacaofinanceira_tb_reservaambiente1", "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_reservaambiente), "tb_movimentacaofinanceira", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_movimentacaofinanceira), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Ocorrencia_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_ocorrencia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_VotoEnquete_TB_OpcoesEnquete1", "tb_opcoesenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_opcoesenquete), "tb_votoenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_votoenquete), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_perfilpessoa_tb_pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_perfilpessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_perfilpessoa), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_pessoa_tb_setor1", "tb_setor", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_setor), "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoa), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_pontuacaopessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pontuacaopessoa), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Pessoa1_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_pessoamoradia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoamoradia), true)]
@@ -52,9 +52,6 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_ReservaAmbiente_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_reservaambiente), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Veiculo_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_veiculo), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_VotoEnquete_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_votoenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_votoenquete), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_perfilpessoa_my_aspnet_roles1", "my_aspnet_roles", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.my_aspnet_roles), "tb_perfilpessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_perfilpessoa), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_perfilpessoa_tb_pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_perfilpessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_perfilpessoa), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1", "tb_pontuacao", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pontuacao), "tb_pontuacaopessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pontuacaopessoa), true)]
 
 #endregion
 
@@ -269,22 +266,6 @@ namespace Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<tb_administradora> tb_administradora
-        {
-            get
-            {
-                if ((_tb_administradora == null))
-                {
-                    _tb_administradora = base.CreateObjectSet<tb_administradora>("tb_administradora");
-                }
-                return _tb_administradora;
-            }
-        }
-        private ObjectSet<tb_administradora> _tb_administradora;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<tb_areapublica> tb_areapublica
         {
             get
@@ -461,6 +442,22 @@ namespace Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<tb_perfilpessoa> tb_perfilpessoa
+        {
+            get
+            {
+                if ((_tb_perfilpessoa == null))
+                {
+                    _tb_perfilpessoa = base.CreateObjectSet<tb_perfilpessoa>("tb_perfilpessoa");
+                }
+                return _tb_perfilpessoa;
+            }
+        }
+        private ObjectSet<tb_perfilpessoa> _tb_perfilpessoa;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<tb_pessoa> tb_pessoa
         {
             get
@@ -617,38 +614,6 @@ namespace Models
             }
         }
         private ObjectSet<tb_votoenquete> _tb_votoenquete;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<tb_perfilpessoa> tb_perfilpessoa
-        {
-            get
-            {
-                if ((_tb_perfilpessoa == null))
-                {
-                    _tb_perfilpessoa = base.CreateObjectSet<tb_perfilpessoa>("tb_perfilpessoa");
-                }
-                return _tb_perfilpessoa;
-            }
-        }
-        private ObjectSet<tb_perfilpessoa> _tb_perfilpessoa;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<tb_pontuacao> tb_pontuacao
-        {
-            get
-            {
-                if ((_tb_pontuacao == null))
-                {
-                    _tb_pontuacao = base.CreateObjectSet<tb_pontuacao>("tb_pontuacao");
-                }
-                return _tb_pontuacao;
-            }
-        }
-        private ObjectSet<tb_pontuacao> _tb_pontuacao;
 
         #endregion
 
@@ -732,14 +697,6 @@ namespace Models
         public void AddTotb_acessoveiculo(tb_acessoveiculo tb_acessoveiculo)
         {
             base.AddObject("tb_acessoveiculo", tb_acessoveiculo);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the tb_administradora EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddTotb_administradora(tb_administradora tb_administradora)
-        {
-            base.AddObject("tb_administradora", tb_administradora);
         }
     
         /// <summary>
@@ -831,6 +788,14 @@ namespace Models
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the tb_perfilpessoa EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_perfilpessoa(tb_perfilpessoa tb_perfilpessoa)
+        {
+            base.AddObject("tb_perfilpessoa", tb_perfilpessoa);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the tb_pessoa EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddTotb_pessoa(tb_pessoa tb_pessoa)
@@ -908,22 +873,6 @@ namespace Models
         public void AddTotb_votoenquete(tb_votoenquete tb_votoenquete)
         {
             base.AddObject("tb_votoenquete", tb_votoenquete);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the tb_perfilpessoa EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddTotb_perfilpessoa(tb_perfilpessoa tb_perfilpessoa)
-        {
-            base.AddObject("tb_perfilpessoa", tb_perfilpessoa);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the tb_pontuacao EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddTotb_pontuacao(tb_pontuacao tb_pontuacao)
-        {
-            base.AddObject("tb_pontuacao", tb_pontuacao);
         }
 
         #endregion
@@ -2508,14 +2457,14 @@ namespace Models
         /// <param name="idPessoa">Initial value of the IdPessoa property.</param>
         /// <param name="idCondominio">Initial value of the IdCondominio property.</param>
         /// <param name="dataHora">Initial value of the DataHora property.</param>
-        /// <param name="tipo">Initial value of the Tipo property.</param>
-        public static tb_acessocondominio Createtb_acessocondominio(global::System.Int32 idPessoa, global::System.Int32 idCondominio, global::System.DateTime dataHora, global::System.String tipo)
+        /// <param name="tipoAcesso">Initial value of the TipoAcesso property.</param>
+        public static tb_acessocondominio Createtb_acessocondominio(global::System.Int32 idPessoa, global::System.Int32 idCondominio, global::System.DateTime dataHora, global::System.String tipoAcesso)
         {
             tb_acessocondominio tb_acessocondominio = new tb_acessocondominio();
             tb_acessocondominio.IdPessoa = idPessoa;
             tb_acessocondominio.IdCondominio = idCondominio;
             tb_acessocondominio.DataHora = dataHora;
-            tb_acessocondominio.Tipo = tipo;
+            tb_acessocondominio.TipoAcesso = tipoAcesso;
             return tb_acessocondominio;
         }
 
@@ -2606,24 +2555,24 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Tipo
+        public global::System.String TipoAcesso
         {
             get
             {
-                return _Tipo;
+                return _TipoAcesso;
             }
             set
             {
-                OnTipoChanging(value);
-                ReportPropertyChanging("Tipo");
-                _Tipo = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Tipo");
-                OnTipoChanged();
+                OnTipoAcessoChanging(value);
+                ReportPropertyChanging("TipoAcesso");
+                _TipoAcesso = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("TipoAcesso");
+                OnTipoAcessoChanged();
             }
         }
-        private global::System.String _Tipo;
-        partial void OnTipoChanging(global::System.String value);
-        partial void OnTipoChanged();
+        private global::System.String _TipoAcesso;
+        partial void OnTipoAcessoChanging(global::System.String value);
+        partial void OnTipoAcessoChanged();
 
         #endregion
 
@@ -2725,11 +2674,13 @@ namespace Models
         /// </summary>
         /// <param name="dataHora">Initial value of the DataHora property.</param>
         /// <param name="idVeiculo">Initial value of the IdVeiculo property.</param>
-        public static tb_acessoveiculo Createtb_acessoveiculo(global::System.DateTime dataHora, global::System.Int32 idVeiculo)
+        /// <param name="tipoAcesso">Initial value of the TipoAcesso property.</param>
+        public static tb_acessoveiculo Createtb_acessoveiculo(global::System.DateTime dataHora, global::System.Int32 idVeiculo, global::System.String tipoAcesso)
         {
             tb_acessoveiculo tb_acessoveiculo = new tb_acessoveiculo();
             tb_acessoveiculo.DataHora = dataHora;
             tb_acessoveiculo.IdVeiculo = idVeiculo;
+            tb_acessoveiculo.TipoAcesso = tipoAcesso;
             return tb_acessoveiculo;
         }
 
@@ -2790,6 +2741,33 @@ namespace Models
         private global::System.Int32 _IdVeiculo;
         partial void OnIdVeiculoChanging(global::System.Int32 value);
         partial void OnIdVeiculoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String TipoAcesso
+        {
+            get
+            {
+                return _TipoAcesso;
+            }
+            set
+            {
+                if (_TipoAcesso != value)
+                {
+                    OnTipoAcessoChanging(value);
+                    ReportPropertyChanging("TipoAcesso");
+                    _TipoAcesso = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("TipoAcesso");
+                    OnTipoAcessoChanged();
+                }
+            }
+        }
+        private global::System.String _TipoAcesso;
+        partial void OnTipoAcessoChanging(global::System.String value);
+        partial void OnTipoAcessoChanged();
 
         #endregion
 
@@ -2830,215 +2808,6 @@ namespace Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_veiculo>("residentialbdModel.tb_acessoveiculo_tb_veiculo1", "tb_veiculo", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="residentialbdModel", Name="tb_administradora")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class tb_administradora : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new tb_administradora object.
-        /// </summary>
-        /// <param name="idAdministradora">Initial value of the IdAdministradora property.</param>
-        /// <param name="nome">Initial value of the Nome property.</param>
-        /// <param name="login">Initial value of the Login property.</param>
-        /// <param name="senha">Initial value of the Senha property.</param>
-        /// <param name="email">Initial value of the Email property.</param>
-        public static tb_administradora Createtb_administradora(global::System.Int32 idAdministradora, global::System.String nome, global::System.String login, global::System.String senha, global::System.String email)
-        {
-            tb_administradora tb_administradora = new tb_administradora();
-            tb_administradora.IdAdministradora = idAdministradora;
-            tb_administradora.Nome = nome;
-            tb_administradora.Login = login;
-            tb_administradora.Senha = senha;
-            tb_administradora.Email = email;
-            return tb_administradora;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdAdministradora
-        {
-            get
-            {
-                return _IdAdministradora;
-            }
-            set
-            {
-                if (_IdAdministradora != value)
-                {
-                    OnIdAdministradoraChanging(value);
-                    ReportPropertyChanging("IdAdministradora");
-                    _IdAdministradora = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdAdministradora");
-                    OnIdAdministradoraChanged();
-                }
-            }
-        }
-        private global::System.Int32 _IdAdministradora;
-        partial void OnIdAdministradoraChanging(global::System.Int32 value);
-        partial void OnIdAdministradoraChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Nome
-        {
-            get
-            {
-                return _Nome;
-            }
-            set
-            {
-                OnNomeChanging(value);
-                ReportPropertyChanging("Nome");
-                _Nome = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Nome");
-                OnNomeChanged();
-            }
-        }
-        private global::System.String _Nome;
-        partial void OnNomeChanging(global::System.String value);
-        partial void OnNomeChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Login
-        {
-            get
-            {
-                return _Login;
-            }
-            set
-            {
-                OnLoginChanging(value);
-                ReportPropertyChanging("Login");
-                _Login = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Login");
-                OnLoginChanged();
-            }
-        }
-        private global::System.String _Login;
-        partial void OnLoginChanging(global::System.String value);
-        partial void OnLoginChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Senha
-        {
-            get
-            {
-                return _Senha;
-            }
-            set
-            {
-                OnSenhaChanging(value);
-                ReportPropertyChanging("Senha");
-                _Senha = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Senha");
-                OnSenhaChanged();
-            }
-        }
-        private global::System.String _Senha;
-        partial void OnSenhaChanging(global::System.String value);
-        partial void OnSenhaChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Email
-        {
-            get
-            {
-                return _Email;
-            }
-            set
-            {
-                OnEmailChanging(value);
-                ReportPropertyChanging("Email");
-                _Email = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Email");
-                OnEmailChanged();
-            }
-        }
-        private global::System.String _Email;
-        partial void OnEmailChanging(global::System.String value);
-        partial void OnEmailChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_condominio_tb_administradora1", "tb_condominio")]
-        public EntityCollection<tb_condominio> tb_condominio
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_condominio>("residentialbdModel.tb_condominio_tb_administradora1", "tb_condominio");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_condominio>("residentialbdModel.tb_condominio_tb_administradora1", "tb_condominio", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_MovimentacaoFinanceira_TB_Administradora1", "tb_movimentacaofinanceira")]
-        public EntityCollection<tb_movimentacaofinanceira> tb_movimentacaofinanceira
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.TB_MovimentacaoFinanceira_TB_Administradora1", "tb_movimentacaofinanceira");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.TB_MovimentacaoFinanceira_TB_Administradora1", "tb_movimentacaofinanceira", value);
                 }
             }
         }
@@ -3770,8 +3539,7 @@ namespace Models
         /// <param name="idPessoa">Initial value of the IdPessoa property.</param>
         /// <param name="comentario">Initial value of the Comentario property.</param>
         /// <param name="data">Initial value of the Data property.</param>
-        /// <param name="status">Initial value of the Status property.</param>
-        public static tb_comentario Createtb_comentario(global::System.Int32 idComentario, global::System.Int32 idPostagem, global::System.Int32 idPessoa, global::System.String comentario, global::System.DateTime data, global::System.String status)
+        public static tb_comentario Createtb_comentario(global::System.Int32 idComentario, global::System.Int32 idPostagem, global::System.Int32 idPessoa, global::System.String comentario, global::System.DateTime data)
         {
             tb_comentario tb_comentario = new tb_comentario();
             tb_comentario.IdComentario = idComentario;
@@ -3779,7 +3547,6 @@ namespace Models
             tb_comentario.IdPessoa = idPessoa;
             tb_comentario.Comentario = comentario;
             tb_comentario.Data = data;
-            tb_comentario.Status = status;
             return tb_comentario;
         }
 
@@ -3909,30 +3676,6 @@ namespace Models
         private global::System.DateTime _Data;
         partial void OnDataChanging(global::System.DateTime value);
         partial void OnDataChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Status
-        {
-            get
-            {
-                return _Status;
-            }
-            set
-            {
-                OnStatusChanging(value);
-                ReportPropertyChanging("Status");
-                _Status = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Status");
-                OnStatusChanged();
-            }
-        }
-        private global::System.String _Status;
-        partial void OnStatusChanging(global::System.String value);
-        partial void OnStatusChanged();
 
         #endregion
 
@@ -4326,44 +4069,6 @@ namespace Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_acessocondominio>("residentialbdModel.tb_acessocondominio_tb_condominio1", "tb_acessocondominio", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_condominio_tb_administradora1", "tb_administradora")]
-        public tb_administradora tb_administradora
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_administradora>("residentialbdModel.tb_condominio_tb_administradora1", "tb_administradora").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_administradora>("residentialbdModel.tb_condominio_tb_administradora1", "tb_administradora").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<tb_administradora> tb_administradoraReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_administradora>("residentialbdModel.tb_condominio_tb_administradora1", "tb_administradora");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_administradora>("residentialbdModel.tb_condominio_tb_administradora1", "tb_administradora", value);
                 }
             }
         }
@@ -5481,44 +5186,6 @@ namespace Models
 
     
         #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_MovimentacaoFinanceira_TB_Administradora1", "tb_administradora")]
-        public tb_administradora tb_administradora
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_administradora>("residentialbdModel.TB_MovimentacaoFinanceira_TB_Administradora1", "tb_administradora").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_administradora>("residentialbdModel.TB_MovimentacaoFinanceira_TB_Administradora1", "tb_administradora").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<tb_administradora> tb_administradoraReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_administradora>("residentialbdModel.TB_MovimentacaoFinanceira_TB_Administradora1", "tb_administradora");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_administradora>("residentialbdModel.TB_MovimentacaoFinanceira_TB_Administradora1", "tb_administradora", value);
-                }
-            }
-        }
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -6877,6 +6544,28 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_perfilpessoa_tb_pessoa1", "tb_perfilpessoa")]
+        public EntityCollection<tb_perfilpessoa> tb_perfilpessoa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_perfilpessoa>("residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1", "tb_perfilpessoa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_perfilpessoa>("residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1", "tb_perfilpessoa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_pessoa_tb_setor1", "tb_setor")]
         public tb_setor tb_setor
         {
@@ -7059,28 +6748,6 @@ namespace Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_votoenquete>("residentialbdModel.TB_VotoEnquete_TB_Pessoa1", "tb_votoenquete", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_perfilpessoa_tb_pessoa1", "tb_perfilpessoa")]
-        public EntityCollection<tb_perfilpessoa> tb_perfilpessoa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_perfilpessoa>("residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1", "tb_perfilpessoa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_perfilpessoa>("residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1", "tb_perfilpessoa", value);
                 }
             }
         }
@@ -7457,115 +7124,6 @@ namespace Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="residentialbdModel", Name="tb_pontuacao")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class tb_pontuacao : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new tb_pontuacao object.
-        /// </summary>
-        /// <param name="idPontuacao">Initial value of the IdPontuacao property.</param>
-        /// <param name="pontuacao">Initial value of the Pontuacao property.</param>
-        public static tb_pontuacao Createtb_pontuacao(global::System.Int32 idPontuacao, global::System.Int32 pontuacao)
-        {
-            tb_pontuacao tb_pontuacao = new tb_pontuacao();
-            tb_pontuacao.IdPontuacao = idPontuacao;
-            tb_pontuacao.Pontuacao = pontuacao;
-            return tb_pontuacao;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdPontuacao
-        {
-            get
-            {
-                return _IdPontuacao;
-            }
-            set
-            {
-                if (_IdPontuacao != value)
-                {
-                    OnIdPontuacaoChanging(value);
-                    ReportPropertyChanging("IdPontuacao");
-                    _IdPontuacao = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdPontuacao");
-                    OnIdPontuacaoChanged();
-                }
-            }
-        }
-        private global::System.Int32 _IdPontuacao;
-        partial void OnIdPontuacaoChanging(global::System.Int32 value);
-        partial void OnIdPontuacaoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 Pontuacao
-        {
-            get
-            {
-                return _Pontuacao;
-            }
-            set
-            {
-                OnPontuacaoChanging(value);
-                ReportPropertyChanging("Pontuacao");
-                _Pontuacao = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Pontuacao");
-                OnPontuacaoChanged();
-            }
-        }
-        private global::System.Int32 _Pontuacao;
-        partial void OnPontuacaoChanging(global::System.Int32 value);
-        partial void OnPontuacaoChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1", "tb_pontuacaopessoa")]
-        public EntityCollection<tb_pontuacaopessoa> tb_pontuacaopessoa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_pontuacaopessoa>("residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1", "tb_pontuacaopessoa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_pontuacaopessoa>("residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1", "tb_pontuacaopessoa", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="residentialbdModel", Name="tb_pontuacaopessoa")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -7667,6 +7225,30 @@ namespace Models
         private global::System.String _Comentario;
         partial void OnComentarioChanging(global::System.String value);
         partial void OnComentarioChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Pontuacao
+        {
+            get
+            {
+                return _Pontuacao;
+            }
+            set
+            {
+                OnPontuacaoChanging(value);
+                ReportPropertyChanging("Pontuacao");
+                _Pontuacao = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Pontuacao");
+                OnPontuacaoChanged();
+            }
+        }
+        private global::System.String _Pontuacao;
+        partial void OnPontuacaoChanging(global::System.String value);
+        partial void OnPontuacaoChanged();
 
         #endregion
 
@@ -7707,44 +7289,6 @@ namespace Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pessoa>("residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1", "tb_pessoa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1", "tb_pontuacao")]
-        public tb_pontuacao tb_pontuacao
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pontuacao>("residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1", "tb_pontuacao").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pontuacao>("residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1", "tb_pontuacao").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<tb_pontuacao> tb_pontuacaoReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pontuacao>("residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1", "tb_pontuacao");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pontuacao>("residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1", "tb_pontuacao", value);
                 }
             }
         }

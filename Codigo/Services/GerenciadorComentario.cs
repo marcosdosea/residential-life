@@ -83,7 +83,6 @@ namespace Services
                             IdPessoa = comentario.IdPessoa,
                             IdPostagem = comentario.IdPostagem,
                             Comentario = comentario.Comentario,
-                            Status = comentario.Status,
                             Data  = (DateTime) comentario.Data,
 
                             NomePessoa = comentario.tb_pessoa.Nome,
@@ -157,8 +156,7 @@ namespace Services
             comentarioE.IdPessoa = comentarioModel.IdPessoa;
             comentarioE.IdPostagem = comentarioModel.IdPostagem;
             comentarioE.Comentario = comentarioModel.Comentario;
-            comentarioE.Data = comentarioModel.Data;
-            comentarioE.Status = comentarioModel.Status;           
+            comentarioE.Data = comentarioModel.Data;        
         }
     }
 }

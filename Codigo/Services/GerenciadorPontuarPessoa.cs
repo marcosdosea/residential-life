@@ -83,8 +83,7 @@ namespace Services
                             IdPessoa = pontuarPessoa.IdPessoa,
                             Comentario = pontuarPessoa.Comentario,
 
-                            NomePessoa = pontuarPessoa.tb_pessoa.Nome,
-                            Pontuacao = pontuarPessoa.tb_pontuacao.Pontuacao
+                            NomePessoa = pontuarPessoa.tb_pessoa.Nome
                         };
             return query;
         }

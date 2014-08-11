@@ -9,12 +9,14 @@ using Models.Models;
 
 namespace Services
 {
+    
     /// <summary>
     /// Gerencia todas as regras de negócio da entidade Condominio
     /// </summary>
 
     public class GerenciadorCondominio
     {
+        
         private static GerenciadorCondominio gCondominio;
         
         private IUnitOfWork unitOfWork;
@@ -99,7 +101,6 @@ namespace Services
                         {
                             IdCondominio = condominio.IdCondominio,
                             IdAdministradora = condominio.IdAdministradora,
-                            nomeAdministradora = condominio.tb_administradora.Nome,
                             Nome = condominio.Nome,
                             Rua = condominio.Rua,
                             Numero = condominio.Numero,

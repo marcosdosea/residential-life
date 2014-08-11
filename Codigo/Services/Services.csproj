@@ -52,7 +52,6 @@
     <Compile Include="GerenciadorOpcoesEnquete.cs" />
     <Compile Include="GerenciadorPerfilPessoa.cs" />
     <Compile Include="GerenciadorPlanoDeConta.cs" />
-    <Compile Include="GerenciadorPontuacao.cs" />
     <Compile Include="GerenciadorPontuarPessoa.cs" />
     <Compile Include="GerenciadorPostagem.cs" />
     <Compile Include="GerenciadorOcorrencia.cs" />
