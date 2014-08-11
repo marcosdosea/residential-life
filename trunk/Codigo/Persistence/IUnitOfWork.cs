@@ -10,7 +10,6 @@ namespace Persistence
         void Commit(bool shared);
         IRepositorioGenerico<tb_acessocondominio> RepositorioAcessoCondominio { get; }
         IRepositorioGenerico<tb_acessoveiculo> RepositorioAcessoVeiculo { get; }
-        IRepositorioGenerico<tb_administradora> RepositorioAdministradora { get; }
         IRepositorioGenerico<tb_areapublica> RepositorioAreaPublica { get; }
         IRepositorioGenerico<tb_atendimento> RepositorioAtendimento { get; }
         IRepositorioGenerico<tb_bloco> RepositorioBloco { get; }
@@ -31,7 +30,6 @@ namespace Persistence
         IRepositorioGenerico<tb_setor> RepositorioSetor { get; }
         IRepositorioGenerico<tb_veiculo> RepositorioVeiculo { get; }
         IRepositorioGenerico<tb_votoenquete> RepositorioVotoEnquete { get; }
-        IRepositorioGenerico<tb_pontuacao> RepositorioPontuacao { get; }
         IRepositorioGenerico<tb_pontuacaopessoa> RepositorioPontuarPessoa { get; }
         IRepositorioGenerico<tb_perfilpessoa> RepositorioPerfilPessoa { get; }
     }

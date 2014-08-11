@@ -19,7 +19,6 @@ namespace Persistence
         
         private IRepositorioGenerico<tb_acessocondominio> _repAcessoCondominio;
         private IRepositorioGenerico<tb_acessoveiculo> _repAcessoVeiculo;
-        private IRepositorioGenerico<tb_administradora> _repAdministradora;
         private IRepositorioGenerico<tb_areapublica> _repAreaPublica;
         private IRepositorioGenerico<tb_atendimento> _repAtendimento;
         private IRepositorioGenerico<tb_bloco> _repBloco;
@@ -40,7 +39,6 @@ namespace Persistence
         private IRepositorioGenerico<tb_setor> _repSetor;
         private IRepositorioGenerico<tb_veiculo> _repVeiculo;
         private IRepositorioGenerico<tb_votoenquete> _repVotoEnquete;
-        private IRepositorioGenerico<tb_pontuacao> _repPontuacao;
         private IRepositorioGenerico<tb_pontuacaopessoa> _repPontuarPessoa;
         private IRepositorioGenerico<tb_perfilpessoa> _repPerfilPessoa;
 
@@ -355,38 +353,6 @@ namespace Persistence
                     _repVeiculo = new RepositorioGenerico<tb_veiculo>(_context);
                 }
                 return _repVeiculo;
-            }
-        }
-
-
-        /// <summary>
-        /// Repositório para manipular dados persistidos de administradora
-        /// </summary>
-        public IRepositorioGenerico<tb_administradora> RepositorioAdministradora
-        {
-            get
-            {
-                if (_repAdministradora == null)
-                {
-                    _repAdministradora = new RepositorioGenerico<tb_administradora>(_context);
-                }
-                return _repAdministradora;
-            }
-        }
-
-
-        /// <summary>
-        /// Repositório para manipular dados persistidos de veículo
-        /// </summary>
-        public IRepositorioGenerico<tb_pontuacao> RepositorioPontuacao
-        {
-            get
-            {
-                if (_repPontuacao == null)
-                {
-                    _repPontuacao = new RepositorioGenerico<tb_pontuacao>(_context);
-                }
-                return _repPontuacao;
             }
         }
 

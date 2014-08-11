@@ -10,6 +10,7 @@ namespace Services
 {
     public class GerenciadorAdministradora
     {
+        /*
         private static GerenciadorAdministradora gAdm;
 
         private IUnitOfWork unitOfWork;
@@ -144,6 +145,6 @@ namespace Services
             administradoraE.Login = administradoraModel.Login;
             administradoraE.Senha = administradoraModel.Senha;
             administradoraE.Email = administradoraModel.Email;
-        }
+        } */
     }
 }

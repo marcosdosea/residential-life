@@ -18,10 +18,10 @@
           <EntitySet Name="tb_acessoveiculo" EntityType="residentialbdModel.Store.tb_acessoveiculo" store:Type="Tables" store:Schema="residentialbd" store:Name="tb_acessoveiculo">
             <DefiningQuery>SELECT
       `tb_acessoveiculo`.`DataHora`, 
-      `tb_acessoveiculo`.`IdVeiculo`
+      `tb_acessoveiculo`.`IdVeiculo`, 
+      `tb_acessoveiculo`.`TipoAcesso`
       FROM `tb_acessoveiculo` AS `tb_acessoveiculo`</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="tb_administradora" EntityType="residentialbdModel.Store.tb_administradora" store:Type="Tables" Schema="residentialbd" />
           <EntitySet Name="tb_areapublica" EntityType="residentialbdModel.Store.tb_areapublica" store:Type="Tables" Schema="residentialbd" />
           <EntitySet Name="tb_atendimento" EntityType="residentialbdModel.Store.tb_atendimento" store:Type="Tables" Schema="residentialbd" />
           <EntitySet Name="tb_bloco" EntityType="residentialbdModel.Store.tb_bloco" store:Type="Tables" Schema="residentialbd" />
@@ -37,7 +37,6 @@
           <EntitySet Name="tb_pessoa" EntityType="residentialbdModel.Store.tb_pessoa" store:Type="Tables" Schema="residentialbd" />
           <EntitySet Name="tb_pessoamoradia" EntityType="residentialbdModel.Store.tb_pessoamoradia" store:Type="Tables" Schema="residentialbd" />
           <EntitySet Name="tb_planodeconta" EntityType="residentialbdModel.Store.tb_planodeconta" store:Type="Tables" Schema="residentialbd" />
-          <EntitySet Name="tb_pontuacao" EntityType="residentialbdModel.Store.tb_pontuacao" store:Type="Tables" Schema="residentialbd" />
           <EntitySet Name="tb_pontuacaopessoa" EntityType="residentialbdModel.Store.tb_pontuacaopessoa" store:Type="Tables" Schema="residentialbd" />
           <EntitySet Name="tb_postagem" EntityType="residentialbdModel.Store.tb_postagem" store:Type="Tables" Schema="residentialbd" />
           <EntitySet Name="tb_reservaambiente" EntityType="residentialbdModel.Store.tb_reservaambiente" store:Type="Tables" Schema="residentialbd" />
@@ -69,10 +68,6 @@
             <End Role="tb_pessoa" EntitySet="tb_pessoa" />
             <End Role="tb_pontuacaopessoa" EntitySet="tb_pontuacaopessoa" />
           </AssociationSet>
-          <AssociationSet Name="fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1" Association="residentialbdModel.Store.fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1">
-            <End Role="tb_pontuacao" EntitySet="tb_pontuacao" />
-            <End Role="tb_pontuacaopessoa" EntitySet="tb_pontuacaopessoa" />
-          </AssociationSet>
           <AssociationSet Name="tb_acessocondominio_tb_condominio1" Association="residentialbdModel.Store.tb_acessocondominio_tb_condominio1">
             <End Role="tb_condominio" EntitySet="tb_condominio" />
             <End Role="tb_acessocondominio" EntitySet="tb_acessocondominio" />
@@ -101,10 +96,6 @@
             <End Role="tb_postagem" EntitySet="tb_postagem" />
             <End Role="tb_comentario" EntitySet="tb_comentario" />
           </AssociationSet>
-          <AssociationSet Name="tb_condominio_tb_administradora1" Association="residentialbdModel.Store.tb_condominio_tb_administradora1">
-            <End Role="tb_administradora" EntitySet="tb_administradora" />
-            <End Role="tb_condominio" EntitySet="tb_condominio" />
-          </AssociationSet>
           <AssociationSet Name="TB_Enquete_TB_Pessoa1" Association="residentialbdModel.Store.TB_Enquete_TB_Pessoa1">
             <End Role="tb_pessoa" EntitySet="tb_pessoa" />
             <End Role="tb_enquete" EntitySet="tb_enquete" />
@@ -116,10 +107,6 @@
           <AssociationSet Name="TB_Moradia_TB_Bloco1" Association="residentialbdModel.Store.TB_Moradia_TB_Bloco1">
             <End Role="tb_bloco" EntitySet="tb_bloco" />
             <End Role="tb_moradia" EntitySet="tb_moradia" />
-          </AssociationSet>
-          <AssociationSet Name="TB_MovimentacaoFinanceira_TB_Administradora1" Association="residentialbdModel.Store.TB_MovimentacaoFinanceira_TB_Administradora1">
-            <End Role="tb_administradora" EntitySet="tb_administradora" />
-            <End Role="tb_movimentacaofinanceira" EntitySet="tb_movimentacaofinanceira" />
           </AssociationSet>
           <AssociationSet Name="tb_movimentacaofinanceira_tb_moradia1" Association="residentialbdModel.Store.tb_movimentacaofinanceira_tb_moradia1">
             <End Role="tb_moradia" EntitySet="tb_moradia" />
@@ -290,7 +277,7 @@
           <Property Name="IdPessoa" Type="int" Nullable="false" />
           <Property Name="IdCondominio" Type="int" Nullable="false" />
           <Property Name="DataHora" Type="datetime" Nullable="false" />
-          <Property Name="Tipo" Type="enum" Nullable="false" />
+          <Property Name="TipoAcesso" Type="enum" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'def.residentialbd.tb_acessoveiculo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -299,19 +286,11 @@
           <Key>
             <PropertyRef Name="DataHora" />
             <PropertyRef Name="IdVeiculo" />
+            <PropertyRef Name="TipoAcesso" />
           </Key>
           <Property Name="DataHora" Type="datetime" Nullable="false" />
           <Property Name="IdVeiculo" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="tb_administradora">
-          <Key>
-            <PropertyRef Name="IdAdministradora" />
-          </Key>
-          <Property Name="IdAdministradora" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
-          <Property Name="Login" Type="varchar" Nullable="false" MaxLength="16" />
-          <Property Name="Senha" Type="varchar" Nullable="false" MaxLength="16" />
-          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="TipoAcesso" Type="enum" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_areapublica">
           <Key>
@@ -354,7 +333,6 @@
           <Property Name="IdPessoa" Type="int" Nullable="false" />
           <Property Name="Comentario" Type="varchar" Nullable="false" MaxLength="500" />
           <Property Name="Data" Type="datetime" Nullable="false" />
-          <Property Name="Status" Type="varchar" Nullable="false" MaxLength="45" />
         </EntityType>
         <EntityType Name="tb_condominio">
           <Key>
@@ -486,13 +464,6 @@
           <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="150" />
           <Property Name="IdTipoPlanoDeConta" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="tb_pontuacao">
-          <Key>
-            <PropertyRef Name="IdPontuacao" />
-          </Key>
-          <Property Name="IdPontuacao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Pontuacao" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="tb_pontuacaopessoa">
           <Key>
             <PropertyRef Name="IdPontuacao" />
@@ -501,6 +472,7 @@
           <Property Name="IdPontuacao" Type="int" Nullable="false" />
           <Property Name="IdPessoa" Type="int" Nullable="false" />
           <Property Name="Comentario" Type="varchar" MaxLength="250" />
+          <Property Name="Pontuacao" Type="enum" />
         </EntityType>
         <EntityType Name="tb_postagem">
           <Key>
@@ -637,18 +609,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1">
-          <End Role="tb_pontuacao" Type="residentialbdModel.Store.tb_pontuacao" Multiplicity="1" />
-          <End Role="tb_pontuacaopessoa" Type="residentialbdModel.Store.tb_pontuacaopessoa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_pontuacao">
-              <PropertyRef Name="IdPontuacao" />
-            </Principal>
-            <Dependent Role="tb_pontuacaopessoa">
-              <PropertyRef Name="IdPontuacao" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="tb_acessocondominio_tb_condominio1">
           <End Role="tb_condominio" Type="residentialbdModel.Store.tb_condominio" Multiplicity="1" />
           <End Role="tb_acessocondominio" Type="residentialbdModel.Store.tb_acessocondominio" Multiplicity="*" />
@@ -733,18 +693,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="tb_condominio_tb_administradora1">
-          <End Role="tb_administradora" Type="residentialbdModel.Store.tb_administradora" Multiplicity="1" />
-          <End Role="tb_condominio" Type="residentialbdModel.Store.tb_condominio" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_administradora">
-              <PropertyRef Name="IdAdministradora" />
-            </Principal>
-            <Dependent Role="tb_condominio">
-              <PropertyRef Name="IdAdministradora" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="TB_Enquete_TB_Pessoa1">
           <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
           <End Role="tb_enquete" Type="residentialbdModel.Store.tb_enquete" Multiplicity="*" />
@@ -778,18 +726,6 @@
             </Principal>
             <Dependent Role="tb_moradia">
               <PropertyRef Name="IdBloco" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="TB_MovimentacaoFinanceira_TB_Administradora1">
-          <End Role="tb_administradora" Type="residentialbdModel.Store.tb_administradora" Multiplicity="1" />
-          <End Role="tb_movimentacaofinanceira" Type="residentialbdModel.Store.tb_movimentacaofinanceira" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_administradora">
-              <PropertyRef Name="IdAdministradora" />
-            </Principal>
-            <Dependent Role="tb_movimentacaofinanceira">
-              <PropertyRef Name="IdAdministradora" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1018,7 +954,6 @@
           <EntitySet Name="my_aspnet_usersinroles" EntityType="residentialbdModel.my_aspnet_usersinroles" />
           <EntitySet Name="tb_acessocondominio" EntityType="residentialbdModel.tb_acessocondominio" />
           <EntitySet Name="tb_acessoveiculo" EntityType="residentialbdModel.tb_acessoveiculo" />
-          <EntitySet Name="tb_administradora" EntityType="residentialbdModel.tb_administradora" />
           <EntitySet Name="tb_areapublica" EntityType="residentialbdModel.tb_areapublica" />
           <EntitySet Name="tb_atendimento" EntityType="residentialbdModel.tb_atendimento" />
           <EntitySet Name="tb_bloco" EntityType="residentialbdModel.tb_bloco" />
@@ -1030,6 +965,7 @@
           <EntitySet Name="tb_movimentacaofinanceira" EntityType="residentialbdModel.tb_movimentacaofinanceira" />
           <EntitySet Name="tb_ocorrencia" EntityType="residentialbdModel.tb_ocorrencia" />
           <EntitySet Name="tb_opcoesenquete" EntityType="residentialbdModel.tb_opcoesenquete" />
+          <EntitySet Name="tb_perfilpessoa" EntityType="residentialbdModel.tb_perfilpessoa" />
           <EntitySet Name="tb_pessoa" EntityType="residentialbdModel.tb_pessoa" />
           <EntitySet Name="tb_pessoamoradia" EntityType="residentialbdModel.tb_pessoamoradia" />
           <EntitySet Name="tb_planodeconta" EntityType="residentialbdModel.tb_planodeconta" />
@@ -1040,6 +976,10 @@
           <EntitySet Name="tb_setor" EntityType="residentialbdModel.tb_setor" />
           <EntitySet Name="tb_veiculo" EntityType="residentialbdModel.tb_veiculo" />
           <EntitySet Name="tb_votoenquete" EntityType="residentialbdModel.tb_votoenquete" />
+          <AssociationSet Name="fk_tb_perfilpessoa_my_aspnet_roles1" Association="residentialbdModel.fk_tb_perfilpessoa_my_aspnet_roles1">
+            <End Role="my_aspnet_roles" EntitySet="my_aspnet_roles" />
+            <End Role="tb_perfilpessoa" EntitySet="tb_perfilpessoa" />
+          </AssociationSet>
           <AssociationSet Name="fk_tb_pessoa_my_aspnet_users1" Association="residentialbdModel.fk_tb_pessoa_my_aspnet_users1">
             <End Role="my_aspnet_users" EntitySet="my_aspnet_users" />
             <End Role="tb_pessoa" EntitySet="tb_pessoa" />
@@ -1055,14 +995,6 @@
           <AssociationSet Name="tb_acessoveiculo_tb_veiculo1" Association="residentialbdModel.tb_acessoveiculo_tb_veiculo1">
             <End Role="tb_veiculo" EntitySet="tb_veiculo" />
             <End Role="tb_acessoveiculo" EntitySet="tb_acessoveiculo" />
-          </AssociationSet>
-          <AssociationSet Name="tb_condominio_tb_administradora1" Association="residentialbdModel.tb_condominio_tb_administradora1">
-            <End Role="tb_administradora" EntitySet="tb_administradora" />
-            <End Role="tb_condominio" EntitySet="tb_condominio" />
-          </AssociationSet>
-          <AssociationSet Name="TB_MovimentacaoFinanceira_TB_Administradora1" Association="residentialbdModel.TB_MovimentacaoFinanceira_TB_Administradora1">
-            <End Role="tb_administradora" EntitySet="tb_administradora" />
-            <End Role="tb_movimentacaofinanceira" EntitySet="tb_movimentacaofinanceira" />
           </AssociationSet>
           <AssociationSet Name="TB_Espaco_TB_Condominio1" Association="residentialbdModel.TB_Espaco_TB_Condominio1">
             <End Role="tb_condominio" EntitySet="tb_condominio" />
@@ -1140,6 +1072,10 @@
             <End Role="tb_opcoesenquete" EntitySet="tb_opcoesenquete" />
             <End Role="tb_votoenquete" EntitySet="tb_votoenquete" />
           </AssociationSet>
+          <AssociationSet Name="fk_tb_perfilpessoa_tb_pessoa1" Association="residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_perfilpessoa" EntitySet="tb_perfilpessoa" />
+          </AssociationSet>
           <AssociationSet Name="fk_tb_pessoa_tb_setor1" Association="residentialbdModel.fk_tb_pessoa_tb_setor1">
             <End Role="tb_setor" EntitySet="tb_setor" />
             <End Role="tb_pessoa" EntitySet="tb_pessoa" />
@@ -1171,20 +1107,6 @@
           <AssociationSet Name="TB_VotoEnquete_TB_Pessoa1" Association="residentialbdModel.TB_VotoEnquete_TB_Pessoa1">
             <End Role="tb_pessoa" EntitySet="tb_pessoa" />
             <End Role="tb_votoenquete" EntitySet="tb_votoenquete" />
-          </AssociationSet>
-          <EntitySet Name="tb_perfilpessoa" EntityType="residentialbdModel.tb_perfilpessoa" />
-          <AssociationSet Name="fk_tb_perfilpessoa_my_aspnet_roles1" Association="residentialbdModel.fk_tb_perfilpessoa_my_aspnet_roles1">
-            <End Role="my_aspnet_roles" EntitySet="my_aspnet_roles" />
-            <End Role="tb_perfilpessoa" EntitySet="tb_perfilpessoa" />
-          </AssociationSet>
-          <AssociationSet Name="fk_tb_perfilpessoa_tb_pessoa1" Association="residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1">
-            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
-            <End Role="tb_perfilpessoa" EntitySet="tb_perfilpessoa" />
-          </AssociationSet>
-          <EntitySet Name="tb_pontuacao" EntityType="residentialbdModel.tb_pontuacao" />
-          <AssociationSet Name="fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1" Association="residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1">
-            <End Role="tb_pontuacao" EntitySet="tb_pontuacao" />
-            <End Role="tb_pontuacaopessoa" EntitySet="tb_pontuacaopessoa" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="my_aspnet_applications">
@@ -1289,7 +1211,7 @@
           <Property Type="Int32" Name="IdPessoa" Nullable="false" />
           <Property Type="Int32" Name="IdCondominio" Nullable="false" />
           <Property Type="DateTime" Name="DataHora" Nullable="false" />
-          <Property Type="String" Name="Tipo" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TipoAcesso" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tb_condominio" Relationship="residentialbdModel.tb_acessocondominio_tb_condominio1" FromRole="tb_acessocondominio" ToRole="tb_condominio" />
           <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.tb_acessocondominio_tb_pessoa1" FromRole="tb_acessocondominio" ToRole="tb_pessoa" />
         </EntityType>
@@ -1297,22 +1219,12 @@
           <Key>
             <PropertyRef Name="DataHora" />
             <PropertyRef Name="IdVeiculo" />
+            <PropertyRef Name="TipoAcesso" />
           </Key>
           <Property Type="DateTime" Name="DataHora" Nullable="false" />
           <Property Type="Int32" Name="IdVeiculo" Nullable="false" />
+          <Property Type="String" Name="TipoAcesso" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tb_veiculo" Relationship="residentialbdModel.tb_acessoveiculo_tb_veiculo1" FromRole="tb_acessoveiculo" ToRole="tb_veiculo" />
-        </EntityType>
-        <EntityType Name="tb_administradora">
-          <Key>
-            <PropertyRef Name="IdAdministradora" />
-          </Key>
-          <Property Type="Int32" Name="IdAdministradora" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Nome" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Login" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Senha" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Email" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="tb_condominio" Relationship="residentialbdModel.tb_condominio_tb_administradora1" FromRole="tb_administradora" ToRole="tb_condominio" />
-          <NavigationProperty Name="tb_movimentacaofinanceira" Relationship="residentialbdModel.TB_MovimentacaoFinanceira_TB_Administradora1" FromRole="tb_administradora" ToRole="tb_movimentacaofinanceira" />
         </EntityType>
         <EntityType Name="tb_areapublica">
           <Key>
@@ -1360,7 +1272,6 @@
           <Property Type="Int32" Name="IdPessoa" Nullable="false" />
           <Property Type="String" Name="Comentario" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Type="DateTime" Name="Data" Nullable="false" />
-          <Property Type="String" Name="Status" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_Comentario_TB_Pessoa1" FromRole="tb_comentario" ToRole="tb_pessoa" />
           <NavigationProperty Name="tb_postagem" Relationship="residentialbdModel.TB_Comentario_TB_Postagem1" FromRole="tb_comentario" ToRole="tb_postagem" />
         </EntityType>
@@ -1379,7 +1290,6 @@
           <Property Type="String" Name="Estado" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
           <Property Type="Int32" Name="IdAdministradora" Nullable="false" />
           <NavigationProperty Name="tb_acessocondominio" Relationship="residentialbdModel.tb_acessocondominio_tb_condominio1" FromRole="tb_condominio" ToRole="tb_acessocondominio" />
-          <NavigationProperty Name="tb_administradora" Relationship="residentialbdModel.tb_condominio_tb_administradora1" FromRole="tb_condominio" ToRole="tb_administradora" />
           <NavigationProperty Name="tb_areapublica" Relationship="residentialbdModel.TB_Espaco_TB_Condominio1" FromRole="tb_condominio" ToRole="tb_areapublica" />
           <NavigationProperty Name="tb_bloco" Relationship="residentialbdModel.TB_Bloco_TB_Condominio1" FromRole="tb_condominio" ToRole="tb_bloco" />
           <NavigationProperty Name="tb_restricaoacesso" Relationship="residentialbdModel.tb_pessoa1_tb_condominio2" FromRole="tb_condominio" ToRole="tb_restricaoacesso" />
@@ -1438,7 +1348,6 @@
           <Property Type="Int32" Name="IdFuncionario" Nullable="false" />
           <Property Type="Int32" Name="IdMoradia" Nullable="false" />
           <Property Type="Int32" Name="IdReservaAmbiente" Nullable="false" />
-          <NavigationProperty Name="tb_administradora" Relationship="residentialbdModel.TB_MovimentacaoFinanceira_TB_Administradora1" FromRole="tb_movimentacaofinanceira" ToRole="tb_administradora" />
           <NavigationProperty Name="tb_moradia" Relationship="residentialbdModel.tb_movimentacaofinanceira_tb_moradia1" FromRole="tb_movimentacaofinanceira" ToRole="tb_moradia" />
           <NavigationProperty Name="tb_planodeconta" Relationship="residentialbdModel.TB_MovimentacaoFinanceira_TB_PlanoDeConta1" FromRole="tb_movimentacaofinanceira" ToRole="tb_planodeconta" />
           <NavigationProperty Name="tb_reservaambiente" Relationship="residentialbdModel.tb_movimentacaofinanceira_tb_reservaambiente1" FromRole="tb_movimentacaofinanceira" ToRole="tb_reservaambiente" />
@@ -1467,6 +1376,17 @@
           <NavigationProperty Name="tb_enquete" Relationship="residentialbdModel.TB_OpcoesEnquete_TB_Enquete1" FromRole="tb_opcoesenquete" ToRole="tb_enquete" />
           <NavigationProperty Name="tb_votoenquete" Relationship="residentialbdModel.TB_VotoEnquete_TB_OpcoesEnquete1" FromRole="tb_opcoesenquete" ToRole="tb_votoenquete" />
         </EntityType>
+        <EntityType Name="tb_perfilpessoa">
+          <Key>
+            <PropertyRef Name="IdPerfil" />
+            <PropertyRef Name="IdPessoa" />
+          </Key>
+          <Property Type="Int32" Name="IdPerfil" Nullable="false" />
+          <Property Type="Int32" Name="IdPessoa" Nullable="false" />
+          <Property Type="Boolean" Name="Ativo" Nullable="false" />
+          <NavigationProperty Name="my_aspnet_roles" Relationship="residentialbdModel.fk_tb_perfilpessoa_my_aspnet_roles1" FromRole="tb_perfilpessoa" ToRole="my_aspnet_roles" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1" FromRole="tb_perfilpessoa" ToRole="tb_pessoa" />
+        </EntityType>
         <EntityType Name="tb_pessoa">
           <Key>
             <PropertyRef Name="IdPessoa" />
@@ -1493,6 +1413,7 @@
           <NavigationProperty Name="tb_comentario" Relationship="residentialbdModel.TB_Comentario_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_comentario" />
           <NavigationProperty Name="tb_enquete" Relationship="residentialbdModel.TB_Enquete_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_enquete" />
           <NavigationProperty Name="tb_ocorrencia" Relationship="residentialbdModel.TB_Ocorrencia_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_ocorrencia" />
+          <NavigationProperty Name="tb_perfilpessoa" Relationship="residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1" FromRole="tb_pessoa" ToRole="tb_perfilpessoa" />
           <NavigationProperty Name="tb_setor" Relationship="residentialbdModel.fk_tb_pessoa_tb_setor1" FromRole="tb_pessoa" ToRole="tb_setor" />
           <NavigationProperty Name="tb_pontuacaopessoa" Relationship="residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1" FromRole="tb_pessoa" ToRole="tb_pontuacaopessoa" />
           <NavigationProperty Name="tb_pessoamoradia" Relationship="residentialbdModel.TB_Pessoa1_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_pessoamoradia" />
@@ -1501,7 +1422,6 @@
           <NavigationProperty Name="tb_reservaambiente" Relationship="residentialbdModel.TB_ReservaAmbiente_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_reservaambiente" />
           <NavigationProperty Name="tb_veiculo" Relationship="residentialbdModel.TB_Veiculo_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_veiculo" />
           <NavigationProperty Name="tb_votoenquete" Relationship="residentialbdModel.TB_VotoEnquete_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_votoenquete" />
-          <NavigationProperty Name="tb_perfilpessoa" Relationship="residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1" FromRole="tb_pessoa" ToRole="tb_perfilpessoa" />
         </EntityType>
         <EntityType Name="tb_pessoamoradia">
           <Key>
@@ -1532,8 +1452,8 @@
           <Property Type="Int32" Name="IdPontuacao" Nullable="false" />
           <Property Type="Int32" Name="IdPessoa" Nullable="false" />
           <Property Type="String" Name="Comentario" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Pontuacao" MaxLength="65532" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1" FromRole="tb_pontuacaopessoa" ToRole="tb_pessoa" />
-          <NavigationProperty Name="tb_pontuacao" Relationship="residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1" FromRole="tb_pontuacaopessoa" ToRole="tb_pontuacao" />
         </EntityType>
         <EntityType Name="tb_postagem">
           <Key>
@@ -1612,6 +1532,18 @@
           <NavigationProperty Name="tb_opcoesenquete" Relationship="residentialbdModel.TB_VotoEnquete_TB_OpcoesEnquete1" FromRole="tb_votoenquete" ToRole="tb_opcoesenquete" />
           <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_VotoEnquete_TB_Pessoa1" FromRole="tb_votoenquete" ToRole="tb_pessoa" />
         </EntityType>
+        <Association Name="fk_tb_perfilpessoa_my_aspnet_roles1">
+          <End Type="residentialbdModel.my_aspnet_roles" Role="my_aspnet_roles" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_perfilpessoa" Role="tb_perfilpessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="my_aspnet_roles">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_perfilpessoa">
+              <PropertyRef Name="IdPerfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_tb_pessoa_my_aspnet_users1">
           <End Type="residentialbdModel.my_aspnet_users" Role="my_aspnet_users" Multiplicity="1" />
           <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="*" />
@@ -1657,30 +1589,6 @@
             </Principal>
             <Dependent Role="tb_acessoveiculo">
               <PropertyRef Name="IdVeiculo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_condominio_tb_administradora1">
-          <End Type="residentialbdModel.tb_administradora" Role="tb_administradora" Multiplicity="1" />
-          <End Type="residentialbdModel.tb_condominio" Role="tb_condominio" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_administradora">
-              <PropertyRef Name="IdAdministradora" />
-            </Principal>
-            <Dependent Role="tb_condominio">
-              <PropertyRef Name="IdAdministradora" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="TB_MovimentacaoFinanceira_TB_Administradora1">
-          <End Type="residentialbdModel.tb_administradora" Role="tb_administradora" Multiplicity="1" />
-          <End Type="residentialbdModel.tb_movimentacaofinanceira" Role="tb_movimentacaofinanceira" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_administradora">
-              <PropertyRef Name="IdAdministradora" />
-            </Principal>
-            <Dependent Role="tb_movimentacaofinanceira">
-              <PropertyRef Name="IdAdministradora" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1912,6 +1820,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_tb_perfilpessoa_tb_pessoa1">
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_perfilpessoa" Role="tb_perfilpessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_perfilpessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_tb_pessoa_tb_setor1">
           <End Type="residentialbdModel.tb_setor" Role="tb_setor" Multiplicity="1" />
           <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="*" />
@@ -2005,61 +1925,6 @@
             </Principal>
             <Dependent Role="tb_votoenquete">
               <PropertyRef Name="IdPessoa" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="tb_perfilpessoa">
-          <Key>
-            <PropertyRef Name="IdPerfil" />
-            <PropertyRef Name="IdPessoa" />
-          </Key>
-          <Property Type="Int32" Name="IdPerfil" Nullable="false" />
-          <Property Type="Int32" Name="IdPessoa" Nullable="false" />
-          <Property Type="Boolean" Name="Ativo" Nullable="false" />
-          <NavigationProperty Name="my_aspnet_roles" Relationship="residentialbdModel.fk_tb_perfilpessoa_my_aspnet_roles1" FromRole="tb_perfilpessoa" ToRole="my_aspnet_roles" />
-          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1" FromRole="tb_perfilpessoa" ToRole="tb_pessoa" />
-        </EntityType>
-        <Association Name="fk_tb_perfilpessoa_my_aspnet_roles1">
-          <End Type="residentialbdModel.my_aspnet_roles" Role="my_aspnet_roles" Multiplicity="1" />
-          <End Type="residentialbdModel.tb_perfilpessoa" Role="tb_perfilpessoa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="my_aspnet_roles">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="tb_perfilpessoa">
-              <PropertyRef Name="IdPerfil" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_tb_perfilpessoa_tb_pessoa1">
-          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
-          <End Type="residentialbdModel.tb_perfilpessoa" Role="tb_perfilpessoa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_pessoa">
-              <PropertyRef Name="IdPessoa" />
-            </Principal>
-            <Dependent Role="tb_perfilpessoa">
-              <PropertyRef Name="IdPessoa" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="tb_pontuacao">
-          <Key>
-            <PropertyRef Name="IdPontuacao" />
-          </Key>
-          <Property Type="Int32" Name="IdPontuacao" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int32" Name="Pontuacao" Nullable="false" />
-          <NavigationProperty Name="tb_pontuacaopessoa" Relationship="residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1" FromRole="tb_pontuacao" ToRole="tb_pontuacaopessoa" />
-        </EntityType>
-        <Association Name="fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1">
-          <End Type="residentialbdModel.tb_pontuacao" Role="tb_pontuacao" Multiplicity="1" />
-          <End Type="residentialbdModel.tb_pontuacaopessoa" Role="tb_pontuacaopessoa" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_pontuacao">
-              <PropertyRef Name="IdPontuacao" />
-            </Principal>
-            <Dependent Role="tb_pontuacaopessoa">
-              <PropertyRef Name="IdPontuacao" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2170,7 +2035,7 @@
           <EntitySetMapping Name="tb_acessocondominio">
             <EntityTypeMapping TypeName="residentialbdModel.tb_acessocondominio">
               <MappingFragment StoreEntitySet="tb_acessocondominio">
-                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="TipoAcesso" ColumnName="TipoAcesso" />
                 <ScalarProperty Name="DataHora" ColumnName="DataHora" />
                 <ScalarProperty Name="IdCondominio" ColumnName="IdCondominio" />
                 <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
@@ -2180,19 +2045,9 @@
           <EntitySetMapping Name="tb_acessoveiculo">
             <EntityTypeMapping TypeName="residentialbdModel.tb_acessoveiculo">
               <MappingFragment StoreEntitySet="tb_acessoveiculo">
+                <ScalarProperty Name="TipoAcesso" ColumnName="TipoAcesso" />
                 <ScalarProperty Name="IdVeiculo" ColumnName="IdVeiculo" />
                 <ScalarProperty Name="DataHora" ColumnName="DataHora" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tb_administradora">
-            <EntityTypeMapping TypeName="residentialbdModel.tb_administradora">
-              <MappingFragment StoreEntitySet="tb_administradora">
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Senha" ColumnName="Senha" />
-                <ScalarProperty Name="Login" ColumnName="Login" />
-                <ScalarProperty Name="Nome" ColumnName="Nome" />
-                <ScalarProperty Name="IdAdministradora" ColumnName="IdAdministradora" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2234,7 +2089,6 @@
           <EntitySetMapping Name="tb_comentario">
             <EntityTypeMapping TypeName="residentialbdModel.tb_comentario">
               <MappingFragment StoreEntitySet="tb_comentario">
-                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Data" ColumnName="Data" />
                 <ScalarProperty Name="Comentario" ColumnName="Comentario" />
                 <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
@@ -2333,6 +2187,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="tb_perfilpessoa">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_perfilpessoa">
+              <MappingFragment StoreEntitySet="tb_perfilpessoa">
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+                <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tb_pessoa">
             <EntityTypeMapping TypeName="residentialbdModel.tb_pessoa">
               <MappingFragment StoreEntitySet="tb_pessoa">
@@ -2376,6 +2239,7 @@
           <EntitySetMapping Name="tb_pontuacaopessoa">
             <EntityTypeMapping TypeName="residentialbdModel.tb_pontuacaopessoa">
               <MappingFragment StoreEntitySet="tb_pontuacaopessoa">
+                <ScalarProperty Name="Pontuacao" ColumnName="Pontuacao" />
                 <ScalarProperty Name="Comentario" ColumnName="Comentario" />
                 <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
                 <ScalarProperty Name="IdPontuacao" ColumnName="IdPontuacao" />
@@ -2450,23 +2314,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tb_perfilpessoa">
-            <EntityTypeMapping TypeName="residentialbdModel.tb_perfilpessoa">
-              <MappingFragment StoreEntitySet="tb_perfilpessoa">
-                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
-                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
-                <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tb_pontuacao">
-            <EntityTypeMapping TypeName="residentialbdModel.tb_pontuacao">
-              <MappingFragment StoreEntitySet="tb_pontuacao">
-                <ScalarProperty Name="Pontuacao" ColumnName="Pontuacao" />
-                <ScalarProperty Name="IdPontuacao" ColumnName="IdPontuacao" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -2489,278 +2336,273 @@
     <Diagrams>
       <Diagram Name="ResidentialBD">
         <EntityTypeShape EntityType="residentialbdModel.my_aspnet_applications" Width="1.5" PointX="0.75" PointY="0.75" Height="1.5956835937500102" />
-        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_membership" Width="1.5" PointX="7.75" PointY="0.75" Height="4.6725065104166674" />
-        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_profiles" Width="1.5" PointX="7.75" PointY="6.75" Height="1.9802864583333246" />
-        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_roles" Width="1.5" PointX="6" PointY="33.375" Height="1.7879850260416674" />
-        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_sessioncleanup" Width="1.5" PointX="9.75" PointY="0.75" Height="1.5956835937500102" />
-        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_sessions" Width="1.5" PointX="9.75" PointY="3.75" Height="2.9417936197916674" />
-        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_users" Width="1.5" PointX="0.75" PointY="21.125" Height="2.172587890624996" />
-        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_usersinroles" Width="1.5" PointX="2.75" PointY="0.75" Height="1.4033821614583246" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_acessocondominio" Width="1.5" PointX="5.25" PointY="22.125" Height="2.1725878906250102" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_acessoveiculo" Width="1.5" PointX="14.5" PointY="22.5" Height="1.595683593749996" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_administradora" Width="1.5" PointX="1.5" PointY="10" Height="2.364889322916639" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_areapublica" Width="1.5" PointX="3" PointY="13.875" Height="2.7494921874999818" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_atendimento" Width="1.5" PointX="5.25" PointY="18.875" Height="2.1725878906249818" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_bloco" Width="1.5" PointX="3" PointY="6.75" Height="2.3648893229166674" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_comentario" Width="1.5" PointX="7.5" PointY="29.625" Height="2.5571907552083246" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_condominio" Width="1.5" PointX="0.75" PointY="13.25" Height="3.9033007812499818" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_enquete" Width="1.5" PointX="5.25" PointY="25" Height="2.9417936197916674" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_grupoplanocontas" Width="1.5" PointX="3" PointY="3.125" Height="1.7879850260416674" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_moradia" Width="1.5" PointX="5.25" PointY="6.5" Height="2.7494921874999818" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_movimentacaofinanceira" Width="1.5" PointX="7.5" PointY="11.25" Height="4.0956022135416674" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_ocorrencia" Width="1.5" PointX="5.25" PointY="28.75" Height="2.7494921874999818" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_opcoesenquete" Width="1.5" PointX="7.5" PointY="25.5" Height="1.9802864583333246" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_pessoa" Width="1.5" PointX="3" PointY="18.75" Height="6.9801236979166674" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_pessoamoradia" Width="1.5" PointX="8.25" PointY="16.25" Height="1.9802864583333246" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_planodeconta" Width="1.5" PointX="5.25" PointY="3" Height="1.9802864583333246" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_pontuacaopessoa" Width="1.5" PointX="10.25" PointY="26.25" Height="1.9802864583333246" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_postagem" Width="1.5" PointX="5.25" PointY="40.5" Height="2.5571907552083246" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_reservaambiente" Width="1.5" PointX="5.25" PointY="15" Height="2.5571907552083246" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_restricaoacesso" Width="1.5" PointX="11.25" PointY="18" Height="2.5571907552083246" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_setor" Width="1.5" PointX="0.75" PointY="18.375" Height="1.7879850260416674" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_veiculo" Width="1.5" PointX="12.25" PointY="21.75" Height="2.9417936197916674" />
-        <EntityTypeShape EntityType="residentialbdModel.tb_votoenquete" Width="1.5" PointX="9.75" PointY="22.125" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_membership" Width="1.5" PointX="2.75" PointY="0.75" Height="4.6725065104166674" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_profiles" Width="1.5" PointX="4.75" PointY="0.75" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_roles" Width="1.5" PointX="6" PointY="10.125" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_sessioncleanup" Width="1.5" PointX="4.75" PointY="3.75" Height="1.5956835937500102" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_sessions" Width="1.5" PointX="6.75" PointY="0.75" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_users" Width="1.5" PointX="0.75" PointY="21" Height="2.172587890624996" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_usersinroles" Width="1.5" PointX="0.75" PointY="6.75" Height="1.4033821614583246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_acessocondominio" Width="1.5" PointX="8.25" PointY="20" Height="2.1725878906250102" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_acessoveiculo" Width="1.5" PointX="7.5" PointY="14.125" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_areapublica" Width="1.5" PointX="9" PointY="9.625" Height="2.7494921874999818" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_atendimento" Width="1.5" PointX="5.25" PointY="17.25" Height="2.1725878906249818" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_bloco" Width="1.5" PointX="0.75" PointY="13.875" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_comentario" Width="1.5" PointX="7.5" PointY="28.75" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_condominio" Width="1.5" PointX="1.5" PointY="9.125" Height="3.710999348958353" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_enquete" Width="1.5" PointX="5.25" PointY="23.25" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_grupoplanocontas" Width="1.5" PointX="9" PointY="6.125" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_moradia" Width="1.5" PointX="3" PointY="13.625" Height="2.7494921874999818" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_movimentacaofinanceira" Width="1.5" PointX="13.5" PointY="18.125" Height="3.9033007812499818" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_ocorrencia" Width="1.5" PointX="5.25" PointY="27" Height="2.7494921874999818" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_opcoesenquete" Width="1.5" PointX="7.5" PointY="23.75" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_perfilpessoa" Width="1.5" PointX="8.25" PointY="17" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_pessoa" Width="1.5" PointX="3" PointY="18.5" Height="6.9801236979166674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_pessoamoradia" Width="1.5" PointX="10.25" PointY="26" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_planodeconta" Width="1.5" PointX="11.25" PointY="6" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_pontuacaopessoa" Width="1.5" PointX="5.25" PointY="36" Height="1.980286458333353" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_postagem" Width="1.5" PointX="5.25" PointY="38.625" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_reservaambiente" Width="1.5" PointX="11.25" PointY="18.75" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_restricaoacesso" Width="1.5" PointX="11.25" PointY="14.75" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_setor" Width="1.5" PointX="0.75" PointY="18.125" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_veiculo" Width="1.5" PointX="5.25" PointY="13.5" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_votoenquete" Width="1.5" PointX="10.75" PointY="22.125" Height="2.5571907552083246" />
+        <AssociationConnector Association="residentialbdModel.fk_tb_perfilpessoa_my_aspnet_roles1" >
+          <ConnectorPoint PointX="7.125" PointY="11.912985026041667" />
+          <ConnectorPoint PointX="7.125" PointY="17.09375" />
+          <ConnectorPoint PointX="8.25" PointY="17.09375" />
+        </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.fk_tb_pessoa_my_aspnet_users1" >
-          <ConnectorPoint PointX="2.25" PointY="22.211293945312498" />
-          <ConnectorPoint PointX="3" PointY="22.211293945312498" />
+          <ConnectorPoint PointX="2.25" PointY="22.086293945312498" />
+          <ConnectorPoint PointX="3" PointY="22.086293945312498" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_acessocondominio_tb_condominio1" >
-          <ConnectorPoint PointX="2.2499999999999996" PointY="17.153300781249982" />
-          <ConnectorPoint PointX="2.625" PointY="17.528300781249982" />
-          <ConnectorPoint PointX="4.635416666666667" PointY="17.528300781249982" />
-          <ConnectorPoint PointX="4.802083333333333" PointY="17.528300781249982" />
-          <ConnectorPoint PointX="4.875" PointY="17.528300781249982" />
-          <ConnectorPoint PointX="4.875" PointY="21.748847153846153" />
-          <ConnectorPoint PointX="5.2511528461538459" PointY="22.125" />
+          <ConnectorPoint PointX="2.2499995" PointY="12.835999348958353" />
+          <ConnectorPoint PointX="2.2499995" PointY="13.625" />
+          <ConnectorPoint PointX="2.4479166666666665" PointY="13.625" />
+          <ConnectorPoint PointX="2.6145833333333335" PointY="13.625" />
+          <ConnectorPoint PointX="2.75" PointY="13.625" />
+          <ConnectorPoint PointX="2.75" PointY="18.25" />
+          <ConnectorPoint PointX="4.041666666666667" PointY="18.25" />
+          <ConnectorPoint PointX="4.208333333333333" PointY="18.25" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="18.25" />
+          <ConnectorPoint PointX="4.8344861794871763" PointY="18.25" />
+          <ConnectorPoint PointX="5" PointY="18.25" />
+          <ConnectorPoint PointX="5" PointY="21.086293945312505" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="21.086293945312505" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="21.086293945312505" />
+          <ConnectorPoint PointX="8.25" PointY="21.086293945312505" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_acessocondominio_tb_pessoa1" >
-          <ConnectorPoint PointX="4.5" PointY="23.211293945312505" />
-          <ConnectorPoint PointX="4.635416666666667" PointY="23.211293945312505" />
-          <ConnectorPoint PointX="4.802083333333333" PointY="23.211293945312505" />
-          <ConnectorPoint PointX="5.25" PointY="23.211293945312505" />
+          <ConnectorPoint PointX="4.5" PointY="20.480646972656253" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="20.480646972656253" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="20.480646972656253" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="20.480646972656253" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="20.480646972656253" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="20.480646972656253" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="20.480646972656253" />
+          <ConnectorPoint PointX="8.25" PointY="20.480646972656253" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_acessoveiculo_tb_veiculo1" >
-          <ConnectorPoint PointX="13.75" PointY="23.297841796874998" />
-          <ConnectorPoint PointX="14.5" PointY="23.297841796874998" />
-        </AssociationConnector>
-        <AssociationConnector Association="residentialbdModel.tb_condominio_tb_administradora1" >
-          <ConnectorPoint PointX="1.875" PointY="12.364889322916639" />
-          <ConnectorPoint PointX="1.875" PointY="13.25" />
-        </AssociationConnector>
-        <AssociationConnector Association="residentialbdModel.TB_MovimentacaoFinanceira_TB_Administradora1" >
-          <ConnectorPoint PointX="3" PointY="10.40625" />
-          <ConnectorPoint PointX="7.041666666666667" PointY="10.40625" />
-          <ConnectorPoint PointX="7.208333333333333" PointY="10.40625" />
-          <ConnectorPoint PointX="7.510416666666667" PointY="10.40625" />
-          <ConnectorPoint PointX="7.677083333333333" PointY="10.40625" />
-          <ConnectorPoint PointX="8.3281275" PointY="10.40625" />
-          <ConnectorPoint PointX="8.3281275" PointY="11.25" />
+          <ConnectorPoint PointX="6.75" PointY="15.018992513020834" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="15.018992513020834" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="15.018992513020834" />
+          <ConnectorPoint PointX="7.5" PointY="15.018992513020834" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Espaco_TB_Condominio1" >
-          <ConnectorPoint PointX="2.25" PointY="15.249746093749991" />
-          <ConnectorPoint PointX="3" PointY="15.249746093749991" />
+          <ConnectorPoint PointX="3" PointY="9.84375" />
+          <ConnectorPoint PointX="9" PointY="9.84375" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_reservaambiente_tb_areapublica1" >
-          <ConnectorPoint PointX="4.5" PointY="15.812246093749991" />
-          <ConnectorPoint PointX="4.635416666666667" PointY="15.812246093749991" />
-          <ConnectorPoint PointX="4.802083333333333" PointY="15.812246093749991" />
-          <ConnectorPoint PointX="5.25" PointY="15.812246093749991" />
+          <ConnectorPoint PointX="10.15625" PointY="12.374492187499982" />
+          <ConnectorPoint PointX="10.15625" PointY="19.490143229166662" />
+          <ConnectorPoint PointX="10.916666666666666" PointY="19.490143229166662" />
+          <ConnectorPoint PointX="11.083333333333334" PointY="19.490143229166662" />
+          <ConnectorPoint PointX="11.25" PointY="19.490143229166662" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Atendimento_TB_Pessoa1" >
-          <ConnectorPoint PointX="4.5" PointY="19.961293945312491" />
-          <ConnectorPoint PointX="4.635416666666667" PointY="19.961293945312491" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="19.961293945312491" />
-          <ConnectorPoint PointX="5.25" PointY="19.961293945312491" />
+          <ConnectorPoint PointX="4.5" PointY="18.961293945312491" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="18.961293945312491" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="18.961293945312491" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="18.961293945312491" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="18.961293945312491" />
+          <ConnectorPoint PointX="5.25" PointY="18.961293945312491" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Bloco_TB_Condominio1" >
-          <ConnectorPoint PointX="1.09375" PointY="13.25" />
-          <ConnectorPoint PointX="1.09375" PointY="7.9324446614583337" />
-          <ConnectorPoint PointX="3" PointY="7.9324446614583337" />
+          <ConnectorPoint PointX="1.81249975" PointY="12.835999348958353" />
+          <ConnectorPoint PointX="1.81249975" PointY="13.875" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Moradia_TB_Bloco1" >
-          <ConnectorPoint PointX="4.5" PointY="7.9324446614583337" />
-          <ConnectorPoint PointX="5.25" PointY="7.9324446614583337" />
+          <ConnectorPoint PointX="2.25" PointY="15.057444661458334" />
+          <ConnectorPoint PointX="2.4479166666666665" PointY="15.057444661458334" />
+          <ConnectorPoint PointX="2.6145833333333335" PointY="15.057444661458334" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="15.057444661458334" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="15.057444661458334" />
+          <ConnectorPoint PointX="3" PointY="15.057444661458334" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Comentario_TB_Pessoa1" >
-          <ConnectorPoint PointX="3.6293935390625003" PointY="25.730123697916667" />
-          <ConnectorPoint PointX="3.6293935390625003" PointY="31.872091471354153" />
-          <ConnectorPoint PointX="3.8570970260416666" PointY="31.872091471354153" />
-          <ConnectorPoint PointX="4.0237636927083331" PointY="31.872091471354153" />
-          <ConnectorPoint PointX="7.5" PointY="31.872091471354153" />
+          <ConnectorPoint PointX="3.75" PointY="25.480123697916667" />
+          <ConnectorPoint PointX="3.75" PointY="30.463440755208325" />
+          <ConnectorPoint PointX="3.8697929166666665" PointY="30.463440755208325" />
+          <ConnectorPoint PointX="4.0364595833333334" PointY="30.463440755208325" />
+          <ConnectorPoint PointX="7.5" PointY="30.463440755208325" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Comentario_TB_Postagem1" >
-          <ConnectorPoint PointX="6.75" PointY="41.778595377604162" />
-          <ConnectorPoint PointX="8.28125" PointY="41.778595377604162" />
-          <ConnectorPoint PointX="8.28125" PointY="32.182190755208325" />
+          <ConnectorPoint PointX="6.75" PointY="39.903595377604162" />
+          <ConnectorPoint PointX="8.25" PointY="39.903595377604162" />
+          <ConnectorPoint PointX="8.25" PointY="31.114889322916667" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_pessoa1_tb_condominio2" >
-          <ConnectorPoint PointX="1.4687479999999997" PointY="17.153300781249982" />
-          <ConnectorPoint PointX="1.4687479999999997" PointY="18.125" />
-          <ConnectorPoint PointX="4.635416666666667" PointY="18.125" />
-          <ConnectorPoint PointX="5.020833333333333" PointY="18.125" />
-          <ConnectorPoint PointX="5.375" PointY="18.125" />
-          <ConnectorPoint PointX="5.375" PointY="18.625" />
-          <ConnectorPoint PointX="9.2916666666666661" PointY="18.625" />
-          <ConnectorPoint PointX="9.4583333333333339" PointY="18.625" />
-          <ConnectorPoint PointX="10.875" PointY="18.625" />
-          <ConnectorPoint PointX="10.875" PointY="19.700472377604157" />
-          <ConnectorPoint PointX="11.25" PointY="19.700472377604157" />
+          <ConnectorPoint PointX="2.53125" PointY="12.835999348958353" />
+          <ConnectorPoint PointX="2.53125" PointY="16.720896809895834" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="16.720896809895834" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="16.720896809895834" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="16.720896809895834" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="16.720896809895834" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="16.720896809895834" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="16.720896809895834" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="16.720896809895834" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="16.720896809895834" />
+          <ConnectorPoint PointX="10.072916666666666" PointY="16.720896809895834" />
+          <ConnectorPoint PointX="10.239583333333334" PointY="16.720896809895834" />
+          <ConnectorPoint PointX="10.916666666666666" PointY="16.720896809895834" />
+          <ConnectorPoint PointX="11.083333333333334" PointY="16.720896809895834" />
+          <ConnectorPoint PointX="11.25" PointY="16.720896809895834" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Enquete_TB_Pessoa1" >
-          <ConnectorPoint PointX="4.5" PointY="25.365061848958334" />
-          <ConnectorPoint PointX="4.635416666666667" PointY="25.365061848958334" />
-          <ConnectorPoint PointX="4.802083333333333" PointY="25.365061848958334" />
-          <ConnectorPoint PointX="5.25" PointY="25.365061848958334" />
+          <ConnectorPoint PointX="4.5" PointY="24.365061848958334" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="24.365061848958334" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="24.365061848958334" />
+          <ConnectorPoint PointX="5.25" PointY="24.365061848958334" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_OpcoesEnquete_TB_Enquete1" >
-          <ConnectorPoint PointX="6.75" PointY="26.490143229166662" />
-          <ConnectorPoint PointX="7.5" PointY="26.490143229166662" />
+          <ConnectorPoint PointX="6.75" PointY="24.740143229166662" />
+          <ConnectorPoint PointX="7.5" PointY="24.740143229166662" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_votoenquete_tb_enquete1" >
-          <ConnectorPoint PointX="6.75" PointY="25.21875" />
-          <ConnectorPoint PointX="8.1666666666666661" PointY="25.21875" />
-          <ConnectorPoint PointX="8.3333333333333339" PointY="25.21875" />
-          <ConnectorPoint PointX="9.96875" PointY="25.21875" />
-          <ConnectorPoint PointX="9.96875" PointY="24.682190755208325" />
+          <ConnectorPoint PointX="6.75" PointY="23.46875" />
+          <ConnectorPoint PointX="10.75" PointY="23.46875" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.fk_tb_planodeconta_tb_grupoplanocontas1" >
-          <ConnectorPoint PointX="4.5" PointY="4.0189925130208337" />
-          <ConnectorPoint PointX="5.25" PointY="4.0189925130208337" />
+          <ConnectorPoint PointX="10.5" PointY="7.0189925130208337" />
+          <ConnectorPoint PointX="11.25" PointY="7.0189925130208337" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_movimentacaofinanceira_tb_moradia1" >
-          <ConnectorPoint PointX="6.75" PointY="9.0211393229166532" />
-          <ConnectorPoint PointX="7.041666666666667" PointY="9.0211393229166532" />
-          <ConnectorPoint PointX="7.208333333333333" PointY="9.0211393229166532" />
-          <ConnectorPoint PointX="7.59375" PointY="9.0211393229166532" />
-          <ConnectorPoint PointX="7.59375" PointY="11.25" />
+          <ConnectorPoint PointX="4.5" PointY="14.999746093749991" />
+          <ConnectorPoint PointX="5" PointY="14.999746093749991" />
+          <ConnectorPoint PointX="5" PointY="16.566793619791667" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="16.566793619791667" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="16.566793619791667" />
+          <ConnectorPoint PointX="10.072916666666666" PointY="16.566793619791667" />
+          <ConnectorPoint PointX="10.239583333333334" PointY="16.566793619791667" />
+          <ConnectorPoint PointX="11" PointY="16.566793619791667" />
+          <ConnectorPoint PointX="11" PointY="17.557190755208325" />
+          <ConnectorPoint PointX="11.916666666666666" PointY="17.557190755208325" />
+          <ConnectorPoint PointX="12.083333333333334" PointY="17.557190755208325" />
+          <ConnectorPoint PointX="13.760414166666665" PointY="17.557190755208325" />
+          <ConnectorPoint PointX="13.927080833333333" PointY="17.557190755208325" />
+          <ConnectorPoint PointX="14.25" PointY="17.557190755208325" />
+          <ConnectorPoint PointX="14.25" PointY="18.125" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Pessoa1_TB_Moradia1" >
-          <ConnectorPoint PointX="6.75" PointY="6.59375" />
-          <ConnectorPoint PointX="7.041666666666667" PointY="6.5937499999999991" />
-          <ConnectorPoint PointX="7.208333333333333" PointY="6.59375" />
-          <ConnectorPoint PointX="9.5" PointY="6.59375" />
-          <ConnectorPoint PointX="9.5" PointY="16.25" />
+          <ConnectorPoint PointX="3.75" PointY="16.374492187499982" />
+          <ConnectorPoint PointX="3.75" PointY="18" />
+          <ConnectorPoint PointX="4.041666666666667" PointY="18" />
+          <ConnectorPoint PointX="4.208333333333333" PointY="18" />
+          <ConnectorPoint PointX="4.75" PointY="18" />
+          <ConnectorPoint PointX="4.75" PointY="26.75" />
+          <ConnectorPoint PointX="9.875" PointY="26.75" />
+          <ConnectorPoint PointX="9.875" PointY="26.990143229166662" />
+          <ConnectorPoint PointX="10.25" PointY="26.990143229166662" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_veiculo_tb_moradia1" >
-          <ConnectorPoint PointX="6.75" PointY="9.1665682552083112" />
-          <ConnectorPoint PointX="7.041666666666667" PointY="9.1665682552083112" />
-          <ConnectorPoint PointX="7.208333333333333" PointY="9.1665682552083112" />
-          <ConnectorPoint PointX="7.510416666666667" PointY="9.1665682552083112" />
-          <ConnectorPoint PointX="7.677083333333333" PointY="9.1665682552083112" />
-          <ConnectorPoint PointX="9.4166666666666661" PointY="9.1665682552083112" />
-          <ConnectorPoint PointX="9.5833333333333339" PointY="9.1665682552083112" />
-          <ConnectorPoint PointX="13.28125" PointY="9.1665682552083112" />
-          <ConnectorPoint PointX="13.28125" PointY="21.75" />
+          <ConnectorPoint PointX="4.5" PointY="14.249873046874996" />
+          <ConnectorPoint PointX="5.25" PointY="14.249873046874996" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_MovimentacaoFinanceira_TB_PlanoDeConta1" >
-          <ConnectorPoint PointX="6.75" PointY="4.9802864583333246" />
-          <ConnectorPoint PointX="7.125" PointY="5.3552864583333246" />
-          <ConnectorPoint PointX="7.125" PointY="13.607775437499988" />
-          <ConnectorPoint PointX="7.5" PointY="13.607775437499988" />
+          <ConnectorPoint PointX="12.75" PointY="6.9901432291666623" />
+          <ConnectorPoint PointX="13.8437475" PointY="6.9901432291666623" />
+          <ConnectorPoint PointX="13.8437475" PointY="18.125" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.tb_movimentacaofinanceira_tb_reservaambiente1" >
-          <ConnectorPoint PointX="6.75" PointY="15.172801106770834" />
-          <ConnectorPoint PointX="7.5" PointY="15.172801106770834" />
+          <ConnectorPoint PointX="12.75" PointY="20.028595377604162" />
+          <ConnectorPoint PointX="13.5" PointY="20.028595377604162" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_Ocorrencia_TB_Pessoa1" >
-          <ConnectorPoint PointX="4.2514671796875" PointY="25.730123697916667" />
-          <ConnectorPoint PointX="4.2514671796875" PointY="30.124746093749991" />
-          <ConnectorPoint PointX="5.25" PointY="30.124746093749991" />
+          <ConnectorPoint PointX="4.1562525" PointY="25.480123697916667" />
+          <ConnectorPoint PointX="4.1562525" PointY="28.374746093749991" />
+          <ConnectorPoint PointX="5.25" PointY="28.374746093749991" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.TB_VotoEnquete_TB_OpcoesEnquete1" >
-          <ConnectorPoint PointX="8.25" PointY="25.5" />
-          <ConnectorPoint PointX="8.25" PointY="23.403595377604162" />
-          <ConnectorPoint PointX="9.75" PointY="23.403595377604162" />
-        </AssociationConnector>
-        <AssociationConnector Association="residentialbdModel.fk_tb_pessoa_tb_setor1" >
-          <ConnectorPoint PointX="2.25" PointY="19.456492513020834" />
-          <ConnectorPoint PointX="3" PointY="19.456492513020834" />
-        </AssociationConnector>
-        <AssociationConnector Association="residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1" >
-          <ConnectorPoint PointX="3.37865994921875" PointY="25.730123697916667" />
-          <ConnectorPoint PointX="3.37865994921875" PointY="28.117290039062503" />
-          <ConnectorPoint PointX="3.5460602057291668" PointY="28.117290039062503" />
-          <ConnectorPoint PointX="3.7127268723958338" PointY="28.117290039062503" />
-          <ConnectorPoint PointX="3.8570970260416666" PointY="28.117290039062503" />
-          <ConnectorPoint PointX="4.0237636927083331" PointY="28.117290039062503" />
-          <ConnectorPoint PointX="4.1681338463541673" PointY="28.117290039062503" />
-          <ConnectorPoint PointX="4.3348005130208334" PointY="28.117290039062503" />
-          <ConnectorPoint PointX="10.25" PointY="28.117290039062503" />
-        </AssociationConnector>
-        <AssociationConnector Association="residentialbdModel.TB_Pessoa1_TB_Pessoa1" >
-          <ConnectorPoint PointX="4.5" PointY="21.473549932869226" />
-          <ConnectorPoint PointX="4.635416666666667" PointY="21.473549932869226" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="21.473549932869226" />
-          <ConnectorPoint PointX="9.375" PointY="21.473549932869226" />
-          <ConnectorPoint PointX="9.375" PointY="18.230286458333325" />
-        </AssociationConnector>
-        <AssociationConnector Association="residentialbdModel.tb_pessoa1_tb_pessoa2" >
-          <ConnectorPoint PointX="4.5" PointY="18.78125" />
-          <ConnectorPoint PointX="4.635416666666667" PointY="18.78125" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="18.78125" />
-          <ConnectorPoint PointX="9.2916666666666661" PointY="18.78125" />
-          <ConnectorPoint PointX="9.4583333333333339" PointY="18.78125" />
-          <ConnectorPoint PointX="10.791666666666666" PointY="18.78125" />
-          <ConnectorPoint PointX="10.958333333333334" PointY="18.78125" />
-          <ConnectorPoint PointX="11.25" PointY="18.78125" />
-        </AssociationConnector>
-        <AssociationConnector Association="residentialbdModel.TB_Postagem_TB_Pessoa1" >
-          <ConnectorPoint PointX="3.940430359375" PointY="25.730123697916667" />
-          <ConnectorPoint PointX="3.940430359375" PointY="41.778595377604162" />
-          <ConnectorPoint PointX="5.25" PointY="41.778595377604162" />
-        </AssociationConnector>
-        <AssociationConnector Association="residentialbdModel.TB_ReservaAmbiente_TB_Pessoa1" >
-          <ConnectorPoint PointX="4.5" PointY="18.813460538461534" />
-          <ConnectorPoint PointX="4.6598244349011209" PointY="18.653636103560412" />
-          <ConnectorPoint PointX="4.7776755650988791" PointY="18.535784973362656" />
-          <ConnectorPoint PointX="4.8160744349011209" PointY="18.497386103560412" />
-          <ConnectorPoint PointX="4.9339255650988791" PointY="18.379534973362656" />
-          <ConnectorPoint PointX="4.9375" PointY="18.375960538461534" />
-          <ConnectorPoint PointX="4.9375" PointY="16.26415089062499" />
-          <ConnectorPoint PointX="5.25" PointY="16.26415089062499" />
-        </AssociationConnector>
-        <AssociationConnector Association="residentialbdModel.TB_Veiculo_TB_Pessoa1" >
-          <ConnectorPoint PointX="4.5" PointY="21.90625" />
-          <ConnectorPoint PointX="4.635416666666667" PointY="21.90625" />
-          <ConnectorPoint PointX="4.802083333333333" PointY="21.90625" />
-          <ConnectorPoint PointX="4.949069512820512" PointY="21.90625" />
-          <ConnectorPoint PointX="5.1157361794871781" PointY="21.90625" />
-          <ConnectorPoint PointX="12.25" PointY="21.90625" />
-        </AssociationConnector>
-        <AssociationConnector Association="residentialbdModel.TB_VotoEnquete_TB_Pessoa1" >
-          <ConnectorPoint PointX="4.5" PointY="24.521139322916667" />
-          <ConnectorPoint PointX="4.635416666666667" PointY="24.521139322916667" />
-          <ConnectorPoint PointX="4.802083333333333" PointY="24.521139322916667" />
-          <ConnectorPoint PointX="8.1666666666666661" PointY="24.521139322916667" />
-          <ConnectorPoint PointX="8.3333333333333339" PointY="24.521139322916667" />
-          <ConnectorPoint PointX="9.75" PointY="24.521139322916667" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="residentialbdModel.tb_perfilpessoa" Width="1.5" PointX="10.25" PointY="29" Height="1.9802864583333388" />
-        <AssociationConnector Association="residentialbdModel.fk_tb_perfilpessoa_my_aspnet_roles1" >
-          <ConnectorPoint PointX="7.5" PointY="34.268992513020834" />
-          <ConnectorPoint PointX="8.1979166666666661" PointY="34.268992513020834" />
-          <ConnectorPoint PointX="8.3645833333333339" PointY="34.268992513020834" />
-          <ConnectorPoint PointX="11" PointY="34.268992513020834" />
-          <ConnectorPoint PointX="11" PointY="30.980286458333339" />
+          <ConnectorPoint PointX="9" PointY="24.216095377604162" />
+          <ConnectorPoint PointX="10.75" PointY="24.216095377604162" />
         </AssociationConnector>
         <AssociationConnector Association="residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1" >
-          <ConnectorPoint PointX="3.127926359375" PointY="25.730123697916667" />
-          <ConnectorPoint PointX="3.127926359375" PointY="28.5" />
-          <ConnectorPoint PointX="3.5460602057291668" PointY="28.5" />
-          <ConnectorPoint PointX="3.7127268723958338" PointY="28.5" />
-          <ConnectorPoint PointX="3.8570970260416666" PointY="28.5" />
-          <ConnectorPoint PointX="4.0237636927083331" PointY="28.5" />
-          <ConnectorPoint PointX="4.1681338463541673" PointY="28.5" />
-          <ConnectorPoint PointX="4.3348005130208334" PointY="28.5" />
-          <ConnectorPoint PointX="9.875" PointY="28.5" />
-          <ConnectorPoint PointX="9.875" PointY="29.990143229166669" />
-          <ConnectorPoint PointX="10.25" PointY="29.990143229166669" />
+          <ConnectorPoint PointX="4.125" PointY="18.5" />
+          <ConnectorPoint PointX="4.125" PointY="17.125002499999994" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="17.125002499999994" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="17.125002499999994" />
+          <ConnectorPoint PointX="8.25" PointY="17.125002499999994" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="residentialbdModel.tb_pontuacao" Width="1.5" PointX="4.375" PointY="10.875" Height="1.595683593749996" />
-        <AssociationConnector Association="residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pontuacao1" >
-          <ConnectorPoint PointX="4.71875" PointY="12.470683593749996" />
-          <ConnectorPoint PointX="4.71875" PointY="28.086037539062509" />
-          <ConnectorPoint PointX="10.25" PointY="28.086037539062509" />
+        <AssociationConnector Association="residentialbdModel.fk_tb_pessoa_tb_setor1" >
+          <ConnectorPoint PointX="2.25" PointY="19.206492513020834" />
+          <ConnectorPoint PointX="3" PointY="19.206492513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1" >
+          <ConnectorPoint PointX="3.3437475" PointY="25.480123697916667" />
+          <ConnectorPoint PointX="3.3437475" PointY="36.990143229166677" />
+          <ConnectorPoint PointX="3.8697929166666665" PointY="36.990143229166677" />
+          <ConnectorPoint PointX="4.0364595833333334" PointY="36.990143229166677" />
+          <ConnectorPoint PointX="5.25" PointY="36.990143229166677" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_Pessoa1_TB_Pessoa1" >
+          <ConnectorPoint PointX="4.3593787499999994" PointY="25.480123697916667" />
+          <ConnectorPoint PointX="4.3593787499999994" PointY="26.502146809895834" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="26.502146809895834" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="26.502146809895834" />
+          <ConnectorPoint PointX="10.25" PointY="26.502146809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.tb_pessoa1_tb_pessoa2" >
+          <ConnectorPoint PointX="4.5" PointY="22.136896972656253" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="22.136896972656253" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="22.136896972656253" />
+          <ConnectorPoint PointX="8" PointY="22.136896972656253" />
+          <ConnectorPoint PointX="8" PointY="19.75" />
+          <ConnectorPoint PointX="11" PointY="19.75" />
+          <ConnectorPoint PointX="11" PointY="18.5" />
+          <ConnectorPoint PointX="12" PointY="18.5" />
+          <ConnectorPoint PointX="12" PointY="17.307190755208325" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_Postagem_TB_Pessoa1" >
+          <ConnectorPoint PointX="3.95312625" PointY="25.480123697916667" />
+          <ConnectorPoint PointX="3.95312625" PointY="39.903595377604162" />
+          <ConnectorPoint PointX="5.25" PointY="39.903595377604162" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_ReservaAmbiente_TB_Pessoa1" >
+          <ConnectorPoint PointX="4.5" PointY="19.90625" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="19.90625" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="19.90625" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="19.90625" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="19.90625" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="19.90625" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="19.90625" />
+          <ConnectorPoint PointX="11.25" PointY="19.90625" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_Veiculo_TB_Pessoa1" >
+          <ConnectorPoint PointX="4.5" PointY="18.501152846153843" />
+          <ConnectorPoint PointX="4.6910744349011209" PointY="18.310078411252722" />
+          <ConnectorPoint PointX="4.8089255650988791" PointY="18.192227281054965" />
+          <ConnectorPoint PointX="4.875" PointY="18.126152846153843" />
+          <ConnectorPoint PointX="4.875" PointY="15.720769356770829" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="15.720769356770829" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="15.720769356770829" />
+          <ConnectorPoint PointX="5.25" PointY="15.720769356770829" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_VotoEnquete_TB_Pessoa1" >
+          <ConnectorPoint PointX="4.5" PointY="22.724698486328126" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="22.724698486328126" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="22.724698486328126" />
+          <ConnectorPoint PointX="10.75" PointY="22.724698486328126" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>
