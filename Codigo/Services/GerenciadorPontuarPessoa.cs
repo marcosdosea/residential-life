@@ -41,7 +41,7 @@ namespace Services
             Atribuir(pontuarPessoaModel, pontuacaoPessoaE);
             unitOfWork.RepositorioPontuarPessoa.Inserir(pontuacaoPessoaE);
             unitOfWork.Commit(shared);
-            return pontuacaoPessoaE.IdPontuacao;
+            return pontuacaoPessoaE.IdPontuacaoPessoa;
         }
 
         /// <summary>
@@ -59,12 +59,10 @@ namespace Services
         /// <summary>
         /// Remove da base de dados
         /// </summary>
-        /// <param name="idPontuacao">Identificador do pontuacao na base de dados</param>
-        /// <param name="idPessoa">Identificador do pessoa na base de dados</param>
-        public void Remover(int idPontuacao, int idPessoa)
+        /// <param name="idPontuacaoPessoa">Identificador do pontuacao na base de dados</param>
+        public void Remover(int idPontuacaoPessoa)
         {
-            unitOfWork.RepositorioPontuarPessoa.Remover(p => p.IdPontuacao.Equals(idPontuacao) &&
-                p.IdPessoa.Equals(idPessoa));
+            unitOfWork.RepositorioPontuarPessoa.Remover(p => p.IdPontuacaoPessoa.Equals(idPontuacaoPessoa));
             unitOfWork.Commit(shared);
         }
 
@@ -76,14 +74,20 @@ namespace Services
         private IQueryable<PontuarPessoaModel> GetQuery()
         {
             IQueryable<tb_pontuacaopessoa> tb_pontuacaopessoa = unitOfWork.RepositorioPontuarPessoa.GetQueryable();
-            var query = from pontuarPessoa in tb_pontuacaopessoa
+            var query = from pontuar in tb_pontuacaopessoa
                         select new PontuarPessoaModel
                         {
-                            IdPontuacao = pontuarPessoa.IdPontuacao,
-                            IdPessoa = pontuarPessoa.IdPessoa,
-                            Comentario = pontuarPessoa.Comentario,
+                            IdPontuacaoPessoa = pontuar.IdPontuacaoPessoa,
+                            IdPessoa = pontuar.IdPessoa,
+                            Comentario = pontuar.Comentario,
+                            Pontuacao = pontuar.Pontuacao == "Zero" ? ListaPontuacao.Zero : pontuar.Pontuacao == "Um" ? ListaPontuacao.Um : 
+                                pontuar.Pontuacao == "Dois" ? ListaPontuacao.Dois : pontuar.Pontuacao == "Tres" ? ListaPontuacao.Tres : 
+                                pontuar.Pontuacao == "Quatro" ? ListaPontuacao.Quatro : pontuar.Pontuacao == "Cinco" ? ListaPontuacao.Cinco :
+                                pontuar.Pontuacao == "Seis" ? ListaPontuacao.Seis : pontuar.Pontuacao == "Sete" ? ListaPontuacao.Sete :
+                                pontuar.Pontuacao == "Oito" ? ListaPontuacao.Oito : pontuar.Pontuacao == "Oito" ? ListaPontuacao.Oito :
+                                pontuar.Pontuacao == "Nove" ? ListaPontuacao.Nove : ListaPontuacao.Dez,
 
-                            NomePessoa = pontuarPessoa.tb_pessoa.Nome
+                            NomePessoa = pontuar.tb_pessoa.Nome
                         };
             return query;
         }
@@ -104,10 +108,9 @@ namespace Services
         /// <param name="idPontuacao">Identificador do pontuacao na base de dados</param>
         /// <param name="idPessoa">Identificador do pessoa na base de dados</param>
         /// <returns>Pontuacao model</returns>
-        public PontuarPessoaModel Obter(int idPontuacao, int idPessoa)
+        public PontuarPessoaModel Obter(int idPontuacaoPessoa)
         {
-            IEnumerable<PontuarPessoaModel> pontuacaoPessoaE = GetQuery().Where(p => p.IdPontuacao == idPontuacao &&
-                p.IdPessoa.Equals(idPessoa));
+            IEnumerable<PontuarPessoaModel> pontuacaoPessoaE = GetQuery().Where(p => p.IdPontuacaoPessoa == idPontuacaoPessoa);
             return pontuacaoPessoaE.ElementAtOrDefault(0);
         }
 
@@ -119,9 +122,10 @@ namespace Services
         /// <param name="pontuacaoPessoaE">Entity mapeada da base de dados</param>
         private void Atribuir(PontuarPessoaModel pontuarPessoaModel, tb_pontuacaopessoa pontuacaoPessoaE)
         {
-            pontuacaoPessoaE.IdPontuacao = pontuarPessoaModel.IdPontuacao;
+            pontuacaoPessoaE.IdPontuacaoPessoa = pontuarPessoaModel.IdPontuacaoPessoa;
             pontuacaoPessoaE.IdPessoa = pontuarPessoaModel.IdPessoa;
             pontuacaoPessoaE.Comentario = pontuarPessoaModel.Comentario;
+            pontuacaoPessoaE.Pontuacao = pontuarPessoaModel.Pontuacao.ToString();
         }
 
         /// <summary>

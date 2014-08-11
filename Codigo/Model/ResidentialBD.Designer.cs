@@ -2672,12 +2672,14 @@ namespace Models
         /// <summary>
         /// Create a new tb_acessoveiculo object.
         /// </summary>
+        /// <param name="idAcessoVeiculo">Initial value of the IdAcessoVeiculo property.</param>
         /// <param name="dataHora">Initial value of the DataHora property.</param>
         /// <param name="idVeiculo">Initial value of the IdVeiculo property.</param>
         /// <param name="tipoAcesso">Initial value of the TipoAcesso property.</param>
-        public static tb_acessoveiculo Createtb_acessoveiculo(global::System.DateTime dataHora, global::System.Int32 idVeiculo, global::System.String tipoAcesso)
+        public static tb_acessoveiculo Createtb_acessoveiculo(global::System.Int32 idAcessoVeiculo, global::System.DateTime dataHora, global::System.Int32 idVeiculo, global::System.String tipoAcesso)
         {
             tb_acessoveiculo tb_acessoveiculo = new tb_acessoveiculo();
+            tb_acessoveiculo.IdAcessoVeiculo = idAcessoVeiculo;
             tb_acessoveiculo.DataHora = dataHora;
             tb_acessoveiculo.IdVeiculo = idVeiculo;
             tb_acessoveiculo.TipoAcesso = tipoAcesso;
@@ -2693,6 +2695,33 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.Int32 IdAcessoVeiculo
+        {
+            get
+            {
+                return _IdAcessoVeiculo;
+            }
+            set
+            {
+                if (_IdAcessoVeiculo != value)
+                {
+                    OnIdAcessoVeiculoChanging(value);
+                    ReportPropertyChanging("IdAcessoVeiculo");
+                    _IdAcessoVeiculo = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdAcessoVeiculo");
+                    OnIdAcessoVeiculoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdAcessoVeiculo;
+        partial void OnIdAcessoVeiculoChanging(global::System.Int32 value);
+        partial void OnIdAcessoVeiculoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.DateTime DataHora
         {
             get
@@ -2701,14 +2730,11 @@ namespace Models
             }
             set
             {
-                if (_DataHora != value)
-                {
-                    OnDataHoraChanging(value);
-                    ReportPropertyChanging("DataHora");
-                    _DataHora = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("DataHora");
-                    OnDataHoraChanged();
-                }
+                OnDataHoraChanging(value);
+                ReportPropertyChanging("DataHora");
+                _DataHora = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DataHora");
+                OnDataHoraChanged();
             }
         }
         private global::System.DateTime _DataHora;
@@ -2718,7 +2744,7 @@ namespace Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 IdVeiculo
         {
@@ -2728,14 +2754,11 @@ namespace Models
             }
             set
             {
-                if (_IdVeiculo != value)
-                {
-                    OnIdVeiculoChanging(value);
-                    ReportPropertyChanging("IdVeiculo");
-                    _IdVeiculo = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdVeiculo");
-                    OnIdVeiculoChanged();
-                }
+                OnIdVeiculoChanging(value);
+                ReportPropertyChanging("IdVeiculo");
+                _IdVeiculo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdVeiculo");
+                OnIdVeiculoChanged();
             }
         }
         private global::System.Int32 _IdVeiculo;
@@ -2745,7 +2768,7 @@ namespace Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String TipoAcesso
         {
@@ -2755,14 +2778,11 @@ namespace Models
             }
             set
             {
-                if (_TipoAcesso != value)
-                {
-                    OnTipoAcessoChanging(value);
-                    ReportPropertyChanging("TipoAcesso");
-                    _TipoAcesso = StructuralObject.SetValidValue(value, false);
-                    ReportPropertyChanged("TipoAcesso");
-                    OnTipoAcessoChanged();
-                }
+                OnTipoAcessoChanging(value);
+                ReportPropertyChanging("TipoAcesso");
+                _TipoAcesso = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("TipoAcesso");
+                OnTipoAcessoChanged();
             }
         }
         private global::System.String _TipoAcesso;
@@ -7134,13 +7154,15 @@ namespace Models
         /// <summary>
         /// Create a new tb_pontuacaopessoa object.
         /// </summary>
-        /// <param name="idPontuacao">Initial value of the IdPontuacao property.</param>
+        /// <param name="idPontuacaoPessoa">Initial value of the IdPontuacaoPessoa property.</param>
         /// <param name="idPessoa">Initial value of the IdPessoa property.</param>
-        public static tb_pontuacaopessoa Createtb_pontuacaopessoa(global::System.Int32 idPontuacao, global::System.Int32 idPessoa)
+        /// <param name="pontuacao">Initial value of the Pontuacao property.</param>
+        public static tb_pontuacaopessoa Createtb_pontuacaopessoa(global::System.Int32 idPontuacaoPessoa, global::System.Int32 idPessoa, global::System.String pontuacao)
         {
             tb_pontuacaopessoa tb_pontuacaopessoa = new tb_pontuacaopessoa();
-            tb_pontuacaopessoa.IdPontuacao = idPontuacao;
+            tb_pontuacaopessoa.IdPontuacaoPessoa = idPontuacaoPessoa;
             tb_pontuacaopessoa.IdPessoa = idPessoa;
+            tb_pontuacaopessoa.Pontuacao = pontuacao;
             return tb_pontuacaopessoa;
         }
 
@@ -7153,27 +7175,27 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 IdPontuacao
+        public global::System.Int32 IdPontuacaoPessoa
         {
             get
             {
-                return _IdPontuacao;
+                return _IdPontuacaoPessoa;
             }
             set
             {
-                if (_IdPontuacao != value)
+                if (_IdPontuacaoPessoa != value)
                 {
-                    OnIdPontuacaoChanging(value);
-                    ReportPropertyChanging("IdPontuacao");
-                    _IdPontuacao = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdPontuacao");
-                    OnIdPontuacaoChanged();
+                    OnIdPontuacaoPessoaChanging(value);
+                    ReportPropertyChanging("IdPontuacaoPessoa");
+                    _IdPontuacaoPessoa = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdPontuacaoPessoa");
+                    OnIdPontuacaoPessoaChanged();
                 }
             }
         }
-        private global::System.Int32 _IdPontuacao;
-        partial void OnIdPontuacaoChanging(global::System.Int32 value);
-        partial void OnIdPontuacaoChanged();
+        private global::System.Int32 _IdPontuacaoPessoa;
+        partial void OnIdPontuacaoPessoaChanging(global::System.Int32 value);
+        partial void OnIdPontuacaoPessoaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -7229,7 +7251,7 @@ namespace Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String Pontuacao
         {
@@ -7241,7 +7263,7 @@ namespace Models
             {
                 OnPontuacaoChanging(value);
                 ReportPropertyChanging("Pontuacao");
-                _Pontuacao = StructuralObject.SetValidValue(value, true);
+                _Pontuacao = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Pontuacao");
                 OnPontuacaoChanged();
             }

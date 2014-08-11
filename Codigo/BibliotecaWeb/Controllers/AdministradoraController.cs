@@ -11,6 +11,7 @@ namespace BibliotecaWeb.Controllers
 {
     public class AdministradoraController : Controller
     {
+        /*
         //
         // GET: /Administradora/
 
@@ -49,7 +50,7 @@ namespace BibliotecaWeb.Controllers
 
                 if (createStatus == MembershipCreateStatus.Success)
                 {
-                    FormsAuthentication.SetAuthCookie(administradoraModel.Login, false /* createPersistentCookie */);
+                    FormsAuthentication.SetAuthCookie(administradoraModel.Login, false /* createPersistentCookie * /);
                 }
                 else
                 {
@@ -121,7 +122,7 @@ namespace BibliotecaWeb.Controllers
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
-        }
+        } */
 
 
         #region Status Codes

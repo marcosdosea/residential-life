@@ -41,7 +41,7 @@ namespace BibliotecaWeb.Controllers
         //[Authorize(Roles = "Adm Sistema")]
         public ActionResult Create()
         {
-            ViewBag.IdAdministradora = new SelectList(gAdministradora.ObterTodos(), "IdAdministradora", "Nome");
+            //ViewBag.IdAdministradora = new SelectList(gAdministradora.ObterTodos(), "IdAdministradora", "Nome");
             return View();
         }
 
@@ -66,7 +66,7 @@ namespace BibliotecaWeb.Controllers
         public ActionResult Edit(int id)
         {
             CondominioModel condominio = gCondominio.Obter(id);
-            ViewBag.IdAdministradora = new SelectList(gAdministradora.ObterTodos(), "IdAdministradora", "Nome", condominio.IdAdministradora);
+            //ViewBag.IdAdministradora = new SelectList(gAdministradora.ObterTodos(), "IdAdministradora", "Nome", condominio.IdAdministradora);
             return View(condominio);
         }
 
