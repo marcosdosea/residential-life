@@ -22,6 +22,8 @@
 	<div id="menu" class="containerMenu">
 		<ul>
             <li><a href="<%: Url.Action("Index", "Home")%>"><img src="../../Content/images/logo.png" alt="logo" id="Img1" width="110px;" height="60px;"></a></li>
+            <% if (HttpContext.Current.Request.IsAuthenticated)
+               { %>
             <li><%: Html.ActionLink("Pessoa", "Index", "Pessoa")%></li>
             <li><%: Html.ActionLink("Funcionário", "Index", "Funcionario")%></li>
             <li><%: Html.ActionLink("Alocar Pessoa em Moradia", "Index", "AlocarPessoaMoradia")%></li>
@@ -32,18 +34,19 @@
             <li><%: Html.ActionLink("Plano De Conta", "Index", "PlanoDeConta")%></li>
             <li><%: Html.ActionLink("Grupo Plano De Conta", "Index", "GrupoPlanoDeContas")%></li>
             <li><%: Html.ActionLink("Ocorrência", "Index", "Ocorrencia")%></li>
-            <li><%: Html.ActionLink("Veículo", "Index", "Veiculo")%></li>
             <!--li><%: Html.ActionLink("Condominio", "Index", "Condominio")%></li>
             <li><%: Html.ActionLink("Área Pública", "Index", "AreaPublica")%></li>
             <li><%: Html.ActionLink("Reserva Ambiente", "Index", "ReservaAmbiente")%></li>
             <li><%: Html.ActionLink("Registrar Ocorrência", "Index", "Ocorrencia")%></li-->
             <li><%: Html.ActionLink("Enquetes", "Index", "Enquete")%></li>
             <li><%: Html.ActionLink("Atendimento", "Index", "Atendimento")%></li>
-            <li><%: Html.ActionLink("Administradora", "Index", "Administradora")%></li>
             <li><%: Html.ActionLink("Postagens", "Index", "Postagem")%></li>
             <li><%: Html.ActionLink("Pontuação", "Index", "Pontuacao")%></li>
             <li><%: Html.ActionLink("Pontuar Pessoa", "Index", "PontuarPessoa")%></li>
+            <li><%: Html.ActionLink("Veículo", "Index", "Veiculo")%></li>
+            <li><%: Html.ActionLink("Acesso Veículo", "Index", "AcessoVeiculo")%></li>
             <li><%: Html.ActionLink("About", "About", "Home")%></li>
+            <% } %>
 		</ul>
 	</div>
 </div>
