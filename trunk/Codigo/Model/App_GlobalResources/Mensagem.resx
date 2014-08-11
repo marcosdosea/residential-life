@@ -831,4 +831,19 @@
   <data name="visualizarPontuacoes" xml:space="preserve">
     <value>Visualizar Pontuações</value>
   </data>
+  <data name="acessoVeiculo" xml:space="preserve">
+    <value>Acesso de Veículo</value>
+  </data>
+  <data name="registrar" xml:space="preserve">
+    <value>Registrar</value>
+  </data>
+  <data name="registrarAcessoVeiculo" xml:space="preserve">
+    <value>Registrar Acesso de Veículo</value>
+  </data>
+  <data name="alterar" xml:space="preserve">
+    <value>Alterar</value>
+  </data>
+  <data name="gerarRelatorio" xml:space="preserve">
+    <value>Gerar Relatório</value>
+  </data>
 </root>
