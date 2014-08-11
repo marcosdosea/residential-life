@@ -39,12 +39,13 @@ namespace BibliotecaWeb
         //
         // GET: /pontuarPessoa/Create
 
-        public ActionResult Pontuar(int idPessoa)
+        public ActionResult Create(int idPessoa)
         {
             PontuarPessoaModel pontuarPessoa = new PontuarPessoaModel();
             pontuarPessoa.IdPessoa = idPessoa;
             pontuarPessoa.NomePessoa = gPessoa.Obter(idPessoa).Nome;
             pontuarPessoa.Comentario = "";
+            pontuarPessoa.Pontuacao = pontuarPessoa.Pontuacao;
             return View(pontuarPessoa);
         }
 
@@ -52,7 +53,7 @@ namespace BibliotecaWeb
         // POST: /pontuarPessoa/Create
 
         [HttpPost]
-        public ActionResult Pontuar(PontuarPessoaModel pontuarPessoa)
+        public ActionResult Create(PontuarPessoaModel pontuarPessoa)
         {
             if (ModelState.IsValid)
             {
