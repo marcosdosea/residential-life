@@ -11,14 +11,13 @@ namespace ResidentialWeb.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
+            ViewBag.Message = "Bem-Vindo ao Sistema Residential Life!";
 
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = SessionController.Teste;
             return View();
         }
     }

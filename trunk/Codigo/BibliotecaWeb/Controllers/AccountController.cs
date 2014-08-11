@@ -7,6 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using Models;
 using Services;
+using BibliotecaWeb;
 
 namespace ResidentialWeb.Controllers
 {
@@ -39,6 +40,7 @@ namespace ResidentialWeb.Controllers
                     }
                     else
                     {
+                        SessionController.PessoaLogada = GerenciadorPessoa.GetInstance().ObterPessoaLogadaUser(model.UserName).IdUser;
                         return RedirectToAction("Index", "Home");
                     }
                 }
