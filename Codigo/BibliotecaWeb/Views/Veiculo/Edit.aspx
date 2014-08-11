@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.VeiculoModel>" %>
 
+<%@ Import Namespace="Model.Helpers" %>
+<%@ Import Namespace="Model" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     <%: Models.App_GlobalResources.Mensagem.editar %>
 </asp:Content>
@@ -16,17 +19,43 @@
     <fieldset>
         <legend><%: Models.App_GlobalResources.Mensagem.editarVeiculo %></legend>
 
+        <%: Html.HiddenFor(model => model.IdPessoa)%>
+
+        <% using (Html.BeginForm("Create", "Veiculo", FormMethod.Post, null))
+         { %>
+        <div class="editor-label">
+            <%: Models.App_GlobalResources.Mensagem.condominio%>
+        </div>
+        <div class="editor-field">
+            <%: Html.DropDownListFor(model => model.IdCondominio, ViewBag.IdCondominio as SelectList, "Selecione", new { onchange = "this.form.submit();" })%>
+            <%: Html.ValidationMessageFor(model => model.IdCondominio)%>
+        </div>
+
+        <div class="editor-label">
+            <%: Models.App_GlobalResources.Mensagem.bloco%>
+        </div>
+        <div class="editor-field">
+            <%: Html.DropDownListFor(model => model.IdBloco, ViewBag.IdBloco as SelectList, "Selecione", new { onchange = "this.form.submit();" })%>
+            <%: Html.ValidationMessageFor(model => model.IdBloco)%>
+        </div>
+
+        <div class="editor-label">
+            <%: Html.Label(Models.App_GlobalResources.Mensagem.moradia)%>
+        </div>
+        <div class="editor-field">
+            <%: Html.DropDownListFor(model => model.IdMoradia, ViewBag.IdMoradia as SelectList, "Selecione", new { onchange = "this.form.submit();" })%>
+            <%: Html.ValidationMessageFor(model => model.IdMoradia) %>
+        </div>
         
-        <div class="editor-field">
-            <%: Html.HiddenFor(model => model.IdVeiculo)%>
-            <%: Html.ValidationMessageFor(model => model.IdVeiculo) %>
-        </div>
+        <% } %>
 
-        <div class="editor-field">
-            <%: Html.HiddenFor(model => model.IdPessoa)%>
-            <%: Html.ValidationMessageFor(model => model.IdPessoa) %>
-        </div>
 
+        <div class="editor-label">
+            <%: Html.LabelFor(model => model.TipoVeiculo) %>
+        </div>
+        <div class="editor-field">
+            <%: Html.EnumDropDownListFor(model => model.TipoVeiculo, Models.ListaTipoVeiculo.Carro) %>
+        </div>
         <div class="editor-label">
             <%: Models.App_GlobalResources.Mensagem.placa %>
         </div>
@@ -34,7 +63,6 @@
             <%: Html.EditorFor(model => model.Placa) %>
             <%: Html.ValidationMessageFor(model => model.Placa) %>
         </div>
-
         <div class="editor-label">
             <%: Models.App_GlobalResources.Mensagem.modelo %>
         </div>
@@ -42,7 +70,6 @@
             <%: Html.EditorFor(model => model.Modelo) %>
             <%: Html.ValidationMessageFor(model => model.Modelo) %>
         </div>
-
         <div class="editor-label">
             <%: Models.App_GlobalResources.Mensagem.cor %>
         </div>
@@ -50,17 +77,8 @@
             <%: Html.EditorFor(model => model.Cor) %>
             <%: Html.ValidationMessageFor(model => model.Cor) %>
         </div>
-
-        <div class="editor-label">
-            <%: Models.App_GlobalResources.Mensagem.tipoVeiculo %>
-        </div>
-        <div class="editor-field">
-            <%: Html.DropDownList("IdTipoVeiculo") %>
-            <%: Html.ValidationMessageFor(model => model.IdTipoVeiculo) %>
-        </div>
-
         <p>
-            <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.editar %>" />
+            <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
         </p>
     </fieldset>
 <% } %>
