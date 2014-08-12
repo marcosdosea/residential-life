@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.MoradiaModel>>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.MoradiaModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     <%: Models.App_GlobalResources.Mensagem.moradia %>
@@ -49,7 +49,8 @@
             <%: Html.DisplayFor(modelItem => item.TipoMoradia) %>
         </td>
         <td>
-            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.editarProprietario, "Edit", new { id=item.IdMoradia }) %> |
+            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.definirProprietario, "DefinirProprietario", 
+                new { idMoradia = item.IdMoradia }) %> |
             <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdMoradia })%>
         </td>
     </tr>

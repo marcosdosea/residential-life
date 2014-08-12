@@ -852,4 +852,10 @@
   <data name="selecionarPerfil" xml:space="preserve">
     <value>Selecionar Perfil</value>
   </data>
+  <data name="definirProprietario" xml:space="preserve">
+    <value>Definir Propietário</value>
+  </data>
+  <data name="definirSindico" xml:space="preserve">
+    <value>Definir Síndico</value>
+  </data>
 </root>

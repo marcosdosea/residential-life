@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.MoradiaModel>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.MoradiaModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     <%: Models.App_GlobalResources.Mensagem.apagar %>
@@ -15,16 +15,6 @@
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.bloco%></div>
     <div class="display-field">
         <%: Html.DisplayFor(model => model.NomeBloco) %>
-    </div>
-
-    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.proprietario%></div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.NomePessoa) %>
-    </div>
-
-    <div class="display-label"><%: Models.App_GlobalResources.Mensagem.predio%></div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.Predio) %>
     </div>
 
     <div class="display-label"><%: Models.App_GlobalResources.Mensagem.andar%></div>

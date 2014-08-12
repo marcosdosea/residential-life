@@ -1,13 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.MoradiaModel>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.MoradiaModel>" %>
 <%@ Import Namespace="Model.Helpers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Create
+    <%: Models.App_GlobalResources.Mensagem.moradia %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2>Create</h2>
+<h2><%: Models.App_GlobalResources.Mensagem.moradia %></h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -23,7 +23,7 @@
             <%: Models.App_GlobalResources.Mensagem.condominio%>
         </div>
         <div class="editor-field">
-            <%: Html.DropDownListFor(model => model.IdCondominio, ViewBag.IdCondominio as SelectList, "Selecione", new { onchange = "this.form.submit();" })%>
+            <%: Html.DropDownList("IdCondominio", null, "Selecione", new { onchange = "this.form.submit();" })%>
             <%: Html.ValidationMessageFor(model => model.IdCondominio)%>
         </div>
         <% } %>
@@ -56,7 +56,7 @@
             <%: Html.LabelFor(model => model.TipoMoradia) %>
         </div>
         <div class="editor-field">
-            <%: Html.EnumDropDownListFor(model => model.TipoMoradia, Models.Models.MoradiaModel.ListaTipoMoradia.Padrao)%>
+            <%: Html.EnumDropDownListFor(model => model.TipoMoradia, Models.MoradiaModel.ListaTipoMoradia.Padrao)%>
             <%: Html.ValidationMessageFor(model => model.TipoMoradia) %>
         </div>
         <br />
