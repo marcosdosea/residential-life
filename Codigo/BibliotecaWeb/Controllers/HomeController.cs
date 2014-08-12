@@ -42,6 +42,7 @@ namespace ResidentialWeb
             if (pessoaMoradia.Count().Equals(1))
             {
                 SessionController.PessoaMoradia = pessoaMoradia.ElementAtOrDefault(0);
+                SessionController.IdRolePessoa = SessionController.PessoaMoradia.IdPerfil;
             }
             else
             {
@@ -57,6 +58,7 @@ namespace ResidentialWeb
         public ActionResult Selecionar(int idPessoa, int idPerfil, int idMoradia)
         {
             SessionController.PessoaMoradia = gPessoaMoradia.Obter(idPessoa, idMoradia, idPerfil);
+            SessionController.IdRolePessoa = idPerfil;
             return RedirectToAction("Index");
         }
     }

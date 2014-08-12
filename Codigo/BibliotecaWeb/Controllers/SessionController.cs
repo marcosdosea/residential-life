@@ -5,15 +5,15 @@ namespace BibliotecaWeb
 {
     public class SessionController
     {
-        public static string Teste
+        public static PessoaModel Pessoa
         {
             get
             {
-                return (string)HttpContext.Current.Session["_Teste"];
+                return (PessoaModel)HttpContext.Current.Session["_Pessoa"];
             }
             set
             {
-                HttpContext.Current.Session["_Teste"] = value;
+                HttpContext.Current.Session["_Pessoa"] = value;
             }
         }
 
@@ -26,6 +26,18 @@ namespace BibliotecaWeb
             set
             {
                 HttpContext.Current.Session["_PessoaMoradia"] = value;
+            }
+        }
+
+        public static int IdRolePessoa
+        {
+            get
+            {
+                return (int)HttpContext.Current.Session["_IdRole"];
+            }
+            set
+            {
+                HttpContext.Current.Session["_IdRole"] = value;
             }
         }
     }

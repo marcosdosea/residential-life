@@ -322,15 +322,6 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ativar.
-        /// </summary>
-        public static string ativar {
-            get {
-                return ResourceManager.GetString("ativar", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Ativo.
         /// </summary>
         public static string ativo {
@@ -768,24 +759,6 @@ namespace Models.App_GlobalResources {
         public static string dataSaida {
             get {
                 return ResourceManager.GetString("dataSaida", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Definri Síndico.
-        /// </summary>
-        public static string definirSindico {
-            get {
-                return ResourceManager.GetString("definirSindico", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Desativar.
-        /// </summary>
-        public static string desativar {
-            get {
-                return ResourceManager.GetString("desativar", resourceCulture);
             }
         }
         
@@ -2109,15 +2082,6 @@ namespace Models.App_GlobalResources {
         public static string statusPagamento {
             get {
                 return ResourceManager.GetString("statusPagamento", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Status do Perfil.
-        /// </summary>
-        public static string statusPerfil {
-            get {
-                return ResourceManager.GetString("statusPerfil", resourceCulture);
             }
         }
         
