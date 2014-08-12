@@ -30,7 +30,7 @@
             <%: Html.DisplayFor(modelItem => item.Perfil) %>
         </td>
         <td>
-            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.pontuar , "Pontuar", new {  idPessoa = item.IdPessoa }) %> |
+            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.pontuar , "Create", new {  idPessoa = item.IdPessoa }) %> |
             <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.visualizarPontuacoes, "VisualizarPontuacoes", new { idPessoa = item.IdPessoa })%>
         </td>
     </tr>

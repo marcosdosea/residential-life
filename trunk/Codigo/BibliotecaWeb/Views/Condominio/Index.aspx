@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.Models.CondominioModel>>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.CondominioModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     <%: Models.App_GlobalResources.Mensagem.condominios%>
@@ -13,10 +13,6 @@
 </p>
 <table id="table">
     <tr>
-      
-        <th>
-             <%: Models.App_GlobalResources.Mensagem.administradora %>
-        </th>
         <th>
             <%: Models.App_GlobalResources.Mensagem.nome %>
         </th>
@@ -46,11 +42,6 @@
 
 <% foreach (var item in Model) { %>
     <tr>
-       
-       
-        <td>
-            <%: Html.DisplayFor(modelItem => item.nomeAdministradora) %>
-        </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Nome) %>
         </td>

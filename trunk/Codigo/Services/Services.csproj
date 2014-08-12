@@ -43,14 +43,13 @@
   <ItemGroup>
     <Compile Include="GerenciadorAcessoPredio.cs" />
     <Compile Include="GerenciadorAdministradora.cs" />
-    <Compile Include="GerenciadorAlocarPessoaMoradia.cs" />
+    <Compile Include="GerenciadorPessoaMoradia.cs" />
     <Compile Include="GerenciadorAtendimento.cs" />
     <Compile Include="GerenciadorComentario.cs" />
     <Compile Include="GerenciadorEnquete.cs" />
     <Compile Include="GerenciadorGrupoPlanoDeContas.cs" />
     <Compile Include="GerenciadorMoradia.cs" />
     <Compile Include="GerenciadorOpcoesEnquete.cs" />
-    <Compile Include="GerenciadorPerfilPessoa.cs" />
     <Compile Include="GerenciadorPlanoDeConta.cs" />
     <Compile Include="GerenciadorPontuarPessoa.cs" />
     <Compile Include="GerenciadorPostagem.cs" />

@@ -22,7 +22,6 @@ namespace Persistence
         IRepositorioGenerico<tb_ocorrencia> RepositorioOcorrencia { get; }
         IRepositorioGenerico<tb_opcoesenquete> RepositorioOpcaoEnquete { get; }
         IRepositorioGenerico<tb_pessoa> RepositorioPessoa { get; }
-        IRepositorioGenerico<tb_pessoamoradia> RepositorioPessoaMoradia { get; }
         IRepositorioGenerico<tb_planodeconta> RepositorioPlanoDeConta { get; }
         IRepositorioGenerico<tb_postagem> RepositorioPostagem { get; }
         IRepositorioGenerico<tb_reservaambiente> RepositorioReservaAmbiente { get; }
@@ -31,6 +30,6 @@ namespace Persistence
         IRepositorioGenerico<tb_veiculo> RepositorioVeiculo { get; }
         IRepositorioGenerico<tb_votoenquete> RepositorioVotoEnquete { get; }
         IRepositorioGenerico<tb_pontuacaopessoa> RepositorioPontuarPessoa { get; }
-        IRepositorioGenerico<tb_perfilpessoa> RepositorioPerfilPessoa { get; }
+        IRepositorioGenerico<tb_pessoamoradia> RepositorioPessoaMoradia { get; }
     }
 }

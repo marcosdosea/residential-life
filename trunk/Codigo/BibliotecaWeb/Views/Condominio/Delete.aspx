@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.CondominioModel>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.CondominioModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Delete
@@ -11,27 +11,6 @@
 <h3><%: Models.App_GlobalResources.Mensagem.perguntaConfirmacao %></h3>
 <fieldset>
      <legend><%: Models.App_GlobalResources.Mensagem.condominio %></legend>
-
-    
-    <div class="display-label">IdAdministradora</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdAdministradora) %>
-    </div>
-
-    <div class="display-label">nomeAdministradora</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.nomeAdministradora) %>
-    </div>
-
-    <div class="display-label">IdSindico</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.IdSindico) %>
-    </div>
-
-    <div class="display-label">NomeSindico</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.NomeSindico) %>
-    </div>
 
     <div class="display-label">Nome</div>
     <div class="display-field">
@@ -75,7 +54,7 @@
 </fieldset>
 <% using (Html.BeginForm()) { %>
     <p>
-       <input type="submit" value=<%: Models.App_GlobalResources.Mensagem.apagar %> /> |
+       <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.apagar %>" /> |
         <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
     </p>
 <% } %>

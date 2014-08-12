@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ComponentModel.DataAnnotations;
 using Models.App_GlobalResources;
 
-namespace Models.Models
+namespace Models
 {
     public class CondominioModel
     {
         public int IdCondominio { get; set; }
-        public int IdAdministradora { get; set; }
-
-        [Display(Name = "nome_adm", ResourceType = typeof(Mensagem))]
-        public string nomeAdministradora { get; set; }
 
         [Required]
         [Display(Name = "nome", ResourceType = typeof(Mensagem))]
