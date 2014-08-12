@@ -7,7 +7,7 @@ using Models.App_GlobalResources;
 
 namespace Models.Models
 {
-    public enum ListaTipoAcesso { Entrada = 0, Saida = 1 }
+    public enum ListaTipoAcesso { Entrada, Saida }
 
     public class AcessoVeiculoModel
     {

@@ -9,21 +9,28 @@ namespace Models.Models
 {
     public class AcessoPredioModel
     {
-
         public int IdAcesoPredio { get; set; }
 
+        public string Pessoa { get; set; }
+
+        public string CPF { get; set; }
+
+        [Display(Name = "condominio", ResourceType = typeof(Mensagem))]
+        public int IdCondominio { get; set; }
+
+        [Display(Name = "pessoa", ResourceType = typeof(Mensagem))]
+        [Required(ErrorMessageResourceType = typeof(Mensagem),
+            ErrorMessageResourceName = "required")]
         public int IdPessoa { get; set; }
 
-        [Display(Name = "dataEntrada", ResourceType = typeof(Mensagem))]
+        [Display(Name = "data", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
-        [StringLength(100)]
-        public string DataEntrada { get; set; }
+        public DateTime Data { get; set; }
 
-        [Display(Name = "dataSaida", ResourceType = typeof(Mensagem))]
+        [Display(Name = "tipo", ResourceType = typeof(Mensagem))]
         [Required(ErrorMessageResourceType = typeof(Mensagem),
             ErrorMessageResourceName = "required")]
-        [StringLength(100)]
-        public string DataSaida { get; set; }
+        public ListaTipoAcesso TipoAcesso { get; set; }
     }
 }

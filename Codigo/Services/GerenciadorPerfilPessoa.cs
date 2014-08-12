@@ -7,6 +7,7 @@ namespace Services
 {
     public class GerenciadorPerfilPessoa
     {
+        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -134,6 +135,6 @@ namespace Services
             perfilPessoaE.IdPerfil = perfilPessoa.IdPerfil;
             perfilPessoaE.IdPessoa = perfilPessoa.IdPessoa;
             perfilPessoaE.Ativo = perfilPessoaE.Ativo;
-        }
+        }*/
     }
 }

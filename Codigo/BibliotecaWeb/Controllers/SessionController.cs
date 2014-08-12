@@ -40,5 +40,17 @@ namespace BibliotecaWeb
                 HttpContext.Current.Session["_IdRole"] = value;
             }
         }
+
+        public static int AlertBox
+        {
+            get
+            {
+                return (int)HttpContext.Current.Session["_AlertBox"];
+            }
+            set
+            {
+                HttpContext.Current.Session["_AlertBox"] = value;
+            }
+        }
     }
 }

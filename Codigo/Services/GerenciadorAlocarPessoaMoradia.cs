@@ -87,8 +87,7 @@ namespace Services
                             Condominio = pessoamoradia.tb_moradia.tb_bloco.tb_condominio.Nome,
                             IdCondominio = pessoamoradia.tb_moradia.tb_bloco.tb_condominio.IdCondominio,
                             Bloco = pessoamoradia.tb_moradia.tb_bloco.Nome,
-                            IdBloco = pessoamoradia.tb_moradia.tb_bloco.IdBloco,
-                            Tipo = (pessoamoradia.Tipo == "Morador" ? Models.Models.AlocarPessoaMoradiaModel.ListaTipoPessoaMoradia.Morador : AlocarPessoaMoradiaModel.ListaTipoPessoaMoradia.Visitante)
+                            IdBloco = pessoamoradia.tb_moradia.tb_bloco.IdBloco
                         };
             return query;
         }
@@ -142,7 +141,6 @@ namespace Services
         {
             alocarPessoaMoradiaE.IdMoradia = alocarPessoaMoradiaModel.IdMoradia;
             alocarPessoaMoradiaE.IdPessoa = alocarPessoaMoradiaModel.IdPessoa;
-            alocarPessoaMoradiaE.Tipo = alocarPessoaMoradiaModel.Tipo.ToString();
         }
     }
 }

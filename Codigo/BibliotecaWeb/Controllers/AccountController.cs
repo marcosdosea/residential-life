@@ -110,6 +110,8 @@ namespace ResidentialWeb.Controllers
                 if (createStatus == MembershipCreateStatus.Success)
                 {
                     FormsAuthentication.SetAuthCookie(model.UserName, false /* createPersistentCookie */);
+                    SessionController.Pessoa = pessoaModel;
+                    SessionController.IdRolePessoa = pessoaModel.IdPessoa;
                     return RedirectToAction("Index", "Home");
                 }
                 else

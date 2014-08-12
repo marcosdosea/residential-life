@@ -126,6 +126,15 @@ namespace Services
         }
 
         /// <summary>
+        /// Obter todos as entidades cadastradas ordenado por CPF
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<PessoaModel> ObterTodosPorCPF()
+        {
+            return GetQuery().OrderBy(p => p.CPF);
+        }
+
+        /// <summary>
         /// Obter todos as entidades cadastradas
         /// </summary>
         /// <returns></returns>

@@ -10,7 +10,6 @@ namespace Services
 {
     public class GerenciadorAcessoPredio
     {
-        /*
         private IUnitOfWork unitOfWork;
         private bool shared;
 
@@ -41,11 +40,11 @@ namespace Services
         /// <returns>Chave identificante na base</returns>
         public int Inserir(AcessoPredioModel acessoPredioModel)
         {
-            tb_acessopredio acessoPredioE = new tb_acessopredio();
+            tb_acessocondominio acessoPredioE = new tb_acessocondominio();
             Atribuir(acessoPredioModel, acessoPredioE);
-            unitOfWork.RepositorioAcessoPredio.Inserir(acessoPredioE);
+            unitOfWork.RepositorioAcessoCondominio.Inserir(acessoPredioE);
             unitOfWork.Commit(shared);
-            return acessoPredioE.IdAcessoPredio;
+            return acessoPredioE.IdAcessoCondominio;
         }
 
         /// <summary>
@@ -54,9 +53,9 @@ namespace Services
         /// <param name="acessoPredio"></param>
         public void Editar(AcessoPredioModel acessoPredioModel)
         {
-            tb_acessopredio acessoPredioE = new tb_acessopredio();
+            tb_acessocondominio acessoPredioE = new tb_acessocondominio();
             Atribuir(acessoPredioModel, acessoPredioE);
-            unitOfWork.RepositorioAcessoPredio.Editar(acessoPredioE);
+            unitOfWork.RepositorioAcessoCondominio.Editar(acessoPredioE);
             unitOfWork.Commit(shared);
         }
 
@@ -66,7 +65,7 @@ namespace Services
         /// <param name="AcessoPredioModel"> Dados do modelo</param>
         public void Remover(int idAcessoPredio)
         {
-            unitOfWork.RepositorioAcessoPredio.Remover(AcessoPredio => AcessoPredio.IdAcessoPredio.Equals(idAcessoPredio));
+            unitOfWork.RepositorioAcessoCondominio.Remover(AcessoPredio => AcessoPredio.IdAcessoCondominio.Equals(idAcessoPredio));
             unitOfWork.Commit(shared);
         }
 
@@ -78,14 +77,18 @@ namespace Services
         /// 
         private IQueryable<AcessoPredioModel> GetQuery()
         {
-            IQueryable<tb_acessopredio> tb_acessopredio = unitOfWork.RepositorioAcessoPredio.GetQueryable();
-            var query = from AcessoPredio in tb_acessopredio
+            IQueryable<tb_acessocondominio> tb_acessocondominio = unitOfWork.RepositorioAcessoCondominio.GetQueryable();
+            var query = from AcessoPredio in tb_acessocondominio
                         select new AcessoPredioModel
                         {
-                            IdAcesoPredio = AcessoPredio.IdAcessoPredio,
+                            IdAcesoPredio = AcessoPredio.IdAcessoCondominio,
+                            IdCondominio = AcessoPredio.IdCondominio,
                             IdPessoa = AcessoPredio.IdPessoa,
-                            DataEntrada = AcessoPredio.DataEntrada,
-                            DataSaida = AcessoPredio.DataSaida,
+                            Data = AcessoPredio.DataHora,
+                            TipoAcesso = (AcessoPredio.TipoAcesso == "Entrada" ? ListaTipoAcesso.Entrada : ListaTipoAcesso.Saida),
+
+                            Pessoa = AcessoPredio.tb_pessoa.Nome,
+                            CPF = AcessoPredio.tb_pessoa.CPF
                         };
             return query;
         }
@@ -96,7 +99,7 @@ namespace Services
         /// <returns></returns>
         public IEnumerable<AcessoPredioModel> ObterTodos()
         {
-            return GetQuery();
+            return GetQuery().OrderBy(ap => ap.Pessoa);
         }
 
         /// <summary>
@@ -124,13 +127,13 @@ namespace Services
         /// </summary>
         /// <param name="PostagemModel">Objeto do modelo</param>
         /// <param name="PostagemE">Entity mapeada da base de dados</param>
-        private void Atribuir(AcessoPredioModel AcessoPredioModel, tb_acessopredio AcessoPredioE)
+        private void Atribuir(AcessoPredioModel AcessoPredioModel, tb_acessocondominio AcessoPredioE)
         {
-            AcessoPredioE.IdAcessoPredio = AcessoPredioModel.IdAcesoPredio;
+            AcessoPredioE.IdAcessoCondominio = AcessoPredioModel.IdAcesoPredio;
             AcessoPredioE.IdPessoa = AcessoPredioModel.IdPessoa;
-            AcessoPredioE.DataEntrada = AcessoPredioModel.DataEntrada;
-            AcessoPredioE.DataSaida = AcessoPredioModel.DataSaida;
-
-        }*/
+            AcessoPredioE.IdCondominio = AcessoPredioModel.IdCondominio;
+            AcessoPredioE.DataHora = AcessoPredioModel.Data;
+            AcessoPredioE.TipoAcesso = AcessoPredioModel.TipoAcesso.ToString();
+        }
     }
 }

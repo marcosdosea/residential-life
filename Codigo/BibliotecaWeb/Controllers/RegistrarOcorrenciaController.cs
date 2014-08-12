@@ -10,7 +10,7 @@ namespace BibliotecaWeb.Controllers
 {
     public class RegistrarOcorrenciaController : Controller
     {
-
+        /*
         private GerenciadorPessoa gPessoa;
         private GerenciadorRegistrarOcorrencia gRegistrarOcorrencia;
 
@@ -109,6 +109,6 @@ namespace BibliotecaWeb.Controllers
             base.Dispose(disposing);
         }
 
-
+        */
     }
 }
