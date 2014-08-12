@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.MoradiaModel>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.MoradiaModel>" %>
 <%@ Import Namespace="Model.Helpers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
@@ -19,13 +19,6 @@
         
         <%: Html.HiddenFor(model => model.IdMoradia) %>
 
-        <div class="editor-label">
-            <%: Models.App_GlobalResources.Mensagem.proprietario %>
-        </div>
-        <div class="editor-field">
-           <%: Html.DropDownListFor(model => model.IdPessoa, ViewBag.IdPessoa as SelectList, "Selecione", null)%>
-            <%: Html.ValidationMessageFor(model => model.IdPessoa) %>
-        </div>
       <% using (Html.BeginForm("Create", "Moradia", FormMethod.Post, null))
          { %>
         <div class="editor-label">
@@ -43,14 +36,6 @@
         <div class="editor-field">
             <%: Html.DropDownListFor(model => model.IdBloco, ViewBag.IdBloco as SelectList, "Selecione")%>
             <%: Html.ValidationMessageFor(model => model.IdBloco)%>
-        </div>
-
-        <div class="editor-label">
-             <%: Models.App_GlobalResources.Mensagem.predio %>
-        </div>
-        <div class="editor-field">
-            <%: Html.TextBoxFor(model => model.Predio) %>
-            <%: Html.ValidationMessageFor(model => model.Predio) %>
         </div>
 
         <div class="editor-label">
@@ -73,7 +58,7 @@
             <%: Html.LabelFor(model => model.TipoMoradia) %>
         </div>
         <div class="editor-field">
-            <%: Html.EnumDropDownListFor(model => model.TipoMoradia, Models.Models.MoradiaModel.ListaTipoMoradia.Padrao)%>
+            <%: Html.EnumDropDownListFor(model => model.TipoMoradia, Models.MoradiaModel.ListaTipoMoradia.Padrao)%>
             <%: Html.ValidationMessageFor(model => model.TipoMoradia) %>
         </div>
 

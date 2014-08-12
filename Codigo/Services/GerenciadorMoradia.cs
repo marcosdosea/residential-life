@@ -86,8 +86,12 @@ namespace Services
                             Andar = moradia.Andar,
                             Numero = moradia.Numero,
                             Condominio = moradia.tb_bloco.tb_condominio.Nome,
+                            IdCondominio = moradia.tb_bloco.tb_condominio.IdCondominio,
                             NomeBloco = moradia.tb_bloco.Nome,
-                            TipoMoradia = (moradia.TipoMoradia == "Cobertura" ? Models.Models.MoradiaModel.ListaTipoMoradia.Cobertura : (moradia.TipoMoradia == "Casa" ? Models.Models.MoradiaModel.ListaTipoMoradia.Casa : (moradia.TipoMoradia == "Duplex" ? Models.Models.MoradiaModel.ListaTipoMoradia.Duplex : (moradia.TipoMoradia == "Padrao" ? Models.Models.MoradiaModel.ListaTipoMoradia.Padrao : MoradiaModel.ListaTipoMoradia.Triplex))) )
+                            TipoMoradia = (moradia.TipoMoradia == "Cobertura" ? Models.MoradiaModel.ListaTipoMoradia.Cobertura : 
+                            (moradia.TipoMoradia == "Casa" ? Models.MoradiaModel.ListaTipoMoradia.Casa : (moradia.TipoMoradia == "Duplex" ? 
+                            Models.MoradiaModel.ListaTipoMoradia.Duplex : (moradia.TipoMoradia == "Padrao" ? 
+                            Models.MoradiaModel.ListaTipoMoradia.Padrao : MoradiaModel.ListaTipoMoradia.Triplex))))
 
                         };
             return query;
@@ -112,6 +116,15 @@ namespace Services
             return GetQuery().Where(moradiaModel => moradiaModel.IdBloco.Equals(idBloco));
         }
 
+
+        /// <summary>
+        /// Obter todos as entidades cadastradas por condominio
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<MoradiaModel> ObterTodosPorCondominio(int idCondominio)
+        {
+            return GetQuery().Where(moradiaModel => moradiaModel.IdCondominio.Equals(idCondominio));
+        }
 
         /// <summary>
         /// Obtém uma reserva de ambiente

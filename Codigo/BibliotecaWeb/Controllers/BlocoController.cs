@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Services;
-using Models.Models;
+﻿using System.Web.Mvc;
 using Microsoft.Reporting.WebForms;
+using Models;
+using Services;
+using System.Collections;
+using System.Collections.Generic;
 
-namespace BibliotecaWeb.Controllers
+namespace BibliotecaWeb
 {
     public class BlocoController : Controller
     {
@@ -24,7 +22,16 @@ namespace BibliotecaWeb.Controllers
 
         public ViewResult Index()
         {
-            return View(gBloco.ObterTodos());
+            IEnumerable<BlocoModel> blocos;
+            if (SessionController.IdRolePessoa.Equals(Global.IdPerfilSindico))
+            {
+                blocos = gBloco.ObterPorCondominio(SessionController.PessoaMoradia.IdCondominio);
+            }
+            else
+            {
+                blocos = gBloco.ObterTodos();
+            }
+            return View(blocos);
         }
 
         //
@@ -41,7 +48,12 @@ namespace BibliotecaWeb.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome");
+            int idCondominio = 0;
+            if (SessionController.IdRolePessoa.Equals(Global.IdPerfilSindico)) 
+            {
+                idCondominio = SessionController.PessoaMoradia.IdCondominio;
+            }
+            ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", idCondominio);
             return View();
         }
 
@@ -56,7 +68,7 @@ namespace BibliotecaWeb.Controllers
                 gBloco.Inserir(blocoModel);
                 return RedirectToAction("Index");
             }
-
+            ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", blocoModel.IdCondominio);
             return View(blocoModel);
         }
 
@@ -80,6 +92,7 @@ namespace BibliotecaWeb.Controllers
                 gBloco.Editar(blocoModel);
                 return RedirectToAction("Index");
             }
+            ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", blocoModel.IdCondominio);
             return View(blocoModel);
         }
 

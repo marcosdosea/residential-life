@@ -59,8 +59,10 @@ namespace ResidentialWeb.Controllers
 
         public ActionResult LogOff()
         {
+            SessionController.Pessoa = null;
+            SessionController.PessoaMoradia = null;
+            SessionController.IdRolePessoa = 0;
             FormsAuthentication.SignOut();
-
             return RedirectToAction("Index", "Home");
         }
 

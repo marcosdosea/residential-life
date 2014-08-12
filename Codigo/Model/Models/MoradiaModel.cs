@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using Models.App_GlobalResources;
 
-namespace Models.Models
+namespace Models
 {
     public class MoradiaModel
     {
@@ -36,5 +32,8 @@ namespace Models.Models
         [Display(Name = "tipoMoradia", ResourceType = typeof(Mensagem))]
         public ListaTipoMoradia TipoMoradia { get; set; }
 
+
+        [Display(Name = "propietario", ResourceType = typeof(Mensagem))]
+        public string Proprietario { get; set; }
     }
 }

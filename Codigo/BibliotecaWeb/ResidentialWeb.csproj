@@ -156,6 +156,7 @@
     <Content Include="Views\Administradora\Details.aspx" />
     <Content Include="Views\Administradora\Edit.aspx" />
     <Content Include="Views\Administradora\Index.aspx" />
+    <Content Include="Views\Moradia\DefinirProprietario.aspx" />
     <Content Include="Views\PessoaMoradia\Create.aspx" />
     <Content Include="Views\PessoaMoradia\DefinirSindico.aspx" />
     <Content Include="Views\PessoaMoradia\Delete.aspx" />

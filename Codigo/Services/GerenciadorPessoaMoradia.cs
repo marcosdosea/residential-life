@@ -131,9 +131,21 @@ namespace Services
         /// <returns>Autor model</returns>
         public PessoaMoradiaModel Obter(int IdPessoa, int IdMoradia, int idPerfil)
         {
-            IEnumerable<PessoaMoradiaModel> alocarPessoaMoradiaE = GetQuery().Where(pm => pm.IdPessoa.Equals(IdPessoa) && 
+            IEnumerable<PessoaMoradiaModel> pessoaMoradiaE = GetQuery().Where(pm => pm.IdPessoa.Equals(IdPessoa) && 
                 pm.IdMoradia.Equals(IdMoradia) && pm.IdPerfil.Equals(idPerfil));
-            return alocarPessoaMoradiaE.ElementAtOrDefault(0);
+            return pessoaMoradiaE.ElementAtOrDefault(0);
+        }
+
+        /// <summary>
+        /// Obtém a pessoa moradia com perfil de propietário
+        /// </summary>
+        /// <param name="idRes">Identificador da entidade na base de dados</param>
+        /// <returns>Autor model</returns>
+        public PessoaMoradiaModel ObterPorMoradiaPerfil(int IdMoradia, int idPerfil)
+        {
+            IEnumerable<PessoaMoradiaModel> pessoaMoradiaE = GetQuery().Where(pm => pm.IdMoradia.Equals(IdMoradia) && 
+                pm.IdPerfil.Equals(idPerfil));
+            return pessoaMoradiaE.ElementAtOrDefault(0);
         }
 
         /// <summary>
