@@ -100,7 +100,6 @@ namespace Services
                         select new CondominioModel
                         {
                             IdCondominio = condominio.IdCondominio,
-                            IdAdministradora = condominio.IdAdministradora,
                             Nome = condominio.Nome,
                             Rua = condominio.Rua,
                             Numero = condominio.Numero,
@@ -141,7 +140,6 @@ namespace Services
         private void Atribuir(CondominioModel condominioModel, tb_condominio condominioE)
         {
             condominioE.IdCondominio = condominioModel.IdCondominio;
-            condominioE.IdAdministradora = condominioModel.IdAdministradora;
             condominioE.Nome = condominioModel.Nome;
             condominioE.Rua = condominioModel.Rua;
             condominioE.Numero = condominioModel.Numero;

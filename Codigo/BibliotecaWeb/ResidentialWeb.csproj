@@ -74,7 +74,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AcessoPredioController.cs" />
     <Compile Include="Controllers\AdministradoraController.cs" />
-    <Compile Include="Controllers\AlocarPessoaMoradiaController.cs" />
+    <Compile Include="Controllers\PessoaMoradiaController.cs" />
     <Compile Include="Controllers\AreaPublicaController.cs" />
     <Compile Include="Controllers\AtendimentoController.cs" />
     <Compile Include="Controllers\BlocoController.cs" />
@@ -83,7 +83,6 @@
     <Compile Include="Controllers\EnqueteController.cs" />
     <Compile Include="Controllers\GrupoPlanoDeContasController.cs" />
     <Compile Include="Controllers\MoradiaController.cs" />
-    <Compile Include="Controllers\PerfilPessoaController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OcorrenciaController.cs" />
@@ -151,11 +150,12 @@
     <Content Include="Views\Administradora\Details.aspx" />
     <Content Include="Views\Administradora\Edit.aspx" />
     <Content Include="Views\Administradora\Index.aspx" />
-    <Content Include="Views\AlocarPessoaMoradia\Create.aspx" />
-    <Content Include="Views\AlocarPessoaMoradia\Delete.aspx" />
-    <Content Include="Views\AlocarPessoaMoradia\Details.aspx" />
-    <Content Include="Views\AlocarPessoaMoradia\Edit.aspx" />
-    <Content Include="Views\AlocarPessoaMoradia\Index.aspx" />
+    <Content Include="Views\PessoaMoradia\Create.aspx" />
+    <Content Include="Views\PessoaMoradia\DefinirSindico.aspx" />
+    <Content Include="Views\PessoaMoradia\Delete.aspx" />
+    <Content Include="Views\PessoaMoradia\Details.aspx" />
+    <Content Include="Views\PessoaMoradia\Edit.aspx" />
+    <Content Include="Views\PessoaMoradia\Index.aspx" />
     <Content Include="Views\AreaPublica\Create.aspx" />
     <Content Include="Views\AreaPublica\Delete.aspx" />
     <Content Include="Views\AreaPublica\Details.aspx" />
@@ -196,10 +196,12 @@
     <Content Include="Views\GrupoPlanoDeContas\Details.aspx" />
     <Content Include="Views\GrupoPlanoDeContas\Edit.aspx" />
     <Content Include="Views\GrupoPlanoDeContas\Index.aspx" />
+    <Content Include="Views\Home\SelecionarPerfil.aspx" />
     <Content Include="Views\Moradia\Create.aspx" />
     <Content Include="Views\Moradia\Delete.aspx" />
     <Content Include="Views\Moradia\Edit.aspx" />
     <Content Include="Views\Moradia\Index.aspx" />
+    <Content Include="Views\PerfilPessoa\DefinirSindico.aspx" />
     <Content Include="Views\Pessoa\Create.aspx" />
     <Content Include="Views\Pessoa\Delete.aspx" />
     <Content Include="Views\Pessoa\Details.aspx" />

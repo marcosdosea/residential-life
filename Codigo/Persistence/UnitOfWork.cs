@@ -31,7 +31,6 @@ namespace Persistence
         private IRepositorioGenerico<tb_ocorrencia> _repOcorrencia;
         private IRepositorioGenerico<tb_opcoesenquete> _repOpcaoEnquete;
         private IRepositorioGenerico<tb_pessoa> _repPessoa;
-        private IRepositorioGenerico<tb_pessoamoradia> _repPessoaMoradia;
         private IRepositorioGenerico<tb_planodeconta> _repPlanoDeConta;
         private IRepositorioGenerico<tb_postagem> _repPostagem;
         private IRepositorioGenerico<tb_reservaambiente> _repReservaAmbiente;
@@ -40,7 +39,7 @@ namespace Persistence
         private IRepositorioGenerico<tb_veiculo> _repVeiculo;
         private IRepositorioGenerico<tb_votoenquete> _repVotoEnquete;
         private IRepositorioGenerico<tb_pontuacaopessoa> _repPontuarPessoa;
-        private IRepositorioGenerico<tb_perfilpessoa> _repPerfilPessoa;
+        private IRepositorioGenerico<tb_pessoamoradia> _repPessoaMoradia;
 
         /// <summary>
         /// Construtor cria contexto transacional
@@ -133,18 +132,6 @@ namespace Persistence
                     _repMovimentacaoFinanceira = new RepositorioGenerico<tb_movimentacaofinanceira>(_context);
                 }
                 return _repMovimentacaoFinanceira;
-            }
-        }
-
-        public IRepositorioGenerico<tb_pessoamoradia> RepositorioPessoaMoradia
-        {
-            get
-            {
-                if (_repPessoaMoradia == null)
-                {
-                    _repPessoaMoradia = new RepositorioGenerico<tb_pessoamoradia>(_context);
-                }
-                return _repPessoaMoradia;
             }
         }
 
@@ -375,15 +362,15 @@ namespace Persistence
         /// <summary>
         /// Repositório para manipular dados persistidos de perfil
         /// </summary>
-        public IRepositorioGenerico<tb_perfilpessoa> RepositorioPerfilPessoa
+        public IRepositorioGenerico<tb_pessoamoradia> RepositorioPessoaMoradia
         {
             get
             {
-                if (_repPerfilPessoa == null)
+                if (_repPessoaMoradia == null)
                 {
-                    _repPerfilPessoa = new RepositorioGenerico<tb_perfilpessoa>(_context);
+                    _repPessoaMoradia = new RepositorioGenerico<tb_pessoamoradia>(_context);
                 }
-                return _repPerfilPessoa;
+                return _repPessoaMoradia;
             }
         }
 

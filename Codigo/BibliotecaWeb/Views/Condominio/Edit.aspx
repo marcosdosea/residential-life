@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.CondominioModel>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.CondominioModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Edit
@@ -15,16 +15,9 @@
     <%: Html.ValidationSummary(true) %>
     <fieldset>
         <legend><%: Models.App_GlobalResources.Mensagem.condominio %></legend>
-              
-
-        <div class="editor-label">
-            <%: Models.App_GlobalResources.Mensagem.administradora%>
-        </div>
         <div class="editor-field">
-            <%:  Html.DropDownListFor(model => model.IdAdministradora, ViewBag.IdAdministradora as SelectList)%>
-            <%: Html.ValidationMessageFor(model => model.IdAdministradora) %>
+            <%: Html.HiddenFor(model => model.IdCondominio) %>
         </div>
-              
 
         <div class="editor-label">
             <%: Models.App_GlobalResources.Mensagem.nome%>

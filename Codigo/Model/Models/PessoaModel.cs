@@ -92,5 +92,7 @@ namespace Models
         [StringLength(2)]
         public string Estado { get; set; }
 
+        [Display(Name = "statusPerfil", ResourceType = typeof(Mensagem))]
+        public bool StatusPerfil { get; set; }
     }
 }

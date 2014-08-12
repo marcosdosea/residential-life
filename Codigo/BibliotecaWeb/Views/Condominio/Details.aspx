@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.CondominioModel>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.CondominioModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Details
@@ -10,12 +10,6 @@
 
 <fieldset>
      <legend><%: Models.App_GlobalResources.Mensagem.condominio %></legend>
-        
-
-    <div class="display-label">nomeAdministradora</div>
-    <div class="display-field">
-        <%: Html.DisplayFor(model => model.nomeAdministradora) %>
-    </div>
 
     <div class="display-label">Nome</div>
     <div class="display-field">

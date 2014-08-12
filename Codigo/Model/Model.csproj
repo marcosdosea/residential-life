@@ -55,7 +55,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AcessoPredioModel.cs" />
     <Compile Include="Models\AdministradoraModel.cs" />
-    <Compile Include="Models\AlocarPessoaMoradiaModel.cs" />
+    <Compile Include="Models\PessoaMoradiaModel.cs" />
     <Compile Include="Models\AreaPublicaModel.cs" />
     <Compile Include="Models\AtendimentoModel.cs" />
     <Compile Include="Models\BlocoModel.cs" />
@@ -68,7 +68,6 @@
     <Compile Include="Models\MoradiaModel.cs" />
     <Compile Include="Models\OpcaoModel.cs" />
     <Compile Include="Models\OpcoesEnqueteModel.cs" />
-    <Compile Include="Models\PerfilPessoaModel.cs" />
     <Compile Include="Models\PlanoDeConta.cs" />
     <Compile Include="Models\PontuarPessoaModel.cs" />
     <Compile Include="Models\PostagemModel.cs" />

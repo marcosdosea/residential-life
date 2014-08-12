@@ -40,8 +40,7 @@ namespace ResidentialWeb.Controllers
                     }
                     else
                     {
-                        SessionController.PessoaLogada = GerenciadorPessoa.GetInstance().ObterPessoaLogadaUser(model.UserName).IdUser;
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("SelecionarPerfil", "Home");
                     }
                 }
                 else

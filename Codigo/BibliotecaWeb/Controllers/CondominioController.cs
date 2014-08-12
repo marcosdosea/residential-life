@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Models;
 using Services;
-using Models.Models;
 
-namespace BibliotecaWeb.Controllers
+namespace BibliotecaWeb
 {
     public class CondominioController : Controller
     {
@@ -41,7 +37,6 @@ namespace BibliotecaWeb.Controllers
         //[Authorize(Roles = "Adm Sistema")]
         public ActionResult Create()
         {
-            //ViewBag.IdAdministradora = new SelectList(gAdministradora.ObterTodos(), "IdAdministradora", "Nome");
             return View();
         }
 
@@ -56,7 +51,6 @@ namespace BibliotecaWeb.Controllers
                 gCondominio.Inserir(condominioModel);
                 return RedirectToAction("Index");
             }
-
             return View(condominioModel);
         }
 
@@ -66,7 +60,6 @@ namespace BibliotecaWeb.Controllers
         public ActionResult Edit(int id)
         {
             CondominioModel condominio = gCondominio.Obter(id);
-            //ViewBag.IdAdministradora = new SelectList(gAdministradora.ObterTodos(), "IdAdministradora", "Nome", condominio.IdAdministradora);
             return View(condominio);
         }
 

@@ -13,13 +13,11 @@ namespace BibliotecaWeb
     public class PontuarPessoaController : Controller
     {
         private GerenciadorPontuarPessoa gPontuarPessoa;
-        private GerenciadorPerfilPessoa gPerfilPessoa;
         private GerenciadorPessoa gPessoa;
 
         public PontuarPessoaController()
         {
             gPontuarPessoa = new GerenciadorPontuarPessoa();
-            gPerfilPessoa = new GerenciadorPerfilPessoa();
             gPessoa = new GerenciadorPessoa();
         }
         //
@@ -30,11 +28,11 @@ namespace BibliotecaWeb
             ViewBag.NomePessoa = gPessoa.Obter(idPessoa).Nome;
             return View(gPontuarPessoa.ObterPorPessoa(idPessoa));
         }
-
+        /*
         public ViewResult Index()
         {
             return View(gPerfilPessoa.ObterProfissionaisEFuncionariosAtivos());
-        }
+        }*/
 
         //
         // GET: /pontuarPessoa/Create
@@ -61,6 +59,62 @@ namespace BibliotecaWeb
                 return RedirectToAction("Index");
             }
             return View(pontuarPessoa);
+        }
+
+        //
+        // GET: /PontuarPessoa/Details/5
+
+        public ViewResult Details(int id)
+        {
+            PontuarPessoaModel pontuarPessoa = gPontuarPessoa.Obter(id);
+            return View(pontuarPessoa);
+        }
+
+        //
+        // GET: /PontuarPessoa/Edit/5
+
+        public ActionResult Edit(int id)
+        {
+            PontuarPessoaModel pontuarPessoa = gPontuarPessoa.Obter(id);
+            return View(pontuarPessoa);
+        }
+
+        //
+        // POST: /PontuarPessoa/Edit/5
+
+        [HttpPost]
+        public ActionResult Edit(PontuarPessoaModel pontuarPessoa)
+        {
+            if (ModelState.IsValid)
+            {
+                gPontuarPessoa.Editar(pontuarPessoa);
+                return RedirectToAction("Index");
+            }
+            return View(pontuarPessoa);
+        }
+
+        //
+        // GET: /PontuarPessoa/Delete/5
+
+        public ActionResult Delete(int id)
+        {
+            PontuarPessoaModel pontuarPessoa = gPontuarPessoa.Obter(id);
+            return View(pontuarPessoa);
+        }
+
+        //
+        // POST: /PontuarPessoa/Delete/5
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            gPontuarPessoa.Remover(id);
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
         }
     }
 }
