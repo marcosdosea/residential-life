@@ -79,7 +79,7 @@ CREATE TABLE `my_aspnet_membership` (
 
 LOCK TABLES `my_aspnet_membership` WRITE;
 /*!40000 ALTER TABLE `my_aspnet_membership` DISABLE KEYS */;
-INSERT INTO `my_aspnet_membership` VALUES (5,'kekeu@kekeu.com','','1234567@','6I/7eYszRWohRxet0c4jOw==',0,'teste1','teste2',1,'2014-08-12 07:36:25','2014-08-12 07:36:24','2014-08-03 10:18:35','2014-08-03 10:18:35',0,'2014-08-03 10:18:35',0,'2014-08-03 10:18:35',0,'2014-08-03 10:18:35'),(6,'ceceu@ceceu.com','','1234567@','+aF5TTRp/JJzDzT52RGg9Q==',0,'teste1','teste2',1,'2014-08-11 21:01:41','2014-08-11 21:01:41','2014-08-03 20:07:55','2014-08-03 20:07:55',0,'2014-08-03 20:07:55',1,'2014-08-10 14:07:21',0,'2014-08-03 20:07:55'),(7,'teste@teste.com','','1234567@','3qv5T9Yog9LwCXB4D2ct3w==',0,'teste1','teste2',1,'2014-08-10 22:27:48','2014-08-10 22:27:48','2014-08-10 22:27:48','2014-08-10 22:27:48',0,'2014-08-10 22:27:48',0,'2014-08-10 22:27:48',0,'2014-08-10 22:27:48'),(8,'clevertonsse@gmail.com','','7654321@','zCKDW2XGsu7hEQ9AocP+wQ==',0,'teste1','teste2',1,'2014-08-11 08:06:11','2014-08-11 08:06:11','2014-08-11 08:06:11','2014-08-11 08:06:11',0,'2014-08-11 08:06:11',0,'2014-08-11 08:06:11',0,'2014-08-11 08:06:11');
+INSERT INTO `my_aspnet_membership` VALUES (5,'admin@admin.com','','residential','6I/7eYszRWohRxet0c4jOw==',0,'teste1','teste2',1,'2014-08-12 10:54:23','2014-08-12 10:54:23','2014-08-03 10:18:35','2014-08-03 10:18:35',0,'2014-08-03 10:18:35',0,'2014-08-03 10:18:35',0,'2014-08-03 10:18:35'),(6,'ceceu@ceceu.com','','1234567@','+aF5TTRp/JJzDzT52RGg9Q==',0,'teste1','teste2',1,'2014-08-11 21:01:41','2014-08-11 21:01:41','2014-08-03 20:07:55','2014-08-03 20:07:55',0,'2014-08-03 20:07:55',1,'2014-08-10 14:07:21',0,'2014-08-03 20:07:55'),(7,'teste@teste.com','','1234567@','3qv5T9Yog9LwCXB4D2ct3w==',0,'teste1','teste2',1,'2014-08-10 22:27:48','2014-08-10 22:27:48','2014-08-10 22:27:48','2014-08-10 22:27:48',0,'2014-08-10 22:27:48',0,'2014-08-10 22:27:48',0,'2014-08-10 22:27:48'),(8,'clevertonsse@gmail.com','','7654321@','zCKDW2XGsu7hEQ9AocP+wQ==',0,'teste1','teste2',1,'2014-08-11 08:06:11','2014-08-11 08:06:11','2014-08-11 08:06:11','2014-08-11 08:06:11',0,'2014-08-11 08:06:11',0,'2014-08-11 08:06:11',0,'2014-08-11 08:06:11');
 /*!40000 ALTER TABLE `my_aspnet_membership` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -235,7 +235,7 @@ CREATE TABLE `my_aspnet_users` (
 
 LOCK TABLES `my_aspnet_users` WRITE;
 /*!40000 ALTER TABLE `my_aspnet_users` DISABLE KEYS */;
-INSERT INTO `my_aspnet_users` VALUES (5,1,'kekeu',0,'2014-08-12 07:36:25'),(6,1,'ceceu',0,'2014-08-11 21:01:41'),(7,1,'teste',0,'2014-08-10 22:27:48'),(8,1,'cleverton',0,'2014-08-11 08:06:11');
+INSERT INTO `my_aspnet_users` VALUES (5,1,'Administrador',0,'2014-08-12 10:54:23'),(6,1,'ceceu',0,'2014-08-11 21:01:41'),(7,1,'teste',0,'2014-08-10 22:27:48'),(8,1,'cleverton',0,'2014-08-11 08:06:11');
 /*!40000 ALTER TABLE `my_aspnet_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -270,14 +270,16 @@ DROP TABLE IF EXISTS `tb_acessocondominio`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tb_acessocondominio` (
+  `IdAcessoCondominio` int(11) NOT NULL AUTO_INCREMENT,
   `IdPessoa` int(11) NOT NULL,
   `IdCondominio` int(11) NOT NULL,
   `DataHora` datetime NOT NULL,
   `TipoAcesso` enum('Entrada','Saida') NOT NULL,
-  PRIMARY KEY (`IdPessoa`,`IdCondominio`),
-  KEY `tb_acessocondominio_tb_condominio1_idx` (`IdCondominio`),
-  CONSTRAINT `tb_acessocondominio_tb_condominio1` FOREIGN KEY (`IdCondominio`) REFERENCES `tb_condominio` (`IdCondominio`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `tb_acessocondominio_tb_pessoa1` FOREIGN KEY (`IdPessoa`) REFERENCES `tb_pessoa` (`IdPessoa`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  PRIMARY KEY (`IdAcessoCondominio`),
+  KEY `fk_tb_acessocondominio_tb_pessoa1_idx` (`IdPessoa`),
+  KEY `fk_tb_acessocondominio_tb_condominio1_idx` (`IdCondominio`),
+  CONSTRAINT `fk_tb_acessocondominio_tb_pessoa1` FOREIGN KEY (`IdPessoa`) REFERENCES `tb_pessoa` (`IdPessoa`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_tb_acessocondominio_tb_condominio1` FOREIGN KEY (`IdCondominio`) REFERENCES `tb_condominio` (`IdCondominio`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -391,7 +393,7 @@ CREATE TABLE `tb_bloco` (
   PRIMARY KEY (`IdBloco`),
   KEY `TB_Bloco_TB_Condominio1_idx` (`IdCondominio`),
   CONSTRAINT `TB_Bloco_TB_Condominio1` FOREIGN KEY (`IdCondominio`) REFERENCES `tb_condominio` (`IdCondominio`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -400,7 +402,7 @@ CREATE TABLE `tb_bloco` (
 
 LOCK TABLES `tb_bloco` WRITE;
 /*!40000 ALTER TABLE `tb_bloco` DISABLE KEYS */;
-INSERT INTO `tb_bloco` VALUES (1,1,'Sindical',0,0);
+INSERT INTO `tb_bloco` VALUES (1,1,'Admin',0,0);
 /*!40000 ALTER TABLE `tb_bloco` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -461,7 +463,7 @@ CREATE TABLE `tb_condominio` (
 
 LOCK TABLES `tb_condominio` WRITE;
 /*!40000 ALTER TABLE `tb_condominio` DISABLE KEYS */;
-INSERT INTO `tb_condominio` VALUES (1,'Teste','Teste','10','Teste','Teste','Teste','Teste','SE');
+INSERT INTO `tb_condominio` VALUES (1,'Admistrador','Administrador','0','Administardor','','00000000','Administrador','ND');
 /*!40000 ALTER TABLE `tb_condominio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -682,7 +684,7 @@ CREATE TABLE `tb_pessoa` (
 
 LOCK TABLES `tb_pessoa` WRITE;
 /*!40000 ALTER TABLE `tb_pessoa` DISABLE KEYS */;
-INSERT INTO `tb_pessoa` VALUES (7,'12345678','kekeu','12345678','M',NULL,'7999283155','José Alves dos Santos','1003',NULL,'Queimadas','49500000','Itabaiana','SE',5,1),(8,'87654321','ceceu','87654321','M','99283155','7999283155','José Alves dos Santos','1003',NULL,'Queimadas','49500000','Itabaiana','SE',6,1),(9,'12345678','teste','87654321','M','99283155','7999283155','José Alves dos Santos','1003',NULL,'Queimadas','49500000','Itabaiana','SE',7,1),(10,'87654321','cleverton','87654321','M','99283155','7999283155','José Alves dos Santos','1003',NULL,'Queimadas','49500000','Itabaiana','SE',8,1);
+INSERT INTO `tb_pessoa` VALUES (1,'12345678','Administrador','12345678','M',NULL,'','A definir','0',NULL,'A definir','0','A definir','ND',5,1),(8,'87654321','ceceu','87654321','M','99283155','7999283155','José Alves dos Santos','1003',NULL,'Queimadas','49500000','Itabaiana','SE',6,1),(9,'12345678','teste','87654321','M','99283155','7999283155','José Alves dos Santos','1003',NULL,'Queimadas','49500000','Itabaiana','SE',7,1),(10,'87654321','cleverton','87654321','M','99283155','7999283155','José Alves dos Santos','1003',NULL,'Queimadas','49500000','Itabaiana','SE',8,1);
 /*!40000 ALTER TABLE `tb_pessoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -714,7 +716,6 @@ CREATE TABLE `tb_pessoamoradia` (
 
 LOCK TABLES `tb_pessoamoradia` WRITE;
 /*!40000 ALTER TABLE `tb_pessoamoradia` DISABLE KEYS */;
-INSERT INTO `tb_pessoamoradia` VALUES (7,1,2,1),(7,1,6,1);
 /*!40000 ALTER TABLE `tb_pessoamoradia` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -769,7 +770,6 @@ CREATE TABLE `tb_pontuacaopessoa` (
 
 LOCK TABLES `tb_pontuacaopessoa` WRITE;
 /*!40000 ALTER TABLE `tb_pontuacaopessoa` DISABLE KEYS */;
-INSERT INTO `tb_pontuacaopessoa` VALUES (1,7,'mais ou menos','Seis');
 /*!40000 ALTER TABLE `tb_pontuacaopessoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -961,4 +961,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-08-12  9:29:36
+-- Dump completed on 2014-08-12 14:22:51
