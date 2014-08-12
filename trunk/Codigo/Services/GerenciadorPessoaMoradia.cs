@@ -104,6 +104,14 @@ namespace Services
             return GetQuery();
         }
 
+        /// <summary>
+        /// Obter todos as entidades cadastradas
+        /// </summary>
+        /// <returns></returns>
+        public PessoaMoradiaModel ObterPorPessoa(int idPessoa)
+        {
+            return GetQuery().Where(pm => pm.IdPessoa == idPessoa).ElementAtOrDefault(0);
+        }
 
         /// <summary>
         /// Obter todos as entidades cadastradas

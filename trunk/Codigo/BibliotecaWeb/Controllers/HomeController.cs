@@ -39,7 +39,11 @@ namespace ResidentialWeb
         {
             IEnumerable<PessoaMoradiaModel> pessoaMoradia = gPessoaMoradia.ObterTodosPorPessoa(
                 gPessoa.ObterPessoaLogada((int)Membership.GetUser(true).ProviderUserKey).IdPessoa);
-            if (pessoaMoradia.Count().Equals(1))
+            if (pessoaMoradia.Count() == 0) //Zero para administrador do sistema que não precisa estar associado a moradia
+            {
+                SessionController.IdRolePessoa = Global.IdPerfilAdministradorSistema;
+            }
+            else if (pessoaMoradia.Count() == 1)
             {
                 SessionController.PessoaMoradia = pessoaMoradia.ElementAtOrDefault(0);
                 SessionController.IdRolePessoa = SessionController.PessoaMoradia.IdPerfil;

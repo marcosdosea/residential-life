@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Models.Models.AcessoPredioModel>" %>
+<%@ Import Namespace="Model.Helpers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    
+    <%: Models.App_GlobalResources.Mensagem.acessoPredio%>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -17,34 +18,32 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend><%: Models.App_GlobalResources.Mensagem.acessoPredio %></legend>
-
-        <%: ViewBag.Mensagem %>
+        <legend><%: Models.App_GlobalResources.Mensagem.registrarAcesso %></legend>
 
          <div class="editor-label">
-            <%: Models.App_GlobalResources.Mensagem.codigoPessoa %>
+            <%: Models.App_GlobalResources.Mensagem.pessoa %>
         </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.IdPessoa) %>
-            <%: Html.ValidationMessageFor(model => model.IdPessoa) %>
+            <%: Html.DropDownListFor(model => model.IdPessoa, ViewBag.IdVeiculo as SelectList, "Selecione")%>
+            <%: Html.ValidationMessageFor(model => model.IdPessoa)%>
         </div>
+
+        <!--div class="editor-label">
+            <%: Models.App_GlobalResources.Mensagem.data %>
+        </div>
+        <div class="editor-field">
+            <%: Html.TextBoxFor(model => model.Data, new { @Class = "dateTime", @Type = "dateTime", @Value = ViewBag.HoraAtual })%>
+            <%: Html.ValidationMessageFor(model => model.Data) %>
+        </div-->
 
         <div class="editor-label">
-            <%: Models.App_GlobalResources.Mensagem.dataEntrada %>
+            <%: Html.LabelFor(model => model.TipoAcesso) %>
         </div>
         <div class="editor-field">
-            <%: Html.TextBoxFor(model => model.DataEntrada, new { @Class = "dateTime", @Type = "dateTime", @Value = ViewBag.HoraAtual })%>
-            <%: Html.ValidationMessageFor(model => model.DataEntrada) %>
+            <%: Html.EnumDropDownListFor(model => model.TipoAcesso, Models.Models.ListaTipoAcesso.Entrada)%>
+            <%: Html.ValidationMessageFor(model => model.TipoAcesso) %>
         </div>
-
-        <div class="editor-label">
-           <%: Models.App_GlobalResources.Mensagem.dataSaida %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.DataSaida) %>
-            <%: Html.ValidationMessageFor(model => model.DataSaida) %>
-        </div>
-
+        <br />
         <p>
             <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
         </p>
@@ -54,5 +53,15 @@
 <div>
     <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.voltar, "Index") %>
 </div>
+
+<input type="hidden" value="<%: Session["_AlertBox"] %>" id="alertBox" />
+    <script type="text/javascript">
+        var msg = document.getElementById('alertBox').value;
+        if (msg == "1") {
+            alert("Esta Pessoa não está alocada em uma moradia.");
+        } else if (msg == "2") {
+            alert("Identificador de morador não encontrado no sistema!");
+        }
+    </script>
 
 </asp:Content>

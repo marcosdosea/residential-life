@@ -56,6 +56,8 @@
     <Compile Include="Models\AcessoPredioModel.cs" />
     <Compile Include="Models\AcessoVeiculoModel.cs" />
     <Compile Include="Models\AdministradoraModel.cs" />
+    <Compile Include="Models\AlocarPessoaMoradiaModel.cs" />
+    <Compile Include="Models\PerfilPessoaModel.cs" />
     <Compile Include="Models\PessoaMoradiaModel.cs" />
     <Compile Include="Models\AreaPublicaModel.cs" />
     <Compile Include="Models\AtendimentoModel.cs" />
