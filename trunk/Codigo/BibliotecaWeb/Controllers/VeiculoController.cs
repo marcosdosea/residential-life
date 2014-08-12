@@ -48,7 +48,7 @@ namespace BibliotecaWeb
         {
             if (ModelState.IsValid)
             {
-                veiculoModel.IdPessoa = GerenciadorPessoa.GetInstance().ObterPessoaLogada(SessionController.PessoaLogada).IdPessoa;
+                veiculoModel.IdPessoa = SessionController.Pessoa.IdPessoa;
                 gVeiculo.Inserir(veiculoModel);
                 return RedirectToAction("Index");
             }
@@ -102,7 +102,7 @@ namespace BibliotecaWeb
         {
             if (ModelState.IsValid)
             {
-                veiculoModel.IdPessoa = SessionController.PessoaLogada;
+                veiculoModel.IdPessoa = SessionController.Pessoa.IdPessoa;
                 gVeiculo.Editar(veiculoModel);
                 return RedirectToAction("Index");
             }

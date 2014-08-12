@@ -40,6 +40,7 @@ namespace ResidentialWeb.Controllers
                     }
                     else
                     {
+                        SessionController.IdRolePessoa = 0;
                         return RedirectToAction("SelecionarPerfil", "Home");
                     }
                 }

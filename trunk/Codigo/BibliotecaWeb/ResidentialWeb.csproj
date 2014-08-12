@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AcessoPredioController.cs" />
+    <Compile Include="Controllers\AcessoVeiculoController.cs" />
     <Compile Include="Controllers\AdministradoraController.cs" />
     <Compile Include="Controllers\PessoaMoradiaController.cs" />
     <Compile Include="Controllers\AreaPublicaController.cs" />
@@ -145,6 +146,11 @@
     <Content Include="Scripts\modernizr-1.7.min.js" />
     <Content Include="Views\AcessoPredio\Create.aspx" />
     <Content Include="Views\AcessoPredio\Index.aspx" />
+    <Content Include="Views\AcessoVeiculo\Create.aspx" />
+    <Content Include="Views\AcessoVeiculo\Delete.aspx" />
+    <Content Include="Views\AcessoVeiculo\Details.aspx" />
+    <Content Include="Views\AcessoVeiculo\Edit.aspx" />
+    <Content Include="Views\AcessoVeiculo\Index.aspx" />
     <Content Include="Views\Administradora\Create.aspx" />
     <Content Include="Views\Administradora\Delete.aspx" />
     <Content Include="Views\Administradora\Details.aspx" />
@@ -301,6 +307,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Relatorios\Ocorrencia.rdlc" />
+    <EmbeddedResource Include="Relatorios\ReportAcessoVeiculo.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportListaAreaPublica.rdlc" />
     <EmbeddedResource Include="Relatorios\ReportListaBlocos.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

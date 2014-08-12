@@ -846,4 +846,10 @@
   <data name="gerarRelatorio" xml:space="preserve">
     <value>Gerar Relatório</value>
   </data>
+  <data name="selecionar" xml:space="preserve">
+    <value>Selecionar</value>
+  </data>
+  <data name="selecionarPerfil" xml:space="preserve">
+    <value>Selecionar Perfil</value>
+  </data>
 </root>
