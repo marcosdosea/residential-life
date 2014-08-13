@@ -858,4 +858,16 @@
   <data name="definirSindico" xml:space="preserve">
     <value>Definir Síndico</value>
   </data>
+  <data name="novoProprietario" xml:space="preserve">
+    <value>Novo Proprietário</value>
+  </data>
+  <data name="proprietarios" xml:space="preserve">
+    <value>Proprietários</value>
+  </data>
+  <data name="remover" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="removerSindico" xml:space="preserve">
+    <value>Remover Síndico</value>
+  </data>
 </root>

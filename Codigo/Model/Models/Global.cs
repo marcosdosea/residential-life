@@ -13,7 +13,7 @@ namespace Models
         public const int IdPerfilSindico = 2;
         public const int IdPerfilVisitante = 3;
         public const int IdPerfilAdministradora = 4;
-        public const int IdPerfilPropietario = 5;
+        public const int IdPerfilProprietario = 5;
         public const int IdPerfilFuncionario = 6;
         public const int IdPerfilResponsavel = 7;
         public const int IdPerfilProfissional = 8;

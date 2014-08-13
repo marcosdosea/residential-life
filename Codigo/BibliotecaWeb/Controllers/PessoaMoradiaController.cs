@@ -22,59 +22,6 @@ namespace BibliotecaWeb
             gPessoaMoradia = new GerenciadorPessoaMoradia();
         }
 
-        public ActionResult DefinirSindico()
-        {
-            ViewBag.IdCondominio = new SelectList(GerenciadorCondominio.GetInstance().ObterTodos(), "IdCondominio", "Nome");
-            ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(0), "IdBloco", "Nome");
-            ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(0), "IdMoradia", "Numero");
-            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult DefinirSindico(PessoaMoradiaModel pessoaMoradia)
-        {
-            if (pessoaMoradia.IdMoradia != 0 && pessoaMoradia.IdPessoa != 0)
-            {
-                pessoaMoradia.IdPerfil = Global.IdPerfilSindico;
-                pessoaMoradia.Ativo = true;
-                if (ModelState.IsValid)
-                {
-                    gPessoaMoradia.Inserir(pessoaMoradia);
-                    return RedirectToAction("Index", "Home");
-                }
-            }
-            else
-            {
-                if (pessoaMoradia.IdBloco == 0)
-                {
-                    ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", pessoaMoradia.IdCondominio);
-                    ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(pessoaMoradia.IdCondominio), "IdBloco", "Nome");
-                    ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(0), "IdMoradia", "Numero");
-                    ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", pessoaMoradia.IdPessoa);
-                }
-                else if (pessoaMoradia.IdMoradia == 0 && pessoaMoradia.IdBloco != 0)
-                {
-                    ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", pessoaMoradia.IdCondominio);
-                    ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(pessoaMoradia.IdCondominio), "IdBloco", "Nome", 
-                        pessoaMoradia.IdBloco);
-                    ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(pessoaMoradia.IdBloco), "IdMoradia", "Numero");
-                    ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", pessoaMoradia.IdPessoa);
-                }
-                else if (pessoaMoradia.IdMoradia != 0 && pessoaMoradia.IdBloco != 0)
-                {
-                    ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", pessoaMoradia.IdCondominio);
-                    ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(pessoaMoradia.IdCondominio), "IdBloco", "Nome", 
-                        pessoaMoradia.IdBloco);
-                    ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(pessoaMoradia.IdBloco), "IdMoradia", "Numero", 
-                        pessoaMoradia.NumeroMoradia);
-                    pessoaMoradia.NumeroMoradia = gMoradia.Obter(pessoaMoradia.IdMoradia).Numero;
-                    ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", pessoaMoradia.IdPessoa);
-                }
-            }
-            return View(pessoaMoradia);
-        }
-        
         //
         // GET: /Moradia/
 

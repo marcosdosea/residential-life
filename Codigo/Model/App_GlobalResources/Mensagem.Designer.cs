@@ -1609,6 +1609,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Novo Proprietário.
+        /// </summary>
+        public static string novoProprietario {
+            get {
+                return ResourceManager.GetString("novoProprietario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Novo registro de acesso.
         /// </summary>
         public static string novoRegistroAcesso {
@@ -1816,6 +1825,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Proprietários.
+        /// </summary>
+        public static string proprietarios {
+            get {
+                return ResourceManager.GetString("proprietarios", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Quantidade de Andares.
         /// </summary>
         public static string qtdeAndares {
@@ -1866,6 +1884,24 @@ namespace Models.App_GlobalResources {
         public static string registrarAcessoVeiculo {
             get {
                 return ResourceManager.GetString("registrarAcessoVeiculo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remover.
+        /// </summary>
+        public static string remover {
+            get {
+                return ResourceManager.GetString("remover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remover Síndico.
+        /// </summary>
+        public static string removerSindico {
+            get {
+                return ResourceManager.GetString("removerSindico", resourceCulture);
             }
         }
         

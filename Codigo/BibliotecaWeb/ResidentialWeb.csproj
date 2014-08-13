@@ -75,6 +75,7 @@
     <Compile Include="Controllers\AcessoPredioController.cs" />
     <Compile Include="Controllers\AcessoVeiculoController.cs" />
     <Compile Include="Controllers\AdministradoraController.cs" />
+    <Compile Include="Controllers\PerfisController.cs" />
     <Compile Include="Controllers\PessoaMoradiaController.cs" />
     <Compile Include="Controllers\AreaPublicaController.cs" />
     <Compile Include="Controllers\AtendimentoController.cs" />
@@ -157,6 +158,10 @@
     <Content Include="Views\Administradora\Edit.aspx" />
     <Content Include="Views\Administradora\Index.aspx" />
     <Content Include="Views\Moradia\DefinirProprietario.aspx" />
+    <Content Include="Views\Perfis\DefinirProprietario.aspx" />
+    <Content Include="Views\Perfis\DefinirSindico.aspx" />
+    <Content Include="Views\Perfis\Proprietario.aspx" />
+    <Content Include="Views\Perfis\RemoverSindico.aspx" />
     <Content Include="Views\PessoaMoradia\Create.aspx" />
     <Content Include="Views\PessoaMoradia\DefinirSindico.aspx" />
     <Content Include="Views\PessoaMoradia\Delete.aspx" />

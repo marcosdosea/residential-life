@@ -41,39 +41,6 @@ namespace BibliotecaWeb
             return View(moradias);
         }
 
-        public ActionResult DefinirProprietario(int idMoradia)
-        {
-            PessoaMoradiaModel pessoaMoradia = gPessoaMoradia.ObterPorMoradiaPerfil(idMoradia, Global.IdPerfilPropietario);
-            if (pessoaMoradia == null)
-            {
-                pessoaMoradia = new PessoaMoradiaModel();
-                pessoaMoradia.IdMoradia = idMoradia;
-            }
-            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", pessoaMoradia.IdPessoa);
-            return View(pessoaMoradia);
-        }
-
-        [HttpPost]
-        public ActionResult DefinirProprietario(PessoaMoradiaModel pessoaMoradia)
-        {
-            pessoaMoradia.IdPerfil = Global.IdPerfilPropietario;
-            pessoaMoradia.Ativo = true;
-            if (ModelState.IsValid)
-            {
-                PessoaMoradiaModel pessoaMoradiaAux = gPessoaMoradia.Obter(pessoaMoradia.IdPessoa, pessoaMoradia.IdMoradia, 
-                    pessoaMoradia.IdPerfil);
-                if (pessoaMoradiaAux != null)
-                {
-                    gPessoaMoradia.Remover(pessoaMoradia.IdPessoa, pessoaMoradia.IdMoradia,
-                    pessoaMoradia.IdPerfil);
-                }
-                gPessoaMoradia.Inserir(pessoaMoradia);
-                return RedirectToAction("Index");
-            }
-            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", pessoaMoradia.IdPessoa);
-            return View(pessoaMoradia);
-        }
-
         //[Authorize(Roles = "Síndico")]
         public ActionResult Create()
         {
