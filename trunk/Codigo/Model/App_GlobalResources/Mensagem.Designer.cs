@@ -772,6 +772,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Definir Responsável.
+        /// </summary>
+        public static string definirResponsavel {
+            get {
+                return ResourceManager.GetString("definirResponsavel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Definir Síndico.
         /// </summary>
         public static string definirSindico {
@@ -1636,6 +1645,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Novo Responsável.
+        /// </summary>
+        public static string novoResponsavel {
+            get {
+                return ResourceManager.GetString("novoResponsavel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Novo Veículo.
         /// </summary>
         public static string novoVeiculo {
@@ -1938,6 +1956,24 @@ namespace Models.App_GlobalResources {
         public static string Resolvido {
             get {
                 return ResourceManager.GetString("Resolvido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Responsáveis.
+        /// </summary>
+        public static string responsaveis {
+            get {
+                return ResourceManager.GetString("responsaveis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Responsável.
+        /// </summary>
+        public static string responsavel {
+            get {
+                return ResourceManager.GetString("responsavel", resourceCulture);
             }
         }
         
