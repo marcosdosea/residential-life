@@ -49,7 +49,7 @@
             <% } %>
             <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilProprietario))
                { %>
-            <!-- Definir Responsável -->
+            <li><%: Html.ActionLink("Definir Responsável", "Responsavel", "Perfis")%></li>
             <% } %>
             <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilSindico) && HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilAdministradora))
                { %>

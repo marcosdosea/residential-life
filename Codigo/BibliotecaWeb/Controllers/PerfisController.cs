@@ -35,7 +35,7 @@ namespace BibliotecaWeb
             return View();
         }
 
-        
+
         [HttpPost]
         public ActionResult DefinirSindico(PessoaMoradiaModel pessoaMoradia)
         {
@@ -100,7 +100,7 @@ namespace BibliotecaWeb
 
         public ActionResult Proprietario()
         {
-            return View(gPessoaMoradia.ObterPorPerfilCondominioAtivo(Global.IdPerfilProprietario, 
+            return View(gPessoaMoradia.ObterPorPerfilCondominioAtivo(Global.IdPerfilProprietario,
                 SessionController.PessoaMoradia.IdCondominio));
         }
 
@@ -126,9 +126,9 @@ namespace BibliotecaWeb
                     return RedirectToAction("Proprietario", "Perfis");
                 }
             }
-            ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(SessionController.PessoaMoradia.IdCondominio), "IdBloco", "Nome", 
+            ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(SessionController.PessoaMoradia.IdCondominio), "IdBloco", "Nome",
                 pessoaMoradia.IdBloco);
-            ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(pessoaMoradia.IdBloco), "IdMoradia", "Numero", 
+            ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(pessoaMoradia.IdBloco), "IdMoradia", "Numero",
                 pessoaMoradia.IdMoradia);
             ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", pessoaMoradia.IdPessoa);
             return View(pessoaMoradia);
@@ -143,6 +143,46 @@ namespace BibliotecaWeb
             pessoaMoradia.Ativo = false;
             gPessoaMoradia.Editar(pessoaMoradia);
             return RedirectToAction("Proprietario", "Perfis");
+        }
+
+        public ActionResult Responsavel()
+        {
+            return View(gPessoaMoradia.ObterPorMoradiaPerfilAtivo(SessionController.PessoaMoradia.IdMoradia, Global.IdPerfilResponsavel));
+        }
+
+        public ActionResult DefinirResponsavel()
+        {
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult DefinirResponsavel(PessoaMoradiaModel pessoaMoradia)
+        {
+            pessoaMoradia.IdPerfil = Global.IdPerfilResponsavel;
+            pessoaMoradia.IdMoradia = SessionController.PessoaMoradia.IdMoradia;
+            pessoaMoradia.Ativo = true;
+            if (ModelState.IsValid)
+            {
+                gPessoaMoradia.InserirEditar(pessoaMoradia);
+                return RedirectToAction("Responsavel", "Perfis");
+            }
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", pessoaMoradia.IdPessoa);
+            return View(pessoaMoradia);
+        }
+
+
+        //[HttpPost]
+        public ActionResult RemoverResponsavel(int idPessoa, int idMoradia, int idPerfil)
+        {
+            PessoaMoradiaModel pessoaMoradia = new PessoaMoradiaModel();
+            pessoaMoradia.IdPessoa = idPessoa;
+            pessoaMoradia.IdMoradia = idMoradia;
+            pessoaMoradia.IdPerfil = idPerfil;
+            pessoaMoradia.Ativo = false;
+            gPessoaMoradia.Editar(pessoaMoradia);
+            return RedirectToAction("Responsavel", "Perfis");
         }
     }
 }

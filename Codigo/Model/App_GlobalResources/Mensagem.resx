@@ -870,4 +870,16 @@
   <data name="removerSindico" xml:space="preserve">
     <value>Remover Síndico</value>
   </data>
+  <data name="definirResponsavel" xml:space="preserve">
+    <value>Definir Responsável</value>
+  </data>
+  <data name="novoResponsavel" xml:space="preserve">
+    <value>Novo Responsável</value>
+  </data>
+  <data name="responsaveis" xml:space="preserve">
+    <value>Responsáveis</value>
+  </data>
+  <data name="responsavel" xml:space="preserve">
+    <value>Responsável</value>
+  </data>
 </root>

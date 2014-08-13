@@ -14,7 +14,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend><%: Models.App_GlobalResources.Mensagem.definirSindico %></legend>
+        <legend><%: Models.App_GlobalResources.Mensagem.sindico %></legend>
 
         <% using (Html.BeginForm("Create", "AlocarPessoaMoradia", FormMethod.Post, null))
          { %>
@@ -46,7 +46,7 @@
             <%: Html.Label(Models.App_GlobalResources.Mensagem.nome_pessoa)%>
         </div>
         <div class="editor-field">
-            <%: Html.DropDownListFor(model => model.IdPessoa, ViewBag.IdPessoa as SelectList, "Selecione")%>
+            <%: Html.DropDownList("IdPessoa", "Selecione")%>
             <%: Html.ValidationMessageFor(model => model.IdPessoa) %>
         </div>
         <br />

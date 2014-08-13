@@ -145,7 +145,7 @@ namespace Services
         }
 
         /// <summary>
-        /// Obtém a pessoa moradia com perfil de propietário
+        /// Obtém a pessoa moradia a partir da moradia e perfil
         /// </summary>
         /// <param name="idRes">Identificador da entidade na base de dados</param>
         /// <returns>Autor model</returns>
@@ -165,6 +165,19 @@ namespace Services
         {
             IEnumerable<PessoaMoradiaModel> pessoaMoradiaE = GetQuery().Where(pm => pm.IdPerfil.Equals(idPerfil) && 
                 pm.Ativo == true);
+            return pessoaMoradiaE;
+        }
+
+        /// <summary>
+        /// Obtem todos os registros por perfil e moradia
+        /// </summary>
+        /// <param name="idMoradia"></param>
+        /// <param name="idPerfil"></param>
+        /// <returns></returns>
+        public IEnumerable<PessoaMoradiaModel> ObterPorMoradiaPerfilAtivo(int idMoradia, int idPerfil)
+        {
+            IEnumerable<PessoaMoradiaModel> pessoaMoradiaE = GetQuery().Where(pm => pm.IdPerfil.Equals(idPerfil) &&
+                pm.Ativo == true && pm.IdMoradia.Equals(idMoradia));
             return pessoaMoradiaE;
         }
 
