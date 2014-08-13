@@ -1,13 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<Models.Models.AlocarPessoaMoradiaModel>" %>
-<%@ Import Namespace="Model.Helpers" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<Models.PessoaMoradiaModel>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    <%: Models.App_GlobalResources.Mensagem.alocar_pessoa_moradia %>
+    <%: Models.App_GlobalResources.Mensagem.definirSindico %>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2><%: Models.App_GlobalResources.Mensagem.alocar %></h2>
+<h2><%: Models.App_GlobalResources.Mensagem.definirSindico%></h2>
 
 <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
 <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
@@ -15,7 +14,7 @@
 <% using (Html.BeginForm()) { %>
     <%: Html.ValidationSummary(true) %>
     <fieldset>
-        <legend><%: Models.App_GlobalResources.Mensagem.alocar_pessoa_moradia %></legend>
+        <legend><%: Models.App_GlobalResources.Mensagem.definirSindico %></legend>
 
         <% using (Html.BeginForm("Create", "AlocarPessoaMoradia", FormMethod.Post, null))
          { %>
@@ -42,17 +41,7 @@
             <%: Html.DropDownListFor(model => model.IdMoradia, ViewBag.IdMoradia as SelectList, "Selecione", new { onchange = "this.form.submit();" })%>
             <%: Html.ValidationMessageFor(model => model.IdMoradia) %>
         </div>
-        
         <% } %>
-
-        <div class="editor-label">
-            <%: Html.Label(Models.App_GlobalResources.Mensagem.tipo)%>
-        </div>
-        <div class="editor-field">
-            <%: Html.EnumDropDownListFor(model => model.Tipo, Models.Models.AlocarPessoaMoradiaModel.ListaTipoPessoaMoradia.Morador)%>
-            <%: Html.ValidationMessageFor(model => model.Tipo) %>
-        </div>
-
         <div class="editor-label">
             <%: Html.Label(Models.App_GlobalResources.Mensagem.nome_pessoa)%>
         </div>
@@ -60,7 +49,6 @@
             <%: Html.DropDownListFor(model => model.IdPessoa, ViewBag.IdPessoa as SelectList, "Selecione")%>
             <%: Html.ValidationMessageFor(model => model.IdPessoa) %>
         </div>
-        
         <br />
         <p>
             <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
@@ -69,7 +57,7 @@
 <% } %>
 
 <div>
-    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index")%>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index", "Home")%>
 </div>
 
 </asp:Content>

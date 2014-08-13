@@ -26,7 +26,8 @@
                { %>
             <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilAdministradorSistema))
                { %>
-            <li><%: Html.ActionLink("Definir Síndico", "DefinirSindico", "PessoaMoradia")%></li>
+            <li><%: Html.ActionLink("Definir Síndico", "DefinirSindico", "Perfis")%></li>
+            <li><%: Html.ActionLink("Remover Síndico", "RemoverSindico", "Perfis")%></li>
             <li><%: Html.ActionLink("Condomínio", "Index", "Condominio")%></li> 
             <li><%: Html.ActionLink("Bloco", "Index", "Bloco")%></li>
             <li><%: Html.ActionLink("Moradia", "Index", "Moradia")%></li>  
@@ -38,6 +39,7 @@
                { %>
             <!--li><%: Html.ActionLink("Pessoa", "Index", "Pessoa")%></li-->     
             <li><%: Html.ActionLink("Ocorrência", "Index", "Ocorrencia")%></li> 
+            <li><%: Html.ActionLink("Proprietários", "Proprietario", "Perfis")%></li> 
             <li><%: Html.ActionLink("Atendimento", "Index", "Atendimento")%></li>
             <li><%: Html.ActionLink("Postagens", "Index", "Postagem")%></li>   
             <li><%: Html.ActionLink("Bloco", "Index", "Bloco")%></li>
@@ -45,7 +47,7 @@
             <li><%: Html.ActionLink("Setor", "Index", "Setor")%></li>
             <li><%: Html.ActionLink("Acesso Veículo", "Index", "AcessoVeiculo")%></li> 
             <% } %>
-            <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilPropietario))
+            <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilProprietario))
                { %>
             <!-- Definir Responsável -->
             <% } %>

@@ -49,8 +49,6 @@
             <%: Html.DisplayFor(modelItem => item.TipoMoradia) %>
         </td>
         <td>
-            <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.definirProprietario, "DefinirProprietario", 
-                new { idMoradia = item.IdMoradia }) %> |
             <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.apagar, "Delete", new { id = item.IdMoradia })%>
         </td>
     </tr>

@@ -157,6 +157,31 @@ namespace Services
         }
 
         /// <summary>
+        /// Obtem todos os registros de acordo com o perfil que estao ativos
+        /// </summary>
+        /// <param name="idPerfil"></param>
+        /// <returns></returns>
+        public IEnumerable<PessoaMoradiaModel> ObterPorPerfilAtivo(int idPerfil)
+        {
+            IEnumerable<PessoaMoradiaModel> pessoaMoradiaE = GetQuery().Where(pm => pm.IdPerfil.Equals(idPerfil) && 
+                pm.Ativo == true);
+            return pessoaMoradiaE;
+        }
+
+        /// <summary>
+        /// Obtem registros de acordo com o perfil e condominio ativo
+        /// </summary>
+        /// <param name="idPerfil"></param>
+        /// <param name="idCondominio"></param>
+        /// <returns></returns>
+        public IEnumerable<PessoaMoradiaModel> ObterPorPerfilCondominioAtivo(int idPerfil, int idCondominio)
+        {
+            IEnumerable<PessoaMoradiaModel> pessoaMoradiaE = GetQuery().Where(pm => pm.IdPerfil.Equals(idPerfil) &&
+                pm.Ativo == true && pm.IdCondominio.Equals(idCondominio));
+            return pessoaMoradiaE;
+        }
+
+        /// <summary>
         /// Atribui dados da Entidade Model para a Entidade Entity
         /// </summary>
         /// <param name="reservaAmbienteModel">Objeto do modelo</param>
@@ -167,6 +192,23 @@ namespace Services
             alocarPessoaMoradiaE.IdPessoa = alocarPessoaMoradiaModel.IdPessoa;
             alocarPessoaMoradiaE.IdPerfil = alocarPessoaMoradiaModel.IdPerfil;
             alocarPessoaMoradiaE.Ativo = alocarPessoaMoradiaModel.Ativo;
+        }
+
+        /// <summary>
+        /// Insere ou edita uma nova entidade
+        /// </summary>
+        /// <param name="pessoaMoradia"></param>
+        public void InserirEditar(PessoaMoradiaModel pessoaMoradia)
+        {
+            PessoaMoradiaModel pm = Obter(pessoaMoradia.IdPessoa, pessoaMoradia.IdMoradia, pessoaMoradia.IdPerfil);
+            if (pm == null)
+            {
+                Inserir(pessoaMoradia);
+            }
+            else
+            {
+                Editar(pessoaMoradia);
+            }
         }
     }
 }

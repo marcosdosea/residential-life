@@ -32,8 +32,5 @@ namespace Models
         [Display(Name = "tipoMoradia", ResourceType = typeof(Mensagem))]
         public ListaTipoMoradia TipoMoradia { get; set; }
 
-
-        [Display(Name = "propietario", ResourceType = typeof(Mensagem))]
-        public string Proprietario { get; set; }
     }
 }
