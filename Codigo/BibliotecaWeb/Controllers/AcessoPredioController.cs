@@ -40,7 +40,7 @@ namespace BibliotecaWeb.Controllers
         {
             ViewBag.HoraAtual = DateTime.Now;
             SessionController.AlertBox = 0;
-            ViewBag.IdVeiculo = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "CPF");
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodosPorCPF(), "IdPessoa", "CPF");
             return View();
         }
 
@@ -49,15 +49,15 @@ namespace BibliotecaWeb.Controllers
         [HttpPost]
         public ActionResult Create(AcessoPredioModel acessoPredioModel)
         {
-            //ViewBag.HoraAtual = DateTime.Now;
             acessoPredioModel.Data = DateTime.Now;
-            /*PessoaMoradiaModel pessoaMoradia = gPessoaMoradia.ObterPorPessoa(acessoPredioModel.IdPessoa);
+            PessoaMoradiaModel pessoaMoradia = gPessoaMoradia.ObterPessoaMoradia(acessoPredioModel.IdPessoa);
             if (pessoaMoradia == null)
             {
                 SessionController.AlertBox = 1;
+                ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodosPorCPF(), "IdPessoa", "CPF", acessoPredioModel.IdPessoa);
                 return View(acessoPredioModel);
-            }*/
-            acessoPredioModel.IdCondominio = 3;
+            }
+            acessoPredioModel.IdCondominio = pessoaMoradia.IdCondominio;
             if (ModelState.IsValid)
             {
                 if (gPessoa.existePessoa(acessoPredioModel.IdPessoa))

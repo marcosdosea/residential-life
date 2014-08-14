@@ -24,7 +24,7 @@
             <%: Models.App_GlobalResources.Mensagem.pessoa %>
         </div>
         <div class="editor-field">
-            <%: Html.DropDownListFor(model => model.IdPessoa, ViewBag.IdVeiculo as SelectList, "Selecione")%>
+            <%: Html.DropDownListFor(model => model.IdPessoa, ViewBag.IdPessoa as SelectList, "Selecione")%>
             <%: Html.ValidationMessageFor(model => model.IdPessoa)%>
         </div>
 

@@ -105,12 +105,14 @@ namespace Services
         }
 
         /// <summary>
-        /// Obter todos as entidades cadastradas
+        /// Obtém pessoa moradia pelo idPessoa
         /// </summary>
-        /// <returns></returns>
-        public PessoaMoradiaModel ObterPorPessoa(int idPessoa)
+        /// <param name="idRes">Identificador da entidade na base de dados</param>
+        /// <returns>Autor model</returns>
+        public PessoaMoradiaModel ObterPessoaMoradia(int IdPessoa)
         {
-            return GetQuery().Where(pm => pm.IdPessoa == idPessoa).ElementAtOrDefault(0);
+            IEnumerable<PessoaMoradiaModel> pessoaMoradiaE = GetQuery().Where(pm => pm.IdPessoa.Equals(IdPessoa));
+            return pessoaMoradiaE.ElementAtOrDefault(0);
         }
 
         /// <summary>
