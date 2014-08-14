@@ -21,6 +21,8 @@ using System.Xml.Serialization;
 
 [assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_perfilpessoa_my_aspnet_roles1", "my_aspnet_roles", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.my_aspnet_roles), "tb_pessoamoradia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoamoradia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_pessoa_my_aspnet_users1", "my_aspnet_users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.my_aspnet_users), "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoa), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_acessocondominio_tb_condominio1", "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_condominio), "tb_acessocondominio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_acessocondominio), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_acessocondominio_tb_pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_acessocondominio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_acessocondominio), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_acessoveiculo_tb_veiculo1", "tb_veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_veiculo), "tb_acessoveiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_acessoveiculo), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Espaco_TB_Condominio1", "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_condominio), "tb_areapublica", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_areapublica), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_reservaambiente_tb_areapublica1", "tb_areapublica", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_areapublica), "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_reservaambiente), true)]
@@ -35,10 +37,10 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_votoenquete_tb_enquete1", "tb_enquete", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_enquete), "tb_votoenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_votoenquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_planodeconta_tb_grupoplanocontas1", "tb_grupoplanocontas", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_grupoplanocontas), "tb_planodeconta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_planodeconta), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_perfilpessoa_tb_moradia1", "tb_moradia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_moradia), "tb_pessoamoradia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoamoradia), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "tb_movimentacaofinanceira_tb_moradia1", "tb_moradia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_moradia), "tb_movimentacaofinanceira", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_movimentacaofinanceira), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_veiculo_tb_moradia1", "tb_moradia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_moradia), "tb_veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_veiculo), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "TB_MovimentacaoFinanceira_TB_PlanoDeConta1", "tb_planodeconta", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_planodeconta), "tb_movimentacaofinanceira", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_movimentacaofinanceira), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "tb_movimentacaofinanceira_tb_reservaambiente1", "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_reservaambiente), "tb_movimentacaofinanceira", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_movimentacaofinanceira), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_movimentacaofinanceira_tb_pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_movimentacaofinanceira", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_movimentacaofinanceira), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_movimentacaofinanceira_tb_planodeconta1", "tb_planodeconta", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_planodeconta), "tb_movimentacaofinanceira", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_movimentacaofinanceira), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_movimentacaofinanceira_tb_reservaambiente1", "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_reservaambiente), "tb_movimentacaofinanceira", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_movimentacaofinanceira), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Ocorrencia_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_ocorrencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_ocorrencia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_VotoEnquete_TB_OpcoesEnquete1", "tb_opcoesenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_opcoesenquete), "tb_votoenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_votoenquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_perfilpessoa_tb_pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_pessoamoradia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoamoradia), true)]
@@ -49,8 +51,6 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_ReservaAmbiente_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_reservaambiente), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Veiculo_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_veiculo), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_VotoEnquete_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_votoenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_votoenquete), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_acessocondominio_tb_condominio1", "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_condominio), "tb_acessocondominio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_acessocondominio), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_acessocondominio_tb_pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_acessocondominio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_acessocondominio), true)]
 
 #endregion
 
@@ -229,6 +229,22 @@ namespace Models
             }
         }
         private ObjectSet<my_aspnet_usersinroles> _my_aspnet_usersinroles;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<tb_acessocondominio> tb_acessocondominio
+        {
+            get
+            {
+                if ((_tb_acessocondominio == null))
+                {
+                    _tb_acessocondominio = base.CreateObjectSet<tb_acessocondominio>("tb_acessocondominio");
+                }
+                return _tb_acessocondominio;
+            }
+        }
+        private ObjectSet<tb_acessocondominio> _tb_acessocondominio;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -581,22 +597,6 @@ namespace Models
             }
         }
         private ObjectSet<tb_votoenquete> _tb_votoenquete;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<tb_acessocondominio> tb_acessocondominio
-        {
-            get
-            {
-                if ((_tb_acessocondominio == null))
-                {
-                    _tb_acessocondominio = base.CreateObjectSet<tb_acessocondominio>("tb_acessocondominio");
-                }
-                return _tb_acessocondominio;
-            }
-        }
-        private ObjectSet<tb_acessocondominio> _tb_acessocondominio;
 
         #endregion
 
@@ -664,6 +664,14 @@ namespace Models
         public void AddTomy_aspnet_usersinroles(my_aspnet_usersinroles my_aspnet_usersinroles)
         {
             base.AddObject("my_aspnet_usersinroles", my_aspnet_usersinroles);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the tb_acessocondominio EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTotb_acessocondominio(tb_acessocondominio tb_acessocondominio)
+        {
+            base.AddObject("tb_acessocondominio", tb_acessocondominio);
         }
     
         /// <summary>
@@ -840,14 +848,6 @@ namespace Models
         public void AddTotb_votoenquete(tb_votoenquete tb_votoenquete)
         {
             base.AddObject("tb_votoenquete", tb_votoenquete);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the tb_acessocondominio EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddTotb_acessocondominio(tb_acessocondominio tb_acessocondominio)
-        {
-            base.AddObject("tb_acessocondominio", tb_acessocondominio);
         }
 
         #endregion
@@ -4049,6 +4049,28 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_acessocondominio_tb_condominio1", "tb_acessocondominio")]
+        public EntityCollection<tb_acessocondominio> tb_acessocondominio
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_acessocondominio>("residentialbdModel.fk_tb_acessocondominio_tb_condominio1", "tb_acessocondominio");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_acessocondominio>("residentialbdModel.fk_tb_acessocondominio_tb_condominio1", "tb_acessocondominio", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Espaco_TB_Condominio1", "tb_areapublica")]
         public EntityCollection<tb_areapublica> tb_areapublica
         {
@@ -4105,28 +4127,6 @@ namespace Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_restricaoacesso>("residentialbdModel.tb_pessoa1_tb_condominio2", "tb_restricaoacesso", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_acessocondominio_tb_condominio1", "tb_acessocondominio")]
-        public EntityCollection<tb_acessocondominio> tb_acessocondominio
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_acessocondominio>("residentialbdModel.fk_tb_acessocondominio_tb_condominio1", "tb_acessocondominio");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_acessocondominio>("residentialbdModel.fk_tb_acessocondominio_tb_condominio1", "tb_acessocondominio", value);
                 }
             }
         }
@@ -4796,28 +4796,6 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_movimentacaofinanceira_tb_moradia1", "tb_movimentacaofinanceira")]
-        public EntityCollection<tb_movimentacaofinanceira> tb_movimentacaofinanceira
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.tb_movimentacaofinanceira_tb_moradia1", "tb_movimentacaofinanceira");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.tb_movimentacaofinanceira_tb_moradia1", "tb_movimentacaofinanceira", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_veiculo_tb_moradia1", "tb_veiculo")]
         public EntityCollection<tb_veiculo> tb_veiculo
         {
@@ -4852,30 +4830,26 @@ namespace Models
         /// Create a new tb_movimentacaofinanceira object.
         /// </summary>
         /// <param name="idMovimentacaoFinanceira">Initial value of the IdMovimentacaoFinanceira property.</param>
-        /// <param name="idAdministradora">Initial value of the IdAdministradora property.</param>
         /// <param name="valor">Initial value of the Valor property.</param>
         /// <param name="dataRegistro">Initial value of the DataRegistro property.</param>
         /// <param name="notaFiscal">Initial value of the NotaFiscal property.</param>
-        /// <param name="idPlanoDeConta">Initial value of the IdPlanoDeConta property.</param>
         /// <param name="statusMovimentacao">Initial value of the StatusMovimentacao property.</param>
         /// <param name="baixa">Initial value of the Baixa property.</param>
-        /// <param name="idFuncionario">Initial value of the IdFuncionario property.</param>
-        /// <param name="idMoradia">Initial value of the IdMoradia property.</param>
+        /// <param name="idPlanoDeConta">Initial value of the IdPlanoDeConta property.</param>
         /// <param name="idReservaAmbiente">Initial value of the IdReservaAmbiente property.</param>
-        public static tb_movimentacaofinanceira Createtb_movimentacaofinanceira(global::System.Int32 idMovimentacaoFinanceira, global::System.Int32 idAdministradora, global::System.Decimal valor, global::System.DateTime dataRegistro, global::System.String notaFiscal, global::System.Int32 idPlanoDeConta, global::System.String statusMovimentacao, global::System.Boolean baixa, global::System.Int32 idFuncionario, global::System.Int32 idMoradia, global::System.Int32 idReservaAmbiente)
+        /// <param name="idPessoa">Initial value of the IdPessoa property.</param>
+        public static tb_movimentacaofinanceira Createtb_movimentacaofinanceira(global::System.Int32 idMovimentacaoFinanceira, global::System.Decimal valor, global::System.DateTime dataRegistro, global::System.String notaFiscal, global::System.String statusMovimentacao, global::System.Boolean baixa, global::System.Int32 idPlanoDeConta, global::System.Int32 idReservaAmbiente, global::System.Int32 idPessoa)
         {
             tb_movimentacaofinanceira tb_movimentacaofinanceira = new tb_movimentacaofinanceira();
             tb_movimentacaofinanceira.IdMovimentacaoFinanceira = idMovimentacaoFinanceira;
-            tb_movimentacaofinanceira.IdAdministradora = idAdministradora;
             tb_movimentacaofinanceira.Valor = valor;
             tb_movimentacaofinanceira.DataRegistro = dataRegistro;
             tb_movimentacaofinanceira.NotaFiscal = notaFiscal;
-            tb_movimentacaofinanceira.IdPlanoDeConta = idPlanoDeConta;
             tb_movimentacaofinanceira.StatusMovimentacao = statusMovimentacao;
             tb_movimentacaofinanceira.Baixa = baixa;
-            tb_movimentacaofinanceira.IdFuncionario = idFuncionario;
-            tb_movimentacaofinanceira.IdMoradia = idMoradia;
+            tb_movimentacaofinanceira.IdPlanoDeConta = idPlanoDeConta;
             tb_movimentacaofinanceira.IdReservaAmbiente = idReservaAmbiente;
+            tb_movimentacaofinanceira.IdPessoa = idPessoa;
             return tb_movimentacaofinanceira;
         }
 
@@ -4909,30 +4883,6 @@ namespace Models
         private global::System.Int32 _IdMovimentacaoFinanceira;
         partial void OnIdMovimentacaoFinanceiraChanging(global::System.Int32 value);
         partial void OnIdMovimentacaoFinanceiraChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdAdministradora
-        {
-            get
-            {
-                return _IdAdministradora;
-            }
-            set
-            {
-                OnIdAdministradoraChanging(value);
-                ReportPropertyChanging("IdAdministradora");
-                _IdAdministradora = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdAdministradora");
-                OnIdAdministradoraChanged();
-            }
-        }
-        private global::System.Int32 _IdAdministradora;
-        partial void OnIdAdministradoraChanging(global::System.Int32 value);
-        partial void OnIdAdministradoraChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5035,30 +4985,6 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 IdPlanoDeConta
-        {
-            get
-            {
-                return _IdPlanoDeConta;
-            }
-            set
-            {
-                OnIdPlanoDeContaChanging(value);
-                ReportPropertyChanging("IdPlanoDeConta");
-                _IdPlanoDeConta = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdPlanoDeConta");
-                OnIdPlanoDeContaChanged();
-            }
-        }
-        private global::System.Int32 _IdPlanoDeConta;
-        partial void OnIdPlanoDeContaChanging(global::System.Int32 value);
-        partial void OnIdPlanoDeContaChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.String StatusMovimentacao
         {
             get
@@ -5107,48 +5033,24 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 IdFuncionario
+        public global::System.Int32 IdPlanoDeConta
         {
             get
             {
-                return _IdFuncionario;
+                return _IdPlanoDeConta;
             }
             set
             {
-                OnIdFuncionarioChanging(value);
-                ReportPropertyChanging("IdFuncionario");
-                _IdFuncionario = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdFuncionario");
-                OnIdFuncionarioChanged();
+                OnIdPlanoDeContaChanging(value);
+                ReportPropertyChanging("IdPlanoDeConta");
+                _IdPlanoDeConta = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPlanoDeConta");
+                OnIdPlanoDeContaChanged();
             }
         }
-        private global::System.Int32 _IdFuncionario;
-        partial void OnIdFuncionarioChanging(global::System.Int32 value);
-        partial void OnIdFuncionarioChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdMoradia
-        {
-            get
-            {
-                return _IdMoradia;
-            }
-            set
-            {
-                OnIdMoradiaChanging(value);
-                ReportPropertyChanging("IdMoradia");
-                _IdMoradia = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdMoradia");
-                OnIdMoradiaChanged();
-            }
-        }
-        private global::System.Int32 _IdMoradia;
-        partial void OnIdMoradiaChanging(global::System.Int32 value);
-        partial void OnIdMoradiaChanged();
+        private global::System.Int32 _IdPlanoDeConta;
+        partial void OnIdPlanoDeContaChanging(global::System.Int32 value);
+        partial void OnIdPlanoDeContaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5173,6 +5075,30 @@ namespace Models
         private global::System.Int32 _IdReservaAmbiente;
         partial void OnIdReservaAmbienteChanging(global::System.Int32 value);
         partial void OnIdReservaAmbienteChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdPessoa
+        {
+            get
+            {
+                return _IdPessoa;
+            }
+            set
+            {
+                OnIdPessoaChanging(value);
+                ReportPropertyChanging("IdPessoa");
+                _IdPessoa = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPessoa");
+                OnIdPessoaChanged();
+            }
+        }
+        private global::System.Int32 _IdPessoa;
+        partial void OnIdPessoaChanging(global::System.Int32 value);
+        partial void OnIdPessoaChanged();
 
         #endregion
 
@@ -5185,16 +5111,16 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_movimentacaofinanceira_tb_moradia1", "tb_moradia")]
-        public tb_moradia tb_moradia
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_movimentacaofinanceira_tb_pessoa1", "tb_pessoa")]
+        public tb_pessoa tb_pessoa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_moradia>("residentialbdModel.tb_movimentacaofinanceira_tb_moradia1", "tb_moradia").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_pessoa1", "tb_pessoa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_moradia>("residentialbdModel.tb_movimentacaofinanceira_tb_moradia1", "tb_moradia").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_pessoa1", "tb_pessoa").Value = value;
             }
         }
         /// <summary>
@@ -5202,17 +5128,17 @@ namespace Models
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<tb_moradia> tb_moradiaReference
+        public EntityReference<tb_pessoa> tb_pessoaReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_moradia>("residentialbdModel.tb_movimentacaofinanceira_tb_moradia1", "tb_moradia");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_pessoa1", "tb_pessoa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_moradia>("residentialbdModel.tb_movimentacaofinanceira_tb_moradia1", "tb_moradia", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pessoa>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_pessoa1", "tb_pessoa", value);
                 }
             }
         }
@@ -5223,16 +5149,16 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_MovimentacaoFinanceira_TB_PlanoDeConta1", "tb_planodeconta")]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_movimentacaofinanceira_tb_planodeconta1", "tb_planodeconta")]
         public tb_planodeconta tb_planodeconta
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_planodeconta>("residentialbdModel.TB_MovimentacaoFinanceira_TB_PlanoDeConta1", "tb_planodeconta").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_planodeconta>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_planodeconta1", "tb_planodeconta").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_planodeconta>("residentialbdModel.TB_MovimentacaoFinanceira_TB_PlanoDeConta1", "tb_planodeconta").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_planodeconta>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_planodeconta1", "tb_planodeconta").Value = value;
             }
         }
         /// <summary>
@@ -5244,13 +5170,13 @@ namespace Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_planodeconta>("residentialbdModel.TB_MovimentacaoFinanceira_TB_PlanoDeConta1", "tb_planodeconta");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_planodeconta>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_planodeconta1", "tb_planodeconta");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_planodeconta>("residentialbdModel.TB_MovimentacaoFinanceira_TB_PlanoDeConta1", "tb_planodeconta", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_planodeconta>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_planodeconta1", "tb_planodeconta", value);
                 }
             }
         }
@@ -5261,16 +5187,16 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_movimentacaofinanceira_tb_reservaambiente1", "tb_reservaambiente")]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_movimentacaofinanceira_tb_reservaambiente1", "tb_reservaambiente")]
         public tb_reservaambiente tb_reservaambiente
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_reservaambiente>("residentialbdModel.tb_movimentacaofinanceira_tb_reservaambiente1", "tb_reservaambiente").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_reservaambiente>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_reservaambiente1", "tb_reservaambiente").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_reservaambiente>("residentialbdModel.tb_movimentacaofinanceira_tb_reservaambiente1", "tb_reservaambiente").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_reservaambiente>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_reservaambiente1", "tb_reservaambiente").Value = value;
             }
         }
         /// <summary>
@@ -5282,13 +5208,13 @@ namespace Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_reservaambiente>("residentialbdModel.tb_movimentacaofinanceira_tb_reservaambiente1", "tb_reservaambiente");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_reservaambiente>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_reservaambiente1", "tb_reservaambiente");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_reservaambiente>("residentialbdModel.tb_movimentacaofinanceira_tb_reservaambiente1", "tb_reservaambiente", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_reservaambiente>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_reservaambiente1", "tb_reservaambiente", value);
                 }
             }
         }
@@ -6234,6 +6160,28 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_acessocondominio_tb_pessoa1", "tb_acessocondominio")]
+        public EntityCollection<tb_acessocondominio> tb_acessocondominio
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_acessocondominio>("residentialbdModel.fk_tb_acessocondominio_tb_pessoa1", "tb_acessocondominio");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_acessocondominio>("residentialbdModel.fk_tb_acessocondominio_tb_pessoa1", "tb_acessocondominio", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_Atendimento_TB_Pessoa1", "tb_atendimento")]
         public EntityCollection<tb_atendimento> tb_atendimento
         {
@@ -6290,6 +6238,28 @@ namespace Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_enquete>("residentialbdModel.TB_Enquete_TB_Pessoa1", "tb_enquete", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_movimentacaofinanceira_tb_pessoa1", "tb_movimentacaofinanceira")]
+        public EntityCollection<tb_movimentacaofinanceira> tb_movimentacaofinanceira
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_pessoa1", "tb_movimentacaofinanceira");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_pessoa1", "tb_movimentacaofinanceira", value);
                 }
             }
         }
@@ -6504,28 +6474,6 @@ namespace Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_votoenquete>("residentialbdModel.TB_VotoEnquete_TB_Pessoa1", "tb_votoenquete", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_acessocondominio_tb_pessoa1", "tb_acessocondominio")]
-        public EntityCollection<tb_acessocondominio> tb_acessocondominio
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_acessocondominio>("residentialbdModel.fk_tb_acessocondominio_tb_pessoa1", "tb_acessocondominio");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_acessocondominio>("residentialbdModel.fk_tb_acessocondominio_tb_pessoa1", "tb_acessocondominio", value);
                 }
             }
         }
@@ -6946,18 +6894,18 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "TB_MovimentacaoFinanceira_TB_PlanoDeConta1", "tb_movimentacaofinanceira")]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_movimentacaofinanceira_tb_planodeconta1", "tb_movimentacaofinanceira")]
         public EntityCollection<tb_movimentacaofinanceira> tb_movimentacaofinanceira
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.TB_MovimentacaoFinanceira_TB_PlanoDeConta1", "tb_movimentacaofinanceira");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_planodeconta1", "tb_movimentacaofinanceira");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.TB_MovimentacaoFinanceira_TB_PlanoDeConta1", "tb_movimentacaofinanceira", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_planodeconta1", "tb_movimentacaofinanceira", value);
                 }
             }
         }
@@ -7598,18 +7546,18 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_movimentacaofinanceira_tb_reservaambiente1", "tb_movimentacaofinanceira")]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_movimentacaofinanceira_tb_reservaambiente1", "tb_movimentacaofinanceira")]
         public EntityCollection<tb_movimentacaofinanceira> tb_movimentacaofinanceira
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.tb_movimentacaofinanceira_tb_reservaambiente1", "tb_movimentacaofinanceira");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_reservaambiente1", "tb_movimentacaofinanceira");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.tb_movimentacaofinanceira_tb_reservaambiente1", "tb_movimentacaofinanceira", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_movimentacaofinanceira>("residentialbdModel.fk_tb_movimentacaofinanceira_tb_reservaambiente1", "tb_movimentacaofinanceira", value);
                 }
             }
         }
