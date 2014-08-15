@@ -1654,6 +1654,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Novo Síndico.
+        /// </summary>
+        public static string novoSindico {
+            get {
+                return ResourceManager.GetString("novoSindico", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Novo Veículo.
         /// </summary>
         public static string novoVeiculo {
@@ -2127,6 +2136,15 @@ namespace Models.App_GlobalResources {
         public static string sindico {
             get {
                 return ResourceManager.GetString("sindico", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Síndicos.
+        /// </summary>
+        public static string sindicos {
+            get {
+                return ResourceManager.GetString("sindicos", resourceCulture);
             }
         }
         

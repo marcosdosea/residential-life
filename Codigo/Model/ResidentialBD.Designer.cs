@@ -31,7 +31,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Moradia_TB_Bloco1", "tb_bloco", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_bloco), "tb_moradia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_moradia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Comentario_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_comentario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_comentario), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Comentario_TB_Postagem1", "tb_postagem", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_postagem), "tb_comentario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_comentario), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "tb_pessoa1_tb_condominio2", "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_condominio), "tb_restricaoacesso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_restricaoacesso), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_restricaoacesso_tb_condominio1", "tb_condominio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_condominio), "tb_restricaoacesso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_restricaoacesso), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Enquete_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_enquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_enquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_OpcoesEnquete_TB_Enquete1", "tb_enquete", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_enquete), "tb_opcoesenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_opcoesenquete), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "tb_votoenquete_tb_enquete1", "tb_enquete", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_enquete), "tb_votoenquete", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_votoenquete), true)]
@@ -46,7 +46,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_perfilpessoa_tb_pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_pessoamoradia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoamoradia), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_pessoa_tb_setor1", "tb_setor", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_setor), "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pessoa), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_pontuacaopessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_pontuacaopessoa), true)]
-[assembly: EdmRelationshipAttribute("residentialbdModel", "tb_pessoa1_tb_pessoa2", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_restricaoacesso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_restricaoacesso), true)]
+[assembly: EdmRelationshipAttribute("residentialbdModel", "fk_tb_restricaoacesso_tb_pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_restricaoacesso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_restricaoacesso), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Postagem_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_postagem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_postagem), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_ReservaAmbiente_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_reservaambiente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_reservaambiente), true)]
 [assembly: EdmRelationshipAttribute("residentialbdModel", "TB_Veiculo_TB_Pessoa1", "tb_pessoa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Models.tb_pessoa), "tb_veiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Models.tb_veiculo), true)]
@@ -4115,18 +4115,18 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_pessoa1_tb_condominio2", "tb_restricaoacesso")]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_restricaoacesso_tb_condominio1", "tb_restricaoacesso")]
         public EntityCollection<tb_restricaoacesso> tb_restricaoacesso
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_restricaoacesso>("residentialbdModel.tb_pessoa1_tb_condominio2", "tb_restricaoacesso");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_restricaoacesso>("residentialbdModel.fk_tb_restricaoacesso_tb_condominio1", "tb_restricaoacesso");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_restricaoacesso>("residentialbdModel.tb_pessoa1_tb_condominio2", "tb_restricaoacesso", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_restricaoacesso>("residentialbdModel.fk_tb_restricaoacesso_tb_condominio1", "tb_restricaoacesso", value);
                 }
             }
         }
@@ -6374,18 +6374,18 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_pessoa1_tb_pessoa2", "tb_restricaoacesso")]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_restricaoacesso_tb_pessoa1", "tb_restricaoacesso")]
         public EntityCollection<tb_restricaoacesso> tb_restricaoacesso
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_restricaoacesso>("residentialbdModel.tb_pessoa1_tb_pessoa2", "tb_restricaoacesso");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<tb_restricaoacesso>("residentialbdModel.fk_tb_restricaoacesso_tb_pessoa1", "tb_restricaoacesso");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_restricaoacesso>("residentialbdModel.tb_pessoa1_tb_pessoa2", "tb_restricaoacesso", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<tb_restricaoacesso>("residentialbdModel.fk_tb_restricaoacesso_tb_pessoa1", "tb_restricaoacesso", value);
                 }
             }
         }
@@ -7617,13 +7617,15 @@ namespace Models
         /// <summary>
         /// Create a new tb_restricaoacesso object.
         /// </summary>
+        /// <param name="idRestricaoAcesso">Initial value of the IdRestricaoAcesso property.</param>
         /// <param name="idPessoa">Initial value of the IdPessoa property.</param>
         /// <param name="idCondominio">Initial value of the IdCondominio property.</param>
         /// <param name="restrito">Initial value of the Restrito property.</param>
         /// <param name="dia">Initial value of the Dia property.</param>
-        public static tb_restricaoacesso Createtb_restricaoacesso(global::System.Int32 idPessoa, global::System.Int32 idCondominio, global::System.Boolean restrito, global::System.DateTime dia)
+        public static tb_restricaoacesso Createtb_restricaoacesso(global::System.Int32 idRestricaoAcesso, global::System.Int32 idPessoa, global::System.Int32 idCondominio, global::System.Boolean restrito, global::System.String dia)
         {
             tb_restricaoacesso tb_restricaoacesso = new tb_restricaoacesso();
+            tb_restricaoacesso.IdRestricaoAcesso = idRestricaoAcesso;
             tb_restricaoacesso.IdPessoa = idPessoa;
             tb_restricaoacesso.IdCondominio = idCondominio;
             tb_restricaoacesso.Restrito = restrito;
@@ -7640,6 +7642,33 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.Int32 IdRestricaoAcesso
+        {
+            get
+            {
+                return _IdRestricaoAcesso;
+            }
+            set
+            {
+                if (_IdRestricaoAcesso != value)
+                {
+                    OnIdRestricaoAcessoChanging(value);
+                    ReportPropertyChanging("IdRestricaoAcesso");
+                    _IdRestricaoAcesso = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdRestricaoAcesso");
+                    OnIdRestricaoAcessoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdRestricaoAcesso;
+        partial void OnIdRestricaoAcessoChanging(global::System.Int32 value);
+        partial void OnIdRestricaoAcessoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.Int32 IdPessoa
         {
             get
@@ -7648,14 +7677,11 @@ namespace Models
             }
             set
             {
-                if (_IdPessoa != value)
-                {
-                    OnIdPessoaChanging(value);
-                    ReportPropertyChanging("IdPessoa");
-                    _IdPessoa = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdPessoa");
-                    OnIdPessoaChanged();
-                }
+                OnIdPessoaChanging(value);
+                ReportPropertyChanging("IdPessoa");
+                _IdPessoa = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPessoa");
+                OnIdPessoaChanged();
             }
         }
         private global::System.Int32 _IdPessoa;
@@ -7665,7 +7691,7 @@ namespace Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 IdCondominio
         {
@@ -7675,14 +7701,11 @@ namespace Models
             }
             set
             {
-                if (_IdCondominio != value)
-                {
-                    OnIdCondominioChanging(value);
-                    ReportPropertyChanging("IdCondominio");
-                    _IdCondominio = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdCondominio");
-                    OnIdCondominioChanged();
-                }
+                OnIdCondominioChanging(value);
+                ReportPropertyChanging("IdCondominio");
+                _IdCondominio = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdCondominio");
+                OnIdCondominioChanged();
             }
         }
         private global::System.Int32 _IdCondominio;
@@ -7718,7 +7741,7 @@ namespace Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime Dia
+        public global::System.String Dia
         {
             get
             {
@@ -7728,13 +7751,13 @@ namespace Models
             {
                 OnDiaChanging(value);
                 ReportPropertyChanging("Dia");
-                _Dia = StructuralObject.SetValidValue(value);
+                _Dia = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Dia");
                 OnDiaChanged();
             }
         }
-        private global::System.DateTime _Dia;
-        partial void OnDiaChanging(global::System.DateTime value);
+        private global::System.String _Dia;
+        partial void OnDiaChanging(global::System.String value);
         partial void OnDiaChanged();
     
         /// <summary>
@@ -7796,16 +7819,16 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_pessoa1_tb_condominio2", "tb_condominio")]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_restricaoacesso_tb_condominio1", "tb_condominio")]
         public tb_condominio tb_condominio
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_condominio>("residentialbdModel.tb_pessoa1_tb_condominio2", "tb_condominio").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_condominio>("residentialbdModel.fk_tb_restricaoacesso_tb_condominio1", "tb_condominio").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_condominio>("residentialbdModel.tb_pessoa1_tb_condominio2", "tb_condominio").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_condominio>("residentialbdModel.fk_tb_restricaoacesso_tb_condominio1", "tb_condominio").Value = value;
             }
         }
         /// <summary>
@@ -7817,13 +7840,13 @@ namespace Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_condominio>("residentialbdModel.tb_pessoa1_tb_condominio2", "tb_condominio");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_condominio>("residentialbdModel.fk_tb_restricaoacesso_tb_condominio1", "tb_condominio");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_condominio>("residentialbdModel.tb_pessoa1_tb_condominio2", "tb_condominio", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_condominio>("residentialbdModel.fk_tb_restricaoacesso_tb_condominio1", "tb_condominio", value);
                 }
             }
         }
@@ -7834,16 +7857,16 @@ namespace Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "tb_pessoa1_tb_pessoa2", "tb_pessoa")]
+        [EdmRelationshipNavigationPropertyAttribute("residentialbdModel", "fk_tb_restricaoacesso_tb_pessoa1", "tb_pessoa")]
         public tb_pessoa tb_pessoa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.tb_pessoa1_tb_pessoa2", "tb_pessoa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.fk_tb_restricaoacesso_tb_pessoa1", "tb_pessoa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.tb_pessoa1_tb_pessoa2", "tb_pessoa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.fk_tb_restricaoacesso_tb_pessoa1", "tb_pessoa").Value = value;
             }
         }
         /// <summary>
@@ -7855,13 +7878,13 @@ namespace Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.tb_pessoa1_tb_pessoa2", "tb_pessoa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<tb_pessoa>("residentialbdModel.fk_tb_restricaoacesso_tb_pessoa1", "tb_pessoa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pessoa>("residentialbdModel.tb_pessoa1_tb_pessoa2", "tb_pessoa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<tb_pessoa>("residentialbdModel.fk_tb_restricaoacesso_tb_pessoa1", "tb_pessoa", value);
                 }
             }
         }

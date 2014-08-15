@@ -26,12 +26,10 @@
                { %>
             <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilAdministradorSistema))
                { %>
-            <li><%: Html.ActionLink("Definir Síndico", "DefinirSindico", "Perfis")%></li>
-            <li><%: Html.ActionLink("Remover Síndico", "RemoverSindico", "Perfis")%></li>
+            <li><%: Html.ActionLink("Síndicos", "Sindico", "Perfis")%></li>
             <li><%: Html.ActionLink("Condomínio", "Index", "Condominio")%></li> 
             <li><%: Html.ActionLink("Bloco", "Index", "Bloco")%></li>
-            <li><%: Html.ActionLink("Moradia", "Index", "Moradia")%></li>  
-            <li><%: Html.ActionLink("Alocar Pessoa em Moradia", "Index", "AlocarPessoaMoradia")%></li>
+            <li><%: Html.ActionLink("Moradia", "Index", "Moradia")%></li>
             <li><%: Html.ActionLink("Bloco", "Index", "Bloco")%></li>
             <li><%: Html.ActionLink("Moradia", "Index", "Moradia")%></li>
             <% } %>
@@ -49,7 +47,7 @@
             <% } %>
             <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilProprietario))
                { %>
-            <li><%: Html.ActionLink("Definir Responsável", "Responsavel", "Perfis")%></li>
+            <li><%: Html.ActionLink("Responsáveis", "Responsavel", "Perfis")%></li>
             <% } %>
             <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilSindico) && HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilAdministradora))
                { %>
@@ -58,7 +56,7 @@
             <% } %>
             <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilResponsavel))
                { %>
-            <li><%: Html.ActionLink("Alocar Pessoa em Moradia", "Index", "AlocarPessoaMoradia")%></li>
+            <li><%: Html.ActionLink("Alocar Pessoa em Moradia", "Index", "PessoaMoradia")%></li>
             <li><%: Html.ActionLink("Veículo", "Index", "Veiculo")%></li>
             <% } %>
             <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilMorador))

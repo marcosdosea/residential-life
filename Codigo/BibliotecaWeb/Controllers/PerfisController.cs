@@ -25,6 +25,10 @@ namespace BibliotecaWeb
             gPessoaMoradia = new GerenciadorPessoaMoradia();
         }
 
+        public ActionResult Sindico()
+        {
+            return View(gPessoaMoradia.ObterPorPerfilAtivo(Global.IdPerfilSindico));
+        }
 
         public ActionResult DefinirSindico()
         {
@@ -34,7 +38,6 @@ namespace BibliotecaWeb
             ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
             return View();
         }
-
 
         [HttpPost]
         public ActionResult DefinirSindico(PessoaMoradiaModel pessoaMoradia)
@@ -46,7 +49,7 @@ namespace BibliotecaWeb
                 if (ModelState.IsValid)
                 {
                     gPessoaMoradia.InserirEditar(pessoaMoradia);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Sindico");
                 }
             }
             else
@@ -80,14 +83,8 @@ namespace BibliotecaWeb
             return View(pessoaMoradia);
         }
 
-
-        public ActionResult RemoverSindico()
-        {
-            return View(gPessoaMoradia.ObterPorPerfilAtivo(Global.IdPerfilSindico));
-        }
-
         //[HttpPost]
-        public ActionResult Remover(int idPessoa, int idMoradia, int idPerfil)
+        public ActionResult RemoverSindico(int idPessoa, int idMoradia, int idPerfil)
         {
             PessoaMoradiaModel pessoaMoradia = new PessoaMoradiaModel();
             pessoaMoradia.IdPessoa = idPessoa;
@@ -95,7 +92,7 @@ namespace BibliotecaWeb
             pessoaMoradia.IdPerfil = idPerfil;
             pessoaMoradia.Ativo = false;
             gPessoaMoradia.Editar(pessoaMoradia);
-            return RedirectToAction("RemoverSindico", "Perfis");
+            return RedirectToAction("Sindico");
         }
 
         public ActionResult Proprietario()
@@ -123,7 +120,7 @@ namespace BibliotecaWeb
                 if (ModelState.IsValid)
                 {
                     gPessoaMoradia.InserirEditar(pessoaMoradia);
-                    return RedirectToAction("Proprietario", "Perfis");
+                    return RedirectToAction("Proprietario");
                 }
             }
             ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(SessionController.PessoaMoradia.IdCondominio), "IdBloco", "Nome",
@@ -142,7 +139,7 @@ namespace BibliotecaWeb
             pessoaMoradia.IdPerfil = idPerfil;
             pessoaMoradia.Ativo = false;
             gPessoaMoradia.Editar(pessoaMoradia);
-            return RedirectToAction("Proprietario", "Perfis");
+            return RedirectToAction("Proprietario");
         }
 
         public ActionResult Responsavel()
@@ -156,7 +153,6 @@ namespace BibliotecaWeb
             return View();
         }
 
-
         [HttpPost]
         public ActionResult DefinirResponsavel(PessoaMoradiaModel pessoaMoradia)
         {
@@ -166,12 +162,11 @@ namespace BibliotecaWeb
             if (ModelState.IsValid)
             {
                 gPessoaMoradia.InserirEditar(pessoaMoradia);
-                return RedirectToAction("Responsavel", "Perfis");
+                return RedirectToAction("Responsavel");
             }
             ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", pessoaMoradia.IdPessoa);
             return View(pessoaMoradia);
         }
-
 
         //[HttpPost]
         public ActionResult RemoverResponsavel(int idPessoa, int idMoradia, int idPerfil)
@@ -182,7 +177,7 @@ namespace BibliotecaWeb
             pessoaMoradia.IdPerfil = idPerfil;
             pessoaMoradia.Ativo = false;
             gPessoaMoradia.Editar(pessoaMoradia);
-            return RedirectToAction("Responsavel", "Perfis");
+            return RedirectToAction("Responsavel");
         }
     }
 }

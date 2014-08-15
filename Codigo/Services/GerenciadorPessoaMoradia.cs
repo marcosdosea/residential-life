@@ -159,6 +159,19 @@ namespace Services
         }
 
         /// <summary>
+        /// Obtem todas as pessoas de determinada moradia por perfil
+        /// </summary>
+        /// <param name="IdMoradia"></param>
+        /// <param name="idPerfil"></param>
+        /// <returns></returns>
+        public IEnumerable<PessoaMoradiaModel> ObterTodosPorMoradiaPerfil(int IdMoradia, int idPerfil)
+        {
+            IEnumerable<PessoaMoradiaModel> pessoaMoradiaE = GetQuery().Where(pm => pm.IdMoradia.Equals(IdMoradia) &&
+                pm.IdPerfil.Equals(idPerfil));
+            return pessoaMoradiaE;
+        }
+
+        /// <summary>
         /// Obtem todos os registros de acordo com o perfil que estao ativos
         /// </summary>
         /// <param name="idPerfil"></param>

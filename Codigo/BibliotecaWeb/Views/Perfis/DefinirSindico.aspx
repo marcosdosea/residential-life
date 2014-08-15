@@ -57,7 +57,7 @@
 <% } %>
 
 <div>
-    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Index", "Home")%>
+    <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.voltar, "Sindico", "Perfis")%>
 </div>
 
 </asp:Content>
