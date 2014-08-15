@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ComponentModel.DataAnnotations;
 using Models.App_GlobalResources;
 
-namespace Models.Models
+namespace Models
 {
     public class AcessoPredioModel
     {

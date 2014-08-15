@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.AlocarPessoaMoradiaModel>>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.PessoaMoradiaModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     <%: Models.App_GlobalResources.Mensagem.alocar_pessoa_moradia %>
@@ -14,9 +14,6 @@
 <table id="table">
     <tr>
         <th>
-            <%: Models.App_GlobalResources.Mensagem.nome_pessoa %>
-        </th>
-        <th>
             <%: Models.App_GlobalResources.Mensagem.condominio %>
         </th>
         <th>
@@ -25,14 +22,16 @@
         <th>
             <%: Models.App_GlobalResources.Mensagem.moradia %>
         </th>
-        <th><%: Models.App_GlobalResources.Mensagem.opcoes %></th>
+        <th>
+            <%: Models.App_GlobalResources.Mensagem.nome_pessoa %>
+        </th>
+        <th>
+            <%: Models.App_GlobalResources.Mensagem.opcoes %>
+        </th>
     </tr>
 
 <% foreach (var item in Model) { %>
     <tr>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.NomePessoa) %>
-        </td>
         <td style="width:200px;">
             <%: Html.DisplayFor(modelItem => item.Condominio) %>
         </td>
@@ -41,6 +40,9 @@
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.NumeroMoradia) %>
+        </td>
+        <td>
+            <%: Html.DisplayFor(modelItem => item.NomePessoa) %>
         </td>
         <td>
             <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.editar, "Edit", new { idPessoa = item.IdPessoa, idMoradia = item.IdMoradia })%> |

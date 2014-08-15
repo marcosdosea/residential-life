@@ -4,7 +4,7 @@ using Models;
 using Services;
 
 namespace BibliotecaWeb
-{ 
+{
     public class PessoaMoradiaController : Controller
     {
         private GerenciadorMoradia gMoradia;
@@ -12,6 +12,7 @@ namespace BibliotecaWeb
         private GerenciadorPessoaMoradia gPessoaMoradia;
         private GerenciadorCondominio gCondominio;
         private GerenciadorBloco gBloco;
+        private GerenciadorAcessoCondominio gAcessoCondominio;
 
         public PessoaMoradiaController()
         {
@@ -20,111 +21,58 @@ namespace BibliotecaWeb
             gBloco = new GerenciadorBloco();
             gCondominio = new GerenciadorCondominio();
             gPessoaMoradia = new GerenciadorPessoaMoradia();
+            gAcessoCondominio = new GerenciadorAcessoCondominio();
         }
 
-        //
-        // GET: /Moradia/
-
-        public ActionResult Index()
+        public ActionResult Morador()
         {
-            return View(gPessoaMoradia.ObterTodos());
+            return View(gPessoaMoradia.ObterTodosPorMoradiaPerfil(SessionController.PessoaMoradia.IdMoradia, Global.IdPerfilMorador));
         }
 
         //[Authorize(Roles = "Síndico")]
-        public ActionResult Create()
+        public ActionResult DefinirMorador()
         {
-            //Pegar somente as áreas públicas do condomínio corrente no futuro
-            ViewBag.IdCondominio = new SelectList(GerenciadorCondominio.GetInstance().ObterTodos(), "IdCondominio", "Nome");
-            ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(0), "IdBloco", "Nome");
-            ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(0), "IdMoradia", "Numero");
             ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
             return View();
         }
 
-        //
-        // POST: /Moradia/Create
-
         [HttpPost]
-        public ActionResult Create(PessoaMoradiaModel alocarPessoaMoradiaModel)
+        public ActionResult DefinirMorador(PessoaMoradiaModel pessoaMoradia)
         {
-            if (alocarPessoaMoradiaModel.IdMoradia != 0 && alocarPessoaMoradiaModel.IdPessoa != 0)
-            {
-                alocarPessoaMoradiaModel.IdPessoa = Global.IdPerfilMorador;
-                if (ModelState.IsValid)
-                {
-                    gPessoaMoradia.Inserir(alocarPessoaMoradiaModel);
-                    return RedirectToAction("Index");
-                }
-            }
-            else
-            {
-                if (alocarPessoaMoradiaModel.IdBloco == 0)
-                {
-                    ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", alocarPessoaMoradiaModel.IdCondominio);
-                    ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(alocarPessoaMoradiaModel.IdCondominio), "IdBloco", "Nome");
-                    ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(0), "IdMoradia", "Numero");
-                    ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", alocarPessoaMoradiaModel.IdPessoa);
-                }
-                else if (alocarPessoaMoradiaModel.IdMoradia == 0 && alocarPessoaMoradiaModel.IdBloco != 0)
-                {
-                    ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", alocarPessoaMoradiaModel.IdCondominio);
-                    ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(alocarPessoaMoradiaModel.IdCondominio), "IdBloco", "Nome", alocarPessoaMoradiaModel.IdBloco);
-                    ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(alocarPessoaMoradiaModel.IdBloco), "IdMoradia", "Numero");
-                    ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", alocarPessoaMoradiaModel.IdPessoa);
-                }
-                else if (alocarPessoaMoradiaModel.IdMoradia != 0 &&  alocarPessoaMoradiaModel.IdBloco != 0)
-                {
-                    ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", alocarPessoaMoradiaModel.IdCondominio);
-                    ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(alocarPessoaMoradiaModel.IdCondominio), "IdBloco", "Nome", alocarPessoaMoradiaModel.IdBloco);
-                    ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(alocarPessoaMoradiaModel.IdBloco), "IdMoradia", "Numero", alocarPessoaMoradiaModel.NumeroMoradia);
-                    alocarPessoaMoradiaModel.NumeroMoradia = gMoradia.Obter(alocarPessoaMoradiaModel.IdMoradia).Numero;
-                    ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", alocarPessoaMoradiaModel.IdPessoa);
-                }
-            }
-            return View(alocarPessoaMoradiaModel);
-        }
-
-
-        public ActionResult Edit(int idPessoa, int idMoradia, int idPerfil)
-        {
-            PessoaMoradiaModel alocarPessoaMoradiaModel = gPessoaMoradia.Obter(idPessoa, idMoradia, idPerfil);
-            ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", alocarPessoaMoradiaModel.IdCondominio);
-            ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(alocarPessoaMoradiaModel.IdCondominio), "IdBloco", "Nome", alocarPessoaMoradiaModel.IdBloco);
-            ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(alocarPessoaMoradiaModel.IdBloco), "IdMoradia", "Numero", alocarPessoaMoradiaModel.NumeroMoradia);
-            alocarPessoaMoradiaModel.NumeroMoradia = gMoradia.Obter(alocarPessoaMoradiaModel.IdMoradia).Numero;
-            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", alocarPessoaMoradiaModel.IdPessoa);
-            return View(alocarPessoaMoradiaModel);
-        }
-
-        [HttpPost]
-        public ActionResult Edit(PessoaMoradiaModel alocarPessoaMoradiaModel)
-        {
+            pessoaMoradia.IdPerfil = Global.IdPerfilMorador;
+            pessoaMoradia.IdMoradia = SessionController.PessoaMoradia.IdMoradia;
+            pessoaMoradia.Ativo = true;
             if (ModelState.IsValid)
             {
-                gPessoaMoradia.Editar(alocarPessoaMoradiaModel);
-                return RedirectToAction("Index");
+                PessoaMoradiaModel pm = gPessoaMoradia.Obter(pessoaMoradia.IdPessoa, pessoaMoradia.IdMoradia, pessoaMoradia.IdPerfil);
+                if (pm == null)
+                {
+                    gPessoaMoradia.Inserir(pessoaMoradia);
+                    /*
+                    AcessoCondominioModel acessoCondominio = new AcessoCondominioModel()
+                    acessoCondominio.
+                    gAcessoCondominio.Inserir(); */
+                }
+                else
+                {
+                    gPessoaMoradia.Editar(pessoaMoradia);
+                }
+                return RedirectToAction("Morador");
             }
-            return View(alocarPessoaMoradiaModel);
-        }
-
-        //
-        // GET: /pessoa/Delete/5
-       // [Authorize(Roles = "Síndico")]
-        public ActionResult Delete(int idPessoa, int idMoradia, int idPerfil)
-        {
-            PessoaMoradiaModel alocarPessoaMoradiaModel = gPessoaMoradia.Obter(idPessoa, idMoradia, idPerfil);
-            return View(alocarPessoaMoradiaModel);
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", pessoaMoradia.IdPessoa);
+            return View(pessoaMoradia);
         }
 
         //
         // POST: /pessoa/Delete/5
 
-        [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int idPessoa, int idMoradia, int idPerfil)
+        public ActionResult RemoverMorador(int idPessoa, int idMoradia, int idPerfil)
         {
-            gPessoaMoradia.Remover(idPessoa, idMoradia, idPerfil);
-            return RedirectToAction("Index");
-        } 
+            PessoaMoradiaModel pessoaMoradia = gPessoaMoradia.Obter(idPessoa, idMoradia, idPerfil);
+            pessoaMoradia.Ativo = false;
+            gPessoaMoradia.Editar(pessoaMoradia);
+            return RedirectToAction("Morador");
+        }
 
 
         public ActionResult ReportPessoaMoradia()

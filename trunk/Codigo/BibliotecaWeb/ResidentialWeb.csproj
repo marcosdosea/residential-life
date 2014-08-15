@@ -162,7 +162,7 @@
     <Content Include="Views\Perfis\DefinirResponsavel.aspx" />
     <Content Include="Views\Perfis\DefinirSindico.aspx" />
     <Content Include="Views\Perfis\Proprietario.aspx" />
-    <Content Include="Views\Perfis\RemoverSindico.aspx" />
+    <Content Include="Views\Perfis\Sindico.aspx" />
     <Content Include="Views\Perfis\Responsavel.aspx" />
     <Content Include="Views\PessoaMoradia\Create.aspx" />
     <Content Include="Views\PessoaMoradia\DefinirSindico.aspx" />

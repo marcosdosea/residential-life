@@ -882,4 +882,10 @@
   <data name="responsavel" xml:space="preserve">
     <value>Responsável</value>
   </data>
+  <data name="novoSindico" xml:space="preserve">
+    <value>Novo Síndico</value>
+  </data>
+  <data name="sindicos" xml:space="preserve">
+    <value>Síndicos</value>
+  </data>
 </root>
