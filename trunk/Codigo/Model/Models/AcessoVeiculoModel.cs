@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ComponentModel.DataAnnotations;
 using Models.App_GlobalResources;
 
-namespace Models.Models
+namespace Models
 {
-    public enum ListaTipoAcesso { Entrada, Saida }
+    public enum ListaTipoAcesso { Entrada = 0, Saida = 1 }
 
     public class AcessoVeiculoModel
     {

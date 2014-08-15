@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
-using Services;
 using Models;
+using Services;
 
 namespace BibliotecaWeb
 { 

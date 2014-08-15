@@ -13,6 +13,9 @@
 <table id="table">
     <tr>
         <th>
+            <%: Models.App_GlobalResources.Mensagem.nomePessoa %>
+        </th>
+        <th>
             <%: Models.App_GlobalResources.Mensagem.bloco %>
         </th>
         <th>
@@ -31,6 +34,9 @@
 
 <% foreach (var item in Model) { %>
     <tr>
+        <td>
+            <%: Html.DisplayFor(modelItem => item.NomePessoa) %>
+        </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Bloco) %>
         </td>

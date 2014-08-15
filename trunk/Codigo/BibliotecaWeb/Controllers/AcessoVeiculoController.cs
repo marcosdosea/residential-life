@@ -1,9 +1,9 @@
 ﻿using System.Web.Mvc;
-using Services;
-using Models.Models;
 using Microsoft.Reporting.WebForms;
+using Services;
+using Models;
 
-namespace BibliotecaWeb.Controllers
+namespace BibliotecaWeb
 { 
     public class AcessoVeiculoController : Controller
     {

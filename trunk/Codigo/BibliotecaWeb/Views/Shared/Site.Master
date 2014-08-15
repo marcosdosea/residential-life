@@ -56,7 +56,7 @@
             <% } %>
             <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilResponsavel))
                { %>
-            <li><%: Html.ActionLink("Alocar Pessoa em Moradia", "Index", "PessoaMoradia")%></li>
+            <li><%: Html.ActionLink("Alocar Pessoa em Moradia", "Morador", "PessoaMoradia")%></li>
             <li><%: Html.ActionLink("Veículo", "Index", "Veiculo")%></li>
             <% } %>
             <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilMorador))

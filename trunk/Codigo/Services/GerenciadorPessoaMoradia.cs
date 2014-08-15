@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Persistence;
-using Models.Models;
 using Models;
+using Persistence;
 
 namespace Services
 {
@@ -164,10 +161,10 @@ namespace Services
         /// <param name="IdMoradia"></param>
         /// <param name="idPerfil"></param>
         /// <returns></returns>
-        public IEnumerable<PessoaMoradiaModel> ObterTodosPorMoradiaPerfil(int IdMoradia, int idPerfil)
+        public IEnumerable<PessoaMoradiaModel> ObterTodosPorMoradiaPerfilAtivo(int IdMoradia, int idPerfil)
         {
             IEnumerable<PessoaMoradiaModel> pessoaMoradiaE = GetQuery().Where(pm => pm.IdMoradia.Equals(IdMoradia) &&
-                pm.IdPerfil.Equals(idPerfil));
+                pm.IdPerfil.Equals(idPerfil) && pm.Ativo == true);
             return pessoaMoradiaE;
         }
 

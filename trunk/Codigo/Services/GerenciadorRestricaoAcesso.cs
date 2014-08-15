@@ -83,11 +83,43 @@ namespace Services
                             Condominio = restricaoAcesso.tb_condominio.Nome,
                             NomePessoa = restricaoAcesso.tb_pessoa.Nome,
                             Dia = restricaoAcesso.Dia == "Segunda" ? ListaDia.Segunda : restricaoAcesso.Dia == "Terca" ? ListaDia.Terca : 
-                            restricaoAcesso.Dia == "Quarta" ? ListaDia.Quarta : restricaoAcesso.Dia == "Quinta" ? ListaDia.Quinta : 
-                            restricaoAcesso.Dia == "Sexta" ? ListaDia.Sexta : restricaoAcesso.Dia == "Sabado" ? ListaDia.Sabado : 
-                            ListaDia.Domingo
-                            // TODO
-                            // colocar a hora de entrada e saida e os boolean
+                                restricaoAcesso.Dia == "Quarta" ? ListaDia.Quarta : restricaoAcesso.Dia == "Quinta" ? ListaDia.Quinta : 
+                                restricaoAcesso.Dia == "Sexta" ? ListaDia.Sexta : restricaoAcesso.Dia == "Sabado" ? ListaDia.Sabado : 
+                                ListaDia.Domingo,
+                            HoraEntrada = restricaoAcesso.HoraEntrada == "ZeroHora" ? ListaHora.ZeroHora : restricaoAcesso.HoraEntrada ==
+                                "UmaHora" ? ListaHora.UmaHora : restricaoAcesso.HoraEntrada == "TresHora" ? ListaHora.TresHora : 
+                                restricaoAcesso.HoraEntrada == "QuatroHora" ? ListaHora.QuatroHora : restricaoAcesso.HoraEntrada ==
+                                "CincoHora" ? ListaHora.CincoHora : restricaoAcesso.HoraEntrada == "SeisHora" ? ListaHora.SeisHora :
+                                restricaoAcesso.HoraEntrada == "SeteHora" ? ListaHora.SeteHora : restricaoAcesso.HoraEntrada == "OitoHora" ?
+                                ListaHora.OitoHora : restricaoAcesso.HoraEntrada == "NoveHora" ? ListaHora.NoveHora : 
+                                restricaoAcesso.HoraEntrada == "DezHora" ? ListaHora.DezHora : restricaoAcesso.HoraEntrada == "OnzeHora" ?
+                                ListaHora.OnzeHora : restricaoAcesso.HoraEntrada == "DozeHora" ? ListaHora.DozeHora :
+                                restricaoAcesso.HoraEntrada == "TrezeHora" ? ListaHora.TrezeHora : restricaoAcesso.HoraEntrada ==
+                                "QuatorzeHora" ? ListaHora.QuatorzeHora : restricaoAcesso.HoraEntrada == "QuinzeHora" ?  ListaHora.QuinzeHora :
+                                restricaoAcesso.HoraEntrada == "DezesseisHora" ? ListaHora.DezesseisHora : restricaoAcesso.HoraEntrada ==
+                                "DezesseteHora" ? ListaHora.DezesseteHora : restricaoAcesso.HoraEntrada == "DezoitoHora" ? 
+                                ListaHora.DezoitoHora : restricaoAcesso.HoraEntrada == "DezenoveHora" ? ListaHora.DezenoveHora : 
+                                restricaoAcesso.HoraEntrada == "VinteHora" ? ListaHora.VinteHora : restricaoAcesso.HoraEntrada == 
+                                "VinteUmHora" ? ListaHora.VinteUmHora : restricaoAcesso.HoraEntrada == "VinteDuasHora" ? 
+                                ListaHora.VinteDuasHora : restricaoAcesso.HoraEntrada == "VinteTresHora" ? ListaHora.VinteTresHora : 
+                                ListaHora.VinteQuatroHora,
+                            HoraSaida = restricaoAcesso.HoraSaida == "ZeroHora" ? ListaHora.ZeroHora : restricaoAcesso.HoraSaida ==
+                                "UmaHora" ? ListaHora.UmaHora : restricaoAcesso.HoraSaida == "TresHora" ? ListaHora.TresHora :
+                                restricaoAcesso.HoraSaida == "QuatroHora" ? ListaHora.QuatroHora : restricaoAcesso.HoraSaida ==
+                                "CincoHora" ? ListaHora.CincoHora : restricaoAcesso.HoraSaida == "SeisHora" ? ListaHora.SeisHora :
+                                restricaoAcesso.HoraSaida == "SeteHora" ? ListaHora.SeteHora : restricaoAcesso.HoraSaida == "OitoHora" ?
+                                ListaHora.OitoHora : restricaoAcesso.HoraSaida == "NoveHora" ? ListaHora.NoveHora :
+                                restricaoAcesso.HoraSaida == "DezHora" ? ListaHora.DezHora : restricaoAcesso.HoraSaida == "OnzeHora" ?
+                                ListaHora.OnzeHora : restricaoAcesso.HoraSaida == "DozeHora" ? ListaHora.DozeHora :
+                                restricaoAcesso.HoraSaida == "TrezeHora" ? ListaHora.TrezeHora : restricaoAcesso.HoraSaida ==
+                                "QuatorzeHora" ? ListaHora.QuatorzeHora : restricaoAcesso.HoraSaida == "QuinzeHora" ? ListaHora.QuinzeHora :
+                                restricaoAcesso.HoraSaida == "DezesseisHora" ? ListaHora.DezesseisHora : restricaoAcesso.HoraSaida ==
+                                "DezesseteHora" ? ListaHora.DezesseteHora : restricaoAcesso.HoraSaida == "DezoitoHora" ?
+                                ListaHora.DezoitoHora : restricaoAcesso.HoraSaida == "DezenoveHora" ? ListaHora.DezenoveHora :
+                                restricaoAcesso.HoraSaida == "VinteHora" ? ListaHora.VinteHora : restricaoAcesso.HoraSaida ==
+                                "VinteUmHora" ? ListaHora.VinteUmHora : restricaoAcesso.HoraSaida == "VinteDuasHora" ?
+                                ListaHora.VinteDuasHora : restricaoAcesso.HoraSaida == "VinteTresHora" ? ListaHora.VinteTresHora :
+                                ListaHora.VinteQuatroHora
                         };
             return query;
         }

@@ -1,25 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.PessoaMoradiaModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    <%: Models.App_GlobalResources.Mensagem.sindicos %>
+    <%: Models.App_GlobalResources.Mensagem.visitantes%>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2><%: Models.App_GlobalResources.Mensagem.sindicos%></h2>
+<h2><%: Models.App_GlobalResources.Mensagem.visitantes%></h2>
 <p>
-    <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.novoSindico, "DefinirResponsavel", "Perfis") %>
+    <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.novoVisitante, "DefinirVisitante", "PessoaMoradia") %>
 </p>
 <table id="table">
     <tr>
         <th>
-            <%: Models.App_GlobalResources.Mensagem.nomePessoa %>
+            <%: Models.App_GlobalResources.Mensagem.visitante %>
         </th>
         <th>
-            <%: Models.App_GlobalResources.Mensagem.perfil %>
-        </th>
-        <th>
-            <%: Models.App_GlobalResources.Mensagem.condominio %>
+            <%: Models.App_GlobalResources.Mensagem.moradia %>
         </th>
         <th>
             <%: Models.App_GlobalResources.Mensagem.ativo %>
@@ -27,7 +24,6 @@
         <th>
             <%: Models.App_GlobalResources.Mensagem.opcoes %>
         </th>
-        <th></th>
     </tr>
 
 <% foreach (var item in Model) { %>
@@ -36,16 +32,13 @@
             <%: Html.DisplayFor(modelItem => item.NomePessoa) %>
         </td>
         <td>
-            <%: Html.DisplayFor(modelItem => item.Perfil) %>
-        </td>
-        <td>
-            <%: Html.DisplayFor(modelItem => item.Condominio) %>
+            <%: Html.DisplayFor(modelItem => item.NumeroMoradia) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.Ativo) %>
         </td>
         <td>
-            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.remover, "RemoverSindico", "Perfis", new { idPessoa = item.IdPessoa, 
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.remover, "RemoverVisitante", "PessoaMoradia", new { idPessoa = item.IdPessoa, 
                 idMoradia = item.IdMoradia, idPerfil = item.IdPerfil }, new { @style = "font-size:small;" })%>
         </td>
     </tr>

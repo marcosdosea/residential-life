@@ -888,4 +888,145 @@
   <data name="sindicos" xml:space="preserve">
     <value>Síndicos</value>
   </data>
+  <data name="acessosVisitante" xml:space="preserve">
+    <value>Acessos do Visitante</value>
+  </data>
+  <data name="CincoHora" xml:space="preserve">
+    <value>05:00</value>
+  </data>
+  <data name="definirMorador" xml:space="preserve">
+    <value>Definir Morador</value>
+  </data>
+  <data name="definirVisitante" xml:space="preserve">
+    <value>DefinirVisitante</value>
+  </data>
+  <data name="DezenoveHora" xml:space="preserve">
+    <value>19:00</value>
+  </data>
+  <data name="DezesseisHora" xml:space="preserve">
+    <value>16:00</value>
+  </data>
+  <data name="DezesseteHora" xml:space="preserve">
+    <value>17:00</value>
+  </data>
+  <data name="DezHora" xml:space="preserve">
+    <value>10:00</value>
+  </data>
+  <data name="DezoitoHora" xml:space="preserve">
+    <value>18:00</value>
+  </data>
+  <data name="dia" xml:space="preserve">
+    <value>Dia</value>
+  </data>
+  <data name="Domingo" xml:space="preserve">
+    <value>Domingo</value>
+  </data>
+  <data name="DozeHora" xml:space="preserve">
+    <value>12:00</value>
+  </data>
+  <data name="DuasHora" xml:space="preserve">
+    <value>02:00</value>
+  </data>
+  <data name="horaEntrada" xml:space="preserve">
+    <value>Horário de Entrada</value>
+  </data>
+  <data name="horaSaida" xml:space="preserve">
+    <value>Horário de Saída</value>
+  </data>
+  <data name="morador" xml:space="preserve">
+    <value>Morador</value>
+  </data>
+  <data name="moradores" xml:space="preserve">
+    <value>Moradores</value>
+  </data>
+  <data name="NoveHora" xml:space="preserve">
+    <value>09:00</value>
+  </data>
+  <data name="novoAcesso" xml:space="preserve">
+    <value>Novo Acesso</value>
+  </data>
+  <data name="novoMorador" xml:space="preserve">
+    <value>Novo Morador</value>
+  </data>
+  <data name="novoVisitante" xml:space="preserve">
+    <value>Novo Visitante</value>
+  </data>
+  <data name="OitoHora" xml:space="preserve">
+    <value>08:00</value>
+  </data>
+  <data name="OnzeHora" xml:space="preserve">
+    <value>11:00</value>
+  </data>
+  <data name="Quarta" xml:space="preserve">
+    <value>Quarta</value>
+  </data>
+  <data name="QuatorzeHora" xml:space="preserve">
+    <value>14:00</value>
+  </data>
+  <data name="QuatroHora" xml:space="preserve">
+    <value>04:00</value>
+  </data>
+  <data name="Quinta" xml:space="preserve">
+    <value>Quinta</value>
+  </data>
+  <data name="QuinzeHora" xml:space="preserve">
+    <value>15:00</value>
+  </data>
+  <data name="restrito" xml:space="preserve">
+    <value>Acesso Restrito</value>
+  </data>
+  <data name="Sabado" xml:space="preserve">
+    <value>Sábado</value>
+  </data>
+  <data name="Segunda" xml:space="preserve">
+    <value>Segunda</value>
+  </data>
+  <data name="SesisHora" xml:space="preserve">
+    <value>06:00</value>
+  </data>
+  <data name="SeteHota" xml:space="preserve">
+    <value>07:00</value>
+  </data>
+  <data name="Sexta" xml:space="preserve">
+    <value>Sexta</value>
+  </data>
+  <data name="Terca" xml:space="preserve">
+    <value>Terça</value>
+  </data>
+  <data name="TresHora" xml:space="preserve">
+    <value>03:00</value>
+  </data>
+  <data name="TrezeHora" xml:space="preserve">
+    <value>13:00</value>
+  </data>
+  <data name="UmaHora" xml:space="preserve">
+    <value>01:00</value>
+  </data>
+  <data name="VinteDuasHora" xml:space="preserve">
+    <value>22:00</value>
+  </data>
+  <data name="VinteHora" xml:space="preserve">
+    <value>20:00</value>
+  </data>
+  <data name="VinteQuatroHora" xml:space="preserve">
+    <value>24:00</value>
+  </data>
+  <data name="VinteTresHora" xml:space="preserve">
+    <value>23:00</value>
+  </data>
+  <data name="VinteUmHora" xml:space="preserve">
+    <value>21:00</value>
+  </data>
+  <data name="visitante" xml:space="preserve">
+    <value>Visitante</value>
+  </data>
+  <data name="visitantes" xml:space="preserve">
+    <value>Visitantes</value>
+  </data>
+  <data name="visualizarAcessos" xml:space="preserve">
+    <value>Visualizar Acessos</value>
+  </data>
+  <data name="ZeroHora" xml:space="preserve">
+    <value>00:00</value>
+  </data>
 </root>

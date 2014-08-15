@@ -79,6 +79,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Acessos do Visitante.
+        /// </summary>
+        public static string acessosVisitante {
+            get {
+                return ResourceManager.GetString("acessosVisitante", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Acesso de Veículo.
         /// </summary>
         public static string acessoVeiculo {
@@ -408,6 +417,15 @@ namespace Models.App_GlobalResources {
         public static string Cinco {
             get {
                 return ResourceManager.GetString("Cinco", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 05:00.
+        /// </summary>
+        public static string CincoHora {
+            get {
+                return ResourceManager.GetString("CincoHora", resourceCulture);
             }
         }
         
@@ -763,6 +781,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Definir Morador.
+        /// </summary>
+        public static string definirMorador {
+            get {
+                return ResourceManager.GetString("definirMorador", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Definir Propietário.
         /// </summary>
         public static string definirProprietario {
@@ -786,6 +813,15 @@ namespace Models.App_GlobalResources {
         public static string definirSindico {
             get {
                 return ResourceManager.GetString("definirSindico", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DefinirVisitante.
+        /// </summary>
+        public static string definirVisitante {
+            get {
+                return ResourceManager.GetString("definirVisitante", resourceCulture);
             }
         }
         
@@ -961,11 +997,92 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 19:00.
+        /// </summary>
+        public static string DezenoveHora {
+            get {
+                return ResourceManager.GetString("DezenoveHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 16:00.
+        /// </summary>
+        public static string DezesseisHora {
+            get {
+                return ResourceManager.GetString("DezesseisHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 17:00.
+        /// </summary>
+        public static string DezesseteHora {
+            get {
+                return ResourceManager.GetString("DezesseteHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10:00.
+        /// </summary>
+        public static string DezHora {
+            get {
+                return ResourceManager.GetString("DezHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 18:00.
+        /// </summary>
+        public static string DezoitoHora {
+            get {
+                return ResourceManager.GetString("DezoitoHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dia.
+        /// </summary>
+        public static string dia {
+            get {
+                return ResourceManager.GetString("dia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 2.
         /// </summary>
         public static string Dois {
             get {
                 return ResourceManager.GetString("Dois", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Domingo.
+        /// </summary>
+        public static string Domingo {
+            get {
+                return ResourceManager.GetString("Domingo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 12:00.
+        /// </summary>
+        public static string DozeHora {
+            get {
+                return ResourceManager.GetString("DozeHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 02:00.
+        /// </summary>
+        public static string DuasHora {
+            get {
+                return ResourceManager.GetString("DuasHora", resourceCulture);
             }
         }
         
@@ -1294,11 +1411,29 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Horário de Entrada.
+        /// </summary>
+        public static string horaEntrada {
+            get {
+                return ResourceManager.GetString("horaEntrada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Horário Permitido.
         /// </summary>
         public static string horarioPermitido {
             get {
                 return ResourceManager.GetString("horarioPermitido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Horário de Saída.
+        /// </summary>
+        public static string horaSaida {
+            get {
+                return ResourceManager.GetString("horaSaida", resourceCulture);
             }
         }
         
@@ -1456,6 +1591,24 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Morador.
+        /// </summary>
+        public static string morador {
+            get {
+                return ResourceManager.GetString("morador", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moradores.
+        /// </summary>
+        public static string moradores {
+            get {
+                return ResourceManager.GetString("moradores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nome.
         /// </summary>
         public static string nome {
@@ -1600,6 +1753,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 09:00.
+        /// </summary>
+        public static string NoveHora {
+            get {
+                return ResourceManager.GetString("NoveHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Novo.
         /// </summary>
         public static string novo {
@@ -1609,11 +1771,29 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Novo Acesso.
+        /// </summary>
+        public static string novoAcesso {
+            get {
+                return ResourceManager.GetString("novoAcesso", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Novo Condomínio.
         /// </summary>
         public static string novoCondominio {
             get {
                 return ResourceManager.GetString("novoCondominio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Novo Morador.
+        /// </summary>
+        public static string novoMorador {
+            get {
+                return ResourceManager.GetString("novoMorador", resourceCulture);
             }
         }
         
@@ -1672,6 +1852,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Novo Visitante.
+        /// </summary>
+        public static string novoVisitante {
+            get {
+                return ResourceManager.GetString("novoVisitante", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Número.
         /// </summary>
         public static string numero {
@@ -1695,6 +1884,24 @@ namespace Models.App_GlobalResources {
         public static string Oito {
             get {
                 return ResourceManager.GetString("Oito", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 08:00.
+        /// </summary>
+        public static string OitoHora {
+            get {
+                return ResourceManager.GetString("OitoHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 11:00.
+        /// </summary>
+        public static string OnzeHora {
+            get {
+                return ResourceManager.GetString("OnzeHora", resourceCulture);
             }
         }
         
@@ -1879,11 +2086,56 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Quarta.
+        /// </summary>
+        public static string Quarta {
+            get {
+                return ResourceManager.GetString("Quarta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 14:00.
+        /// </summary>
+        public static string QuatorzeHora {
+            get {
+                return ResourceManager.GetString("QuatorzeHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 4.
         /// </summary>
         public static string Quatro {
             get {
                 return ResourceManager.GetString("Quatro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 04:00.
+        /// </summary>
+        public static string QuatroHora {
+            get {
+                return ResourceManager.GetString("QuatroHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quinta.
+        /// </summary>
+        public static string Quinta {
+            get {
+                return ResourceManager.GetString("Quinta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 15:00.
+        /// </summary>
+        public static string QuinzeHora {
+            get {
+                return ResourceManager.GetString("QuinzeHora", resourceCulture);
             }
         }
         
@@ -1987,6 +2239,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Acesso Restrito.
+        /// </summary>
+        public static string restrito {
+            get {
+                return ResourceManager.GetString("restrito", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to RG.
         /// </summary>
         public static string rg {
@@ -2023,11 +2284,29 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sábado.
+        /// </summary>
+        public static string Sabado {
+            get {
+                return ResourceManager.GetString("Sabado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Salvar.
         /// </summary>
         public static string salvar {
             get {
                 return ResourceManager.GetString("salvar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Segunda.
+        /// </summary>
+        public static string Segunda {
+            get {
+                return ResourceManager.GetString("Segunda", resourceCulture);
             }
         }
         
@@ -2104,11 +2383,29 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 06:00.
+        /// </summary>
+        public static string SesisHora {
+            get {
+                return ResourceManager.GetString("SesisHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 7.
         /// </summary>
         public static string Sete {
             get {
                 return ResourceManager.GetString("Sete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 07:00.
+        /// </summary>
+        public static string SeteHota {
+            get {
+                return ResourceManager.GetString("SeteHota", resourceCulture);
             }
         }
         
@@ -2127,6 +2424,15 @@ namespace Models.App_GlobalResources {
         public static string sexo {
             get {
                 return ResourceManager.GetString("sexo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sexta.
+        /// </summary>
+        public static string Sexta {
+            get {
+                return ResourceManager.GetString("Sexta", resourceCulture);
             }
         }
         
@@ -2221,6 +2527,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Terça.
+        /// </summary>
+        public static string Terca {
+            get {
+                return ResourceManager.GetString("Terca", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tipo.
         /// </summary>
         public static string tipo {
@@ -2302,11 +2617,38 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 03:00.
+        /// </summary>
+        public static string TresHora {
+            get {
+                return ResourceManager.GetString("TresHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 13:00.
+        /// </summary>
+        public static string TrezeHora {
+            get {
+                return ResourceManager.GetString("TrezeHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1.
         /// </summary>
         public static string Um {
             get {
                 return ResourceManager.GetString("Um", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 01:00.
+        /// </summary>
+        public static string UmaHora {
+            get {
+                return ResourceManager.GetString("UmaHora", resourceCulture);
             }
         }
         
@@ -2334,6 +2676,78 @@ namespace Models.App_GlobalResources {
         public static string veiculos {
             get {
                 return ResourceManager.GetString("veiculos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 22:00.
+        /// </summary>
+        public static string VinteDuasHora {
+            get {
+                return ResourceManager.GetString("VinteDuasHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 20:00.
+        /// </summary>
+        public static string VinteHora {
+            get {
+                return ResourceManager.GetString("VinteHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 24:00.
+        /// </summary>
+        public static string VinteQuatroHora {
+            get {
+                return ResourceManager.GetString("VinteQuatroHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 23:00.
+        /// </summary>
+        public static string VinteTresHora {
+            get {
+                return ResourceManager.GetString("VinteTresHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 21:00.
+        /// </summary>
+        public static string VinteUmHora {
+            get {
+                return ResourceManager.GetString("VinteUmHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visitante.
+        /// </summary>
+        public static string visitante {
+            get {
+                return ResourceManager.GetString("visitante", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visitantes.
+        /// </summary>
+        public static string visitantes {
+            get {
+                return ResourceManager.GetString("visitantes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visualizar Acessos.
+        /// </summary>
+        public static string visualizarAcessos {
+            get {
+                return ResourceManager.GetString("visualizarAcessos", resourceCulture);
             }
         }
         
@@ -2370,6 +2784,15 @@ namespace Models.App_GlobalResources {
         public static string Zero {
             get {
                 return ResourceManager.GetString("Zero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 00:00.
+        /// </summary>
+        public static string ZeroHora {
+            get {
+                return ResourceManager.GetString("ZeroHora", resourceCulture);
             }
         }
     }
