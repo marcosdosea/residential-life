@@ -92,6 +92,7 @@
     <Compile Include="Controllers\PontuarPessoaController.cs" />
     <Compile Include="Controllers\PostagemController.cs" />
     <Compile Include="Controllers\ReservaAmbienteController.cs" />
+    <Compile Include="Controllers\RestricaoAcessoController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Controllers\SetorController.cs" />
     <Compile Include="Global.asax.cs">
@@ -165,7 +166,8 @@
     <Content Include="Views\Perfis\Sindico.aspx" />
     <Content Include="Views\Perfis\Responsavel.aspx" />
     <Content Include="Views\PessoaMoradia\Create.aspx" />
-    <Content Include="Views\PessoaMoradia\DefinirSindico.aspx" />
+    <Content Include="Views\PessoaMoradia\DefinirMorador.aspx" />
+    <Content Include="Views\PessoaMoradia\DefinirVisitante.aspx" />
     <Content Include="Views\PessoaMoradia\Delete.aspx" />
     <Content Include="Views\PessoaMoradia\Details.aspx" />
     <Content Include="Views\PessoaMoradia\Edit.aspx" />
@@ -216,6 +218,8 @@
     <Content Include="Views\Moradia\Edit.aspx" />
     <Content Include="Views\Moradia\Index.aspx" />
     <Content Include="Views\PerfilPessoa\DefinirSindico.aspx" />
+    <Content Include="Views\PessoaMoradia\Morador.aspx" />
+    <Content Include="Views\PessoaMoradia\Visitante.aspx" />
     <Content Include="Views\Pessoa\Create.aspx" />
     <Content Include="Views\Pessoa\Delete.aspx" />
     <Content Include="Views\Pessoa\Details.aspx" />

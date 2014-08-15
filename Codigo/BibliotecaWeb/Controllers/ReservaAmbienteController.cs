@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Models;
-using Services;
-using Models.Models;
-using Microsoft.Reporting.WebForms;
-using System.Web.Security;
+﻿using System.Web.Mvc;
 
-namespace BibliotecaWeb.Controllers
+namespace BibliotecaWeb
 {
     
     

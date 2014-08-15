@@ -45,8 +45,6 @@
     <Compile Include="GerenciadorAcessoPredio.cs" />
     <Compile Include="GerenciadorAcessoVeiculo.cs" />
     <Compile Include="GerenciadorAdministradora.cs" />
-    <Compile Include="GerenciadorAlocarPessoaMoradia.cs" />
-    <Compile Include="GerenciadorPerfilPessoa.cs" />
     <Compile Include="GerenciadorPessoaMoradia.cs" />
     <Compile Include="GerenciadorAtendimento.cs" />
     <Compile Include="GerenciadorComentario.cs" />
@@ -64,13 +62,6 @@
     <Compile Include="GerenciadorCondominio.cs" />
     <Compile Include="GerenciadorPessoa.cs" />
     <Compile Include="GerenciadorSetor.cs" />
-    <Compile Include="GerenciadorStatusAreaPublica.cs" />
-    <Compile Include="GerenciadorStatusEnquete.cs" />
-    <Compile Include="GerenciadorStatusOcorrencia.cs" />
-    <Compile Include="GerenciadorStatusPagamento.cs" />
-    <Compile Include="GerenciadorTipoMoradia.cs" />
-    <Compile Include="GerenciadorTipoOcorrencia.cs" />
-    <Compile Include="GerenciadorTipoVeiculo.cs" />
     <Compile Include="GerenciadorVeiculo.cs" />
     <Compile Include="GerencidorVotoEnquete.cs" />
     <Compile Include="ServiceException.cs" />

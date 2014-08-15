@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Services;
-using Models.Models;
-using Microsoft.Reporting.WebForms;
+﻿using System.Web.Mvc;
 
-namespace BibliotecaWeb.Controllers
+namespace BibliotecaWeb
 {
     public class AreaPublicaController : Controller
     {

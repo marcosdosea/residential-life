@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Security;
-using Models.Models;
-using Services;
 
-namespace BibliotecaWeb.Controllers
+namespace BibliotecaWeb
 {
     public class AdministradoraController : Controller
     {

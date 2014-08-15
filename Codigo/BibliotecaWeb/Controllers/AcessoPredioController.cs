@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using Services;
-using Models.Models;
-using Models;
 using Microsoft.Reporting.WebForms;
+using Models;
+using Services;
 
-namespace BibliotecaWeb.Controllers
+namespace BibliotecaWeb
 {
     public class AcessoPredioController : Controller
     {
