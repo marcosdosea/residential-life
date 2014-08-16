@@ -16,7 +16,7 @@
     <fieldset>
         <legend><%: Models.App_GlobalResources.Mensagem.sindico %></legend>
 
-        <% using (Html.BeginForm("Create", "AlocarPessoaMoradia", FormMethod.Post, null))
+        <% using (Html.BeginForm("DefinirSindico", "Perfis", FormMethod.Post, null))
          { %>
         <div class="editor-label">
             <%: Models.App_GlobalResources.Mensagem.condominio%>

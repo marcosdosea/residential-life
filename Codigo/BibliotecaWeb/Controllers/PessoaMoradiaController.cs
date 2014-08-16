@@ -48,7 +48,7 @@ namespace BibliotecaWeb
                 if (pm == null)
                 {
                     RestricaoAcessoModel restricaoAcesso = new RestricaoAcessoModel();
-                    restricaoAcesso.IdCondominio = SessionController.PessoaMoradia.IdCondominio;
+                    restricaoAcesso.IdMoradia = SessionController.PessoaMoradia.IdMoradia;
                     restricaoAcesso.IdPessoa = pessoaMoradia.IdPessoa;
                     restricaoAcesso.Restrito = false;
                     gPessoaMoradia.Inserir(pessoaMoradia);
@@ -95,20 +95,7 @@ namespace BibliotecaWeb
             pessoaMoradia.Ativo = true;
             if (ModelState.IsValid)
             {
-                PessoaMoradiaModel pm = gPessoaMoradia.Obter(pessoaMoradia.IdPessoa, pessoaMoradia.IdMoradia, pessoaMoradia.IdPerfil);
-                if (pm == null)
-                {
-                    RestricaoAcessoModel restricaoAcesso = new RestricaoAcessoModel();
-                    restricaoAcesso.IdCondominio = SessionController.PessoaMoradia.IdCondominio;
-                    restricaoAcesso.IdPessoa = pessoaMoradia.IdPessoa;
-                    restricaoAcesso.Restrito = true;
-                    gPessoaMoradia.Inserir(pessoaMoradia);
-                    gRestricaoAcesso.Inserir(restricaoAcesso);
-                }
-                else
-                {
-                    gPessoaMoradia.Editar(pessoaMoradia);
-                }
+                gPessoaMoradia.InserirEditar(pessoaMoradia);
                 return RedirectToAction("Visitante");
             }
             ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", pessoaMoradia.IdPessoa);
@@ -124,6 +111,72 @@ namespace BibliotecaWeb
             pessoaMoradia.Ativo = false;
             gPessoaMoradia.Editar(pessoaMoradia);
             return RedirectToAction("Visitante");
+        }
+
+        public ActionResult RestricoesVisitante(int idMoradia, int idPessoa)
+        {
+            SessionController.IdVisitante = idPessoa;
+            return View(gRestricaoAcesso.ObterPorMoradiaPessoa(idMoradia, idPessoa));
+        }
+
+        public ActionResult NovaRestricaoVisitante()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult NovaRestricaoVisitante(RestricaoAcessoModel restricaoAcesso)
+        {
+            restricaoAcesso.IdMoradia = SessionController.PessoaMoradia.IdMoradia;
+            restricaoAcesso.IdPessoa = SessionController.IdVisitante;
+            restricaoAcesso.Restrito = true;
+            if (ModelState.IsValid)
+            {
+                if (restricaoAcesso.Segunda == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Segunda;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Terca == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Terca;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Quarta == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Quarta;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Quinta == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Quinta;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Sexta == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Sexta;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Sabado == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Sabado;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Domingo == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Domingo;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                return View("RestricoesVisitante", gRestricaoAcesso.ObterPorMoradiaPessoa(restricaoAcesso.IdMoradia, 
+                    restricaoAcesso.IdPessoa));
+            }
+            return View(restricaoAcesso);
+        }
+
+        public ActionResult RemoverRestricaoAcessoVisitante(int idRestricaoAcesso, int idMoradia, int idPessoa)
+        {
+            gRestricaoAcesso.Remover(idRestricaoAcesso);
+            return View("RestricoesVisitante", gRestricaoAcesso.ObterPorMoradiaPessoa(idMoradia, idPessoa));
         }
 
         public ActionResult ReportPessoaMoradia()

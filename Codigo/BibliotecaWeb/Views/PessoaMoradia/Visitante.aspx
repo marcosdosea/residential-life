@@ -39,7 +39,9 @@
         </td>
         <td>
             <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.remover, "RemoverVisitante", "PessoaMoradia", new { idPessoa = item.IdPessoa, 
-                idMoradia = item.IdMoradia, idPerfil = item.IdPerfil }, new { @style = "font-size:small;" })%>
+                idMoradia = item.IdMoradia, idPerfil = item.IdPerfil }, new { @style = "font-size:small;" })%> |
+            <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.restricoesAcesso, "RestricoesVisitante", "PessoaMoradia",
+                new { idMoradia = item.IdMoradia, idPessoa = item.IdPessoa }, new { @style = "font-size:small;" })%>
         </td>
     </tr>
 <% } %>

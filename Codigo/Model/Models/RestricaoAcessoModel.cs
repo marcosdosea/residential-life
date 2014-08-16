@@ -27,10 +27,10 @@ namespace Models
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
         [Display(Name = "codigo", ResourceType = typeof(Mensagem))]
-        public int IdCondominio { get; set; }
+        public int IdMoradia { get; set; }
 
-        [Display(Name = "condominio", ResourceType = typeof(Mensagem))]
-        public string Condominio { get; set; }
+        [Display(Name = "numeroMoradia", ResourceType = typeof(Mensagem))]
+        public string NumeroMoradia { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
         [Display(Name = "restrito", ResourceType = typeof(Mensagem))]
@@ -45,14 +45,32 @@ namespace Models
         [Display(Name = "horaSaida", ResourceType = typeof(Mensagem))]
         public ListaHora HoraSaida { get; set; }
 
-        
-        //////////////////////////////////////////////////////////
-        
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "Segunda", ResourceType = typeof(Mensagem))]
+        public bool Segunda { get; set; }
 
-        [Display(Name = "codigo", ResourceType = typeof(Mensagem))]
-        public int IdMoradia { get; set; }
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "Terca", ResourceType = typeof(Mensagem))]
+        public bool Terca { get; set; }
 
-        [Display(Name = "ativo", ResourceType = typeof(Mensagem))]
-        public bool Ativo { get; set; }
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "Quarta", ResourceType = typeof(Mensagem))]
+        public bool Quarta { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "Quinta", ResourceType = typeof(Mensagem))]
+        public bool Quinta { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "Sexta", ResourceType = typeof(Mensagem))]
+        public bool Sexta { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "Sabado", ResourceType = typeof(Mensagem))]
+        public bool Sabado { get; set; }
+
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
+        [Display(Name = "Domingo", ResourceType = typeof(Mensagem))]
+        public bool Domingo { get; set; }
     }
 }

@@ -78,9 +78,9 @@ namespace Services
                         select new RestricaoAcessoModel
                         {
                             IdRestricaoAcesso = restricaoAcesso.IdRestricaoAcesso,
-                            IdCondominio = restricaoAcesso.IdCondominio,
+                            IdMoradia = restricaoAcesso.IdMoradia,
                             IdPessoa = restricaoAcesso.IdPessoa,
-                            Condominio = restricaoAcesso.tb_condominio.Nome,
+                            NumeroMoradia = restricaoAcesso.tb_moradia.Numero,
                             NomePessoa = restricaoAcesso.tb_pessoa.Nome,
                             Dia = restricaoAcesso.Dia == "Segunda" ? ListaDia.Segunda : restricaoAcesso.Dia == "Terca" ? ListaDia.Terca : 
                                 restricaoAcesso.Dia == "Quarta" ? ListaDia.Quarta : restricaoAcesso.Dia == "Quinta" ? ListaDia.Quinta : 
@@ -135,12 +135,12 @@ namespace Services
 
 
         /// <summary>
-        /// Obter todos as entidades cadastradas por condominio e pessoa
+        /// Obter todos as entidades cadastradas por moradia e pessoa
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<RestricaoAcessoModel> ObterPorCondominioPessoa(int idCondominio, int idPessoa)
+        public IEnumerable<RestricaoAcessoModel> ObterPorMoradiaPessoa(int idMoradia, int idPessoa)
         {
-            return GetQuery().Where(ac => ac.IdCondominio.Equals(idCondominio) && ac.IdPessoa.Equals(idPessoa));
+            return GetQuery().Where(ac => ac.IdMoradia.Equals(idMoradia) && ac.IdPessoa.Equals(idPessoa));
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace Services
         private void Atribuir(RestricaoAcessoModel restricaoAcesso, tb_restricaoacesso restricaoAcessoE)
         {
             restricaoAcessoE.IdRestricaoAcesso = restricaoAcesso.IdRestricaoAcesso;
-            restricaoAcessoE.IdCondominio = restricaoAcesso.IdCondominio;
+            restricaoAcessoE.IdMoradia = restricaoAcesso.IdMoradia;
             restricaoAcessoE.IdPessoa = restricaoAcesso.IdPessoa;
             restricaoAcessoE.Dia = restricaoAcesso.Dia.ToString();
             restricaoAcessoE.HoraEntrada = restricaoAcesso.HoraEntrada.ToString();

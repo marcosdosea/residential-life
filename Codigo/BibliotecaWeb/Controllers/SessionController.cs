@@ -41,6 +41,18 @@ namespace BibliotecaWeb
             }
         }
 
+        public static int IdVisitante
+        {
+            get
+            {
+                return (int)HttpContext.Current.Session["IdVisitante"];
+            }
+            set
+            {
+                HttpContext.Current.Session["IdVisitante"] = value;
+            }
+        }
+
         public static int AlertBox
         {
             get

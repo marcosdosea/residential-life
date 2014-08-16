@@ -8,7 +8,7 @@
 
 <h2><%: Models.App_GlobalResources.Mensagem.sindicos%></h2>
 <p>
-    <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.novoSindico, "DefinirResponsavel", "Perfis") %>
+    <%: Html.ActionLink( Models.App_GlobalResources.Mensagem.novoSindico, "DefinirSindico", "Perfis") %>
 </p>
 <table id="table">
     <tr>
@@ -27,7 +27,6 @@
         <th>
             <%: Models.App_GlobalResources.Mensagem.opcoes %>
         </th>
-        <th></th>
     </tr>
 
 <% foreach (var item in Model) { %>

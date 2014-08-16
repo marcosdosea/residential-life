@@ -118,7 +118,7 @@ namespace Services
         /// <returns></returns>
         public IEnumerable<PessoaMoradiaModel> ObterTodosPorPessoa(int idPessoa)
         {
-            return GetQuery().Where(alocarPessoaMoradiaModel => alocarPessoaMoradiaModel.IdPessoa.Equals(idPessoa));
+            return GetQuery().Where(pm => pm.IdPessoa.Equals(idPessoa) && pm.Ativo == true);
         }
 
         /// <summary>
