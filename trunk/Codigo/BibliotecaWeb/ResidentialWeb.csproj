@@ -219,6 +219,8 @@
     <Content Include="Views\Moradia\Index.aspx" />
     <Content Include="Views\PerfilPessoa\DefinirSindico.aspx" />
     <Content Include="Views\PessoaMoradia\Morador.aspx" />
+    <Content Include="Views\PessoaMoradia\NovaRestricaoVisitante.aspx" />
+    <Content Include="Views\PessoaMoradia\RestricoesVisitante.aspx" />
     <Content Include="Views\PessoaMoradia\Visitante.aspx" />
     <Content Include="Views\Pessoa\Create.aspx" />
     <Content Include="Views\Pessoa\Delete.aspx" />

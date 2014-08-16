@@ -1029,4 +1029,19 @@
   <data name="ZeroHora" xml:space="preserve">
     <value>00:00</value>
   </data>
+  <data name="novaRestricao" xml:space="preserve">
+    <value>Nova Restrição</value>
+  </data>
+  <data name="numeroMoradia" xml:space="preserve">
+    <value>Número da Moradia</value>
+  </data>
+  <data name="removerRestricao" xml:space="preserve">
+    <value>Remover Restrição</value>
+  </data>
+  <data name="restricoesAcesso" xml:space="preserve">
+    <value>Restrições de Acesso</value>
+  </data>
+  <data name="restricoesAcessoVisitante" xml:space="preserve">
+    <value>Restrições de Acesso do Visitante</value>
+  </data>
 </root>

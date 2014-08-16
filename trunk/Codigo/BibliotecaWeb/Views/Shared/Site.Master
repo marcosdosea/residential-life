@@ -30,8 +30,6 @@
             <li><%: Html.ActionLink("Condomínio", "Index", "Condominio")%></li> 
             <li><%: Html.ActionLink("Bloco", "Index", "Bloco")%></li>
             <li><%: Html.ActionLink("Moradia", "Index", "Moradia")%></li>
-            <li><%: Html.ActionLink("Bloco", "Index", "Bloco")%></li>
-            <li><%: Html.ActionLink("Moradia", "Index", "Moradia")%></li>
             <% } %>
             <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilSindico))
                { %>
@@ -57,6 +55,7 @@
             <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilResponsavel))
                { %>
             <li><%: Html.ActionLink("Alocar Pessoa em Moradia", "Morador", "PessoaMoradia")%></li>
+            <li><%: Html.ActionLink("Visitantes", "Visitante", "PessoaMoradia")%></li>
             <li><%: Html.ActionLink("Veículo", "Index", "Veiculo")%></li>
             <% } %>
             <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilMorador))

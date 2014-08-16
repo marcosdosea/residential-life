@@ -1735,6 +1735,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nova Restrição.
+        /// </summary>
+        public static string novaRestricao {
+            get {
+                return ResourceManager.GetString("novaRestricao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nova Senha.
         /// </summary>
         public static string novaSenha {
@@ -1866,6 +1875,15 @@ namespace Models.App_GlobalResources {
         public static string numero {
             get {
                 return ResourceManager.GetString("numero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Número da Moradia.
+        /// </summary>
+        public static string numeroMoradia {
+            get {
+                return ResourceManager.GetString("numeroMoradia", resourceCulture);
             }
         }
         
@@ -2176,6 +2194,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remover Restrição.
+        /// </summary>
+        public static string removerRestricao {
+            get {
+                return ResourceManager.GetString("removerRestricao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Remover Síndico.
         /// </summary>
         public static string removerSindico {
@@ -2235,6 +2262,24 @@ namespace Models.App_GlobalResources {
         public static string responsavel {
             get {
                 return ResourceManager.GetString("responsavel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restrições de Acesso.
+        /// </summary>
+        public static string restricoesAcesso {
+            get {
+                return ResourceManager.GetString("restricoesAcesso", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restrições de Acesso do Visitante.
+        /// </summary>
+        public static string restricoesAcessoVisitante {
+            get {
+                return ResourceManager.GetString("restricoesAcessoVisitante", resourceCulture);
             }
         }
         
