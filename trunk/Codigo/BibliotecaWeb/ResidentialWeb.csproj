@@ -159,10 +159,14 @@
     <Content Include="Views\Administradora\Edit.aspx" />
     <Content Include="Views\Administradora\Index.aspx" />
     <Content Include="Views\Moradia\DefinirProprietario.aspx" />
+    <Content Include="Views\Perfis\DefinirFuncionario.aspx" />
     <Content Include="Views\Perfis\DefinirProprietario.aspx" />
     <Content Include="Views\Perfis\DefinirResponsavel.aspx" />
     <Content Include="Views\Perfis\DefinirSindico.aspx" />
+    <Content Include="Views\Perfis\Funcionario.aspx" />
+    <Content Include="Views\Perfis\NovaRestricaoFuncionario.aspx" />
     <Content Include="Views\Perfis\Proprietario.aspx" />
+    <Content Include="Views\Perfis\RestricoesFuncionario.aspx" />
     <Content Include="Views\Perfis\Sindico.aspx" />
     <Content Include="Views\Perfis\Responsavel.aspx" />
     <Content Include="Views\PessoaMoradia\Create.aspx" />

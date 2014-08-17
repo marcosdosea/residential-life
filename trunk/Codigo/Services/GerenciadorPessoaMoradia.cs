@@ -130,6 +130,15 @@ namespace Services
             return GetQuery().Where(alocarPessoaMoradiaModel => alocarPessoaMoradiaModel.IdMoradia.Equals(idMoradia));
         }
 
+        /// <summary>
+        /// Obtem todos os profissionais e funcionarios 
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<PessoaMoradiaModel> ObterProfissionaisEFuncionarios()
+        {
+            return GetQuery().Where(pm => pm.IdPerfil.Equals(Global.IdPerfilFuncionario) || pm.IdPerfil.Equals(Global.IdPerfilProfissional));
+        }
+
 
         /// <summary>
         /// Obtém uma reserva de ambiente

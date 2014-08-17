@@ -1056,4 +1056,10 @@
   <data name="profissional" xml:space="preserve">
     <value>Profissional</value>
   </data>
+  <data name="definirFuncionario" xml:space="preserve">
+    <value>Definir Funcionário</value>
+  </data>
+  <data name="novoFuncionario" xml:space="preserve">
+    <value>Novo Funcionário</value>
+  </data>
 </root>

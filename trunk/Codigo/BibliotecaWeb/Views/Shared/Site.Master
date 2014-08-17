@@ -43,6 +43,8 @@
                 <li>
                     <%: Html.ActionLink("Proprietários", "Proprietario", "Perfis")%></li>
                 <li>
+                    <%: Html.ActionLink("Funcionários", "Funcionario", "Perfis")%></li>
+                <li>
                     <%: Html.ActionLink("Atendimento", "Index", "Atendimento")%></li>
                 <li>
                     <%: Html.ActionLink("Postagens", "Index", "Postagem")%></li>
@@ -89,7 +91,7 @@
                 <% } %>
                 <% if (!HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilAdministradora) && !HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilAdministradorSistema) && !HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilProfissional))
                    { %>
-                <!--li><%: Html.ActionLink("Pontuar Pessoa", "Index", "PontuarPessoa")%></li-->
+                
                 <% } %>
                 <!--li><%: Html.ActionLink("Área Pública", "Index", "AreaPublica")%></li>
             <li><%: Html.ActionLink("Reserva Ambiente", "Index", "ReservaAmbiente")%></li>
@@ -98,6 +100,7 @@
                     <%: Html.ActionLink("About", "About", "Home")%></li>
                 <li>
                     <%: Html.ActionLink("Acesso Pessoa", "Index", "AcessoPredio")%></li>
+                <li><%: Html.ActionLink("Pontuar Pessoa", "Index", "PontuarPessoa")%></li>
                 <% } %>
             </ul>
         </div>
