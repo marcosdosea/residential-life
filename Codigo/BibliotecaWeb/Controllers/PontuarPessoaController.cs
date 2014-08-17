@@ -8,11 +8,13 @@ namespace BibliotecaWeb
     {
         private GerenciadorPontuarPessoa gPontuarPessoa;
         private GerenciadorPessoa gPessoa;
+        private GerenciadorPessoaMoradia gPessoaMoradia;
 
         public PontuarPessoaController()
         {
             gPontuarPessoa = new GerenciadorPontuarPessoa();
             gPessoa = new GerenciadorPessoa();
+            gPessoaMoradia = new GerenciadorPessoaMoradia();
         }
         //
         // GET: /pontuarPessoa/
@@ -22,11 +24,11 @@ namespace BibliotecaWeb
             ViewBag.NomePessoa = gPessoa.Obter(idPessoa).Nome;
             return View(gPontuarPessoa.ObterPorPessoa(idPessoa));
         }
-        /*
+        
         public ViewResult Index()
         {
-            return View(gPerfilPessoa.ObterProfissionaisEFuncionariosAtivos());
-        }*/
+            return View(gPessoaMoradia.ObterProfissionaisEFuncionarios());
+        }
 
         //
         // GET: /pontuarPessoa/Create

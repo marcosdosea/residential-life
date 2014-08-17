@@ -11,6 +11,7 @@ namespace BibliotecaWeb
         private GerenciadorPessoa gPessoa;
         private GerenciadorCondominio gCondominio;
         private GerenciadorPessoaMoradia gPessoaMoradia;
+        private GerenciadorRestricaoAcesso gRestricaoAcesso;
 
         public PerfisController()
         {
@@ -19,6 +20,7 @@ namespace BibliotecaWeb
             gPessoa = new GerenciadorPessoa();
             gCondominio = new GerenciadorCondominio();
             gPessoaMoradia = new GerenciadorPessoaMoradia();
+            gRestricaoAcesso = new GerenciadorRestricaoAcesso();
         }
 
         public ActionResult Sindico()
@@ -137,6 +139,118 @@ namespace BibliotecaWeb
             gPessoaMoradia.Editar(pessoaMoradia);
             return RedirectToAction("Proprietario");
         }
+
+        ////////////////////////////////////////////////////
+        // Funcionarios
+        ///////////////////////////////////////////////////
+
+        public ActionResult Funcionario()
+        {
+            return View(gPessoaMoradia.ObterTodosPorMoradiaPerfilAtivo(SessionController.PessoaMoradia.IdMoradia, Global.IdPerfilFuncionario));
+        }
+
+        //[Authorize(Roles = "Síndico")]
+        public ActionResult DefinirFuncionario()
+        {
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult DefinirFuncionario(PessoaMoradiaModel pessoaMoradia)
+        {
+            pessoaMoradia.IdPerfil = Global.IdPerfilFuncionario;
+            pessoaMoradia.IdMoradia = SessionController.PessoaMoradia.IdMoradia;
+            pessoaMoradia.Ativo = true;
+            if (ModelState.IsValid)
+            {
+                gPessoaMoradia.InserirEditar(pessoaMoradia);
+                return RedirectToAction("Funcionario");
+            }
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", pessoaMoradia.IdPessoa);
+            return View(pessoaMoradia);
+        }
+
+        //
+        // POST: /pessoa/Delete/5
+
+        public ActionResult RemoverFuncionario(int idPessoa, int idMoradia, int idPerfil)
+        {
+            PessoaMoradiaModel pessoaMoradia = gPessoaMoradia.Obter(idPessoa, idMoradia, idPerfil);
+            pessoaMoradia.Ativo = false;
+            gPessoaMoradia.Editar(pessoaMoradia);
+            return RedirectToAction("Funcionario");
+        }
+
+        public ActionResult RestricoesFuncionario(int idMoradia, int idPessoa)
+        {
+            SessionController.IdFuncionario = idPessoa;
+            return View(gRestricaoAcesso.ObterPorMoradiaPessoa(idMoradia, idPessoa));
+        }
+
+        public ActionResult NovaRestricaoFuncionario()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult NovaRestricaoFuncionario(RestricaoAcessoModel restricaoAcesso)
+        {
+            restricaoAcesso.IdMoradia = SessionController.PessoaMoradia.IdMoradia;
+            restricaoAcesso.IdPessoa = SessionController.IdFuncionario;
+            restricaoAcesso.Restrito = true;
+            if (ModelState.IsValid)
+            {
+                if (restricaoAcesso.Segunda == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Segunda;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Terca == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Terca;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Quarta == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Quarta;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Quinta == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Quinta;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Sexta == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Sexta;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Sabado == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Sabado;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Domingo == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Domingo;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                return View("RestricoesFuncionario", gRestricaoAcesso.ObterPorMoradiaPessoa(restricaoAcesso.IdMoradia,
+                    restricaoAcesso.IdPessoa));
+            }
+            return View(restricaoAcesso);
+        }
+
+        public ActionResult RemoverRestricaoAcessoFuncionario(int idRestricaoAcesso, int idMoradia, int idPessoa)
+        {
+            gRestricaoAcesso.Remover(idRestricaoAcesso);
+            return View("RestricoesFuncionario", gRestricaoAcesso.ObterPorMoradiaPessoa(idMoradia, idPessoa));
+        }
+
+        ///////////////////////////////////////
+        // Fim Funcionario
+        //////////////////////////////////////
 
         public ActionResult Responsavel()
         {

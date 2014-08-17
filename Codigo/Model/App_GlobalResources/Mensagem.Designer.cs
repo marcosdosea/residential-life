@@ -781,6 +781,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Definir Funcionário.
+        /// </summary>
+        public static string definirFuncionario {
+            get {
+                return ResourceManager.GetString("definirFuncionario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Definir Morador.
         /// </summary>
         public static string definirMorador {
@@ -1803,6 +1812,15 @@ namespace Models.App_GlobalResources {
         public static string novoCondominio {
             get {
                 return ResourceManager.GetString("novoCondominio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Novo Funcionário.
+        /// </summary>
+        public static string novoFuncionario {
+            get {
+                return ResourceManager.GetString("novoFuncionario", resourceCulture);
             }
         }
         

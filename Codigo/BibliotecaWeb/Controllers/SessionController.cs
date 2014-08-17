@@ -65,6 +65,18 @@ namespace BibliotecaWeb
             }
         }
 
+        public static int IdFuncionario
+        {
+            get
+            {
+                return (int)HttpContext.Current.Session["_IdFuncionario"];
+            }
+            set
+            {
+                HttpContext.Current.Session["_IdFuncionario"] = value;
+            }
+        }
+
         public static int AlertBox
         {
             get
