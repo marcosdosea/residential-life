@@ -1062,4 +1062,7 @@
   <data name="novoFuncionario" xml:space="preserve">
     <value>Novo Funcionário</value>
   </data>
+  <data name="alterarPerfil" xml:space="preserve">
+    <value>Alterar Perfil</value>
+  </data>
 </root>

@@ -142,6 +142,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Alterar Perfil.
+        /// </summary>
+        public static string alterarPerfil {
+            get {
+                return ResourceManager.GetString("alterarPerfil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Andar.
         /// </summary>
         public static string andar {
