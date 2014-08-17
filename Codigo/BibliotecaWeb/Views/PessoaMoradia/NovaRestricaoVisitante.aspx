@@ -15,7 +15,7 @@
     <%: Html.ValidationSummary(true) %>
     <fieldset>
         <legend>
-            <%: Models.App_GlobalResources.Mensagem.restricoesAcessoVisitante %></legend>
+            <%: Models.App_GlobalResources.Mensagem.restricoesAcesso %></legend>
         <div class="editor-label">
             <%: Html.LabelFor(model => model.Segunda) %>
         </div>

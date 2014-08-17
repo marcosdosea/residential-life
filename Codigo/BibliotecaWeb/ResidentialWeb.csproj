@@ -167,6 +167,7 @@
     <Content Include="Views\Perfis\Responsavel.aspx" />
     <Content Include="Views\PessoaMoradia\Create.aspx" />
     <Content Include="Views\PessoaMoradia\DefinirMorador.aspx" />
+    <Content Include="Views\PessoaMoradia\DefinirProfissional.aspx" />
     <Content Include="Views\PessoaMoradia\DefinirVisitante.aspx" />
     <Content Include="Views\PessoaMoradia\Delete.aspx" />
     <Content Include="Views\PessoaMoradia\Details.aspx" />
@@ -219,7 +220,10 @@
     <Content Include="Views\Moradia\Index.aspx" />
     <Content Include="Views\PerfilPessoa\DefinirSindico.aspx" />
     <Content Include="Views\PessoaMoradia\Morador.aspx" />
+    <Content Include="Views\PessoaMoradia\NovaRestricaoProfissional.aspx" />
     <Content Include="Views\PessoaMoradia\NovaRestricaoVisitante.aspx" />
+    <Content Include="Views\PessoaMoradia\Profissional.aspx" />
+    <Content Include="Views\PessoaMoradia\RestricoesProfissional.aspx" />
     <Content Include="Views\PessoaMoradia\RestricoesVisitante.aspx" />
     <Content Include="Views\PessoaMoradia\Visitante.aspx" />
     <Content Include="Views\Pessoa\Create.aspx" />
