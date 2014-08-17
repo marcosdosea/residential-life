@@ -101,6 +101,7 @@
                 <li>
                     <%: Html.ActionLink("Acesso Pessoa", "Index", "AcessoPredio")%></li>
                 <li><%: Html.ActionLink("Pontuar Pessoa", "Index", "PontuarPessoa")%></li>
+                <li><%: Html.ActionLink(Models.App_GlobalResources.Mensagem.alterarPerfil, "SelecionarPerfil", "Home")%></li>
                 <% } %>
             </ul>
         </div>
