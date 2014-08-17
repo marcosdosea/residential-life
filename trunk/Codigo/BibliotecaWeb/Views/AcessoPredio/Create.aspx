@@ -40,7 +40,7 @@
             <%: Html.LabelFor(model => model.TipoAcesso) %>
         </div>
         <div class="editor-field">
-            <%: Html.EnumDropDownListFor(model => model.TipoAcesso, Models.Models.ListaTipoAcesso.Entrada)%>
+            <%: Html.EnumDropDownListFor(model => model.TipoAcesso, Models.ListaTipoAcesso.Entrada)%>
             <%: Html.ValidationMessageFor(model => model.TipoAcesso) %>
         </div>
         <br />
