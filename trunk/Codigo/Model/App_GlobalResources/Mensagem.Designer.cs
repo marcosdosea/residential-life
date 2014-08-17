@@ -790,6 +790,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Definir Profissional.
+        /// </summary>
+        public static string definirProfissional {
+            get {
+                return ResourceManager.GetString("definirProfissional", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Definir Propietário.
         /// </summary>
         public static string definirProprietario {
@@ -1807,6 +1816,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Novo Profissional.
+        /// </summary>
+        public static string novoProfissional {
+            get {
+                return ResourceManager.GetString("novoProfissional", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Novo Proprietário.
         /// </summary>
         public static string novoProprietario {
@@ -2064,6 +2082,24 @@ namespace Models.App_GlobalResources {
         public static string predio {
             get {
                 return ResourceManager.GetString("predio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profissionais.
+        /// </summary>
+        public static string profissionais {
+            get {
+                return ResourceManager.GetString("profissionais", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profissional.
+        /// </summary>
+        public static string profissional {
+            get {
+                return ResourceManager.GetString("profissional", resourceCulture);
             }
         }
         
@@ -2365,6 +2401,15 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 06:00.
+        /// </summary>
+        public static string SeisHora {
+            get {
+                return ResourceManager.GetString("SeisHora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Selecionar.
         /// </summary>
         public static string selecionar {
@@ -2428,15 +2473,6 @@ namespace Models.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 06:00.
-        /// </summary>
-        public static string SesisHora {
-            get {
-                return ResourceManager.GetString("SesisHora", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 7.
         /// </summary>
         public static string Sete {
@@ -2448,9 +2484,9 @@ namespace Models.App_GlobalResources {
         /// <summary>
         ///   Looks up a localized string similar to 07:00.
         /// </summary>
-        public static string SeteHota {
+        public static string SeteHora {
             get {
-                return ResourceManager.GetString("SeteHota", resourceCulture);
+                return ResourceManager.GetString("SeteHora", resourceCulture);
             }
         }
         

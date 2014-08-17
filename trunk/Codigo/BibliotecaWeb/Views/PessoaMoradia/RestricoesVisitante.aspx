@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Models.RestricaoAcessoModel>>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    <%: Models.App_GlobalResources.Mensagem.restricoesAcessoVisitante%>
+    <%: Models.App_GlobalResources.Mensagem.restricoesAcesso%>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2><%: Models.App_GlobalResources.Mensagem.restricoesAcessoVisitante%></h2>
+<h2><%: Models.App_GlobalResources.Mensagem.restricoesAcesso%></h2>
 <p>
     <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.novaRestricao, "NovaRestricaoVisitante", "PessoaMoradia")%>
 </p>

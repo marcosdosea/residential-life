@@ -981,10 +981,10 @@
   <data name="Segunda" xml:space="preserve">
     <value>Segunda</value>
   </data>
-  <data name="SesisHora" xml:space="preserve">
+  <data name="SeisHora" xml:space="preserve">
     <value>06:00</value>
   </data>
-  <data name="SeteHota" xml:space="preserve">
+  <data name="SeteHora" xml:space="preserve">
     <value>07:00</value>
   </data>
   <data name="Sexta" xml:space="preserve">
@@ -1043,5 +1043,17 @@
   </data>
   <data name="restricoesAcessoVisitante" xml:space="preserve">
     <value>Restrições de Acesso do Visitante</value>
+  </data>
+  <data name="definirProfissional" xml:space="preserve">
+    <value>Definir Profissional</value>
+  </data>
+  <data name="novoProfissional" xml:space="preserve">
+    <value>Novo Profissional</value>
+  </data>
+  <data name="profissionais" xml:space="preserve">
+    <value>Profissionais</value>
+  </data>
+  <data name="profissional" xml:space="preserve">
+    <value>Profissional</value>
   </data>
 </root>

@@ -45,11 +45,23 @@ namespace BibliotecaWeb
         {
             get
             {
-                return (int)HttpContext.Current.Session["IdVisitante"];
+                return (int)HttpContext.Current.Session["_IdVisitante"];
             }
             set
             {
-                HttpContext.Current.Session["IdVisitante"] = value;
+                HttpContext.Current.Session["_IdVisitante"] = value;
+            }
+        }
+
+        public static int IdProfissional
+        {
+            get
+            {
+                return (int)HttpContext.Current.Session["_IdProfissional"];
+            }
+            set
+            {
+                HttpContext.Current.Session["_IdProfissional"] = value;
             }
         }
 

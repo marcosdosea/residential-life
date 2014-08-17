@@ -179,6 +179,114 @@ namespace BibliotecaWeb
             return View("RestricoesVisitante", gRestricaoAcesso.ObterPorMoradiaPessoa(idMoradia, idPessoa));
         }
 
+        //////////////////////////////////////////
+        // Profissional
+        /////////////////////////////////////////
+
+        public ActionResult Profissional()
+        {
+            return View(gPessoaMoradia.ObterTodosPorMoradiaPerfilAtivo(SessionController.PessoaMoradia.IdMoradia, Global.IdPerfilProfissional));
+        }
+
+        //[Authorize(Roles = "Síndico")]
+        public ActionResult DefinirProfissional()
+        {
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome");
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult DefinirProfissional(PessoaMoradiaModel pessoaMoradia)
+        {
+            pessoaMoradia.IdPerfil = Global.IdPerfilProfissional;
+            pessoaMoradia.IdMoradia = SessionController.PessoaMoradia.IdMoradia;
+            pessoaMoradia.Ativo = true;
+            if (ModelState.IsValid)
+            {
+                gPessoaMoradia.InserirEditar(pessoaMoradia);
+                return RedirectToAction("Profissional");
+            }
+            ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", pessoaMoradia.IdPessoa);
+            return View(pessoaMoradia);
+        }
+
+        //
+        // POST: /pessoa/Delete/5
+
+        public ActionResult RemoverProfissional(int idPessoa, int idMoradia, int idPerfil)
+        {
+            PessoaMoradiaModel pessoaMoradia = gPessoaMoradia.Obter(idPessoa, idMoradia, idPerfil);
+            pessoaMoradia.Ativo = false;
+            gPessoaMoradia.Editar(pessoaMoradia);
+            return RedirectToAction("Profissional");
+        }
+
+        public ActionResult RestricoesProfissional(int idMoradia, int idPessoa)
+        {
+            SessionController.IdProfissional = idPessoa;
+            return View(gRestricaoAcesso.ObterPorMoradiaPessoa(idMoradia, idPessoa));
+        }
+
+        public ActionResult NovaRestricaoProfissional()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult NovaRestricaoProfissional(RestricaoAcessoModel restricaoAcesso)
+        {
+            restricaoAcesso.IdMoradia = SessionController.PessoaMoradia.IdMoradia;
+            restricaoAcesso.IdPessoa = SessionController.IdProfissional;
+            restricaoAcesso.Restrito = true;
+            if (ModelState.IsValid)
+            {
+                if (restricaoAcesso.Segunda == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Segunda;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Terca == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Terca;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Quarta == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Quarta;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Quinta == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Quinta;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Sexta == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Sexta;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Sabado == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Sabado;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                if (restricaoAcesso.Domingo == true)
+                {
+                    restricaoAcesso.Dia = ListaDia.Domingo;
+                    gRestricaoAcesso.Inserir(restricaoAcesso);
+                }
+                return View("RestricoesProfissional", gRestricaoAcesso.ObterPorMoradiaPessoa(restricaoAcesso.IdMoradia,
+                    restricaoAcesso.IdPessoa));
+            }
+            return View(restricaoAcesso);
+        }
+
+        public ActionResult RemoverRestricaoAcessoProfissional(int idRestricaoAcesso, int idMoradia, int idPessoa)
+        {
+            gRestricaoAcesso.Remover(idRestricaoAcesso);
+            return View("RestricoesProfissional", gRestricaoAcesso.ObterPorMoradiaPessoa(idMoradia, idPessoa));
+        }
+
         public ActionResult ReportPessoaMoradia()
         {
             LocalReport relatorio = new LocalReport();
