@@ -56,6 +56,8 @@
                     <%: Html.ActionLink("Setor", "Index", "Setor")%></li>
                 <li>
                     <%: Html.ActionLink("Acesso Veículo", "Index", "AcessoVeiculo")%></li>
+                <li><%: Html.ActionLink("Acesso Pessoa", "Index", "AcessoPredio")%></li>
+                <li><%: Html.ActionLink("Pontuar Pessoa", "Index", "PontuarPessoa")%></li>
                 <% } %>
                 <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilProprietario))
                    { %>
@@ -98,9 +100,6 @@
             <li><%: Html.ActionLink("Enquetes", "Index", "Enquete")%></li-->
                 <li>
                     <%: Html.ActionLink("About", "About", "Home")%></li>
-                <li>
-                    <%: Html.ActionLink("Acesso Pessoa", "Index", "AcessoPredio")%></li>
-                <li><%: Html.ActionLink("Pontuar Pessoa", "Index", "PontuarPessoa")%></li>
                 <li><%: Html.ActionLink(Models.App_GlobalResources.Mensagem.alterarPerfil, "SelecionarPerfil", "Home")%></li>
                 <% } %>
             </ul>
