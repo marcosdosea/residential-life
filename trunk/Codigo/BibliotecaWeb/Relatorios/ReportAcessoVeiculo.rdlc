@@ -57,7 +57,7 @@
               <Width>1.24467in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.43211in</Width>
+              <Width>0.98425in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -73,7 +73,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Placa Veiculo</Value>
+                              <Value>Placa Veículo</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -142,14 +142,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox5">
+                    <Textbox Name="Textbox4">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Tipo Acesso</Value>
+                              <Value>Tipo</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -163,7 +163,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <rd:DefaultName>Textbox4</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#7292cc</Color>
@@ -321,7 +321,7 @@
         <Top>4.72667cm</Top>
         <Left>0.88743cm</Left>
         <Height>1.2cm</Height>
-        <Width>11.89195cm</Width>
+        <Width>10.75439cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
