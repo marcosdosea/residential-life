@@ -20,35 +20,7 @@
         <legend><%: Models.App_GlobalResources.Mensagem.editarVeiculo %></legend>
 
         <%: Html.HiddenFor(model => model.IdPessoa)%>
-
-        <% using (Html.BeginForm("Create", "Veiculo", FormMethod.Post, null))
-         { %>
-        <div class="editor-label">
-            <%: Models.App_GlobalResources.Mensagem.condominio%>
-        </div>
-        <div class="editor-field">
-            <%: Html.DropDownListFor(model => model.IdCondominio, ViewBag.IdCondominio as SelectList, "Selecione", new { onchange = "this.form.submit();" })%>
-            <%: Html.ValidationMessageFor(model => model.IdCondominio)%>
-        </div>
-
-        <div class="editor-label">
-            <%: Models.App_GlobalResources.Mensagem.bloco%>
-        </div>
-        <div class="editor-field">
-            <%: Html.DropDownListFor(model => model.IdBloco, ViewBag.IdBloco as SelectList, "Selecione", new { onchange = "this.form.submit();" })%>
-            <%: Html.ValidationMessageFor(model => model.IdBloco)%>
-        </div>
-
-        <div class="editor-label">
-            <%: Html.Label(Models.App_GlobalResources.Mensagem.moradia)%>
-        </div>
-        <div class="editor-field">
-            <%: Html.DropDownListFor(model => model.IdMoradia, ViewBag.IdMoradia as SelectList, "Selecione", new { onchange = "this.form.submit();" })%>
-            <%: Html.ValidationMessageFor(model => model.IdMoradia) %>
-        </div>
-        
-        <% } %>
-
+        <%: Html.HiddenFor(model => model.IdMoradia)%>
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.TipoVeiculo) %>
