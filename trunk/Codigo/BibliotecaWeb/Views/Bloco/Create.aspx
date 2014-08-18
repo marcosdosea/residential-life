@@ -48,8 +48,6 @@
             <%: Html.EditorFor(model => model.QuantidadeMoradias) %>
             <%: Html.ValidationMessageFor(model => model.QuantidadeMoradias) %>
         </div>
-
-        
         <p>
              <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
         </p>
