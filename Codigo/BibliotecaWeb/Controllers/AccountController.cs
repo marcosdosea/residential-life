@@ -37,6 +37,7 @@ namespace ResidentialWeb
                     else
                     {
                         SessionController.IdRolePessoa = 0;
+                        SessionController.Perfil = "";
                         return RedirectToAction("SelecionarPerfil", "Home");
                     }
                 }
@@ -58,6 +59,7 @@ namespace ResidentialWeb
             SessionController.Pessoa = null;
             SessionController.PessoaMoradia = null;
             SessionController.IdRolePessoa = 0;
+            SessionController.Perfil = "";
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
         }
