@@ -97,9 +97,8 @@
                 <% } %>
                 <!--li><%: Html.ActionLink("Área Pública", "Index", "AreaPublica")%></li>
             <li><%: Html.ActionLink("Reserva Ambiente", "Index", "ReservaAmbiente")%></li>
-            <li><%: Html.ActionLink("Enquetes", "Index", "Enquete")%></li-->
-                <li>
-                    <%: Html.ActionLink("About", "About", "Home")%></li>
+            <li><%: Html.ActionLink("Enquetes", "Index", "Enquete")%>
+            <li><%: Html.ActionLink("About", "About", "Home")%></li></li-->
                 <li><%: Html.ActionLink(Models.App_GlobalResources.Mensagem.alterarPerfil, "SelecionarPerfil", "Home")%></li>
                 <% } %>
             </ul>

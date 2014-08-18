@@ -29,6 +29,18 @@ namespace BibliotecaWeb
             }
         }
 
+        public static string Perfil
+        {
+            get
+            {
+                return (string)HttpContext.Current.Session["_Perfil"];
+            }
+            set
+            {
+                HttpContext.Current.Session["_Perfil"] = value;
+            }
+        }
+
         public static int IdRolePessoa
         {
             get

@@ -2,8 +2,9 @@
 <%
     if (Request.IsAuthenticated) {
 %>
-        Welcome <strong><%: Page.User.Identity.Name %></strong>!
+        Bem-Vindo <strong><%: Page.User.Identity.Name %></strong>!
         [ <%: Html.ActionLink("Log Off", "LogOff", "Account") %> ]
+        <p id="perfil"><%: Html.Label("Perfil: " + Session["_Perfil"].ToString())%></p>
 <%
     }
     else {
@@ -12,3 +13,10 @@
 <%
     }
 %>
+
+<style>
+    #perfil
+    {
+        font-size: smaller
+    }
+</style>
