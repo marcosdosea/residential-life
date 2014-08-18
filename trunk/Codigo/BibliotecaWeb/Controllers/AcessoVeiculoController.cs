@@ -2,6 +2,7 @@
 using Microsoft.Reporting.WebForms;
 using Services;
 using Models;
+using System;
 
 namespace BibliotecaWeb
 { 
@@ -46,6 +47,7 @@ namespace BibliotecaWeb
         [HttpPost]
         public ActionResult Create(AcessoVeiculoModel acessoVeiculo)
         {
+            acessoVeiculo.Data = DateTime.Now;
             if (ModelState.IsValid)
             {
                 gAcessoVeiculo.Inserir(acessoVeiculo);

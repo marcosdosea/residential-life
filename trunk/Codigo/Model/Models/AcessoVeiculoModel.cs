@@ -13,7 +13,6 @@ namespace Models
         public int IdAcessoVeiculo { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
-        [DataType(DataType.Date)]
         [Display(Name = "data", ResourceType = typeof(Mensagem))]
         public DateTime Data { get; set; }
 

@@ -26,18 +26,10 @@
         </div>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.Data) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.TextBoxFor(model => model.Data, new { @class = "date", @type = "date" })%>
-            <%: Html.ValidationMessageFor(model => model.Data) %>
-        </div>
-
-        <div class="editor-label">
             <%: Html.LabelFor(model => model.TipoAcesso) %>
         </div>
         <div class="editor-field">
-            <%: Html.EnumDropDownListFor(model => model.TipoAcesso, Models.Models.ListaTipoAcesso.Entrada)%>
+            <%: Html.EnumDropDownListFor(model => model.TipoAcesso, Models.ListaTipoAcesso.Entrada)%>
             <%: Html.ValidationMessageFor(model => model.TipoAcesso) %>
         </div>
         <p>

@@ -14,7 +14,7 @@
     <script src="<%: Url.Content("~/Scripts/formata-data.js") %>" type="text/javascript"></script>
 </head>
 <body>
-    <div id="botao">
+    <div id="botao" style="width:300px;">
         <% Html.RenderPartial("LogOnUserControl"); %>
     </div>
     <div id="header">

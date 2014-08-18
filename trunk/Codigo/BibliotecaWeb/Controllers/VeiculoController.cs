@@ -11,7 +11,7 @@ namespace BibliotecaWeb
         private GerenciadorMoradia gMoradia;
         private GerenciadorCondominio gCondominio;
         private GerenciadorBloco gBloco;
-     
+
         public VeiculoController()
         {
             gVeiculo = new GerenciadorVeiculo();
@@ -21,7 +21,7 @@ namespace BibliotecaWeb
             gBloco = new GerenciadorBloco();
         }
 
-        
+
         //
         // GET: /Veiculo/
 
@@ -34,9 +34,6 @@ namespace BibliotecaWeb
         // GET: /Veiculo/Create
         public ActionResult Create()
         {
-            ViewBag.IdCondominio = new SelectList(GerenciadorCondominio.GetInstance().ObterTodos(), "IdCondominio", "Nome");
-            ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(0), "IdBloco", "Nome");
-            ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(0), "IdMoradia", "Numero");
             return View();
         }
 
@@ -45,34 +42,14 @@ namespace BibliotecaWeb
         [HttpPost]
         public ActionResult Create(VeiculoModel veiculoModel)
         {
+            veiculoModel.IdMoradia = SessionController.PessoaMoradia.IdMoradia;
             if (ModelState.IsValid)
             {
-                veiculoModel.IdPessoa = SessionController.Pessoa.IdPessoa;
+                veiculoModel.IdPessoa = SessionController.PessoaMoradia.IdPessoa;
                 gVeiculo.Inserir(veiculoModel);
                 return RedirectToAction("Index");
             }
-            else
-            {
-                if (veiculoModel.IdBloco == 0)
-                {
-                    ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", veiculoModel.IdCondominio);
-                    ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(veiculoModel.IdCondominio), "IdBloco", "Nome");
-                    ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(0), "IdMoradia", "Numero");
-                }
-                else if (veiculoModel.IdMoradia == 0 && veiculoModel.IdBloco != 0)
-                {
-                    ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", veiculoModel.IdCondominio);
-                    ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(veiculoModel.IdCondominio), "IdBloco", "Nome", veiculoModel.IdBloco);
-                    ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(veiculoModel.IdBloco), "IdMoradia", "Numero");
-                }
-                else if (veiculoModel.IdMoradia != 0 && veiculoModel.IdBloco != 0)
-                {
-                    ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", veiculoModel.IdCondominio);
-                    ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(veiculoModel.IdCondominio), "IdBloco", "Nome", veiculoModel.IdBloco);
-                    ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(veiculoModel.IdBloco), "IdMoradia", "Numero", veiculoModel.Moradia);
-                }
-                return View(veiculoModel);
-            }
+            return View(veiculoModel);
         }
 
         //
@@ -88,9 +65,6 @@ namespace BibliotecaWeb
         public ActionResult Edit(int id)
         {
             VeiculoModel veiculo = gVeiculo.Obter(id);
-            ViewBag.IdCondominio = new SelectList(GerenciadorCondominio.GetInstance().ObterTodos(), "IdCondominio", "Nome", veiculo.IdCondominio);
-            ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(0), "IdBloco", "Nome", veiculo.IdBloco);
-            ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(0), "IdMoradia", "Numero", veiculo.IdMoradia);
             return View(veiculo);
         }
 
@@ -104,30 +78,6 @@ namespace BibliotecaWeb
                 veiculoModel.IdPessoa = SessionController.Pessoa.IdPessoa;
                 gVeiculo.Editar(veiculoModel);
                 return RedirectToAction("Index");
-            }
-            else
-            {
-                if (veiculoModel.IdBloco == 0)
-                {
-                    ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", veiculoModel.IdCondominio);
-                    ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(veiculoModel.IdCondominio), "IdBloco", "Nome");
-                    ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(0), "IdMoradia", "Numero");
-                    ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", veiculoModel.IdPessoa);
-                }
-                else if (veiculoModel.IdMoradia == 0 && veiculoModel.IdBloco != 0)
-                {
-                    ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", veiculoModel.IdCondominio);
-                    ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(veiculoModel.IdCondominio), "IdBloco", "Nome", veiculoModel.IdBloco);
-                    ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(veiculoModel.IdBloco), "IdMoradia", "Numero");
-                    ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", veiculoModel.IdPessoa);
-                }
-                else if (veiculoModel.IdMoradia != 0 && veiculoModel.IdBloco != 0)
-                {
-                    ViewBag.IdCondominio = new SelectList(gCondominio.ObterTodos(), "IdCondominio", "Nome", veiculoModel.IdCondominio);
-                    ViewBag.IdBloco = new SelectList(gBloco.ObterPorCondominio(veiculoModel.IdCondominio), "IdBloco", "Nome", veiculoModel.IdBloco);
-                    ViewBag.IdMoradia = new SelectList(gMoradia.ObterTodosPorBloco(veiculoModel.IdBloco), "IdMoradia", "Numero", veiculoModel.Moradia);
-                    ViewBag.IdPessoa = new SelectList(gPessoa.ObterTodos(), "IdPessoa", "Nome", veiculoModel.IdPessoa);
-                }
             }
             return View(veiculoModel);
         }
