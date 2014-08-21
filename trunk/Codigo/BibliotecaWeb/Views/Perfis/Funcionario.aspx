@@ -16,6 +16,9 @@
             <%: Models.App_GlobalResources.Mensagem.funcionario %>
         </th>
         <th>
+            <%: Models.App_GlobalResources.Mensagem.bloco %>
+        </th>
+        <th>
             <%: Models.App_GlobalResources.Mensagem.moradia %>
         </th>
         <th>
@@ -30,6 +33,9 @@
     <tr>
         <td>
             <%: Html.DisplayFor(modelItem => item.NomePessoa) %>
+        </td>
+        <td>
+            <%: Html.DisplayFor(modelItem => item.Bloco) %>
         </td>
         <td>
             <%: Html.DisplayFor(modelItem => item.NumeroMoradia) %>

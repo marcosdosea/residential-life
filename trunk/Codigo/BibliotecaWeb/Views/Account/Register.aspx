@@ -159,7 +159,7 @@
             }, "Selecione")%>
             </p>
             <p>
-                <input type="submit" value="Register" />
+                <input type="submit" value="Registrar" />
             </p>
         </fieldset>
     </div>

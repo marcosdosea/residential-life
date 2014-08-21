@@ -2,13 +2,25 @@
 using System.Linq;
 using Models;
 using Persistence;
+using System;
 
 namespace Services
 {
     public class GerenciadorVeiculo
     {
+        private static GerenciadorVeiculo gVeiculo;
+
         private IUnitOfWork unitOfWork;
         private bool shared;
+
+        public static GerenciadorVeiculo GetInstance()
+        {
+            if (gVeiculo == null)
+            {
+                gVeiculo = new GerenciadorVeiculo();
+            }
+            return gVeiculo;
+        }
 
         /// <summary>
         /// Construtor pode ser acessado externamente e não compartilha contexto
@@ -63,8 +75,16 @@ namespace Services
         /// <param name="statusVeiculoModel">Identificador do veiculo na base de dados</param>
         public void Remover(int idVeiculo)
         {
-            unitOfWork.RepositorioVeiculo.Remover(Veiculo => Veiculo.IdVeiculo.Equals(idVeiculo));
-            unitOfWork.Commit(shared);
+            try
+            {
+                unitOfWork.RepositorioVeiculo.Remover(Veiculo => Veiculo.IdVeiculo.Equals(idVeiculo));
+                unitOfWork.Commit(shared);
+            }
+            catch (System.Exception)
+            {
+                throw new Exception("Não é possível remover este veículo pois ele deve conter alguma dependência em Acesso Veículo.");
+            }
+            
         }
 
 

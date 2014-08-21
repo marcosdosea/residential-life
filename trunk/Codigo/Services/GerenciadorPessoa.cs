@@ -109,6 +109,7 @@ namespace Services
                             Sexo = pessoa.Sexo,
                             TelefoneCelular = pessoa.TelefoneCelular,
                             TelefoneFixo = pessoa.TelefoneFixo,
+                            Ativa = (bool)pessoa.Ativa,
 
                             NomeUsuario = pessoa.my_aspnet_users.name,
                             NomeSetor = pessoa.tb_setor.Nome
@@ -131,7 +132,7 @@ namespace Services
         /// <returns></returns>
         public IEnumerable<PessoaModel> ObterTodosPorCPF()
         {
-            return GetQuery().OrderBy(p => p.CPF);
+            return GetQuery().OrderBy(p => p.CPF).Where(p => p.Ativa == true);
         }
 
         /// <summary>
@@ -204,6 +205,7 @@ namespace Services
             pessoaE.Sexo = pessoaModel.Sexo;
             pessoaE.TelefoneCelular = pessoaModel.TelefoneCelular;
             pessoaE.TelefoneFixo = pessoaModel.TelefoneFixo;
+            pessoaE.Ativa = pessoaModel.Ativa;
         }
     }
 }
