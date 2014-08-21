@@ -47,6 +47,7 @@ namespace BibliotecaWeb
         {
             if (ModelState.IsValid)
             {
+                pessoaModel.Ativa = true;
                 gPessoa.Inserir(pessoaModel);
                 return RedirectToAction("Index");  
             }

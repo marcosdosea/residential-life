@@ -94,5 +94,7 @@ namespace Models
 
         [Display(Name = "statusPerfil", ResourceType = typeof(Mensagem))]
         public bool StatusPerfil { get; set; }
+
+        public bool Ativa { get; set; }
     }
 }

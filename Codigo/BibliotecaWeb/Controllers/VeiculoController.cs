@@ -7,7 +7,7 @@ namespace BibliotecaWeb
     public class VeiculoController : Controller
     {
         private GerenciadorVeiculo gVeiculo;
-        private GerenciadorPessoa gPessoa;
+        private GerenciadorPessoaMoradia gPessoaMoradia;
         private GerenciadorMoradia gMoradia;
         private GerenciadorCondominio gCondominio;
         private GerenciadorBloco gBloco;
@@ -15,7 +15,7 @@ namespace BibliotecaWeb
         public VeiculoController()
         {
             gVeiculo = new GerenciadorVeiculo();
-            gPessoa = new GerenciadorPessoa();
+            gPessoaMoradia = new GerenciadorPessoaMoradia();
             gMoradia = new GerenciadorMoradia();
             gCondominio = new GerenciadorCondominio();
             gBloco = new GerenciadorBloco();
@@ -95,7 +95,7 @@ namespace BibliotecaWeb
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            gVeiculo.Remover(id);
+            GerenciadorVeiculo.GetInstance().Remover(id);
             return RedirectToAction("Index");
         }
 
