@@ -95,6 +95,13 @@
                    { %>
                 
                 <% } %>
+                <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilFuncionario))
+                   { %>
+                <li>
+                    <%: Html.ActionLink("Acesso Veículo", "Index", "AcessoVeiculo")%></li>
+                <li>
+                    <%: Html.ActionLink("Acesso Pessoa", "Index", "AcessoPredio")%></li>
+                <% } %>
                 <!--li><%: Html.ActionLink("Área Pública", "Index", "AreaPublica")%></li>
             <li><%: Html.ActionLink("Reserva Ambiente", "Index", "ReservaAmbiente")%></li>
             <li><%: Html.ActionLink("Enquetes", "Index", "Enquete")%>
