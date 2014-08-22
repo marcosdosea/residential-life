@@ -1,0 +1,1068 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="bairro" xml:space="preserve">
+    <value>Bairro</value>
+  </data>
+  <data name="cep" xml:space="preserve">
+    <value>CEP</value>
+  </data>
+  <data name="cidade" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="complemento" xml:space="preserve">
+    <value>Complemento</value>
+  </data>
+  <data name="cpf" xml:space="preserve">
+    <value>CPF</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="estado" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="id" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="local" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="nome" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="numero" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="required" xml:space="preserve">
+    <value>O campo é obrigatório!</value>
+  </data>
+  <data name="rg" xml:space="preserve">
+    <value>RG</value>
+  </data>
+  <data name="rua" xml:space="preserve">
+    <value>Rua</value>
+  </data>
+  <data name="senha" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="sexo" xml:space="preserve">
+    <value>Sexo</value>
+  </data>
+  <data name="telefoneCelular" xml:space="preserve">
+    <value>Telefone Celular</value>
+  </data>
+  <data name="telefoneFixo" xml:space="preserve">
+    <value>Telefone Fixo</value>
+  </data>
+  <data name="tamanho" xml:space="preserve">
+    <value>Tamanho</value>
+  </data>
+  <data name="valorPagamento" xml:space="preserve">
+    <value>Valor Pagamento</value>
+  </data>
+  <data name="apagar" xml:space="preserve">
+    <value>Apagar</value>
+  </data>
+  <data name="confirmacaoApagarPessoa" xml:space="preserve">
+    <value>Tem certeza que deseja apagar esta pessoa?</value>
+  </data>
+  <data name="detalhes" xml:space="preserve">
+    <value>Detalhes</value>
+  </data>
+  <data name="editar" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="novo" xml:space="preserve">
+    <value>Novo</value>
+  </data>
+  <data name="qtdeAndares" xml:space="preserve">
+    <value>Quantidade de Andares</value>
+  </data>
+  <data name="qtdeMoradias" xml:space="preserve">
+    <value>Quantidade de Moradias</value>
+  </data>
+  <data name="salvar" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="voltar" xml:space="preserve">
+    <value>Voltar</value>
+  </data>
+  <data name="novaPessoa" xml:space="preserve">
+    <value>Nova Pessoa</value>
+  </data>
+  <data name="apagarAreaPublica" xml:space="preserve">
+    <value>Apagar Área pública</value>
+  </data>
+  <data name="condominio" xml:space="preserve">
+    <value>Condomínio</value>
+  </data>
+  <data name="listaAreasPublicas" xml:space="preserve">
+    <value>Lista das Áreas públicas</value>
+  </data>
+  <data name="novaArea" xml:space="preserve">
+    <value>Nova Área Pública</value>
+  </data>
+  <data name="perguntaConfirmacao" xml:space="preserve">
+    <value>Você está seguro que quer fazer isso?</value>
+  </data>
+  <data name="apagarCondominio" xml:space="preserve">
+    <value>Apagar Condomínio</value>
+  </data>
+  <data name="condominios" xml:space="preserve">
+    <value>Condomínios</value>
+  </data>
+  <data name="confirmacaoCondominio" xml:space="preserve">
+    <value>Tem certeza que deseja apagar este condominio?</value>
+  </data>
+  <data name="detalhesCondominio" xml:space="preserve">
+    <value>Detalhes do Condomínio</value>
+  </data>
+  <data name="editarCondominio" xml:space="preserve">
+    <value>Editar Condomínio</value>
+  </data>
+  <data name="idCondominio" xml:space="preserve">
+    <value>Código do condomínio</value>
+  </data>
+  <data name="idSindico" xml:space="preserve">
+    <value>Código do síndico</value>
+  </data>
+  <data name="selecione" xml:space="preserve">
+    <value>Selecione</value>
+  </data>
+  <data name="apagarBloco" xml:space="preserve">
+    <value>Apagar Bloco</value>
+  </data>
+  <data name="bloco" xml:space="preserve">
+    <value>Bloco</value>
+  </data>
+  <data name="blocos" xml:space="preserve">
+    <value>Blocos</value>
+  </data>
+  <data name="confirmacaoBloco" xml:space="preserve">
+    <value>Tem certeza que deseja apagar este bloco?</value>
+  </data>
+  <data name="detalhesBloco" xml:space="preserve">
+    <value>Detalhes do Bloco</value>
+  </data>
+  <data name="editarBloco" xml:space="preserve">
+    <value>Editar Bloco</value>
+  </data>
+  <data name="apagarPessoa" xml:space="preserve">
+    <value>Apagar Pessoa</value>
+  </data>
+  <data name="detalhesPessoa" xml:space="preserve">
+    <value>Detalhes Pessoa</value>
+  </data>
+  <data name="editarPessoa" xml:space="preserve">
+    <value>Editar Pessoa</value>
+  </data>
+  <data name="pessoas" xml:space="preserve">
+    <value>Pessoas</value>
+  </data>
+  <data name="dataFim" xml:space="preserve">
+    <value>Data de Finalização</value>
+  </data>
+  <data name="dataInicio" xml:space="preserve">
+    <value>Data de Início</value>
+  </data>
+  <data name="idArea" xml:space="preserve">
+    <value>Código da Área Pública</value>
+  </data>
+  <data name="idPessoa" xml:space="preserve">
+    <value>Código da Pessoa</value>
+  </data>
+  <data name="statusPagamento" xml:space="preserve">
+    <value>Status do Pagamento</value>
+  </data>
+  <data name="apagarReservaAmbiente" xml:space="preserve">
+    <value>Cancelar Reserva de Ambiente</value>
+  </data>
+  <data name="areaPublica" xml:space="preserve">
+    <value>Área Pública</value>
+  </data>
+  <data name="cancelar" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="confirmacaoApagarReserva" xml:space="preserve">
+    <value>Tem certeza que deseja cancelar esta reserva?</value>
+  </data>
+  <data name="detalhesReservaAmbiente" xml:space="preserve">
+    <value>Detalhes da Reserva de Ambiente</value>
+  </data>
+  <data name="editarReservaAmbiente" xml:space="preserve">
+    <value>Editar Reserva de Ambiente</value>
+  </data>
+  <data name="novaReservaAmbiente" xml:space="preserve">
+    <value>Nova Reserva de Ambiente</value>
+  </data>
+  <data name="reservaAmbiente" xml:space="preserve">
+    <value>Reserva de Ambiente</value>
+  </data>
+  <data name="reservasAmbiente" xml:space="preserve">
+    <value>Reservas de Ambiente</value>
+  </data>
+  <data name="descricao" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="pessoa" xml:space="preserve">
+    <value>Pessoa</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="titulo" xml:space="preserve">
+    <value>Título</value>
+  </data>
+  <data name="apagarEnquete" xml:space="preserve">
+    <value>Apagar Enquete</value>
+  </data>
+  <data name="confirmacaoApagarEnquete" xml:space="preserve">
+    <value>Você realmente deseja apagar essa enquete?</value>
+  </data>
+  <data name="criador" xml:space="preserve">
+    <value>Criador</value>
+  </data>
+  <data name="dataFimEnquete" xml:space="preserve">
+    <value>Data de fechamento da enquete</value>
+  </data>
+  <data name="dataInicioEnquete" xml:space="preserve">
+    <value>Data de abertura da enquete</value>
+  </data>
+  <data name="detalhesEnquete" xml:space="preserve">
+    <value>Detalhes da Enquete</value>
+  </data>
+  <data name="editarEnquete" xml:space="preserve">
+    <value>Editar a Enquete</value>
+  </data>
+  <data name="enquete" xml:space="preserve">
+    <value>Enquete</value>
+  </data>
+  <data name="enquetes" xml:space="preserve">
+    <value>Enquetes</value>
+  </data>
+  <data name="excluir" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <data name="novaEnquete" xml:space="preserve">
+    <value>Nova Enquete</value>
+  </data>
+  <data name="apargarRegistroOcorrencia" xml:space="preserve">
+    <value>Apagar Registro de Ocorrência</value>
+  </data>
+  <data name="data" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="listaRegistroOcorrencia" xml:space="preserve">
+    <value>Meus Registros de Ocorrência</value>
+  </data>
+  <data name="novoRegistroOcorrencia" xml:space="preserve">
+    <value>Novo Registro de Ocorrência</value>
+  </data>
+  <data name="tipo" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="enquetesFinalizadas" xml:space="preserve">
+    <value>Enquetes Finalizadas</value>
+  </data>
+  <data name="enquetesAtivas" xml:space="preserve">
+    <value>Enquetes Ativas</value>
+  </data>
+  <data name="enquetesEmAndamento" xml:space="preserve">
+    <value>Enquetes em Andamento</value>
+  </data>
+  <data name="todasEnquetes" xml:space="preserve">
+    <value>Todas Enquetes</value>
+  </data>
+  <data name="sindico" xml:space="preserve">
+    <value>Síndico</value>
+  </data>
+  <data name="idStatusPagamento" xml:space="preserve">
+    <value>Código Status Pagamento</value>
+  </data>
+  <data name="dataAutomatica" xml:space="preserve">
+    <value>Data de Publicação Automática</value>
+  </data>
+  <data name="dataExclusao" xml:space="preserve">
+    <value>Data de Exclusão Automática</value>
+  </data>
+  <data name="apagarPostagem" xml:space="preserve">
+    <value>Apagar Postagem</value>
+  </data>
+  <data name="novaPostagem" xml:space="preserve">
+    <value>Nova Postagem</value>
+  </data>
+  <data name="postagens" xml:space="preserve">
+    <value>Postagens</value>
+  </data>
+  <data name="apagarVeiculo" xml:space="preserve">
+    <value>Apagar Veículo</value>
+  </data>
+  <data name="confirmacaoApagarVeiculo" xml:space="preserve">
+    <value>Tem certeza que deseja apagar este veículo?</value>
+  </data>
+  <data name="cor" xml:space="preserve">
+    <value>Cor</value>
+  </data>
+  <data name="detalhesVeiculo" xml:space="preserve">
+    <value>Detalhes do Veículo</value>
+  </data>
+  <data name="editarVeiculo" xml:space="preserve">
+    <value>Editar Veículo</value>
+  </data>
+  <data name="idVeiculo" xml:space="preserve">
+    <value>Código do Veículo</value>
+  </data>
+  <data name="modelo" xml:space="preserve">
+    <value>Modelo</value>
+  </data>
+  <data name="novoVeiculo" xml:space="preserve">
+    <value>Novo Veículo</value>
+  </data>
+  <data name="placa" xml:space="preserve">
+    <value>Placa</value>
+  </data>
+  <data name="tipoVeiculo" xml:space="preserve">
+    <value>Tipo do veículo</value>
+  </data>
+  <data name="veiculos" xml:space="preserve">
+    <value>Veículos</value>
+  </data>
+  <data name="veiculo" xml:space="preserve">
+    <value>Veículo</value>
+  </data>
+  <data name="confirmaNovaSenha" xml:space="preserve">
+    <value>ConfirmaNovaSenha</value>
+  </data>
+  <data name="confirmaSenha" xml:space="preserve">
+    <value>Confirma Senha</value>
+  </data>
+  <data name="manterConectado" xml:space="preserve">
+    <value>Mantenha-me conectado</value>
+  </data>
+  <data name="novaSenha" xml:space="preserve">
+    <value>Nova Senha</value>
+  </data>
+  <data name="senhaAtual" xml:space="preserve">
+    <value>Senha Atual</value>
+  </data>
+  <data name="andar" xml:space="preserve">
+    <value>Andar</value>
+  </data>
+  <data name="idTipoMoradia" xml:space="preserve">
+    <value>Código Tipo Moradia</value>
+  </data>
+  <data name="predio" xml:space="preserve">
+    <value>Predio</value>
+  </data>
+  <data name="tipoMoradia" xml:space="preserve">
+    <value>Tipo Moradia</value>
+  </data>
+  <data name="dataEntrada" xml:space="preserve">
+    <value>Data Entrada</value>
+  </data>
+  <data name="dataSaida" xml:space="preserve">
+    <value>Data Saida</value>
+  </data>
+  <data name="confirmacaoApagarMoradia" xml:space="preserve">
+    <value>Deseja realmente Apagar Moradia</value>
+  </data>
+  <data name="editarProprietario" xml:space="preserve">
+    <value>Editar Proprietário</value>
+  </data>
+  <data name="moradia" xml:space="preserve">
+    <value>Moradia</value>
+  </data>
+  <data name="novaMoradia" xml:space="preserve">
+    <value>Nova Moradia</value>
+  </data>
+  <data name="proprietario" xml:space="preserve">
+    <value>Proprietário</value>
+  </data>
+  <data name="administradora" xml:space="preserve">
+    <value>Administradora</value>
+  </data>
+  <data name="administradoras" xml:space="preserve">
+    <value>Administradoras</value>
+  </data>
+  <data name="apagarAdministradora" xml:space="preserve">
+    <value>Apagar Administradora</value>
+  </data>
+  <data name="confirmacaoApagarAdministradora" xml:space="preserve">
+    <value>Tem certeza que deseja apagar esta Administradora?</value>
+  </data>
+  <data name="detalhesAdministradora" xml:space="preserve">
+    <value>Detalhes Administradora</value>
+  </data>
+  <data name="editarAdministradora" xml:space="preserve">
+    <value>Editar Administradora</value>
+  </data>
+  <data name="novaAdministradora" xml:space="preserve">
+    <value>Nova Administradora</value>
+  </data>
+  <data name="apargarCondominio" xml:space="preserve">
+    <value>Apargar Condomínio</value>
+  </data>
+  <data name="novoCondominio" xml:space="preserve">
+    <value>Novo Condomínio</value>
+  </data>
+  <data name="acesso" xml:space="preserve">
+    <value>Acesso</value>
+  </data>
+  <data name="acessoPredio" xml:space="preserve">
+    <value>Acesso ao prédio</value>
+  </data>
+  <data name="codigoPessoa" xml:space="preserve">
+    <value>Código do morador</value>
+  </data>
+  <data name="novoRegistroAcesso" xml:space="preserve">
+    <value>Novo registro de acesso</value>
+  </data>
+  <data name="registrarAcesso" xml:space="preserve">
+    <value>Registrar acesso</value>
+  </data>
+  <data name="apagarPlanoDeConta" xml:space="preserve">
+    <value>Apagar Plano de Conta</value>
+  </data>
+  <data name="codigo" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="confirmacaoPlanoDeConta" xml:space="preserve">
+    <value>Tem certeza que deseja apagar o Plano de Conta?</value>
+  </data>
+  <data name="detalhesPlanoDeConta" xml:space="preserve">
+    <value>Detalhes do Plano de Conta</value>
+  </data>
+  <data name="editarPlanoDeConta" xml:space="preserve">
+    <value>Editar Plano de Conta</value>
+  </data>
+  <data name="opcoes" xml:space="preserve">
+    <value>Opções</value>
+  </data>
+  <data name="planoDeConta" xml:space="preserve">
+    <value>Plano de Conta</value>
+  </data>
+  <data name="EmAnalise" xml:space="preserve">
+    <value>Em Análise</value>
+  </data>
+  <data name="Resolvido" xml:space="preserve">
+    <value>Resolvido</value>
+  </data>
+  <data name="status_atentimento" xml:space="preserve">
+    <value>Status Atentimento</value>
+  </data>
+  <data name="atendimento" xml:space="preserve">
+    <value>Atendimento</value>
+  </data>
+  <data name="nome_pessoa" xml:space="preserve">
+    <value>Nome Pessoa</value>
+  </data>
+  <data name="Barulho" xml:space="preserve">
+    <value>Barulho</value>
+  </data>
+  <data name="DanoAoPatrimonio" xml:space="preserve">
+    <value>Dano ao Patrimônio</value>
+  </data>
+  <data name="EmExecucao" xml:space="preserve">
+    <value>Em Execução</value>
+  </data>
+  <data name="Finalizada" xml:space="preserve">
+    <value>Finalizada</value>
+  </data>
+  <data name="Outros" xml:space="preserve">
+    <value>Outros</value>
+  </data>
+  <data name="outros_tipos_ocorrencia" xml:space="preserve">
+    <value>Outros Tipos de Ocorrência</value>
+  </data>
+  <data name="Roubo" xml:space="preserve">
+    <value>Roubo</value>
+  </data>
+  <data name="Rresolvida" xml:space="preserve">
+    <value>Resolvida</value>
+  </data>
+  <data name="status_ocorrencia" xml:space="preserve">
+    <value>Status Ocorrência</value>
+  </data>
+  <data name="tipo_ocorrencia" xml:space="preserve">
+    <value>Tipo de Ocorrência</value>
+  </data>
+  <data name="nome_adm" xml:space="preserve">
+    <value>Nome Administradora</value>
+  </data>
+  <data name="apagarSetor" xml:space="preserve">
+    <value>Apagar Setor</value>
+  </data>
+  <data name="confirmacaoSetor" xml:space="preserve">
+    <value>Tem certeza que deseja apagar este setor?</value>
+  </data>
+  <data name="detalhesSetor" xml:space="preserve">
+    <value>Detalhes do Setor</value>
+  </data>
+  <data name="editarSetor" xml:space="preserve">
+    <value>Editar Setor</value>
+  </data>
+  <data name="setor" xml:space="preserve">
+    <value>Setor</value>
+  </data>
+  <data name="apagarFuncionario" xml:space="preserve">
+    <value>Apagar Funcionário</value>
+  </data>
+  <data name="confirmacaoFuncionario" xml:space="preserve">
+    <value>Tem certeza que deseja apagar este funcionário?</value>
+  </data>
+  <data name="detalhesFuncionario" xml:space="preserve">
+    <value>Detalhes do Funcionário</value>
+  </data>
+  <data name="editarFuncionario" xml:space="preserve">
+    <value>Editar Funcionário</value>
+  </data>
+  <data name="frequencia" xml:space="preserve">
+    <value>Frequência</value>
+  </data>
+  <data name="funcionario" xml:space="preserve">
+    <value>Funcionário</value>
+  </data>
+  <data name="funcionarios" xml:space="preserve">
+    <value>Funcionários</value>
+  </data>
+  <data name="horarioPermitido" xml:space="preserve">
+    <value>Horário Permitido</value>
+  </data>
+  <data name="nomePessoa" xml:space="preserve">
+    <value>Nome da Pessoa</value>
+  </data>
+  <data name="nomeSetor" xml:space="preserve">
+    <value>Nome do Setor</value>
+  </data>
+  <data name="ocupacao" xml:space="preserve">
+    <value>Ocupação</value>
+  </data>
+  <data name="pontuacao" xml:space="preserve">
+    <value>Pontuação</value>
+  </data>
+  <data name="apagarGrupoPlanoDeConta" xml:space="preserve">
+    <value>Apagar Grupo Plano de Contas</value>
+  </data>
+  <data name="confirmacaoGrupoPlanoDeConta" xml:space="preserve">
+    <value>Tem certeza que deseja apagar esse grupo plano de conta?</value>
+  </data>
+  <data name="descricaoPlanoDeConta" xml:space="preserve">
+    <value>Descrição do Plano de Conta</value>
+  </data>
+  <data name="detalhesGrupoPlanoDeContas" xml:space="preserve">
+    <value>Detalhes do Grupo Plano de Contas</value>
+  </data>
+  <data name="editarGrupoPlanoDeContas" xml:space="preserve">
+    <value>Editar Grupo Plano de Contas</value>
+  </data>
+  <data name="grupoPlanoDeConta" xml:space="preserve">
+    <value>Grupo Plano de Conta</value>
+  </data>
+  <data name="grupoPlanoDeContas" xml:space="preserve">
+    <value>Grupo Plano de Contas</value>
+  </data>
+  <data name="tipoPlanoDeConta" xml:space="preserve">
+    <value>Tipo do Plano de Conta</value>
+  </data>
+  <data name="campo_requerido" xml:space="preserve">
+    <value>Campo Requerido</value>
+  </data>
+  <data name="confirmarEmail" xml:space="preserve">
+    <value>Confirme o E-mail</value>
+  </data>
+  <data name="confirmeSenha" xml:space="preserve">
+    <value>Confirme a Senha</value>
+  </data>
+  <data name="emailNaoCoincidem" xml:space="preserve">
+    <value>Os E-mail não coincidem</value>
+  </data>
+  <data name="email_invalido" xml:space="preserve">
+    <value>E-mail Inválido</value>
+  </data>
+  <data name="enderecoEmail" xml:space="preserve">
+    <value>Endereço de E-mail</value>
+  </data>
+  <data name="nomeUsuario" xml:space="preserve">
+    <value>Nome do Usuário</value>
+  </data>
+  <data name="senhaConfSenhaNaoCoincidem" xml:space="preserve">
+    <value>A senha e a confirmação da senha não coincidem</value>
+  </data>
+  <data name="senhaCurta" xml:space="preserve">
+    <value>Senha Curta</value>
+  </data>
+  <data name="apagarComentario" xml:space="preserve">
+    <value>Apagar Comentário</value>
+  </data>
+  <data name="comentario" xml:space="preserve">
+    <value>Comentário</value>
+  </data>
+  <data name="comentarios" xml:space="preserve">
+    <value>Comentarios</value>
+  </data>
+  <data name="dataPublicacao" xml:space="preserve">
+    <value>Data de Publicação</value>
+  </data>
+  <data name="detalhesComentario" xml:space="preserve">
+    <value>Detalhes do Comentário</value>
+  </data>
+  <data name="detalhesPostagem" xml:space="preserve">
+    <value>Detalhes da Postagem</value>
+  </data>
+  <data name="editarComentario" xml:space="preserve">
+    <value>Editar Comentário</value>
+  </data>
+  <data name="editarPostagem" xml:space="preserve">
+    <value>Editar Postagem</value>
+  </data>
+  <data name="postagem" xml:space="preserve">
+    <value>Postagem</value>
+  </data>
+  <data name="tituloPostagem" xml:space="preserve">
+    <value>Título da Postagem</value>
+  </data>
+  <data name="comentar" xml:space="preserve">
+    <value>Comentar</value>
+  </data>
+  <data name="meusComentarios" xml:space="preserve">
+    <value>Meus Comentários</value>
+  </data>
+  <data name="visualizarComentarios" xml:space="preserve">
+    <value>Visualizar Comentários</value>
+  </data>
+  <data name="minhasPostagens" xml:space="preserve">
+    <value>Minhas Postagens</value>
+  </data>
+  <data name="alocar" xml:space="preserve">
+    <value>Alocar</value>
+  </data>
+  <data name="alocar_pessoa_moradia" xml:space="preserve">
+    <value>Alocar Pessoa em Moradia</value>
+  </data>
+  <data name="statusEnquente" xml:space="preserve">
+    <value>Status da Enquente</value>
+  </data>
+  <data name="descricaoGrupoPlanoContas" xml:space="preserve">
+    <value>Descrição do Grupo de Plano de Contas</value>
+  </data>
+  <data name="apagarPontuacao" xml:space="preserve">
+    <value>Apagar Pontuação</value>
+  </data>
+  <data name="Cinco" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="confirmacaoApagarPontuacao" xml:space="preserve">
+    <value>Tem certeza que deseja remover esssa pontuação?</value>
+  </data>
+  <data name="detalhesPontuacao" xml:space="preserve">
+    <value>Detalhes da Pontuação</value>
+  </data>
+  <data name="Dez" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="Dois" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="editarPontuacao" xml:space="preserve">
+    <value>Editar Pontuação</value>
+  </data>
+  <data name="novaPontuacao" xml:space="preserve">
+    <value>Nova Pontuação</value>
+  </data>
+  <data name="Nove" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="Oito" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Quatro" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Seis" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Sete" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Tres" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Um" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Zero" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ativo" xml:space="preserve">
+    <value>Ativo</value>
+  </data>
+  <data name="perfil" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+  <data name="pontuacoes" xml:space="preserve">
+    <value>Pontuações</value>
+  </data>
+  <data name="pontuar" xml:space="preserve">
+    <value>Pontuar</value>
+  </data>
+  <data name="pontuarPessoa" xml:space="preserve">
+    <value>Pontuar Pessoa</value>
+  </data>
+  <data name="visualizarPontuacoes" xml:space="preserve">
+    <value>Visualizar Pontuações</value>
+  </data>
+  <data name="acessoVeiculo" xml:space="preserve">
+    <value>Acesso de Veículo</value>
+  </data>
+  <data name="registrar" xml:space="preserve">
+    <value>Registrar</value>
+  </data>
+  <data name="registrarAcessoVeiculo" xml:space="preserve">
+    <value>Registrar Acesso de Veículo</value>
+  </data>
+  <data name="alterar" xml:space="preserve">
+    <value>Alterar</value>
+  </data>
+  <data name="gerarRelatorio" xml:space="preserve">
+    <value>Gerar Relatório</value>
+  </data>
+  <data name="selecionar" xml:space="preserve">
+    <value>Selecionar</value>
+  </data>
+  <data name="selecionarPerfil" xml:space="preserve">
+    <value>Selecionar Perfil</value>
+  </data>
+  <data name="definirProprietario" xml:space="preserve">
+    <value>Definir Propietário</value>
+  </data>
+  <data name="definirSindico" xml:space="preserve">
+    <value>Definir Síndico</value>
+  </data>
+  <data name="novoProprietario" xml:space="preserve">
+    <value>Novo Proprietário</value>
+  </data>
+  <data name="proprietarios" xml:space="preserve">
+    <value>Proprietários</value>
+  </data>
+  <data name="remover" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="removerSindico" xml:space="preserve">
+    <value>Remover Síndico</value>
+  </data>
+  <data name="definirResponsavel" xml:space="preserve">
+    <value>Definir Responsável</value>
+  </data>
+  <data name="novoResponsavel" xml:space="preserve">
+    <value>Novo Responsável</value>
+  </data>
+  <data name="responsaveis" xml:space="preserve">
+    <value>Responsáveis</value>
+  </data>
+  <data name="responsavel" xml:space="preserve">
+    <value>Responsável</value>
+  </data>
+  <data name="novoSindico" xml:space="preserve">
+    <value>Novo Síndico</value>
+  </data>
+  <data name="sindicos" xml:space="preserve">
+    <value>Síndicos</value>
+  </data>
+  <data name="acessosVisitante" xml:space="preserve">
+    <value>Acessos do Visitante</value>
+  </data>
+  <data name="CincoHora" xml:space="preserve">
+    <value>05:00</value>
+  </data>
+  <data name="definirMorador" xml:space="preserve">
+    <value>Definir Morador</value>
+  </data>
+  <data name="definirVisitante" xml:space="preserve">
+    <value>DefinirVisitante</value>
+  </data>
+  <data name="DezenoveHora" xml:space="preserve">
+    <value>19:00</value>
+  </data>
+  <data name="DezesseisHora" xml:space="preserve">
+    <value>16:00</value>
+  </data>
+  <data name="DezesseteHora" xml:space="preserve">
+    <value>17:00</value>
+  </data>
+  <data name="DezHora" xml:space="preserve">
+    <value>10:00</value>
+  </data>
+  <data name="DezoitoHora" xml:space="preserve">
+    <value>18:00</value>
+  </data>
+  <data name="dia" xml:space="preserve">
+    <value>Dia</value>
+  </data>
+  <data name="Domingo" xml:space="preserve">
+    <value>Domingo</value>
+  </data>
+  <data name="DozeHora" xml:space="preserve">
+    <value>12:00</value>
+  </data>
+  <data name="DuasHora" xml:space="preserve">
+    <value>02:00</value>
+  </data>
+  <data name="horaEntrada" xml:space="preserve">
+    <value>Horário de Entrada</value>
+  </data>
+  <data name="horaSaida" xml:space="preserve">
+    <value>Horário de Saída</value>
+  </data>
+  <data name="morador" xml:space="preserve">
+    <value>Morador</value>
+  </data>
+  <data name="moradores" xml:space="preserve">
+    <value>Moradores</value>
+  </data>
+  <data name="NoveHora" xml:space="preserve">
+    <value>09:00</value>
+  </data>
+  <data name="novoAcesso" xml:space="preserve">
+    <value>Novo Acesso</value>
+  </data>
+  <data name="novoMorador" xml:space="preserve">
+    <value>Novo Morador</value>
+  </data>
+  <data name="novoVisitante" xml:space="preserve">
+    <value>Novo Visitante</value>
+  </data>
+  <data name="OitoHora" xml:space="preserve">
+    <value>08:00</value>
+  </data>
+  <data name="OnzeHora" xml:space="preserve">
+    <value>11:00</value>
+  </data>
+  <data name="Quarta" xml:space="preserve">
+    <value>Quarta</value>
+  </data>
+  <data name="QuatorzeHora" xml:space="preserve">
+    <value>14:00</value>
+  </data>
+  <data name="QuatroHora" xml:space="preserve">
+    <value>04:00</value>
+  </data>
+  <data name="Quinta" xml:space="preserve">
+    <value>Quinta</value>
+  </data>
+  <data name="QuinzeHora" xml:space="preserve">
+    <value>15:00</value>
+  </data>
+  <data name="restrito" xml:space="preserve">
+    <value>Acesso Restrito</value>
+  </data>
+  <data name="Sabado" xml:space="preserve">
+    <value>Sábado</value>
+  </data>
+  <data name="Segunda" xml:space="preserve">
+    <value>Segunda</value>
+  </data>
+  <data name="SeisHora" xml:space="preserve">
+    <value>06:00</value>
+  </data>
+  <data name="SeteHora" xml:space="preserve">
+    <value>07:00</value>
+  </data>
+  <data name="Sexta" xml:space="preserve">
+    <value>Sexta</value>
+  </data>
+  <data name="Terca" xml:space="preserve">
+    <value>Terça</value>
+  </data>
+  <data name="TresHora" xml:space="preserve">
+    <value>03:00</value>
+  </data>
+  <data name="TrezeHora" xml:space="preserve">
+    <value>13:00</value>
+  </data>
+  <data name="UmaHora" xml:space="preserve">
+    <value>01:00</value>
+  </data>
+  <data name="VinteDuasHora" xml:space="preserve">
+    <value>22:00</value>
+  </data>
+  <data name="VinteHora" xml:space="preserve">
+    <value>20:00</value>
+  </data>
+  <data name="VinteQuatroHora" xml:space="preserve">
+    <value>24:00</value>
+  </data>
+  <data name="VinteTresHora" xml:space="preserve">
+    <value>23:00</value>
+  </data>
+  <data name="VinteUmHora" xml:space="preserve">
+    <value>21:00</value>
+  </data>
+  <data name="visitante" xml:space="preserve">
+    <value>Visitante</value>
+  </data>
+  <data name="visitantes" xml:space="preserve">
+    <value>Visitantes</value>
+  </data>
+  <data name="visualizarAcessos" xml:space="preserve">
+    <value>Visualizar Acessos</value>
+  </data>
+  <data name="ZeroHora" xml:space="preserve">
+    <value>00:00</value>
+  </data>
+  <data name="novaRestricao" xml:space="preserve">
+    <value>Nova Restrição</value>
+  </data>
+  <data name="numeroMoradia" xml:space="preserve">
+    <value>Número da Moradia</value>
+  </data>
+  <data name="removerRestricao" xml:space="preserve">
+    <value>Remover Restrição</value>
+  </data>
+  <data name="restricoesAcesso" xml:space="preserve">
+    <value>Restrições de Acesso</value>
+  </data>
+  <data name="restricoesAcessoVisitante" xml:space="preserve">
+    <value>Restrições de Acesso do Visitante</value>
+  </data>
+  <data name="definirProfissional" xml:space="preserve">
+    <value>Definir Profissional</value>
+  </data>
+  <data name="novoProfissional" xml:space="preserve">
+    <value>Novo Profissional</value>
+  </data>
+  <data name="profissionais" xml:space="preserve">
+    <value>Profissionais</value>
+  </data>
+  <data name="profissional" xml:space="preserve">
+    <value>Profissional</value>
+  </data>
+  <data name="definirFuncionario" xml:space="preserve">
+    <value>Definir Funcionário</value>
+  </data>
+  <data name="novoFuncionario" xml:space="preserve">
+    <value>Novo Funcionário</value>
+  </data>
+  <data name="alterarPerfil" xml:space="preserve">
+    <value>Alterar Perfil</value>
+  </data>
+</root>

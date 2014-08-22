@@ -1,0 +1,2516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="residentialbdModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="residentialbdModelStoreContainer">
+          <EntitySet Name="my_aspnet_applications" EntityType="residentialbdModel.Store.my_aspnet_applications" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="my_aspnet_membership" EntityType="residentialbdModel.Store.my_aspnet_membership" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="my_aspnet_profiles" EntityType="residentialbdModel.Store.my_aspnet_profiles" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="my_aspnet_roles" EntityType="residentialbdModel.Store.my_aspnet_roles" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="my_aspnet_sessioncleanup" EntityType="residentialbdModel.Store.my_aspnet_sessioncleanup" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="my_aspnet_sessions" EntityType="residentialbdModel.Store.my_aspnet_sessions" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="my_aspnet_users" EntityType="residentialbdModel.Store.my_aspnet_users" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="my_aspnet_usersinroles" EntityType="residentialbdModel.Store.my_aspnet_usersinroles" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_acessocondominio" EntityType="residentialbdModel.Store.tb_acessocondominio" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_acessoveiculo" EntityType="residentialbdModel.Store.tb_acessoveiculo" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_areapublica" EntityType="residentialbdModel.Store.tb_areapublica" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_atendimento" EntityType="residentialbdModel.Store.tb_atendimento" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_bloco" EntityType="residentialbdModel.Store.tb_bloco" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_comentario" EntityType="residentialbdModel.Store.tb_comentario" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_condominio" EntityType="residentialbdModel.Store.tb_condominio" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_enquete" EntityType="residentialbdModel.Store.tb_enquete" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_grupoplanocontas" EntityType="residentialbdModel.Store.tb_grupoplanocontas" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_moradia" EntityType="residentialbdModel.Store.tb_moradia" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_movimentacaofinanceira" EntityType="residentialbdModel.Store.tb_movimentacaofinanceira" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_ocorrencia" EntityType="residentialbdModel.Store.tb_ocorrencia" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_opcoesenquete" EntityType="residentialbdModel.Store.tb_opcoesenquete" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_pessoa" EntityType="residentialbdModel.Store.tb_pessoa" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_pessoamoradia" EntityType="residentialbdModel.Store.tb_pessoamoradia" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_planodeconta" EntityType="residentialbdModel.Store.tb_planodeconta" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_pontuacaopessoa" EntityType="residentialbdModel.Store.tb_pontuacaopessoa" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_postagem" EntityType="residentialbdModel.Store.tb_postagem" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_reservaambiente" EntityType="residentialbdModel.Store.tb_reservaambiente" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_restricaoacesso" EntityType="residentialbdModel.Store.tb_restricaoacesso" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_setor" EntityType="residentialbdModel.Store.tb_setor" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_veiculo" EntityType="residentialbdModel.Store.tb_veiculo" store:Type="Tables" Schema="residentialbd" />
+          <EntitySet Name="tb_votoenquete" EntityType="residentialbdModel.Store.tb_votoenquete" store:Type="Tables" Schema="residentialbd" />
+          <AssociationSet Name="fk_tb_acessocondominio_tb_condominio1" Association="residentialbdModel.Store.fk_tb_acessocondominio_tb_condominio1">
+            <End Role="tb_condominio" EntitySet="tb_condominio" />
+            <End Role="tb_acessocondominio" EntitySet="tb_acessocondominio" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_acessocondominio_tb_pessoa1" Association="residentialbdModel.Store.fk_tb_acessocondominio_tb_pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_acessocondominio" EntitySet="tb_acessocondominio" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_movimentacaofinanceira_tb_pessoa1" Association="residentialbdModel.Store.fk_tb_movimentacaofinanceira_tb_pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_movimentacaofinanceira" EntitySet="tb_movimentacaofinanceira" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_movimentacaofinanceira_tb_planodeconta1" Association="residentialbdModel.Store.fk_tb_movimentacaofinanceira_tb_planodeconta1">
+            <End Role="tb_planodeconta" EntitySet="tb_planodeconta" />
+            <End Role="tb_movimentacaofinanceira" EntitySet="tb_movimentacaofinanceira" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_movimentacaofinanceira_tb_reservaambiente1" Association="residentialbdModel.Store.fk_tb_movimentacaofinanceira_tb_reservaambiente1">
+            <End Role="tb_reservaambiente" EntitySet="tb_reservaambiente" />
+            <End Role="tb_movimentacaofinanceira" EntitySet="tb_movimentacaofinanceira" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_perfilpessoa_my_aspnet_roles1" Association="residentialbdModel.Store.fk_tb_perfilpessoa_my_aspnet_roles1">
+            <End Role="my_aspnet_roles" EntitySet="my_aspnet_roles" />
+            <End Role="tb_pessoamoradia" EntitySet="tb_pessoamoradia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_perfilpessoa_tb_moradia1" Association="residentialbdModel.Store.fk_tb_perfilpessoa_tb_moradia1">
+            <End Role="tb_moradia" EntitySet="tb_moradia" />
+            <End Role="tb_pessoamoradia" EntitySet="tb_pessoamoradia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_perfilpessoa_tb_pessoa1" Association="residentialbdModel.Store.fk_tb_perfilpessoa_tb_pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_pessoamoradia" EntitySet="tb_pessoamoradia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_pessoa_my_aspnet_users1" Association="residentialbdModel.Store.fk_tb_pessoa_my_aspnet_users1">
+            <End Role="my_aspnet_users" EntitySet="my_aspnet_users" />
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_pessoa_tb_setor1" Association="residentialbdModel.Store.fk_tb_pessoa_tb_setor1">
+            <End Role="tb_setor" EntitySet="tb_setor" />
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_planodeconta_tb_grupoplanocontas1" Association="residentialbdModel.Store.fk_tb_planodeconta_tb_grupoplanocontas1">
+            <End Role="tb_grupoplanocontas" EntitySet="tb_grupoplanocontas" />
+            <End Role="tb_planodeconta" EntitySet="tb_planodeconta" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1" Association="residentialbdModel.Store.fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_pontuacaopessoa" EntitySet="tb_pontuacaopessoa" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_restricaoacesso_tb_moradia1" Association="residentialbdModel.Store.fk_tb_restricaoacesso_tb_moradia1">
+            <End Role="tb_moradia" EntitySet="tb_moradia" />
+            <End Role="tb_restricaoacesso" EntitySet="tb_restricaoacesso" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_restricaoacesso_tb_pessoa1" Association="residentialbdModel.Store.fk_tb_restricaoacesso_tb_pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_restricaoacesso" EntitySet="tb_restricaoacesso" />
+          </AssociationSet>
+          <AssociationSet Name="tb_acessoveiculo_tb_veiculo1" Association="residentialbdModel.Store.tb_acessoveiculo_tb_veiculo1">
+            <End Role="tb_veiculo" EntitySet="tb_veiculo" />
+            <End Role="tb_acessoveiculo" EntitySet="tb_acessoveiculo" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Atendimento_TB_Pessoa1" Association="residentialbdModel.Store.TB_Atendimento_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_atendimento" EntitySet="tb_atendimento" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Bloco_TB_Condominio1" Association="residentialbdModel.Store.TB_Bloco_TB_Condominio1">
+            <End Role="tb_condominio" EntitySet="tb_condominio" />
+            <End Role="tb_bloco" EntitySet="tb_bloco" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Comentario_TB_Pessoa1" Association="residentialbdModel.Store.TB_Comentario_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_comentario" EntitySet="tb_comentario" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Comentario_TB_Postagem1" Association="residentialbdModel.Store.TB_Comentario_TB_Postagem1">
+            <End Role="tb_postagem" EntitySet="tb_postagem" />
+            <End Role="tb_comentario" EntitySet="tb_comentario" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Enquete_TB_Pessoa1" Association="residentialbdModel.Store.TB_Enquete_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_enquete" EntitySet="tb_enquete" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Espaco_TB_Condominio1" Association="residentialbdModel.Store.TB_Espaco_TB_Condominio1">
+            <End Role="tb_condominio" EntitySet="tb_condominio" />
+            <End Role="tb_areapublica" EntitySet="tb_areapublica" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Moradia_TB_Bloco1" Association="residentialbdModel.Store.TB_Moradia_TB_Bloco1">
+            <End Role="tb_bloco" EntitySet="tb_bloco" />
+            <End Role="tb_moradia" EntitySet="tb_moradia" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Ocorrencia_TB_Pessoa1" Association="residentialbdModel.Store.TB_Ocorrencia_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_ocorrencia" EntitySet="tb_ocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="TB_OpcoesEnquete_TB_Enquete1" Association="residentialbdModel.Store.TB_OpcoesEnquete_TB_Enquete1">
+            <End Role="tb_enquete" EntitySet="tb_enquete" />
+            <End Role="tb_opcoesenquete" EntitySet="tb_opcoesenquete" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Postagem_TB_Pessoa1" Association="residentialbdModel.Store.TB_Postagem_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_postagem" EntitySet="tb_postagem" />
+          </AssociationSet>
+          <AssociationSet Name="tb_reservaambiente_tb_areapublica1" Association="residentialbdModel.Store.tb_reservaambiente_tb_areapublica1">
+            <End Role="tb_areapublica" EntitySet="tb_areapublica" />
+            <End Role="tb_reservaambiente" EntitySet="tb_reservaambiente" />
+          </AssociationSet>
+          <AssociationSet Name="TB_ReservaAmbiente_TB_Pessoa1" Association="residentialbdModel.Store.TB_ReservaAmbiente_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_reservaambiente" EntitySet="tb_reservaambiente" />
+          </AssociationSet>
+          <AssociationSet Name="tb_veiculo_tb_moradia1" Association="residentialbdModel.Store.tb_veiculo_tb_moradia1">
+            <End Role="tb_moradia" EntitySet="tb_moradia" />
+            <End Role="tb_veiculo" EntitySet="tb_veiculo" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Veiculo_TB_Pessoa1" Association="residentialbdModel.Store.TB_Veiculo_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_veiculo" EntitySet="tb_veiculo" />
+          </AssociationSet>
+          <AssociationSet Name="tb_votoenquete_tb_enquete1" Association="residentialbdModel.Store.tb_votoenquete_tb_enquete1">
+            <End Role="tb_enquete" EntitySet="tb_enquete" />
+            <End Role="tb_votoenquete" EntitySet="tb_votoenquete" />
+          </AssociationSet>
+          <AssociationSet Name="TB_VotoEnquete_TB_OpcoesEnquete1" Association="residentialbdModel.Store.TB_VotoEnquete_TB_OpcoesEnquete1">
+            <End Role="tb_opcoesenquete" EntitySet="tb_opcoesenquete" />
+            <End Role="tb_votoenquete" EntitySet="tb_votoenquete" />
+          </AssociationSet>
+          <AssociationSet Name="TB_VotoEnquete_TB_Pessoa1" Association="residentialbdModel.Store.TB_VotoEnquete_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_votoenquete" EntitySet="tb_votoenquete" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="my_aspnet_applications">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" MaxLength="256" />
+          <Property Name="description" Type="varchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="my_aspnet_membership">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="int" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="128" />
+          <Property Name="Comment" Type="varchar" MaxLength="255" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordKey" Type="char" MaxLength="32" />
+          <Property Name="PasswordFormat" Type="tinyint" />
+          <Property Name="PasswordQuestion" Type="varchar" MaxLength="255" />
+          <Property Name="PasswordAnswer" Type="varchar" MaxLength="255" />
+          <Property Name="IsApproved" Type="bool" />
+          <Property Name="LastActivityDate" Type="datetime" />
+          <Property Name="LastLoginDate" Type="datetime" />
+          <Property Name="LastPasswordChangedDate" Type="datetime" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="IsLockedOut" Type="bool" />
+          <Property Name="LastLockedOutDate" Type="datetime" />
+          <Property Name="FailedPasswordAttemptCount" Type="uint" />
+          <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" />
+          <Property Name="FailedPasswordAnswerAttemptCount" Type="uint" />
+          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" />
+        </EntityType>
+        <EntityType Name="my_aspnet_profiles">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="int" Nullable="false" />
+          <Property Name="valueindex" Type="longtext" />
+          <Property Name="stringdata" Type="longtext" />
+          <Property Name="binarydata" Type="longblob" />
+          <Property Name="lastUpdatedDate" Type="timestamp" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="my_aspnet_roles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="applicationId" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="my_aspnet_sessioncleanup">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="LastRun" Type="datetime" Nullable="false" />
+          <Property Name="IntervalMinutes" Type="int" Nullable="false" />
+          <Property Name="ApplicationId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_sessions">
+          <Key>
+            <PropertyRef Name="SessionId" />
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Name="SessionId" Type="varchar" Nullable="false" MaxLength="191" />
+          <Property Name="ApplicationId" Type="int" Nullable="false" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="Expires" Type="datetime" Nullable="false" />
+          <Property Name="LockDate" Type="datetime" Nullable="false" />
+          <Property Name="LockId" Type="int" Nullable="false" />
+          <Property Name="Timeout" Type="int" Nullable="false" />
+          <Property Name="Locked" Type="bool" Nullable="false" />
+          <Property Name="SessionItems" Type="longblob" />
+          <Property Name="Flags" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="applicationId" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="isAnonymous" Type="bool" Nullable="false" />
+          <Property Name="lastActivityDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="my_aspnet_usersinroles">
+          <Key>
+            <PropertyRef Name="userId" />
+            <PropertyRef Name="roleId" />
+          </Key>
+          <Property Name="userId" Type="int" Nullable="false" />
+          <Property Name="roleId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_acessocondominio">
+          <Key>
+            <PropertyRef Name="IdAcessoCondominio" />
+          </Key>
+          <Property Name="IdAcessoCondominio" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdPessoa" Type="int" Nullable="false" />
+          <Property Name="IdCondominio" Type="int" Nullable="false" />
+          <Property Name="DataHora" Type="datetime" Nullable="false" />
+          <Property Name="TipoAcesso" Type="enum" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_acessoveiculo">
+          <Key>
+            <PropertyRef Name="IdAcessoVeiculo" />
+          </Key>
+          <Property Name="IdAcessoVeiculo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DataHora" Type="datetime" Nullable="false" />
+          <Property Name="IdVeiculo" Type="int" Nullable="false" />
+          <Property Name="TipoAcesso" Type="enum" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_areapublica">
+          <Key>
+            <PropertyRef Name="IdAreaPublica" />
+          </Key>
+          <Property Name="IdAreaPublica" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="Local" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="Tamanho" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="ValorReserva" Type="decimal" Nullable="false" />
+          <Property Name="IdCondominio" Type="int" Nullable="false" />
+          <Property Name="StatusAreaPublica" Type="enum" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_atendimento">
+          <Key>
+            <PropertyRef Name="IdAtendimento" />
+          </Key>
+          <Property Name="IdAtendimento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdPesssoa" Type="int" Nullable="false" />
+          <Property Name="Titulo" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Descricao" Type="varchar" Nullable="false" />
+          <Property Name="StatusAtendimento" Type="enum" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_bloco">
+          <Key>
+            <PropertyRef Name="IdBloco" />
+          </Key>
+          <Property Name="IdBloco" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdCondominio" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="QuantidadeAndares" Type="int" Nullable="false" />
+          <Property Name="QuantidadeMoradias" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_comentario">
+          <Key>
+            <PropertyRef Name="IdComentario" />
+          </Key>
+          <Property Name="IdComentario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdPostagem" Type="int" Nullable="false" />
+          <Property Name="IdPessoa" Type="int" Nullable="false" />
+          <Property Name="Comentario" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Data" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_condominio">
+          <Key>
+            <PropertyRef Name="IdCondominio" />
+          </Key>
+          <Property Name="IdCondominio" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Rua" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Numero" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Bairro" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Complemento" Type="varchar" MaxLength="100" />
+          <Property Name="CEP" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="Cidade" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Estado" Type="char" Nullable="false" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tb_enquete">
+          <Key>
+            <PropertyRef Name="IdEnquete" />
+          </Key>
+          <Property Name="IdEnquete" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdPesssoa" Type="int" Nullable="false" />
+          <Property Name="Titulo" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="DataInicio" Type="datetime" Nullable="false" />
+          <Property Name="DataFim" Type="datetime" Nullable="false" />
+          <Property Name="StatusEnquete" Type="enum" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_grupoplanocontas">
+          <Key>
+            <PropertyRef Name="IdGrupoPlanoDeConta" />
+          </Key>
+          <Property Name="IdGrupoPlanoDeConta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TipoPlanoDeConta" Type="enum" Nullable="false" />
+          <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tb_moradia">
+          <Key>
+            <PropertyRef Name="IdMoradia" />
+          </Key>
+          <Property Name="IdMoradia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdBloco" Type="int" Nullable="false" />
+          <Property Name="Andar" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="Numero" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="TipoMoradia" Type="enum" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_movimentacaofinanceira">
+          <Key>
+            <PropertyRef Name="IdMovimentacaoFinanceira" />
+          </Key>
+          <Property Name="IdMovimentacaoFinanceira" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Valor" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="DataRegistro" Type="datetime" Nullable="false" />
+          <Property Name="NotaFiscal" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descricao" Type="varchar" MaxLength="200" />
+          <Property Name="StatusMovimentacao" Type="enum" Nullable="false" />
+          <Property Name="Baixa" Type="bool" Nullable="false" />
+          <Property Name="IdPlanoDeConta" Type="int" Nullable="false" />
+          <Property Name="IdReservaAmbiente" Type="int" Nullable="false" />
+          <Property Name="IdPessoa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_ocorrencia">
+          <Key>
+            <PropertyRef Name="IdOcorrencia" />
+          </Key>
+          <Property Name="IdOcorrencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdPessoa" Type="int" Nullable="false" />
+          <Property Name="Titulo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="DataCriacao" Type="datetime" Nullable="false" />
+          <Property Name="TipoOcorrencia" Type="enum" Nullable="false" />
+          <Property Name="StatusOcorrencia" Type="enum" Nullable="false" />
+          <Property Name="OutrosTiposOcorrencia" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tb_opcoesenquete">
+          <Key>
+            <PropertyRef Name="IdOpcao" />
+          </Key>
+          <Property Name="IdOpcao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdEnquete" Type="int" Nullable="false" />
+          <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_pessoa">
+          <Key>
+            <PropertyRef Name="IdPessoa" />
+          </Key>
+          <Property Name="IdPessoa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CPF" Type="varchar" Nullable="false" MaxLength="11" />
+          <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="RG" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="Sexo" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="TelefoneFixo" Type="varchar" MaxLength="12" />
+          <Property Name="TelefoneCelular" Type="varchar" MaxLength="12" />
+          <Property Name="Rua" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Numero" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Complemento" Type="varchar" MaxLength="100" />
+          <Property Name="Bairro" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CEP" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="Cidade" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Estado" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="IdUser" Type="int" Nullable="false" />
+          <Property Name="IdSetor" Type="int" Nullable="false" />
+          <Property Name="Ativa" Type="bool" />
+        </EntityType>
+        <EntityType Name="tb_pessoamoradia">
+          <Key>
+            <PropertyRef Name="IdPessoa" />
+            <PropertyRef Name="IdPerfil" />
+            <PropertyRef Name="IdMoradia" />
+          </Key>
+          <Property Name="IdPessoa" Type="int" Nullable="false" />
+          <Property Name="Ativo" Type="bool" Nullable="false" />
+          <Property Name="IdPerfil" Type="int" Nullable="false" />
+          <Property Name="IdMoradia" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_planodeconta">
+          <Key>
+            <PropertyRef Name="IdPlanoDeConta" />
+          </Key>
+          <Property Name="IdPlanoDeConta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="IdTipoPlanoDeConta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_pontuacaopessoa">
+          <Key>
+            <PropertyRef Name="IdPontuacaoPessoa" />
+            <PropertyRef Name="IdPessoa" />
+          </Key>
+          <Property Name="IdPontuacaoPessoa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdPessoa" Type="int" Nullable="false" />
+          <Property Name="Comentario" Type="varchar" MaxLength="250" />
+          <Property Name="Pontuacao" Type="enum" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_postagem">
+          <Key>
+            <PropertyRef Name="IdPostagem" />
+          </Key>
+          <Property Name="IdPostagem" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdPessoa" Type="int" Nullable="false" />
+          <Property Name="Titulo" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="DataCriacao" Type="datetime" Nullable="false" />
+          <Property Name="DataEncerramento" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tb_reservaambiente">
+          <Key>
+            <PropertyRef Name="IdReservaAmbiente" />
+          </Key>
+          <Property Name="IdReservaAmbiente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdPesssoa" Type="int" Nullable="false" />
+          <Property Name="DataInicio" Type="datetime" Nullable="false" />
+          <Property Name="DataFim" Type="datetime" Nullable="false" />
+          <Property Name="IdAreaPublica" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_restricaoacesso">
+          <Key>
+            <PropertyRef Name="IdRestricaoAcesso" />
+          </Key>
+          <Property Name="IdRestricaoAcesso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdPessoa" Type="int" Nullable="false" />
+          <Property Name="IdMoradia" Type="int" Nullable="false" />
+          <Property Name="Restrito" Type="bool" Nullable="false" />
+          <Property Name="Dia" Type="enum" Nullable="false" />
+          <Property Name="HoraEntrada" Type="enum" />
+          <Property Name="HoraSaida" Type="enum" />
+        </EntityType>
+        <EntityType Name="tb_setor">
+          <Key>
+            <PropertyRef Name="IdSetor" />
+          </Key>
+          <Property Name="IdSetor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tb_veiculo">
+          <Key>
+            <PropertyRef Name="IdVeiculo" />
+          </Key>
+          <Property Name="IdVeiculo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdPesssoa" Type="int" Nullable="false" />
+          <Property Name="Placa" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="Modelo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Cor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="TipoVeiculo" Type="enum" Nullable="false" />
+          <Property Name="IdMoradia" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_votoenquete">
+          <Key>
+            <PropertyRef Name="IdVoto" />
+          </Key>
+          <Property Name="IdVoto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdPessoa" Type="int" Nullable="false" />
+          <Property Name="IdEnquete" Type="int" Nullable="false" />
+          <Property Name="IdOpcao" Type="int" Nullable="false" />
+          <Property Name="DataVoto" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_tb_acessocondominio_tb_condominio1">
+          <End Role="tb_condominio" Type="residentialbdModel.Store.tb_condominio" Multiplicity="1" />
+          <End Role="tb_acessocondominio" Type="residentialbdModel.Store.tb_acessocondominio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_condominio">
+              <PropertyRef Name="IdCondominio" />
+            </Principal>
+            <Dependent Role="tb_acessocondominio">
+              <PropertyRef Name="IdCondominio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_acessocondominio_tb_pessoa1">
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_acessocondominio" Type="residentialbdModel.Store.tb_acessocondominio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_acessocondominio">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_movimentacaofinanceira_tb_pessoa1">
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_movimentacaofinanceira" Type="residentialbdModel.Store.tb_movimentacaofinanceira" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_movimentacaofinanceira">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_movimentacaofinanceira_tb_planodeconta1">
+          <End Role="tb_planodeconta" Type="residentialbdModel.Store.tb_planodeconta" Multiplicity="1" />
+          <End Role="tb_movimentacaofinanceira" Type="residentialbdModel.Store.tb_movimentacaofinanceira" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_planodeconta">
+              <PropertyRef Name="IdPlanoDeConta" />
+            </Principal>
+            <Dependent Role="tb_movimentacaofinanceira">
+              <PropertyRef Name="IdPlanoDeConta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_movimentacaofinanceira_tb_reservaambiente1">
+          <End Role="tb_reservaambiente" Type="residentialbdModel.Store.tb_reservaambiente" Multiplicity="1" />
+          <End Role="tb_movimentacaofinanceira" Type="residentialbdModel.Store.tb_movimentacaofinanceira" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_reservaambiente">
+              <PropertyRef Name="IdReservaAmbiente" />
+            </Principal>
+            <Dependent Role="tb_movimentacaofinanceira">
+              <PropertyRef Name="IdReservaAmbiente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_perfilpessoa_my_aspnet_roles1">
+          <End Role="my_aspnet_roles" Type="residentialbdModel.Store.my_aspnet_roles" Multiplicity="1" />
+          <End Role="tb_pessoamoradia" Type="residentialbdModel.Store.tb_pessoamoradia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="my_aspnet_roles">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_pessoamoradia">
+              <PropertyRef Name="IdPerfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_perfilpessoa_tb_moradia1">
+          <End Role="tb_moradia" Type="residentialbdModel.Store.tb_moradia" Multiplicity="1" />
+          <End Role="tb_pessoamoradia" Type="residentialbdModel.Store.tb_pessoamoradia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_moradia">
+              <PropertyRef Name="IdMoradia" />
+            </Principal>
+            <Dependent Role="tb_pessoamoradia">
+              <PropertyRef Name="IdMoradia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_perfilpessoa_tb_pessoa1">
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_pessoamoradia" Type="residentialbdModel.Store.tb_pessoamoradia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_pessoamoradia">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_pessoa_my_aspnet_users1">
+          <End Role="my_aspnet_users" Type="residentialbdModel.Store.my_aspnet_users" Multiplicity="1" />
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="my_aspnet_users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_pessoa">
+              <PropertyRef Name="IdUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_pessoa_tb_setor1">
+          <End Role="tb_setor" Type="residentialbdModel.Store.tb_setor" Multiplicity="1" />
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_setor">
+              <PropertyRef Name="IdSetor" />
+            </Principal>
+            <Dependent Role="tb_pessoa">
+              <PropertyRef Name="IdSetor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_planodeconta_tb_grupoplanocontas1">
+          <End Role="tb_grupoplanocontas" Type="residentialbdModel.Store.tb_grupoplanocontas" Multiplicity="1" />
+          <End Role="tb_planodeconta" Type="residentialbdModel.Store.tb_planodeconta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_grupoplanocontas">
+              <PropertyRef Name="IdGrupoPlanoDeConta" />
+            </Principal>
+            <Dependent Role="tb_planodeconta">
+              <PropertyRef Name="IdTipoPlanoDeConta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1">
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_pontuacaopessoa" Type="residentialbdModel.Store.tb_pontuacaopessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_pontuacaopessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_restricaoacesso_tb_moradia1">
+          <End Role="tb_moradia" Type="residentialbdModel.Store.tb_moradia" Multiplicity="1" />
+          <End Role="tb_restricaoacesso" Type="residentialbdModel.Store.tb_restricaoacesso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_moradia">
+              <PropertyRef Name="IdMoradia" />
+            </Principal>
+            <Dependent Role="tb_restricaoacesso">
+              <PropertyRef Name="IdMoradia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_restricaoacesso_tb_pessoa1">
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_restricaoacesso" Type="residentialbdModel.Store.tb_restricaoacesso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_restricaoacesso">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_acessoveiculo_tb_veiculo1">
+          <End Role="tb_veiculo" Type="residentialbdModel.Store.tb_veiculo" Multiplicity="1" />
+          <End Role="tb_acessoveiculo" Type="residentialbdModel.Store.tb_acessoveiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_veiculo">
+              <PropertyRef Name="IdVeiculo" />
+            </Principal>
+            <Dependent Role="tb_acessoveiculo">
+              <PropertyRef Name="IdVeiculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Atendimento_TB_Pessoa1">
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_atendimento" Type="residentialbdModel.Store.tb_atendimento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_atendimento">
+              <PropertyRef Name="IdPesssoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Bloco_TB_Condominio1">
+          <End Role="tb_condominio" Type="residentialbdModel.Store.tb_condominio" Multiplicity="1" />
+          <End Role="tb_bloco" Type="residentialbdModel.Store.tb_bloco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_condominio">
+              <PropertyRef Name="IdCondominio" />
+            </Principal>
+            <Dependent Role="tb_bloco">
+              <PropertyRef Name="IdCondominio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Comentario_TB_Pessoa1">
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_comentario" Type="residentialbdModel.Store.tb_comentario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_comentario">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Comentario_TB_Postagem1">
+          <End Role="tb_postagem" Type="residentialbdModel.Store.tb_postagem" Multiplicity="1" />
+          <End Role="tb_comentario" Type="residentialbdModel.Store.tb_comentario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_postagem">
+              <PropertyRef Name="IdPostagem" />
+            </Principal>
+            <Dependent Role="tb_comentario">
+              <PropertyRef Name="IdPostagem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Enquete_TB_Pessoa1">
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_enquete" Type="residentialbdModel.Store.tb_enquete" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_enquete">
+              <PropertyRef Name="IdPesssoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Espaco_TB_Condominio1">
+          <End Role="tb_condominio" Type="residentialbdModel.Store.tb_condominio" Multiplicity="1" />
+          <End Role="tb_areapublica" Type="residentialbdModel.Store.tb_areapublica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_condominio">
+              <PropertyRef Name="IdCondominio" />
+            </Principal>
+            <Dependent Role="tb_areapublica">
+              <PropertyRef Name="IdCondominio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Moradia_TB_Bloco1">
+          <End Role="tb_bloco" Type="residentialbdModel.Store.tb_bloco" Multiplicity="1" />
+          <End Role="tb_moradia" Type="residentialbdModel.Store.tb_moradia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_bloco">
+              <PropertyRef Name="IdBloco" />
+            </Principal>
+            <Dependent Role="tb_moradia">
+              <PropertyRef Name="IdBloco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Ocorrencia_TB_Pessoa1">
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_ocorrencia" Type="residentialbdModel.Store.tb_ocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_ocorrencia">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_OpcoesEnquete_TB_Enquete1">
+          <End Role="tb_enquete" Type="residentialbdModel.Store.tb_enquete" Multiplicity="1" />
+          <End Role="tb_opcoesenquete" Type="residentialbdModel.Store.tb_opcoesenquete" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_enquete">
+              <PropertyRef Name="IdEnquete" />
+            </Principal>
+            <Dependent Role="tb_opcoesenquete">
+              <PropertyRef Name="IdEnquete" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Postagem_TB_Pessoa1">
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_postagem" Type="residentialbdModel.Store.tb_postagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_postagem">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_reservaambiente_tb_areapublica1">
+          <End Role="tb_areapublica" Type="residentialbdModel.Store.tb_areapublica" Multiplicity="1" />
+          <End Role="tb_reservaambiente" Type="residentialbdModel.Store.tb_reservaambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_areapublica">
+              <PropertyRef Name="IdAreaPublica" />
+            </Principal>
+            <Dependent Role="tb_reservaambiente">
+              <PropertyRef Name="IdAreaPublica" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_ReservaAmbiente_TB_Pessoa1">
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_reservaambiente" Type="residentialbdModel.Store.tb_reservaambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_reservaambiente">
+              <PropertyRef Name="IdPesssoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_veiculo_tb_moradia1">
+          <End Role="tb_moradia" Type="residentialbdModel.Store.tb_moradia" Multiplicity="1" />
+          <End Role="tb_veiculo" Type="residentialbdModel.Store.tb_veiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_moradia">
+              <PropertyRef Name="IdMoradia" />
+            </Principal>
+            <Dependent Role="tb_veiculo">
+              <PropertyRef Name="IdMoradia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Veiculo_TB_Pessoa1">
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_veiculo" Type="residentialbdModel.Store.tb_veiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_veiculo">
+              <PropertyRef Name="IdPesssoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_votoenquete_tb_enquete1">
+          <End Role="tb_enquete" Type="residentialbdModel.Store.tb_enquete" Multiplicity="1" />
+          <End Role="tb_votoenquete" Type="residentialbdModel.Store.tb_votoenquete" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_enquete">
+              <PropertyRef Name="IdEnquete" />
+            </Principal>
+            <Dependent Role="tb_votoenquete">
+              <PropertyRef Name="IdEnquete" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_VotoEnquete_TB_OpcoesEnquete1">
+          <End Role="tb_opcoesenquete" Type="residentialbdModel.Store.tb_opcoesenquete" Multiplicity="1" />
+          <End Role="tb_votoenquete" Type="residentialbdModel.Store.tb_votoenquete" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_opcoesenquete">
+              <PropertyRef Name="IdOpcao" />
+            </Principal>
+            <Dependent Role="tb_votoenquete">
+              <PropertyRef Name="IdOpcao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_VotoEnquete_TB_Pessoa1">
+          <End Role="tb_pessoa" Type="residentialbdModel.Store.tb_pessoa" Multiplicity="1" />
+          <End Role="tb_votoenquete" Type="residentialbdModel.Store.tb_votoenquete" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_votoenquete">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="residentialbdModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="residentialbdEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="my_aspnet_applications" EntityType="residentialbdModel.my_aspnet_applications" />
+          <EntitySet Name="my_aspnet_membership" EntityType="residentialbdModel.my_aspnet_membership" />
+          <EntitySet Name="my_aspnet_profiles" EntityType="residentialbdModel.my_aspnet_profiles" />
+          <EntitySet Name="my_aspnet_roles" EntityType="residentialbdModel.my_aspnet_roles" />
+          <EntitySet Name="my_aspnet_sessioncleanup" EntityType="residentialbdModel.my_aspnet_sessioncleanup" />
+          <EntitySet Name="my_aspnet_sessions" EntityType="residentialbdModel.my_aspnet_sessions" />
+          <EntitySet Name="my_aspnet_users" EntityType="residentialbdModel.my_aspnet_users" />
+          <EntitySet Name="my_aspnet_usersinroles" EntityType="residentialbdModel.my_aspnet_usersinroles" />
+          <EntitySet Name="tb_acessocondominio" EntityType="residentialbdModel.tb_acessocondominio" />
+          <EntitySet Name="tb_acessoveiculo" EntityType="residentialbdModel.tb_acessoveiculo" />
+          <EntitySet Name="tb_areapublica" EntityType="residentialbdModel.tb_areapublica" />
+          <EntitySet Name="tb_atendimento" EntityType="residentialbdModel.tb_atendimento" />
+          <EntitySet Name="tb_bloco" EntityType="residentialbdModel.tb_bloco" />
+          <EntitySet Name="tb_comentario" EntityType="residentialbdModel.tb_comentario" />
+          <EntitySet Name="tb_condominio" EntityType="residentialbdModel.tb_condominio" />
+          <EntitySet Name="tb_enquete" EntityType="residentialbdModel.tb_enquete" />
+          <EntitySet Name="tb_grupoplanocontas" EntityType="residentialbdModel.tb_grupoplanocontas" />
+          <EntitySet Name="tb_moradia" EntityType="residentialbdModel.tb_moradia" />
+          <EntitySet Name="tb_movimentacaofinanceira" EntityType="residentialbdModel.tb_movimentacaofinanceira" />
+          <EntitySet Name="tb_ocorrencia" EntityType="residentialbdModel.tb_ocorrencia" />
+          <EntitySet Name="tb_opcoesenquete" EntityType="residentialbdModel.tb_opcoesenquete" />
+          <EntitySet Name="tb_pessoamoradia" EntityType="residentialbdModel.tb_pessoamoradia" />
+          <EntitySet Name="tb_planodeconta" EntityType="residentialbdModel.tb_planodeconta" />
+          <EntitySet Name="tb_pontuacaopessoa" EntityType="residentialbdModel.tb_pontuacaopessoa" />
+          <EntitySet Name="tb_postagem" EntityType="residentialbdModel.tb_postagem" />
+          <EntitySet Name="tb_reservaambiente" EntityType="residentialbdModel.tb_reservaambiente" />
+          <EntitySet Name="tb_restricaoacesso" EntityType="residentialbdModel.tb_restricaoacesso" />
+          <EntitySet Name="tb_setor" EntityType="residentialbdModel.tb_setor" />
+          <EntitySet Name="tb_veiculo" EntityType="residentialbdModel.tb_veiculo" />
+          <EntitySet Name="tb_votoenquete" EntityType="residentialbdModel.tb_votoenquete" />
+          <AssociationSet Name="fk_tb_perfilpessoa_my_aspnet_roles1" Association="residentialbdModel.fk_tb_perfilpessoa_my_aspnet_roles1">
+            <End Role="my_aspnet_roles" EntitySet="my_aspnet_roles" />
+            <End Role="tb_pessoamoradia" EntitySet="tb_pessoamoradia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_acessocondominio_tb_condominio1" Association="residentialbdModel.fk_tb_acessocondominio_tb_condominio1">
+            <End Role="tb_condominio" EntitySet="tb_condominio" />
+            <End Role="tb_acessocondominio" EntitySet="tb_acessocondominio" />
+          </AssociationSet>
+          <AssociationSet Name="tb_acessoveiculo_tb_veiculo1" Association="residentialbdModel.tb_acessoveiculo_tb_veiculo1">
+            <End Role="tb_veiculo" EntitySet="tb_veiculo" />
+            <End Role="tb_acessoveiculo" EntitySet="tb_acessoveiculo" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Espaco_TB_Condominio1" Association="residentialbdModel.TB_Espaco_TB_Condominio1">
+            <End Role="tb_condominio" EntitySet="tb_condominio" />
+            <End Role="tb_areapublica" EntitySet="tb_areapublica" />
+          </AssociationSet>
+          <AssociationSet Name="tb_reservaambiente_tb_areapublica1" Association="residentialbdModel.tb_reservaambiente_tb_areapublica1">
+            <End Role="tb_areapublica" EntitySet="tb_areapublica" />
+            <End Role="tb_reservaambiente" EntitySet="tb_reservaambiente" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Bloco_TB_Condominio1" Association="residentialbdModel.TB_Bloco_TB_Condominio1">
+            <End Role="tb_condominio" EntitySet="tb_condominio" />
+            <End Role="tb_bloco" EntitySet="tb_bloco" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Moradia_TB_Bloco1" Association="residentialbdModel.TB_Moradia_TB_Bloco1">
+            <End Role="tb_bloco" EntitySet="tb_bloco" />
+            <End Role="tb_moradia" EntitySet="tb_moradia" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Comentario_TB_Postagem1" Association="residentialbdModel.TB_Comentario_TB_Postagem1">
+            <End Role="tb_postagem" EntitySet="tb_postagem" />
+            <End Role="tb_comentario" EntitySet="tb_comentario" />
+          </AssociationSet>
+          <AssociationSet Name="TB_OpcoesEnquete_TB_Enquete1" Association="residentialbdModel.TB_OpcoesEnquete_TB_Enquete1">
+            <End Role="tb_enquete" EntitySet="tb_enquete" />
+            <End Role="tb_opcoesenquete" EntitySet="tb_opcoesenquete" />
+          </AssociationSet>
+          <AssociationSet Name="tb_votoenquete_tb_enquete1" Association="residentialbdModel.tb_votoenquete_tb_enquete1">
+            <End Role="tb_enquete" EntitySet="tb_enquete" />
+            <End Role="tb_votoenquete" EntitySet="tb_votoenquete" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_planodeconta_tb_grupoplanocontas1" Association="residentialbdModel.fk_tb_planodeconta_tb_grupoplanocontas1">
+            <End Role="tb_grupoplanocontas" EntitySet="tb_grupoplanocontas" />
+            <End Role="tb_planodeconta" EntitySet="tb_planodeconta" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_perfilpessoa_tb_moradia1" Association="residentialbdModel.fk_tb_perfilpessoa_tb_moradia1">
+            <End Role="tb_moradia" EntitySet="tb_moradia" />
+            <End Role="tb_pessoamoradia" EntitySet="tb_pessoamoradia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_restricaoacesso_tb_moradia1" Association="residentialbdModel.fk_tb_restricaoacesso_tb_moradia1">
+            <End Role="tb_moradia" EntitySet="tb_moradia" />
+            <End Role="tb_restricaoacesso" EntitySet="tb_restricaoacesso" />
+          </AssociationSet>
+          <AssociationSet Name="tb_veiculo_tb_moradia1" Association="residentialbdModel.tb_veiculo_tb_moradia1">
+            <End Role="tb_moradia" EntitySet="tb_moradia" />
+            <End Role="tb_veiculo" EntitySet="tb_veiculo" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_movimentacaofinanceira_tb_planodeconta1" Association="residentialbdModel.fk_tb_movimentacaofinanceira_tb_planodeconta1">
+            <End Role="tb_planodeconta" EntitySet="tb_planodeconta" />
+            <End Role="tb_movimentacaofinanceira" EntitySet="tb_movimentacaofinanceira" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_movimentacaofinanceira_tb_reservaambiente1" Association="residentialbdModel.fk_tb_movimentacaofinanceira_tb_reservaambiente1">
+            <End Role="tb_reservaambiente" EntitySet="tb_reservaambiente" />
+            <End Role="tb_movimentacaofinanceira" EntitySet="tb_movimentacaofinanceira" />
+          </AssociationSet>
+          <AssociationSet Name="TB_VotoEnquete_TB_OpcoesEnquete1" Association="residentialbdModel.TB_VotoEnquete_TB_OpcoesEnquete1">
+            <End Role="tb_opcoesenquete" EntitySet="tb_opcoesenquete" />
+            <End Role="tb_votoenquete" EntitySet="tb_votoenquete" />
+          </AssociationSet>
+          <EntitySet Name="tb_pessoa" EntityType="residentialbdModel.tb_pessoa" />
+          <AssociationSet Name="fk_tb_pessoa_my_aspnet_users1" Association="residentialbdModel.fk_tb_pessoa_my_aspnet_users1">
+            <End Role="my_aspnet_users" EntitySet="my_aspnet_users" />
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_acessocondominio_tb_pessoa1" Association="residentialbdModel.fk_tb_acessocondominio_tb_pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_acessocondominio" EntitySet="tb_acessocondominio" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Atendimento_TB_Pessoa1" Association="residentialbdModel.TB_Atendimento_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_atendimento" EntitySet="tb_atendimento" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Comentario_TB_Pessoa1" Association="residentialbdModel.TB_Comentario_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_comentario" EntitySet="tb_comentario" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Enquete_TB_Pessoa1" Association="residentialbdModel.TB_Enquete_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_enquete" EntitySet="tb_enquete" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_movimentacaofinanceira_tb_pessoa1" Association="residentialbdModel.fk_tb_movimentacaofinanceira_tb_pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_movimentacaofinanceira" EntitySet="tb_movimentacaofinanceira" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Ocorrencia_TB_Pessoa1" Association="residentialbdModel.TB_Ocorrencia_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_ocorrencia" EntitySet="tb_ocorrencia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_perfilpessoa_tb_pessoa1" Association="residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_pessoamoradia" EntitySet="tb_pessoamoradia" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_pessoa_tb_setor1" Association="residentialbdModel.fk_tb_pessoa_tb_setor1">
+            <End Role="tb_setor" EntitySet="tb_setor" />
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1" Association="residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_pontuacaopessoa" EntitySet="tb_pontuacaopessoa" />
+          </AssociationSet>
+          <AssociationSet Name="fk_tb_restricaoacesso_tb_pessoa1" Association="residentialbdModel.fk_tb_restricaoacesso_tb_pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_restricaoacesso" EntitySet="tb_restricaoacesso" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Postagem_TB_Pessoa1" Association="residentialbdModel.TB_Postagem_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_postagem" EntitySet="tb_postagem" />
+          </AssociationSet>
+          <AssociationSet Name="TB_ReservaAmbiente_TB_Pessoa1" Association="residentialbdModel.TB_ReservaAmbiente_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_reservaambiente" EntitySet="tb_reservaambiente" />
+          </AssociationSet>
+          <AssociationSet Name="TB_Veiculo_TB_Pessoa1" Association="residentialbdModel.TB_Veiculo_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_veiculo" EntitySet="tb_veiculo" />
+          </AssociationSet>
+          <AssociationSet Name="TB_VotoEnquete_TB_Pessoa1" Association="residentialbdModel.TB_VotoEnquete_TB_Pessoa1">
+            <End Role="tb_pessoa" EntitySet="tb_pessoa" />
+            <End Role="tb_votoenquete" EntitySet="tb_votoenquete" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="my_aspnet_applications">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="description" MaxLength="256" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_membership">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Type="Int32" Name="userId" Nullable="false" />
+          <Property Type="String" Name="Email" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Comment" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PasswordKey" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="SByte" Name="PasswordFormat" />
+          <Property Type="String" Name="PasswordQuestion" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PasswordAnswer" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsApproved" />
+          <Property Type="DateTime" Name="LastActivityDate" />
+          <Property Type="DateTime" Name="LastLoginDate" />
+          <Property Type="DateTime" Name="LastPasswordChangedDate" />
+          <Property Type="DateTime" Name="CreationDate" />
+          <Property Type="Boolean" Name="IsLockedOut" />
+          <Property Type="DateTime" Name="LastLockedOutDate" />
+          <Property Type="Int64" Name="FailedPasswordAttemptCount" />
+          <Property Type="DateTime" Name="FailedPasswordAttemptWindowStart" />
+          <Property Type="Int64" Name="FailedPasswordAnswerAttemptCount" />
+          <Property Type="DateTime" Name="FailedPasswordAnswerAttemptWindowStart" />
+        </EntityType>
+        <EntityType Name="my_aspnet_profiles">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Type="Int32" Name="userId" Nullable="false" />
+          <Property Type="String" Name="valueindex" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="stringdata" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="binarydata" MaxLength="Max" FixedLength="false" />
+          <Property Type="DateTime" Name="lastUpdatedDate" Nullable="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_roles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="applicationId" Nullable="false" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_pessoamoradia" Relationship="residentialbdModel.fk_tb_perfilpessoa_my_aspnet_roles1" FromRole="my_aspnet_roles" ToRole="tb_pessoamoradia" />
+        </EntityType>
+        <EntityType Name="my_aspnet_sessioncleanup">
+          <Key>
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Type="DateTime" Name="LastRun" Nullable="false" />
+          <Property Type="Int32" Name="IntervalMinutes" Nullable="false" />
+          <Property Type="Int32" Name="ApplicationId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_sessions">
+          <Key>
+            <PropertyRef Name="SessionId" />
+            <PropertyRef Name="ApplicationId" />
+          </Key>
+          <Property Type="String" Name="SessionId" Nullable="false" MaxLength="191" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ApplicationId" Nullable="false" />
+          <Property Type="DateTime" Name="Created" Nullable="false" />
+          <Property Type="DateTime" Name="Expires" Nullable="false" />
+          <Property Type="DateTime" Name="LockDate" Nullable="false" />
+          <Property Type="Int32" Name="LockId" Nullable="false" />
+          <Property Type="Int32" Name="Timeout" Nullable="false" />
+          <Property Type="Boolean" Name="Locked" Nullable="false" />
+          <Property Type="Binary" Name="SessionItems" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int32" Name="Flags" Nullable="false" />
+        </EntityType>
+        <EntityType Name="my_aspnet_users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="applicationId" Nullable="false" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="isAnonymous" Nullable="false" />
+          <Property Type="DateTime" Name="lastActivityDate" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.fk_tb_pessoa_my_aspnet_users1" FromRole="my_aspnet_users" ToRole="tb_pessoa" />
+        </EntityType>
+        <EntityType Name="my_aspnet_usersinroles">
+          <Key>
+            <PropertyRef Name="userId" />
+            <PropertyRef Name="roleId" />
+          </Key>
+          <Property Type="Int32" Name="userId" Nullable="false" />
+          <Property Type="Int32" Name="roleId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_acessocondominio">
+          <Key>
+            <PropertyRef Name="IdAcessoCondominio" />
+          </Key>
+          <Property Type="Int32" Name="IdAcessoCondominio" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdPessoa" Nullable="false" />
+          <Property Type="Int32" Name="IdCondominio" Nullable="false" />
+          <Property Type="DateTime" Name="DataHora" Nullable="false" />
+          <Property Type="String" Name="TipoAcesso" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_condominio" Relationship="residentialbdModel.fk_tb_acessocondominio_tb_condominio1" FromRole="tb_acessocondominio" ToRole="tb_condominio" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.fk_tb_acessocondominio_tb_pessoa1" FromRole="tb_acessocondominio" ToRole="tb_pessoa" />
+        </EntityType>
+        <EntityType Name="tb_acessoveiculo">
+          <Key>
+            <PropertyRef Name="IdAcessoVeiculo" />
+          </Key>
+          <Property Type="Int32" Name="IdAcessoVeiculo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="DataHora" Nullable="false" />
+          <Property Type="Int32" Name="IdVeiculo" Nullable="false" />
+          <Property Type="String" Name="TipoAcesso" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_veiculo" Relationship="residentialbdModel.tb_acessoveiculo_tb_veiculo1" FromRole="tb_acessoveiculo" ToRole="tb_veiculo" />
+        </EntityType>
+        <EntityType Name="tb_areapublica">
+          <Key>
+            <PropertyRef Name="IdAreaPublica" />
+          </Key>
+          <Property Type="Int32" Name="IdAreaPublica" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Local" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Tamanho" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="ValorReserva" Nullable="false" />
+          <Property Type="Int32" Name="IdCondominio" Nullable="false" />
+          <Property Type="String" Name="StatusAreaPublica" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_condominio" Relationship="residentialbdModel.TB_Espaco_TB_Condominio1" FromRole="tb_areapublica" ToRole="tb_condominio" />
+          <NavigationProperty Name="tb_reservaambiente" Relationship="residentialbdModel.tb_reservaambiente_tb_areapublica1" FromRole="tb_areapublica" ToRole="tb_reservaambiente" />
+        </EntityType>
+        <EntityType Name="tb_atendimento">
+          <Key>
+            <PropertyRef Name="IdAtendimento" />
+          </Key>
+          <Property Type="Int32" Name="IdAtendimento" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdPesssoa" Nullable="false" />
+          <Property Type="String" Name="Titulo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descricao" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StatusAtendimento" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_Atendimento_TB_Pessoa1" FromRole="tb_atendimento" ToRole="tb_pessoa" />
+        </EntityType>
+        <EntityType Name="tb_bloco">
+          <Key>
+            <PropertyRef Name="IdBloco" />
+          </Key>
+          <Property Type="Int32" Name="IdBloco" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdCondominio" Nullable="false" />
+          <Property Type="String" Name="Nome" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="QuantidadeAndares" Nullable="false" />
+          <Property Type="Int32" Name="QuantidadeMoradias" Nullable="false" />
+          <NavigationProperty Name="tb_condominio" Relationship="residentialbdModel.TB_Bloco_TB_Condominio1" FromRole="tb_bloco" ToRole="tb_condominio" />
+          <NavigationProperty Name="tb_moradia" Relationship="residentialbdModel.TB_Moradia_TB_Bloco1" FromRole="tb_bloco" ToRole="tb_moradia" />
+        </EntityType>
+        <EntityType Name="tb_comentario">
+          <Key>
+            <PropertyRef Name="IdComentario" />
+          </Key>
+          <Property Type="Int32" Name="IdComentario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdPostagem" Nullable="false" />
+          <Property Type="Int32" Name="IdPessoa" Nullable="false" />
+          <Property Type="String" Name="Comentario" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Data" Nullable="false" />
+          <NavigationProperty Name="tb_postagem" Relationship="residentialbdModel.TB_Comentario_TB_Postagem1" FromRole="tb_comentario" ToRole="tb_postagem" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_Comentario_TB_Pessoa1" FromRole="tb_comentario" ToRole="tb_pessoa" />
+        </EntityType>
+        <EntityType Name="tb_condominio">
+          <Key>
+            <PropertyRef Name="IdCondominio" />
+          </Key>
+          <Property Type="Int32" Name="IdCondominio" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Rua" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Numero" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Bairro" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Complemento" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CEP" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Cidade" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_acessocondominio" Relationship="residentialbdModel.fk_tb_acessocondominio_tb_condominio1" FromRole="tb_condominio" ToRole="tb_acessocondominio" />
+          <NavigationProperty Name="tb_areapublica" Relationship="residentialbdModel.TB_Espaco_TB_Condominio1" FromRole="tb_condominio" ToRole="tb_areapublica" />
+          <NavigationProperty Name="tb_bloco" Relationship="residentialbdModel.TB_Bloco_TB_Condominio1" FromRole="tb_condominio" ToRole="tb_bloco" />
+        </EntityType>
+        <EntityType Name="tb_enquete">
+          <Key>
+            <PropertyRef Name="IdEnquete" />
+          </Key>
+          <Property Type="Int32" Name="IdEnquete" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdPesssoa" Nullable="false" />
+          <Property Type="String" Name="Titulo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descricao" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DataInicio" Nullable="false" />
+          <Property Type="DateTime" Name="DataFim" Nullable="false" />
+          <Property Type="String" Name="StatusEnquete" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_opcoesenquete" Relationship="residentialbdModel.TB_OpcoesEnquete_TB_Enquete1" FromRole="tb_enquete" ToRole="tb_opcoesenquete" />
+          <NavigationProperty Name="tb_votoenquete" Relationship="residentialbdModel.tb_votoenquete_tb_enquete1" FromRole="tb_enquete" ToRole="tb_votoenquete" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_Enquete_TB_Pessoa1" FromRole="tb_enquete" ToRole="tb_pessoa" />
+        </EntityType>
+        <EntityType Name="tb_grupoplanocontas">
+          <Key>
+            <PropertyRef Name="IdGrupoPlanoDeConta" />
+          </Key>
+          <Property Type="Int32" Name="IdGrupoPlanoDeConta" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TipoPlanoDeConta" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descricao" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_planodeconta" Relationship="residentialbdModel.fk_tb_planodeconta_tb_grupoplanocontas1" FromRole="tb_grupoplanocontas" ToRole="tb_planodeconta" />
+        </EntityType>
+        <EntityType Name="tb_moradia">
+          <Key>
+            <PropertyRef Name="IdMoradia" />
+          </Key>
+          <Property Type="Int32" Name="IdMoradia" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdBloco" Nullable="false" />
+          <Property Type="String" Name="Andar" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Numero" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TipoMoradia" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_bloco" Relationship="residentialbdModel.TB_Moradia_TB_Bloco1" FromRole="tb_moradia" ToRole="tb_bloco" />
+          <NavigationProperty Name="tb_pessoamoradia" Relationship="residentialbdModel.fk_tb_perfilpessoa_tb_moradia1" FromRole="tb_moradia" ToRole="tb_pessoamoradia" />
+          <NavigationProperty Name="tb_restricaoacesso" Relationship="residentialbdModel.fk_tb_restricaoacesso_tb_moradia1" FromRole="tb_moradia" ToRole="tb_restricaoacesso" />
+          <NavigationProperty Name="tb_veiculo" Relationship="residentialbdModel.tb_veiculo_tb_moradia1" FromRole="tb_moradia" ToRole="tb_veiculo" />
+        </EntityType>
+        <EntityType Name="tb_movimentacaofinanceira">
+          <Key>
+            <PropertyRef Name="IdMovimentacaoFinanceira" />
+          </Key>
+          <Property Type="Int32" Name="IdMovimentacaoFinanceira" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="Valor" Nullable="false" />
+          <Property Type="DateTime" Name="DataRegistro" Nullable="false" />
+          <Property Type="String" Name="NotaFiscal" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descricao" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StatusMovimentacao" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Baixa" Nullable="false" />
+          <Property Type="Int32" Name="IdPlanoDeConta" Nullable="false" />
+          <Property Type="Int32" Name="IdReservaAmbiente" Nullable="false" />
+          <Property Type="Int32" Name="IdPessoa" Nullable="false" />
+          <NavigationProperty Name="tb_planodeconta" Relationship="residentialbdModel.fk_tb_movimentacaofinanceira_tb_planodeconta1" FromRole="tb_movimentacaofinanceira" ToRole="tb_planodeconta" />
+          <NavigationProperty Name="tb_reservaambiente" Relationship="residentialbdModel.fk_tb_movimentacaofinanceira_tb_reservaambiente1" FromRole="tb_movimentacaofinanceira" ToRole="tb_reservaambiente" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.fk_tb_movimentacaofinanceira_tb_pessoa1" FromRole="tb_movimentacaofinanceira" ToRole="tb_pessoa" />
+        </EntityType>
+        <EntityType Name="tb_ocorrencia">
+          <Key>
+            <PropertyRef Name="IdOcorrencia" />
+          </Key>
+          <Property Type="Int32" Name="IdOcorrencia" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdPessoa" Nullable="false" />
+          <Property Type="String" Name="Titulo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descricao" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DataCriacao" Nullable="false" />
+          <Property Type="String" Name="TipoOcorrencia" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StatusOcorrencia" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OutrosTiposOcorrencia" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_Ocorrencia_TB_Pessoa1" FromRole="tb_ocorrencia" ToRole="tb_pessoa" />
+        </EntityType>
+        <EntityType Name="tb_opcoesenquete">
+          <Key>
+            <PropertyRef Name="IdOpcao" />
+          </Key>
+          <Property Type="Int32" Name="IdOpcao" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdEnquete" Nullable="false" />
+          <Property Type="String" Name="Descricao" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_enquete" Relationship="residentialbdModel.TB_OpcoesEnquete_TB_Enquete1" FromRole="tb_opcoesenquete" ToRole="tb_enquete" />
+          <NavigationProperty Name="tb_votoenquete" Relationship="residentialbdModel.TB_VotoEnquete_TB_OpcoesEnquete1" FromRole="tb_opcoesenquete" ToRole="tb_votoenquete" />
+        </EntityType>
+        <EntityType Name="tb_pessoamoradia">
+          <Key>
+            <PropertyRef Name="IdPessoa" />
+            <PropertyRef Name="IdPerfil" />
+            <PropertyRef Name="IdMoradia" />
+          </Key>
+          <Property Type="Int32" Name="IdPessoa" Nullable="false" />
+          <Property Type="Boolean" Name="Ativo" Nullable="false" />
+          <Property Type="Int32" Name="IdPerfil" Nullable="false" />
+          <Property Type="Int32" Name="IdMoradia" Nullable="false" />
+          <NavigationProperty Name="my_aspnet_roles" Relationship="residentialbdModel.fk_tb_perfilpessoa_my_aspnet_roles1" FromRole="tb_pessoamoradia" ToRole="my_aspnet_roles" />
+          <NavigationProperty Name="tb_moradia" Relationship="residentialbdModel.fk_tb_perfilpessoa_tb_moradia1" FromRole="tb_pessoamoradia" ToRole="tb_moradia" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1" FromRole="tb_pessoamoradia" ToRole="tb_pessoa" />
+        </EntityType>
+        <EntityType Name="tb_planodeconta">
+          <Key>
+            <PropertyRef Name="IdPlanoDeConta" />
+          </Key>
+          <Property Type="Int32" Name="IdPlanoDeConta" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Descricao" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdTipoPlanoDeConta" Nullable="false" />
+          <NavigationProperty Name="tb_grupoplanocontas" Relationship="residentialbdModel.fk_tb_planodeconta_tb_grupoplanocontas1" FromRole="tb_planodeconta" ToRole="tb_grupoplanocontas" />
+          <NavigationProperty Name="tb_movimentacaofinanceira" Relationship="residentialbdModel.fk_tb_movimentacaofinanceira_tb_planodeconta1" FromRole="tb_planodeconta" ToRole="tb_movimentacaofinanceira" />
+        </EntityType>
+        <EntityType Name="tb_pontuacaopessoa">
+          <Key>
+            <PropertyRef Name="IdPontuacaoPessoa" />
+            <PropertyRef Name="IdPessoa" />
+          </Key>
+          <Property Type="Int32" Name="IdPontuacaoPessoa" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdPessoa" Nullable="false" />
+          <Property Type="String" Name="Comentario" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Pontuacao" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1" FromRole="tb_pontuacaopessoa" ToRole="tb_pessoa" />
+        </EntityType>
+        <EntityType Name="tb_postagem">
+          <Key>
+            <PropertyRef Name="IdPostagem" />
+          </Key>
+          <Property Type="Int32" Name="IdPostagem" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdPessoa" Nullable="false" />
+          <Property Type="String" Name="Titulo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descricao" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DataCriacao" Nullable="false" />
+          <Property Type="DateTime" Name="DataEncerramento" />
+          <NavigationProperty Name="tb_comentario" Relationship="residentialbdModel.TB_Comentario_TB_Postagem1" FromRole="tb_postagem" ToRole="tb_comentario" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_Postagem_TB_Pessoa1" FromRole="tb_postagem" ToRole="tb_pessoa" />
+        </EntityType>
+        <EntityType Name="tb_reservaambiente">
+          <Key>
+            <PropertyRef Name="IdReservaAmbiente" />
+          </Key>
+          <Property Type="Int32" Name="IdReservaAmbiente" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdPesssoa" Nullable="false" />
+          <Property Type="DateTime" Name="DataInicio" Nullable="false" />
+          <Property Type="DateTime" Name="DataFim" Nullable="false" />
+          <Property Type="Int32" Name="IdAreaPublica" Nullable="false" />
+          <NavigationProperty Name="tb_areapublica" Relationship="residentialbdModel.tb_reservaambiente_tb_areapublica1" FromRole="tb_reservaambiente" ToRole="tb_areapublica" />
+          <NavigationProperty Name="tb_movimentacaofinanceira" Relationship="residentialbdModel.fk_tb_movimentacaofinanceira_tb_reservaambiente1" FromRole="tb_reservaambiente" ToRole="tb_movimentacaofinanceira" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_ReservaAmbiente_TB_Pessoa1" FromRole="tb_reservaambiente" ToRole="tb_pessoa" />
+        </EntityType>
+        <EntityType Name="tb_restricaoacesso">
+          <Key>
+            <PropertyRef Name="IdRestricaoAcesso" />
+          </Key>
+          <Property Type="Int32" Name="IdRestricaoAcesso" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdPessoa" Nullable="false" />
+          <Property Type="Int32" Name="IdMoradia" Nullable="false" />
+          <Property Type="Boolean" Name="Restrito" Nullable="false" />
+          <Property Type="String" Name="Dia" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HoraEntrada" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HoraSaida" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_moradia" Relationship="residentialbdModel.fk_tb_restricaoacesso_tb_moradia1" FromRole="tb_restricaoacesso" ToRole="tb_moradia" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.fk_tb_restricaoacesso_tb_pessoa1" FromRole="tb_restricaoacesso" ToRole="tb_pessoa" />
+        </EntityType>
+        <EntityType Name="tb_setor">
+          <Key>
+            <PropertyRef Name="IdSetor" />
+          </Key>
+          <Property Type="Int32" Name="IdSetor" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descricao" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.fk_tb_pessoa_tb_setor1" FromRole="tb_setor" ToRole="tb_pessoa" />
+        </EntityType>
+        <EntityType Name="tb_veiculo">
+          <Key>
+            <PropertyRef Name="IdVeiculo" />
+          </Key>
+          <Property Type="Int32" Name="IdVeiculo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdPesssoa" Nullable="false" />
+          <Property Type="String" Name="Placa" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Modelo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Cor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TipoVeiculo" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdMoradia" Nullable="false" />
+          <NavigationProperty Name="tb_acessoveiculo" Relationship="residentialbdModel.tb_acessoveiculo_tb_veiculo1" FromRole="tb_veiculo" ToRole="tb_acessoveiculo" />
+          <NavigationProperty Name="tb_moradia" Relationship="residentialbdModel.tb_veiculo_tb_moradia1" FromRole="tb_veiculo" ToRole="tb_moradia" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_Veiculo_TB_Pessoa1" FromRole="tb_veiculo" ToRole="tb_pessoa" />
+        </EntityType>
+        <EntityType Name="tb_votoenquete">
+          <Key>
+            <PropertyRef Name="IdVoto" />
+          </Key>
+          <Property Type="Int32" Name="IdVoto" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IdPessoa" Nullable="false" />
+          <Property Type="Int32" Name="IdEnquete" Nullable="false" />
+          <Property Type="Int32" Name="IdOpcao" Nullable="false" />
+          <Property Type="DateTime" Name="DataVoto" Nullable="false" />
+          <NavigationProperty Name="tb_enquete" Relationship="residentialbdModel.tb_votoenquete_tb_enquete1" FromRole="tb_votoenquete" ToRole="tb_enquete" />
+          <NavigationProperty Name="tb_opcoesenquete" Relationship="residentialbdModel.TB_VotoEnquete_TB_OpcoesEnquete1" FromRole="tb_votoenquete" ToRole="tb_opcoesenquete" />
+          <NavigationProperty Name="tb_pessoa" Relationship="residentialbdModel.TB_VotoEnquete_TB_Pessoa1" FromRole="tb_votoenquete" ToRole="tb_pessoa" />
+        </EntityType>
+        <Association Name="fk_tb_perfilpessoa_my_aspnet_roles1">
+          <End Type="residentialbdModel.my_aspnet_roles" Role="my_aspnet_roles" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_pessoamoradia" Role="tb_pessoamoradia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="my_aspnet_roles">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_pessoamoradia">
+              <PropertyRef Name="IdPerfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_acessocondominio_tb_condominio1">
+          <End Type="residentialbdModel.tb_condominio" Role="tb_condominio" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_acessocondominio" Role="tb_acessocondominio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_condominio">
+              <PropertyRef Name="IdCondominio" />
+            </Principal>
+            <Dependent Role="tb_acessocondominio">
+              <PropertyRef Name="IdCondominio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_acessoveiculo_tb_veiculo1">
+          <End Type="residentialbdModel.tb_veiculo" Role="tb_veiculo" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_acessoveiculo" Role="tb_acessoveiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_veiculo">
+              <PropertyRef Name="IdVeiculo" />
+            </Principal>
+            <Dependent Role="tb_acessoveiculo">
+              <PropertyRef Name="IdVeiculo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Espaco_TB_Condominio1">
+          <End Type="residentialbdModel.tb_condominio" Role="tb_condominio" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_areapublica" Role="tb_areapublica" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_condominio">
+              <PropertyRef Name="IdCondominio" />
+            </Principal>
+            <Dependent Role="tb_areapublica">
+              <PropertyRef Name="IdCondominio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_reservaambiente_tb_areapublica1">
+          <End Type="residentialbdModel.tb_areapublica" Role="tb_areapublica" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_reservaambiente" Role="tb_reservaambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_areapublica">
+              <PropertyRef Name="IdAreaPublica" />
+            </Principal>
+            <Dependent Role="tb_reservaambiente">
+              <PropertyRef Name="IdAreaPublica" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Bloco_TB_Condominio1">
+          <End Type="residentialbdModel.tb_condominio" Role="tb_condominio" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_bloco" Role="tb_bloco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_condominio">
+              <PropertyRef Name="IdCondominio" />
+            </Principal>
+            <Dependent Role="tb_bloco">
+              <PropertyRef Name="IdCondominio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Moradia_TB_Bloco1">
+          <End Type="residentialbdModel.tb_bloco" Role="tb_bloco" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_moradia" Role="tb_moradia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_bloco">
+              <PropertyRef Name="IdBloco" />
+            </Principal>
+            <Dependent Role="tb_moradia">
+              <PropertyRef Name="IdBloco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Comentario_TB_Postagem1">
+          <End Type="residentialbdModel.tb_postagem" Role="tb_postagem" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_comentario" Role="tb_comentario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_postagem">
+              <PropertyRef Name="IdPostagem" />
+            </Principal>
+            <Dependent Role="tb_comentario">
+              <PropertyRef Name="IdPostagem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_OpcoesEnquete_TB_Enquete1">
+          <End Type="residentialbdModel.tb_enquete" Role="tb_enquete" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_opcoesenquete" Role="tb_opcoesenquete" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_enquete">
+              <PropertyRef Name="IdEnquete" />
+            </Principal>
+            <Dependent Role="tb_opcoesenquete">
+              <PropertyRef Name="IdEnquete" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_votoenquete_tb_enquete1">
+          <End Type="residentialbdModel.tb_enquete" Role="tb_enquete" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_votoenquete" Role="tb_votoenquete" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_enquete">
+              <PropertyRef Name="IdEnquete" />
+            </Principal>
+            <Dependent Role="tb_votoenquete">
+              <PropertyRef Name="IdEnquete" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_planodeconta_tb_grupoplanocontas1">
+          <End Type="residentialbdModel.tb_grupoplanocontas" Role="tb_grupoplanocontas" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_planodeconta" Role="tb_planodeconta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_grupoplanocontas">
+              <PropertyRef Name="IdGrupoPlanoDeConta" />
+            </Principal>
+            <Dependent Role="tb_planodeconta">
+              <PropertyRef Name="IdTipoPlanoDeConta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_perfilpessoa_tb_moradia1">
+          <End Type="residentialbdModel.tb_moradia" Role="tb_moradia" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_pessoamoradia" Role="tb_pessoamoradia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_moradia">
+              <PropertyRef Name="IdMoradia" />
+            </Principal>
+            <Dependent Role="tb_pessoamoradia">
+              <PropertyRef Name="IdMoradia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_restricaoacesso_tb_moradia1">
+          <End Type="residentialbdModel.tb_moradia" Role="tb_moradia" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_restricaoacesso" Role="tb_restricaoacesso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_moradia">
+              <PropertyRef Name="IdMoradia" />
+            </Principal>
+            <Dependent Role="tb_restricaoacesso">
+              <PropertyRef Name="IdMoradia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_veiculo_tb_moradia1">
+          <End Type="residentialbdModel.tb_moradia" Role="tb_moradia" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_veiculo" Role="tb_veiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_moradia">
+              <PropertyRef Name="IdMoradia" />
+            </Principal>
+            <Dependent Role="tb_veiculo">
+              <PropertyRef Name="IdMoradia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_movimentacaofinanceira_tb_planodeconta1">
+          <End Type="residentialbdModel.tb_planodeconta" Role="tb_planodeconta" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_movimentacaofinanceira" Role="tb_movimentacaofinanceira" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_planodeconta">
+              <PropertyRef Name="IdPlanoDeConta" />
+            </Principal>
+            <Dependent Role="tb_movimentacaofinanceira">
+              <PropertyRef Name="IdPlanoDeConta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_movimentacaofinanceira_tb_reservaambiente1">
+          <End Type="residentialbdModel.tb_reservaambiente" Role="tb_reservaambiente" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_movimentacaofinanceira" Role="tb_movimentacaofinanceira" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_reservaambiente">
+              <PropertyRef Name="IdReservaAmbiente" />
+            </Principal>
+            <Dependent Role="tb_movimentacaofinanceira">
+              <PropertyRef Name="IdReservaAmbiente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_VotoEnquete_TB_OpcoesEnquete1">
+          <End Type="residentialbdModel.tb_opcoesenquete" Role="tb_opcoesenquete" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_votoenquete" Role="tb_votoenquete" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_opcoesenquete">
+              <PropertyRef Name="IdOpcao" />
+            </Principal>
+            <Dependent Role="tb_votoenquete">
+              <PropertyRef Name="IdOpcao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tb_pessoa">
+          <Key>
+            <PropertyRef Name="IdPessoa" />
+          </Key>
+          <Property Type="Int32" Name="IdPessoa" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CPF" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Nome" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RG" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Sexo" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TelefoneFixo" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TelefoneCelular" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Rua" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Numero" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Complemento" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Bairro" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CEP" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Cidade" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IdUser" Nullable="false" />
+          <Property Type="Int32" Name="IdSetor" Nullable="false" />
+          <Property Type="Boolean" Name="Ativa" />
+          <NavigationProperty Name="my_aspnet_users" Relationship="residentialbdModel.fk_tb_pessoa_my_aspnet_users1" FromRole="tb_pessoa" ToRole="my_aspnet_users" />
+          <NavigationProperty Name="tb_acessocondominio" Relationship="residentialbdModel.fk_tb_acessocondominio_tb_pessoa1" FromRole="tb_pessoa" ToRole="tb_acessocondominio" />
+          <NavigationProperty Name="tb_atendimento" Relationship="residentialbdModel.TB_Atendimento_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_atendimento" />
+          <NavigationProperty Name="tb_comentario" Relationship="residentialbdModel.TB_Comentario_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_comentario" />
+          <NavigationProperty Name="tb_enquete" Relationship="residentialbdModel.TB_Enquete_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_enquete" />
+          <NavigationProperty Name="tb_movimentacaofinanceira" Relationship="residentialbdModel.fk_tb_movimentacaofinanceira_tb_pessoa1" FromRole="tb_pessoa" ToRole="tb_movimentacaofinanceira" />
+          <NavigationProperty Name="tb_ocorrencia" Relationship="residentialbdModel.TB_Ocorrencia_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_ocorrencia" />
+          <NavigationProperty Name="tb_pessoamoradia" Relationship="residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1" FromRole="tb_pessoa" ToRole="tb_pessoamoradia" />
+          <NavigationProperty Name="tb_setor" Relationship="residentialbdModel.fk_tb_pessoa_tb_setor1" FromRole="tb_pessoa" ToRole="tb_setor" />
+          <NavigationProperty Name="tb_pontuacaopessoa" Relationship="residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1" FromRole="tb_pessoa" ToRole="tb_pontuacaopessoa" />
+          <NavigationProperty Name="tb_restricaoacesso" Relationship="residentialbdModel.fk_tb_restricaoacesso_tb_pessoa1" FromRole="tb_pessoa" ToRole="tb_restricaoacesso" />
+          <NavigationProperty Name="tb_postagem" Relationship="residentialbdModel.TB_Postagem_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_postagem" />
+          <NavigationProperty Name="tb_reservaambiente" Relationship="residentialbdModel.TB_ReservaAmbiente_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_reservaambiente" />
+          <NavigationProperty Name="tb_veiculo" Relationship="residentialbdModel.TB_Veiculo_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_veiculo" />
+          <NavigationProperty Name="tb_votoenquete" Relationship="residentialbdModel.TB_VotoEnquete_TB_Pessoa1" FromRole="tb_pessoa" ToRole="tb_votoenquete" />
+        </EntityType>
+        <Association Name="fk_tb_pessoa_my_aspnet_users1">
+          <End Type="residentialbdModel.my_aspnet_users" Role="my_aspnet_users" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="my_aspnet_users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tb_pessoa">
+              <PropertyRef Name="IdUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_acessocondominio_tb_pessoa1">
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_acessocondominio" Role="tb_acessocondominio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_acessocondominio">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Atendimento_TB_Pessoa1">
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_atendimento" Role="tb_atendimento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_atendimento">
+              <PropertyRef Name="IdPesssoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Comentario_TB_Pessoa1">
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_comentario" Role="tb_comentario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_comentario">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Enquete_TB_Pessoa1">
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_enquete" Role="tb_enquete" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_enquete">
+              <PropertyRef Name="IdPesssoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_movimentacaofinanceira_tb_pessoa1">
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_movimentacaofinanceira" Role="tb_movimentacaofinanceira" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_movimentacaofinanceira">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Ocorrencia_TB_Pessoa1">
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_ocorrencia" Role="tb_ocorrencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_ocorrencia">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_perfilpessoa_tb_pessoa1">
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_pessoamoradia" Role="tb_pessoamoradia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_pessoamoradia">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_pessoa_tb_setor1">
+          <End Type="residentialbdModel.tb_setor" Role="tb_setor" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_setor">
+              <PropertyRef Name="IdSetor" />
+            </Principal>
+            <Dependent Role="tb_pessoa">
+              <PropertyRef Name="IdSetor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1">
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_pontuacaopessoa" Role="tb_pontuacaopessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_pontuacaopessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_tb_restricaoacesso_tb_pessoa1">
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_restricaoacesso" Role="tb_restricaoacesso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_restricaoacesso">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Postagem_TB_Pessoa1">
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_postagem" Role="tb_postagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_postagem">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_ReservaAmbiente_TB_Pessoa1">
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_reservaambiente" Role="tb_reservaambiente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_reservaambiente">
+              <PropertyRef Name="IdPesssoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_Veiculo_TB_Pessoa1">
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_veiculo" Role="tb_veiculo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_veiculo">
+              <PropertyRef Name="IdPesssoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TB_VotoEnquete_TB_Pessoa1">
+          <End Type="residentialbdModel.tb_pessoa" Role="tb_pessoa" Multiplicity="1" />
+          <End Type="residentialbdModel.tb_votoenquete" Role="tb_votoenquete" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_pessoa">
+              <PropertyRef Name="IdPessoa" />
+            </Principal>
+            <Dependent Role="tb_votoenquete">
+              <PropertyRef Name="IdPessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="residentialbdModelStoreContainer" CdmEntityContainer="residentialbdEntities">
+          <EntitySetMapping Name="my_aspnet_applications">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_applications">
+              <MappingFragment StoreEntitySet="my_aspnet_applications">
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_membership">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_membership">
+              <MappingFragment StoreEntitySet="my_aspnet_membership">
+                <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+                <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+                <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+                <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+                <ScalarProperty Name="LastLockedOutDate" ColumnName="LastLockedOutDate" />
+                <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+                <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+                <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+                <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+                <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+                <ScalarProperty Name="PasswordKey" ColumnName="PasswordKey" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_profiles">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_profiles">
+              <MappingFragment StoreEntitySet="my_aspnet_profiles">
+                <ScalarProperty Name="lastUpdatedDate" ColumnName="lastUpdatedDate" />
+                <ScalarProperty Name="binarydata" ColumnName="binarydata" />
+                <ScalarProperty Name="stringdata" ColumnName="stringdata" />
+                <ScalarProperty Name="valueindex" ColumnName="valueindex" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_roles">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_roles">
+              <MappingFragment StoreEntitySet="my_aspnet_roles">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="applicationId" ColumnName="applicationId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_sessioncleanup">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_sessioncleanup">
+              <MappingFragment StoreEntitySet="my_aspnet_sessioncleanup">
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="IntervalMinutes" ColumnName="IntervalMinutes" />
+                <ScalarProperty Name="LastRun" ColumnName="LastRun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_sessions">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_sessions">
+              <MappingFragment StoreEntitySet="my_aspnet_sessions">
+                <ScalarProperty Name="Flags" ColumnName="Flags" />
+                <ScalarProperty Name="SessionItems" ColumnName="SessionItems" />
+                <ScalarProperty Name="Locked" ColumnName="Locked" />
+                <ScalarProperty Name="Timeout" ColumnName="Timeout" />
+                <ScalarProperty Name="LockId" ColumnName="LockId" />
+                <ScalarProperty Name="LockDate" ColumnName="LockDate" />
+                <ScalarProperty Name="Expires" ColumnName="Expires" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_users">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_users">
+              <MappingFragment StoreEntitySet="my_aspnet_users">
+                <ScalarProperty Name="lastActivityDate" ColumnName="lastActivityDate" />
+                <ScalarProperty Name="isAnonymous" ColumnName="isAnonymous" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="applicationId" ColumnName="applicationId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="my_aspnet_usersinroles">
+            <EntityTypeMapping TypeName="residentialbdModel.my_aspnet_usersinroles">
+              <MappingFragment StoreEntitySet="my_aspnet_usersinroles">
+                <ScalarProperty Name="roleId" ColumnName="roleId" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_acessocondominio">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_acessocondominio">
+              <MappingFragment StoreEntitySet="tb_acessocondominio">
+                <ScalarProperty Name="TipoAcesso" ColumnName="TipoAcesso" />
+                <ScalarProperty Name="DataHora" ColumnName="DataHora" />
+                <ScalarProperty Name="IdCondominio" ColumnName="IdCondominio" />
+                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+                <ScalarProperty Name="IdAcessoCondominio" ColumnName="IdAcessoCondominio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_acessoveiculo">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_acessoveiculo">
+              <MappingFragment StoreEntitySet="tb_acessoveiculo">
+                <ScalarProperty Name="TipoAcesso" ColumnName="TipoAcesso" />
+                <ScalarProperty Name="IdVeiculo" ColumnName="IdVeiculo" />
+                <ScalarProperty Name="DataHora" ColumnName="DataHora" />
+                <ScalarProperty Name="IdAcessoVeiculo" ColumnName="IdAcessoVeiculo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_areapublica">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_areapublica">
+              <MappingFragment StoreEntitySet="tb_areapublica">
+                <ScalarProperty Name="StatusAreaPublica" ColumnName="StatusAreaPublica" />
+                <ScalarProperty Name="IdCondominio" ColumnName="IdCondominio" />
+                <ScalarProperty Name="ValorReserva" ColumnName="ValorReserva" />
+                <ScalarProperty Name="Tamanho" ColumnName="Tamanho" />
+                <ScalarProperty Name="Local" ColumnName="Local" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IdAreaPublica" ColumnName="IdAreaPublica" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_atendimento">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_atendimento">
+              <MappingFragment StoreEntitySet="tb_atendimento">
+                <ScalarProperty Name="StatusAtendimento" ColumnName="StatusAtendimento" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="IdPesssoa" ColumnName="IdPesssoa" />
+                <ScalarProperty Name="IdAtendimento" ColumnName="IdAtendimento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_bloco">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_bloco">
+              <MappingFragment StoreEntitySet="tb_bloco">
+                <ScalarProperty Name="QuantidadeMoradias" ColumnName="QuantidadeMoradias" />
+                <ScalarProperty Name="QuantidadeAndares" ColumnName="QuantidadeAndares" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IdCondominio" ColumnName="IdCondominio" />
+                <ScalarProperty Name="IdBloco" ColumnName="IdBloco" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_comentario">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_comentario">
+              <MappingFragment StoreEntitySet="tb_comentario">
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+                <ScalarProperty Name="IdPostagem" ColumnName="IdPostagem" />
+                <ScalarProperty Name="IdComentario" ColumnName="IdComentario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_condominio">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_condominio">
+              <MappingFragment StoreEntitySet="tb_condominio">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="Rua" ColumnName="Rua" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IdCondominio" ColumnName="IdCondominio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_enquete">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_enquete">
+              <MappingFragment StoreEntitySet="tb_enquete">
+                <ScalarProperty Name="StatusEnquete" ColumnName="StatusEnquete" />
+                <ScalarProperty Name="DataFim" ColumnName="DataFim" />
+                <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="IdPesssoa" ColumnName="IdPesssoa" />
+                <ScalarProperty Name="IdEnquete" ColumnName="IdEnquete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_grupoplanocontas">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_grupoplanocontas">
+              <MappingFragment StoreEntitySet="tb_grupoplanocontas">
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="TipoPlanoDeConta" ColumnName="TipoPlanoDeConta" />
+                <ScalarProperty Name="IdGrupoPlanoDeConta" ColumnName="IdGrupoPlanoDeConta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_moradia">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_moradia">
+              <MappingFragment StoreEntitySet="tb_moradia">
+                <ScalarProperty Name="TipoMoradia" ColumnName="TipoMoradia" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="Andar" ColumnName="Andar" />
+                <ScalarProperty Name="IdBloco" ColumnName="IdBloco" />
+                <ScalarProperty Name="IdMoradia" ColumnName="IdMoradia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_movimentacaofinanceira">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_movimentacaofinanceira">
+              <MappingFragment StoreEntitySet="tb_movimentacaofinanceira">
+                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+                <ScalarProperty Name="IdReservaAmbiente" ColumnName="IdReservaAmbiente" />
+                <ScalarProperty Name="IdPlanoDeConta" ColumnName="IdPlanoDeConta" />
+                <ScalarProperty Name="Baixa" ColumnName="Baixa" />
+                <ScalarProperty Name="StatusMovimentacao" ColumnName="StatusMovimentacao" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="NotaFiscal" ColumnName="NotaFiscal" />
+                <ScalarProperty Name="DataRegistro" ColumnName="DataRegistro" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="IdMovimentacaoFinanceira" ColumnName="IdMovimentacaoFinanceira" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_ocorrencia">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_ocorrencia">
+              <MappingFragment StoreEntitySet="tb_ocorrencia">
+                <ScalarProperty Name="OutrosTiposOcorrencia" ColumnName="OutrosTiposOcorrencia" />
+                <ScalarProperty Name="StatusOcorrencia" ColumnName="StatusOcorrencia" />
+                <ScalarProperty Name="TipoOcorrencia" ColumnName="TipoOcorrencia" />
+                <ScalarProperty Name="DataCriacao" ColumnName="DataCriacao" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+                <ScalarProperty Name="IdOcorrencia" ColumnName="IdOcorrencia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_opcoesenquete">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_opcoesenquete">
+              <MappingFragment StoreEntitySet="tb_opcoesenquete">
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="IdEnquete" ColumnName="IdEnquete" />
+                <ScalarProperty Name="IdOpcao" ColumnName="IdOpcao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_pessoamoradia">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_pessoamoradia">
+              <MappingFragment StoreEntitySet="tb_pessoamoradia">
+                <ScalarProperty Name="IdMoradia" ColumnName="IdMoradia" />
+                <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_planodeconta">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_planodeconta">
+              <MappingFragment StoreEntitySet="tb_planodeconta">
+                <ScalarProperty Name="IdTipoPlanoDeConta" ColumnName="IdTipoPlanoDeConta" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="IdPlanoDeConta" ColumnName="IdPlanoDeConta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_pontuacaopessoa">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_pontuacaopessoa">
+              <MappingFragment StoreEntitySet="tb_pontuacaopessoa">
+                <ScalarProperty Name="Pontuacao" ColumnName="Pontuacao" />
+                <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+                <ScalarProperty Name="IdPontuacaoPessoa" ColumnName="IdPontuacaoPessoa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_postagem">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_postagem">
+              <MappingFragment StoreEntitySet="tb_postagem">
+                <ScalarProperty Name="DataEncerramento" ColumnName="DataEncerramento" />
+                <ScalarProperty Name="DataCriacao" ColumnName="DataCriacao" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+                <ScalarProperty Name="IdPostagem" ColumnName="IdPostagem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_reservaambiente">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_reservaambiente">
+              <MappingFragment StoreEntitySet="tb_reservaambiente">
+                <ScalarProperty Name="IdAreaPublica" ColumnName="IdAreaPublica" />
+                <ScalarProperty Name="DataFim" ColumnName="DataFim" />
+                <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
+                <ScalarProperty Name="IdPesssoa" ColumnName="IdPesssoa" />
+                <ScalarProperty Name="IdReservaAmbiente" ColumnName="IdReservaAmbiente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_restricaoacesso">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_restricaoacesso">
+              <MappingFragment StoreEntitySet="tb_restricaoacesso">
+                <ScalarProperty Name="HoraSaida" ColumnName="HoraSaida" />
+                <ScalarProperty Name="HoraEntrada" ColumnName="HoraEntrada" />
+                <ScalarProperty Name="Dia" ColumnName="Dia" />
+                <ScalarProperty Name="Restrito" ColumnName="Restrito" />
+                <ScalarProperty Name="IdMoradia" ColumnName="IdMoradia" />
+                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+                <ScalarProperty Name="IdRestricaoAcesso" ColumnName="IdRestricaoAcesso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_setor">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_setor">
+              <MappingFragment StoreEntitySet="tb_setor">
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IdSetor" ColumnName="IdSetor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_veiculo">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_veiculo">
+              <MappingFragment StoreEntitySet="tb_veiculo">
+                <ScalarProperty Name="IdMoradia" ColumnName="IdMoradia" />
+                <ScalarProperty Name="TipoVeiculo" ColumnName="TipoVeiculo" />
+                <ScalarProperty Name="Cor" ColumnName="Cor" />
+                <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+                <ScalarProperty Name="Placa" ColumnName="Placa" />
+                <ScalarProperty Name="IdPesssoa" ColumnName="IdPesssoa" />
+                <ScalarProperty Name="IdVeiculo" ColumnName="IdVeiculo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_votoenquete">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_votoenquete">
+              <MappingFragment StoreEntitySet="tb_votoenquete">
+                <ScalarProperty Name="DataVoto" ColumnName="DataVoto" />
+                <ScalarProperty Name="IdOpcao" ColumnName="IdOpcao" />
+                <ScalarProperty Name="IdEnquete" ColumnName="IdEnquete" />
+                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+                <ScalarProperty Name="IdVoto" ColumnName="IdVoto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_pessoa">
+            <EntityTypeMapping TypeName="residentialbdModel.tb_pessoa">
+              <MappingFragment StoreEntitySet="tb_pessoa">
+                <ScalarProperty Name="Ativa" ColumnName="Ativa" />
+                <ScalarProperty Name="IdSetor" ColumnName="IdSetor" />
+                <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="Rua" ColumnName="Rua" />
+                <ScalarProperty Name="TelefoneCelular" ColumnName="TelefoneCelular" />
+                <ScalarProperty Name="TelefoneFixo" ColumnName="TelefoneFixo" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="RG" ColumnName="RG" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="IdPessoa" ColumnName="IdPessoa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ResidentialBD">
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_applications" Width="1.5" PointX="0.75" PointY="0.75" Height="1.5956835937500102" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_membership" Width="1.5" PointX="2.75" PointY="0.75" Height="4.6725065104166674" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_profiles" Width="1.5" PointX="4.75" PointY="0.75" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_roles" Width="1.5" PointX="8" PointY="27.625" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_sessioncleanup" Width="1.5" PointX="4.75" PointY="3.75" Height="1.5956835937500102" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_sessions" Width="1.5" PointX="6.75" PointY="0.75" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_users" Width="1.5" PointX="0.75" PointY="21.5" Height="2.172587890624996" />
+        <EntityTypeShape EntityType="residentialbdModel.my_aspnet_usersinroles" Width="1.5" PointX="0.75" PointY="6.75" Height="1.4033821614583246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_acessocondominio" Width="1.5" PointX="8.25" PointY="21.375" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_acessoveiculo" Width="1.5" PointX="7.5" PointY="13.625" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_areapublica" Width="1.5" PointX="9" PointY="9.125" Height="2.749492187499996" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_atendimento" Width="1.5" PointX="5.25" PointY="18" Height="2.1725878906250102" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_bloco" Width="1.5" PointX="0.75" PointY="14.375" Height="2.364889322916639" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_comentario" Width="1.5" PointX="7.5" PointY="30.25" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_condominio" Width="1.5" PointX="1.5" PointY="9.875" Height="3.3263964843749818" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_enquete" Width="1.5" PointX="5.25" PointY="24" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_grupoplanocontas" Width="1.5" PointX="3.75" PointY="10.875" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_moradia" Width="1.5" PointX="3" PointY="14.125" Height="2.7494921874999818" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_movimentacaofinanceira" Width="1.5" PointX="8.25" PointY="16.75" Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_ocorrencia" Width="1.5" PointX="5.25" PointY="32" Height="2.7494921874999818" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_opcoesenquete" Width="1.5" PointX="7.5" PointY="24.5" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_pessoamoradia" Width="1.5" PointX="10.25" PointY="26.375" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_planodeconta" Width="1.5" PointX="6" PointY="10.875" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_pontuacaopessoa" Width="1.5" PointX="5.25" PointY="38.625" Height="1.980286458333353" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_postagem" Width="1.5" PointX="5.25" PointY="41.375" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_reservaambiente" Width="1.5" PointX="11.25" PointY="19.25" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_restricaoacesso" Width="1.5" PointX="11.25" PointY="15.125" Height="2.7494921874999818" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_setor" Width="1.5" PointX="0.75" PointY="18.625" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_veiculo" Width="1.5" PointX="5.25" PointY="14.125" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="residentialbdModel.tb_votoenquete" Width="1.5" PointX="10.75" PointY="22.75" Height="2.5571907552083246" />
+        <AssociationConnector Association="residentialbdModel.fk_tb_perfilpessoa_my_aspnet_roles1" >
+          <ConnectorPoint PointX="9.5" PointY="28.182444661458334" />
+          <ConnectorPoint PointX="10.25" PointY="28.182444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.fk_tb_acessocondominio_tb_condominio1" >
+          <ConnectorPoint PointX="3" PointY="11.538198242187491" />
+          <ConnectorPoint PointX="3.5" PointY="11.538198242187491" />
+          <ConnectorPoint PointX="3.5" PointY="13.375" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="13.375" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="13.375" />
+          <ConnectorPoint PointX="9.25" PointY="13.375" />
+          <ConnectorPoint PointX="9.25" PointY="16.625" />
+          <ConnectorPoint PointX="7.9375" PointY="16.625" />
+          <ConnectorPoint PointX="7.9375" PointY="21" />
+          <ConnectorPoint PointX="9" PointY="21" />
+          <ConnectorPoint PointX="9" PointY="21.375" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.tb_acessoveiculo_tb_veiculo1" >
+          <ConnectorPoint PointX="6.75" PointY="14.865143229166662" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="14.865143229166662" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="14.865143229166662" />
+          <ConnectorPoint PointX="7.5" PointY="14.865143229166662" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_Espaco_TB_Condominio1" >
+          <ConnectorPoint PointX="3" PointY="10.34375" />
+          <ConnectorPoint PointX="9" PointY="10.34375" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.tb_reservaambiente_tb_areapublica1" >
+          <ConnectorPoint PointX="10.15625" PointY="11.874492187499996" />
+          <ConnectorPoint PointX="10.15625" PointY="20.821848958333334" />
+          <ConnectorPoint PointX="10.916666666666666" PointY="20.821848958333334" />
+          <ConnectorPoint PointX="11.083333333333334" PointY="20.821848958333334" />
+          <ConnectorPoint PointX="11.25" PointY="20.821848958333334" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_Bloco_TB_Condominio1" >
+          <ConnectorPoint PointX="1.81249975" PointY="13.201396484374982" />
+          <ConnectorPoint PointX="1.81249975" PointY="14.375" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_Moradia_TB_Bloco1" >
+          <ConnectorPoint PointX="2.25" PointY="15.55744466145832" />
+          <ConnectorPoint PointX="3" PointY="15.55744466145832" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_Comentario_TB_Postagem1" >
+          <ConnectorPoint PointX="6.75" PointY="42.653595377604169" />
+          <ConnectorPoint PointX="8.25" PointY="42.653595377604169" />
+          <ConnectorPoint PointX="8.25" PointY="32.614889322916667" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_OpcoesEnquete_TB_Enquete1" >
+          <ConnectorPoint PointX="6.75" PointY="25.490143229166662" />
+          <ConnectorPoint PointX="7.5" PointY="25.490143229166662" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.tb_votoenquete_tb_enquete1" >
+          <ConnectorPoint PointX="6.75" PointY="24.21875" />
+          <ConnectorPoint PointX="10.75" PointY="24.21875" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.fk_tb_planodeconta_tb_grupoplanocontas1" >
+          <ConnectorPoint PointX="5.25" PointY="11.768992513020834" />
+          <ConnectorPoint PointX="6" PointY="11.768992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.fk_tb_perfilpessoa_tb_moradia1" >
+          <ConnectorPoint PointX="3.75" PointY="16.874492187499982" />
+          <ConnectorPoint PointX="3.75" PointY="18.375" />
+          <ConnectorPoint PointX="4.75" PointY="18.375" />
+          <ConnectorPoint PointX="4.75" PointY="27.375" />
+          <ConnectorPoint PointX="9.875" PointY="27.375" />
+          <ConnectorPoint PointX="9.875" PointY="27.247470330729172" />
+          <ConnectorPoint PointX="10.25" PointY="27.247470330729172" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.fk_tb_restricaoacesso_tb_moradia1" >
+          <ConnectorPoint PointX="3.75" PointY="14.125" />
+          <ConnectorPoint PointX="3.75" PointY="13.875" />
+          <ConnectorPoint PointX="5" PointY="13.875" />
+          <ConnectorPoint PointX="5" PointY="17.316793619791667" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="17.316793619791667" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="17.316793619791667" />
+          <ConnectorPoint PointX="7.854166666666667" PointY="17.316793619791667" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="17.316793619791667" />
+          <ConnectorPoint PointX="8.125" PointY="17.316793619791667" />
+          <ConnectorPoint PointX="8.125" PointY="16.9996484375" />
+          <ConnectorPoint PointX="10.072916666666666" PointY="16.9996484375" />
+          <ConnectorPoint PointX="10.239583333333334" PointY="16.9996484375" />
+          <ConnectorPoint PointX="11.25" PointY="16.9996484375" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.tb_veiculo_tb_moradia1" >
+          <ConnectorPoint PointX="4.5" PointY="15.499746093749991" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="15.499746093749991" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="15.499746093749991" />
+          <ConnectorPoint PointX="5.25" PointY="15.499746093749991" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.fk_tb_movimentacaofinanceira_tb_planodeconta1" >
+          <ConnectorPoint PointX="7.125" PointY="12.855286458333325" />
+          <ConnectorPoint PointX="7.125" PointY="17.627146809895834" />
+          <ConnectorPoint PointX="7.854166666666667" PointY="17.627146809895834" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="17.627146809895834" />
+          <ConnectorPoint PointX="8.25" PointY="17.627146809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.fk_tb_movimentacaofinanceira_tb_reservaambiente1" >
+          <ConnectorPoint PointX="11.25" PointY="19.759348958333334" />
+          <ConnectorPoint PointX="11.083333333333334" PointY="19.759348958333334" />
+          <ConnectorPoint PointX="10.916666666666666" PointY="19.759348958333334" />
+          <ConnectorPoint PointX="10.239583333333334" PointY="19.759348958333334" />
+          <ConnectorPoint PointX="10.072916666666666" PointY="19.759348958333334" />
+          <ConnectorPoint PointX="9.75" PointY="19.759348958333334" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_VotoEnquete_TB_OpcoesEnquete1" >
+          <ConnectorPoint PointX="9" PointY="24.903595377604169" />
+          <ConnectorPoint PointX="10.75" PointY="24.903595377604169" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="residentialbdModel.tb_pessoa" Width="1.5" PointX="3" PointY="18.625" Height="7.1724251302083246" />
+        <AssociationConnector Association="residentialbdModel.fk_tb_pessoa_my_aspnet_users1" >
+          <ConnectorPoint PointX="2.25" PointY="22.5862939453125" />
+          <ConnectorPoint PointX="3" PointY="22.5862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.fk_tb_acessocondominio_tb_pessoa1" >
+          <ConnectorPoint PointX="4.5" PointY="22.557444661458334" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="22.557444661458334" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="22.557444661458334" />
+          <ConnectorPoint PointX="8.25" PointY="22.557444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_Atendimento_TB_Pessoa1" >
+          <ConnectorPoint PointX="4.5" PointY="19.3987939453125" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="19.3987939453125" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="19.3987939453125" />
+          <ConnectorPoint PointX="5.25" PointY="19.3987939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_Comentario_TB_Pessoa1" >
+          <ConnectorPoint PointX="3.75" PointY="25.797425130208325" />
+          <ConnectorPoint PointX="3.75" PointY="31.09375" />
+          <ConnectorPoint PointX="3.8697929166666665" PointY="31.09375" />
+          <ConnectorPoint PointX="4.0364595833333334" PointY="31.09375" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="31.09375" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="31.09375" />
+          <ConnectorPoint PointX="4.2760454166666664" PointY="31.09375" />
+          <ConnectorPoint PointX="4.4427120833333325" PointY="31.09375" />
+          <ConnectorPoint PointX="7.5" PointY="31.09375" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_Enquete_TB_Pessoa1" >
+          <ConnectorPoint PointX="4.5" PointY="24.898712565104162" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="24.898712565104162" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="24.898712565104162" />
+          <ConnectorPoint PointX="5.25" PointY="24.898712565104162" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.fk_tb_movimentacaofinanceira_tb_pessoa1" >
+          <ConnectorPoint PointX="4.5" PointY="20.251892903645835" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="20.251892903645835" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="20.251892903645835" />
+          <ConnectorPoint PointX="7.854166666666667" PointY="20.251892903645835" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="20.251892903645835" />
+          <ConnectorPoint PointX="8.25" PointY="20.251892903645835" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_Ocorrencia_TB_Pessoa1" >
+          <ConnectorPoint PointX="4.1562525" PointY="25.797425130208325" />
+          <ConnectorPoint PointX="4.1562525" PointY="33.37474609375" />
+          <ConnectorPoint PointX="4.2760454166666664" PointY="33.37474609375" />
+          <ConnectorPoint PointX="4.4427120833333325" PointY="33.37474609375" />
+          <ConnectorPoint PointX="5.25" PointY="33.37474609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.fk_tb_perfilpessoa_tb_pessoa1" >
+          <ConnectorPoint PointX="3.3437475" PointY="25.797425130208325" />
+          <ConnectorPoint PointX="3.3437475" PointY="27.46875" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="27.46875" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="27.46875" />
+          <ConnectorPoint PointX="3.8697929166666665" PointY="27.46875" />
+          <ConnectorPoint PointX="4.0364595833333334" PointY="27.46875" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="27.46875" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="27.46875" />
+          <ConnectorPoint PointX="4.2760454166666664" PointY="27.46875" />
+          <ConnectorPoint PointX="4.4427120833333325" PointY="27.46875" />
+          <ConnectorPoint PointX="10.25" PointY="27.46875" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.fk_tb_pessoa_tb_setor1" >
+          <ConnectorPoint PointX="2.25" PointY="19.518992513020834" />
+          <ConnectorPoint PointX="3" PointY="19.518992513020834" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.fk_tb_pontuacao_has_tb_pessoa_tb_pessoa1" >
+          <ConnectorPoint PointX="4.3593787499999994" PointY="25.797425130208325" />
+          <ConnectorPoint PointX="4.3593787499999994" PointY="39.615143229166662" />
+          <ConnectorPoint PointX="5.25" PointY="39.615143229166662" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.fk_tb_restricaoacesso_tb_pessoa1" >
+          <ConnectorPoint PointX="4.5" PointY="21.747469830729173" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="21.747469830729173" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="21.747469830729173" />
+          <ConnectorPoint PointX="8" PointY="21.747469830729173" />
+          <ConnectorPoint PointX="8" PointY="21.125" />
+          <ConnectorPoint PointX="8.9166666666666661" PointY="21.125" />
+          <ConnectorPoint PointX="9.0833333333333339" PointY="21.125" />
+          <ConnectorPoint PointX="11" PointY="21.125" />
+          <ConnectorPoint PointX="11" PointY="19" />
+          <ConnectorPoint PointX="12" PointY="19" />
+          <ConnectorPoint PointX="12" PointY="17.8744921875" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_Postagem_TB_Pessoa1" >
+          <ConnectorPoint PointX="3.95312625" PointY="25.797425130208325" />
+          <ConnectorPoint PointX="3.95312625" PointY="42.653595377604169" />
+          <ConnectorPoint PointX="5.25" PointY="42.653595377604169" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_ReservaAmbiente_TB_Pessoa1" >
+          <ConnectorPoint PointX="4.5" PointY="20.536870930989586" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="20.536870930989586" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="20.536870930989586" />
+          <ConnectorPoint PointX="7.854166666666667" PointY="20.536870930989586" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="20.536870930989586" />
+          <ConnectorPoint PointX="10.072916666666666" PointY="20.536870930989586" />
+          <ConnectorPoint PointX="10.239583333333334" PointY="20.536870930989586" />
+          <ConnectorPoint PointX="10.916666666666666" PointY="20.536870930989586" />
+          <ConnectorPoint PointX="11.083333333333334" PointY="20.536870930989586" />
+          <ConnectorPoint PointX="11.25" PointY="20.536870930989586" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_Veiculo_TB_Pessoa1" >
+          <ConnectorPoint PointX="4.5" PointY="18.626152846153843" />
+          <ConnectorPoint PointX="4.875" PointY="18.251152846153843" />
+          <ConnectorPoint PointX="4.875" PointY="16.314521856770824" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="16.314521856770824" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="16.314521856770824" />
+          <ConnectorPoint PointX="5.25" PointY="16.314521856770824" />
+        </AssociationConnector>
+        <AssociationConnector Association="residentialbdModel.TB_VotoEnquete_TB_Pessoa1" >
+          <ConnectorPoint PointX="4.5" PointY="23.869944661458334" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="23.869944661458334" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="23.869944661458334" />
+          <ConnectorPoint PointX="10.75" PointY="23.869944661458334" />
+        </AssociationConnector>
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
