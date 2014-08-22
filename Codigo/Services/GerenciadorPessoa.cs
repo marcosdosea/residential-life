@@ -132,7 +132,7 @@ namespace Services
         /// <returns></returns>
         public IEnumerable<PessoaModel> ObterTodosPorCPF()
         {
-            return GetQuery().OrderBy(p => p.CPF).Where(p => p.Ativa == true);
+            return GetQuery().OrderBy(p => p.CPF);
         }
 
         /// <summary>
