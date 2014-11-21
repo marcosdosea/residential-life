@@ -34,13 +34,6 @@
             <%: Html.EditorFor(model => model.Comentario) %>
             <%: Html.ValidationMessageFor(model => model.Comentario) %>
         </div>
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.Status) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.Status) %>
-            <%: Html.ValidationMessageFor(model => model.Status) %>
-        </div>
         <p>
             <input type="submit" value="<%: Models.App_GlobalResources.Mensagem.salvar %>" />
         </p>

@@ -32,11 +32,6 @@ namespace Models
         public string Comentario { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
-        [StringLength(45)]
-        [Display(Name = "status", ResourceType = typeof(Mensagem))]
-        public string Status { get; set; }
-
-        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "required")]
         [DataType(DataType.Date)]
         [Display(Name = "data", ResourceType = typeof(Mensagem))]
         public DateTime Data { get; set; }

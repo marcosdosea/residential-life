@@ -31,11 +31,6 @@
         <div class="display-field">
             <%: Html.DisplayFor(model => model.Data) %>
         </div>
-        <div class="display-label">
-            <%:Models.App_GlobalResources.Mensagem.status%></div>
-        <div class="display-field">
-            <%: Html.DisplayFor(model => model.Status) %>
-        </div>
     </fieldset>
     <% using (Html.BeginForm())
        { %>
