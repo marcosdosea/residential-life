@@ -70,7 +70,7 @@ namespace BibliotecaWeb
                 ViewsBagsComentarios(gPostagem.Obter(idPostagem));
                 return View("Index", gComentario.ObterPorPostagem(idPostagem));
             }
-            return View(gComentario);
+            return View(comentarioModel);
         }
 
         //

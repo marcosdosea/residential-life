@@ -29,9 +29,6 @@
                 <%: Models.App_GlobalResources.Mensagem.data %>
             </th>
             <th>
-                <%: Models.App_GlobalResources.Mensagem.status %>
-            </th>
-            <th>
             </th>
         </tr>
         <% foreach (var item in Model)
@@ -45,9 +42,6 @@
             </td>
             <td>
                 <%: Html.DisplayFor(modelItem => item.Data) %>
-            </td>
-            <td>
-                <%: Html.DisplayFor(modelItem => item.Status) %>
             </td>
             <td>
                 <%: Html.ActionLink(Models.App_GlobalResources.Mensagem.detalhes, "Details", new { id = item.IdComentario })%>
