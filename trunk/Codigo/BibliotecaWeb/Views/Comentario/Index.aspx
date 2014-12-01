@@ -29,6 +29,7 @@
                 <%: Models.App_GlobalResources.Mensagem.data %>
             </th>
             <th>
+                <%: Models.App_GlobalResources.Mensagem.opcoes %>
             </th>
         </tr>
         <% foreach (var item in Model)
