@@ -8,8 +8,8 @@ using Persistence;
 
 namespace Services.Test
 {
-    
-    
+
+
     /// <summary>
     ///This is a test class for GerenciadorBlocoTest and is intended
     ///to contain all GerenciadorBlocoTest Unit Tests
@@ -17,8 +17,7 @@ namespace Services.Test
     [TestClass()]
     public class GerenciadorBlocoTest
     {
-
-
+        /*
         private TestContext testContextInstance;
 
         /// <summary>
@@ -66,7 +65,15 @@ namespace Services.Test
         //}
         //
         #endregion
+        */
 
+        private GerenciadorBloco gerenciadorBloco;
+
+        [TestInitialize()]
+        public void Inicializar()
+        {
+            gerenciadorBloco = new GerenciadorBloco();
+        }
 
         /// <summary>
         ///A test for Remover
@@ -74,10 +81,17 @@ namespace Services.Test
         [TestMethod()]
         public void RemoverTest()
         {
-            GerenciadorBloco target = new GerenciadorBloco(); // TODO: Initialize to an appropriate value
-            int idBloco = 0; // TODO: Initialize to an appropriate value
-            target.Remover(idBloco);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            BlocoModel actual = gerenciadorBloco.ObterTodos().ElementAtOrDefault(0);
+            if (actual.Equals(null))
+            {
+                Assert.Fail("Não pode remover, por que não há blocos cadastrados.");
+            }
+            else
+            {
+                int idBloco = actual.IdBloco; // TODO: Initialize to an appropriate value
+                gerenciadorBloco.Remover(idBloco);
+                //Assert.
+            }
         }
 
         /// <summary>
@@ -139,6 +153,7 @@ namespace Services.Test
             Assert.Inconclusive("Verify the correctness of this test method.");
         }
 
+        /*
         /// <summary>
         ///A test for GetQuery
         ///</summary>
@@ -152,7 +167,7 @@ namespace Services.Test
             actual = target.GetQuery();
             Assert.AreEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
-        }
+        } 
 
         /// <summary>
         ///A test for GetInstance
@@ -165,7 +180,7 @@ namespace Services.Test
             actual = GerenciadorBloco.GetInstance();
             Assert.AreEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
-        }
+        } */
 
         /// <summary>
         ///A test for Editar
@@ -179,6 +194,7 @@ namespace Services.Test
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 
+        /*
         /// <summary>
         ///A test for Atribuir
         ///</summary>
@@ -186,7 +202,7 @@ namespace Services.Test
         [DeploymentItem("Services.dll")]
         public void AtribuirTest()
         {
-            GerenciadorBloco_Accessor target = new GerenciadorBloco_Accessor(); // TODO: Initialize to an appropriate value
+            GerenciadorBloco target = new GerenciadorBloco(); // TODO: Initialize to an appropriate value
             BlocoModel blocoModel = null; // TODO: Initialize to an appropriate value
             tb_bloco blocoE = null; // TODO: Initialize to an appropriate value
             target.Atribuir(blocoModel, blocoE);
@@ -212,6 +228,6 @@ namespace Services.Test
         {
             GerenciadorBloco target = new GerenciadorBloco();
             Assert.Inconclusive("TODO: Implement code to verify target");
-        }
+        }*/
     }
 }
