@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:50008/" />
+<title>RL-8-Inserir um Bloco Inválido</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RL-8-Inserir um Bloco Inválido</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Log On</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=UserName</td>
+	<td>administrador</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=Password</td>
+	<td>residential</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Bloco</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Novo</td>
+	<td>Novo</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=th</td>
+	<td>Nome</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='table']/tbody/tr/th[2]</td>
+	<td>Condomínio</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='table']/tbody/tr/th[3]</td>
+	<td>Quantidade de Andares</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='table']/tbody/tr/th[4]</td>
+	<td>Quantidade de Moradias</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//table[@id='table']/tbody/tr/th[5]</td>
+	<td>Opções</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Novo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.editor-label &gt; label</td>
+	<td>Nome Condominio</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='conteudo']/form/fieldset/div[3]/label</td>
+	<td>Nome</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='conteudo']/form/fieldset/div[5]/label</td>
+	<td>Quantidade de Andares</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='conteudo']/form/fieldset/div[7]/label</td>
+	<td>Quantidade de Moradias</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=Voltar</td>
+	<td>Voltar</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=IdCondominio</td>
+	<td>label=Atlanta</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=QuantidadeAndares</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=QuantidadeMoradias</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.field-validation-error &gt; span</td>
+	<td>O campo Nome é obrigatório.</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
