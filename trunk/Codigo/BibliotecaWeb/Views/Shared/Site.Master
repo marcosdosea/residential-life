@@ -58,13 +58,17 @@
                     <%: Html.ActionLink("Acesso Veículo", "Index", "AcessoVeiculo")%></li>
                 <li><%: Html.ActionLink("Acesso Pessoa", "Index", "AcessoPredio")%></li>
                 <li><%: Html.ActionLink("Pontuar Pessoa", "Index", "PontuarPessoa")%></li>
+                <li>
+                    <%: Html.ActionLink("Plano De Conta", "Index", "PlanoDeConta")%></li>
+                <li>
+                    <%: Html.ActionLink("Grupo Plano De Conta", "Index", "GrupoPlanoDeContas")%></li>
                 <% } %>
                 <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilProprietario))
                    { %>
                 <li>
                     <%: Html.ActionLink("Responsáveis", "Responsavel", "Perfis")%></li>
                 <% } %>
-                <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilSindico) && HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilAdministradora))
+                <% if (HttpContext.Current.Session["_IdRole"].Equals(Models.Global.IdPerfilAdministradora))
                    { %>
                 <li>
                     <%: Html.ActionLink("Plano De Conta", "Index", "PlanoDeConta")%></li>
