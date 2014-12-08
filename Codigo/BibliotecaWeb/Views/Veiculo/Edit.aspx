@@ -21,6 +21,7 @@
 
         <%: Html.HiddenFor(model => model.IdPessoa)%>
         <%: Html.HiddenFor(model => model.IdMoradia)%>
+        <%: Html.HiddenFor(model => model.IdVeiculo)%>
 
         <div class="editor-label">
             <%: Html.LabelFor(model => model.TipoVeiculo) %>

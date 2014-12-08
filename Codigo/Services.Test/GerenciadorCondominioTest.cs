@@ -18,7 +18,7 @@ namespace Services.Test
     public class GerenciadorCondominioTest
     {
 
-
+        /*
         private TestContext testContextInstance;
 
         /// <summary>
@@ -197,6 +197,6 @@ namespace Services.Test
             int idCondominio = 0; // TODO: Initialize to an appropriate value
             target.Remover(idCondominio);
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
+        } */
     }
 }

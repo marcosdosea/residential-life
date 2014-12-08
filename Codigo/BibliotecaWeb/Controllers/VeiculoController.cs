@@ -75,7 +75,7 @@ namespace BibliotecaWeb
         {
             if (ModelState.IsValid)
             {
-                veiculoModel.IdPessoa = SessionController.Pessoa.IdPessoa;
+                //veiculoModel.IdPessoa = SessionController.Pessoa.IdPessoa;
                 gVeiculo.Editar(veiculoModel);
                 return RedirectToAction("Index");
             }
