@@ -109,10 +109,7 @@ namespace Services.Test
         [TestMethod()]
         public void EditarTest()
         {
-            GerenciadorAcessoPredio target = new GerenciadorAcessoPredio(); // TODO: Initialize to an appropriate value
-            AcessoPredioModel acessoPredioModel = null; // TODO: Initialize to an appropriate value
-            target.Editar(acessoPredioModel);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            
         }
 
         /// <summary>
@@ -136,13 +133,25 @@ namespace Services.Test
         [TestMethod()]
         public void InserirTest()
         {
-            GerenciadorAcessoPredio target = new GerenciadorAcessoPredio(); // TODO: Initialize to an appropriate value
-            AcessoPredioModel acessoPredioModel = null; // TODO: Initialize to an appropriate value
-            int expected = 0; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = target.Inserir(acessoPredioModel);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            GerenciadorAcessoPredio target = new GerenciadorAcessoPredio();
+            AcessoPredioModel acesso = new AcessoPredioModel();
+            acesso.IdAcesoPredio = 1;
+            acesso.IdCondominio = 1;
+            acesso.IdPessoa = 18;
+            acesso.Data = DateTime.Now;
+            acesso.TipoAcesso = ListaTipoAcesso.Saida;
+            try
+            {
+                target.Inserir(acesso);
+            }
+            catch (Exception e)
+            {
+                Assert.IsInstanceOfType(e, typeof(ServiceException));
+            }
+            AcessoPredioModel novoAcesso = target.Obter(1);
+            Assert.IsNotNull(novoAcesso);
+            Assert.IsInstanceOfType(novoAcesso, typeof(AcessoPredioModel));
+            Assert.AreEqual(acesso, novoAcesso);  
         }
 
         /// <summary>
@@ -151,13 +160,12 @@ namespace Services.Test
         [TestMethod()]
         public void ObterTest()
         {
-            GerenciadorAcessoPredio target = new GerenciadorAcessoPredio(); // TODO: Initialize to an appropriate value
-            int idAcessoPredio = 0; // TODO: Initialize to an appropriate value
-            AcessoPredioModel expected = null; // TODO: Initialize to an appropriate value
-            AcessoPredioModel actual;
-            actual = target.Obter(idAcessoPredio);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            GerenciadorAcessoPredio target = new GerenciadorAcessoPredio();
+            AcessoPredioModel novoAcesso = target.Obter(1);
+            AcessoPredioModel actual = new AcessoPredioModel();
+            actual.IdAcesoPredio = 1;
+            actual = target.Obter(actual.IdAcesoPredio);
+            Assert.AreEqual(actual, novoAcesso);
         }
 
         /// <summary>
@@ -166,12 +174,11 @@ namespace Services.Test
         [TestMethod()]
         public void ObterTodosTest()
         {
-            GerenciadorAcessoPredio target = new GerenciadorAcessoPredio(); // TODO: Initialize to an appropriate value
-            IEnumerable<AcessoPredioModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<AcessoPredioModel> actual;
-            actual = target.ObterTodos();
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            GerenciadorAcessoPredio target = new GerenciadorAcessoPredio();
+            IEnumerable<AcessoPredioModel> esperado = target.ObterTodos();
+            IEnumerable<AcessoPredioModel> atual = target.ObterTodos();
+            atual = target.ObterTodos();
+            Assert.AreEqual(esperado, atual);
         }
 
         /// <summary>
@@ -180,13 +187,11 @@ namespace Services.Test
         [TestMethod()]
         public void ObterTodosPorPessoaTest()
         {
-            GerenciadorAcessoPredio target = new GerenciadorAcessoPredio(); // TODO: Initialize to an appropriate value
-            int idPessoa = 0; // TODO: Initialize to an appropriate value
-            IEnumerable<AcessoPredioModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<AcessoPredioModel> actual;
-            actual = target.ObterTodosPorPessoa(idPessoa);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            GerenciadorAcessoPredio target = new GerenciadorAcessoPredio();
+            IEnumerable<AcessoPredioModel> esperado = target.ObterTodosPorPessoa(18);
+            IEnumerable<AcessoPredioModel> atual = target.ObterTodosPorPessoa(18);
+            atual = target.ObterTodos();
+            Assert.AreEqual(esperado, atual);
         }
 
         /// <summary>
@@ -195,10 +200,11 @@ namespace Services.Test
         [TestMethod()]
         public void RemoverTest()
         {
-            GerenciadorAcessoPredio target = new GerenciadorAcessoPredio(); // TODO: Initialize to an appropriate value
-            int idAcessoPredio = 0; // TODO: Initialize to an appropriate value
-            target.Remover(idAcessoPredio);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            GerenciadorAcessoPredio target = new GerenciadorAcessoPredio();
+            AcessoPredioModel acesso = target.Obter(1);
+            Assert.AreSame(acesso.IdAcesoPredio, 1);
+            acesso.IdAcesoPredio = 1;
+            target.Remover(acesso.IdAcesoPredio);
         } */
     }
 }

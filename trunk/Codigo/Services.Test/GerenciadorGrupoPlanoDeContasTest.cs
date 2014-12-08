@@ -11,14 +11,14 @@ namespace Services.Test
     
     
     /// <summary>
-    ///This is a test class for GerenciadorCondominioTest and is intended
-    ///to contain all GerenciadorCondominioTest Unit Tests
+    ///This is a test class for GerenciadorGrupoPlanoDeContasTest and is intended
+    ///to contain all GerenciadorGrupoPlanoDeContasTest Unit Tests
     ///</summary>
     [TestClass()]
-    public class GerenciadorCondominioTest
+    public class GerenciadorGrupoPlanoDeContasTest
     {
 
-        /*
+
         private TestContext testContextInstance;
 
         /// <summary>
@@ -69,23 +69,23 @@ namespace Services.Test
 
 
         /// <summary>
-        ///A test for GerenciadorCondominio Constructor
+        ///A test for GerenciadorGrupoPlanoDeContas Constructor
         ///</summary>
         [TestMethod()]
-        public void GerenciadorCondominioConstructorTest()
+        public void GerenciadorGrupoPlanoDeContasConstructorTest()
         {
             IUnitOfWork unitOfWork = null; // TODO: Initialize to an appropriate value
-            GerenciadorCondominio target = new GerenciadorCondominio(unitOfWork);
+            GerenciadorGrupoPlanoDeContas target = new GerenciadorGrupoPlanoDeContas(unitOfWork);
             Assert.Inconclusive("TODO: Implement code to verify target");
         }
 
         /// <summary>
-        ///A test for GerenciadorCondominio Constructor
+        ///A test for GerenciadorGrupoPlanoDeContas Constructor
         ///</summary>
         [TestMethod()]
-        public void GerenciadorCondominioConstructorTest1()
+        public void GerenciadorGrupoPlanoDeContasConstructorTest1()
         {
-            GerenciadorCondominio target = new GerenciadorCondominio();
+            GerenciadorGrupoPlanoDeContas target = new GerenciadorGrupoPlanoDeContas();
             Assert.Inconclusive("TODO: Implement code to verify target");
         }
 
@@ -96,10 +96,10 @@ namespace Services.Test
         [DeploymentItem("Services.dll")]
         public void AtribuirTest()
         {
-            GerenciadorCondominio_Accessor target = new GerenciadorCondominio_Accessor(); // TODO: Initialize to an appropriate value
-            CondominioModel condominioModel = null; // TODO: Initialize to an appropriate value
-            tb_condominio condominioE = null; // TODO: Initialize to an appropriate value
-            target.Atribuir(condominioModel, condominioE);
+            GerenciadorGrupoPlanoDeContas_Accessor target = new GerenciadorGrupoPlanoDeContas_Accessor(); // TODO: Initialize to an appropriate value
+            GrupoPlanoDeContasModel grupoModel = null; // TODO: Initialize to an appropriate value
+            tb_grupoplanocontas grupoE = null; // TODO: Initialize to an appropriate value
+            target.Atribuir(grupoModel, grupoE);
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 
@@ -109,24 +109,11 @@ namespace Services.Test
         [TestMethod()]
         public void EditarTest()
         {
-            GerenciadorCondominio target = new GerenciadorCondominio(); 
-            CondominioModel condominioModel = target.Obter(1);
-            condominioModel.Nome = "Condimínio Edfício Atlanta";
-            target.Editar(condominioModel);
-            Assert.AreSame("Condimínio Edfício Atlanta", condominioModel.Nome);
-        }
-
-        /// <summary>
-        ///A test for GetInstance
-        ///</summary>
-        [TestMethod()]
-        public void GetInstanceTest()
-        {
-            GerenciadorCondominio expected = null; // TODO: Initialize to an appropriate value
-            GerenciadorCondominio actual;
-            actual = GerenciadorCondominio.GetInstance();
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            GerenciadorGrupoPlanoDeContas target = new GerenciadorGrupoPlanoDeContas();
+            GrupoPlanoDeContasModel grupo = target.Obter(1);
+            grupo.Descricao = "Despesas Natalinas";
+            target.Editar(grupo);
+            Assert.AreSame("Despesas Natalinas", grupo.Descricao);
         }
 
         /// <summary>
@@ -136,9 +123,9 @@ namespace Services.Test
         [DeploymentItem("Services.dll")]
         public void GetQueryTest()
         {
-            GerenciadorCondominio_Accessor target = new GerenciadorCondominio_Accessor(); // TODO: Initialize to an appropriate value
-            IQueryable<CondominioModel> expected = null; // TODO: Initialize to an appropriate value
-            IQueryable<CondominioModel> actual;
+            GerenciadorGrupoPlanoDeContas_Accessor target = new GerenciadorGrupoPlanoDeContas_Accessor(); // TODO: Initialize to an appropriate value
+            IQueryable<GrupoPlanoDeContasModel> expected = null; // TODO: Initialize to an appropriate value
+            IQueryable<GrupoPlanoDeContasModel> actual;
             actual = target.GetQuery();
             Assert.AreEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
@@ -148,29 +135,25 @@ namespace Services.Test
         ///A test for Inserir
         ///</summary>
         [TestMethod()]
-        public void InserirCondominioValidoTest()
+        public void InserirTest()
         {
-            GerenciadorCondominio target = new GerenciadorCondominio();
-            CondominioModel condominioModel = new CondominioModel();
-            condominioModel.IdCondominio = 1;
-            condominioModel.Nome = "Condomínio Atlanta";
-            condominioModel.Numero = "1753";
-            condominioModel.Bairro = "Luzia";
-            condominioModel.Cep = "49045280";
-            condominioModel.Estado = "SE";
-            condominioModel.Rua = "Av. Gonçalo Rollemberg Leite";
+            GerenciadorGrupoPlanoDeContas target = new GerenciadorGrupoPlanoDeContas();
+            GrupoPlanoDeContasModel grupo = new GrupoPlanoDeContasModel();
+            grupo.IdGrupoPlanoDeConta = 1;
+            grupo.TipoPlanoDeConta = ListaTipoPlanoConta.Despesa;
+            grupo.Descricao = "Despesas Administrativas";
             try
             {
-                target.Inserir(condominioModel);
+                target.Inserir(grupo);
             }
             catch (Exception e)
             {
                 Assert.IsInstanceOfType(e, typeof(ServiceException));
             }
-            CondominioModel novoCondominio = target.Obter(1);
-            Assert.IsNotNull(novoCondominio);
-            Assert.IsInstanceOfType(novoCondominio, typeof(CondominioModel));
-            Assert.AreEqual(condominioModel.Nome, condominioModel.Nome);  
+            GrupoPlanoDeContasModel obterGrupo = target.Obter(1);
+            Assert.IsNotNull(obterGrupo);
+            Assert.IsInstanceOfType(obterGrupo, typeof(GrupoPlanoDeContasModel));
+            Assert.AreEqual(obterGrupo, grupo);  
         }
 
         /// <summary>
@@ -179,12 +162,12 @@ namespace Services.Test
         [TestMethod()]
         public void ObterTest()
         {
-            GerenciadorCondominio target = new GerenciadorCondominio();
-            CondominioModel novoCondominio = target.Obter(1);
-            CondominioModel actual = new CondominioModel();
-            actual.IdCondominio = 1;
-            actual = target.Obter(actual.IdCondominio);
-            Assert.AreEqual(actual, novoCondominio);
+            GerenciadorGrupoPlanoDeContas target = new GerenciadorGrupoPlanoDeContas();
+            GrupoPlanoDeContasModel grupo = target.Obter(1);
+            GrupoPlanoDeContasModel actual = new GrupoPlanoDeContasModel();
+            actual.IdGrupoPlanoDeConta = 1;
+            actual = target.Obter(actual.IdGrupoPlanoDeConta);
+            Assert.AreEqual(actual, grupo);
         }
 
         /// <summary>
@@ -193,9 +176,9 @@ namespace Services.Test
         [TestMethod()]
         public void ObterTodosTest()
         {
-            GerenciadorCondominio target = new GerenciadorCondominio();
-            IEnumerable<CondominioModel> esperado = target.ObterTodos();
-            IEnumerable<CondominioModel> atual = target.ObterTodos();
+            GerenciadorGrupoPlanoDeContas target = new GerenciadorGrupoPlanoDeContas();
+            IEnumerable<GrupoPlanoDeContasModel> esperado = target.ObterTodos();
+            IEnumerable<GrupoPlanoDeContasModel> atual = target.ObterTodos();
             atual = target.ObterTodos();
             Assert.AreEqual(esperado, atual);
         }
@@ -206,11 +189,11 @@ namespace Services.Test
         [TestMethod()]
         public void RemoverTest()
         {
-            GerenciadorCondominio target = new GerenciadorCondominio();
-            CondominioModel condominio = target.Obter(1);
-            Assert.AreSame(condominio.IdCondominio, 1);
-            condominio.IdCondominio = 1;
-            target.Remover(condominio.IdCondominio);
-        } */
+            GerenciadorGrupoPlanoDeContas target = new GerenciadorGrupoPlanoDeContas();
+            GrupoPlanoDeContasModel grupo = target.Obter(1);
+            Assert.AreSame(grupo.IdGrupoPlanoDeConta, 1);
+            grupo.IdGrupoPlanoDeConta = 1;
+            target.Remover(grupo.IdGrupoPlanoDeConta);
+        }
     }
 }

@@ -55,7 +55,7 @@
     <Compile Include="GerenciadorBlocoTest.cs" />
     <Compile Include="GerenciadorComentarioTest.cs" />
     <Compile Include="GerenciadorCondominioTest.cs" />
-    <Compile Include="GerenciadorPlanoDeContaTest.cs" />
+    <Compile Include="GerenciadorGrupoPlanoDeContasTest.cs" />
     <Compile Include="GerenciadorPostagemTest.cs" />
     <Compile Include="GerenciadorVeiculoTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
