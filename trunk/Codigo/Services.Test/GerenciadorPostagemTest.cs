@@ -17,8 +17,7 @@ namespace Services.Test
     [TestClass()]
     public class GerenciadorPostagemTest
     {
-
-
+        /*
         private TestContext testContextInstance;
 
         /// <summary>
@@ -66,8 +65,9 @@ namespace Services.Test
         //}
         //
         #endregion
+        */
 
-
+        /*
         /// <summary>
         ///A test for Remover
         ///</summary>
@@ -153,19 +153,70 @@ namespace Services.Test
             Assert.AreEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
         }
+        */
 
         /// <summary>
         ///A test for Editar
         ///</summary>
         [TestMethod()]
-        public void EditarTest()
+        public void EditarValidoTest()
         {
-            GerenciadorPostagem target = new GerenciadorPostagem(); // TODO: Initialize to an appropriate value
-            PostagemModel PostagemModel = null; // TODO: Initialize to an appropriate value
-            target.Editar(PostagemModel);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            GerenciadorPostagem gerenciadorPostagem = new GerenciadorPostagem();
+            PostagemModel postagemActual = gerenciadorPostagem.ObterTodos().ElementAtOrDefault(0);
+            if (postagemActual.Equals(null))
+            {
+                Assert.Fail("Não pode editar a base de dados está vazia.");
+            }
+            else
+            {
+                PostagemModel postagemAlvo = postagemActual;
+                postagemAlvo.Titulo = "Mudar Porteiro.";
+                postagemAlvo.Descricao = "O porteiro é muito antipático";
+                gerenciadorPostagem.Editar(postagemAlvo);
+                PostagemModel novaPostagem = gerenciadorPostagem.Obter(postagemAlvo.IdPostagem);
+                Assert.IsNotNull(novaPostagem);
+                Assert.AreEqual(postagemAlvo, novaPostagem);
+                Assert.AreSame(postagemAlvo, novaPostagem);
+                Assert.Equals(postagemAlvo.Titulo, novaPostagem.Titulo);
+                Assert.Equals(postagemAlvo.Descricao, novaPostagem.Descricao);
+            }
         }
 
+        /// <summary>
+        ///A test for Editar
+        ///</summary>
+        [TestMethod()]
+        public void EditarInvalidoTest()
+        {
+            GerenciadorPostagem gerenciadorPostagem = new GerenciadorPostagem();
+            PostagemModel postagemActual = gerenciadorPostagem.ObterTodos().ElementAtOrDefault(0);
+            if (postagemActual.Equals(null))
+            {
+                Assert.Fail("Não pode editar a base de dados está vazia.");
+            }
+            else
+            {
+                PostagemModel postagemAlvo = postagemActual;
+                postagemAlvo.Titulo = null;
+                postagemAlvo.Descricao = null;
+                try
+                {
+                    gerenciadorPostagem.Editar(postagemAlvo);
+                } catch (Exception)
+                {
+                    Assert.Fail("Não Edita valores nulos");
+                }
+                /*
+                PostagemModel novaPostagem = gerenciadorPostagem.Obter(postagemAlvo.IdPostagem);
+                Assert.IsNotNull(novaPostagem);
+                Assert.AreEqual(postagemAlvo, novaPostagem);
+                Assert.AreSame(postagemAlvo, novaPostagem);
+                Assert.Equals(postagemAlvo.Titulo, novaPostagem.Titulo);
+                Assert.Equals(postagemAlvo.Descricao, novaPostagem.Descricao); */
+            }
+        }
+
+        /*
         /// <summary>
         ///A test for Atribuir
         ///</summary>
@@ -180,6 +231,7 @@ namespace Services.Test
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 
+        /*
         /// <summary>
         ///A test for GerenciadorPostagem Constructor
         ///</summary>
@@ -199,6 +251,6 @@ namespace Services.Test
             IUnitOfWork unitOfWork = null; // TODO: Initialize to an appropriate value
             GerenciadorPostagem target = new GerenciadorPostagem(unitOfWork);
             Assert.Inconclusive("TODO: Implement code to verify target");
-        }
+        } */
     }
 }

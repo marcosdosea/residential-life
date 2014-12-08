@@ -18,7 +18,7 @@ namespace Services.Test
     public class GerenciadorPlanoDeContaTest
     {
 
-
+        /*
         private TestContext testContextInstance;
 
         /// <summary>
@@ -184,6 +184,6 @@ namespace Services.Test
             int idPlanoDeConta = 0; // TODO: Initialize to an appropriate value
             target.Remover(idPlanoDeConta);
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
+        } */
     }
 }

@@ -18,7 +18,7 @@ namespace Services.Test
     public class GerenciadorAcessoPredioTest
     {
 
-
+        /*
         private TestContext testContextInstance;
 
         /// <summary>
@@ -199,6 +199,6 @@ namespace Services.Test
             int idAcessoPredio = 0; // TODO: Initialize to an appropriate value
             target.Remover(idAcessoPredio);
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
+        } */
     }
 }

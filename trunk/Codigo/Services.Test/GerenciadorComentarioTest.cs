@@ -18,7 +18,7 @@ namespace Services.Test
     public class GerenciadorComentarioTest
     {
 
-
+        /*
         private TestContext testContextInstance;
 
         /// <summary>
@@ -230,6 +230,6 @@ namespace Services.Test
             IUnitOfWork unitOfWork = null; // TODO: Initialize to an appropriate value
             GerenciadorComentario target = new GerenciadorComentario(unitOfWork);
             Assert.Inconclusive("TODO: Implement code to verify target");
-        }
+        } */
     }
 }

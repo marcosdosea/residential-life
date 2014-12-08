@@ -14,7 +14,7 @@ namespace Services.Test
     public class ServiceExceptionTest
     {
 
-
+        /*
         private TestContext testContextInstance;
 
         /// <summary>
@@ -74,6 +74,6 @@ namespace Services.Test
             Exception inner = null; // TODO: Initialize to an appropriate value
             ServiceException target = new ServiceException(mensagem, inner);
             Assert.Inconclusive("TODO: Implement code to verify target");
-        }
+        }*/
     }
 }

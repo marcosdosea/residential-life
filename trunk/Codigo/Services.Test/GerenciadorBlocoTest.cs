@@ -65,7 +65,7 @@ namespace Services.Test
         //}
         //
         #endregion
-        */
+        
 
         private GerenciadorBloco gerenciadorBloco;
 
@@ -180,7 +180,7 @@ namespace Services.Test
             actual = GerenciadorBloco.GetInstance();
             Assert.AreEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
-        } */
+        } 
 
         /// <summary>
         ///A test for Editar
