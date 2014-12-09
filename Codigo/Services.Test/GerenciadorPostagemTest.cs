@@ -17,7 +17,6 @@ namespace Services.Test
     [TestClass()]
     public class GerenciadorPostagemTest
     {
-        /*
         private TestContext testContextInstance;
 
         /// <summary>
@@ -65,9 +64,43 @@ namespace Services.Test
         //}
         //
         #endregion
-        */
 
-        /*
+        /// <summary>
+        ///A test for GerenciadorPostagem Constructor
+        ///</summary>
+        [TestMethod()]
+        public void GerenciadorPostagemConstructorTest()
+        {
+            GerenciadorPostagem target = new GerenciadorPostagem();
+            Assert.Inconclusive("TODO: Implement code to verify target");
+        }
+
+        /// <summary>
+        ///A test for GerenciadorPostagem Constructor
+        ///</summary>
+        [TestMethod()]
+        public void GerenciadorPostagemConstructorTest1()
+        {
+            IUnitOfWork unitOfWork = null; // TODO: Initialize to an appropriate value
+            GerenciadorPostagem target = new GerenciadorPostagem(unitOfWork);
+            Assert.Inconclusive("TODO: Implement code to verify target");
+        }
+
+
+        /// <summary>
+        ///A test for Atribuir
+        ///</summary>
+        [TestMethod()]
+        [DeploymentItem("Services.dll")]
+        public void AtribuirTest()
+        {
+            GerenciadorPostagem_Accessor target = new GerenciadorPostagem_Accessor(); // TODO: Initialize to an appropriate value
+            PostagemModel PostagemModel = null; // TODO: Initialize to an appropriate value
+            tb_postagem PostagemE = null; // TODO: Initialize to an appropriate value
+            target.Atribuir(PostagemModel, PostagemE);
+            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+        }
+
         /// <summary>
         ///A test for Remover
         ///</summary>
@@ -130,12 +163,14 @@ namespace Services.Test
         [TestMethod()]
         public void InserirTest()
         {
-            GerenciadorPostagem target = new GerenciadorPostagem(); // TODO: Initialize to an appropriate value
-            PostagemModel PostagemModel = null; // TODO: Initialize to an appropriate value
-            int expected = 0; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = target.Inserir(PostagemModel);
-            Assert.AreEqual(expected, actual);
+            GerenciadorPostagem target = new GerenciadorPostagem();
+            PostagemModel postagem = new PostagemModel();
+            postagem.DataPublicacao = DateTime.Now;
+            postagem.DataExclusao = DateTime.Now;
+            postagem.Descricao = "Problema com o porteiro.";
+            postagem.Titulo = "Porteiro mal educado";
+            //actual = target.Inserir(PostagemModel);
+            //Assert.AreEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
         }
 
@@ -153,13 +188,12 @@ namespace Services.Test
             Assert.AreEqual(expected, actual);
             Assert.Inconclusive("Verify the correctness of this test method.");
         }
-        */
 
         /// <summary>
         ///A test for Editar
         ///</summary>
         [TestMethod()]
-        public void EditarValidoTest()
+        public void EditarTest()
         {
             GerenciadorPostagem gerenciadorPostagem = new GerenciadorPostagem();
             PostagemModel postagemActual = gerenciadorPostagem.ObterTodos().ElementAtOrDefault(0);
@@ -181,76 +215,5 @@ namespace Services.Test
                 Assert.Equals(postagemAlvo.Descricao, novaPostagem.Descricao);
             }
         }
-
-        /// <summary>
-        ///A test for Editar
-        ///</summary>
-        [TestMethod()]
-        public void EditarInvalidoTest()
-        {
-            GerenciadorPostagem gerenciadorPostagem = new GerenciadorPostagem();
-            PostagemModel postagemActual = gerenciadorPostagem.ObterTodos().ElementAtOrDefault(0);
-            if (postagemActual.Equals(null))
-            {
-                Assert.Fail("Não pode editar a base de dados está vazia.");
-            }
-            else
-            {
-                PostagemModel postagemAlvo = postagemActual;
-                postagemAlvo.Titulo = null;
-                postagemAlvo.Descricao = null;
-                try
-                {
-                    gerenciadorPostagem.Editar(postagemAlvo);
-                } catch (Exception)
-                {
-                    Assert.Fail("Não Edita valores nulos");
-                }
-                /*
-                PostagemModel novaPostagem = gerenciadorPostagem.Obter(postagemAlvo.IdPostagem);
-                Assert.IsNotNull(novaPostagem);
-                Assert.AreEqual(postagemAlvo, novaPostagem);
-                Assert.AreSame(postagemAlvo, novaPostagem);
-                Assert.Equals(postagemAlvo.Titulo, novaPostagem.Titulo);
-                Assert.Equals(postagemAlvo.Descricao, novaPostagem.Descricao); */
-            }
-        }
-
-        /*
-        /// <summary>
-        ///A test for Atribuir
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("Services.dll")]
-        public void AtribuirTest()
-        {
-            GerenciadorPostagem_Accessor target = new GerenciadorPostagem_Accessor(); // TODO: Initialize to an appropriate value
-            PostagemModel PostagemModel = null; // TODO: Initialize to an appropriate value
-            tb_postagem PostagemE = null; // TODO: Initialize to an appropriate value
-            target.Atribuir(PostagemModel, PostagemE);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        }
-
-        /*
-        /// <summary>
-        ///A test for GerenciadorPostagem Constructor
-        ///</summary>
-        [TestMethod()]
-        public void GerenciadorPostagemConstructorTest()
-        {
-            GerenciadorPostagem target = new GerenciadorPostagem();
-            Assert.Inconclusive("TODO: Implement code to verify target");
-        }
-
-        /// <summary>
-        ///A test for GerenciadorPostagem Constructor
-        ///</summary>
-        [TestMethod()]
-        public void GerenciadorPostagemConstructorTest1()
-        {
-            IUnitOfWork unitOfWork = null; // TODO: Initialize to an appropriate value
-            GerenciadorPostagem target = new GerenciadorPostagem(unitOfWork);
-            Assert.Inconclusive("TODO: Implement code to verify target");
-        } */
     }
 }
