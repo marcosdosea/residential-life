@@ -18,7 +18,7 @@ namespace Services.Test
     public class GerenciadorCondominioTest
     {
 
-        /*
+        
         private TestContext testContextInstance;
 
         /// <summary>
@@ -196,7 +196,6 @@ namespace Services.Test
             GerenciadorCondominio target = new GerenciadorCondominio();
             IEnumerable<CondominioModel> esperado = target.ObterTodos();
             IEnumerable<CondominioModel> atual = target.ObterTodos();
-            atual = target.ObterTodos();
             Assert.AreEqual(esperado, atual);
         }
 
@@ -211,6 +210,6 @@ namespace Services.Test
             Assert.AreSame(condominio.IdCondominio, 1);
             condominio.IdCondominio = 1;
             target.Remover(condominio.IdCondominio);
-        } */
+        } 
     }
 }
