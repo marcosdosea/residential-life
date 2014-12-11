@@ -8,8 +8,8 @@ using Persistence;
 
 namespace Services.Test
 {
-    
-    
+
+
     /// <summary>
     ///This is a test class for GerenciadorComentarioTest and is intended
     ///to contain all GerenciadorComentarioTest Unit Tests
@@ -18,7 +18,6 @@ namespace Services.Test
     public class GerenciadorComentarioTest
     {
 
-        /*
         private TestContext testContextInstance;
 
         /// <summary>
@@ -74,25 +73,42 @@ namespace Services.Test
         [TestMethod()]
         public void RemoverTest()
         {
-            GerenciadorComentario target = new GerenciadorComentario(); // TODO: Initialize to an appropriate value
-            int idComentario = 0; // TODO: Initialize to an appropriate value
+            GerenciadorComentario target = new GerenciadorComentario();
+            int idComentario = 1;
             target.Remover(idComentario);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            ComentarioModel comentario = target.Obter(idComentario);
+            Assert.IsNull(comentario);
         }
 
         /// <summary>
         ///A test for ObterTodosPorPessoa
         ///</summary>
         [TestMethod()]
-        public void ObterTodosPorPessoaTest()
+        public void ObterTodosPorPessoaValidoTest()
         {
-            GerenciadorComentario target = new GerenciadorComentario(); // TODO: Initialize to an appropriate value
-            int idPessoa = 0; // TODO: Initialize to an appropriate value
-            IEnumerable<ComentarioModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<ComentarioModel> actual;
-            actual = target.ObterTodosPorPessoa(idPessoa);
+            GerenciadorComentario target = new GerenciadorComentario();
+            int idPessoa = 17;
+            IEnumerable<ComentarioModel> expected = target.ObterPorPostagem(idPessoa);
+            IEnumerable<ComentarioModel> actual = target.ObterPorPostagem(idPessoa);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            foreach (var comentario in actual)
+            {
+                Assert.Equals(idPessoa, comentario.IdPessoa);
+            }
+        }
+
+        /// <summary>
+        ///A test for ObterTodosPorPessoa
+        ///</summary>
+        [TestMethod()]
+        public void ObterTodosPorPessoaInvalidoTest()
+        {
+            GerenciadorComentario target = new GerenciadorComentario();
+            int idPessoa = -1;
+            IEnumerable<ComentarioModel> expected = null;
+            IEnumerable<ComentarioModel> actual = target.ObterPorPostagem(idPessoa);
+            Assert.AreEqual(expected, actual);
+            Assert.IsNull(actual);
         }
 
         /// <summary>
@@ -102,72 +118,146 @@ namespace Services.Test
         public void ObterTodosTest()
         {
             GerenciadorComentario target = new GerenciadorComentario(); // TODO: Initialize to an appropriate value
-            IEnumerable<ComentarioModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<ComentarioModel> actual;
-            actual = target.ObterTodos();
+            IEnumerable<ComentarioModel> expected = target.ObterTodos();
+            IEnumerable<ComentarioModel> actual = target.ObterTodos();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.IsInstanceOfType(actual, typeof(IEnumerable<ComentarioModel>));
         }
 
         /// <summary>
         ///A test for ObterPorPostagemPessoa
         ///</summary>
         [TestMethod()]
-        public void ObterPorPostagemPessoaTest()
+        public void ObterPorPostagemPessoaValidoTest()
         {
-            GerenciadorComentario target = new GerenciadorComentario(); // TODO: Initialize to an appropriate value
-            int idPostagem = 0; // TODO: Initialize to an appropriate value
-            int idPessoa = 0; // TODO: Initialize to an appropriate value
-            IEnumerable<ComentarioModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<ComentarioModel> actual;
-            actual = target.ObterPorPostagemPessoa(idPostagem, idPessoa);
+            GerenciadorComentario target = new GerenciadorComentario();
+            int idPostagem = 1;
+            int idPessoa = 17;
+            IEnumerable<ComentarioModel> expected = target.ObterPorPostagemPessoa(idPostagem, idPessoa);
+            IEnumerable<ComentarioModel> actual = target.ObterPorPostagemPessoa(idPostagem, idPessoa);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            foreach (var comentario in actual)
+            {
+                Assert.Equals(idPostagem, comentario.IdPostagem);
+            }
+        }
+
+        /// <summary>
+        ///A test for ObterPorPostagemPessoa
+        ///</summary>
+        [TestMethod()]
+        public void ObterPorPostagemPessoaInvalidoTest()
+        {
+            GerenciadorComentario target = new GerenciadorComentario();
+            int idPostagem = 0;
+            int idPessoa = 17;
+            IEnumerable<ComentarioModel> expected = null;
+            IEnumerable<ComentarioModel> actual = target.ObterPorPostagemPessoa(idPostagem, idPessoa);
+            Assert.IsNull(actual);
+            Assert.AreEqual(expected, actual);
+            
         }
 
         /// <summary>
         ///A test for ObterPorPostagem
         ///</summary>
         [TestMethod()]
-        public void ObterPorPostagemTest()
+        public void ObterPorPostagemValidoTest()
         {
-            GerenciadorComentario target = new GerenciadorComentario(); // TODO: Initialize to an appropriate value
-            int idPostagem = 0; // TODO: Initialize to an appropriate value
-            IEnumerable<ComentarioModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<ComentarioModel> actual;
-            actual = target.ObterPorPostagem(idPostagem);
+            GerenciadorComentario target = new GerenciadorComentario();
+            int idPostagem = 1;
+            IEnumerable<ComentarioModel> expected = target.ObterPorPostagem(idPostagem);
+            IEnumerable<ComentarioModel> actual = target.ObterPorPostagem(idPostagem);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            foreach (var comentario in actual)
+            {
+                Assert.Equals(idPostagem, comentario.IdPostagem);
+            }
+        }
+
+        /// <summary>
+        ///A test for ObterPorPostagem
+        ///</summary>
+        [TestMethod()]
+        public void ObterPorPostagemInvalidoTest()
+        {
+            GerenciadorComentario target = new GerenciadorComentario();
+            int idPostagem = -1;
+            IEnumerable<ComentarioModel> expected = target.ObterPorPostagem(idPostagem);
+            IEnumerable<ComentarioModel> actual = target.ObterPorPostagem(idPostagem);
+            Assert.AreEqual(expected, actual);
+            Assert.IsNull(actual);
         }
 
         /// <summary>
         ///A test for Obter
         ///</summary>
         [TestMethod()]
-        public void ObterTest()
+        public void ObterValidoTest()
         {
             GerenciadorComentario target = new GerenciadorComentario(); // TODO: Initialize to an appropriate value
-            int idComentario = 0; // TODO: Initialize to an appropriate value
-            ComentarioModel expected = null; // TODO: Initialize to an appropriate value
-            ComentarioModel actual;
-            actual = target.Obter(idComentario);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            ComentarioModel comentario = target.Obter(1);
+            ComentarioModel comentarioAlvo = target.Obter(1);
+            Assert.IsNotNull(comentarioAlvo);
+            Assert.Equals(comentarioAlvo.IdPostagem, comentario.IdPostagem);
+        }
+
+        /// <summary>
+        ///A test for Obter
+        ///</summary>
+        [TestMethod()]
+        public void ObterInvalidoTest()
+        {
+            GerenciadorComentario target = new GerenciadorComentario(); // TODO: Initialize to an appropriate value
+            ComentarioModel comentario = target.Obter(-1);
+            ComentarioModel esperado = null;
+            Assert.IsNull(comentario);
+            Assert.AreEqual(comentario, esperado);
         }
 
         /// <summary>
         ///A test for Inserir
         ///</summary>
         [TestMethod()]
-        public void InserirTest()
+        public void InserirValidoTest()
         {
-            GerenciadorComentario target = new GerenciadorComentario(); // TODO: Initialize to an appropriate value
-            ComentarioModel comentarioModel = null; // TODO: Initialize to an appropriate value
-            int expected = 0; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = target.Inserir(comentarioModel);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            GerenciadorComentario targetComentario = new GerenciadorComentario();
+            ComentarioModel comentario = new ComentarioModel();
+            comentario.Data = DateTime.Now;
+            comentario.Comentario = "Vale a pena se o valor for baixo.";
+            comentario.IdPessoa = 18;
+            comentario.IdPostagem = 1;
+            int actual = targetComentario.Inserir(comentario);
+            Assert.IsTrue(actual > 0);
+            ComentarioModel comentarioInserido = targetComentario.Obter(actual);
+            Assert.IsNotNull(comentarioInserido);
+            Assert.AreSame(comentario, comentarioInserido);
+            Assert.Equals(comentario.Comentario, comentarioInserido.Comentario);
+        }
+
+        /// <summary>
+        ///A test for Inserir
+        ///</summary>
+        [TestMethod()]
+        public void InserirInvalidoTest()
+        {
+            GerenciadorComentario targetComentario = new GerenciadorComentario();
+            ComentarioModel comentario = new ComentarioModel();
+            comentario.Data = DateTime.Now;
+            comentario.Comentario = null;
+            comentario.IdPessoa = 18;
+            comentario.IdPostagem = 1;
+            int actual = 0;
+            try
+            {
+                actual = targetComentario.Inserir(comentario);
+            }
+            catch (Exception e)
+            {
+                Assert.IsInstanceOfType(e, typeof(ServiceException));
+            }
+            ComentarioModel comentarioInserido = targetComentario.Obter(actual);
+            Assert.IsNull(comentarioInserido);
         }
 
         /// <summary>
@@ -189,12 +279,42 @@ namespace Services.Test
         ///A test for Editar
         ///</summary>
         [TestMethod()]
-        public void EditarTest()
+        public void EditarValidoTest()
         {
-            GerenciadorComentario target = new GerenciadorComentario(); // TODO: Initialize to an appropriate value
-            ComentarioModel comentarioModel = null; // TODO: Initialize to an appropriate value
-            target.Editar(comentarioModel);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            GerenciadorComentario target = new GerenciadorComentario();
+            ComentarioModel comentario = target.Obter(1);
+            ComentarioModel comentarioEsperado = comentario;
+            comentarioEsperado.Comentario = "Quanto custa?";
+            target.Editar(comentarioEsperado);
+            ComentarioModel actual = target.Obter(1);
+            Assert.IsNotNull(actual);
+            Assert.AreEqual(actual, comentarioEsperado);
+            Assert.AreSame(actual, comentarioEsperado);
+            Assert.Equals(comentarioEsperado.Comentario, actual.Comentario);
+            Assert.AreNotEqual(comentario, actual);
+        }
+
+        /// <summary>
+        ///A test for Editar
+        ///</summary>
+        [TestMethod()]
+        public void EditarInvalidoTest()
+        {
+            GerenciadorComentario target = new GerenciadorComentario();
+            ComentarioModel comentario = target.Obter(1);
+            ComentarioModel comentarioEsperado = comentario;
+            comentarioEsperado.Comentario = null;
+            try
+            {
+                target.Editar(comentarioEsperado);
+            }
+            catch (Exception e)
+            {
+                Assert.IsInstanceOfType(e, typeof(ServiceException));
+            }
+            ComentarioModel actual = target.Obter(1);
+            Assert.Equals(actual.Comentario, comentario.Comentario);
+            Assert.AreNotEqual(comentarioEsperado, actual);
         }
 
         /// <summary>
@@ -230,6 +350,6 @@ namespace Services.Test
             IUnitOfWork unitOfWork = null; // TODO: Initialize to an appropriate value
             GerenciadorComentario target = new GerenciadorComentario(unitOfWork);
             Assert.Inconclusive("TODO: Implement code to verify target");
-        } */
+        }
     }
 }

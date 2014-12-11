@@ -17,8 +17,6 @@ namespace Services.Test
     [TestClass()]
     public class GerenciadorAcessoPredioTest
     {
-
-        /*
         private TestContext testContextInstance;
 
         /// <summary>
@@ -205,6 +203,6 @@ namespace Services.Test
             Assert.AreSame(acesso.IdAcesoPredio, 1);
             acesso.IdAcesoPredio = 1;
             target.Remover(acesso.IdAcesoPredio);
-        } */
+        }
     }
 }

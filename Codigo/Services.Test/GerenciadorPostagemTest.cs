@@ -5,11 +5,12 @@ using Models;
 using System.Collections.Generic;
 using System.Linq;
 using Persistence;
+using System.Collections;
 
 namespace Services.Test
 {
-    
-    
+
+
     /// <summary>
     ///This is a test class for GerenciadorPostagemTest and is intended
     ///to contain all GerenciadorPostagemTest Unit Tests
@@ -105,27 +106,69 @@ namespace Services.Test
         ///A test for Remover
         ///</summary>
         [TestMethod()]
-        public void RemoverTest()
+        public void RemoverValidoTest()
         {
-            GerenciadorPostagem target = new GerenciadorPostagem(); // TODO: Initialize to an appropriate value
-            int idPostagem = 0; // TODO: Initialize to an appropriate value
-            target.Remover(idPostagem);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            GerenciadorPostagem gerenciadorPostagem = new GerenciadorPostagem();
+            PostagemModel postagemActual = gerenciadorPostagem.Obter(4);
+            gerenciadorPostagem.Remover(4);
+            PostagemModel novaPostagem = gerenciadorPostagem.Obter(4);
+            Assert.IsNull(novaPostagem);
+            Assert.AreNotEqual(postagemActual, novaPostagem);
+        }
+
+        /// <summary>
+        ///A test for Remover
+        ///</summary>
+        [TestMethod()]
+        public void RemoverInvalidoTest()
+        {
+            GerenciadorPostagem gerenciadorPostagem = new GerenciadorPostagem();
+            PostagemModel postagemActual = gerenciadorPostagem.Obter(1);
+            try
+            {
+                gerenciadorPostagem.Remover(1);
+            }
+            catch (Exception e)
+            {
+                Assert.IsInstanceOfType(e, typeof(ServiceException));
+            }
+            PostagemModel novaPostagem = gerenciadorPostagem.Obter(1);
+            Assert.IsNull(novaPostagem);
+            Assert.AreNotEqual(postagemActual, novaPostagem);
         }
 
         /// <summary>
         ///A test for ObterTodosPorPessoa
         ///</summary>
         [TestMethod()]
-        public void ObterTodosPorPessoaTest()
+        public void ObterTodosPorPessoaValidoTest()
         {
-            GerenciadorPostagem target = new GerenciadorPostagem(); // TODO: Initialize to an appropriate value
-            int idPessoa = 0; // TODO: Initialize to an appropriate value
-            IEnumerable<PostagemModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<PostagemModel> actual;
-            actual = target.ObterTodosPorPessoa(idPessoa);
+            GerenciadorPostagem target = new GerenciadorPostagem();
+            GerenciadorPessoa targetPessoa = new GerenciadorPessoa();
+            PessoaModel pessoa = targetPessoa.ObterTodos().ElementAtOrDefault(0);
+            int idPessoa = pessoa.IdPessoa;
+            IEnumerable<PostagemModel> expected = target.ObterTodosPorPessoa(idPessoa);
+            IEnumerable<PostagemModel> actual = target.ObterTodosPorPessoa(idPessoa);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            foreach (var postagem in actual)
+            {
+                Assert.Equals(postagem.IdPessoa, idPessoa);
+            }
+        }
+
+        /// <summary>
+        ///A test for ObterTodosPorPessoa
+        ///</summary>
+        [TestMethod()]
+        public void ObterTodosPorPessoaInvalidoTest()
+        {
+            GerenciadorPostagem target = new GerenciadorPostagem();
+            GerenciadorPessoa targetPessoa = new GerenciadorPessoa();
+            int idPessoa = -1;
+            IEnumerable<PostagemModel> expected = target.ObterTodosPorPessoa(idPessoa);
+            IEnumerable<PostagemModel> actual = target.ObterTodosPorPessoa(idPessoa);
+            Assert.AreEqual(expected, actual);
+            Assert.IsNull(actual);
         }
 
         /// <summary>
@@ -134,44 +177,91 @@ namespace Services.Test
         [TestMethod()]
         public void ObterTodosTest()
         {
-            GerenciadorPostagem target = new GerenciadorPostagem(); // TODO: Initialize to an appropriate value
-            IEnumerable<PostagemModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<PostagemModel> actual;
-            actual = target.ObterTodos();
+            GerenciadorPostagem target = new GerenciadorPostagem();
+            IEnumerable<PostagemModel> expected = target.ObterTodos();
+            IEnumerable<PostagemModel> actual = target.ObterTodos();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.IsInstanceOfType(actual, typeof(IEnumerable<PostagemModel>));
         }
 
         /// <summary>
         ///A test for Obter
         ///</summary>
         [TestMethod()]
-        public void ObterTest()
+        public void ObterValidoTest()
         {
             GerenciadorPostagem target = new GerenciadorPostagem(); // TODO: Initialize to an appropriate value
-            int idPostagem = 0; // TODO: Initialize to an appropriate value
-            PostagemModel expected = null; // TODO: Initialize to an appropriate value
-            PostagemModel actual;
-            actual = target.Obter(idPostagem);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            PostagemModel postagem = target.ObterTodos().ElementAtOrDefault(0);
+            if (postagem.Equals(null))
+            {
+                Assert.Fail("Não pode editar a base de dados está vazia.");
+            }
+            else
+            {
+                PostagemModel postagemAlvo = target.Obter(postagem.IdPostagem);
+                Assert.IsNotNull(postagemAlvo);
+                Assert.Equals(postagemAlvo.IdPostagem, postagem.IdPostagem);
+            }
+        }
+
+        /// <summary>
+        ///A test for Obter
+        ///</summary>
+        [TestMethod()]
+        public void ObterInvalidoTest()
+        {
+            GerenciadorPostagem target = new GerenciadorPostagem(); // TODO: Initialize to an appropriate value
+            PostagemModel postagemAlvo = target.Obter(-1);
+            Assert.IsNull(postagemAlvo);
         }
 
         /// <summary>
         ///A test for Inserir
         ///</summary>
         [TestMethod()]
-        public void InserirTest()
+        public void InserirValidoTest()
         {
-            GerenciadorPostagem target = new GerenciadorPostagem();
+            GerenciadorPostagem gerenciadorPostagem = new GerenciadorPostagem();
             PostagemModel postagem = new PostagemModel();
             postagem.DataPublicacao = DateTime.Now;
-            postagem.DataExclusao = DateTime.Now;
+            postagem.DataExclusao = Convert.ToDateTime("22/12/2014");
             postagem.Descricao = "Problema com o porteiro.";
             postagem.Titulo = "Porteiro mal educado";
-            //actual = target.Inserir(PostagemModel);
-            //Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            int actual = gerenciadorPostagem.Inserir(postagem);
+            Assert.IsTrue(actual > 0);
+            PostagemModel postagemInserida = gerenciadorPostagem.Obter(actual);
+            Assert.IsNotNull(postagemInserida);
+            Assert.AreSame(postagem, postagemInserida);
+            Assert.Equals(postagem.Titulo, postagemInserida.Titulo);
+            Assert.Equals(postagem.Descricao, postagemInserida.Descricao);
+            Assert.Equals(postagem.DataPublicacao, postagemInserida.DataPublicacao);
+            Assert.Equals(postagem.DataExclusao, postagemInserida.DataExclusao);
+        }
+
+        /// <summary>
+        ///A test for Inserir
+        ///</summary>
+        [TestMethod()]
+        public void InserirInvalidoTest()
+        {
+            GerenciadorPostagem gerenciadorPostagem = new GerenciadorPostagem();
+            PostagemModel postagem = new PostagemModel();
+            postagem.DataPublicacao = DateTime.Now;
+            postagem.DataExclusao = Convert.ToDateTime("22/12/2014");
+            postagem.Descricao = null;
+            postagem.Titulo = "Porteiro mal educado";
+            try
+            {
+                gerenciadorPostagem.Inserir(postagem);
+            }
+            catch (Exception e)
+            {
+                Assert.IsInstanceOfType(e, typeof(ServiceException));
+            }
+            /*
+            Assert.IsTrue(actual > 0);
+            PostagemModel postagemInserida = gerenciadorPostagem.Obter(actual);
+            Assert.IsNotNull(postagemInserida); */
         }
 
         /// <summary>
@@ -193,7 +283,7 @@ namespace Services.Test
         ///A test for Editar
         ///</summary>
         [TestMethod()]
-        public void EditarTest()
+        public void EditarValidoTest()
         {
             GerenciadorPostagem gerenciadorPostagem = new GerenciadorPostagem();
             PostagemModel postagemActual = gerenciadorPostagem.ObterTodos().ElementAtOrDefault(0);
@@ -213,6 +303,37 @@ namespace Services.Test
                 Assert.AreSame(postagemAlvo, novaPostagem);
                 Assert.Equals(postagemAlvo.Titulo, novaPostagem.Titulo);
                 Assert.Equals(postagemAlvo.Descricao, novaPostagem.Descricao);
+            }
+        }
+
+        /// <summary>
+        ///A test for Editar
+        ///</summary>
+        [TestMethod()]
+        public void EditarInvalidoTest()
+        {
+            GerenciadorPostagem gerenciadorPostagem = new GerenciadorPostagem();
+            PostagemModel postagemActual = gerenciadorPostagem.ObterTodos().ElementAtOrDefault(0);
+            if (postagemActual.Equals(null))
+            {
+                Assert.Fail("Não pode editar a base de dados está vazia.");
+            }
+            else
+            {
+                PostagemModel postagemAlvo = postagemActual;
+                postagemAlvo.Titulo = null;
+                postagemAlvo.Descricao = "O porteiro é muito antipático";
+                try
+                {
+                    gerenciadorPostagem.Editar(postagemAlvo);
+                }
+                catch (Exception e)
+                {
+                    Assert.IsInstanceOfType(e, typeof(ServiceException));
+                }
+                PostagemModel nova = gerenciadorPostagem.Obter(postagemActual.IdPostagem);
+                Assert.AreNotEqual(postagemAlvo.Titulo, postagemActual.Titulo);
+                Assert.Equals(postagemAlvo.Titulo, nova.Titulo);
             }
         }
     }
