@@ -18,7 +18,6 @@ namespace Services.Test
     public class GerenciadorVeiculoTest
     {
 
-        /*
         private TestContext testContextInstance;
 
         /// <summary>
@@ -107,12 +106,41 @@ namespace Services.Test
         ///A test for Editar
         ///</summary>
         [TestMethod()]
-        public void EditarTest()
+        public void EditarValidoTest()
         {
             GerenciadorVeiculo target = new GerenciadorVeiculo(); // TODO: Initialize to an appropriate value
-            VeiculoModel veiculoModel = null; // TODO: Initialize to an appropriate value
-            target.Editar(veiculoModel);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            VeiculoModel veiculo = target.Obter(3);
+            VeiculoModel veiculoEsperado = veiculo;
+            veiculoEsperado.Modelo = "Ferrari - GT";
+            target.Editar(veiculoEsperado);
+            VeiculoModel actual = target.Obter(3);
+            Assert.IsNotNull(actual);
+            Assert.AreEqual(actual, veiculoEsperado);
+            Assert.AreSame(actual, veiculoEsperado);
+            Assert.AreNotEqual(veiculoEsperado.Modelo, veiculo.Modelo);
+        }
+
+        /// <summary>
+        ///A test for Editar
+        ///</summary>
+        [TestMethod()]
+        public void EditarInvalidoTest()
+        {
+            GerenciadorVeiculo target = new GerenciadorVeiculo();
+            VeiculoModel veiculo = target.Obter(3);
+            VeiculoModel veiculoEsperado = veiculo;
+            veiculoEsperado.Modelo = null;
+            try
+            {
+                target.Editar(veiculoEsperado);
+            }
+            catch (Exception e)
+            {
+                Assert.IsInstanceOfType(e, typeof(ServiceException));
+            }
+            VeiculoModel actual = target.Obter(3);
+            Assert.Equals(actual.Modelo, veiculo.Modelo);
+            Assert.AreNotEqual(veiculoEsperado, actual);
         }
 
         /// <summary>
@@ -147,30 +175,74 @@ namespace Services.Test
         ///A test for Inserir
         ///</summary>
         [TestMethod()]
-        public void InserirTest()
+        public void InserirValidoTest()
         {
-            GerenciadorVeiculo target = new GerenciadorVeiculo(); // TODO: Initialize to an appropriate value
-            VeiculoModel veiculoModel = null; // TODO: Initialize to an appropriate value
-            int expected = 0; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = target.Inserir(veiculoModel);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            GerenciadorVeiculo target = new GerenciadorVeiculo();
+            VeiculoModel veiculo = new VeiculoModel();
+            veiculo.Cor = "Vermelho";
+            veiculo.IdPessoa = 17;
+            veiculo.IdMoradia = 13;
+            veiculo.TipoVeiculo = ListaTipoVeiculo.Carro;
+            veiculo.Modelo = "Fiat Uno";
+            veiculo.Placa = "WZA1414";
+            int idVeiculo = target.Inserir(veiculo);
+            Assert.IsTrue(idVeiculo > 0);
+            VeiculoModel veiculoInserido = target.Obter(idVeiculo);
+            Assert.IsNotNull(veiculoInserido);
+            Assert.AreSame(veiculo, veiculoInserido);
+        }
+
+        /// <summary>
+        ///A test for Inserir
+        ///</summary>
+        [TestMethod()]
+        public void InserirInvalidoTest()
+        {
+            GerenciadorVeiculo target = new GerenciadorVeiculo();
+            VeiculoModel veiculo = new VeiculoModel();
+            veiculo.Cor = "Vermelho";
+            veiculo.IdPessoa = 17;
+            veiculo.IdMoradia = 13;
+            veiculo.TipoVeiculo = ListaTipoVeiculo.Carro;
+            veiculo.Modelo = null;
+            veiculo.Placa = "WZA1414";
+            int actual = 0;
+            try
+            {
+                actual = target.Inserir(veiculo);
+            }
+            catch (Exception e)
+            {
+                Assert.IsInstanceOfType(e, typeof(ServiceException));
+            }
+            VeiculoModel veiculoInserido = target.Obter(actual);
+            Assert.IsNull(veiculoInserido);
         }
 
         /// <summary>
         ///A test for Obter
         ///</summary>
         [TestMethod()]
-        public void ObterTest()
+        public void ObterValidoTest()
         {
-            GerenciadorVeiculo target = new GerenciadorVeiculo(); // TODO: Initialize to an appropriate value
-            int idVeiculo = 0; // TODO: Initialize to an appropriate value
-            VeiculoModel expected = null; // TODO: Initialize to an appropriate value
-            VeiculoModel actual;
-            actual = target.Obter(idVeiculo);
+            GerenciadorVeiculo target = new GerenciadorVeiculo();
+            VeiculoModel expected = target.Obter(4);
+            VeiculoModel actual = target.Obter(4);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.IsNotNull(actual);
+        }
+
+        /// <summary>
+        ///A test for Obter
+        ///</summary>
+        [TestMethod()]
+        public void ObterInvalidoTest()
+        {
+            GerenciadorVeiculo target = new GerenciadorVeiculo();
+            VeiculoModel expected = null;
+            VeiculoModel actual = target.Obter(-1);
+            Assert.AreEqual(expected, actual);
+            Assert.IsNull(actual);
         }
 
         /// <summary>
@@ -179,27 +251,42 @@ namespace Services.Test
         [TestMethod()]
         public void ObterTodosTest()
         {
-            GerenciadorVeiculo target = new GerenciadorVeiculo(); // TODO: Initialize to an appropriate value
-            IEnumerable<VeiculoModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<VeiculoModel> actual;
-            actual = target.ObterTodos();
+            GerenciadorVeiculo target = new GerenciadorVeiculo();
+            IEnumerable<VeiculoModel> expected = target.ObterTodos();
+            IEnumerable<VeiculoModel> actual = target.ObterTodos();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.IsInstanceOfType(actual, typeof(IEnumerable<VeiculoModel>));
         }
 
         /// <summary>
         ///A test for ObterTodosDePessoa
         ///</summary>
         [TestMethod()]
-        public void ObterTodosDePessoaTest()
+        public void ObterTodosDePessoaValidoTest()
         {
-            GerenciadorVeiculo target = new GerenciadorVeiculo(); // TODO: Initialize to an appropriate value
-            int idPessoa = 0; // TODO: Initialize to an appropriate value
-            IEnumerable<VeiculoModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<VeiculoModel> actual;
-            actual = target.ObterTodosDePessoa(idPessoa);
+            GerenciadorVeiculo target = new GerenciadorVeiculo();
+            int idPessoa = 17;
+            IEnumerable<VeiculoModel> expected = target.ObterTodosDePessoa(idPessoa);
+            IEnumerable<VeiculoModel> actual = target.ObterTodosDePessoa(idPessoa);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            foreach (var veiculo in actual)
+            {
+                Assert.Equals(idPessoa, veiculo.IdPessoa);
+            }
+        }
+
+        /// <summary>
+        ///A test for ObterTodosDePessoa
+        ///</summary>
+        [TestMethod()]
+        public void ObterTodosDePessoaInvalidoTest()
+        {
+            GerenciadorVeiculo target = new GerenciadorVeiculo();
+            int idPessoa = -1;
+            IEnumerable<VeiculoModel> expected = null;
+            IEnumerable<VeiculoModel> actual = target.ObterTodosDePessoa(idPessoa);
+            Assert.AreEqual(expected, actual);
+            Assert.IsNull(actual);
         }
 
         /// <summary>
@@ -209,9 +296,10 @@ namespace Services.Test
         public void RemoverTest()
         {
             GerenciadorVeiculo target = new GerenciadorVeiculo(); // TODO: Initialize to an appropriate value
-            int idVeiculo = 0; // TODO: Initialize to an appropriate value
+            int idVeiculo = 5;
             target.Remover(idVeiculo);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
-        } */
+            VeiculoModel veiculo = target.Obter(idVeiculo);
+            Assert.IsNull(veiculo);
+        } 
     }
 }
