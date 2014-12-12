@@ -195,7 +195,7 @@ namespace Services.Test
         [TestMethod()]
         public void ObterValidoTest()
         {
-            GerenciadorComentario target = new GerenciadorComentario(); // TODO: Initialize to an appropriate value
+            GerenciadorComentario target = new GerenciadorComentario();
             ComentarioModel comentario = target.Obter(1);
             ComentarioModel comentarioAlvo = target.Obter(1);
             Assert.IsNotNull(comentarioAlvo);
@@ -208,7 +208,7 @@ namespace Services.Test
         [TestMethod()]
         public void ObterInvalidoTest()
         {
-            GerenciadorComentario target = new GerenciadorComentario(); // TODO: Initialize to an appropriate value
+            GerenciadorComentario target = new GerenciadorComentario();
             ComentarioModel comentario = target.Obter(-1);
             ComentarioModel esperado = null;
             Assert.IsNull(comentario);

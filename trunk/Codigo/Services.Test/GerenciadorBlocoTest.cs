@@ -17,7 +17,6 @@ namespace Services.Test
     [TestClass()]
     public class GerenciadorBlocoTest
     {
-        /*
         private TestContext testContextInstance;
 
         /// <summary>
@@ -66,32 +65,17 @@ namespace Services.Test
         //
         #endregion
         
-
-        private GerenciadorBloco gerenciadorBloco;
-
-        [TestInitialize()]
-        public void Inicializar()
-        {
-            gerenciadorBloco = new GerenciadorBloco();
-        }
-
         /// <summary>
         ///A test for Remover
         ///</summary>
         [TestMethod()]
         public void RemoverTest()
         {
-            BlocoModel actual = gerenciadorBloco.ObterTodos().ElementAtOrDefault(0);
-            if (actual.Equals(null))
-            {
-                Assert.Fail("Não pode remover, por que não há blocos cadastrados.");
-            }
-            else
-            {
-                int idBloco = actual.IdBloco; // TODO: Initialize to an appropriate value
-                gerenciadorBloco.Remover(idBloco);
-                //Assert.
-            }
+            GerenciadorBloco target = new GerenciadorBloco(); // TODO: Initialize to an appropriate value
+            int idBloco = 5;
+            target.Remover(idBloco);
+            BlocoModel bloco = target.Obter(idBloco);
+            Assert.IsNull(bloco);
         }
 
         /// <summary>
@@ -100,60 +84,114 @@ namespace Services.Test
         [TestMethod()]
         public void ObterTodosTest()
         {
-            GerenciadorBloco target = new GerenciadorBloco(); // TODO: Initialize to an appropriate value
-            IEnumerable<BlocoModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<BlocoModel> actual;
-            actual = target.ObterTodos();
+            GerenciadorBloco target = new GerenciadorBloco();
+            IEnumerable<BlocoModel> expected = target.ObterTodos();
+            IEnumerable<BlocoModel> actual = target.ObterTodos();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.IsInstanceOfType(actual, typeof(IEnumerable<BlocoModel>));
         }
 
         /// <summary>
         ///A test for ObterPorCondominio
         ///</summary>
         [TestMethod()]
-        public void ObterPorCondominioTest()
+        public void ObterPorCondominioValidoTest()
         {
-            GerenciadorBloco target = new GerenciadorBloco(); // TODO: Initialize to an appropriate value
-            int idCondominio = 0; // TODO: Initialize to an appropriate value
-            IEnumerable<BlocoModel> expected = null; // TODO: Initialize to an appropriate value
-            IEnumerable<BlocoModel> actual;
-            actual = target.ObterPorCondominio(idCondominio);
+            GerenciadorBloco target = new GerenciadorBloco();
+            int idCondominio = 4;
+            IEnumerable<BlocoModel> expected = target.ObterPorCondominio(idCondominio);
+            IEnumerable<BlocoModel> actual = target.ObterPorCondominio(idCondominio);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            foreach (var bloco in actual)
+            {
+                Assert.Equals(idCondominio, bloco.IdCondominio);
+            }
+        }
+
+        /// <summary>
+        ///A test for ObterPorCondominio
+        ///</summary>
+        [TestMethod()]
+        public void ObterPorCondominioInvalidoTest()
+        {
+            GerenciadorBloco target = new GerenciadorBloco();
+            int idCondominio = -1;
+            IEnumerable<BlocoModel> expected = null;
+            IEnumerable<BlocoModel> actual = target.ObterPorCondominio(idCondominio);
+            Assert.AreEqual(expected, actual);
+            Assert.IsNull(actual);
         }
 
         /// <summary>
         ///A test for Obter
         ///</summary>
         [TestMethod()]
-        public void ObterTest()
+        public void ObterValidoTest()
         {
-            GerenciadorBloco target = new GerenciadorBloco(); // TODO: Initialize to an appropriate value
-            int idBloco = 0; // TODO: Initialize to an appropriate value
-            BlocoModel expected = null; // TODO: Initialize to an appropriate value
-            BlocoModel actual;
-            actual = target.Obter(idBloco);
+            GerenciadorBloco target = new GerenciadorBloco();
+            BlocoModel expected = target.Obter(3);
+            BlocoModel actual = target.Obter(3);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.IsNotNull(actual);
+        }
+
+        /// <summary>
+        ///A test for Obter
+        ///</summary>
+        [TestMethod()]
+        public void ObterInvalidoTest()
+        {
+            GerenciadorBloco target = new GerenciadorBloco();
+            BlocoModel expected = null;
+            BlocoModel actual = target.Obter(-1);
+            Assert.AreEqual(expected, actual);
+            Assert.IsNull(actual);
         }
 
         /// <summary>
         ///A test for Inserir
         ///</summary>
         [TestMethod()]
-        public void InserirTest()
+        public void InserirValidoTest()
         {
-            GerenciadorBloco target = new GerenciadorBloco(); // TODO: Initialize to an appropriate value
-            BlocoModel blocoModel = null; // TODO: Initialize to an appropriate value
-            int expected = 0; // TODO: Initialize to an appropriate value
-            int actual;
-            actual = target.Inserir(blocoModel);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            GerenciadorBloco target = new GerenciadorBloco();
+            BlocoModel bloco = new BlocoModel();
+            bloco.IdCondominio = 3;
+            bloco.Nome = "Templo de Era";
+            bloco.QuantidadeAndares = 1;
+            bloco.QuantidadeMoradias = 8;
+            int idBloco = target.Inserir(bloco);
+            Assert.IsTrue(idBloco > 0);
+            BlocoModel blocoInserido = target.Obter(idBloco);
+            Assert.IsNotNull(blocoInserido);
+            Assert.AreSame(bloco, blocoInserido);
         }
 
-        /*
+        /// <summary>
+        ///A test for Inserir
+        ///</summary>
+        [TestMethod()]
+        public void InserirInvalidoTest()
+        {
+            GerenciadorBloco target = new GerenciadorBloco();
+            BlocoModel bloco = new BlocoModel();
+            bloco.IdCondominio = 3;
+            bloco.Nome = null;
+            bloco.QuantidadeAndares = 1;
+            bloco.QuantidadeMoradias = 8;
+            int actual = 0;
+            try
+            {
+                actual = target.Inserir(bloco);
+            }
+            catch (Exception e)
+            {
+                Assert.IsInstanceOfType(e, typeof(ServiceException));
+            }
+            BlocoModel blocoInserido = target.Obter(actual);
+            Assert.IsNull(blocoInserido);
+        }
+        
         /// <summary>
         ///A test for GetQuery
         ///</summary>
@@ -186,15 +224,43 @@ namespace Services.Test
         ///A test for Editar
         ///</summary>
         [TestMethod()]
-        public void EditarTest()
+        public void EditarValidoTest()
         {
-            GerenciadorBloco target = new GerenciadorBloco(); // TODO: Initialize to an appropriate value
-            BlocoModel blocoModel = null; // TODO: Initialize to an appropriate value
-            target.Editar(blocoModel);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            GerenciadorBloco target = new GerenciadorBloco();
+            BlocoModel bloco = target.Obter(6);
+            BlocoModel blocoEsperado = bloco;
+            blocoEsperado.Nome = "Rosa";
+            target.Editar(blocoEsperado);
+            BlocoModel actual = target.Obter(6);
+            Assert.IsNotNull(actual);
+            Assert.AreEqual(actual, blocoEsperado);
+            Assert.AreSame(actual, blocoEsperado);
+            Assert.AreNotEqual(blocoEsperado.Nome, bloco.Nome);
         }
 
-        /*
+        /// <summary>
+        ///A test for Editar
+        ///</summary>
+        [TestMethod()]
+        public void EditarInvalidoTest()
+        {
+            GerenciadorBloco target = new GerenciadorBloco();
+            BlocoModel bloco = target.Obter(6);
+            BlocoModel blocoEsperado = bloco;
+            blocoEsperado.Nome = null;
+            try
+            {
+                target.Editar(blocoEsperado);
+            }
+            catch (Exception e)
+            {
+                Assert.IsInstanceOfType(e, typeof(ServiceException));
+            }
+            BlocoModel actual = target.Obter(3);
+            Assert.Equals(actual.Nome, bloco.Nome);
+            Assert.AreNotEqual(blocoEsperado, actual);
+        }
+        
         /// <summary>
         ///A test for Atribuir
         ///</summary>
@@ -203,9 +269,9 @@ namespace Services.Test
         public void AtribuirTest()
         {
             GerenciadorBloco target = new GerenciadorBloco(); // TODO: Initialize to an appropriate value
-            BlocoModel blocoModel = null; // TODO: Initialize to an appropriate value
-            tb_bloco blocoE = null; // TODO: Initialize to an appropriate value
-            target.Atribuir(blocoModel, blocoE);
+            //BlocoModel blocoModel = null; // TODO: Initialize to an appropriate value
+            //tb_bloco blocoE = null; // TODO: Initialize to an appropriate value
+            //target.Atribuir(blocoModel, blocoE);
             Assert.Inconclusive("A method that does not return a value cannot be verified.");
         }
 
@@ -228,6 +294,6 @@ namespace Services.Test
         {
             GerenciadorBloco target = new GerenciadorBloco();
             Assert.Inconclusive("TODO: Implement code to verify target");
-        }*/
+        }
     }
 }
