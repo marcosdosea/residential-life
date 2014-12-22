@@ -88,9 +88,8 @@ namespace Services.Test
         {
             GerenciadorComentario target = new GerenciadorComentario();
             int idPessoa = 17;
-            IEnumerable<ComentarioModel> expected = target.ObterPorPostagem(idPessoa);
             IEnumerable<ComentarioModel> actual = target.ObterPorPostagem(idPessoa);
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(actual.Count(), 1);
             foreach (var comentario in actual)
             {
                 Assert.Equals(idPessoa, comentario.IdPessoa);
@@ -105,9 +104,8 @@ namespace Services.Test
         {
             GerenciadorComentario target = new GerenciadorComentario();
             int idPessoa = -1;
-            IEnumerable<ComentarioModel> expected = null;
             IEnumerable<ComentarioModel> actual = target.ObterPorPostagem(idPessoa);
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(0, actual.Count());
             Assert.IsNull(actual);
         }
 
@@ -117,10 +115,9 @@ namespace Services.Test
         [TestMethod()]
         public void ObterTodosTest()
         {
-            GerenciadorComentario target = new GerenciadorComentario(); // TODO: Initialize to an appropriate value
-            IEnumerable<ComentarioModel> expected = target.ObterTodos();
+            GerenciadorComentario target = new GerenciadorComentario();
             IEnumerable<ComentarioModel> actual = target.ObterTodos();
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(1, actual.Count());
             Assert.IsInstanceOfType(actual, typeof(IEnumerable<ComentarioModel>));
         }
 
@@ -133,9 +130,8 @@ namespace Services.Test
             GerenciadorComentario target = new GerenciadorComentario();
             int idPostagem = 1;
             int idPessoa = 17;
-            IEnumerable<ComentarioModel> expected = target.ObterPorPostagemPessoa(idPostagem, idPessoa);
             IEnumerable<ComentarioModel> actual = target.ObterPorPostagemPessoa(idPostagem, idPessoa);
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(1, actual.Count());
             foreach (var comentario in actual)
             {
                 Assert.Equals(idPostagem, comentario.IdPostagem);
@@ -151,11 +147,9 @@ namespace Services.Test
             GerenciadorComentario target = new GerenciadorComentario();
             int idPostagem = 0;
             int idPessoa = 17;
-            IEnumerable<ComentarioModel> expected = null;
             IEnumerable<ComentarioModel> actual = target.ObterPorPostagemPessoa(idPostagem, idPessoa);
             Assert.IsNull(actual);
-            Assert.AreEqual(expected, actual);
-            
+            Assert.Equals(0, actual.Count());
         }
 
         /// <summary>
@@ -166,9 +160,8 @@ namespace Services.Test
         {
             GerenciadorComentario target = new GerenciadorComentario();
             int idPostagem = 1;
-            IEnumerable<ComentarioModel> expected = target.ObterPorPostagem(idPostagem);
             IEnumerable<ComentarioModel> actual = target.ObterPorPostagem(idPostagem);
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(1, actual.Count());
             foreach (var comentario in actual)
             {
                 Assert.Equals(idPostagem, comentario.IdPostagem);
@@ -183,9 +176,8 @@ namespace Services.Test
         {
             GerenciadorComentario target = new GerenciadorComentario();
             int idPostagem = -1;
-            IEnumerable<ComentarioModel> expected = target.ObterPorPostagem(idPostagem);
             IEnumerable<ComentarioModel> actual = target.ObterPorPostagem(idPostagem);
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(0, actual.Count());
             Assert.IsNull(actual);
         }
 
@@ -197,9 +189,11 @@ namespace Services.Test
         {
             GerenciadorComentario target = new GerenciadorComentario();
             ComentarioModel comentario = target.Obter(1);
-            ComentarioModel comentarioAlvo = target.Obter(1);
-            Assert.IsNotNull(comentarioAlvo);
-            Assert.Equals(comentarioAlvo.IdPostagem, comentario.IdPostagem);
+            Assert.IsNotNull(comentario);
+            Assert.Equals(1, comentario.IdPostagem);
+            Assert.Equals(17, comentario.IdPessoa);
+            Assert.Equals("Quanto custa", comentario.Comentario);
+            Assert.Equals("2014-12-09 10:54:24", comentario.Data);
         }
 
         /// <summary>
@@ -210,9 +204,7 @@ namespace Services.Test
         {
             GerenciadorComentario target = new GerenciadorComentario();
             ComentarioModel comentario = target.Obter(-1);
-            ComentarioModel esperado = null;
             Assert.IsNull(comentario);
-            Assert.AreEqual(comentario, esperado);
         }
 
         /// <summary>
@@ -231,8 +223,6 @@ namespace Services.Test
             Assert.IsTrue(actual > 0);
             ComentarioModel comentarioInserido = targetComentario.Obter(actual);
             Assert.IsNotNull(comentarioInserido);
-            Assert.AreSame(comentario, comentarioInserido);
-            Assert.Equals(comentario.Comentario, comentarioInserido.Comentario);
         }
 
         /// <summary>
@@ -283,15 +273,15 @@ namespace Services.Test
         {
             GerenciadorComentario target = new GerenciadorComentario();
             ComentarioModel comentario = target.Obter(1);
-            ComentarioModel comentarioEsperado = comentario;
-            comentarioEsperado.Comentario = "Quanto custa?";
-            target.Editar(comentarioEsperado);
+            comentario.Comentario = "Quanto custa?";
+            target.Editar(comentario);
             ComentarioModel actual = target.Obter(1);
             Assert.IsNotNull(actual);
-            Assert.AreEqual(actual, comentarioEsperado);
-            Assert.AreSame(actual, comentarioEsperado);
-            Assert.Equals(comentarioEsperado.Comentario, actual.Comentario);
-            Assert.AreNotEqual(comentario, actual);
+            Assert.Equals(comentario.Data, actual.Data);
+            Assert.Equals(comentario.IdComentario, actual.IdComentario);
+            Assert.Equals(comentario.IdPessoa, actual.IdPessoa);
+            Assert.Equals(comentario.IdPostagem, actual.IdPostagem);
+            Assert.AreNotEqual(comentario.Comentario, actual.Comentario);
         }
 
         /// <summary>
@@ -302,11 +292,10 @@ namespace Services.Test
         {
             GerenciadorComentario target = new GerenciadorComentario();
             ComentarioModel comentario = target.Obter(1);
-            ComentarioModel comentarioEsperado = comentario;
-            comentarioEsperado.Comentario = null;
+            comentario.Comentario = null;
             try
             {
-                target.Editar(comentarioEsperado);
+                target.Editar(comentario);
             }
             catch (Exception e)
             {
@@ -314,7 +303,6 @@ namespace Services.Test
             }
             ComentarioModel actual = target.Obter(1);
             Assert.Equals(actual.Comentario, comentario.Comentario);
-            Assert.AreNotEqual(comentarioEsperado, actual);
         }
 
         /// <summary>
