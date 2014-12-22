@@ -71,7 +71,7 @@ namespace Services.Test
         [TestMethod()]
         public void RemoverTest()
         {
-            GerenciadorBloco target = new GerenciadorBloco(); // TODO: Initialize to an appropriate value
+            GerenciadorBloco target = new GerenciadorBloco();
             int idBloco = 5;
             target.Remover(idBloco);
             BlocoModel bloco = target.Obter(idBloco);
@@ -86,9 +86,8 @@ namespace Services.Test
         {
             GerenciadorBloco target = new GerenciadorBloco();
             IEnumerable<BlocoModel> expected = target.ObterTodos();
-            IEnumerable<BlocoModel> actual = target.ObterTodos();
-            Assert.AreEqual(expected, actual);
-            Assert.IsInstanceOfType(actual, typeof(IEnumerable<BlocoModel>));
+            Assert.IsInstanceOfType(expected, typeof(IEnumerable<BlocoModel>));
+            Assert.Equals(expected.Count(), 5);
         }
 
         /// <summary>
@@ -99,9 +98,8 @@ namespace Services.Test
         {
             GerenciadorBloco target = new GerenciadorBloco();
             int idCondominio = 4;
-            IEnumerable<BlocoModel> expected = target.ObterPorCondominio(idCondominio);
             IEnumerable<BlocoModel> actual = target.ObterPorCondominio(idCondominio);
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(actual.Count(), 2);
             foreach (var bloco in actual)
             {
                 Assert.Equals(idCondominio, bloco.IdCondominio);
@@ -116,10 +114,8 @@ namespace Services.Test
         {
             GerenciadorBloco target = new GerenciadorBloco();
             int idCondominio = -1;
-            IEnumerable<BlocoModel> expected = null;
             IEnumerable<BlocoModel> actual = target.ObterPorCondominio(idCondominio);
-            Assert.AreEqual(expected, actual);
-            Assert.IsNull(actual);
+            Assert.Equals(actual.Count(), 0);
         }
 
         /// <summary>
@@ -129,10 +125,13 @@ namespace Services.Test
         public void ObterValidoTest()
         {
             GerenciadorBloco target = new GerenciadorBloco();
-            BlocoModel expected = target.Obter(3);
             BlocoModel actual = target.Obter(3);
-            Assert.AreEqual(expected, actual);
             Assert.IsNotNull(actual);
+            Assert.Equals(actual.IdCondominio, 3);
+            Assert.Equals(actual.Nome, "Olimpo");
+            Assert.Equals(actual.QuantidadeAndares, 12);
+            Assert.Equals(actual.QuantidadeMoradias, 48);
+            Assert.IsInstanceOfType(actual, typeof(BlocoModel));
         }
 
         /// <summary>
@@ -142,9 +141,7 @@ namespace Services.Test
         public void ObterInvalidoTest()
         {
             GerenciadorBloco target = new GerenciadorBloco();
-            BlocoModel expected = null;
             BlocoModel actual = target.Obter(-1);
-            Assert.AreEqual(expected, actual);
             Assert.IsNull(actual);
         }
 
@@ -164,7 +161,10 @@ namespace Services.Test
             Assert.IsTrue(idBloco > 0);
             BlocoModel blocoInserido = target.Obter(idBloco);
             Assert.IsNotNull(blocoInserido);
-            Assert.AreSame(bloco, blocoInserido);
+            Assert.Equals(bloco.IdCondominio, blocoInserido.IdCondominio);
+            Assert.Equals(bloco.Nome, blocoInserido.Nome);
+            Assert.Equals(bloco.QuantidadeAndares, blocoInserido.QuantidadeAndares);
+            Assert.Equals(bloco.QuantidadeMoradias, blocoInserido.QuantidadeMoradias);
         }
 
         /// <summary>
@@ -199,8 +199,8 @@ namespace Services.Test
         [DeploymentItem("Services.dll")]
         public void GetQueryTest()
         {
-            GerenciadorBloco_Accessor target = new GerenciadorBloco_Accessor(); // TODO: Initialize to an appropriate value
-            IQueryable<BlocoModel> expected = null; // TODO: Initialize to an appropriate value
+            GerenciadorBloco_Accessor target = new GerenciadorBloco_Accessor();
+            IQueryable<BlocoModel> expected = null;
             IQueryable<BlocoModel> actual;
             actual = target.GetQuery();
             Assert.AreEqual(expected, actual);
@@ -228,14 +228,11 @@ namespace Services.Test
         {
             GerenciadorBloco target = new GerenciadorBloco();
             BlocoModel bloco = target.Obter(6);
-            BlocoModel blocoEsperado = bloco;
-            blocoEsperado.Nome = "Rosa";
-            target.Editar(blocoEsperado);
+            bloco.Nome = "Rosa";
+            target.Editar(bloco);
             BlocoModel actual = target.Obter(6);
             Assert.IsNotNull(actual);
-            Assert.AreEqual(actual, blocoEsperado);
-            Assert.AreSame(actual, blocoEsperado);
-            Assert.AreNotEqual(blocoEsperado.Nome, bloco.Nome);
+            Assert.Equals(bloco.Nome, actual.Nome);
         }
 
         /// <summary>
@@ -246,11 +243,10 @@ namespace Services.Test
         {
             GerenciadorBloco target = new GerenciadorBloco();
             BlocoModel bloco = target.Obter(6);
-            BlocoModel blocoEsperado = bloco;
-            blocoEsperado.Nome = null;
+            bloco.Nome = null;
             try
             {
-                target.Editar(blocoEsperado);
+                target.Editar(bloco);
             }
             catch (Exception e)
             {
@@ -258,7 +254,6 @@ namespace Services.Test
             }
             BlocoModel actual = target.Obter(3);
             Assert.Equals(actual.Nome, bloco.Nome);
-            Assert.AreNotEqual(blocoEsperado, actual);
         }
         
         /// <summary>

@@ -108,16 +108,13 @@ namespace Services.Test
         [TestMethod()]
         public void EditarValidoTest()
         {
-            GerenciadorVeiculo target = new GerenciadorVeiculo(); // TODO: Initialize to an appropriate value
+            GerenciadorVeiculo target = new GerenciadorVeiculo();
             VeiculoModel veiculo = target.Obter(3);
-            VeiculoModel veiculoEsperado = veiculo;
-            veiculoEsperado.Modelo = "Ferrari - GT";
-            target.Editar(veiculoEsperado);
+            veiculo.Modelo = "Ferrari - GT";
+            target.Editar(veiculo);
             VeiculoModel actual = target.Obter(3);
             Assert.IsNotNull(actual);
-            Assert.AreEqual(actual, veiculoEsperado);
-            Assert.AreSame(actual, veiculoEsperado);
-            Assert.AreNotEqual(veiculoEsperado.Modelo, veiculo.Modelo);
+            Assert.Equals(actual.Modelo, veiculo.Modelo);
         }
 
         /// <summary>
@@ -128,19 +125,17 @@ namespace Services.Test
         {
             GerenciadorVeiculo target = new GerenciadorVeiculo();
             VeiculoModel veiculo = target.Obter(3);
-            VeiculoModel veiculoEsperado = veiculo;
-            veiculoEsperado.Modelo = null;
+            veiculo.Modelo = null;
             try
             {
-                target.Editar(veiculoEsperado);
+                target.Editar(veiculo);
             }
             catch (Exception e)
             {
                 Assert.IsInstanceOfType(e, typeof(ServiceException));
             }
             VeiculoModel actual = target.Obter(3);
-            Assert.Equals(actual.Modelo, veiculo.Modelo);
-            Assert.AreNotEqual(veiculoEsperado, actual);
+            Assert.IsNotNull(actual.Modelo);
         }
 
         /// <summary>
@@ -227,9 +222,12 @@ namespace Services.Test
         {
             GerenciadorVeiculo target = new GerenciadorVeiculo();
             VeiculoModel expected = target.Obter(4);
-            VeiculoModel actual = target.Obter(4);
-            Assert.AreEqual(expected, actual);
-            Assert.IsNotNull(actual);
+            Assert.Equals(expected.IdPessoa, 16);
+            Assert.Equals(expected.Placa, "NVK1120");
+            Assert.Equals(expected.Modelo, "Siena");
+            Assert.Equals(expected.Cor, "Prata");
+            Assert.Equals(expected.TipoVeiculo, "Carro");
+            Assert.Equals(expected.IdMoradia, 12);
         }
 
         /// <summary>
@@ -239,9 +237,7 @@ namespace Services.Test
         public void ObterInvalidoTest()
         {
             GerenciadorVeiculo target = new GerenciadorVeiculo();
-            VeiculoModel expected = null;
             VeiculoModel actual = target.Obter(-1);
-            Assert.AreEqual(expected, actual);
             Assert.IsNull(actual);
         }
 
@@ -253,9 +249,8 @@ namespace Services.Test
         {
             GerenciadorVeiculo target = new GerenciadorVeiculo();
             IEnumerable<VeiculoModel> expected = target.ObterTodos();
-            IEnumerable<VeiculoModel> actual = target.ObterTodos();
-            Assert.AreEqual(expected, actual);
-            Assert.IsInstanceOfType(actual, typeof(IEnumerable<VeiculoModel>));
+            Assert.IsInstanceOfType(expected, typeof(IEnumerable<VeiculoModel>));
+            Assert.Equals(expected.Count(), 3);
         }
 
         /// <summary>
@@ -267,9 +262,8 @@ namespace Services.Test
             GerenciadorVeiculo target = new GerenciadorVeiculo();
             int idPessoa = 17;
             IEnumerable<VeiculoModel> expected = target.ObterTodosDePessoa(idPessoa);
-            IEnumerable<VeiculoModel> actual = target.ObterTodosDePessoa(idPessoa);
-            Assert.AreEqual(expected, actual);
-            foreach (var veiculo in actual)
+            Assert.Equals(expected.Count(), 1);
+            foreach (var veiculo in expected)
             {
                 Assert.Equals(idPessoa, veiculo.IdPessoa);
             }
@@ -282,11 +276,8 @@ namespace Services.Test
         public void ObterTodosDePessoaInvalidoTest()
         {
             GerenciadorVeiculo target = new GerenciadorVeiculo();
-            int idPessoa = -1;
-            IEnumerable<VeiculoModel> expected = null;
-            IEnumerable<VeiculoModel> actual = target.ObterTodosDePessoa(idPessoa);
-            Assert.AreEqual(expected, actual);
-            Assert.IsNull(actual);
+            IEnumerable<VeiculoModel> actual = target.ObterTodosDePessoa(-1);
+            Assert.Equals(actual.Count(), 0);
         }
 
         /// <summary>
@@ -295,7 +286,7 @@ namespace Services.Test
         [TestMethod()]
         public void RemoverTest()
         {
-            GerenciadorVeiculo target = new GerenciadorVeiculo(); // TODO: Initialize to an appropriate value
+            GerenciadorVeiculo target = new GerenciadorVeiculo();
             int idVeiculo = 5;
             target.Remover(idVeiculo);
             VeiculoModel veiculo = target.Obter(idVeiculo);
