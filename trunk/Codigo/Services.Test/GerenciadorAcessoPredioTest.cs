@@ -204,8 +204,20 @@ namespace Services.Test
         {
             GerenciadorAcessoPredio target = new GerenciadorAcessoPredio();
             IEnumerable<AcessoPredioModel> esperado = target.ObterTodosPorPessoa(18);
-            IEnumerable<AcessoPredioModel> atual = target.ObterTodosPorPessoa(18);
-            atual = target.ObterTodos();
+            List<AcessoPredioModel> atual = new List<AcessoPredioModel>();
+            AcessoPredioModel acesso1 = new AcessoPredioModel();
+            acesso1.IdAcesoPredio = 1;
+            acesso1.IdCondominio = 1;
+            acesso1.IdPessoa = 18;
+            acesso1.TipoAcesso = ListaTipoAcesso.Saida;
+            atual.Add(acesso1);
+            AcessoPredioModel acesso2 = new AcessoPredioModel();
+            acesso2.IdAcesoPredio = 2;
+            acesso2.IdCondominio = 1;
+            acesso2.IdPessoa = 18;
+            acesso2.TipoAcesso = ListaTipoAcesso.Entrada;
+            atual.Add(acesso2);
+            Assert.IsNotNull(esperado);
             Assert.AreEqual(esperado, atual);
         }
 
