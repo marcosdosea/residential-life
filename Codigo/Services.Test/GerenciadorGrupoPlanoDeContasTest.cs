@@ -166,6 +166,8 @@ namespace Services.Test
             GrupoPlanoDeContasModel grupo = target.Obter(1);
             GrupoPlanoDeContasModel actual = new GrupoPlanoDeContasModel();
             actual.IdGrupoPlanoDeConta = 1;
+            actual.TipoPlanoDeConta = ListaTipoPlanoConta.Despesa;
+            actual.Descricao = "Despesas Administrativas";
             actual = target.Obter(actual.IdGrupoPlanoDeConta);
             Assert.AreEqual(actual, grupo);
         }
@@ -178,8 +180,12 @@ namespace Services.Test
         {
             GerenciadorGrupoPlanoDeContas target = new GerenciadorGrupoPlanoDeContas();
             IEnumerable<GrupoPlanoDeContasModel> esperado = target.ObterTodos();
-            IEnumerable<GrupoPlanoDeContasModel> atual = target.ObterTodos();
-            atual = target.ObterTodos();
+            List<GrupoPlanoDeContasModel> atual = new List<GrupoPlanoDeContasModel>();
+            GrupoPlanoDeContasModel grupo = new GrupoPlanoDeContasModel();
+            grupo.IdGrupoPlanoDeConta = 1;
+            grupo.TipoPlanoDeConta = ListaTipoPlanoConta.Despesa;
+            grupo.Descricao = "Despesas Administrativas";
+            atual.Add(grupo);
             Assert.AreEqual(esperado, atual);
         }
 
