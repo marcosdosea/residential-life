@@ -1,0 +1,1 @@
+O Residential Life é um software que automatiza diversas atividades de um condomínio com o objetivo de tornar a vida neste tipo de sociedade mais fácil e segura.
